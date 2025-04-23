@@ -35,8 +35,8 @@ export default function Index() {
     <main className="dark:bg-slate-800">
       <Header />
       <div className="w-full">
-         {/* Hero Section */}
-         <div
+        {/* Hero Section */}
+        <div
           className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full bg-cover bg-center"
           style={{
             backgroundImage: 'url("/background.png")',
@@ -74,8 +74,8 @@ export default function Index() {
 
 
 
-                {/* Features Section */}
-                <div className="bg-white py-8 sm:py-16">
+        {/* Features Section */}
+        <div className="bg-white py-8 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12 text-center sm:text-left">
               Instantly allocated GPU cluster with ready-to-go AI stack
