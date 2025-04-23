@@ -35,15 +35,15 @@ export default function Index() {
     <main className="dark:bg-slate-800">
       <Header />
       <div className="w-full">
-        {/* Hero Section */}
-        <div
-          className="relative h-[600px] w-full bg-cover bg-center"
+         {/* Hero Section */}
+         <div
+          className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full bg-cover bg-center"
           style={{
             backgroundImage: 'url("/background.png")',
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-7xl font-bold text-white text-center leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-center leading-tight">
               INSTANT GPU<br />
               CLUSTER FOR<br />
               ENTERPRISE AI
@@ -51,22 +51,21 @@ export default function Index() {
           </div>
         </div>
 
-
-        <div className="flex items-center justify-around space-x-8 mt-8">
-          <p className="text-xl text-gray-600 max-w-2xl">
+        <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl text-center sm:text-left">
             Develop and scale your AI training and inferencing with private GPU cloud
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
             <Button
               onClick={() => router.push('/control-panel')}
-              className="px-6 py-3 bg-[#8CC63F] hover:bg-[#7ab32f]"
+              className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] hover:bg-[#7ab32f]"
             >
               Try Control Panel
             </Button>
             <Button
               onClick={() => router.push('/contact-sales')}
               variant="outline"
-              className="px-6 py-3 border-2 border-white text-black hover:bg-white/10"
+              className="w-full sm:w-auto px-6 py-3 border-2 border-white text-black hover:bg-white/10"
             >
               Contact Sales
             </Button>
@@ -74,11 +73,14 @@ export default function Index() {
         </div>
 
 
-        {/* Features Section */}
-        <div className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="text-2xl font-bold mb-12">Instantly allocated GPU cluster with ready-to-go AI stack</h2>
-            <div className="grid grid-cols-4 gap-8">
+
+                {/* Features Section */}
+                <div className="bg-white py-8 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12 text-center sm:text-left">
+              Instantly allocated GPU cluster with ready-to-go AI stack
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <div className="p-6">
                 <Image src="/optimized.png" alt="Optimized Stack" width={64} height={64} className="mb-4" />
                 <h3 className="font-bold mb-2">OPTIMIZED STACK</h3>
@@ -104,8 +106,8 @@ export default function Index() {
         </div>
 
         {/* Partners Section */}
-        <div className="bg-gray-50 py-6">
-          <div className="max-w-7xl mx-auto px-8">
+        <div className="bg-gray-50 py-4 sm:py-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <Carousel
               opts={{
                 align: "start",
@@ -121,7 +123,7 @@ export default function Index() {
             >
               <CarouselContent className="-ml-1">
                 {partnerLogos.map((logo) => (
-                  <CarouselItem key={logo.id} className="pl-1 md:basis-1/6">
+                  <CarouselItem key={logo.id} className="pl-1 basis-1/2 sm:basis-1/3 md:basis-1/6">
                     <Image
                       src={`/brand/${logo.id}.svg`}
                       alt={`Partner ${logo.id}`}
@@ -137,11 +139,13 @@ export default function Index() {
         </div>
 
         {/* Products Section */}
-        <div className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="text-2xl font-bold mb-12">NVIDIA H100 &H200S ARE NOW AVAILABLE</h2>
-            <div className="grid grid-cols-2 gap-8">
-              <div className="border rounded-lg p-6">
+        <div className="bg-white py-8 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12 text-center sm:text-left">
+              NVIDIA H100 &H200S ARE NOW AVAILABLE
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              <div className="border rounded-lg p-4 sm:p-6">
                 <div className="flex items-center mb-4">
                   <Image src="/optimized.png" alt="H100" width={48} height={48} />
                   <h3 className="font-bold ml-4">NVIDIA H100</h3>
@@ -149,7 +153,7 @@ export default function Index() {
                 <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <Link href="/h100" className="text-[#8CC63F] hover:text-[#7ab32f]">Learn More →</Link>
               </div>
-              <div className="border rounded-lg p-6">
+              <div className="border rounded-lg p-4 sm:p-6">
                 <div className="flex items-center mb-4">
                   <Image src="/optimized.png" alt="H200" width={48} height={48} />
                   <h3 className="font-bold ml-4">NVIDIA H200S</h3>
@@ -162,22 +166,22 @@ export default function Index() {
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-gray-50 py-16">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="flex items-start gap-12">
-              <div className="w-1/2">
-                <h2 className="text-4xl font-bold mb-6">POWERED BY OUR GLOBAL NETWORK</h2>
-                <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+        <div className="bg-gray-50 py-8 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">POWERED BY OUR GLOBAL NETWORK</h2>
+                <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                   Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                 </p>
                 <Button
                   asChild
-                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white"
+                  className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white"
                 >
                   <Link href="/network">Get started →</Link>
                 </Button>
               </div>
-              <div className="w-1/2">
+              <div className="w-full md:w-1/2">
                 <Image
                   src="/World.svg"
                   alt="Global Network"
@@ -192,12 +196,14 @@ export default function Index() {
         </div>
 
         {/* News Section */}
-        <div className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="text-4xl font-bold mb-6">LATEST CANOPYWAVE NEWS/EVENTS</h2>
-            <div className="grid grid-cols-4 gap-8">
+        <div className="bg-white py-8 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-6 text-center sm:text-left">
+              LATEST CANOPYWAVE NEWS/EVENTS
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 1" width={300} height={200} className="mb-4" />
+                <Image src="/news1.png" alt="News 1" width={300} height={200} className="w-full mb-4" />
                 <h3 className="font-bold mb-2">Instant GPU Cluster</h3>
                 <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
@@ -206,7 +212,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 2" width={300} height={200} className="mb-4" />
+                <Image src="/news1.png" alt="News 2" width={300} height={200} className="w-full mb-4" />
                 <h3 className="font-bold mb-2">xxxxxx</h3>
                 <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
@@ -215,7 +221,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 3" width={300} height={200} className="mb-4" />
+                <Image src="/news1.png" alt="News 3" width={300} height={200} className="w-full mb-4" />
                 <h3 className="font-bold mb-2">xxxxxx</h3>
                 <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
@@ -224,7 +230,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 4" width={300} height={200} className="mb-4" />
+                <Image src="/news1.png" alt="News 4" width={300} height={200} className="w-full mb-4" />
                 <h3 className="font-bold mb-2">xxxxxx</h3>
                 <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
@@ -237,19 +243,19 @@ export default function Index() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-gray-50 py-16">
-          <div className="max-w-7xl mx-auto px-8 text-center">
-            <h2 className="text-2xl font-bold mb-8">HAVE QUESTIONS? GET IN TOUCH!</h2>
-            <div className="flex justify-center space-x-4">
+        <div className="bg-gray-50 py-8 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">HAVE QUESTIONS? GET IN TOUCH!</h2>
+            <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors"
+                className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors"
               >
                 Contact Sales
               </Link>
               <Link
                 href="/pricing"
-                className="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-100"
+                className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-100"
               >
                 Get Pricing
               </Link>
@@ -257,7 +263,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-
 
       <Footer />
     </main>
