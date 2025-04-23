@@ -32,5 +32,5 @@ export const useScrollToHash = () => {
       window.removeEventListener('load', handleScroll);
       router.events.off('hashChangeComplete', handleScroll);
     };
-  }, [router.asPath]);
+  }, [router.events]);
 };
