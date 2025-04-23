@@ -113,13 +113,13 @@ export default function Header() {
                         <ul className="space-y-2 text-sm">
                           <li>
                             <div>
-                              <IwsLink href="/gpu-cloud-on-demand" className="text-gray-600 hover:text-gray-900 ml-2">
+                              <IwsLink href="/cloud-cluster" className="text-gray-600 hover:text-gray-900 ml-2">
                                 GPU Cloud on-demand Cluster
                                 <span className="inline-block ml-1">▼</span>
                               </IwsLink>
                               <ul className="pl-4 mt-2 space-y-2">
-                                <li><IwsLink href="/nvidia-hgx-h100" className="text-gray-600 hover:text-gray-900">NVIDIA HGX H100</IwsLink></li>
-                                <li><IwsLink href="/nvidia-hgx-h200" className="text-gray-600 hover:text-gray-900">NVIDIA HGX H200</IwsLink></li>
+                                <li><IwsLink href="/cloud-cluster" className="text-gray-600 hover:text-gray-900">NVIDIA HGX H100</IwsLink></li>
+                                <li><IwsLink href="/cloud-cluster" className="text-gray-600 hover:text-gray-900">NVIDIA HGX H200</IwsLink></li>
                               </ul>
                             </div>
                           </li>
