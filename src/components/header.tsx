@@ -57,7 +57,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="bg-white  border-y border-gray-200 dark:bg-slate-800 dark:border-gray-600">
+    <nav className="bg-white border-y border-gray-200 dark:bg-slate-800 dark:border-gray-600 fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* 左侧 logo */}
@@ -103,7 +103,7 @@ export default function Header() {
 
                 {showProducts && (
                   <div
-                    className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-10"
+                    className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50"
                   >
                     <div className="grid grid-cols-4 gap-8">
                       <div>
@@ -193,7 +193,7 @@ export default function Header() {
                 </button>
 
                 {showSolutions && (
-                  <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-10">
+                  <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={()=>{setShowSolutions(false)}}>Model Training</IwsLink></li>
@@ -230,7 +230,7 @@ export default function Header() {
                 </button>
 
                 {showPricing && (
-                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-10">
+                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={()=>{setShowPricing(false)}}>NVIDIA HGX H100</IwsLink></li>
@@ -266,7 +266,7 @@ export default function Header() {
                 </button>
 
                 {showDataCenter && (
-                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-10">
+                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
@@ -301,7 +301,7 @@ export default function Header() {
                 </button>
 
                 {showResources && (
-                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-10">
+                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
@@ -335,7 +335,7 @@ export default function Header() {
                 </button>
 
                 {showAbout && (
-                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-10">
+                  <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900">About US</IwsLink></li>

@@ -37,10 +37,7 @@ export default function Index() {
       <div className="w-full">
         {/* Hero Section */}
         <div
-          className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("/background.png")',
-          }}
+          className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full bg-[#80B224]"
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-center leading-tight">
@@ -52,20 +49,20 @@ export default function Index() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl text-center sm:text-left">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left">
             Develop and scale your AI training and inferencing with private GPU cloud
           </p>
           <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
             <Button
               onClick={() => router.push('/control-panel')}
-              className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] hover:bg-[#7ab32f]"
+              className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] hover:bg-[#7ab32f] text-base sm:text-lg"
             >
               Try Control Panel
             </Button>
             <Button
               onClick={() => router.push('/contact-sales')}
               variant="outline"
-              className="w-full sm:w-auto px-6 py-3 border-2 border-white text-black hover:bg-white/10"
+              className="w-full sm:w-auto px-6 py-3 border-2 border-white text-black hover:bg-white/10 text-base sm:text-lg"
             >
               Contact Sales
             </Button>
