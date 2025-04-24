@@ -10,7 +10,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="text-center py-16 bg-gray-100">
+      <div className="text-center py-16 pt-32 bg-gray-100">
         <h1 className="text-4xl font-bold mb-4">About Us</h1>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
           Learn more about our company, our vision, and the team that makes it all happen.

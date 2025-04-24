@@ -9,7 +9,7 @@ export default function SolutionsPage() {
         <main className="bg-white min-h-screen w-full font-sans">
             <Header />
             {/* Hero Section */}
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-16 pt-12 pb-16 bg-white max-w-6xl mx-auto">
+            <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-16 pt-24 pb-16 bg-white max-w-6xl mx-auto">
                 {/* Left: Title, description, and button */}
                 <div className="flex-1 mb-8 md:mb-0 max-w-md">
                     <h1 className="text-4xl md:text-5xl font-bold text-[#060709] mb-4">

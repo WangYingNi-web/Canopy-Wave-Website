@@ -11,7 +11,7 @@ export default function PricingPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="text-center py-16">
+            <div className="text-center py-16 pt-32">
                 <h1 className="text-4xl font-bold mb-4">GPU CLOUD PRICING</h1>
                 <p className="text-gray-600 mb-8">
                     Get access to world-class cloud resources and the best GPUs on the market
