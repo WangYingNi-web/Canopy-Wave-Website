@@ -44,7 +44,7 @@ export default function NetworkingServices() {
                             Get highly performant multi-node interconnect—at supercomputing scale.
                         </p>
                         <p className="text-gray-600">
-                            We've collaborated with NVIDIA to deploy NVIDIA Quantum InfiniBand-based cluster networks to provide industry-leading performance for GenAI.
+                            We&apos;ve collaborated with NVIDIA to deploy NVIDIA Quantum InfiniBand-based cluster networks to provide industry-leading performance for GenAI.
                         </p>
                     </div>
 
@@ -197,7 +197,7 @@ export default function NetworkingServices() {
                         SERVICES FOR GENAI
                     </h2>
                     <p className="text-gray-600 text-xl mb-12">
-                        Don't let a shoddy network slow you down. Get the absolute most out of your GPUs.
+                        Don&apos;t let a shoddy network slow you down. Get the absolute most out of your GPUs.
                     </p>
                     <button className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300">
                         Get started
