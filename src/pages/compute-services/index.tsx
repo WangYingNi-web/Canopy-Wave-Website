@@ -46,10 +46,10 @@ export default function NetworkingServices() {
                     <div>
                         <h2 className="text-4xl font-bold mb-6">FLEET LIFECYCLE CONTROLLER</h2>
                         <p className="text-gray-600 mb-4">
-                            Each and every node undergoes rigorous testing to ensure they meet GenAI's high-performance computing demands. FLCC ensures node health from initial deployment through the entire node lifecycle.
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                         </p>
                         <p className="text-gray-600">
-                            With experience in detecting subtle issues like GPUs solving 1+1=1.999999, Mission Control's FLCC is designed for GenAI workloads where every digit counts.
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                         </p>
                     </div>
                 </div>
