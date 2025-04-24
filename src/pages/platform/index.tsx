@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 import Image from 'next/image';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 
-export default function NetworkingServices() {
+export default function PlatformPage() {
     useScrollToHash();
     return (
         <main className="min-h-screen relative">
