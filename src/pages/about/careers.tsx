@@ -25,7 +25,7 @@ export default function Careers() {
                     Canopy Wave is set to enable AI cloud services by deploying and operating hundreds of AI data centers worldwide, close to the end users and enterprises. The team is built by an experienced team with visionary leadership, well funded, and guided by industry leaders
                 </p>
 
-                <h3 className="text-xl text-gray-500 mb-8">here's-what-working-with-us-is-like</h3>
+                <h3 className="text-xl text-gray-500 mb-8">here&apos;s-what-working-with-us-is-like</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
@@ -55,7 +55,7 @@ export default function Careers() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <h2 className="text-4xl font-bold mb-6">OPEN POSITIONS</h2>
                 <p className="text-gray-600 mb-12 max-w-4xl">
-                    Experience comes in many forms, many skills are transferable, and passion goes a long way. If your experience is this close to what we're looking for, consider applying. We know that diversity of thought makes for the best problem-solving and creative thinking, which is why we're dedicated to adding new perspectives to the team and encourage everyone to apply.
+                    Experience comes in many forms, many skills are transferable, and passion goes a long way. If your experience is this close to what we&apos;re looking for, consider applying. We know that diversity of thought makes for the best problem-solving and creative thinking, which is why we&apos;re dedicated to adding new perspectives to the team and encourage everyone to apply.
                 </p>
 
                 <div className="space-y-4">
