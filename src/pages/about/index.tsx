@@ -63,7 +63,7 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-4xl font-bold text-center mb-6">WHAT WE DO</h2>
         <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
-          CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We're a comprehensive platform and strategic partner designed to tackle today—and tomorrow's—challenges of deploying AI at scale. We manage the complexities of AI growth to make supercomputing accessible and push the limits of what's possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads.
+          CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle today—and tomorrow's—challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -78,7 +78,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
             <p className="text-gray-600 text-center group-hover:text-white">
-              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We're a comprehensive platform and strategic partner designed to tackle toda
+              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle toda
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
             <p className="text-gray-600 text-center group-hover:text-white">
-              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We're a comprehensive platform and strategic partner designed to tackle toda
+              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle toda
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
             <p className="text-gray-600 text-center group-hover:text-white">
-              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We're a comprehensive platform and strategic partner designed to tackle toda
+              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle toda
             </p>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">Work With Us</h2>
           <p className="text-gray-600 mb-8">
-            Ready to shape the future? Join CanopyWave and help drive the future of technology with a team redefining what's possible.
+            Ready to shape the future? Join CanopyWave and help drive the future of technology with a team redefining what&apos;s possible.
           </p>
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300">
