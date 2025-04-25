@@ -3,16 +3,10 @@
 import Header from './../components/header'
 import Footer from './../components/footer'
 import Image from 'next/image'
-import Link from 'next/link';
+import IwsLink from '@/components/IwsLink'
 import { useRouter } from 'next/router';
 import { Button } from "@/components/ui/button"
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
+import PartnerCarousel from '@/components/carousel';
 
 export default function Index() {
   const router = useRouter();
@@ -37,7 +31,7 @@ export default function Index() {
       <div className="w-full">
         {/* Hero Section */}
         <div
-          className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full bg-[#80B224]"
+          className="relative h-[400px] sm:h-[500px] md:h-[800px] w-full bg-[#80B224]"
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-center leading-tight">
@@ -48,8 +42,8 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left">
+        {/* <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left pl-4">
             Develop and scale your AI training and inferencing with private GPU cloud
           </p>
           <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
@@ -67,123 +61,93 @@ export default function Index() {
               Contact Sales
             </Button>
           </div>
-        </div>
+        </div> */}
 
 
 
         {/* Features Section */}
-        <div className="bg-white py-8 sm:py-16">
+        <div className="bg-white py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12 text-center sm:text-left">
-              Instantly allocated GPU cluster with ready-to-go AI stack
+            <h2 className="text-3xl sm:text-5xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
+              Instantly allocated GPU cluster <br /> with ready-to-go AI stack
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              <div className="p-6">
-                <Image src="/optimized.png" alt="Optimized Stack" width={64} height={64} className="mb-4" />
-                <h3 className="font-bold mb-2">OPTIMIZED STACK</h3>
-                <p className="text-gray-600">Pre-qualified and optimized GPU and AI drivers</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">OPTIMIZED STACK</h3>
+                <p className="text-gray-600 group-hover:text-white text-lg">Pre-qualified and optimized GPU and AI drivers</p>
               </div>
-              <div className="p-6">
-                <Image src="/optimized.png" alt="Optimized Stack" width={64} height={64} className="mb-4" />
-                <h3 className="font-bold mb-2">DEDICATED RESOURCE</h3>
-                <p className="text-gray-600">Fully secured resources with the flexibility to optimize your stacks and application</p>
+              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">DEDICATED RESOURCE</h3>
+                <p className="text-gray-600 group-hover:text-white text-lg">Fully secured resources with the flexibility to optimize your stacks and application</p>
               </div>
-              <div className="p-6">
-                <Image src="/optimized.png" alt="Optimized Stack" width={64} height={64} className="mb-4" />
-                <h3 className="font-bold mb-2">HIGH PERFORMANCE</h3>
-                <p className="text-gray-600">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
+              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">HIGH PERFORMANCE</h3>
+                <p className="text-gray-600 group-hover:text-white text-lg">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
               </div>
-              <div className="p-6">
-                <Image src="/optimized.png" alt="Optimized Stack" width={64} height={64} className="mb-4" />
-                <h3 className="font-bold mb-2">PAY ONLY USED</h3>
-                <p className="text-gray-600">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
+              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">PAY ONLY USED</h3>
+                <p className="text-gray-600 group-hover:text-white text-lg">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Partners Section */}
-        <div className="bg-gray-50 py-4 sm:py-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                }),
-              ]}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-1">
-                {partnerLogos.map((logo) => (
-                  <CarouselItem key={logo.id} className="pl-1 basis-1/2 sm:basis-1/3 md:basis-1/6">
-                    <Image
-                      src={`/brand/${logo.id}.svg`}
-                      alt={`Partner ${logo.id}`}
-                      width={logo.width}
-                      height={logo.height}
-                      className="mx-auto"
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-        </div>
+        <PartnerCarousel logos={partnerLogos} />
 
         {/* Products Section */}
-        <div className="bg-white py-8 sm:py-16">
+        <div className="bg-white py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12 text-center sm:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
               NVIDIA H100 &H200S ARE NOW AVAILABLE
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-              <div className="border rounded-lg p-4 sm:p-6">
-                <div className="flex items-center mb-4">
-                  <Image src="/optimized.png" alt="H100" width={48} height={48} />
-                  <h3 className="font-bold ml-4">NVIDIA H100</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
+              <div className="border-2 rounded-lg p-8 sm:p-10">
+                <div className="flex items-center mb-6">
+                  <Image src="/optimized.png" alt="H100" width={80} height={80} />
+                  <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
-                <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <Link href="/h100" className="text-[#8CC63F] hover:text-[#7ab32f]">Learn More →</Link>
+                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+                <IwsLink href="/h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
-              <div className="border rounded-lg p-4 sm:p-6">
-                <div className="flex items-center mb-4">
-                  <Image src="/optimized.png" alt="H200" width={48} height={48} />
-                  <h3 className="font-bold ml-4">NVIDIA H200S</h3>
+              <div className="border-2 rounded-lg p-8 sm:p-10">
+                <div className="flex items-center mb-6">
+                  <Image src="/optimized.png" alt="H200" width={80} height={80} />
+                  <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
-                <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <Link href="/h200" className="text-[#8CC63F] hover:text-[#7ab32f]">Learn More →</Link>
+                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+                <IwsLink href="/h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
             </div>
           </div>
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-gray-50 py-8 sm:py-16">
+        <div className="bg-gray-50 py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+            <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
-                <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">POWERED BY OUR GLOBAL NETWORK</h2>
-                <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
+                <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-10">POWERED BY OUR GLOBAL NETWORK</h2>
+                <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
                   Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                 </p>
                 <Button
                   asChild
-                  className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white"
+                  className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white text-lg sm:text-xl"
                 >
-                  <Link href="/network">Get started →</Link>
+                  <IwsLink href="/network">Get started →</IwsLink>
                 </Button>
               </div>
               <div className="w-full md:w-1/2">
                 <Image
                   src="/World.svg"
                   alt="Global Network"
-                  width={600}
-                  height={300}
+                  width={700}
+                  height={350}
                   className="w-full"
                   priority
                 />
@@ -193,46 +157,46 @@ export default function Index() {
         </div>
 
         {/* News Section */}
-        <div className="bg-white py-8 sm:py-16">
+        <div className="bg-white py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-2xl sm:text-4xl font-bold mb-6 text-center sm:text-left">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center sm:text-left">
               LATEST CANOPYWAVE NEWS/EVENTS
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 1" width={300} height={200} className="w-full mb-4" />
-                <h3 className="font-bold mb-2">Instant GPU Cluster</h3>
-                <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+              <div className="border-2 rounded-lg p-6 sm:p-8">
+                <Image src="/news1.png" alt="News 1" width={350} height={250} className="w-full mb-6" />
+                <h3 className="text-xl font-bold mb-4">Instant GPU Cluster</h3>
+                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
-                  <Link href="/news1" className="text-[#8CC63F]">Read →</Link>
-                  <span className="text-gray-400">Dec 20, 2023</span>
+                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
+                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
                 </div>
               </div>
-              <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 2" width={300} height={200} className="w-full mb-4" />
-                <h3 className="font-bold mb-2">xxxxxx</h3>
-                <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+              <div className="border-2 rounded-lg p-6 sm:p-8">
+                <Image src="/news1.png" alt="News 2" width={350} height={250} className="w-full mb-6" />
+                <h3 className="text-xl font-bold mb-4">xxxxxx</h3>
+                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
-                  <Link href="/news1" className="text-[#8CC63F]">Read →</Link>
-                  <span className="text-gray-400">Dec 20, 2023</span>
+                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
+                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
                 </div>
               </div>
-              <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 3" width={300} height={200} className="w-full mb-4" />
-                <h3 className="font-bold mb-2">xxxxxx</h3>
-                <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+              <div className="border-2 rounded-lg p-6 sm:p-8">
+                <Image src="/news1.png" alt="News 3" width={350} height={250} className="w-full mb-6" />
+                <h3 className="text-xl font-bold mb-4">xxxxxx</h3>
+                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
-                  <Link href="/news1" className="text-[#8CC63F]">Read →</Link>
-                  <span className="text-gray-400">Dec 20, 2023</span>
+                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
+                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
                 </div>
               </div>
-              <div className="border rounded-lg p-4">
-                <Image src="/news1.png" alt="News 4" width={300} height={200} className="w-full mb-4" />
-                <h3 className="font-bold mb-2">xxxxxx</h3>
-                <p className="text-gray-600 mb-4">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+              <div className="border-2 rounded-lg p-6 sm:p-8">
+                <Image src="/news1.png" alt="News 4" width={350} height={250} className="w-full mb-6" />
+                <h3 className="text-xl font-bold mb-4">xxxxxx</h3>
+                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
                 <div className="flex justify-between items-center">
-                  <Link href="/news1" className="text-[#8CC63F]">Read →</Link>
-                  <span className="text-gray-400">Dec 20, 2023</span>
+                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
+                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
                 </div>
               </div>
             </div>
@@ -240,22 +204,22 @@ export default function Index() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-gray-50 py-8 sm:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center">
-            <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">HAVE QUESTIONS? GET IN TOUCH!</h2>
-            <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-              <Link
+        <div className="bg-gray-50 py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">HAVE QUESTIONS? GET IN TOUCH!</h2>
+            <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+            <IwsLink
                 href="/contact"
-                className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors"
+                className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-lg"
               >
                 Contact Sales
-              </Link>
-              <Link
+              </IwsLink>
+              <IwsLink
                 href="/pricing"
-                className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-100"
+                className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-100 text-lg"
               >
                 Get Pricing
-              </Link>
+              </IwsLink>
             </div>
           </div>
         </div>
