@@ -13,11 +13,11 @@ export default function Contact() {
                         <div className="w-full md:w-1/2">
                             <h1 className="text-2xl sm:text-4xl font-bold text-[#8CC63F] mb-6">CONTACT US</h1>
                             <p className="text-base text-gray-700 mb-4">
-                                We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level. Fill out the form and tell us more about yourself.
+                                We&apos;d love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level. Fill out the form and tell us more about yourself.
                             </p>
                             <div className="mt-6">
                                 <h2 className="text-lg font-bold mb-3">TECHNICAL AND ACCOUNT SUPPORT</h2>
-                                <p className="text-gray-600 mb-3">We're here to help! If you have technical issues or questions about your account, <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
+                                <p className="text-gray-600 mb-3">We&apos;re here to help! If you have technical issues or questions about your account, <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
                             <div className="mt-6">
                                 <h2 className="text-lg font-bold mb-3">CONTACT INFORMATION</h2>
