@@ -81,6 +81,9 @@ export default function Header() {
             {/* 导航菜单居中 */}
             <div className="flex-1"></div>
               <div className="flex items-center space-x-4 h-16">
+
+
+                
                 <div className="relative" ref={menuRef}>
                   <button
                     className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
@@ -103,69 +106,69 @@ export default function Header() {
                   </button>
 
                   {showProducts && (
-                    <div
-                      className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50"
-                    >
-                      <div className="grid grid-cols-4 gap-8">
-                        <div>
-                          <h3 className="font-semibold mb-4">
-                            <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F]">
-                              Compute Services
-                              <span className="inline-block ml-1">▼</span>
-                            </IwsLink>
-                          </h3>
-                          <ul className="space-y-2 text-sm">
-                            <li>
-                              <div>
-                                <IwsLink href="/compute-services" className="text-gray-600 hover:text-gray-900 ml-2">
-                                  GPU Cloud on-demand Cluster
-                                  <span className="inline-block ml-1">▼</span>
-                                </IwsLink>
-                                <ul className="pl-4 mt-2 space-y-2">
-                                  <li><IwsLink href="/compute-services#hgx-h100" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H100</IwsLink></li>
-                                  <li><IwsLink href="/compute-services#hgx-h200" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H200</IwsLink></li>
-                                </ul>
-                              </div>
-                            </li>
-                            <li><IwsLink href="/compute-services#cpu-node" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>CPU Nodes</IwsLink></li>
-                            <li><IwsLink href="/compute-services#gpu-reserve" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>GPU Cloud Reserve Cluster</IwsLink></li>
-                            <li><IwsLink href="/compute-services#bare-metal" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Bare Metal Services</IwsLink></li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold mb-4">
-                            <IwsLink href="/storage-services" className="text-gray-900 hover:text-[#8CC63F]">
-                              Storage Services
-                            </IwsLink>
-                          </h3>
-                          <ul className="space-y-2 text-sm">
-                            <li><IwsLink href="/storage-services" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Local Storage</IwsLink></li>
-                            <li><IwsLink href="/storage-services" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Object Storage</IwsLink></li>
-                            <li><IwsLink href="/storage-services" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Cloud Storage</IwsLink></li>
-                            <li><IwsLink href="/storage-services" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RDMA Storage</IwsLink></li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold mb-4">
-                            <IwsLink href="/networking-services" className="text-gray-900 hover:text-[#8CC63F]">
-                              Networking Services
-                            </IwsLink>
-                          </h3>
-                          <ul className="space-y-2 text-sm">
-                            <li><IwsLink href="/networking-services#infiniband-networking"  className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>InfiniBand Networking</IwsLink></li>
-                            <li><IwsLink href="/networking-services#private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RoceV2 Networking</IwsLink></li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold mb-4">
-                            <IwsLink href="/platform" className="text-gray-900 hover:text-[#8CC63F]">
-                              Platform
-                            </IwsLink>
-                          </h3>
-                          <ul className="space-y-2 text-sm">
-                            <li><IwsLink href="/dcim" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Canopy DCIM Platform</IwsLink></li>
-                            <li><IwsLink href="/gpu-platform" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Wave GPU cloud platform</IwsLink></li>
-                          </ul>
+                    <div className="fixed left-0 right-0 py-6 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-4 gap-8">
+                          <div>
+                            <h3 className="font-semibold mb-4">
+                              <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F]">
+                                Compute Services
+                                <span className="inline-block ml-1">▼</span>
+                              </IwsLink>
+                            </h3>
+                            <ul className="space-y-2 text-sm">
+                              <li>
+                                <div>
+                                  <IwsLink href="/compute-services" className="text-gray-600 hover:text-gray-900">
+                                    GPU Cloud on-demand Cluster
+                                    <span className="inline-block ml-1">▼</span>
+                                  </IwsLink>
+                                  <ul className="pl-4 mt-2 space-y-2">
+                                    <li><IwsLink href="/compute-services#hgx-h100" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H100</IwsLink></li>
+                                    <li><IwsLink href="/compute-services#hgx-h200" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H200</IwsLink></li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li><IwsLink href="/compute-services#cpu-node" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>CPU Nodes</IwsLink></li>
+                              <li><IwsLink href="/compute-services#gpu-reserve" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>GPU Cloud Reserve Cluster</IwsLink></li>
+                              <li><IwsLink href="/compute-services#bare-metal" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Bare Metal Services</IwsLink></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold mb-4">
+                              <IwsLink href="/storage-services" className="text-gray-900 hover:text-[#8CC63F]">
+                                Storage Services
+                              </IwsLink>
+                            </h3>
+                            <ul className="space-y-2 text-sm">
+                              <li><IwsLink href="/storage-services#local-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Local Storage</IwsLink></li>
+                              <li><IwsLink href="/storage-services#object-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Object Storage</IwsLink></li>
+                              <li><IwsLink href="/storage-services#cloud-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Cloud Storage</IwsLink></li>
+                              <li><IwsLink href="/storage-services#rdma-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RDMA Storage</IwsLink></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold mb-4">
+                              <IwsLink href="/networking-services" className="text-gray-900 hover:text-[#8CC63F]">
+                                Networking Services
+                              </IwsLink>
+                            </h3>
+                            <ul className="space-y-2 text-sm">
+                              <li><IwsLink href="/networking-services#infiniband-networking" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>InfiniBand Networking</IwsLink></li>
+                              <li><IwsLink href="/networking-services#private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RoceV2 Networking</IwsLink></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold mb-4">
+                              <IwsLink href="/platform" className="text-gray-900 hover:text-[#8CC63F]">
+                                Platform
+                              </IwsLink>
+                            </h3>
+                            <ul className="space-y-2 text-sm">
+                              <li><IwsLink href="/platform/dcim-platform" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Canopy DCIM Platform</IwsLink></li>
+                              <li><IwsLink href="/platform/cloud-platform" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Wave GPU cloud platform</IwsLink></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -194,8 +197,8 @@ export default function Header() {
                   </button>
 
                   {showSolutions && (
-                    <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
-                      <div className="max-w-7xl mx-auto">
+                    <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ul className="space-y-2 text-sm">
                           <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Model Training</IwsLink></li>
                           <li><IwsLink href="/inference" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Inference</IwsLink></li>
@@ -231,8 +234,8 @@ export default function Header() {
                   </button>
 
                   {showPricing && (
-                    <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
-                      <div className="max-w-7xl mx-auto">
+                    <div className="fixed left-0 right-0 py-6 px-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ul className="space-y-2 text-sm">
                           <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
                           <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink></li>
@@ -267,10 +270,10 @@ export default function Header() {
                   </button>
 
                   {showDataCenter && (
-                    <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
-                      <div className="max-w-7xl mx-auto">
+                    <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ul className="space-y-2 text-sm">
-                          <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
+                          <li><IwsLink href="/data-center/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
                           <li><IwsLink href="/Canada" className="text-gray-600 hover:text-gray-900">Canada 1</IwsLink></li>
                           <li><IwsLink href="/Iceland1" className="text-gray-600 hover:text-gray-900">Iceland 1</IwsLink></li>
                           <li><IwsLink href="/Iceland2" className="text-gray-600 hover:text-gray-900">Iceland 2</IwsLink></li>
@@ -302,8 +305,8 @@ export default function Header() {
                   </button>
 
                   {showResources && (
-                    <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
-                      <div className="max-w-7xl mx-auto">
+                    <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ul className="space-y-2 text-sm">
                           <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
                           <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
@@ -336,12 +339,12 @@ export default function Header() {
                   </button>
 
                   {showAbout && (
-                    <div className="fixed left-0 right-0 py-6 px-8 mt-5 bg-white shadow-lg border-t border-gray-100 z-50">
-                      <div className="max-w-7xl mx-auto">
+                    <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ul className="space-y-2 text-sm">
                           <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900">About US</IwsLink></li>
-                          <li><IwsLink href="/careers" className="text-gray-600 hover:text-gray-900">Careers</IwsLink></li>
-                          <li><IwsLink href="/newsroom" className="text-gray-600 hover:text-gray-900">Newsroom</IwsLink></li>
+                          <li><IwsLink href="/about/careers" className="text-gray-600 hover:text-gray-900">Careers</IwsLink></li>
+                          <li><IwsLink href="/about/newsroom" className="text-gray-600 hover:text-gray-900">Newsroom</IwsLink></li>
                           <li><IwsLink href="/blog" className="text-gray-600 hover:text-gray-900">Blog</IwsLink></li>
                         </ul>
                       </div>
@@ -351,14 +354,16 @@ export default function Header() {
               </div>
             {/* 右侧按钮组 */}
             <div className="flex items-center space-x-4 ml-16">
-              <IwsLink
-                href="/cloud"
+            <IwsLink
+                href="https://cloud.canopywave.io/"
                 className="px-4 py-2 text-white bg-[#8CC63F] rounded hover:bg-[#7ab32f] transition-colors text-sm font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Canopy Wave Cloud
               </IwsLink>
               <IwsLink
-                href="/contact-us"
+                href="/contact"
                 className="text-gray-600 hover:text-gray-900 text-sm font-medium"
               >
                 Contact US

@@ -45,7 +45,7 @@ export default function SolutionsPage() {
                     Purpose-built cloud infrastructure for AI inference
                 </h2>
                 <p className="text-base md:text-lg max-w-2xl mx-auto opacity-80">
-                    CoreWeave’s cloud infrastructure is made to handle the demanding demands of running modern-day AI inference workloads at speed and scale. Our bare-metal instances, optimized for performance, provide access to the latest NVIDIA GPUs, while managed clusters accelerate time-to-production and networking innovations power ultra-fast multi-node scalability. Accelerate the deployment of your applications—and learning—without infrastructure friction.
+                    CanopyWave’s cloud infrastructure is made to handle the demanding demands of running modern-day AI inference workloads at speed and scale. Our bare-metal instances, optimized for performance, provide access to the latest NVIDIA GPUs, while managed clusters accelerate time-to-production and networking innovations power ultra-fast multi-node scalability. Accelerate the deployment of your applications—and learning—without infrastructure friction.
                 </p>
             </section>
 
@@ -160,7 +160,7 @@ export default function SolutionsPage() {
                             AI Object Storage with LOTA
                         </div>
                         <div className="text-white/80 text-sm">
-                            CoreWeave AI ObjectStorage is a highly performant and cost-effective solution with multi-cloud compatibility and integrated access controls. Quickly store, archive, and retrieve huge datasets for AI/ML pipelines, easily integrating with every workflow.
+                            CanopyWave AI ObjectStorage is a highly performant and cost-effective solution with multi-cloud compatibility and integrated access controls. Quickly store, archive, and retrieve huge datasets for AI/ML pipelines, easily integrating with every workflow.
                         </div>
                     </div>
                     {/* Storage Card 3 */}

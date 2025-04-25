@@ -135,7 +135,7 @@ export default function NetworkingServices() {
             <div id="private-cloud" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 -mt-20">
                 <h2 className="text-4xl font-bold text-center mb-4">VIRTUAL PRIVATE CLOUD</h2>
                 <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
-                    Create virtual, accelerated networks to manage your cloud resources on CoreWeave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI.
+                    Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">

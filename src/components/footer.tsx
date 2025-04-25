@@ -18,7 +18,7 @@ export default function Footer() {
                         <span className="text-sm">CANOPY WAVE</span>
                     </div>
                     <IwsLink
-                        href="/contact-us"
+                        href="/contact"
                         className="px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50 mb-4 sm:mb-0"
                     >
                         Contact us
@@ -44,7 +44,7 @@ export default function Footer() {
                                 <li><IwsLink href="/inference" className="text-gray-500 hover:text-gray-700">Inference</IwsLink></li>
                                 <li><IwsLink href="/rendering" className="text-gray-500 hover:text-gray-700">Rendering</IwsLink></li>
                                 <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-gray-700">Private Cloud</IwsLink></li>
-                                <li><IwsLink href="/gpu-cluster" className="text-gray-500 hover:text-gray-700">GPUs Cluster bring up and management</IwsLink></li>
+                                <li><IwsLink href="/gpu-cluster-management" className="text-gray-500 hover:text-gray-700">GPUs Cluster bring up and management</IwsLink></li>
                                 <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-gray-700">Networking Hardware Solution</IwsLink></li>
                             </ul>
                         </div>
@@ -92,7 +92,7 @@ export default function Footer() {
 
                 <div className="border-t -mx-[100vw] px-[100vw]">
                     <div className="flex flex-col sm:flex-row justify-between items-center pt-8">
-                        <p className="text-sm text-gray-500 mb-4 sm:mb-0">© 2024 All rights reserved.</p>
+                        <p className="text-sm text-gray-500 mb-4 sm:mb-0">© 2025 All rights reserved.</p>
                         <div className="flex items-center space-x-6">
                             <IwsLink href="/terms" className="text-sm text-[#80B224] hover:text-[#6a9420]">Terms of Service</IwsLink>
                             <IwsLink href="/privacy" className="text-sm text-[#80B224] hover:text-[#6a9420]">Privacy Policy</IwsLink>
