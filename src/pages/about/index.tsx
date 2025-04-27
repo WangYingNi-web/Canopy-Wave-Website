@@ -200,7 +200,7 @@ export default function AboutPage() {
       </div>
 
       {/* Contact Section */}
-      <div className="bg-gray-50 py-16 sm:py-24">
+      <div className="bg-[#F5F9F4] py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">Work With Us</h2>
           <p className="text-gray-600 mb-8">

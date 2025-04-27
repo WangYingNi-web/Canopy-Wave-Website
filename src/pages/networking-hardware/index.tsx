@@ -65,7 +65,7 @@ export default function NetworkingHardwarePage() {
             </section>
 
             {/* Product Solutions */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-[#F5F9F4]">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-center mb-12">Product Solutions</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -140,7 +140,7 @@ export default function NetworkingHardwarePage() {
             </section>
 
             {/* Contact Us */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-[#F5F9F4]">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="text-3xl font-bold mb-6">Need More Information?</h2>

@@ -229,7 +229,7 @@ export default function StorageServices() {
       </div>
 
       {/* RDMA Storage Section */}
-      <div id='rdma-storage' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gray-50">
+      <div id='rdma-storage' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-[#F5F9F4]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">RDMA STORAGE</h2>

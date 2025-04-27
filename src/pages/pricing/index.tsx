@@ -26,7 +26,7 @@ export default function PricingPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 mb-16">
                 {/* GPU Compute Section */}
                 <section className="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div className="p-6 bg-gray-50">
+                    <div className="p-6 bg-[#F5F9F4]">
                         <h2 className="text-2xl font-bold mb-4">GPU Compute</h2>
                     </div>
 
@@ -111,7 +111,7 @@ export default function PricingPage() {
 
                 {/* CPU Section */}
                 <section className="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div className="p-6 bg-gray-50">
+                    <div className="p-6 bg-[#F5F9F4]">
                         <h2 className="text-2xl font-bold mb-4">CPU Compute</h2>
                     </div>
                     <div className="p-6">
@@ -145,7 +145,7 @@ export default function PricingPage() {
 
                 {/* Storage Section */}
                 <section className="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div className="p-6 bg-gray-50">
+                    <div className="p-6 bg-[#F5F9F4]">
                         <h2 className="text-2xl font-bold mb-4">Storage Solutions</h2>
                     </div>
 
