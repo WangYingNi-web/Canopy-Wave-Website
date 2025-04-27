@@ -12,145 +12,213 @@ export default function PricingPage() {
 
             {/* Hero Section */}
             <div className="text-center py-16 pt-32">
-                <h1 className="text-4xl font-bold mb-4">GPU CLOUD PRICING</h1>
+                <h1 className="text-4xl font-bold mb-4">Pricing</h1>
                 <p className="text-gray-600 mb-8">
-                    Get access to world-class cloud resources and the best GPUs on the market
+                    Flexible pricing options for all your cloud computing needs
                 </p>
                 <div className="flex justify-center space-x-4">
-                    <Button className="bg-gray-200 text-black">Hourly</Button>
-                    <Button className="bg-[#8CC63F] text-white">Monthly</Button>
-                    <Button className="bg-gray-200 text-black">Yearly</Button>
+                    <Button className="bg-[#8CC63F] text-white">On-demand</Button>
+                    <Button className="bg-gray-200 text-black">Reserved</Button>
                 </div>
             </div>
 
-            {/* Pricing Table */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md mb-8">
-                    <div className="flex items-center mb-4">
-                        <Image src="/optimized.png" alt="GPU Icon" width={32} height={32} className="mr-2" />
-                        <h2 className="text-xl font-bold">On-demand GPU Instances</h2>
+            {/* Pricing Tables Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 mb-16">
+                {/* GPU Compute Section */}
+                <section className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div className="p-6 bg-gray-50">
+                        <h2 className="text-2xl font-bold mb-4">GPU Compute</h2>
                     </div>
-                    <p className="text-gray-600 mb-6">
-                        Quickly spin up burst capacity on-demand—with the flexibility of great on-demand pricing
-                    </p>
-                    <div className="mt-8">
-                        <div className="flex items-center space-x-2 mb-4">
-                            <h3 className="text-lg font-bold mr-4">NVIDIA HGX H100</h3>
-                            <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">DDR4 RAM</span>
-                            <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">SSD</span>
-                            <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">Up to 10 Gbps network</span>
+
+                    {/* NVIDIA HGX H100 */}
+                    <div className="p-6 border-b">
+                        <div className="flex items-center justify-between mb-6">
+                            <div>
+                                <h3 className="text-xl font-semibold">NVIDIA HGX H100</h3>
+                                <p className="text-gray-600 mt-1">Enterprise-grade GPU computing solution</p>
+                            </div>
+                            <div className="flex space-x-2">
+                                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">80GB HBM3</span>
+                                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">NVLink</span>
+                            </div>
                         </div>
-                        <table className="w-full text-left">
+                        <table className="w-full">
                             <thead>
                                 <tr className="border-b">
-                                    <th className="py-2 text-center">GPU Count</th>
-                                    <th className="py-2 text-center">VRAM (GB)</th>
-                                    <th className="py-2 text-center">vCPUs</th>
-                                    <th className="py-2 text-center">System RAM (GB)</th>
-                                    <th className="py-2 text-center">Local Storage(TB)</th>
-                                    <th className="py-2 text-center">Instance Price(Per Hour)</th>
+                                    <th className="py-3 text-left">Configuration</th>
+                                    <th className="py-3 text-center">vCPUs</th>
+                                    <th className="py-3 text-center">RAM</th>
+                                    <th className="py-3 text-center">Storage</th>
+                                    <th className="py-3 text-center">Price/Hour</th>
+                                    <th className="py-3 text-center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {Array(4).fill(0).map((_, i) => (
-                                    <tr key={i} className="border-b">
-                                        <td className="py-2 text-center">1</td>
-                                        <td className="py-2 text-center">80</td>
-                                        <td className="py-2 text-center">32</td>
-                                        <td className="py-2 text-center">128</td>
-                                        <td className="py-2 text-center">500</td>
-                                        <td className="py-2 text-center">$3.50</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="mt-12">
-                        <div className="flex items-center space-x-2 mb-4">
-                            <h3 className="text-lg font-bold mr-4">NVIDIA HGX H200</h3>
-                            <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">DDR4 RAM</span>
-                            <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">SSD</span>
-                            <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">Up to 10 Gbps network</span>
-                        </div>
-                        <table className="w-full text-left">
-                            <thead>
                                 <tr className="border-b">
-                                    <th className="py-2 text-center">GPU Count</th>
-                                    <th className="py-2 text-center">VRAM (GB)</th>
-                                    <th className="py-2 text-center">vCPUs</th>
-                                    <th className="py-2 text-center">System RAM (GB)</th>
-                                    <th className="py-2 text-center">Local Storage(TB)</th>
-                                    <th className="py-2 text-center">Instance Price(Per Hour)</th>
+                                    <td className="py-4">1x H100</td>
+                                    <td className="py-4 text-center">32</td>
+                                    <td className="py-4 text-center">256 GB</td>
+                                    <td className="py-4 text-center">2 TB NVMe</td>
+                                    <td className="py-4 text-center font-semibold">$3.50</td>
+                                    <td className="py-4 text-center">
+                                        <Button className="bg-[#8CC63F] text-white text-sm">Deploy</Button>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                {Array(4).fill(0).map((_, i) => (
-                                    <tr key={i} className="border-b">
-                                        <td className="py-2 text-center">1</td>
-                                        <td className="py-2 text-center">80</td>
-                                        <td className="py-2 text-center">32</td>
-                                        <td className="py-2 text-center">128</td>
-                                        <td className="py-2 text-center">500</td>
-                                        <td className="py-2 text-center">$3.50</td>
-                                    </tr>
-                                ))}
+                                {/* 添加更多配置选项 */}
                             </tbody>
                         </table>
                     </div>
-                  
 
-                </div>
-
-
-            </div>
-
-            {/* Pricing Table */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md mb-8">
-                    <div className="flex items-center mb-4">
-                        <Image src="/optimized.png" alt="GPU Icon" width={32} height={32} className="mr-2" />
-                        <h2 className="text-xl font-bold">On-demand CPU Instances</h2>
-                    </div>
-                    <p className="text-gray-600 mb-6">
-                        Quickly spin up burst capacity on-demand—with the flexibility of great on-demand pricing
-                    </p>
-                    <div className="flex items-center space-x-2 mb-4">
-                        <h3 className="text-lg font-bold mr-4">NVIDIA HGX H100</h3>
-                        <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">DDR4 RAM</span>
-                        <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">SSD</span>
-                        <span className="bg-gray-200 text-sm text-black px-2 py-1 rounded">Up to 10 Gbps network</span>
-                    </div>
-                    <table className="w-full text-left">
+                    {/* NVIDIA HGX H200 */}
+                    <div className="p-6 border-b">
+                        <div className="flex items-center justify-between mb-6">
+                            <div>
+                                <h3 className="text-xl font-semibold">NVIDIA HGX H200</h3>
+                                <p className="text-gray-600 mt-1">Next-generation GPU computing</p>
+                            </div>
+                            <div className="flex space-x-2">
+                                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">141GB HBM3e</span>
+                                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">NVLink</span>
+                            </div>
+                        </div>
+                        <table className="w-full">
                         <thead>
-                            <tr className="border-b">
-                                <th className="py-2 text-center">CPU Count</th>
-                                <th className="py-2 text-center">VRAM (GB)</th>
-                                <th className="py-2 text-center">vCPUs</th>
-                                <th className="py-2 text-center">System RAM (GB)</th>
-                                <th className="py-2 text-center">Local Storage(TB)</th>
-                                <th className="py-2 text-center">Instance Price(Per Hour)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Array(4).fill(0).map((_, i) => (
-                                <tr key={i} className="border-b">
-                                    <td className="py-2 text-center">1</td>
-                                    <td className="py-2 text-center">80</td>
-                                    <td className="py-2 text-center">32</td>
-                                    <td className="py-2 text-center">128</td>
-                                    <td className="py-2 text-center">500</td>
-                                    <td className="py-2 text-center">$3.50</td>
+                                <tr className="border-b">
+                                    <th className="py-3 text-left">Configuration</th>
+                                    <th className="py-3 text-center">vCPUs</th>
+                                    <th className="py-3 text-center">RAM</th>
+                                    <th className="py-3 text-center">Storage</th>
+                                    <th className="py-3 text-center">Price/Hour</th>
+                                    <th className="py-3 text-center">Action</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b">
+                                    <td className="py-4">1x H100</td>
+                                    <td className="py-4 text-center">32</td>
+                                    <td className="py-4 text-center">256 GB</td>
+                                    <td className="py-4 text-center">2 TB NVMe</td>
+                                    <td className="py-4 text-center font-semibold">$3.50</td>
+                                    <td className="py-4 text-center">
+                                        <Button className="bg-[#8CC63F] text-white text-sm">Deploy</Button>
+                                    </td>
+                                </tr>
+                                {/* 添加更多配置选项 */}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-                {/* Call to Action */}
-                <div className="bg-[#8CC63F] p-24 rounded-lg shadow-md text-center mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-white">CALL US FOR COMPETITIVE PRICING.</h2>
-                    <Button className="bg-white text-[#8CC63F] hover:bg-gray-100">Contact Us</Button>
-                </div>
+                {/* CPU Section */}
+                <section className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div className="p-6 bg-gray-50">
+                        <h2 className="text-2xl font-bold mb-4">CPU Compute</h2>
+                    </div>
+                    <div className="p-6">
+                        <table className="w-full">
+                            <thead>
+                                <tr className="border-b">
+                                    <th className="py-3 text-left">Type</th>
+                                    <th className="py-3 text-center">vCPUs</th>
+                                    <th className="py-3 text-center">RAM</th>
+                                    <th className="py-3 text-center">Storage</th>
+                                    <th className="py-3 text-center">Price/Hour</th>
+                                    <th className="py-3 text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b">
+                                    <td className="py-4">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center font-semibold">xxxx</td>
+                                    <td className="py-4 text-center">
+                                        <Button className="bg-[#8CC63F] text-white text-sm">Deploy</Button>
+                                    </td>
+                                </tr>
+                                {/* 添加更多配置选项 */}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                {/* Storage Section */}
+                <section className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div className="p-6 bg-gray-50">
+                        <h2 className="text-2xl font-bold mb-4">Storage Solutions</h2>
+                    </div>
+
+                    {/* Cloud Storage */}
+                    <div className="p-6 border-b">
+                        <h3 className="text-xl font-semibold mb-4">Cloud Storage</h3>
+                        <table className="w-full">
+                            <thead>
+                                <tr className="border-b">
+                                    <th className="py-3 text-left">Type</th>
+                                    <th className="py-3 text-center">Capacity</th>
+                                    <th className="py-3 text-center">Performance</th>
+                                    <th className="py-3 text-center">Price/GB/Month</th>
+                                    <th className="py-3 text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b">
+                                    <td className="py-4">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center font-semibold">xxxx</td>
+                                    <td className="py-4 text-center">
+                                        <Button className="bg-[#8CC63F] text-white text-sm">Deploy</Button>
+                                    </td>
+                                </tr>
+                                {/* 添加更多配置选项 */}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {/* RDMA Storage */}
+                    <div className="p-6">
+                        <h3 className="text-xl font-semibold mb-4">RDMA Storage</h3>
+                        <table className="w-full">
+                            <thead>
+                                <tr className="border-b">
+                                    <th className="py-3 text-left">Type</th>
+                                    <th className="py-3 text-center">Capacity</th>
+                                    <th className="py-3 text-center">IOPS</th>
+                                    <th className="py-3 text-center">Throughput</th>
+                                    <th className="py-3 text-center">Price/GB/Month</th>
+                                    <th className="py-3 text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b">
+                                    <td className="py-4">xxxx</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center">xxxx GB</td>
+                                    <td className="py-4 text-center">xxxx</td>
+                                    <td className="py-4 text-center font-semibold">xxxx</td>
+                                    <td className="py-4 text-center">
+                                        <Button className="bg-[#8CC63F] text-white text-sm">Deploy</Button>
+                                    </td>
+                                </tr>
+                                {/* 添加更多配置选项 */}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                {/* Contact Section */}
+                <section className="bg-[#8CC63F] rounded-lg shadow-lg p-20 text-center my-20">
+                    <h2 className="text-4xl font-bold text-white mb-8">Need a Custom Solution?</h2>
+                    <p className="text-xl text-white mb-10 max-w-2xl mx-auto">
+                        Contact us for more details and special pricing
+                    </p>
+                    <Button className="bg-white text-[#8CC63F] hover:bg-gray-100 text-lg px-10 py-6">
+                        Contact Us
+                    </Button>
+                </section>
             </div>
 
             <Footer />

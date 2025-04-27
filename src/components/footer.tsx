@@ -59,7 +59,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold mb-4">PRICING</h3>
+                            <h3 className="font-semibold mb-4">Data Center</h3>
                             <ul className="space-y-2 text-sm">
                                 <li><IwsLink href="/us1" className="text-gray-500 hover:text-gray-700">US 1</IwsLink></li>
                                 <li><IwsLink href="/canada1" className="text-gray-500 hover:text-gray-700">Canada 1</IwsLink></li>
@@ -68,7 +68,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold mb-4">PRICING</h3>
+                            <h3 className="font-semibold mb-4">Resources</h3>
                             <ul className="space-y-2">
                                 <li><IwsLink href="/documentation" className="text-gray-500 hover:text-gray-700">Documentation</IwsLink></li>
                                 <li><IwsLink href="/status" className="text-gray-500 hover:text-gray-700">Status</IwsLink></li>
@@ -77,7 +77,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold mb-4">PRICING</h3>
+                            <h3 className="font-semibold mb-4">About</h3>
                             <ul className="space-y-2">
                                 <li><IwsLink href="/about" className="text-gray-500 hover:text-gray-700">About US</IwsLink></li>
                                 <li><IwsLink href="/careers" className="text-gray-500 hover:text-gray-700">Careers</IwsLink></li>

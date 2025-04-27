@@ -17,7 +17,7 @@ export default function Contact() {
                             </p>
                             <div className="mt-6">
                                 <h2 className="text-lg font-bold mb-3">TECHNICAL AND ACCOUNT SUPPORT</h2>
-                                <p className="text-gray-600 mb-3">We&apos;re here to help! If you have technical issues or questions about your account, <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
+                                <p className="text-gray-600 mb-3">We&apos;re here to help! If you have technical issues or questions about your account <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
                             <div className="mt-6">
                                 <h2 className="text-lg font-bold mb-3">CONTACT INFORMATION</h2>
@@ -96,7 +96,7 @@ export default function Contact() {
                                     <input type="checkbox" className="mr-2" />
                                     <span className="text-gray-600">I agree to receive marketing communications from CoreWave.</span>
                                 </div>
-                                <button type="submit" className="bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#7ab32f]">Explore careers</button>
+                                <button type="submit" className="bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#7ab32f]">Contact Us</button>
                             </form>
                         </div>
                     </div>
