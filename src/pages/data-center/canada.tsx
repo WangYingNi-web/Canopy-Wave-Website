@@ -91,7 +91,7 @@ export default function CanadaDataCenter() {
                             <ul className="space-y-4">
                                 <li className="flex items-start">
                                     <span className="text-[#8CC63F] mr-2">✓</span>
-                                    <span>Located in Montreal's technology hub</span>
+                                    <span>Located in Montreal&apos;s technology hub</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-[#8CC63F] mr-2">✓</span>
