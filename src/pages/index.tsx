@@ -127,7 +127,7 @@ export default function Index() {
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-gray-50 py-12 sm:py-20">
+        <div className="bg-[#F5F9F4] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
@@ -204,7 +204,7 @@ export default function Index() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-gray-50 py-16 sm:py-24">
+        <div className="bg-[#F5F9F4] py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">HAVE QUESTIONS? GET IN TOUCH!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">

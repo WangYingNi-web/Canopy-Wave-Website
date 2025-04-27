@@ -63,22 +63,22 @@ export default function ComputeServicesPage() {
                 </Button>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-                    <div className="p-6 bg-gray-50 rounded-lg">
+                    <div className="p-6 bg-[#F5F9F4] rounded-lg">
                         <Image src="/optimized.png" alt="Optimized Stack" width={64} height={64} className="mx-auto mb-4" />
                         <h3 className="font-bold mb-2">OPTIMIZED STACK</h3>
                         <p className="text-gray-600">Pre-qualified and optimized GPU and AI drivers</p>
                     </div>
-                    <div className="p-6 bg-gray-50 rounded-lg">
+                    <div className="p-6 bg-[#F5F9F4] rounded-lg">
                         <Image src="/optimized.png" alt="Dedicated Resource" width={64} height={64} className="mx-auto mb-4" />
                         <h3 className="font-bold mb-2">DEDICATED RESOURCE</h3>
                         <p className="text-gray-600">Fully secured resources with the flexibility to optimize your stacks and application</p>
                     </div>
-                    <div className="p-6 bg-gray-50 rounded-lg">
+                    <div className="p-6 bg-[#F5F9F4] rounded-lg">
                         <Image src="/optimized.png" alt="High Performance" width={64} height={64} className="mx-auto mb-4" />
                         <h3 className="font-bold mb-2">HIGH PERFORMANCE</h3>
                         <p className="text-gray-600">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
                     </div>
-                    <div className="p-6 bg-gray-50 rounded-lg">
+                    <div className="p-6 bg-[#F5F9F4] rounded-lg">
                         <Image src="/optimized.png" alt="Pay Only Used" width={64} height={64} className="mx-auto mb-4" />
                         <h3 className="font-bold mb-2">PAY ONLY USED</h3>
                         <p className="text-gray-600">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>

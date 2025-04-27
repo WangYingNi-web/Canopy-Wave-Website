@@ -36,7 +36,7 @@ export default function GPUClusterManagementPage() {
             
 
             {/* Service Advantages */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-[#F5F9F4]">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Service Advantages</h2>
@@ -89,7 +89,7 @@ export default function GPUClusterManagementPage() {
                                 onClick={() => setActiveTab('deployment')}
                                 className={`px-4 py-2 text-sm font-medium rounded-l-lg ${activeTab === 'deployment'
                                         ? 'bg-[#80B224] text-white'
-                                        : 'bg-white text-gray-700 hover:bg-gray-50'
+                                        : 'bg-white text-gray-700 hover:bg-[#F5F9F4]'
                                     } border border-gray-200`}
                             >
                                 Cluster Deployment
@@ -98,7 +98,7 @@ export default function GPUClusterManagementPage() {
                                 onClick={() => setActiveTab('management')}
                                 className={`px-4 py-2 text-sm font-medium ${activeTab === 'management'
                                         ? 'bg-[#80B224] text-white'
-                                        : 'bg-white text-gray-700 hover:bg-gray-50'
+                                        : 'bg-white text-gray-700 hover:bg-[#F5F9F4]'
                                     } border-t border-b border-r border-gray-200`}
                             >
                                 Cluster Management
@@ -107,7 +107,7 @@ export default function GPUClusterManagementPage() {
                                 onClick={() => setActiveTab('optimization')}
                                 className={`px-4 py-2 text-sm font-medium rounded-r-lg ${activeTab === 'optimization'
                                         ? 'bg-[#80B224] text-white'
-                                        : 'bg-white text-gray-700 hover:bg-gray-50'
+                                        : 'bg-white text-gray-700 hover:bg-[#F5F9F4]'
                                     } border-t border-b border-r border-gray-200`}
                             >
                                 Performance Optimization
@@ -238,7 +238,7 @@ export default function GPUClusterManagementPage() {
             </section>
 
             {/* Case Studies */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-[#F5F9F4]">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
@@ -292,7 +292,7 @@ export default function GPUClusterManagementPage() {
                         <p className="text-lg text-gray-600 mb-8">
                             Contact our expert team to get a customized GPU cluster solution
                         </p>
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div className="bg-[#F5F9F4] p-8 rounded-lg shadow-md">
                             <form className="space-y-4">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>

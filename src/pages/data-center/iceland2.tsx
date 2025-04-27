@@ -29,7 +29,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Sustainability Section */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-[#F5F9F4]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-center mb-16">Sustainable by Design</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -121,7 +121,7 @@ export default function IcelandDataCenter() {
             </section>
 
             {/* Connectivity */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-[#F5F9F4]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-center mb-16">Global Connectivity</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

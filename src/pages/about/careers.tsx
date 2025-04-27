@@ -59,7 +59,7 @@ export default function Careers() {
                 </p>
 
                 <div className="space-y-4">
-                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-300">
+                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
                         <div className="flex-1">
                             <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                             <h3 className="font-semibold">Software Engineer, DevOp</h3>
@@ -67,7 +67,7 @@ export default function Careers() {
                         <div className="text-gray-600">Santa Clara, CA</div>
                     </div>
 
-                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-300">
+                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
                         <div className="flex-1">
                             <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                             <h3 className="font-semibold">Software Engineer, Kubernetes</h3>
@@ -75,7 +75,7 @@ export default function Careers() {
                         <div className="text-gray-600">Remote (United States)</div>
                     </div>
 
-                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-300">
+                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
                         <div className="flex-1">
                             <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                             <h3 className="font-semibold">Software Engineer, Infrastructure</h3>
@@ -83,7 +83,7 @@ export default function Careers() {
                         <div className="text-gray-600">Santa Clara, CA</div>
                     </div>
 
-                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-300">
+                    <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
                         <div className="flex-1">
                             <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                             <h3 className="font-semibold">Software Engineer, Front-end</h3>
@@ -94,7 +94,7 @@ export default function Careers() {
             </div>
 
             {/* Contact Section */}
-            <div className="bg-gray-50 py-16 sm:py-24">
+            <div className="bg-[#F5F9F4] py-16 sm:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">COME BUILD THE FUTURE WITH US</h2>
                     <p className="text-gray-600 mb-8">
