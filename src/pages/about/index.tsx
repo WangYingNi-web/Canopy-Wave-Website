@@ -7,19 +7,19 @@ import PartnerCarousel from '@/components/carousel';
 
 export default function AboutPage() {
   const partnerLogos = [
-    { id: 1, width: 100, height: 50 },
-    { id: 2, width: 100, height: 45 },
-    { id: 3, width: 100, height: 40 },
-    { id: 4, width: 60, height: 45 },
-    { id: 5, width: 60, height: 40 },
-    { id: 6, width: 60, height: 45 },
-    { id: 7, width: 60, height: 50 },
-    { id: 8, width: 100, height: 40 },
-    { id: 9, width: 100, height: 45 },
-    { id: 10, width: 100, height: 45 },
-    { id: 11, width: 100, height: 40 },
-    { id: 12, width: 100, height: 45 },
-    { id: 13, width: 100, height: 45 },
+    { id: 1, width: 110, height: 80 },
+    { id: 2, width: 90, height: 80 },
+    { id: 3, width: 100, height: 80 },
+    { id: 4, width: 100, height: 80 },
+    { id: 5, width: 120, height: 80 },
+    { id: 6, width: 120, height: 80 },
+    { id: 7, width: 120, height: 80 },
+    { id: 8, width: 90, height: 80 },
+    { id: 9, width: 120, height: 80 },
+    { id: 10, width: 90, height: 80 },
+    { id: 11, width: 100, height: 80 },
+    { id: 12, width: 100, height: 80 },
+    { id: 13, width: 100, height: 80 },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <p className="text-gray-600 mb-10 text-lg leading-relaxed">
               Canopy Wave is dedicated to helping Enterprise optimize their AI workload budget, whether for development, fine-tuning, or inferencing. We own and operate thousands of H100/H200 GPUs, running with renewable energy with the cutting-edge management infrastructure to provide users high performance and reliable GPU resources.
             </p>
-            <button className="bg-[#8CC63F] text-white px-10 py-4 text-lg rounded-lg hover:bg-[#80B224] transition-all duration-300">
+            <button className="bg-[#8CC63F] text-white px-8 py-3 text-base rounded-lg hover:bg-[#80B224] transition-all duration-300">
               Contact us
             </button>
           </div>
@@ -114,7 +114,10 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <PartnerCarousel logos={partnerLogos} />
+      <div className='py-20'>
+        <PartnerCarousel logos={partnerLogos} />
+      </div>
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -126,71 +129,71 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-4">
-            <div className="border-b border-gray-200">
-              <button className="w-full py-4 flex items-center justify-between gap-6 hover:text-[#80B224] transition-colors">
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={48} height={48} />
+            <div className="border-b-2 border-gray-200">
+              <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
                   </div>
                   <h3 className="text-xl font-semibold">Be curious at your core</h3>
                 </div>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
             </div>
 
-            <div className="border-b border-gray-200">
-              <button className="w-full py-4 flex items-center justify-between gap-6 hover:text-[#80B224] transition-colors">
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={48} height={48} />
+            <div className="border-b-2 border-gray-200">
+              <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
                   </div>
                   <h3 className="text-xl font-semibold">Empower employees</h3>
                 </div>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
             </div>
 
-            <div className="border-b border-gray-200">
-              <button className="w-full py-4 flex items-center justify-between gap-6 hover:text-[#80B224] transition-colors">
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={48} height={48} />
+            <div className="border-b-2 border-gray-200">
+              <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
                   </div>
                   <h3 className="text-xl font-semibold">Act Like An Owner</h3>
                 </div>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
             </div>
 
-            <div className="border-b border-gray-200">
-              <button className="w-full py-4 flex items-center justify-between gap-6 hover:text-[#80B224] transition-colors">
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={48} height={48} />
+            <div className="border-b-2 border-gray-200">
+              <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
                   </div>
                   <h3 className="text-xl font-semibold">Deliver Best-in-Class Experiences</h3>
                 </div>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
             </div>
 
-            <div className="border-b border-gray-200">
-              <button className="w-full py-4 flex items-center justify-between gap-6 hover:text-[#80B224] transition-colors">
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={48} height={48} />
+            <div className="border-b-2 border-gray-200">
+              <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
                   </div>
                   <h3 className="text-xl font-semibold">Achieve More Together</h3>
                 </div>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>

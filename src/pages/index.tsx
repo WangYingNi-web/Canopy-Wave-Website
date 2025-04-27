@@ -11,19 +11,19 @@ import PartnerCarousel from '@/components/carousel';
 export default function Index() {
   const router = useRouter();
   const partnerLogos = [
-    { id: 1, width: 100, height: 50 },
-    { id: 2, width: 100, height: 45 },
-    { id: 3, width: 100, height: 40 },
-    { id: 4, width: 60, height: 45 },
-    { id: 5, width: 60, height: 40 },
-    { id: 6, width: 60, height: 45 },
-    { id: 7, width: 60, height: 50 },
-    { id: 8, width: 100, height: 40 },
-    { id: 9, width: 100, height: 45 },
-    { id: 10, width: 100, height: 45 },
-    { id: 11, width: 100, height: 40 },
-    { id: 12, width: 100, height: 45 },
-    { id: 13, width: 100, height: 45 },
+    { id: 1, width: 110, height: 80 },
+    { id: 2, width: 90, height: 80 },
+    { id: 3, width: 100, height: 80 },
+    { id: 4, width: 100, height: 80 },
+    { id: 5, width: 120, height: 80 },
+    { id: 6, width: 120, height: 80 },
+    { id: 7, width: 120, height: 80 },
+    { id: 8, width: 90, height: 80 },
+    { id: 9, width: 120, height: 80 },
+    { id: 10, width: 90, height: 80 },
+    { id: 11, width: 100, height: 80 },
+    { id: 12, width: 100, height: 80 },
+    { id: 13, width: 100, height: 80 },
   ];
   return (
     <main className="dark:bg-slate-800">
