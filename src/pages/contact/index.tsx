@@ -1,9 +1,84 @@
 "use client";
 
+import { useState } from 'react';
+import axios from "axios";
+import { toast } from 'react-hot-toast';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 export default function Contact() {
+    const [loading, setLoading] = useState(false);
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        company: '',
+        email: '',
+        jobTitle: '',
+        phone: '',
+        country: '',
+        usagePlan: '',
+        expectedGPUs: '',
+        interests: [] as string[],
+        message: '',
+        marketing: false
+    });
+    const handleSubmit = async () => {
+        setLoading(true);
+        try {
+            const response = await axios.post(
+                `${process.env.NEXT_PUBLIC_BACKEND}/api/contact/submit`,
+                formData
+            );
+
+            toast.success("Form submitted successfully!");
+            // 重置表单
+            setFormData({
+                firstName: '',
+                lastName: '',
+                company: '',
+                email: '',
+                jobTitle: '',
+                phone: '',
+                country: '',
+                usagePlan: '',
+                expectedGPUs: '',
+                interests: [],
+                message: '',
+                marketing: false
+            });
+        } catch (error: any) {
+            const errorMessage = error.response?.data?.error || "Failed to submit form.";
+            toast.error(errorMessage);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, checked } = e.target;
+        if (name === 'marketing') {
+            setFormData(prev => ({
+                ...prev,
+                marketing: checked
+            }));
+        } else {
+            setFormData(prev => ({
+                ...prev,
+                interests: checked
+                    ? [...prev.interests, name]
+                    : prev.interests.filter(interest => interest !== name)
+            }));
+        }
+    };
+
     return (
         <main className="min-h-screen relative">
             <Header />
@@ -29,22 +104,79 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <form className="bg-white p-8 rounded-lg shadow-md">
+                            <form onSubmit={(e) => {
+                                e.preventDefault();
+                                handleSubmit();
+                            }} className="bg-white p-8 rounded-lg shadow-md">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                                    <input type="text" placeholder="First name*" className="border p-2 rounded mb-4" />
-                                    <input type="text" placeholder="Last name*" className="border p-2 rounded mb-4" />
-                                    <input type="text" placeholder="Company name*" className="border p-2 rounded mb-4" />
-                                    <input type="email" placeholder="Business email*" className="border p-2 rounded mb-4" />
-                                    <input type="text" placeholder="Job title*" className="border p-2 rounded mb-4" />
-                                    <select className="border p-2 rounded mb-4">
-                                        <option value="">Country*</option>
-                                        <option value="USA">USA</option>
-                                        <option value="Canada">Canada</option>
-                                        <option value="UK">UK</option>
-                                        <option value="Australia">Australia</option>
-                                    </select>
+                                    <div className="flex flex-col">
+                                        <label className="mb-2 text-gray-700">First Name *</label>
+                                        <input
+                                            type="text"
+                                            name="firstName"
+                                            value={formData.firstName}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label className="mb-2 text-gray-700">Last Name *</label>
+                                        <input
+                                            type="text"
+                                            name="lastName"
+                                            value={formData.lastName}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label className="mb-2 text-gray-700">Company Name *</label>
+                                        <input
+                                            type="text"
+                                            name="company"
+                                            value={formData.company}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label className="mb-2 text-gray-700">Email *</label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label className="mb-2 text-gray-700">Phone *</label>
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label className="mb-2 text-gray-700">Job Title *</label>
+                                        <input
+                                            type="text"
+                                            name="jobTitle"
+                                            value={formData.jobTitle}
+                                            onChange={handleInputChange}
+                                            className="border p-2 rounded"
+                                            required
+                                        />
+                                    </div>
                                 </div>
-                                <select className="border p-2 rounded w-full mb-6">
+                                {/* <select className="border p-2 rounded w-full mb-6">
                                     <option value="">I plan to use CoreWave for:</option>
                                     <option value="AI Training">AI Training</option>
                                     <option value="Data Analysis">Data Analysis</option>
@@ -57,7 +189,7 @@ export default function Contact() {
                                     <option value="11-50">11-50</option>
                                     <option value="51-100">51-100</option>
                                     <option value="100+">100+</option>
-                                </select>
+                                </select> */}
                                 <div className="mb-6">
                                     <h3 className="text-lg font-bold mb-2">Select Your interests *</h3>
                                     <div className="flex flex-col">
@@ -94,9 +226,15 @@ export default function Contact() {
                                 <textarea placeholder="Tell us about your need for high-performance compute, and how you plan to use it to advance your business?" className="border p-2 rounded w-full mb-6"></textarea>
                                 <div className="flex items-center mb-6">
                                     <input type="checkbox" className="mr-2" />
-                                    <span className="text-gray-600">I agree to receive marketing communications from CoreWave.</span>
+                                    <span className="text-gray-600">I agree to receive marketing communications from CanopyWave.</span>
                                 </div>
-                                <button type="submit" className="bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#7ab32f]">Contact Us</button>
+                                <button
+                                    type="submit"
+                                    className="bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#7ab32f] disabled:opacity-50"
+                                    disabled={loading}
+                                >
+                                    {loading ? 'Submitting...' : 'Contact Us'}
+                                </button>
                             </form>
                         </div>
                     </div>
