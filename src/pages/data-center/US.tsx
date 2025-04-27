@@ -18,7 +18,7 @@ export default function USDataCenter() {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div className="absolute inset-0 bg-[#80B224] flex items-center justify-center">
                     <div className="text-center text-white">
                         <h1 className="text-5xl font-bold mb-6">US Data Center</h1>
                         <p className="text-xl max-w-2xl mx-auto">
