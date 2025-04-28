@@ -1,6 +1,6 @@
 # iWebsite
 
-通过 Next.js 构建的网站，可用于企业官网、毕业设计。
+通过 Next.js 构建的网站，可用于企业官网。
 和[tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)的区别
 
 -
