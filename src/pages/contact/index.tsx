@@ -15,39 +15,60 @@ export default function Contact() {
         email: '',
         jobTitle: '',
         phone: '',
-        country: '',
-        usagePlan: '',
-        expectedGPUs: '',
         interests: [] as string[],
         message: '',
         marketing: false
     });
+
     const handleSubmit = async () => {
         setLoading(true);
         try {
+            const emailBody = `
+                name: ${formData.firstName} ${formData.lastName}
+                company: ${formData.company}
+                email: ${formData.email}
+                jobTitle: ${formData.jobTitle}
+                phone: ${formData.phone}
+                interests: ${formData.interests.join(', ')}
+                message: ${formData.message}
+                Do you agree with marketing: ${formData.marketing ? 'yes' : 'no'}
+            `;
+
             const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_BACKEND}/api/contact/submit`,
-                formData
+                'https://sequoia-paas.canopywave.io/api/v1/send_email',
+                {
+                    subject: 'New Contact Form Submission',
+                    recipients: ['wangyingni@canopywave.com', 'liuuisj@canopywave.com'],
+                    body: emailBody
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer alsfkjalsdkfjldksjfalksdjfljk13123'
+                    }
+                }
             );
 
-            toast.success("Form submitted successfully!");
-            // 重置表单
-            setFormData({
-                firstName: '',
-                lastName: '',
-                company: '',
-                email: '',
-                jobTitle: '',
-                phone: '',
-                country: '',
-                usagePlan: '',
-                expectedGPUs: '',
-                interests: [],
-                message: '',
-                marketing: false
-            });
+            if (response.status === 200) {
+                toast.success("Email sent successfully");
+                // 重置表单
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    company: '',
+                    email: '',
+                    jobTitle: '',
+                    phone: '',
+                    interests: [],
+                    message: '',
+                    marketing: false
+                });
+            } else {
+                throw new Error('Email sending failed');
+            }
         } catch (error: any) {
-            const errorMessage = error.response?.data?.error || "Failed to submit form.";
+            console.error('Email sending failed:', error);
+            const errorMessage = error.response?.data?.error || "Email sending failed";
             toast.error(errorMessage);
         } finally {
             setLoading(false);
@@ -194,39 +215,92 @@ export default function Contact() {
                                     <h3 className="text-lg font-bold mb-2">Select Your interests *</h3>
                                     <div className="flex flex-col">
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="instant-cluster"
+                                                checked={formData.interests.includes('instant-cluster')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
                                             <span className="text-gray-600">Instant Cluster</span>
                                         </label>
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="bare-metal-cloud"
+                                                checked={formData.interests.includes('bare-metal-cloud')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
                                             <span className="text-gray-600">Bare Metal Cloud</span>
                                         </label>
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="nvdia-gb200-blackwell-superchip"
+                                                checked={formData.interests.includes('nvdia-gb200-blackwell-superchip')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2" />
                                             <span className="text-gray-600">Nvdia GB200 Blackwell Superchip</span>
                                         </label>
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="nvidia-b200-gpu"
+                                                checked={formData.interests.includes('nvidia-b200-gpu')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
                                             <span className="text-gray-600">Nvidia B200 GPU</span>
                                         </label>
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="nvidia-h200-sxm"
+                                                checked={formData.interests.includes('nvidia-h200-sxm')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
                                             <span className="text-gray-600">Nvidia H200 SXM</span>
                                         </label>
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="nvidia-h100-sxm"
+                                                checked={formData.interests.includes('nvidia-h100-sxm')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
                                             <span className="text-gray-600">Nvidia H100 SXM</span>
                                         </label>
                                         <label className="flex items-center mb-3">
-                                            <input type="checkbox" className="mr-2" />
+                                            <input
+                                                type="checkbox"
+                                                name="other"
+                                                checked={formData.interests.includes('other')}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
                                             <span className="text-gray-600">Other</span>
                                         </label>
+                                        <textarea
+                                            name="message"
+                                            value={formData.message}
+                                            onChange={handleInputChange}
+                                            placeholder="Tell us about your need for high-performance compute, and how you plan to use it to advance your business?"
+                                            className="border p-2 rounded w-full mb-6"
+                                        ></textarea>
+                                        <div className="flex items-center mb-6">
+                                            <input
+                                                type="checkbox"
+                                                name="marketing"
+                                                checked={formData.marketing}
+                                                onChange={handleCheckboxChange}
+                                                className="mr-2"
+                                            />
+                                            <span className="text-gray-600">I agree to receive marketing communications from CanopyWave.</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <textarea placeholder="Tell us about your need for high-performance compute, and how you plan to use it to advance your business?" className="border p-2 rounded w-full mb-6"></textarea>
-                                <div className="flex items-center mb-6">
-                                    <input type="checkbox" className="mr-2" />
-                                    <span className="text-gray-600">I agree to receive marketing communications from CanopyWave.</span>
                                 </div>
                                 <button
                                     type="submit"
