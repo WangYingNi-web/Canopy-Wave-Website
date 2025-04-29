@@ -72,7 +72,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="bg-white border-y-2 border-gray-200 dark:bg-slate-800 dark:border-gray-600 fixed top-0 left-0 right-0 z-50 py-2">
+    <nav className="bg-white border-y-2 border-gray-200 fixed top-0 left-0 right-0 z-50 py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* 左侧 logo */}
@@ -392,7 +392,7 @@ export default function Header() {
           <div className="-mr-2 flex items-center md:hidden">
             <button
               type="button"
-              className="bg-gray-200 dark:bg-gray-500 hover:dark:bg-gray-500 inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-100 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 transition duration-150 ease-in-out"
+              className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 transition duration-150 ease-in-out"
               aria-controls="mobile-menu"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -416,7 +416,7 @@ export default function Header() {
         <div className="px-2 pt-2 pb-3 sm:px-3">
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${currentRouter === 'home' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+              className={`block w-full text-left text-gray-600 ${currentRouter === 'home' ? 'bg-gray-200' : ''
                 } px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileProducts(!showMobileProducts)}
             >
@@ -499,7 +499,7 @@ export default function Header() {
 
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${currentRouter === 'solutions' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+              className={`block w-full text-left text-gray-600 hover:bg-gray-200 ${currentRouter === 'solutions' ? 'bg-gray-200' : ''
                 } px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileSolutions(!showMobileSolutions)}
             >
@@ -518,7 +518,7 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 px-3 py-2 rounded-md text-base font-medium`}
+              className={`block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobilePricing(!showMobilePricing)}
             >
               Pricing {showMobilePricing ? '▼' : '▶'}
@@ -535,7 +535,7 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 px-3 py-2 rounded-md text-base font-medium`}
+              className={`block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileDataCenter(!showMobileDataCenter)}
             >
               Data Center {showMobileDataCenter ? '▼' : '▶'}
@@ -551,7 +551,7 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 px-3 py-2 rounded-md text-base font-medium`}
+              className={`block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileResources(!showMobileResources)}
             >
               Data Center {showMobileResources ? '▼' : '▶'}
@@ -565,7 +565,7 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500
+              className={`block w-full text-left text-gray-600 hover:bg-gray-200
               px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileAbout(!showMobileAbout)}
             >
