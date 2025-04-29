@@ -5,7 +5,6 @@ import IwsLink from './IwsLink'
 import { useRouter } from 'next/router'
 import { router as routerList } from './../router'
 import { useState, useEffect, useRef } from 'react';
-import { ModeToggle } from '@/components/mode-toggle'
 
 export default function Header() {
   const router = useRouter()
