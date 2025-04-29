@@ -79,7 +79,7 @@ export default function Header() {
             <div className="flex items-center">
               <IwsLink href="/" className="flex items-center">
                 <Image
-                  src="/canopy.png"
+                  src="/canopy.svg"
                   alt="Canopy Wave Logo"
                   width={50}
                   height={50}
