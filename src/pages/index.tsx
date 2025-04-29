@@ -26,7 +26,7 @@ export default function Index() {
     { id: 13, width: 100, height: 80 },
   ];
   return (
-    <main className="dark:bg-slate-800">
+    <main>
       <Header />
       <div className="w-full">
         {/* Hero Section */}
