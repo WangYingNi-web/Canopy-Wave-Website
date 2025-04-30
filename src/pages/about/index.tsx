@@ -70,10 +70,10 @@ export default function AboutPage() {
           <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
             <div className="w-16 h-16 mb-6 mx-auto">
               <Image
-                src="/optimized.png"
+                src="/about/straightforward.svg"
                 alt="What we do icon"
-                width={64}
-                height={64}
+                width={45}
+                height={45}
               />
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
@@ -85,10 +85,10 @@ export default function AboutPage() {
           <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
             <div className="w-16 h-16 mb-6 mx-auto">
               <Image
-                src="/optimized.png"
+                src="/about/adaptable.svg"
                 alt="What we do icon"
-                width={64}
-                height={64}
+                width={45}
+                height={45}
               />
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
@@ -100,10 +100,10 @@ export default function AboutPage() {
           <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
             <div className="w-16 h-16 mb-6 mx-auto">
               <Image
-                src="/optimized.png"
+                src="/about/global.svg"
                 alt="What we do icon"
-                width={64}
-                height={64}
+                width={45}
+                height={45}
               />
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
@@ -132,8 +132,8 @@ export default function AboutPage() {
             <div className="border-b-2 border-gray-200">
               <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                 <div className="flex items-center gap-8">
-                  <div className="w-16 h-16 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <Image src="/about/curious.svg" alt="Value icon" width={40} height={40} />
                   </div>
                   <h3 className="text-xl font-semibold">Be curious at your core</h3>
                 </div>
@@ -146,8 +146,8 @@ export default function AboutPage() {
             <div className="border-b-2 border-gray-200">
               <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                 <div className="flex items-center gap-8">
-                  <div className="w-16 h-16 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <Image src="/about/employees.svg" alt="Value icon" width={40} height={40} />
                   </div>
                   <h3 className="text-xl font-semibold">Empower employees</h3>
                 </div>
@@ -160,8 +160,8 @@ export default function AboutPage() {
             <div className="border-b-2 border-gray-200">
               <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                 <div className="flex items-center gap-8">
-                  <div className="w-16 h-16 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <Image src="/about/key.svg" alt="Value icon" width={40} height={40} />
                   </div>
                   <h3 className="text-xl font-semibold">Act Like An Owner</h3>
                 </div>
@@ -174,8 +174,8 @@ export default function AboutPage() {
             <div className="border-b-2 border-gray-200">
               <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                 <div className="flex items-center gap-8">
-                  <div className="w-16 h-16 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <Image src="/about/experiences.svg" alt="Value icon" width={40} height={40} />
                   </div>
                   <h3 className="text-xl font-semibold">Deliver Best-in-Class Experiences</h3>
                 </div>
@@ -188,8 +188,8 @@ export default function AboutPage() {
             <div className="border-b-2 border-gray-200">
               <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                 <div className="flex items-center gap-8">
-                  <div className="w-16 h-16 flex-shrink-0">
-                    <Image src="/optimized.png" alt="Value icon" width={64} height={64} />
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <Image src="/about/achieve.svg" alt="Value icon" width={40} height={40} />
                   </div>
                   <h3 className="text-xl font-semibold">Achieve More Together</h3>
                 </div>

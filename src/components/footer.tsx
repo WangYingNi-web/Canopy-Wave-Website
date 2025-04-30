@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="flex flex-col sm:flex-row justify-between items-center border-b pb-8">
                     <div className="flex items-center space-x-4 mb-4 sm:mb-0">
                         <Image
-                            src="/canopy.png"
+                            src="/canopy.svg"
                             alt="Canopy Wave Logo"
                             width={30}
                             height={30}

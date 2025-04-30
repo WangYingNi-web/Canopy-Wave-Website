@@ -72,23 +72,23 @@ export default function Index() {
               Instantly allocated GPU cluster <br /> with ready-to-go AI stack
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/icon/optimized.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">OPTIMIZED STACK</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Pre-qualified and optimized GPU and AI drivers</p>
               </div>
-              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/icon/resource.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">DEDICATED RESOURCE</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Fully secured resources with the flexibility to optimize your stacks and application</p>
               </div>
-              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/icon/high.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">HIGH PERFORMANCE</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
               </div>
-              <div className="p-8 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/optimized.png" alt="Optimized Stack" width={80} height={80} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
+                <Image src="/icon/used.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">PAY ONLY USED</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
               </div>
@@ -108,7 +108,7 @@ export default function Index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="border-2 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/optimized.png" alt="H100" width={80} height={80} />
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={45} height={45} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
@@ -116,7 +116,7 @@ export default function Index() {
               </div>
               <div className="border-2 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/optimized.png" alt="H200" width={80} height={80} />
+                  <Image src="/icon/NvidiaH200s.svg" alt="H200" width={45} height={45} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
