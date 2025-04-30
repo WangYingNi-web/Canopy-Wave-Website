@@ -26,7 +26,7 @@ export default function Careers() {
                             <div className="text-white">
                                 <span className="inline-block mb-4">Webinar</span>
                                 <h2 className="text-3xl font-bold mb-4">Strategies for Maximizing GPU Performance</h2>
-                                <p className="mb-4">How CanopyWave's stack stays AI-first from all angles</p>
+                                <p className="mb-4">How CanopyWave&apos;s stack stays AI-first from all angles</p>
                             </div>
                         </div>
                         
@@ -57,7 +57,7 @@ export default function Careers() {
                         <div className="bg-[#8CC63F] p-6">
                             <span className="text-white text-sm mb-2 block">Webinar</span>
                             <h3 className="text-white text-xl font-bold mb-2">Strategies for Maximizing GPU Performance</h3>
-                            <p className="text-white text-sm">How CanopyWave's stack stays AI-first from all angles</p>
+                            <p className="text-white text-sm">How CanopyWave&apos;s stack stays AI-first from all angles</p>
                         </div>
                         <div className="p-6">
                             <div className="flex gap-2 mb-4">
@@ -87,7 +87,7 @@ export default function Careers() {
                         <div className="bg-[#8CC63F] p-6">
                             <span className="text-white text-sm mb-2 block">Webinar</span>
                             <h3 className="text-white text-xl font-bold mb-2">Strategies for Maximizing GPU Performance</h3>
-                            <p className="text-white text-sm">How CanWeave's stack stays AI-first from all angles</p>
+                            <p className="text-white text-sm">How CanWeave&apos;s stack stays AI-first from all angles</p>
                         </div>
                         <div className="p-6">
                             <div className="flex gap-2 mb-4">
@@ -117,7 +117,7 @@ export default function Careers() {
                         <div className="bg-[#8CC63F] p-6">
                             <span className="text-white text-sm mb-2 block">Webinar</span>
                             <h3 className="text-white text-xl font-bold mb-2">Strategies for Maximizing GPU Performance</h3>
-                            <p className="text-white text-sm">How CanopyWave's stack stays AI-first from all angles</p>
+                            <p className="text-white text-sm">How CanopyWave&apos;s stack stays AI-first from all angles</p>
                         </div>
                         <div className="p-6">
                             <div className="flex gap-2 mb-4">
