@@ -15,7 +15,10 @@ export default function Contact() {
         email: '',
         jobTitle: '',
         phone: '',
+        purpose: '',
+        expectedGPUs: '',
         interests: [] as string[],
+        projectStartTime: '',
         message: '',
         marketing: false
     });
@@ -29,7 +32,10 @@ export default function Contact() {
                 email: ${formData.email}
                 jobTitle: ${formData.jobTitle}
                 phone: ${formData.phone}
+                purpose: ${formData.purpose}
+                expectedGPUs: ${formData.expectedGPUs}
                 interests: ${formData.interests.join(', ')}
+                project start time: ${formData.projectStartTime}
                 message: ${formData.message}
                 Do you agree with marketing: ${formData.marketing ? 'yes' : 'no'}
             `;
@@ -59,7 +65,10 @@ export default function Contact() {
                     email: '',
                     jobTitle: '',
                     phone: '',
+                    purpose: '',
+                    expectedGPUs: '',
                     interests: [],
+                    projectStartTime: '',
                     message: '',
                     marketing: false
                 });
@@ -107,114 +116,131 @@ export default function Contact() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <div className="flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-1/2">
-                            <h1 className="text-2xl sm:text-4xl font-bold text-[#8CC63F] mb-6">CONTACT US</h1>
-                            <p className="text-base text-gray-700 mb-4">
-                                We&apos;d love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level. Fill out the form and tell us more about yourself.
+                            <h1 className="text-5xl sm:text-6xl font-bold text-[#8CC63F] mb-6">CONTACT US</h1>
+                            <p className="text-base text-gray-700 mb-4 max-w-md">
+                                We&apos;d love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level.
                             </p>
-                            <div className="mt-6">
-                                <h2 className="text-lg font-bold mb-3">TECHNICAL AND ACCOUNT SUPPORT</h2>
-                                <p className="text-gray-600 mb-3">We&apos;re here to help! If you have technical issues or questions about your account <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
+                            <div className="mt-4">
+                                <h2 className="text-lg font-bold mb-2">TECHNICAL AND ACCOUNT SUPPORT</h2>
+                                <p className="text-gray-600 mb-2 max-w-md">We&apos;re here to help! If you have technical issues or questions about your account <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
-                            <div className="mt-6">
-                                <h2 className="text-lg font-bold mb-3">CONTACT INFORMATION</h2>
-                                <p className="text-gray-600 mb-3">For general queries, including partnership opportunities, please email <a href="mailto:sales@canopywave.com" className="text-[#8CC63F]">sales@canopywave.com</a></p>
+                            <div className="mt-4">
+                                <h2 className="text-lg font-bold mb-2">CONTACT INFORMATION</h2>
+                                <p className="text-gray-600 mb-2 max-w-md">For general queries, including partnership opportunities, please email <a href="mailto:sales@canopywave.com" className="text-[#8CC63F]">sales@canopywave.com</a></p>
                             </div>
-                            <div className="mt-6">
-                                <h2 className="text-lg font-bold mb-3">ABUSE AND LEGAL</h2>
-                                <p className="text-gray-600">For abuse reports such as DMCA notices and other legal matters, please email <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
+                            <div className="mt-4">
+                                <h2 className="text-lg font-bold mb-2">ABUSE AND LEGAL</h2>
+                                <p className="text-gray-600 mb-2 max-w-md">For abuse reports such as DMCA notices and other legal matters, please email <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">
                             <form onSubmit={(e) => {
                                 e.preventDefault();
                                 handleSubmit();
-                            }} className="bg-white p-8 rounded-lg shadow-md">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            }} className="bg-white p-6 rounded-lg shadow-md text-sm">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                     <div className="flex flex-col">
-                                        <label className="mb-2 text-gray-700">First Name *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">First Name *</label>
                                         <input
                                             type="text"
                                             name="firstName"
                                             value={formData.firstName}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-1.5 rounded text-sm"
                                             required
                                         />
+
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-2 text-gray-700">Last Name *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Last Name *</label>
                                         <input
                                             type="text"
                                             name="lastName"
                                             value={formData.lastName}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-1.5 rounded text-sm"
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-2 text-gray-700">Company Name *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Company Name *</label>
                                         <input
                                             type="text"
                                             name="company"
                                             value={formData.company}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-1.5 rounded text-sm"
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-2 text-gray-700">Email *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Email *</label>
                                         <input
                                             type="email"
                                             name="email"
                                             value={formData.email}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-1.5 rounded text-sm"
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-2 text-gray-700">Phone *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Phone *</label>
                                         <input
                                             type="tel"
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-1.5 rounded text-sm"
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-2 text-gray-700">Job Title *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Job Title *</label>
                                         <input
                                             type="text"
                                             name="jobTitle"
                                             value={formData.jobTitle}
                                             onChange={handleInputChange}
-                                            className="border p-2 rounded"
+                                            className="border p-1.5 rounded text-sm"
                                             required
                                         />
                                     </div>
                                 </div>
-                                {/* <select className="border p-2 rounded w-full mb-6">
-                                    <option value="">I plan to use CoreWave for:</option>
-                                    <option value="AI Training">AI Training</option>
-                                    <option value="Data Analysis">Data Analysis</option>
-                                    <option value="Machine Learning">Machine Learning</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                                <select className="border p-2 rounded w-full mb-6">
-                                    <option value="">Expected Number of GPUs*</option>
-                                    <option value="1-10">1-10</option>
-                                    <option value="11-50">11-50</option>
-                                    <option value="51-100">51-100</option>
-                                    <option value="100+">100+</option>
-                                </select> */}
-                                <div className="mb-6">
-                                    <h3 className="text-lg font-bold mb-2">Select Your interests *</h3>
+                                <div className="flex flex-col mb-4">
+                                    <label className="mb-1 text-gray-700 text-sm">I plan to use CanopyWave for:</label>
+                                    <select
+                                        name="purpose"
+                                        value={formData.purpose}
+                                        onChange={handleInputChange}
+                                        className="border p-2 rounded w-full">
+                                        <option value="" disabled selected className="text-gray-400">Please select</option>
+                                        <option value="AI Training">Machine Learning / Artificial Intelligence</option>
+                                        <option value="Data Analysis">Batch Processing</option>
+                                        <option value="Machine Learning">Visual Effects & Rendering</option>
+                                        <option value="Pixel Streaming">Pixel Streaming</option>
+                                        <option value="Partnerships">Partnerships</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div className="flex flex-col mb-4">
+                                    <label className="mb-1 text-gray-700 text-sm">Expected Number of GPUs*</label>
+                                    <select
+                                        name="expectedGPUs"
+                                        value={formData.expectedGPUs}
+                                        onChange={handleInputChange}
+                                        className="border p-2 rounded w-full">
+                                        <option value="" disabled selected className="text-gray-400">Please select</option>
+                                        <option value="1-10">1-10</option>
+                                        <option value="11-50">11-50</option>
+                                        <option value="51-100">51-100</option>
+                                        <option value="100+">100+</option>
+                                    </select>
+                                </div>
+                                <div className="flex flex-col mb-4">
+                                    <h3 className="text-base font-bold mb-2">Select Your interests *</h3>
                                     <div className="flex flex-col">
-                                        <label className="flex items-center mb-3">
+                                        <label className="flex items-center mb-2 text-sm">
                                             <input
                                                 type="checkbox"
                                                 name="instant-cluster"
@@ -283,14 +309,29 @@ export default function Contact() {
                                             />
                                             <span className="text-gray-600">Other</span>
                                         </label>
+                                        <div className="flex flex-col mb-4">
+                                            <label className="mb-1 text-gray-700 text-sm">When are you looking to start your project? *</label>
+                                            <select
+                                                name="projectStartTime"
+                                                value={formData.projectStartTime}
+                                                onChange={handleInputChange}
+                                                className="border p-1.5 rounded w-full text-sm">
+                                                <option value="" disabled selected className="text-gray-400">Please select</option>
+                                                <option value="Immediately">Immediately</option>
+                                                <option value="1-3 months">1-3 months</option>
+                                                <option value="3-6 months">4-12 months</option>
+                                                <option value="6+ months">12+ months</option>
+                                            </select>
+                                        </div>
                                         <textarea
                                             name="message"
                                             value={formData.message}
                                             onChange={handleInputChange}
                                             placeholder="Tell us about your need for high-performance compute, and how you plan to use it to advance your business?"
-                                            className="border p-2 rounded w-full mb-6"
+                                            className="border p-1.5 rounded w-full mb-4 text-sm"
                                         ></textarea>
-                                        <div className="flex items-center mb-6">
+
+                                        <div className="flex items-center mb-4 text-sm">
                                             <input
                                                 type="checkbox"
                                                 name="marketing"
