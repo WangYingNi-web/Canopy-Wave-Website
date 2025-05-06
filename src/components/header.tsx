@@ -103,7 +103,7 @@ export default function Header() {
                 >
                   Products
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showProducts ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -123,33 +123,68 @@ export default function Header() {
                       <div className="grid grid-cols-4 gap-8">
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F] flex items-center">
                               Compute Services
-                              <span className="inline-block ml-1">▼</span>
+                              <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
                             </IwsLink>
                           </h3>
                           <ul className="space-y-2 text-sm">
                             <li>
                               <div>
-                                <IwsLink href="/compute-services" className="text-gray-600 hover:text-gray-900">
+                                <IwsLink href="/compute-services" className="text-gray-600 hover:text-gray-900 flex items-center">
                                   GPU Cloud on-demand Cluster
-                                  <span className="inline-block ml-1">▼</span>
+                                  <svg
+                                    className="w-4 h-4 ml-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
                                 </IwsLink>
                                 <ul className="pl-4 mt-2 space-y-2">
-                                  <li><IwsLink href="/compute-services#hgx-h100" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H100</IwsLink></li>
                                   <li><IwsLink href="/compute-services#hgx-h200" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H200</IwsLink></li>
+                                  <li><IwsLink href="/compute-services#hgx-h100" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>NVIDIA HGX H100</IwsLink></li>
                                 </ul>
                               </div>
                             </li>
                             <li><IwsLink href="/compute-services#cpu-node" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>CPU Nodes</IwsLink></li>
-                            <li><IwsLink href="/compute-services#gpu-reserve" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>GPU Cloud Reserve Cluster</IwsLink></li>
-                            <li><IwsLink href="/compute-services#bare-metal" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Bare Metal Services</IwsLink></li>
                           </ul>
                         </div>
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/storage-services" className="text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/storage-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
                               Storage Services
+                              <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
                             </IwsLink>
                           </h3>
                           <ul className="space-y-2 text-sm">
@@ -161,8 +196,21 @@ export default function Header() {
                         </div>
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/networking-services" className="text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/networking-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
                               Networking Services
+                              <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
                             </IwsLink>
                           </h3>
                           <ul className="space-y-2 text-sm">
@@ -172,8 +220,21 @@ export default function Header() {
                         </div>
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/platform" className="text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/platform" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
                               Platform
+                              <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
                             </IwsLink>
                           </h3>
                           <ul className="space-y-2 text-sm">
@@ -194,7 +255,7 @@ export default function Header() {
                 >
                   Solutions
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showSolutions ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -231,7 +292,7 @@ export default function Header() {
                 >
                   Pricing
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showPricing ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -267,7 +328,7 @@ export default function Header() {
                 >
                   Data Center
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showDataCenter ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -302,7 +363,7 @@ export default function Header() {
                 >
                   Resources
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showResources ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -336,7 +397,7 @@ export default function Header() {
                 >
                   About
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showAbout ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -415,31 +476,54 @@ export default function Header() {
         <div className="px-2 pt-2 pb-3 sm:px-3">
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 ${currentRouter === 'home' ? 'bg-gray-200' : ''
+              className={`flex items-center block w-full text-left text-gray-600 ${currentRouter === 'home' ? 'bg-gray-200' : ''
                 } px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileProducts(!showMobileProducts)}
             >
-              Products {showMobileProducts ? '▼' : '▶'}
+              Products
+              <svg
+                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileProducts ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {showMobileProducts && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
                 <li>
                   <button
-                    className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
                     onClick={(e) => {
                       e.preventDefault();
                       setShowMobileSubMenu(showMobileSubMenu === 'compute' ? null : 'compute');
                     }}
                   >
                     <span>Compute Services</span>
-                    <span>{showMobileSubMenu === 'compute' ? '▼' : '▶'}</span>
+                    <svg
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'compute' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'compute' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H100</IwsLink></li>
                     <li><IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H200</IwsLink></li>
+                    <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H100</IwsLink></li>
                     <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded">CPU Nodes</IwsLink></li>
-                    <li><IwsLink href="/compute-services#gpu-reserve" className="block px-2 py-1 hover:bg-gray-100 rounded">GPU Cloud Reserve Cluster</IwsLink></li>
-                    <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded">Bare Metal Services</IwsLink></li>
                   </ul>
                 </li>
                 <li>
@@ -451,7 +535,19 @@ export default function Header() {
                     }}
                   >
                     <span>Storage Services</span>
-                    <span>{showMobileSubMenu === 'storage' ? '▼' : '▶'}</span>
+                    <svg
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'storage' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'storage' ? 'block' : 'hidden'}`}>
                     <li><IwsLink href="/storage-services#local-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Local Storage</IwsLink></li>
@@ -469,7 +565,19 @@ export default function Header() {
                     }}
                   >
                     <span>Networking Services</span>
-                    <span>{showMobileSubMenu === 'networking' ? '▼' : '▶'}</span>
+                    <svg
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'networking' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'networking' ? 'block' : 'hidden'}`}>
                     <li><IwsLink href="/gpu-cluster-management">GPUs Cluster bring up and management</IwsLink></li>
@@ -485,7 +593,19 @@ export default function Header() {
                     }}
                   >
                     <span>Platform</span>
-                    <span>{showMobileSubMenu === 'platform' ? '▼' : '▶'}</span>
+                    <svg
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'platform' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'platform' ? 'block' : 'hidden'}`}>
                     <li><IwsLink href="/platform/dcim-platform" className="text-gray-600 hover:text-gray-900">Canopy DCIM Platform</IwsLink></li>
@@ -498,11 +618,24 @@ export default function Header() {
 
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 hover:bg-gray-200 ${currentRouter === 'solutions' ? 'bg-gray-200' : ''
+              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 ${currentRouter === 'solutions' ? 'bg-gray-200' : ''
                 } px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileSolutions(!showMobileSolutions)}
             >
-              Solutions {showMobileSolutions ? '▼' : '▶'}
+              Solutions
+              <svg
+                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSolutions ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {showMobileSolutions && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
@@ -517,10 +650,23 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
+              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobilePricing(!showMobilePricing)}
             >
-              Pricing {showMobilePricing ? '▼' : '▶'}
+              Pricing
+              <svg
+                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobilePricing ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {showMobilePricing && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
@@ -534,10 +680,23 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
+              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileDataCenter(!showMobileDataCenter)}
             >
-              Data Center {showMobileDataCenter ? '▼' : '▶'}
+              Data Center
+              <svg
+                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileDataCenter ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {showMobileDataCenter && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
@@ -550,25 +709,24 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobileResources(!showMobileResources)}
-            >
-              Data Center {showMobileResources ? '▼' : '▶'}
-            </button>
-            {showMobileResources && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/resources" className="block px-2 py-1 hover:bg-gray-100 rounded">补充</IwsLink></li>
-                <li><IwsLink href="/resources" className="block px-2 py-1 hover:bg-gray-100 rounded">补充</IwsLink></li>
-              </ul>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              className={`block w-full text-left text-gray-600 hover:bg-gray-200
+              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200
               px-3 py-2 rounded-md text-base font-medium`}
               onClick={() => setShowMobileAbout(!showMobileAbout)}
             >
-              About {showMobileAbout ? '▼' : '▶'}
+              About
+              <svg
+                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileAbout ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {showMobileAbout && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
