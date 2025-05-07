@@ -13,7 +13,7 @@ export default function ComputeServicesPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[700px] relative mt-20">
+            <div className="w-full h-[720px] relative mt-[84px]">
                 <Image
                     src="/compute/banner.svg"
                     alt="cpu-nodes"
@@ -23,10 +23,10 @@ export default function ComputeServicesPage() {
                 />
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
-                        <h1 className="text-6xl font-bold text-[#8CC63F] mb-6">
+                        <h1 className="text-6xl font-bold text-[#8CC63F] mt-16">
                             GPU COMPUTE
                         </h1>
-                        <p className="text-gray-600 text-lg mb-12">
+                        <p className="text-gray-600 text-lg mt-8">
                             NVIDIA GPU for AI training & inference
                         </p>
                     </div>
@@ -43,10 +43,10 @@ export default function ComputeServicesPage() {
                         <div className="w-full md:w-1/2">
                             <h2 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8">Massive Parallel Processing Power</h2>
                             <p className="text-gray-600 mb-8 text-lg">
-                                AI workloads require performing millions (or billions) of mathematical operations simultaneously.
+                                •AI workloads require performing millions (or billions) of mathematical operations simultaneously.
                             </p>
                             <p className="text-gray-600 mb-8 text-lg">
-                                GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently.
+                                •GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently.
                             </p>
                             <div className="flex gap-4">
                                 <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/contact'}>
@@ -62,7 +62,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* GPU Cluster Features Section */}
-            <div className='bg-[#F9F9F9] py-8'>
+            <div id="gpu-cloud" className='bg-[#F9F9F9] py-8'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">CANOPY WAVE ON-DEMAND GPU CLUSTER</h2>
@@ -84,7 +84,7 @@ export default function ComputeServicesPage() {
                         {/* Multi-GPU Instances Card */}
                         <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                             <Image src="/compute/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4" />
-                            <h3 className="text-xl font-bold mb-4">MULTI-GPU INSTANCES</h3>
+                            <h3 className="text-xl font-bold mb-4">MULTI-GPU instances</h3>
                             <p className="text-gray-600">
                                 Train and fine-tune AI models across instance types that best suits your need: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by minute.
                             </p>
@@ -93,7 +93,7 @@ export default function ComputeServicesPage() {
                         {/* Private Cloud Card */}
                         <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                             <Image src="/compute/cloud.svg" alt="Private Cloud" width={36} height={36} className="mb-4" />
-                            <h3 className="text-xl font-bold mb-4">CANOPY WAVE PRIVATE CLOUD</h3>
+                            <h3 className="text-xl font-bold mb-4">Canopy Wave Private Cloud</h3>
                             <p className="text-gray-600">
                                 Best GPU cluster performance in the industry. With 99.99% up time. Have all you GPUs under same datacenter, your workload and privacy is protected.
                             </p>
@@ -112,7 +112,7 @@ export default function ComputeServicesPage() {
                             <ul className="space-y-4 text-lg text-gray-600">
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#8CC63F] mt-1">▶</span>
-                                    <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine</p>
+                                    <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine.</p>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#8CC63F] mt-1">▶</span>
@@ -150,21 +150,21 @@ export default function ComputeServicesPage() {
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
                                 <Image src="/compute/memory.svg" alt="Memory" width={96} height={96} className="mt-1" />
                                 <div>
-                                    <h3 className="font-bold mb-2 text-xl">141 GB OF HBM3E MEMORY</h3>
+                                    <h3 className="font-bold mb-2 text-xl">141 GB of HBM3e memory</h3>
                                     <p className="text-gray-600">Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
                                 <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1" />
                                 <div>
-                                    <h3 className="font-bold mb-2 text-xl">4.8 TB/S MEMORY BANDWIDTH</h3>
+                                    <h3 className="font-bold mb-2 text-xl">4.8 TB/s memory bandwidth</h3>
                                     <p className="text-gray-600">the fastest of any NVIDIA GPU to date</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
                                 <Image src="/compute/model.svg" alt="Workloads" width={36} height={36} className="mt-1" />
                                 <div>
-                                    <h3 className="font-bold mb-2 text-xl">OPTIMIZED FOR MEMORY-BOUND WORKLOADS</h3>
+                                    <h3 className="font-bold mb-2 text-xl">Optimized for memory-bound workloads, including:</h3>
                                     <ul className="space-y-2 text-gray-600">
                                         <li>• Large transformer models</li>
                                         <li>• Retrieval-augmented generation (RAG)</li>
@@ -219,7 +219,7 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <h2 className="text-4xl sm:text-5xl font-bold mb-6">WHY NVIDIA</h2>
                     <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
-                        CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility.
+                    CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility.
                     </p>
                     <div className="flex justify-center gap-4">
                         <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -267,7 +267,7 @@ export default function ComputeServicesPage() {
 
             {/* Ready to Get Started Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6">READY TO GET STARTED?</h2>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
                 <p className="text-gray-600 mb-8 mx-auto text-lg">
                     Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
                 </p>

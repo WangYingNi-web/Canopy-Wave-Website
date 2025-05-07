@@ -143,7 +143,7 @@ export default function Header() {
                           <ul className="space-y-2 text-sm">
                             <li>
                               <div>
-                                <IwsLink href="/compute-services" className="text-gray-600 hover:text-gray-900 flex items-center">
+                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-gray-900 flex items-center">
                                   GPU Cloud on-demand Cluster
                                   <svg
                                     className="w-4 h-4 ml-1"
