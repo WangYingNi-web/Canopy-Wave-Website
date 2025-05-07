@@ -13,7 +13,6 @@ export default function Contact() {
         lastName: '',
         company: '',
         email: '',
-        phone: '',
         purpose: '',
         expectedGPUs: '',
         interests: [] as string[],
@@ -21,15 +20,48 @@ export default function Contact() {
         message: '',
         marketing: false
     });
+    const [errors, setErrors] = useState({
+        firstName: '',
+        lastName: '',
+        company: '',
+        email: '',
+        purpose: '',
+        expectedGPUs: '',
+        projectStartTime: '',
+        interests: '',
+        message: '',
+    });
 
     const handleSubmit = async () => {
+        console.log('Form Data:', formData);
+        const newErrors = {
+            firstName: validateField('firstName', formData.firstName),
+            lastName: validateField('lastName', formData.lastName),
+            company: validateField('company', formData.company),
+            email: validateField('email', formData.email),
+            purpose: validateField('purpose', formData.purpose),
+            expectedGPUs: validateField('expectedGPUs', formData.expectedGPUs),
+            projectStartTime: validateField('projectStartTime', formData.projectStartTime),
+            interests: validateField('interests', formData.interests),
+            message: validateField('message', formData.message),
+        };
+
+        // 添加日志来查看验证结果
+        console.log('Validation errors:', newErrors);
+        setErrors(newErrors);
+
+        if (Object.values(newErrors).some(error => error !== '')) {
+            console.log('Form validation failed');
+            return;
+        }
+
         setLoading(true);
+
         try {
             const emailBody = `
                 name: ${formData.firstName} ${formData.lastName}
                 company: ${formData.company}
                 email: ${formData.email}
-                phone: ${formData.phone}
                 purpose: ${formData.purpose}
                 expectedGPUs: ${formData.expectedGPUs}
                 interests: ${formData.interests.join(', ')}
@@ -61,7 +93,6 @@ export default function Contact() {
                     lastName: '',
                     company: '',
                     email: '',
-                    phone: '',
                     purpose: '',
                     expectedGPUs: '',
                     interests: [],
@@ -80,12 +111,31 @@ export default function Contact() {
             setLoading(false);
         }
     };
-
+    // 添加正则验证函数
+    const validateEmail = (email: string) => {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return emailRegex.test(email);
+    };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: value
+        }));
+
+        // 清除错误信息当用户开始输入
+        setErrors(prev => ({
+            ...prev,
+            [name]: ''
+        }));
+    };
+
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        const error = validateField(name, value);
+        setErrors(prev => ({
+            ...prev,
+            [name]: error
         }));
     };
 
@@ -97,13 +147,40 @@ export default function Contact() {
                 marketing: checked
             }));
         } else {
+            const newInterests = checked
+                ? [...formData.interests, name]
+                : formData.interests.filter(interest => interest !== name);
+
             setFormData(prev => ({
                 ...prev,
-                interests: checked
-                    ? [...prev.interests, name]
-                    : prev.interests.filter(interest => interest !== name)
+                interests: newInterests
+            }));
+
+            // 更新错误状态
+            setErrors(prev => ({
+                ...prev,
+                interests: newInterests.length === 0 ? 'Please complete this required field.' : ''
             }));
         }
+    };
+
+    const validateField = (name: string, value: string | string[]) => {
+        let error = '';
+
+        // 对于 interests 数组的特殊处理
+        if (name === 'interests' && Array.isArray(value) && value.length === 0) {
+            error = 'Please complete this required field.';
+        }
+        // 对于普通字符串字段的处理
+        else if (typeof value === 'string') {
+            if (!value.trim()) {
+                error = 'Please complete this required field.';
+            } else if (name === 'email' && !validateEmail(value)) {
+                error = 'Email must be formatted correctly.';
+            }
+        }
+
+        return error;
     };
 
     return (
@@ -127,76 +204,85 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <form onSubmit={(e) => {
-                                e.preventDefault();
-                                handleSubmit();
-                            }} className="bg-white p-6 rounded-lg shadow-md text-sm">
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    handleSubmit();
+                                }}
+                                className="bg-white p-6 rounded-lg shadow-md text-sm"
+                                noValidate
+                            >
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                     <div className="flex flex-col">
-                                        <label className="mb-1 text-gray-700 text-sm">First Name *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">First Name<span className="text-red-500"><span className="text-red-500">*</span></span></label>
                                         <input
                                             type="text"
                                             name="firstName"
                                             value={formData.firstName}
                                             onChange={handleInputChange}
-                                            className="border p-1.5 rounded text-sm"
+                                            onBlur={handleBlur}
+                                            className={`border p-1.5 rounded text-sm ${errors.firstName ? 'border-red-500' : ''}`}
                                             required
                                         />
-
+                                        {errors.firstName && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.firstName}</span>
+                                        )}
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-1 text-gray-700 text-sm">Last Name *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Last Name<span className="text-red-500"><span className="text-red-500">*</span></span></label>
                                         <input
                                             type="text"
                                             name="lastName"
                                             value={formData.lastName}
                                             onChange={handleInputChange}
-                                            className="border p-1.5 rounded text-sm"
+                                            onBlur={handleBlur}
+                                            className={`border p-1.5 rounded text-sm ${errors.lastName ? 'border-red-500' : ''}`}
                                             required
                                         />
+                                        {errors.lastName && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.lastName}</span>
+                                        )}
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-1 text-gray-700 text-sm">Company Name *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Company Name<span className="text-red-500"><span className="text-red-500">*</span></span></label>
                                         <input
                                             type="text"
                                             name="company"
                                             value={formData.company}
                                             onChange={handleInputChange}
-                                            className="border p-1.5 rounded text-sm"
+                                            onBlur={handleBlur}
+                                            className={`border p-1.5 rounded text-sm ${errors.company ? 'border-red-500' : ''}`}
                                             required
                                         />
+                                        {errors.company && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.company}</span>
+                                        )}
                                     </div>
                                     <div className="flex flex-col">
-                                        <label className="mb-1 text-gray-700 text-sm">Email *</label>
+                                        <label className="mb-1 text-gray-700 text-sm">Email <span className="text-red-500"><span className="text-red-500">*</span></span></label>
                                         <input
                                             type="email"
                                             name="email"
                                             value={formData.email}
                                             onChange={handleInputChange}
-                                            className="border p-1.5 rounded text-sm"
+                                            onBlur={handleBlur}
+                                            className={`border p-1.5 rounded text-sm ${errors.email ? 'border-red-500' : ''}`}
                                             required
                                         />
+                                        {errors.email && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.email}</span>
+                                        )}
                                     </div>
-                                    {/* <div className="flex flex-col">
-                                        <label className="mb-1 text-gray-700 text-sm">Phone *</label>
-                                        <input
-                                            type="tel"
-                                            name="phone"
-                                            value={formData.phone}
-                                            onChange={handleInputChange}
-                                            className="border p-1.5 rounded text-sm"
-                                            required
-                                        />
-                                    </div> */}
                                 </div>
                                 <div className="flex flex-col mb-4">
-                                    <label className="mb-1 text-gray-700 text-sm">I plan to use CanopyWave for:</label>
+                                    <label className="mb-1 text-gray-700 text-sm">I plan to use CanopyWave for:<span className="text-red-500">*</span></label>
                                     <select
                                         name="purpose"
                                         value={formData.purpose}
                                         onChange={handleInputChange}
-                                        className="border p-2 rounded w-full">
-                                        <option value="" disabled selected className="text-gray-400">Please select</option>
+                                        onBlur={handleBlur}
+                                        className={`border p-2 rounded w-full ${errors.purpose ? 'border-red-500' : ''}`}>
+                                        <option value="" disabled className="text-gray-400">Please select</option>
                                         <option value="AI Training">Machine Learning / Artificial Intelligence</option>
                                         <option value="Data Analysis">Batch Processing</option>
                                         <option value="Machine Learning">Visual Effects & Rendering</option>
@@ -204,23 +290,30 @@ export default function Contact() {
                                         <option value="Partnerships">Partnerships</option>
                                         <option value="Other">Other</option>
                                     </select>
+                                    {errors.purpose && (
+                                        <span className="text-red-500 text-xs mt-1">{errors.purpose}</span>
+                                    )}
                                 </div>
                                 <div className="flex flex-col mb-4">
-                                    <label className="mb-1 text-gray-700 text-sm">Expected Number of GPUs*</label>
+                                    <label className="mb-1 text-gray-700 text-sm">Expected Number of GPUs<span className="text-red-500">*</span></label>
                                     <select
                                         name="expectedGPUs"
                                         value={formData.expectedGPUs}
                                         onChange={handleInputChange}
-                                        className="border p-2 rounded w-full">
-                                        <option value="" disabled selected className="text-gray-400">Please select</option>
+                                        onBlur={handleBlur}
+                                        className={`border p-2 rounded w-full ${errors.expectedGPUs ? 'border-red-500' : ''}`}>
+                                        <option value="" disabled className="text-gray-400">Please select</option>
                                         <option value="1-10">1-10</option>
                                         <option value="11-50">11-50</option>
                                         <option value="51-100">51-100</option>
                                         <option value="100+">100+</option>
                                     </select>
+                                    {errors.expectedGPUs && (
+                                        <span className="text-red-500 text-xs mt-1">{errors.expectedGPUs}</span>
+                                    )}
                                 </div>
                                 <div className="flex flex-col mb-4">
-                                    <h3 className="text-base font-bold mb-2">Select Your interests *</h3>
+                                    <h3 className="text-base font-bold mb-2">Select Your interests <span className="text-red-500">*</span></h3>
                                     <div className="flex flex-col">
                                         <label className="flex items-center mb-2 text-sm">
                                             <input
@@ -291,28 +384,40 @@ export default function Contact() {
                                             />
                                             <span className="text-gray-600">Other</span>
                                         </label>
+                                        {errors.interests && (
+                                            <span className="text-red-500 text-xs -mt-1 mb-2">{errors.interests}</span>
+                                        )}
                                         <div className="flex flex-col mb-4">
-                                            <label className="mb-1 text-gray-700 text-sm">When are you looking to start your project? *</label>
+                                            <label className="mb-1 text-gray-700 text-sm">When are you looking to start your project? <span className="text-red-500">*</span></label>
                                             <select
                                                 name="projectStartTime"
                                                 value={formData.projectStartTime}
                                                 onChange={handleInputChange}
-                                                className="border p-1.5 rounded w-full text-sm">
-                                                <option value="" disabled selected className="text-gray-400">Please select</option>
+                                                onBlur={handleBlur}
+                                                className={`border p-2 rounded w-full ${errors.projectStartTime ? 'border-red-500' : ''}`}>
+                                                <option value="" disabled className="text-gray-400">Please select</option>
                                                 <option value="Immediately">Immediately</option>
                                                 <option value="1-3 months">1-3 months</option>
                                                 <option value="3-6 months">4-12 months</option>
                                                 <option value="6+ months">12+ months</option>
                                             </select>
+                                            {errors.projectStartTime && (
+                                                <span className="text-red-500 text-xs mt-1">{errors.projectStartTime}</span>
+                                            )}
                                         </div>
-                                        <textarea
-                                            name="message"
-                                            value={formData.message}
-                                            onChange={handleInputChange}
-                                            placeholder="Tell us about your need for high-performance compute, and how you plan to use it to advance your business?"
-                                            className="border p-1.5 rounded w-full mb-4 text-sm min-h-[120px]"
-                                        ></textarea>
-
+                                        <div className="flex flex-col mb-4">
+                                            <label className="mb-1 text-gray-700 text-sm">Tell us about your need for high-performance compute, and how you plan to use it to advance your business?<span className="text-red-500">*</span></label>
+                                            <textarea
+                                                name="message"
+                                                value={formData.message}
+                                                onChange={handleInputChange}
+                                                onBlur={handleBlur}
+                                                className={`border p-2 rounded w-full h-32 ${errors.message ? 'border-red-500' : ''}`}
+                                            />
+                                            {errors.message && (
+                                                <span className="text-red-500 text-xs mt-1">{errors.message}</span>
+                                            )}
+                                        </div>
                                         <div className="flex items-center mb-4 text-sm">
                                             <input
                                                 type="checkbox"
@@ -327,7 +432,7 @@ export default function Contact() {
                                 </div>
                                 <button
                                     type="submit"
-                                    className="bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#7ab32f] disabled:opacity-50"
+                                    className={`bg-[#8CC63F] text-white px-6 py-2 rounded hover:bg-[#7AB530] transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     disabled={loading}
                                 >
                                     {loading ? 'Submitting...' : 'Contact Us'}
