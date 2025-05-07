@@ -13,7 +13,7 @@ export default function ComputeServicesPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[600px] relative mt-20">
+            <div className="w-full h-[700px] relative mt-20">
                 <Image
                     src="/compute/banner.svg"
                     alt="cpu-nodes"
@@ -34,14 +34,14 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Highly Performant Section */}
-            <div className="bg-[#F5F9F4]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+            <div className="bg-[#F5F9F4] py-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-1/2">
-                            <Image src="/gpu.svg" alt="GPU" width={500} height={300} className="w-full" />
+                            <Image src="/gpu.svg" alt="GPU" width={500} height={400} className="w-full" />
                         </div>
                         <div className="w-full md:w-1/2">
-                            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">Massive Parallel Processing Power</h2>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8">Massive Parallel Processing Power</h2>
                             <p className="text-gray-600 mb-8 text-lg">
                                 AI workloads require performing millions (or billions) of mathematical operations simultaneously.
                             </p>
@@ -62,10 +62,10 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* GPU Cluster Features Section */}
-            <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div className='bg-[#F9F9F9] py-8'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-6">CANOPY WAVE ON-DEMAND GPU CLUSTER</h2>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">CANOPY WAVE ON-DEMAND GPU CLUSTER</h2>
                         <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                             Launch GPU Clusters
                         </Button>
@@ -104,11 +104,11 @@ export default function ComputeServicesPage() {
 
 
             {/* Leadership Section */}
-            <div className='bg-[#F5F9F4]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div className='bg-[#F5F9F4] py-8'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
-                            <h2 className="text-4xl font-bold mb-6">LEADERSHIP IN AI-OPTIMIZED H100 AND H200</h2>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">LEADERSHIP IN AI-OPTIMIZED H100 AND H200</h2>
                             <ul className="space-y-4 text-lg text-gray-600">
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#8CC63F] mt-1">▶</span>
@@ -134,11 +134,11 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* H200 Section */}
-            <div className="bg-[#F9F9F9]">
-                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div className="bg-[#F9F9F9] py-8">
+                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
-                            <h2 className="text-4xl font-bold mb-6">NVIDIA HGX H200</h2>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">NVIDIA HGX H200</h2>
                             <p className="text-gray-600 mb-8 text-lg">
                                 Unmatched Memory Bandwidth & Capacity for Large AI Models
                             </p>
@@ -179,9 +179,9 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* NVIDIA HGX H100 Section */}
-            <div className='bg-[#F5F9F4]'>
-                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 text-center">
-                    <h2 className="text-4xl font-bold mb-4">NVIDIA HGX H100</h2>
+            <div className='bg-[#F5F9F4] py-8'>
+                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32 text-center">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-4">NVIDIA HGX H100</h2>
                     <p className="text-gray-600 mb-6">
                         Transformer Engine: Purpose-Built for Training and Running Large AI Models
                     </p>
@@ -215,9 +215,9 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Why NVIDIA Section */}
-            <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-                    <h2 className="text-4xl font-bold mb-6">WHY NVIDIA</h2>
+            <div className='bg-[#F9F9F9] py-8'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-6">WHY NVIDIA</h2>
                     <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
                         CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility.
                     </p>
@@ -233,9 +233,9 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* CPU Servers Section */}
-            <div className='bg-[#F5F9F4]'>
-                <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-                    <h2 className="text-4xl font-bold mb-6">CPU SERVERS</h2>
+            <div className='bg-[#F5F9F4] py-8'>
+                <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU SERVERS</h2>
                     <p className="text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
                         Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale.
                     </p>
@@ -266,8 +266,8 @@ export default function ComputeServicesPage() {
 
 
             {/* Ready to Get Started Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                <h2 className="text-4xl font-bold mb-6">READY TO GET STARTED?</h2>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">READY TO GET STARTED?</h2>
                 <p className="text-gray-600 mb-8 mx-auto text-lg">
                     Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
                 </p>

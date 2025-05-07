@@ -13,7 +13,6 @@ export default function Contact() {
         lastName: '',
         company: '',
         email: '',
-        jobTitle: '',
         phone: '',
         purpose: '',
         expectedGPUs: '',
@@ -30,7 +29,6 @@ export default function Contact() {
                 name: ${formData.firstName} ${formData.lastName}
                 company: ${formData.company}
                 email: ${formData.email}
-                jobTitle: ${formData.jobTitle}
                 phone: ${formData.phone}
                 purpose: ${formData.purpose}
                 expectedGPUs: ${formData.expectedGPUs}
@@ -63,7 +61,6 @@ export default function Contact() {
                     lastName: '',
                     company: '',
                     email: '',
-                    jobTitle: '',
                     phone: '',
                     purpose: '',
                     expectedGPUs: '',
@@ -118,19 +115,15 @@ export default function Contact() {
                         <div className="w-full md:w-1/2">
                             <h1 className="text-5xl sm:text-6xl font-bold text-[#8CC63F] mb-6">CONTACT US</h1>
                             <p className="text-base text-gray-700 mb-4 max-w-md">
-                                We&apos;d love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level.
+                                We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level.
                             </p>
                             <div className="mt-4">
                                 <h2 className="text-lg font-bold mb-2">TECHNICAL AND ACCOUNT SUPPORT</h2>
-                                <p className="text-gray-600 mb-2 max-w-md">We&apos;re here to help! If you have technical issues or questions about your account <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
+                                <p className="text-gray-600 mb-2 max-w-md">We're here to help! If you have technical issues or questions about your account <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
                             <div className="mt-4">
                                 <h2 className="text-lg font-bold mb-2">CONTACT INFORMATION</h2>
                                 <p className="text-gray-600 mb-2 max-w-md">For general queries, including partnership opportunities, please email <a href="mailto:sales@canopywave.com" className="text-[#8CC63F]">sales@canopywave.com</a></p>
-                            </div>
-                            <div className="mt-4">
-                                <h2 className="text-lg font-bold mb-2">ABUSE AND LEGAL</h2>
-                                <p className="text-gray-600 mb-2 max-w-md">For abuse reports such as DMCA notices and other legal matters, please email <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -184,7 +177,7 @@ export default function Contact() {
                                             required
                                         />
                                     </div>
-                                    <div className="flex flex-col">
+                                    {/* <div className="flex flex-col">
                                         <label className="mb-1 text-gray-700 text-sm">Phone *</label>
                                         <input
                                             type="tel"
@@ -194,18 +187,7 @@ export default function Contact() {
                                             className="border p-1.5 rounded text-sm"
                                             required
                                         />
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <label className="mb-1 text-gray-700 text-sm">Job Title *</label>
-                                        <input
-                                            type="text"
-                                            name="jobTitle"
-                                            value={formData.jobTitle}
-                                            onChange={handleInputChange}
-                                            className="border p-1.5 rounded text-sm"
-                                            required
-                                        />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="flex flex-col mb-4">
                                     <label className="mb-1 text-gray-700 text-sm">I plan to use CanopyWave for:</label>
@@ -328,7 +310,7 @@ export default function Contact() {
                                             value={formData.message}
                                             onChange={handleInputChange}
                                             placeholder="Tell us about your need for high-performance compute, and how you plan to use it to advance your business?"
-                                            className="border p-1.5 rounded w-full mb-4 text-sm"
+                                            className="border p-1.5 rounded w-full mb-4 text-sm min-h-[120px]"
                                         ></textarea>
 
                                         <div className="flex items-center mb-4 text-sm">
