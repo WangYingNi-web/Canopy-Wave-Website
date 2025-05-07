@@ -35,5 +35,10 @@
     @apply bg-background text-foreground;
     /* 添加这行来强制使用亮色模式 */
     color-scheme: light;
+    overflow-x: hidden;
   }
+  /* img {
+    max-width: 100%;
+    height: auto;
+  } */
 }
