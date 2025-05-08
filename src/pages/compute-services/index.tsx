@@ -34,7 +34,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Highly Performant Section */}
-            <div className="bg-[#F5F9F4] py-8">
+            <div className="bg-[#F5F9F4] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-1/2">
@@ -62,7 +62,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* GPU Cluster Features Section */}
-            <div id="gpu-cloud" className='bg-[#F9F9F9] py-8'>
+            <div id="gpu-cloud" className='bg-[#F9F9F9] py-4'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">CANOPY WAVE ON-DEMAND GPU CLUSTER</h2>
@@ -104,7 +104,7 @@ export default function ComputeServicesPage() {
 
 
             {/* Leadership Section */}
-            <div className='bg-[#F5F9F4] py-8'>
+            <div className='bg-[#F5F9F4] py-4'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
@@ -134,7 +134,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* H200 Section */}
-            <div className="bg-[#F9F9F9] py-8">
+            <div className="bg-[#F9F9F9] py-4">
                 <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
@@ -179,7 +179,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* NVIDIA HGX H100 Section */}
-            <div className='bg-[#F5F9F4] py-8'>
+            <div className='bg-[#F5F9F4] py-4'>
                 <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32 text-center">
                     <h2 className="text-4xl sm:text-5xl font-bold mb-4">NVIDIA HGX H100</h2>
                     <p className="text-gray-600 mb-6">
@@ -192,22 +192,22 @@ export default function ComputeServicesPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                         <div className="p-6 border border-gray-200 rounded-lg transition-colors duration-300 hover:bg-[#8CC63F] hover:text-white group">
                             <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={36} height={36} className="mx-auto mb-4" />
-                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">HIGHER ACCURACY</h3>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Higher Accuracy</h3>
                             <p className="text-gray-600 group-hover:text-white">Transformer Engine uses FP8 precision (8-bit floating point) with dynamic range scaling</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg transition-colors duration-300 hover:bg-[#8CC63F] hover:text-white group">
                             <Image src="/compute/performance.svg" alt="Better Performance" width={36} height={36} className="mx-auto mb-4" />
-                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">BETTER PERFORMANCE</h3>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Better Performance</h3>
                             <p className="text-gray-600 group-hover:text-white">Delivers up to 9x faster training and 30x faster inference vs old-generation GPUs like A100</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg transition-colors duration-300 hover:bg-[#8CC63F] hover:text-white group">
                             <Image src="/compute/light.svg" alt="Flexible Configurations" width={36} height={36} className="mx-auto mb-4" />
-                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">FLEXIBLE CONFIGURATIONS</h3>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Flexible Configurations</h3>
                             <p className="text-gray-600 group-hover:text-white">Dynamically switches between FP8 and FP16/FP32 for optimal accuracy + speed</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg transition-colors duration-300 hover:bg-[#8CC63F] hover:text-white group">
                             <Image src="/compute/compute.svg" alt="Better Access" width={36} height={36} className="mx-auto mb-4" />
-                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">BETTER ACCESS TO COMPUTE</h3>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Better Access to compute</h3>
                             <p className="text-gray-600 group-hover:text-white">Includes 72 billion transistors, 80 GB of HBM3 memory, and supports NVLink and PCIe 5.0 for fast interconnects</p>
                         </div>
                     </div>
@@ -215,11 +215,11 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Why NVIDIA Section */}
-            <div className='bg-[#F9F9F9] py-8'>
+            <div className='bg-[#F9F9F9] py-4'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <h2 className="text-4xl sm:text-5xl font-bold mb-6">WHY NVIDIA</h2>
                     <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
-                    CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility.
+                        CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility.
                     </p>
                     <div className="flex justify-center gap-4">
                         <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -233,7 +233,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* CPU Servers Section */}
-            <div className='bg-[#F5F9F4] py-8'>
+            <div className='bg-[#F5F9F4] py-4'>
                 <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU SERVERS</h2>
                     <p className="text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
@@ -244,7 +244,7 @@ export default function ComputeServicesPage() {
                         <div className="p-6 bg-[#F5F9F4] rounded-lg text-left">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} />
-                                <h3 className="text-2xl font-bold">PROCESSOR</h3>
+                                <h3 className="text-2xl font-bold">Processor</h3>
                             </div>
                             <p className="text-gray-600 mb-4">
                                 Utilize the latest 6th-Gen Intel Xeon Scalable processors, offering up to 64 vCPUs per instance.
@@ -254,7 +254,7 @@ export default function ComputeServicesPage() {
                         <div className="p-6 bg-[#F5F9F4] rounded-lg text-left">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} />
-                                <h3 className="text-2xl font-bold">MEMORY</h3>
+                                <h3 className="text-2xl font-bold">Memory</h3>
                             </div>
                             <p className="text-gray-600 mb-4">
                                 Each instance supports up to 256TB of DIMM, delivering high throughput for compute-intensive workloads.
