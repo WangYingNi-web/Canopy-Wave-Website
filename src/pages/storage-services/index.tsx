@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import { Button } from "@/components/ui/button";
 import React from 'react';
+import SlideUp from '@/components/slide';
 
 export default function StorageServices() {
   useScrollToHash();
@@ -23,12 +24,16 @@ export default function StorageServices() {
         />
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-56">
-            <h1 className="text-6xl font-bold text-[#8CC63F] mb-6">
-              Storage Services<br />
-            </h1>
-            <p className="text-gray-600 text-lg mb-12">
-              Flexible storage architecture for any AI or enterprise workload.
-            </p>
+            <SlideUp>
+              <h1 className="text-6xl font-bold text-[#8CC63F] mb-6">
+                Storage Services<br />
+              </h1>
+            </SlideUp>
+            <SlideUp delay={0.2}>
+              <p className="text-gray-600 text-lg mb-12">
+                Flexible storage architecture for any AI or enterprise workload.
+              </p>
+            </SlideUp>
           </div>
         </div>
       </div>
@@ -36,11 +41,21 @@ export default function StorageServices() {
       {/* Multi-tier Storage Architecture Section */}
       <div className='bg-[#F5F9F4] py-8'>
         <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">OUR DATA CENTERS OFFER MULTI-TIER <br /> STORAGE ARCHITECTURE</h2>
-          <p className="text-gray-600 text-center max-w-4xl mx-auto mb-12">
-            Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture.
-          </p>
-
+          <SlideUp>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">OUR DATA CENTERS OFFER MULTI-TIER <br /> STORAGE ARCHITECTURE</h2>
+          </SlideUp>
+          <SlideUp>
+            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6">
+              Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture.
+            </p>
+          </SlideUp>
+          <SlideUp>
+            <div className="flex justify-center pb-8">
+              <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md" onClick={() => window.location.href = '/contact'}>
+                Learn more
+              </button>
+            </div>
+          </SlideUp>  
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
               <div className="flex mb-6">
