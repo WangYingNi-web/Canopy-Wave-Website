@@ -202,10 +202,10 @@ export default function StorageServices() {
       {/* Shared Storage Section */}
       <div className="bg-[#F5F9F4] py-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/storage/circuit-board.jpg"
+                src="/storage/circuit-board.svg"
                 alt="Circuit Board"
                 layout="fill"
                 objectFit="cover"
