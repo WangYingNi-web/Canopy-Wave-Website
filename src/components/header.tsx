@@ -526,6 +526,8 @@ export default function Header() {
                     <li><IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H200</IwsLink></li>
                     <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H100</IwsLink></li>
                     <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded">CPU Nodes</IwsLink></li>
+                    <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded">Bare Metal GPU Cluster</IwsLink></li>
+
                   </ul>
                 </li>
                 <li>
@@ -703,8 +705,8 @@ export default function Header() {
             </button>
             {showMobileDataCenter && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/data-center/US" className="block px-2 py-1 hover:bg-gray-100 rounded">US 1</IwsLink></li>
-                <li><IwsLink href="/data-center/canada" className="block px-2 py-1 hover:bg-gray-100 rounded">Canada 1</IwsLink></li>
+                {/* <li><IwsLink href="/data-center/US" className="block px-2 py-1 hover:bg-gray-100 rounded">US 1</IwsLink></li>
+                <li><IwsLink href="/data-center/canada" className="block px-2 py-1 hover:bg-gray-100 rounded">Canada 1</IwsLink></li> */}
                 <li><IwsLink href="/data-center/iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 1</IwsLink></li>
                 <li><IwsLink href="/data-center/iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 2</IwsLink></li>
               </ul>
