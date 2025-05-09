@@ -166,6 +166,7 @@ export default function Header() {
                               </div>
                             </li>
                             <li><IwsLink href="/compute-services#cpu-node" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>CPU Nodes</IwsLink></li>
+                            <li><IwsLink href="/compute-services#bare-metal" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Bare Metal GPU Cluster</IwsLink></li>
                           </ul>
                         </div>
                         <div>
@@ -189,9 +190,10 @@ export default function Header() {
                           </h3>
                           <ul className="space-y-2 text-sm">
                             <li><IwsLink href="/storage-services#local-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Local Storage</IwsLink></li>
+                            <li><IwsLink href="/storage-services#shared-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Shared Storage</IwsLink></li>
                             <li><IwsLink href="/storage-services#object-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Object Storage</IwsLink></li>
-                            <li><IwsLink href="/storage-services#cloud-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Cloud Storage</IwsLink></li>
-                            <li><IwsLink href="/storage-services#rdma-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RDMA Storage</IwsLink></li>
+                            {/* <li><IwsLink href="/storage-services#cloud-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Cloud Storage</IwsLink></li>
+                            <li><IwsLink href="/storage-services#rdma-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RDMA Storage</IwsLink></li> */}
                           </ul>
                         </div>
                         <div>
@@ -346,8 +348,8 @@ export default function Header() {
                   <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/data-center/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
-                        <li><IwsLink href="/data-center/canada" className="text-gray-600 hover:text-gray-900">Canada 1</IwsLink></li>
+                        {/* <li><IwsLink href="/data-center/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
+                        <li><IwsLink href="/data-center/canada" className="text-gray-600 hover:text-gray-900">Canada 1</IwsLink></li> */}
                         <li><IwsLink href="/data-center/iceland1" className="text-gray-600 hover:text-gray-900">Iceland 1</IwsLink></li>
                         <li><IwsLink href="/data-center/iceland2" className="text-gray-600 hover:text-gray-900">Iceland 2</IwsLink></li>
                       </ul>
@@ -551,9 +553,10 @@ export default function Header() {
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'storage' ? 'block' : 'hidden'}`}>
                     <li><IwsLink href="/storage-services#local-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Local Storage</IwsLink></li>
+                    <li><IwsLink href="/storage-services#shared-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Shared Storage</IwsLink></li>
                     <li><IwsLink href="/storage-services#object-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Object Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#cloud-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Cloud Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#rdma-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">RDMA Storage</IwsLink></li>
+                    {/* <li><IwsLink href="/storage-services#cloud-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Cloud Storage</IwsLink></li>
+                    <li><IwsLink href="/storage-services#rdma-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">RDMA Storage</IwsLink></li> */}
                   </ul>
                 </li>
                 <li>

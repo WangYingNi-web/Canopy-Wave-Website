@@ -283,9 +283,17 @@ export default function ComputeServicesPage() {
                 <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU SERVERS</h2>
-                        <p className="text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
+                        <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
                             Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale.
                         </p>
+                        <div className="flex justify-center gap-4 mb-8">
+                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                Launch CPU Servers
+                            </Button>
+                            <Button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-800 border border-gray-200" onClick={() => window.location.href = '/contact'}>
+                                Learn More
+                            </Button>
+                        </div>
                     </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                         <div className="p-6 bg-[#F5F9F4] rounded-lg text-left">
@@ -311,6 +319,215 @@ export default function ComputeServicesPage() {
                 </div>
             </div>
 
+            {/* Intel Xeon Processors Section */}
+            <div className='bg-[#F9F9F9] py-4'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">INTEL XEON SCALABLE PROCESSORS</h2>
+                        <h3 className="text-3xl font-bold mb-6 text-center">(6TH GEN)</h3>
+                        <p className="text-gray-600 mb-12 text-center max-w-4xl mx-auto">
+                            The latest generation utilizes a disaggregated design with multiple compute and I/O chiplets interconnected via EMIB (Embedded Multi-Die Interconnect Bridge).
+                        </p>
+                    </SlideUp>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <div className="flex items-center gap-4 mb-6">
+                                <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} />
+                                <h3 className="text-xl font-bold">CORE COUNT & FREQUENCY</h3>
+                            </div>
+                            <p className="text-gray-600">
+                                Engineering samples (ES1) of Granite Rapids feature up to 56 cores (1.1-2.7 GHz base/turbo), with production models expected to reach 84-90 cores.
+                            </p>
+                        </div>
+
+                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <div className="flex items-center gap-4 mb-6">
+                                <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} />
+                                <h3 className="text-xl font-bold">MEMORY SUPPORT</h3>
+                            </div>
+                            <p className="text-gray-600">
+                                12-channel DDR5-6400 with MCR DIMMs, delivering up to 1.6x higher bandwidth than previous generations.
+                            </p>
+                        </div>
+
+                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <div className="flex items-center gap-4 mb-6">
+                                <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} />
+                                <h3 className="text-xl font-bold">CACHE & INTERCONNECT</h3>
+                            </div>
+                            <p className="text-gray-600">
+                                Each compute tile includes 2MB L2 cache and 4MB L3 cache, while the platform supports PCIe Gen5 (136 lanes) and CXL 2.0 for GPU/FPGA acceleration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Enhanced GPU Cluster Performance Section */}
+            <div className="bg-[#F5F9F4] py-4">
+                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <div className="flex flex-col md:flex-row gap-12">
+                        <div className="w-full md:w-1/2 p-6">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Enhanced GPU cluster performance</h2>
+                                <p className="text-gray-600 mb-8 text-lg">
+                                    canopywave uses powerful and efficient CPUs to enable higher utility and performance from GPU clusters.
+                                    Let CPUs handle generalized computing needs, freeing GPUs to focus on high-intensity tasks.
+                                </p>
+                            </SlideUp>
+                        </div>
+                        <div className="w-full md:w-1/2 space-y-8">
+                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                                <FadeIn>
+                                    <div>
+                                        <h3 className="font-bold mb-2 text-xl">Parallel Processing & AI Acceleration</h3>
+                                        <p className="text-gray-600">Modern CPU servers leverage AVX-512 and VNNI (Vector Neural Network Instructions) to boost AI inference throughput by 2-4x compared to older architectures.</p>
+                                    </div>
+                                </FadeIn>
+                            </div>
+                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                                <FadeIn>
+                                    <div>
+                                        <h3 className="font-bold mb-2 text-xl">Multi-Threading</h3>
+                                        <p className="text-gray-600">Hyper-Threading enables 112 threads on a 56-core CPU, optimizing multi-tasking efficiency for virtualization and HPC workloads.</p>
+                                    </div>
+                                </FadeIn>
+                            </div>
+                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                                <FadeIn>
+                                    <div>
+                                        <h3 className="font-bold mb-2 text-xl">Energy Efficiency</h3>
+                                        <p className="text-gray-600">Intel’s Dynamic Voltage and Frequency Scaling (DVFS) and RAPL (Runtime Average Power Limiting) reduce idle power consumption by 30%, while TCO improvements reach 68% through server consolidation (5-10:1 replacement ratio). </p>
+                                    </div>
+                                </FadeIn>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bare Metal GPU Section */}
+            <div className='bg-[#F9F9F9] py-4'>
+                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <div className="flex flex-col md:flex-row items-center gap-12">
+                        <div className="w-full md:w-1/2">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">BARE METAL GPU CLUSTER IN PRIVATE CLOUD</h2>
+                                <p className="text-gray-600 mb-8 text-lg">
+                                    Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking.
+                                </p>
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/pricing'}>
+                                    Get pricing
+                                </Button>
+                            </SlideUp>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Image
+                                src="/gpu.svg"
+                                alt="NVIDIA GPU Board"
+                                width={600}
+                                height={400}
+                                className="w-full rounded-lg shadow-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* NVIDIA GPU Products Section */}
+            <div className='bg-[#F5F9F4] py-4'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">GET THE LATEST AND GREATEST NVIDIA GPUS</h2>
+                        <h3 className="text-3xl font-bold mb-6 text-center">MANAGED AND TUNED BY WORLD LEADING INFRASTRUCTURE TEAM</h3>
+                        <p className="text-gray-600 mb-16 text-center max-w-4xl mx-auto">
+                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability. We use highest safety stander to ensure data security.
+                        </p>
+                    </SlideUp>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* HGX B200 Card */}
+                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                            <div className="mb-6">
+                                <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX B200</h3>
+                                <Image
+                                    src="/compute/b200.svg"
+                                    alt="NVIDIA HGX B200"
+                                    width={400}
+                                    height={300}
+                                    className="w-full rounded-lg mb-4"
+                                />
+                                <p className="text-gray-600">
+                                    The NVIDIA HGX B200 is a unified AI platform designed to support end-to-end AI development and deployment for businesses of all sizes and at any stage of their AI journey. Powered by eight NVIDIA Blackwell GPUs and fifth-generation NVIDIA® NVLink® interconnect technology, the HGX B200 delivers up to 3× faster training and 15× faster inference performance compared to previous-generation systems. Built on the NVIDIA Blackwell architecture, it efficiently handles a wide range of AI workloads—from large language models and recommender systems to real-time chatbots—making it the ideal solution for accelerating enterprise AI initiatives.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* HGX H200 Card */}
+                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                            <div className="mb-6">
+                                <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H200</h3>
+                                <Image
+                                    src="/compute/h200-1.svg"
+                                    alt="NVIDIA HGX H200"
+                                    width={400}
+                                    height={300}
+                                    className="w-full rounded-lg mb-4"
+                                />
+                                <p className="text-gray-600">
+                                    The NVIDIA H200 Tensor Core GPU delivers breakthrough performance and memory capabilities, setting a new standard for generative AI and high-performance computing (HPC) workloads. As the first GPU to feature HBM3e memory, the H200 offers greater capacity and bandwidth, enabling faster training and inference for large language models (LLMs) and significantly accelerating scientific computing tasks across HPC applications.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* HGX H100 Card */}
+                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                            <div className="mb-6">
+                                <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H100</h3>
+                                <Image
+                                    src="/compute/h100.svg"
+                                    alt="NVIDIA HGX H100"
+                                    width={400}
+                                    height={300}
+                                    className="w-full rounded-lg mb-4"
+                                />
+                                <p className="text-gray-600">
+                                    The NVIDIA H100 Tensor Core GPU offers outstanding performance, scalability, and security across a wide range of workloads. Built on the advanced NVIDIA Hopper™ architecture, the H100 accelerates large language models (LLMs) by up to 30×, setting a new benchmark for conversational AI. It also features a dedicated Transformer Engine designed to efficiently power trillion-parameter language models.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        {/* Cluster Visibility Section */}
+                        <div className='bg-[#F9F9F9] py-4'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <div className="flex flex-col md:flex-row items-center gap-12">
+                        <div className="w-full md:w-1/2">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">GET FULL VISIBILITY OF YOUR CLUSTER</h2>
+                                <p className="text-gray-600 mb-8 text-lg">
+                                    Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control.
+                                </p>
+                                <p className="text-gray-600 mb-8 text-lg">
+                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptim
+                                </p>
+                            </SlideUp>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Image
+                                src="/compute/nvidia-board.jpg"
+                                alt="NVIDIA GPU Board"
+                                width={600}
+                                height={400}
+                                className="w-full rounded-lg shadow-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* Ready to Get Started Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
@@ -334,7 +551,6 @@ export default function ComputeServicesPage() {
                     </div>
                 </SlideUp>
             </div>
-
             <Footer />
         </main>
     );
