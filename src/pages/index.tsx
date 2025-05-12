@@ -66,29 +66,29 @@ export default function Index() {
 
 
         {/* Features Section */}
-        <div className="bg-white py-12 sm:py-20">
+        <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-5xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
               Instantly allocated GPU cluster <br /> with ready-to-go AI stack
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
               <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/optimized.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
+                <Image src="/icon/optimized.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">OPTIMIZED STACK</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Pre-qualified and optimized GPU and AI drivers</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/resource.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
+                <Image src="/icon/resource.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">DEDICATED RESOURCE</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Fully secured resources with the flexibility to optimize your stacks and application</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/high.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
+                <Image src="/icon/high.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">HIGH PERFORMANCE</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/used.svg" alt="Optimized Stack" width={45} height={45} className="mb-6" />
+                <Image src="/icon/used.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">PAY ONLY USED</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
               </div>
@@ -100,7 +100,7 @@ export default function Index() {
         <PartnerCarousel logos={partnerLogos} />
 
         {/* Products Section */}
-        <div className="bg-white py-12 sm:py-20">
+        <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
               NVIDIA H100 &H200S ARE NOW AVAILABLE
@@ -108,26 +108,26 @@ export default function Index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="border-2 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={45} height={45} />
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <IwsLink href="/h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
+                <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
               <div className="border-2 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH200s.svg" alt="H200" width={45} height={45} />
+                  <Image src="/icon/NvidiaH200s.svg" alt="H200" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <IwsLink href="/h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
+                <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
             </div>
           </div>
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-[#F5F9F4] py-12 sm:py-20">
+        <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
@@ -137,7 +137,7 @@ export default function Index() {
                 </p>
                 <Button
                   asChild
-                  className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white text-lg sm:text-xl"
+                  className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white text-lg sm:text-l"
                 >
                   <IwsLink href="/network">Get started →</IwsLink>
                 </Button>
@@ -156,47 +156,74 @@ export default function Index() {
           </div>
         </div>
 
-        {/* News Section */}
-        <div className="bg-white py-12 sm:py-20">
+                {/* News Section */}
+                <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center sm:text-left">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-12 text-left">
               LATEST CANOPYWAVE NEWS/EVENTS
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-              <div className="border-2 rounded-lg p-6 sm:p-8">
-                <Image src="/news1.png" alt="News 1" width={350} height={250} className="w-full mb-6" />
-                <h3 className="text-xl font-bold mb-4">Instant GPU Cluster</h3>
-                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <div className="flex justify-between items-center">
-                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
-                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* News Card 1 */}
+              <div className="group">
+                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
+                  <div className="absolute inset-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
+                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
+                  </div>
+                </div>
+                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
+                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
+                <div className="flex items-center gap-4">
+                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
+                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
                 </div>
               </div>
-              <div className="border-2 rounded-lg p-6 sm:p-8">
-                <Image src="/news1.png" alt="News 2" width={350} height={250} className="w-full mb-6" />
-                <h3 className="text-xl font-bold mb-4">xxxxxx</h3>
-                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <div className="flex justify-between items-center">
-                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
-                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
+
+              {/* News Card 2 */}
+              <div className="group">
+                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
+                  <div className="absolute inset-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
+                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
+                  </div>
+                </div>
+                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
+                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
+                <div className="flex items-center gap-4">
+                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
+                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
                 </div>
               </div>
-              <div className="border-2 rounded-lg p-6 sm:p-8">
-                <Image src="/news1.png" alt="News 3" width={350} height={250} className="w-full mb-6" />
-                <h3 className="text-xl font-bold mb-4">xxxxxx</h3>
-                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <div className="flex justify-between items-center">
-                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
-                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
+
+              {/* News Card 3 */}
+              <div className="group">
+                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
+                  <div className="absolute inset-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
+                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
+                  </div>
+                </div>
+                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
+                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
+                <div className="flex items-center gap-4">
+                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
+                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
                 </div>
               </div>
-              <div className="border-2 rounded-lg p-6 sm:p-8">
-                <Image src="/news1.png" alt="News 4" width={350} height={250} className="w-full mb-6" />
-                <h3 className="text-xl font-bold mb-4">xxxxxx</h3>
-                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
-                <div className="flex justify-between items-center">
-                  <IwsLink href="/news1" className="text-[#8CC63F] text-lg">Read →</IwsLink>
-                  <span className="text-gray-400 text-lg">Dec 20, 2023</span>
+
+              {/* News Card 4 */}
+              <div className="group">
+                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
+                  <div className="absolute inset-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
+                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
+                  </div>
+                </div>
+                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
+                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
+                <div className="flex items-center gap-4">
+                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
+                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
                 </div>
               </div>
             </div>
@@ -204,7 +231,7 @@ export default function Index() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-[#F5F9F4] py-16 sm:py-24">
+        <div className="bg-[#F9F9F9] py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">HAVE QUESTIONS? GET IN TOUCH!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">

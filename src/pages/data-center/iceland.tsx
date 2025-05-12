@@ -29,7 +29,7 @@ export default function IcelandDataCenter() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-lg mt-8">
-                                At canopywave, we’ve set down roots across the globe with these world-class office spaces.
+                                At canopywave, we’ve set down roots across the globe with these world-class office spaces
                             </p>
                         </SlideUp>
 
@@ -83,7 +83,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Blonduos Section */}
-            <div className="bg-[#F9F9F9] py-32">
+            <div id='iceland1' className="bg-[#F9F9F9] py-32">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
@@ -218,9 +218,8 @@ export default function IcelandDataCenter() {
                 </div>
             </div>
 
-
             {/* Akureyri Section */}
-            <div className="bg-[#F5F9F4] py-32">
+            <div id='iceland2' className="bg-[#F5F9F4] py-32">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         {/* Left Content */}
@@ -236,7 +235,7 @@ export default function IcelandDataCenter() {
                         </div>
 
                         {/* Right Content - Map */}
-                        <div className="relative h-[400px] w-full">
+                        <div className="relative h-[400px] w-full -mt-16">
                             <Image
                                 src="/data-center/iceland2-map.svg"
                                 alt="Iceland Map"
@@ -311,6 +310,40 @@ export default function IcelandDataCenter() {
                                 Akureyri's position offers low-latency connectivity to major interconnection hubs, including London (17.2 ms), Amsterdam (17.3 ms), and New York (55 ms).
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Where Will You Deploy Section */}
+            <div className="bg-white py-24">
+                <div className="max-w-7xl mx-auto px-4 lg:px-8">
+                    <div>
+                        <SlideUp>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                WHERE WILL YOU DEPLOY?
+                            </h2>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 mb-8 text-lg max-w-3xl">
+                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                                    className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                                >
+                                    Try Control Panel
+                                </button>
+                                <button
+                                    onClick={() => window.location.href = '/contact'}
+                                    className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                                >
+                                    Contact Us
+                                </button>
+                            </div>
+                        </SlideUp>
                     </div>
                 </div>
             </div>
