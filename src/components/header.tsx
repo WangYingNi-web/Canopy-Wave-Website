@@ -71,7 +71,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="bg-white border-y-2 border-gray-200 fixed top-0 left-0 right-0 z-50 py-2">
+    <nav className="bg-[#F9F9F9] border-y-2 border-gray-200 fixed top-0 left-0 right-0 z-50 py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* 左侧 logo */}
@@ -85,7 +85,7 @@ export default function Header() {
                   height={50}
                   priority
                 />
-                <span className="font-bold text-gray-600 ml-2">Canopy Wave</span>
+                <span className="text-l font-bold text-gray-600 ml-2">Canopy Wave</span>
               </IwsLink>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Header() {
           <div className="hidden md:flex flex-1 justify-between items-center">
             {/* 导航菜单居中 */}
             <div className="flex-1"></div>
-            <div className="flex items-center space-x-4 h-16">
+            <div className="flex items-center space-x-8 h-16">
 
               <div className="relative" ref={menuRef}>
                 <button
@@ -350,8 +350,8 @@ export default function Header() {
                       <ul className="space-y-2 text-sm">
                         {/* <li><IwsLink href="/data-center/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
                         <li><IwsLink href="/data-center/canada" className="text-gray-600 hover:text-gray-900">Canada 1</IwsLink></li> */}
-                        <li><IwsLink href="/data-center/iceland1" className="text-gray-600 hover:text-gray-900">Iceland 1</IwsLink></li>
-                        <li><IwsLink href="/data-center/iceland2" className="text-gray-600 hover:text-gray-900">Iceland 2</IwsLink></li>
+                        <li><IwsLink href="/data-center/iceland#iceland1" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
+                        <li><IwsLink href="/data-center/iceland#iceland2" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
                       </ul>
                     </div>
                   </div>
@@ -707,8 +707,8 @@ export default function Header() {
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
                 {/* <li><IwsLink href="/data-center/US" className="block px-2 py-1 hover:bg-gray-100 rounded">US 1</IwsLink></li>
                 <li><IwsLink href="/data-center/canada" className="block px-2 py-1 hover:bg-gray-100 rounded">Canada 1</IwsLink></li> */}
-                <li><IwsLink href="/data-center/iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 1</IwsLink></li>
-                <li><IwsLink href="/data-center/iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 2</IwsLink></li>
+                <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 1</IwsLink></li>
+                <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 2</IwsLink></li>
               </ul>
             )}
           </div>

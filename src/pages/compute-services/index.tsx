@@ -32,7 +32,7 @@ export default function ComputeServicesPage() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-lg mt-8">
-                                NVIDIA GPU for AI training & inference
+                                Canopy Wave use Virtualization technology to provide world leading performance GPU for AI training & inference
                             </p>
                         </SlideUp>
 
@@ -512,13 +512,13 @@ export default function ComputeServicesPage() {
                                     Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control.
                                 </p>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptim
+                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptim.
                                 </p>
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
                             <Image
-                                src="/compute/nvidia-board.jpg"
+                                src="/gpu.svg"
                                 alt="NVIDIA GPU Board"
                                 width={600}
                                 height={400}
@@ -533,7 +533,6 @@ export default function ComputeServicesPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                 <SlideUp>
                     <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
-
                 </SlideUp>
                 <SlideUp>
                     <p className="text-gray-600 mb-8 mx-auto text-lg">

@@ -7,6 +7,7 @@ import { useScrollToHash } from '@/hooks/useScrollToHash';
 import { Button } from "@/components/ui/button";
 import React from 'react';
 import SlideUp from '@/components/slide';
+import FadeIn from '@/components/FadeIn';
 
 export default function StorageServices() {
   useScrollToHash();
@@ -31,7 +32,7 @@ export default function StorageServices() {
             </SlideUp>
             <SlideUp delay={0.2}>
               <p className="text-gray-600 text-lg mb-12">
-                Flexible storage architecture for any AI or enterprise workload.
+                Flexible storage architecture for any AI or enterprise workload
               </p>
             </SlideUp>
           </div>
@@ -55,7 +56,7 @@ export default function StorageServices() {
                 Learn more
               </button>
             </div>
-          </SlideUp>  
+          </SlideUp>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
               <div className="flex mb-6">
@@ -117,36 +118,46 @@ export default function StorageServices() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">LOCAL STORAGE</h2>
-              <p className="text-gray-600 mb-8">15.6TB of NVMe storage, physically attached to the GPU servers</p>
-              <button
-                onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
-              >
-                Try Control Panel
-              </button>
+              <SlideUp>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">LOCAL STORAGE</h2>
+                <p className="text-gray-600 mb-8">15.6TB of NVMe storage, physically attached to the GPU servers</p>
+              </SlideUp>
+              <SlideUp>
+                <button
+                  onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                >
+                  Try Control Panel
+                </button>
+              </SlideUp>
             </div>
             <div className="space-y-6">
               {/* Performance Optimized Design */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} />
-                  <h3 className="text-2xl font-bold">Performance Optimized Design</h3>
+                  <FadeIn>
+                    <h3 className="text-2xl font-bold">Performance Optimized Design</h3>
+                  </FadeIn>
+
                 </div>
-                <ul className="text-gray-600 space-y-1 pl-12">
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Dynamic GPU-Aware Chunking - Auto-sizes data batches to match GPU memory (e.g. micro-batches)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Parallel I/O Boost - Multi-threaded access hits millions of ops/sec in image training</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Smart Prefetch - Predicts & preloads next training batch into cache</span>
-                  </li>
-                </ul>
+                <FadeIn>
+                  <ul className="text-gray-600 space-y-1 pl-12">
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Dynamic GPU-Aware Chunking - Auto-sizes data batches to match GPU memory (e.g. micro-batches)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Parallel I/O Boost - Multi-threaded access hits millions of ops/sec in image training</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Smart Prefetch - Predicts & preloads next training batch into cache</span>
+                    </li>
+                  </ul>
+                </FadeIn>
+
               </div>
 
               <div className="w-full h-[1px] bg-gray-200"></div>
@@ -154,50 +165,57 @@ export default function StorageServices() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} />
-                  <h3 className="text-2xl font-bold">Security Isolation Mechanism</h3>
+                  <FadeIn>
+                    <h3 className="text-2xl font-bold">Security Isolation Mechanism</h3>
+                  </FadeIn>
                 </div>
-                <ul className="text-gray-600 space-y-1 pl-12">
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Port Locking - Physically binds storage to pre-authorized servers only</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Live Encryption - End-to-end data scrambling, unreadable even if physically breached</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Isolated Operation - Zero network sharing, direct host-server exclusive access</span>
-                  </li>
-                </ul>
+                <FadeIn>
+                  <ul className="text-gray-600 space-y-1 pl-12">
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Port Locking - Physically binds storage to pre-authorized servers only</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Live Encryption - End-to-end data scrambling, unreadable even if physically breached</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Isolated Operation - Zero network sharing, direct host-server exclusive access</span>
+                    </li>
+                  </ul>
+                </FadeIn>
               </div>
               <div className="w-full h-[1px] bg-gray-200"></div>
               {/* HPC Compatibility */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} />
-                  <h3 className="text-2xl font-bold">HPC Compatibility</h3>
+                  <FadeIn>
+                    <h3 className="text-2xl font-bold">HPC Compatibility</h3>
+                  </FadeIn>
                 </div>
-                <ul className="text-gray-600 space-y-1 pl-12">
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Plugs into major AI frameworks (PyTorch/TensorFlow) out-of-the-box</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Auto-optimizes storage for NLP/CV workflows with smart caching</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Real-time bit-level checks prevent data corruption during long training runs</span>
-                  </li>
-                </ul>
+                <FadeIn>
+                  <ul className="text-gray-600 space-y-1 pl-12">
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Plugs into major AI frameworks (PyTorch/TensorFlow) out-of-the-box</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Auto-optimizes storage for NLP/CV workflows with smart caching</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Real-time bit-level checks prevent data corruption during long training runs</span>
+                    </li>
+                  </ul>
+                </FadeIn>
               </div>
             </div>
           </div>
         </div>
       </div>
-
 
       {/* Shared Storage Section */}
       <div className="bg-[#F5F9F4] py-16">
@@ -213,16 +231,18 @@ export default function StorageServices() {
               />
             </div>
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">SHARED STORAGE</h2>
-              <p className="text-gray-600 mb-8">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
-              <button
-                onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md mb-12"
-              >
-                Try Control Panel
-              </button>
-
-
+              <SlideUp>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">SHARED STORAGE</h2>
+                <p className="text-gray-600 mb-8">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
+              </SlideUp>
+              <SlideUp>
+                <button
+                  onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md mb-12"
+                >
+                  Try Control Panel
+                </button>
+              </SlideUp>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -262,28 +282,35 @@ export default function StorageServices() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">Object Storage</h2>
-              <p className="text-gray-600 mb-8">10PB+ Object File System, accessed via S3 APIs</p>
-              <button
-                onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
-              >
-                Try Control Panel
-              </button>
+              <SlideUp>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Object Storage</h2>
+                <p className="text-gray-600 mb-8">10PB+ Object File System, accessed via S3 APIs</p>
+              </SlideUp>
+              <SlideUp>
+                <button
+                  onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                >
+                  Try Control Panel
+                </button>
+              </SlideUp>
             </div>
             <div className="space-y-6">
               {/* Designed for scalability and durability */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} />
-                  <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
+                  <FadeIn>
+                    <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
+                  </FadeIn>
                 </div>
-                <ul className="text-gray-600 space-y-1 pl-12">
+                <FadeIn> <ul className="text-gray-600 space-y-1 pl-12">
                   <li className="flex items-start">
                     <span className="w-4 shrink-0">•</span>
                     <span>Starts at 10PB with seamless scaling - auto-balances data when adding drives. Triple copies protect against hardware failures (auto-heals in minutes), while multi-site deployment guards against regional disasters.</span>
                   </li>
                 </ul>
+                </FadeIn>
               </div>
 
               <div className="w-full h-[1px] bg-gray-200"></div>
@@ -291,37 +318,45 @@ export default function StorageServices() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} />
-                  <h3 className="text-2xl font-bold">Accessed using HTTP-based protocols</h3>
+                  <FadeIn>
+                    <h3 className="text-2xl font-bold">Accessed using HTTP-based protocols</h3>
+                  </FadeIn>
                 </div>
-                <ul className="text-gray-600 space-y-1 pl-12">
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Access files via unique URLs (e.g. user123/photo.jpg) like visiting webpages. HTTP(S) upload/download handles millions of files worldwide - perfect for web apps.</span>
-                  </li>
-                </ul>
+                <FadeIn>
+                  <ul className="text-gray-600 space-y-1 pl-12">
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Access files via unique URLs (e.g. user123/photo.jpg) like visiting webpages. HTTP(S) upload/download handles millions of files worldwide - perfect for web apps.</span>
+                    </li>
+                  </ul>
+                </FadeIn>
               </div>
               <div className="w-full h-[1px] bg-gray-200"></div>
               {/* Optimized for unstructured data */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} />
-                  <h3 className="text-2xl font-bold">Optimized for unstructured data</h3>
+                  <FadeIn>
+                    <h3 className="text-2xl font-bold">Optimized for unstructured data</h3>
+                  </FadeIn>
                 </div>
-                <ul className="text-gray-600 space-y-1 pl-12">
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Auto-Tagging: Labels files (images/videos/logs) with types & dates
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Hot/Cold Auto-Tier: Auto-moves hot data to fast storage, cold to cheap tiers</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Lightning Search: Find files instantly across 100B+ objects using keywords</span>
-                  </li>
-                </ul>
+                <FadeIn>
+                  <ul className="text-gray-600 space-y-1 pl-12">
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Auto-Tagging: Labels files (images/videos/logs) with types & dates
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Hot/Cold Auto-Tier: Auto-moves hot data to fast storage, cold to cheap tiers</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Lightning Search: Find files instantly across 100B+ objects using keywords</span>
+                    </li>
+                  </ul>
+                </FadeIn>
               </div>
             </div>
           </div>
@@ -329,20 +364,24 @@ export default function StorageServices() {
       </div>
 
       {/* Ready to Get Started Section */}
-      <div className="bg-[#F9F9F9]">
+      <div className="bg-[#F9F9F9] border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
-          <p className="text-gray-600 mb-8 mx-auto text-lg">
-            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-              Launch GPU instances
-            </Button>
-            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-              Contact sales
-            </Button>
-          </div>
+          <SlideUp>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
+            <p className="text-gray-600 mb-8 mx-auto text-lg">
+              Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
+            </p>
+          </SlideUp>
+          <SlideUp>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                Launch GPU instances
+              </Button>
+              <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                Contact sales
+              </Button>
+            </div>
+          </SlideUp>
         </div>
       </div>
 
