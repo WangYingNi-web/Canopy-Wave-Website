@@ -26,7 +26,7 @@ export default function StorageServices() {
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-56">
             <SlideUp>
-              <h1 className="text-6xl font-bold text-[#8CC63F] mb-6">
+              <h1 className="text-5xl sm:text-7xl font-bold text-[#8CC63F] mb-6">
                 Storage Services<br />
               </h1>
             </SlideUp>
@@ -218,7 +218,7 @@ export default function StorageServices() {
       </div>
 
       {/* Shared Storage Section */}
-      <div className="bg-[#F5F9F4] py-16">
+      <div id='shared-storage' className="bg-[#F5F9F4] py-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
