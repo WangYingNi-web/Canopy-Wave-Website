@@ -12,14 +12,10 @@ export default function PricingPage() {
 
             {/* Hero Section */}
             <div className="text-center py-16 pt-32">
-                <h1 className="text-4xl font-bold mb-4">Pricing</h1>
+                <h1 className="text-4xl font-bold mb-4">GPU CLOUD PRICING</h1>
                 <p className="text-gray-600 mb-8">
-                    Flexible pricing options for all your cloud computing needs
+                    Get access to world-class cloud resources and the best GPUs on the market
                 </p>
-                <div className="flex justify-center space-x-4">
-                    <Button className="bg-[#8CC63F] text-white">On-demand</Button>
-                    <Button className="bg-gray-200 text-black">Reserved</Button>
-                </div>
             </div>
 
             {/* Pricing Tables Container */}
@@ -82,7 +78,7 @@ export default function PricingPage() {
                             </div>
                         </div>
                         <table className="w-full">
-                        <thead>
+                            <thead>
                                 <tr className="border-b">
                                     <th className="py-3 text-left">Configuration</th>
                                     <th className="py-3 text-center">vCPUs</th>
@@ -210,14 +206,23 @@ export default function PricingPage() {
                 </section>
 
                 {/* Contact Section */}
-                <section className="bg-[#8CC63F] rounded-lg shadow-lg p-20 text-center my-20">
-                    <h2 className="text-4xl font-bold text-white mb-8">Need a Custom Solution?</h2>
-                    <p className="text-xl text-white mb-10 max-w-2xl mx-auto">
-                        Contact us for more details and special pricing
-                    </p>
-                    <Button className="bg-white text-[#8CC63F] hover:bg-gray-100 text-lg px-10 py-6">
-                        Contact Us
-                    </Button>
+                <section className="bg-[#8CC63F] rounded-lg shadow-lg p-20 text-center my-20 relative">
+                    <div className="flex justify-between items-center">
+                        <div className="text-left">
+                            <h2 className="text-4xl font-bold text-white mb-4">CALL US FOR COMPETITIVE PRICING</h2>
+                            <Button className="bg-white text-[#8CC63F] hover:bg-gray-100 text-lg px-8 py-3 mt-4">
+                                Contact Us
+                            </Button>
+                        </div>
+                        <div className="absolute right-20 top-1/2 transform -translate-y-1/2">
+                            <Image
+                                src="/boxes.svg"
+                                alt="Boxes illustration"
+                                width={300}
+                                height={200}
+                            />
+                        </div>
+                    </div>
                 </section>
             </div>
 

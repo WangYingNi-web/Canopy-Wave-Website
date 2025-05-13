@@ -6,6 +6,7 @@ import Image from 'next/image'
 import IwsLink from '@/components/IwsLink'
 import { useRouter } from 'next/router';
 import { Button } from "@/components/ui/button"
+import SlideUp from '@/components/slide';
 import PartnerCarousel from '@/components/carousel';
 
 export default function Index() {
@@ -30,17 +31,16 @@ export default function Index() {
       <Header />
       <div className="w-full">
         {/* Hero Section */}
-        <div
-          className="relative h-[400px] sm:h-[500px] md:h-[800px] w-full bg-[#80B224]"
-        >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-center leading-tight">
-              INSTANT GPU<br />
-              CLUSTER FOR<br />
-              ENTERPRISE AI
-            </h1>
-          </div>
-        </div>
+        {/* Hero Section */}
+        <div className="w-full h-[720px] relative mt-[84px]">
+                <Image
+                    src="/home_banner.svg"
+                    alt="cpu-nodes"
+                    layout='fill'
+                    className="object-cover"
+                    priority
+                />
+            </div>
 
         {/* <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left pl-4">
@@ -146,8 +146,8 @@ export default function Index() {
                 <Image
                   src="/World.svg"
                   alt="Global Network"
-                  width={700}
-                  height={350}
+                  width={750}
+                  height={480}
                   className="w-full"
                   priority
                 />

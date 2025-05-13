@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row justify-between items-start mb-12 pt-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 w-full lg:w-auto">
                         <div>
-                            <h3 className="font-semibold mb-4">PRODUCTS</h3>
+                            <h3 className="font-semibold mb-4">Products</h3>
                             <ul className="space-y-2 text-sm">
                                 <li><IwsLink href="/compute-services" className="text-gray-500 hover:text-gray-700">Compute Services</IwsLink></li>
                                 <li><IwsLink href="/storage-services" className="text-gray-500 hover:text-gray-700">Storage Services</IwsLink></li>
@@ -38,7 +38,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold mb-4">SOLUTIONS</h3>
+                            <h3 className="font-semibold mb-4">Solutions</h3>
                             <ul className="space-y-2 text-sm">
                                 <li><IwsLink href="/model-training" className="text-gray-500 hover:text-gray-700">Model Training</IwsLink></li>
                                 <li><IwsLink href="/inference" className="text-gray-500 hover:text-gray-700">Inference</IwsLink></li>
@@ -49,7 +49,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold mb-4">PRICING</h3>
+                            <h3 className="font-semibold mb-4">Pricing</h3>
                             <ul className="space-y-2 text-sm">
                                 <li><IwsLink href="/pricing/h100" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H100</IwsLink></li>
                                 <li><IwsLink href="/pricing/h200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H200</IwsLink></li>

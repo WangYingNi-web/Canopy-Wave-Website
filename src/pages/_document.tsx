@@ -13,8 +13,9 @@ class MyDocument extends Document {
           ></script>
           <meta charSet="UTF-8" />
           {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="icon" type="image/svg+xml" href="/canopy.svg" />
+          {/* 添加版本号或时间戳来防止缓存 */}
+          <link rel="icon" href="/favicon.ico?v=1" />
+          <link rel="icon" type="image/svg+xml" href="/canopy.svg?v=1" />
         </Head>
         <body>
           <Main />
