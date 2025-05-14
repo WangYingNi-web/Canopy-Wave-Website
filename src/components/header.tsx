@@ -312,11 +312,11 @@ export default function Header() {
                   <div className="fixed left-0 right-0 py-6 px-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
-                        <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink></li>
-                        <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>CPU NODE</IwsLink></li>
-                        <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>Cloud Storage</IwsLink></li>
-                        <li><IwsLink href="/pricing" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>RDMA Storage</IwsLink></li>
+                        <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA SXM5 H100</IwsLink></li>
+                        <li><IwsLink href="/pricing#H200" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA SXM5 H200</IwsLink></li>
+                        <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink></li>
+                        <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>Object Storage</IwsLink></li>
+                        <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>Additional public IP address</IwsLink></li>
                       </ul>
                     </div>
                   </div>
@@ -675,11 +675,11 @@ export default function Header() {
             </button>
             {showMobilePricing && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/pricing" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H100</IwsLink></li>
-                <li><IwsLink href="/pricing" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H200</IwsLink></li>
-                <li><IwsLink href="/pricing" className="block px-2 py-1 hover:bg-gray-100 rounded">CPU NODE</IwsLink></li>
-                <li><IwsLink href="/pricing" className="block px-2 py-1 hover:bg-gray-100 rounded">Cloud Storage</IwsLink></li>
-                <li><IwsLink href="/pricing" className="block px-2 py-1 hover:bg-gray-100 rounded">RDMA Storage</IwsLink></li>
+                <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA SXM5 H100</IwsLink></li>
+                <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA SXM5 H200</IwsLink></li>
+                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded">Network Shared Storage</IwsLink></li>
+                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded">Object Storage</IwsLink></li>
+                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded">Additional public IP address</IwsLink></li>
               </ul>
             )}
           </div>
