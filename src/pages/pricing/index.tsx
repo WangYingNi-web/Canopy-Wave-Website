@@ -32,7 +32,7 @@ export default function PricingPage() {
             {/* Pricing Tables Container */}
             <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 space-y-12 mb-16">
                 {/* NVIDIA HGX H100 */}
-                <div id='H100' className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 mb-16 scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 mb-16 scroll-mt-24">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
