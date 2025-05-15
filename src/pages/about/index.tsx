@@ -77,11 +77,10 @@ export default function AboutPage() {
           </div>
         </div>
       </div> */}
-      <div className="bg-[#F5F9F4] py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="bg-[#F5F9F4]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
-            <h2 className="text-4xl font-bold text-center mb-6">WHAT WE DO</h2>
-
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6">What we do</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
@@ -90,7 +89,7 @@ export default function AboutPage() {
           </SlideUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
-              <div className="w-16 h-16 mb-6 mx-auto">
+              <div className="w-16 h-16 mx-auto flex justify-center items-center">
                 <Image
                   src="/about/straightforward.svg"
                   alt="What we do icon"
@@ -98,29 +97,29 @@ export default function AboutPage() {
                   height={36}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
+              <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">Straightforward</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
-                CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle toda
+                We handle the complexity so customers can spend less time managing their infrastructure.
               </p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
-              <div className="w-16 h-16 mb-6 mx-auto">
+              <div className="w-16 h-16 mx-auto flex justify-center items-center">
                 <Image
                   src="/about/adaptable.svg"
                   alt="What we do icon"
                   width={36}
                   height={36}
                 />
-              </div>
-              <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
+              </div>  
+              <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">Adaptable</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
-                CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle toda
+                Products that are powerful and opinionated by default, but flexible under the hood.
               </p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
-              <div className="w-16 h-16 mb-6 mx-auto">
+              <div className="w-16 h-16 mx-auto flex justify-center items-center">
                 <Image
                   src="/about/global.svg"
                   alt="What we do icon"
@@ -128,20 +127,20 @@ export default function AboutPage() {
                   height={36}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">WHAT WE DO</h3>
+              <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">Global</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
-                CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle toda
+                Servers are located all over the world, as close to users as possible
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className='bg-[#F9F9F9] py-4'>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className='bg-[#F9F9F9]'>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
+            <div className='pt-4'>
               <SlideUp>
-                <h2 className="text-4xl font-bold mb-6">OUR VALUES</h2>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Our Values</h2>
               </SlideUp>
               <SlideUp>
                 <p className="text-gray-600 mb-8">

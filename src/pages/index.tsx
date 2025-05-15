@@ -33,14 +33,14 @@ export default function Index() {
         {/* Hero Section */}
         {/* Hero Section */}
         <div className="w-full h-[720px] relative mt-[84px]">
-                <Image
-                    src="/home_banner.svg"
-                    alt="cpu-nodes"
-                    layout='fill'
-                    className="object-cover"
-                    priority
-                />
-            </div>
+          <Image
+            src="/home_banner.svg"
+            alt="cpu-nodes"
+            layout='fill'
+            className="object-cover"
+            priority
+          />
+        </div>
 
         {/* <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left pl-4">
@@ -103,7 +103,7 @@ export default function Index() {
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
-              NVIDIA H100 &H200S ARE NOW AVAILABLE
+              NVIDIA H100 &H200S Are Now Available
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="border-2 rounded-lg p-8 sm:p-10">
@@ -111,7 +111,7 @@ export default function Index() {
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
-                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+                <p className="text-gray-600 text-lg mb-6">Cluster at any size of H100 and H200 GPUs NVIDIA Quantum-2 3200Gb/ InfiniBand Networking Non-Blocking InfiniBand Network Design</p>
                 <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
               <div className="border-2 rounded-lg p-8 sm:p-10">
@@ -119,7 +119,7 @@ export default function Index() {
                   <Image src="/icon/NvidiaH200s.svg" alt="H200" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
-                <p className="text-gray-600 text-lg mb-6">内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充</p>
+                <p className="text-gray-600 text-lg mb-6">Cluster at any size of H100 and H200 GPUs NVIDIA Quantum-2 3200Gb/ InfiniBand Networking Non-Blocking InfiniBand Network Design</p>
                 <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
             </div>
@@ -131,16 +131,13 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
-                <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-10">POWERED BY OUR GLOBAL NETWORK</h2>
+                <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-10">Powered By Our Global Network</h2>
                 <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
                   Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                 </p>
-                <Button
-                  asChild
-                  className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white text-lg sm:text-l"
-                >
-                  <IwsLink href="/network">Get started →</IwsLink>
-                </Button>
+                <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
+                Get started →
+                </IwsLink>
               </div>
               <div className="w-full md:w-1/2">
                 <Image
@@ -156,11 +153,11 @@ export default function Index() {
           </div>
         </div>
 
-                {/* News Section */}
-                <div className="bg-[#F9F9F9] py-12 sm:py-20">
+        {/* News Section */}
+        <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-12 text-left">
-              LATEST CANOPYWAVE NEWS/EVENTS
+              Latest CanopyWave News/Events
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* News Card 1 */}
@@ -233,20 +230,14 @@ export default function Index() {
         {/* Contact Section */}
         <div className="bg-[#F9F9F9] py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">HAVE QUESTIONS? GET IN TOUCH!</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <IwsLink
-                href="/contact"
-                className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-lg"
-              >
-                Contact Sales
-              </IwsLink>
-              <IwsLink
-                href="/pricing"
-                className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-100 text-lg"
-              >
-                Get Pricing
-              </IwsLink>
+              <SlideUp>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start w-full">
+                  <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-8 py-6 text-base" onClick={() => router.push('/contact')}>Contact Sales</Button>
+                  <Button variant="outline" className="w-full sm:w-auto px-8 py-6 text-base" onClick={() => router.push('/pricing')}>Get Pricing</Button>
+                </div>
+              </SlideUp>
             </div>
           </div>
         </div>
