@@ -190,7 +190,7 @@ export default function Contact() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <div className="flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-1/2">
-                            <h1 className="text-5xl sm:text-6xl font-bold text-[#8CC63F] mb-6">CONTACT US</h1>
+                            <h1 className="text-5xl sm:text-6xl font-bold text-[#8CC63F] mb-6">Contact Us</h1>
                             <p className="text-base text-gray-700 mb-4 max-w-md">
                                 We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level.
                             </p>

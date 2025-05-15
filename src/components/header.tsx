@@ -118,7 +118,7 @@ export default function Header() {
                 </button>
 
                 {showProducts && (
-                  <div className="fixed left-0 right-0 py-6 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         <div>
@@ -272,7 +272,7 @@ export default function Header() {
                 </button>
 
                 {showSolutions && (
-                  <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Model Training</IwsLink></li>
@@ -309,7 +309,7 @@ export default function Header() {
                 </button>
 
                 {showPricing && (
-                  <div className="fixed left-0 right-0 py-6 px-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA SXM5 H100</IwsLink></li>
@@ -345,7 +345,7 @@ export default function Header() {
                 </button>
 
                 {showDataCenter && (
-                  <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         {/* <li><IwsLink href="/data-center/US" className="text-gray-600 hover:text-gray-900">US 1</IwsLink></li>
@@ -380,7 +380,7 @@ export default function Header() {
                 </button>
 
                 {showResources && (
-                  <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
@@ -414,7 +414,7 @@ export default function Header() {
                 </button>
 
                 {showAbout && (
-                  <div className="fixed left-0 right-0 py-6 px-8 pl-8 mt-8 bg-white shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900">About US</IwsLink></li>
