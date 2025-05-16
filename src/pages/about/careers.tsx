@@ -35,7 +35,7 @@ export default function Careers() {
             </div>
 
             <div className="bg-[#F5F9F4] py-4">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
                             We are in the early stage of building an energetic, <br /> fast-moving, and fun team
@@ -112,7 +112,7 @@ export default function Careers() {
             </div>
 
             <div className="bg-[#F9F9F9] py-4">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">Open positions</h2>
                     </SlideUp>
@@ -158,7 +158,7 @@ export default function Careers() {
             </div>
 
             {/* Contact Section */}
-            <div className="bg-[#F9F9F9] py-16 sm:py-24 border border-gray-200">
+            <div className="bg-[#F9F9F9] py-12 sm:py-24 border border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-12">Come build the future with us</h2>

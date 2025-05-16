@@ -38,7 +38,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Deploy Section */}
-            <div className="bg-[#F5F9F4] py-32">
+            <div className="bg-[#F5F9F4] sm:py-20 py-10">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -83,7 +83,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Blonduos Section */}
-            <div id='iceland1' className="bg-[#F9F9F9] py-32">
+            <div id='iceland1' className="bg-[#F9F9F9] sm:py-20 py-10">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
@@ -219,7 +219,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Akureyri Section */}
-            <div id='iceland2' className="bg-[#F5F9F4] py-32">
+            <div id='iceland2' className="bg-[#F5F9F4] sm:py-20 py-10">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         {/* Left Content */}
@@ -315,7 +315,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Where Will You Deploy Section */}
-            <div className="bg-white py-24">
+            <div className="bg-[#F9F9F9] sm:py-20 py-10">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div>
                         <SlideUp>

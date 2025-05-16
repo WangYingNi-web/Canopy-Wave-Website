@@ -70,7 +70,7 @@ export default function PlatformPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">NODE LIFECYCLE CONTROLLER</h2>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">Node Lifecycle Controller</h2>
                             <p className="text-gray-600 mb-4">
                                 Mission Control mitigates costly and time-consuming interruptions via continuous monitoring and proactive health checks—ensuring nodes work in lockstep with enhanced performance.
                             </p>

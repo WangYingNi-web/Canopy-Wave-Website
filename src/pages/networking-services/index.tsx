@@ -141,7 +141,7 @@ export default function NetworkingServices() {
             {/* Virtual Private Cloud 部分 */}
             <div className="bg-[#F9F9F9] py-4">
                 <div id="private-cloud" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">VIRTUAL PRIVATE CLOUD</h2>
+                    <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Virtual Private Cloud</h2>
                     <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
                         Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI.
                     </p>
@@ -155,7 +155,7 @@ export default function NetworkingServices() {
                                     height={40}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">ENHANCED SECURITY</h3>
+                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">ENHANCED <br /> SECURITY</h3>
                             <p className="text-gray-600 group-hover:text-white">Deploy VPC networking to ensure customer network traffic stays private.</p>
                         </div>
 

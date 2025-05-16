@@ -40,10 +40,10 @@ export default function StorageServices() {
       </div>
 
       {/* Multi-tier Storage Architecture Section */}
-      <div className='bg-[#F5F9F4] py-8'>
+      <div className='bg-[#F5F9F4]'>
         <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">OUR DATA CENTERS OFFER MULTI-TIER <br /> STORAGE ARCHITECTURE</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6">
@@ -80,7 +80,7 @@ export default function StorageServices() {
                   height={36}
                 />
               </div>
-              <h3 className="font-bold text-xl mb-4">Scalability For Growth</h3>
+              <h3 className="font-bold text-xl mb-4">Scalability For<br />Growth</h3>
               <p className="text-gray-600">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption.</p>
             </div>
 
@@ -114,12 +114,12 @@ export default function StorageServices() {
       </div>
 
       {/* Local Storage Section */}
-      <div id='local-storage' className="bg-[#F9F9F9] py-16">
+      <div id='local-storage' className="bg-[#F9F9F9] sm:py-16 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6">LOCAL STORAGE</h2>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Local Storage</h2>
                 <p className="text-gray-600 mb-8">15.6TB of NVMe storage, physically attached to the GPU servers</p>
               </SlideUp>
               <SlideUp>
@@ -218,13 +218,13 @@ export default function StorageServices() {
       </div>
 
       {/* Shared Storage Section */}
-      <div id='shared-storage' className="bg-[#F5F9F4] py-16">
+      <div id='shared-storage' className="bg-[#F5F9F4] sm:py-16 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
                 src="/storage/circuit-board.svg"
-                alt="Circuit Board"
+                alt="Circuit Board" 
                 layout="fill"
                 objectFit="cover"
                 className="filter brightness-90"
@@ -232,7 +232,7 @@ export default function StorageServices() {
             </div>
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6">SHARED STORAGE</h2>
+                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Shared Storage</h2>
                 <p className="text-gray-600 mb-8">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
               </SlideUp>
               <SlideUp>
@@ -278,7 +278,7 @@ export default function StorageServices() {
       </div>
 
       {/* Object Storage */}
-      <div id='object-storage' className="bg-[#F9F9F9] py-16">
+      <div id='object-storage' className="bg-[#F9F9F9] sm:py-16 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
@@ -365,7 +365,7 @@ export default function StorageServices() {
 
       {/* Ready to Get Started Section */}
       <div className="bg-[#F9F9F9] border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
             <p className="text-gray-600 mb-8 mx-auto text-lg">
