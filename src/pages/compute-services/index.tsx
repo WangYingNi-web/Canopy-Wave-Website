@@ -82,7 +82,7 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">CANOPY WAVE ON-DEMAND GPU CLUSTER</h2>
+                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">Canopy Wave on-demand GPU Cluster</h2>
                         </SlideUp>
                         <SlideUp>
                             <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -130,7 +130,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">LEADERSHIP IN AI-OPTIMIZED H100 AND H200</h2>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Leadership in AI-Optimized H100 and H200</h2>
                             </SlideUp>
                             <SlideUp>
                                 <ul className="space-y-4 text-lg text-gray-600">
@@ -282,7 +282,7 @@ export default function ComputeServicesPage() {
             <div className='bg-[#F5F9F4]'>
                 <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU SERVERS</h2>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU Servers</h2>
                         <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
                             Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale.
                         </p>
@@ -323,7 +323,7 @@ export default function ComputeServicesPage() {
             <div className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">INTEL XEON SCALABLE PROCESSORS</h2>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">Intel Xeon Scalable Processors</h2>
                         <h3 className="text-3xl font-bold mb-6 text-center">(6TH GEN)</h3>
                         <p className="text-gray-600 mb-12 text-center max-w-4xl mx-auto">
                             The latest generation utilizes a disaggregated design with multiple compute and I/O chiplets interconnected via EMIB (Embedded Multi-Die Interconnect Bridge).
@@ -334,7 +334,7 @@ export default function ComputeServicesPage() {
                         <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} />
-                                <h3 className="text-xl font-bold">CORE COUNT & FREQUENCY</h3>
+                                <h3 className="text-xl font-bold">Core Count & Frequency</h3>
                             </div>
                             <p className="text-gray-600">
                                 Engineering samples (ES1) of Granite Rapids feature up to 56 cores (1.1-2.7 GHz base/turbo), with production models expected to reach 84-90 cores.
@@ -344,7 +344,7 @@ export default function ComputeServicesPage() {
                         <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} />
-                                <h3 className="text-xl font-bold">MEMORY SUPPORT</h3>
+                                <h3 className="text-xl font-bold">Memory Support</h3>
                             </div>
                             <p className="text-gray-600">
                                 12-channel DDR5-6400 with MCR DIMMs, delivering up to 1.6x higher bandwidth than previous generations.
@@ -354,7 +354,7 @@ export default function ComputeServicesPage() {
                         <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} />
-                                <h3 className="text-xl font-bold">CACHE & INTERCONNECT</h3>
+                                <h3 className="text-xl font-bold">Cache & Interconnect</h3>
                             </div>
                             <p className="text-gray-600">
                                 Each compute tile includes 2MB L2 cache and 4MB L3 cache, while the platform supports PCIe Gen5 (136 lanes) and CXL 2.0 for GPU/FPGA acceleration.
@@ -413,7 +413,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">BARE METAL GPU CLUSTER IN PRIVATE CLOUD</h2>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking.
                                 </p>
@@ -439,10 +439,10 @@ export default function ComputeServicesPage() {
             <div className='bg-[#F5F9F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">GET THE LATEST AND GREATEST NVIDIA GPUS</h2>
-                        <h3 className="text-3xl font-bold mb-6 text-center">MANAGED AND TUNED BY WORLD LEADING INFRASTRUCTURE TEAM</h3>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">Get The Latest And Greatest Nvidia GPUs</h2>
+                        <h3 className="text-3xl font-bold mb-6 text-center">Managed and tuned by world leading infrastructure team</h3>
                         <p className="text-gray-600 mb-16 text-center max-w-4xl mx-auto">
-                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability. We use highest safety stander to ensure data security.
+                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability. We use highest safety stander to ensure data security
                         </p>
                     </SlideUp>
 
@@ -507,7 +507,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">GET FULL VISIBILITY OF YOUR CLUSTER</h2>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control.
                                 </p>
