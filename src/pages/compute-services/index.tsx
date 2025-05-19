@@ -41,7 +41,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Highly Performant Section */}
-            <div className="bg-[#F5F9F4] py-4">
+            <div className="bg-[#F5F9F4]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-1/2">
@@ -78,7 +78,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* GPU Cluster Features Section */}
-            <div id="gpu-cloud" className='bg-[#F9F9F9] py-4'>
+            <div id="gpu-cloud" className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
@@ -125,7 +125,7 @@ export default function ComputeServicesPage() {
 
 
             {/* Leadership Section */}
-            <div className='bg-[#F5F9F4] py-4'>
+            <div className='bg-[#F5F9F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
@@ -160,7 +160,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* H200 Section */}
-            <div className="bg-[#F9F9F9] py-4">
+            <div className="bg-[#F9F9F9]">
                 <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
@@ -216,7 +216,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* NVIDIA HGX H100 Section */}
-            <div className='bg-[#F5F9F4] py-4'>
+            <div className='bg-[#F5F9F4]'>
                 <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-4">NVIDIA HGX H100</h2>
@@ -257,7 +257,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Why NVIDIA Section */}
-            <div className='bg-[#F9F9F9] py-4'>
+            <div className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">WHY NVIDIA</h2>
@@ -279,7 +279,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* CPU Servers Section */}
-            <div className='bg-[#F5F9F4] py-4'>
+            <div className='bg-[#F5F9F4]'>
                 <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU SERVERS</h2>
@@ -320,7 +320,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Intel Xeon Processors Section */}
-            <div className='bg-[#F9F9F9] py-4'>
+            <div className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">INTEL XEON SCALABLE PROCESSORS</h2>
@@ -331,7 +331,7 @@ export default function ComputeServicesPage() {
                     </SlideUp>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                        <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} />
                                 <h3 className="text-xl font-bold">CORE COUNT & FREQUENCY</h3>
@@ -341,7 +341,7 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                        <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} />
                                 <h3 className="text-xl font-bold">MEMORY SUPPORT</h3>
@@ -351,7 +351,7 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                        <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} />
                                 <h3 className="text-xl font-bold">CACHE & INTERCONNECT</h3>
@@ -365,7 +365,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Enhanced GPU Cluster Performance Section */}
-            <div className="bg-[#F5F9F4] py-4">
+            <div className="bg-[#F5F9F4]">
                 <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
@@ -377,8 +377,8 @@ export default function ComputeServicesPage() {
                                 </p>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8">
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                        <div className="w-full md:w-1/2 space-y-8 border-l border-gray-200">
+                            <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Parallel Processing & AI Acceleration</h3>
@@ -386,7 +386,7 @@ export default function ComputeServicesPage() {
                                     </div>
                                 </FadeIn>
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                            <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Multi-Threading</h3>
@@ -394,7 +394,7 @@ export default function ComputeServicesPage() {
                                     </div>
                                 </FadeIn>
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                            <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Energy Efficiency</h3>
@@ -408,7 +408,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Bare Metal GPU Section */}
-            <div className='bg-[#F9F9F9] py-4'>
+            <div className='bg-[#F9F9F9]'>
                 <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
@@ -436,7 +436,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* NVIDIA GPU Products Section */}
-            <div className='bg-[#F5F9F4] py-4'>
+            <div className='bg-[#F5F9F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">GET THE LATEST AND GREATEST NVIDIA GPUS</h2>
@@ -448,7 +448,7 @@ export default function ComputeServicesPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* HGX B200 Card */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="border border-gray-200 p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX B200</h3>
                                 <Image
@@ -458,14 +458,14 @@ export default function ComputeServicesPage() {
                                     height={300}
                                     className="w-full rounded-lg mb-4"
                                 />
-                                <p className="text-gray-600">
-                                    The NVIDIA HGX B200 is a unified AI platform designed to support end-to-end AI development and deployment for businesses of all sizes and at any stage of their AI journey. Powered by eight NVIDIA Blackwell GPUs and fifth-generation NVIDIA® NVLink® interconnect technology, the HGX B200 delivers up to 3× faster training and 15× faster inference performance compared to previous-generation systems. Built on the NVIDIA Blackwell architecture, it efficiently handles a wide range of AI workloads—from large language models and recommender systems to real-time chatbots—making it the ideal solution for accelerating enterprise AI initiatives.
+                                <p className="text-gray-600 text-center">
+                                    The NVIDIA HGX B200, powered by eight NVIDIA Blackwell GPUs and fifth-generation NVLink™, delivers up to 3× faster training and 15× faster inference compared to previous generations, making it the ideal unified AI platform for businesses at any stage
                                 </p>
                             </div>
                         </div>
 
                         {/* HGX H200 Card */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="border border-gray-200 p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H200</h3>
                                 <Image
@@ -475,14 +475,14 @@ export default function ComputeServicesPage() {
                                     height={300}
                                     className="w-full rounded-lg mb-4"
                                 />
-                                <p className="text-gray-600">
-                                    The NVIDIA H200 Tensor Core GPU delivers breakthrough performance and memory capabilities, setting a new standard for generative AI and high-performance computing (HPC) workloads. As the first GPU to feature HBM3e memory, the H200 offers greater capacity and bandwidth, enabling faster training and inference for large language models (LLMs) and significantly accelerating scientific computing tasks across HPC applications.
+                                <p className="text-gray-600 text-center">
+                                    The first GPU featuring HBM3e memory, the H200 sets new standards for generative AI and HPC workloads with unprecedented memory capacity and bandwidth, significantly accelerating LLM training and inference performance
                                 </p>
                             </div>
                         </div>
 
                         {/* HGX H100 Card */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="border border-gray-200 p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H100</h3>
                                 <Image
@@ -492,8 +492,8 @@ export default function ComputeServicesPage() {
                                     height={300}
                                     className="w-full rounded-lg mb-4"
                                 />
-                                <p className="text-gray-600">
-                                    The NVIDIA H100 Tensor Core GPU offers outstanding performance, scalability, and security across a wide range of workloads. Built on the advanced NVIDIA Hopper™ architecture, the H100 accelerates large language models (LLMs) by up to 30×, setting a new benchmark for conversational AI. It also features a dedicated Transformer Engine designed to efficiently power trillion-parameter language models.
+                                <p className="text-gray-600 text-center">
+                                    Built on the NVIDIA Hopper™ architecture with dedicated Transformer Engine, the H100 accelerates LLMs by up to 30×, setting new benchmarks for conversational AI and efficiently powering trillion-parameter language models
                                 </p>
                             </div>
                         </div>
@@ -502,7 +502,7 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Cluster Visibility Section */}
-            <div className='bg-[#F9F9F9] py-4'>
+            <div className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">

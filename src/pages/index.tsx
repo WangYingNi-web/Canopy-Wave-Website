@@ -106,7 +106,7 @@ export default function Index() {
               NVIDIA H100 &H200S Are Now Available
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
-              <div className="border-2 rounded-lg p-8 sm:p-10">
+              <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
@@ -114,9 +114,9 @@ export default function Index() {
                 <p className="text-gray-600 text-lg mb-6">Cluster at any size of H100 and H200 GPUs NVIDIA Quantum-2 3200Gb/ InfiniBand Networking Non-Blocking InfiniBand Network Design</p>
                 <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
-              <div className="border-2 rounded-lg p-8 sm:p-10">
+              <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH200s.svg" alt="H200" width={34} height={34} />
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">Cluster at any size of H100 and H200 GPUs NVIDIA Quantum-2 3200Gb/ InfiniBand Networking Non-Blocking InfiniBand Network Design</p>
