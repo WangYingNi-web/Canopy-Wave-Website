@@ -247,7 +247,7 @@ export default function StorageServices() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* File-based */}
-            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4" />
               <h3 className="text-xl font-bold mb-4">File-Based</h3>
               <p className="text-gray-600">
@@ -256,7 +256,7 @@ export default function StorageServices() {
             </div>
 
             {/* ​​Multi-server file access​ */}
-            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4" />
               <h3 className="text-xl font-bold mb-4">Multi-Server File Access</h3>
               <p className="text-gray-600">
@@ -265,7 +265,7 @@ export default function StorageServices() {
             </div>
 
             {/* ​​Distributed Harmony Engine​ */}
-            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/harmony-icon.svg" alt="Private Cloud" width={36} height={36} className="mb-4" />
               <h3 className="text-xl font-bold mb-4">Distributed Harmony Engine</h3>
               <p className="text-gray-600">
