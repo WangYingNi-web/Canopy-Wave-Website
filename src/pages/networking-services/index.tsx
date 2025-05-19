@@ -15,8 +15,8 @@ export default function NetworkingServices() {
             <Header />
             <div className="w-full h-[720px] relative mt-[84px]">
                 <Image
-                    src="/cube.svg"
-                    alt="cube"
+                    src="/networking/banner.svg"
+                    alt="banner"
                     layout='fill'
                     className="object-cover"
                     priority
@@ -31,10 +31,9 @@ export default function NetworkingServices() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-lg mt-8">
-                                Get performant, secure, and reliable storage for AI
+                                Get the best RDMA Networking purposely build for AI
                             </p>
                         </SlideUp>
-
                     </div>
                 </div>
             </div>
@@ -45,157 +44,204 @@ export default function NetworkingServices() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
-                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                                NVIDIA<br />
-                                Quantum InfiniBand Cluster Networking
-                            </h2>
-                            <p className="text-gray-600 mb-4">
-                                Get highly performant multi-node interconnect—at supercomputing scale.
-                            </p>
-                            <p className="text-gray-600">
-                                We&apos;ve collaborated with NVIDIA to deploy NVIDIA Quantum InfiniBand-based cluster networks to provide industry-leading performance for GenAI.
-                            </p>
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                    InfiniBand  Networking
+                                </h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                    Quantum InfiniBand is a high-performance interconnect solution
+                                    primarily developed by NVIDIA for AI workloads.
+                                    InfiniBand networking is used to support next-generation
+                                    performance and scalability.
+                                    We built our NVIDIA Quantum InfiniBand Cluster Networking
+                                    with QM9700 and QM9790
+                                </p>
+                            </SlideUp>
                         </div>
 
                         {/* 右侧特性部分 */}
-                        <div className="lg:col-span-6">
-                            <div className="border-b border-gray-400 pb-12 hover:bg-[#80B224] group transition-all duration-300 cursor-pointer p-4 rounded-lg">
+                        <div className="lg:col-span-6 border-l border-gray-200">
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/optimized.png"
-                                            alt="Leading Performance"
-                                            width={40}
-                                            height={40}
+                                            src="/networking/low-latency.svg"
+                                            alt="Low Latency"
+                                            width={36}
+                                            height={36}
                                         />
                                     </div>
-                                    <h3 className="font-bold text-xl group-hover:text-white">Leading performance</h3>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Ultra-High Bandwidth and Low Latency</h3>
+                                    </FadeIn>
                                 </div>
-                                <p className="text-gray-600 group-hover:text-white">Our SHARP-enabled NVIDIA Quantum InfiniBand network provides hyper-effective bandwidth—giving your teams the scale and speed of communication between NVIDIA GPUs they need to make the next GenAI breakthrough model</p>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white">
+                                        We use 400G none-blocking InfiniBand Networking to connect across all compute network, the latency is  in the microsecond range
+                                    </p>
+                                </FadeIn>
                             </div>
 
-                            <div className="border-b border-gray-400 pb-12 hover:bg-[#80B224] group transition-all duration-300 cursor-pointer p-4 rounded-lg">
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/optimized.png"
-                                            alt="Massive Scale"
-                                            width={40}
-                                            height={40}
+                                            src="/networking/computing.svg"
+                                            alt="Computing"
+                                            width={36}
+                                            height={36}
                                         />
                                     </div>
-                                    <h3 className="font-bold text-xl group-hover:text-white">Massive scale</h3>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">In-Network Computing</h3>
+                                    </FadeIn>
                                 </div>
-                                <p className="text-gray-600 group-hover:text-white">Create 300k+ GPU megaclusters via interconnected 100,000-strong GPU superclusters to unlock a new scale of compute</p>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white">
+                                        SHARP (Scalable Hierarchical Aggregation and Reduction Protocol): Offloads collective operations like reductions into the network fabric, greatly speeding up performance for distributed AI training
+                                    </p>
+                                </FadeIn>
                             </div>
 
-                            <div className="border-b border-gray-400 pb-12 hover:bg-[#80B224] group transition-all duration-300 cursor-pointer p-4 rounded-lg">
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/optimized.png"
-                                            alt="Ultra-fast Connection"
-                                            width={40}
-                                            height={40}
+                                            src="/networking/qos.svg"
+                                            alt="QoS"
+                                            width={36}
+                                            height={36}
                                         />
                                     </div>
-                                    <h3 className="font-bold text-xl group-hover:text-white">Ultra-fast connection</h3>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Congestion Control and QoS</h3>
+                                    </FadeIn>
                                 </div>
-                                <p className="text-gray-600 group-hover:text-white">One-to-one non-blocking channels get GPUs communicating with sub-microsecond latency</p>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white">
+                                        We use Adaptive Routing and Explicit Congestion Notification ensure traffic flows smoothly even under heavy load
+                                    </p>
+                                </FadeIn>
                             </div>
 
-                            <div className="border-b border-gray-400 pb-12 hover:bg-[#80B224] group transition-all duration-300 cursor-pointer p-4 rounded-lg">
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/optimized.png"
-                                            alt="Superior Throughput"
-                                            width={40}
-                                            height={40}
+                                            src="/networking/tolerance.svg"
+                                            alt="Tolerance"
+                                            width={36}
+                                            height={36}
                                         />
                                     </div>
-                                    <h3 className="font-bold text-xl group-hover:text-white">Superior throughput</h3>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Reliability and Fault Tolerance</h3>
+                                    </FadeIn>
                                 </div>
-                                <p className="text-gray-600 group-hover:text-white">Experience bidirectional throughput between NVIDIA HGX H100 8GPU Nodes—topping 3.2Tbps per Node for an incredibly fast connection</p>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white">
+                                        We design our Infiniband networking with Enhanced error detection and correction with support for failover and redundancy
+                                    </p>
+                                </FadeIn>
                             </div>
 
-                            <div className="border-b border-gray-400 pb-12 hover:bg-[#80B224] group transition-all duration-300 cursor-pointer p-4 rounded-lg">
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="border border-dashed border-gray-300 p-2">
+                                    <div className=" border-gray-300 p-2">
                                         <Image
-                                            src="/optimized.png"
-                                            alt="Faster Time to Market"
-                                            width={40}
-                                            height={40}
+                                            src="/networking/scalability.svg"
+                                            alt="Scalability"
+                                            width={36}
+                                            height={36}
                                         />
                                     </div>
-                                    <h3 className="font-bold text-xl group-hover:text-white">Faster time to market</h3>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Scalability</h3>
+                                    </FadeIn>
                                 </div>
-                                <p className="text-gray-600 group-hover:text-white">With up to 15% higher effective throughput than alternatives, run your GPU clusters at their maximum potential and accelerate time to market</p>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white">
+                                        With up to 15% higher effective throughput than alternatives, run your GPU clusters at their maximum potential and accelerate time to market
+                                    </p>
+                                </FadeIn>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Virtual Private Cloud 部分 */}
+            {/* RoceV2 Networking 部分 */}
             <div className="bg-[#F9F9F9] py-4">
                 <div id="private-cloud" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Virtual Private Cloud</h2>
-                    <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
-                        Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI.
-                    </p>
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">RoceV2 Networking</h2>
+                    </SlideUp>
+                    <SlideUp>
+                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                            Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI
+                        </p>
+                    </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/optimized.png"
-                                    alt="Enhanced Security"
-                                    width={40}
-                                    height={40}
+                                    src="/compute/fast.svg"
+                                    alt="High Performance"
+                                    width={36}
+                                    height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">ENHANCED <br /> SECURITY</h3>
-                            <p className="text-gray-600 group-hover:text-white">Deploy VPC networking to ensure customer network traffic stays private.</p>
+                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">High Performance</h3>
+                            <p className="text-gray-600 group-hover:text-white">
+                                RDMA bypasses the CPU for data transfers, reducing latency and CPU overhead
+                            </p>
                         </div>
 
                         <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/optimized.png"
-                                    alt="Optimized GPU Compute"
-                                    width={40}
-                                    height={40}
+                                    src="/icon/high.svg"
+                                    alt="Workloads"
+                                    width={36}
+                                    height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">OPTIMIZED GPU COMPUTE</h3>
-                            <p className="text-gray-600 group-hover:text-white">Offload, accelerate, and isolate networking from GPU nodes so all your compute capacity can focus on AI workloads.</p>
+                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">Excellent for AI Workloads</h3>
+                            <p className="text-gray-600 group-hover:text-white">
+                                Used in distributed AI training systems where fast GPU-to-GPU communication across nodes is needed
+                            </p>
                         </div>
 
                         <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/optimized.png"
-                                    alt="Consistent Performance"
-                                    width={40}
-                                    height={40}
+                                    src="/networking/scalability.svg"
+                                    alt="Scalability"
+                                    width={36}
+                                    height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">CONSISTENT PERFORMANCE</h3>
-                            <p className="text-gray-600 group-hover:text-white">Get consistent and predictable bandwidth between GPU nodes and storage clusters.</p>
+                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">Scalability</h3>
+                            <p className="text-gray-600 group-hover:text-white">
+                                Supports multi-tenant cloud environments
+                            </p>
                         </div>
 
                         <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/optimized.png"
-                                    alt="Hybrid or Multi-cloud Strategies"
-                                    width={40}
-                                    height={40}
+                                    src="/compute/model.svg"
+                                    alt="Advanced Congestion Control"
+                                    width={36}
+                                    height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">HYBRID OR MULTI-CLOUD STRATEGIES</h3>
-                            <p className="text-gray-600 group-hover:text-white">Connect your VPCs to on-prem networks or resources on traditional hyperscalers with Direct Connect</p>
+                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">Advanced Congestion Control</h3>
+                            <p className="text-gray-600 group-hover:text-white">
+                                We build our RoceV2 Networking resilience to congestion and packet loss
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -208,7 +254,7 @@ export default function NetworkingServices() {
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
-                        Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs.
+                            Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs.
                         </p>
                     </SlideUp>
                     <SlideUp>
