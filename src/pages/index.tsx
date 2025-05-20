@@ -133,7 +133,7 @@ export default function Index() {
               <div className="w-full md:w-1/2">
                 <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-10">Powered By Our Global Network</h2>
                 <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
-                  Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
+                  Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                 </p>
                 <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
                 Get started →

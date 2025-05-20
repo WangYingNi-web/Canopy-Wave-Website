@@ -47,7 +47,7 @@ export default function StorageServices() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6">
-              Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture.
+              Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture
             </p>
           </SlideUp>
           <SlideUp>
@@ -68,7 +68,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Performance Where IT Counts</h3>
-              <p className="text-gray-600">Uses SSD storage to analyze data access in real time, prioritizing hot data (like transactions) in fast tiers for microsecond speeds. Smart algorithms auto-move data between tiers.</p>
+              <p className="text-gray-600">Uses SSD storage to analyze data access in real time, prioritizing hot data (like transactions) in fast tiers for microsecond speeds. Smart algorithms auto-move data between tiers</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -81,7 +81,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Scalability For<br />Growth</h3>
-              <p className="text-gray-600">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption.</p>
+              <p className="text-gray-600">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -94,7 +94,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Seamlesss Collaboration</h3>
-              <p className="text-gray-600">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work.</p>
+              <p className="text-gray-600">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -107,7 +107,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Cloud-Native Readiness</h3>
-              <p className="text-gray-600">Object storage offers standard APIs with cross-region sync & auto-tiering. Pools mixed storage, runs in containers, and copies data across regions in under 1 second.</p>
+              <p className="text-gray-600">Object storage offers standard APIs with cross-region sync & auto-tiering. Pools mixed storage, runs in containers, and copies data across regions in under 1 second</p>
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function StorageServices() {
               <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4" />
               <h3 className="text-xl font-bold mb-4">File-Based</h3>
               <p className="text-gray-600">
-                All servers see the same folder structure like your local PC. Files stay unique - no duplicates, no matter where they're physically stored.
+                All servers see the same folder structure like your local PC. Files stay unique - no duplicates, no matter where they're physically stored
               </p>
             </div>
 
@@ -260,7 +260,7 @@ export default function StorageServices() {
               <Image src="/storage/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4" />
               <h3 className="text-xl font-bold mb-4">Multi-Server File Access</h3>
               <p className="text-gray-600">
-                Multi-server editing with auto-conflict resolution. Works like Google Docs for servers - changes appear instantly everywhere, no version chaos.
+                Multi-server editing with auto-conflict resolution. Works like Google Docs for servers - changes appear instantly everywhere, no version chaos
               </p>
             </div>
 
@@ -269,7 +269,7 @@ export default function StorageServices() {
               <Image src="/storage/harmony-icon.svg" alt="Private Cloud" width={36} height={36} className="mb-4" />
               <h3 className="text-xl font-bold mb-4">Distributed Harmony Engine</h3>
               <p className="text-gray-600">
-                Auto-schedules distributed tasks like traffic lights. Smart scheduling prevents file access conflicts. For example, AI training gets 40% faster with hot data auto-prioritized in fast storage.
+                Auto-schedules distributed tasks like traffic lights. Smart scheduling prevents file access conflicts. For example, AI training gets 40% faster with hot data auto-prioritized in fast storage
               </p>
             </div>
           </div>
@@ -307,7 +307,7 @@ export default function StorageServices() {
                 <FadeIn> <ul className="text-gray-600 space-y-1 pl-12">
                   <li className="flex items-start">
                     <span className="w-4 shrink-0">•</span>
-                    <span>Starts at 10PB with seamless scaling - auto-balances data when adding drives. Triple copies protect against hardware failures (auto-heals in minutes), while multi-site deployment guards against regional disasters.</span>
+                    <span>Starts at 10PB with seamless scaling - auto-balances data when adding drives. Triple copies protect against hardware failures (auto-heals in minutes), while multi-site deployment guards against regional disasters</span>
                   </li>
                 </ul>
                 </FadeIn>
@@ -326,7 +326,7 @@ export default function StorageServices() {
                   <ul className="text-gray-600 space-y-1 pl-12">
                     <li className="flex items-start">
                       <span className="w-4 shrink-0">•</span>
-                      <span>Access files via unique URLs (e.g. user123/photo.jpg) like visiting webpages. HTTP(S) upload/download handles millions of files worldwide - perfect for web apps.</span>
+                      <span>Access files via unique URLs (e.g. user123/photo.jpg) like visiting webpages. HTTP(S) upload/download handles millions of files worldwide - perfect for web apps</span>
                     </li>
                   </ul>
                 </FadeIn>
@@ -369,7 +369,7 @@ export default function StorageServices() {
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
             <p className="text-gray-600 mb-8 mx-auto text-lg">
-              Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
+              Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
             </p>
           </SlideUp>
           <SlideUp>

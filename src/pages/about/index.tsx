@@ -84,7 +84,7 @@ export default function AboutPage() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
-              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle today—and tomorrow&apos;s—challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads.
+              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle today—and tomorrow&apos;s—challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads
             </p>
           </SlideUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -99,7 +99,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">Straightforward</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
-                We handle the complexity so customers can spend less time managing their infrastructure.
+                We handle the complexity so customers can spend less time managing their infrastructure
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default function AboutPage() {
               </div>  
               <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">Adaptable</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
-                Products that are powerful and opinionated by default, but flexible under the hood.
+                Products that are powerful and opinionated by default, but flexible under the hood
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export default function AboutPage() {
               </SlideUp>
               <SlideUp>
                 <p className="text-gray-600 mb-8">
-                  We believe in the power of people. As fast-movers and forward-thinkers, our values are the mantras behind why we do what we do.
+                  We believe in the power of people. As fast-movers and forward-thinkers, our values are the mantras behind why we do what we do
                 </p>
               </SlideUp>
             </div>
@@ -248,7 +248,7 @@ export default function AboutPage() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 mb-8">
-              Ready to shape the future? Join CanopyWave and help drive the future of technology with a team redefining what&apos;s possible.
+              Ready to shape the future? Join CanopyWave and help drive the future of technology with a team redefining what's possible
             </p>
           </SlideUp>
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">

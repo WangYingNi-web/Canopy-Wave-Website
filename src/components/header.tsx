@@ -278,8 +278,7 @@ export default function Header() {
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Model Training</IwsLink></li>
                         <li><IwsLink href="/inference" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Inference</IwsLink></li>
                         <li><IwsLink href="/rendering" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Rendering</IwsLink></li>
-                        <li><IwsLink href="/private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Private Cloud</IwsLink></li>
-                        <li><IwsLink href="/gpu-cluster-management" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>GPUs Cluster bring up and management</IwsLink></li>
+                        <li><IwsLink href="/private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Private cloud and GPUs deployment</IwsLink></li>
                         <li><IwsLink href="/networking-hardware" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Networking Hardware Solution</IwsLink></li>
                       </ul>
                     </div>
@@ -383,10 +382,7 @@ export default function Header() {
                   <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
-                        <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
-                        <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
-                        <li><IwsLink href="/US" className="text-gray-600 hover:text-gray-900">补充</IwsLink></li>
+                        <li><IwsLink href="/cloud-api" className="text-gray-600 hover:text-gray-900">Manage Cloud Via API</IwsLink></li>
                       </ul>
                     </div>
                   </div>
@@ -585,7 +581,6 @@ export default function Header() {
                     </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'networking' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/gpu-cluster-management">GPUs Cluster bring up and management</IwsLink></li>
                     <li><IwsLink href="/networking-hardware">Networking Hardware Solution</IwsLink></li>
                   </ul>
                 </li>
@@ -647,8 +642,7 @@ export default function Header() {
                 <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded">Model Training</IwsLink></li>
                 <li><IwsLink href="/inference" className="block px-2 py-1 hover:bg-gray-100 rounded">Inference</IwsLink></li>
                 <li><IwsLink href="/rendering" className="block px-2 py-1 hover:bg-gray-100 rounded">Rendering</IwsLink></li>
-                <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded">Private Cloud</IwsLink></li>
-                <li><IwsLink href="/gpu-cluster-management" className="block px-2 py-1 hover:bg-gray-100 rounded">GPUs Cluster bring up and management</IwsLink></li>
+                <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded">Private cloud and GPUs deployment</IwsLink></li>
                 <li><IwsLink href="/networking-hardware" className="block px-2 py-1 hover:bg-gray-100 rounded">Networking Hardware Solution</IwsLink></li>
               </ul>
             )}
@@ -709,6 +703,32 @@ export default function Header() {
                 <li><IwsLink href="/data-center/canada" className="block px-2 py-1 hover:bg-gray-100 rounded">Canada 1</IwsLink></li> */}
                 <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 1</IwsLink></li>
                 <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 2</IwsLink></li>
+              </ul>
+            )}
+          </div>
+          <div className="relative">
+            <button
+              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => setShowMobileResources(!showMobileResources)}
+            >
+              Resources
+              <svg
+                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileResources ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            {showMobileResources && (
+              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
+                <li><IwsLink href="/cloud-api" className="block px-2 py-1 hover:bg-gray-100 rounded">Manage Cloud Via API</IwsLink></li>
               </ul>
             )}
           </div>

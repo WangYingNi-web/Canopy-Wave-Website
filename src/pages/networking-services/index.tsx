@@ -254,7 +254,7 @@ export default function NetworkingServices() {
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
-                            Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs.
+                            Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs
                         </p>
                     </SlideUp>
                     <SlideUp>

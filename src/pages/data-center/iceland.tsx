@@ -58,7 +58,7 @@ export default function IcelandDataCenter() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-6 text-lg">
-                                    Your app's performance depends on how close you can deploy to your end users. With canopywave, you can deploy in strategic locations within seconds, dramatically reducing latency and delivering the seamless experience your users demand.
+                                    Your app's performance depends on how close you can deploy to your end users. With canopywave, you can deploy in strategic locations within seconds, dramatically reducing latency and delivering the seamless experience your users demand
                                 </p>
                             </SlideUp>
                             <SlideUp>
@@ -92,7 +92,7 @@ export default function IcelandDataCenter() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    The Blönduós Data Center, situated in northern Iceland, is a state-of-the-art facility designed for high-performance computing (HPC) and artificial intelligence (AI) workloads. Leveraging Iceland's cool climate and abundant renewable energy, the campus offers sustainable and efficient data center solutions.
+                                    The Blönduós Data Center, situated in northern Iceland, is a state-of-the-art facility designed for high-performance computing (HPC) and artificial intelligence (AI) workloads. Leveraging Iceland's cool climate and abundant renewable energy, the campus offers sustainable and efficient data center solutions
                                 </p>
                             </SlideUp>
                             <div className="relative h-[400px] w-full">
@@ -120,7 +120,7 @@ export default function IcelandDataCenter() {
                                         <FadeIn>
                                             <h3 className="text-xl font-bold mb-2">Sustainable Energy</h3>
                                             <p className="text-gray-600">
-                                                Powered entirely by renewable energy sources, including geothermal and hydroelectric power, the campus ensures environmentally friendly operations.
+                                                Powered entirely by renewable energy sources, including geothermal and hydroelectric power, the campus ensures environmentally friendly operations
                                             </p>
                                         </FadeIn>
                                     </div>
@@ -142,7 +142,7 @@ export default function IcelandDataCenter() {
                                         <FadeIn>
                                             <h3 className="text-xl font-bold mb-2">Energy Efficiency</h3>
                                             <p className="text-gray-600">
-                                                The facility boasts a Power Usage Effectiveness (PUE) as low as 1.03, significantly lower than the European average of 1.55, indicating high energy efficiency.
+                                                The facility boasts a Power Usage Effectiveness (PUE) as low as 1.03, significantly lower than the European average of 1.55, indicating high energy efficiency
                                             </p>
                                         </FadeIn>
                                     </div>
@@ -164,7 +164,7 @@ export default function IcelandDataCenter() {
                                         <FadeIn>
                                             <h3 className="text-xl font-bold mb-2">High Capacity</h3>
                                             <p className="text-gray-600">
-                                                With an expansion capability exceeding 100 MW and a fully built-out power capacity of 50 MW, the campus is equipped to handle substantial computational demands.
+                                                With an expansion capability exceeding 100 MW and a fully built-out power capacity of 50 MW, the campus is equipped to handle substantial computational demands
                                             </p>
                                         </FadeIn>
                                     </div>
@@ -185,7 +185,7 @@ export default function IcelandDataCenter() {
                                         <FadeIn>
                                             <h3 className="text-xl font-bold mb-2">Advanced Infrastructure</h3>
                                             <p className="text-gray-600">
-                                                Designed to Tier 3 standards, the data center includes dual power feeds, indirect air cooling systems, uninterruptible power supplies (UPS), and generators to ensure high availability and reliability.
+                                                Designed to Tier 3 standards, the data center includes dual power feeds, indirect air cooling systems, uninterruptible power supplies (UPS), and generators to ensure high availability and reliability
                                             </p>
                                         </FadeIn>
 
@@ -207,7 +207,7 @@ export default function IcelandDataCenter() {
                                         <FadeIn>
                                             <h3 className="text-xl font-bold mb-2">8 Certifications</h3>
                                             <p className="text-gray-600">
-                                                Reflecting its commitment to information security and data protection.
+                                                Reflecting its commitment to information security and data protection
                                             </p>
                                         </FadeIn>
                                     </div>
@@ -229,7 +229,7 @@ export default function IcelandDataCenter() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    The Akureyri data center (ICE03) is a cutting-edge facility designed to meet the growing demands of high-performance computing (HPC) and artificial intelligence (AI) workloads. Strategically located in northern Iceland, ICE03 leverages the region's cool climate and abundant renewable energy resources to deliver sustainable and efficient data center services.
+                                    The Akureyri data center (ICE03) is a cutting-edge facility designed to meet the growing demands of high-performance computing (HPC) and artificial intelligence (AI) workloads. Strategically located in northern Iceland, ICE03 leverages the region's cool climate and abundant renewable energy resources to deliver sustainable and efficient data center services
                                 </p>
                             </SlideUp>
                         </div>
@@ -259,7 +259,7 @@ export default function IcelandDataCenter() {
                             </div>
                             <h3 className="text-xl font-bold mb-3">100% Renewable Energy</h3>
                             <p className="text-gray-600 text-sm">
-                                ICE03 is powered entirely by Iceland's renewable hydro and geothermal energy sources, contributing to its low carbon footprint.
+                                ICE03 is powered entirely by Iceland's renewable hydro and geothermal energy sources, contributing to its low carbon footprint
                             </p>
                         </div>
 
@@ -275,7 +275,7 @@ export default function IcelandDataCenter() {
                             </div>
                             <h3 className="text-xl font-bold mb-3">Efficient Cooling Systems</h3>
                             <p className="text-gray-600 text-sm">
-                                The facility utilizes both direct air cooling and liquid cooling technologies, achieving a Power Usage Effectiveness (PUE) as low as 1.2.
+                                The facility utilizes both direct air cooling and liquid cooling technologies, achieving a Power Usage Effectiveness (PUE) as low as 1.2
                             </p>
                         </div>
 
@@ -291,7 +291,7 @@ export default function IcelandDataCenter() {
                             </div>
                             <h3 className="text-xl font-bold mb-3">Tier 3 Certification</h3>
                             <p className="text-gray-600 text-sm">
-                                The facility meets Tier 3 standards, ensuring high availability and redundancy for mission-critical operations.
+                                The facility meets Tier 3 standards, ensuring high availability and redundancy for mission-critical operations
                             </p>
                         </div>
 
@@ -307,7 +307,7 @@ export default function IcelandDataCenter() {
                             </div>
                             <h3 className="text-xl font-bold mb-3">Global Access</h3>
                             <p className="text-gray-600 text-sm">
-                                Akureyri's position offers low-latency connectivity to major interconnection hubs, including London (17.2 ms), Amsterdam (17.3 ms), and New York (55 ms).
+                                Akureyri's position offers low-latency connectivity to major interconnection hubs, including London (17.2 ms), Amsterdam (17.3 ms), and New York (55 ms)
                             </p>
                         </div>
                     </div>
@@ -325,7 +325,7 @@ export default function IcelandDataCenter() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 mb-8 text-lg max-w-3xl">
-                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
+                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                             </p>
                         </SlideUp>
                         <SlideUp>
