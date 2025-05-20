@@ -304,7 +304,8 @@ export default function StorageServices() {
                     <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
                   </FadeIn>
                 </div>
-                <FadeIn> <ul className="text-gray-600 space-y-1 pl-12">
+                <FadeIn> 
+                <ul className="text-gray-600 space-y-1 pl-12">
                   <li className="flex items-start">
                     <span className="w-4 shrink-0">•</span>
                     <span>Starts at 10PB with seamless scaling - auto-balances data when adding drives. Triple copies protect against hardware failures (auto-heals in minutes), while multi-site deployment guards against regional disasters</span>

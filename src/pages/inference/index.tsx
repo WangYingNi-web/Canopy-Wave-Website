@@ -3,183 +3,214 @@
 import Image from "next/image";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import SlideUp from '@/components/slide';
+import FadeIn from '@/components/FadeIn';
+import { Button } from "@/components/ui/button";
 
 export default function SolutionsPage() {
     return (
-        <main className="bg-white min-h-screen w-full font-sans">
+        <main className="min-h-screen relative">
             <Header />
-            {/* Hero Section */}
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-16 pt-24 pb-16 bg-white max-w-6xl mx-auto">
-                {/* Left: Title, description, and button */}
-                <div className="flex-1 mb-8 md:mb-0 max-w-md">
-                    <h1 className="text-4xl md:text-5xl font-bold text-[#060709] mb-4">
-                        Inference
-                    </h1>
-                    <p className="text-lg md:text-xl text-[#62646f] mb-7 max-w-lg">
-                        内容需补充内容需补充内容需补充内容需补充内容需补充内容需补充.
-                    </p>
-                    {/* Blue button - UI only, no interaction */}
-                    <button
-                        className="px-6 py-3 rounded-full bg-[#80B224] text-white font-semibold text-base shadow-sm hover:brightness-95 transition cursor-default"
-                        tabIndex={-1}
-                    >
-                        Schedule a discovery callxxxx
-                    </button>
-                </div>
-                {/* Right: Illustration */}
-                <div className="flex-1 flex justify-center max-w-md">
-                    <Image
-                        src="/ai-inference-illustration.svg"
-                        alt="AI Inference Illustration"
-                        width={440}
-                        height={324}
-                        className="w-[340px] md:w-[420px] h-auto"
-                        priority
-                    />
-                </div>
-            </section>
 
-            {/* Purpose-built black section */}
-            <section className="bg-[#F5F9F4] text-black py-16 px-4 md:px-0 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    Purpose-built cloud infrastructure for AI inference
-                </h2>
-                <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-80 leading-relaxed">
-                    CanopyWave’s cloud infrastructure is made to handle the demanding demands of running modern-day AI inference workloads at speed and scale. Our bare-metal instances, optimized for performance, provide access to the latest NVIDIA GPUs, while managed clusters accelerate time-to-production and networking innovations power ultra-fast multi-node scalability. Accelerate the deployment of your applications—and learning—without infrastructure friction.
-                </p>
-            </section>
+            <div className="w-full h-[720px] relative mt-[84px]">
+                <Image
+                    src="/careers.svg"
+                    alt="cpu-nodes"
+                    layout='fill'
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+                        <SlideUp>
+                            <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
+                            Inference
+                            </h1>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-white text-lg mt-8 text-center">
+                            Unlock Fast, Flexible, and Secure AI Inference with Canopy Wave
+                            </p>
+                        </SlideUp>
+                    </div>
+                </div>
+            </div>
 
-            {/* Features Section */}
-            <section className="grid md:grid-cols-2 gap-0 bg-white py-20 md:px-28 px-6">
-                {/* Left: Record-breaking performance */}
-                <div className="pr-10 max-w-xl md:ml-auto md:mr-10">
-                    <span className="inline-block bg-[#80B224] text-white px-3 py-1.5 rounded-md font-semibold text-base mb-6">
-                        Record-breaking
-                    </span>
-                    <h3 className="text-4xl font-semibold text-[#060709] mb-4">
-                        performance
-                    </h3>
-                    <p className="text-lg md:text-xl text-[#62646f] leading-relaxed">
-                        Get the latest and greatest NVIDIA GPUs, alongside other cutting-edge hardware innovation, to unlock unprecedented performance for AI/ML and high-throughput inference workloads.
-                    </p>
-                </div>
+            <div className="bg-[#F5F9F4] py-4">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        {/* 左侧标题部分 */}
+                        <div className="lg:col-span-6">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                    Inference
+                                </h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                    As AI continues to reshape industries, businesses need an inference solution that delivers speed, efficiency, and security—without overcomplicating infrastructure or budgets. At Canopy Wave, we’ve engineered our AI Inference platform to meet these needs head-on, offering a powerful, enterprise-ready solution that’s as flexible as it is reliable
+                                </p>
+                            </SlideUp>
+                        </div>
 
-                {/* Right: 3 Feature Items */}
-                <div className="flex flex-col gap-8 max-w-2xl md:pl-12 mt-10 md:mt-0">
-                    {/* Feature Item 1 */}
-                    <div className="flex items-start gap-5">
-                        <Image
-                            src="/optimized.png"
-                            alt="Bare Metal GPU"
-                            width={40}
-                            height={40}
-                        />
-                        <div>
-                            <div className="font-semibold text-xl text-[#060709] mb-2">
-                                Bare metal GPU compute
+                        {/* 右侧特性部分 */}
+                        <div className="lg:col-span-6 border-l border-gray-200">
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/low-latency.svg"
+                                            alt="Low Latency"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Flexible, Cost-Efficient Usage</h3>
+                                    </FadeIn>
+                                </div>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px]">
+                                        Traditional infrastructure models can tie up resources and budgets—even when usage is low. Canopy Wave offers a minute-based billing model, allowing you to scale on-demand and only pay for what you use. Whether you're running short bursts of inference tasks or need continuous uptime, our pricing adapts to your workload—not the other way around
+                                    </p>
+                                </FadeIn>
                             </div>
-                            <div className="text-base text-[#62646f] leading-relaxed">
-                                Get unparalleled, ultra-fast performance out of your workloads, with optimized latency and industry-leading hardware.
-                            </div>
-                        </div>
-                    </div>
-                    {/* Feature Item 2 */}
-                    <div className="flex items-start gap-5">
-                        <Image
-                            src="/optimized.png"
-                            alt="Bare Metal GPU"
-                            width={40}
-                            height={40}
-                        />
-                        <div>
-                            <div className="font-semibold text-xl text-[#060709] mb-2">
-                                Managed clusters for AI
-                            </div>
-                            <div className="text-base text-[#62646f] leading-relaxed">
-                                Autoscale and orchestrate your inferencing workloads, gain access and control straight out-of-the-box.
-                            </div>
-                        </div>
-                    </div>
-                    {/* Feature Item 3 */}
-                    <div className="flex items-start gap-5">
-                        <Image
-                            src="/optimized.png"
-                            alt="Bare Metal GPU"
-                            width={40}
-                            height={40}
-                        />
-                        <div>
-                            <div className="font-semibold text-xl text-[#060709] mb-2">
-                                Industry’s fastest multi-node interconnect
-                            </div>
-                            <div className="text-base text-[#62646f] leading-relaxed">
-                                Run your most demanding AI inference workloads at scale with a powerful, purpose-built interconnect for multi-node clusters.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* Storage Solutions Section (black background) */}
-            <section className="bg-[#F5F9F4] py-20 px-6 md:px-0">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-                        Optimize AI inference with fast storage solutions
-                    </h2>
-                    <p className="text-lg md:text-xl text-black/80 max-w-3xl mx-auto leading-relaxed">
-                        GenAI models need a lot of data—and they need it fast. Handle massive datasets with reliability and ease, enabling better performance and faster training times. Fit more in each epoch, as our tailored storage solutions are designed and built for speed at scale. Store AI inference data in a more performant and efficient way.
-                    </p>
-                </div>
-                <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-                    <div className="border rounded-2xl bg-[#80B224] p-8 flex flex-col items-center text-center min-h-[280px]">
-                        <Image
-                            src="/optimized.png"
-                            width={44}
-                            height={44}
-                            alt="Local Instance Storage Icon"
-                            className="mb-4"
-                        />
-                        <div className="font-semibold text-xl text-white mb-3">
-                            Local Instance Storage
-                        </div>
-                        <div className="text-base text-white/80 leading-relaxed">
-                            Our GPU instances provide ultra-fast I/O at the highest throughput, designed for the demanding data access and retrieval domains of AI inference.
-                        </div>
-                    </div>
-                    {/* Storage Card 2 */}
-                    <div className="border rounded-2xl bg-[#80B224] p-8 flex flex-col items-center text-center min-h-[280px]">
-                        <Image
-                            src="/optimized.png"
-                            width={44}
-                            height={44}
-                            alt="Local Instance Storage Icon"
-                            className="mb-4"
-                        />
-                        <div className="font-semibold text-xl text-white mb-3">
-                            AI Object Storage with LOTA
-                        </div>
-                        <div className="text-base text-white/80 leading-relaxed">
-                            CanopyWave AI ObjectStorage is a highly performant and cost-effective solution with multi-cloud compatibility and integrated access controls. Quickly store, archive, and retrieve huge datasets for AI/ML pipelines, easily integrating with every workflow.
-                        </div>
-                    </div>
-                    {/* Storage Card 3 */}
-                    <div className="border rounded-2xl bg-[#80B224] p-8 flex flex-col items-center text-center min-h-[280px]">
-                        <Image
-                            src="/optimized.png"
-                            width={44}
-                            height={44}
-                            alt="Local Instance Storage Icon"
-                            className="mb-4"
-                        />
-                        <div className="font-semibold text-xl text-white mb-3">
-                            Fast Distributed File Storage Services
-                        </div>
-                        <div className="text-base text-white/80 leading-relaxed">
-                            Our Distributed File Storage offering is designed for performance at large scale, offering seamless scalability and efficiency for AI inference.
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/computing.svg"
+                                            alt="Computing"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Virtual Machines with Bare-Metal Performance</h3>
+                                    </FadeIn>
+                                </div>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px]">
+                                        One common trade-off with cloud-based AI services is the performance drop when using virtual machines. Not at Canopy Wave. Our platform is optimized to deliver VM-based infrastructure that performs on par with bare metal, giving you the speed and low latency required for high-throughput AI inference—without the operational complexity of managing physical servers
+                                    </p>
+                                </FadeIn>
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 pb-12 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/qos.svg"
+                                            alt="QoS"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Built on Private Cloud for Maximum Security</h3>
+                                    </FadeIn>
+                                </div>
+                                <FadeIn>
+                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px]">
+                                        We understand that data privacy and compliance are top priorities. That's why our solution is hosted in a private cloud environment, ensuring full data isolation, enhanced control, and enterprise-grade security. You maintain ownership and visibility of your data throughout its lifecycle
+                                    </p>
+                                </FadeIn>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            {/* AI-Optimized Storage Solutions*/}
+            <div className='bg-[#F9F9F9]'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <div className="text-center mb-16">
+                        <SlideUp>
+                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">AI-Optimized Storage Solutions</h2>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                                Every AI inference pipeline depends on fast and reliable access to data. Canopy Wave supports a flexible, multi-tiered storage architecture
+                            </p>
+                        </SlideUp>
+
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Local Storage */}
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex justify-center mb-6">
+                                <Image
+                                    src="/rendering/performance.svg"
+                                    alt="Local Storage"
+                                    width={36}
+                                    height={36}
+                                />
+                            </div>
+                            <h3 className="font-bold text-xl mb-4 text-center">Local Storage</h3>
+                            <p className="text-gray-600 text-center">
+                                Fast I/O for scratch files
+                            </p>
+                        </div>
+
+                        {/* Shared Storage */}
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex justify-center mb-6">
+                                <Image
+                                    src="/rendering/low-latency.svg"
+                                    alt="Shared Storage"
+                                    width={36}
+                                    height={36}
+                                />
+                            </div>
+                            <h3 className="font-bold text-xl mb-4 text-center">Shared Storage</h3>
+                            <p className="text-gray-600 text-center">
+                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
+                            </p>
+                        </div>
+
+                        {/* Object Storage */}
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex justify-center mb-6">
+                                <Image
+                                    src="/rendering/gpus.svg"
+                                    alt="Object Storage"
+                                    width={36}
+                                    height={36}
+                                />
+                            </div>
+                            <h3 className="font-bold text-xl mb-4 text-center">Object Storage</h3>
+                            <p className="text-gray-600 text-center">
+                                Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* Ready to Get Started Section */}
+            <div className="bg-[#F9F9F9] border-t border-gray-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
+                        <p className="text-gray-600 mb-8 mx-auto text-lg">
+                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
+                        </p>
+                    </SlideUp>
+                    <SlideUp>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                Launch GPU instances
+                            </Button>
+                            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                                Contact sales
+                            </Button>
+                        </div>
+                    </SlideUp>
+                </div>
+            </div>
 
             <Footer />
         </main>
