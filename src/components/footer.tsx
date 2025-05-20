@@ -76,8 +76,8 @@ export default function Footer() {
                             <h3 className="font-semibold mb-4">About</h3>
                             <ul className="space-y-2 text-sm">
                                 <li><IwsLink href="/about" className="text-gray-500 hover:text-gray-700">About US</IwsLink></li>
-                                <li><IwsLink href="/careers" className="text-gray-500 hover:text-gray-700">Careers</IwsLink></li>
-                                <li><IwsLink href="/newsroom" className="text-gray-500 hover:text-gray-700">Newsroom</IwsLink></li>
+                                <li><IwsLink href="/about/careers" className="text-gray-500 hover:text-gray-700">Careers</IwsLink></li>
+                                <li><IwsLink href="/about/newsroom" className="text-gray-500 hover:text-gray-700">Newsroom</IwsLink></li>
                                 <li><IwsLink href="/blog" className="text-gray-500 hover:text-gray-700">Blog</IwsLink></li>
                             </ul>
                         </div>
