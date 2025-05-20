@@ -3,156 +3,409 @@
 import Image from "next/image";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import SlideUp from '@/components/slide';
+import FadeIn from '@/components/FadeIn';
+import { Button } from "@/components/ui/button";
 
 export default function NetworkingHardwarePage() {
     return (
-        <main className="min-h-screen bg-white pt-16">
+        <main className="min-h-screen relative">
             <Header />
 
-            {/* Hero Section */}
-            <section className="relative bg-[#80B224] from-gray-900 to-gray-800 text-white py-20">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl">
-                        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                            High-Performance Network Hardware Solutions
-                        </h1>
-                        <p className="text-xl text-gray-200 mb-8">
-                            Providing enterprise-grade networking equipment and solutions with high bandwidth and low latency data transmission capabilities to deliver reliable network infrastructure for your business.
-                        </p>
-                        <button className="bg-[#80B224] hover:bg-[#6c9a1e] text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                            Learn More
-                        </button>
+            <div className="w-full h-[720px] relative mt-[84px]">
+                <Image
+                    src="/careers.svg"
+                    alt="cpu-nodes"
+                    layout='fill'
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+                        <SlideUp>
+                            <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
+                                Networking Hardware Solution
+                            </h1>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-white text-lg mt-8 text-center">
+                                High-Performance, Proven Equipment for Scalable AI Infrastructure
+                            </p>
+                        </SlideUp>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* Core Advantages */}
-            <section className="py-16">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">Core Advantages</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <div className="w-12 h-12 bg-[#80B224] rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold mb-3">High Performance</h3>
-                            <p className="text-gray-600">Supporting up to 400Gbps network transmission rates to meet the bandwidth requirements of large-scale data centers.</p>
-                        </div>
+            {/* Canopy Wave Networking Hardware Solutions */}
+            <div className='bg-[#F5F9F4]'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                    <div className="text-center mb-16">
+                        <SlideUp>
+                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                                At Canopy Wave, we know that networking is the backbone—and often the bottleneck—of modern AI infrastructure. That’s why we’ve built a comprehensive, field-tested hardware solution designed to eliminate performance constraints and deliver seamless scalability.
+                                We don’t just sell components—we engineer, qualify, and deploy them in our own high-performance environments, ensuring you get equipment that’s trusted, reliable, and built to perform under real-world AI workloads
+                            </p>
+                        </SlideUp>
 
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <div className="w-12 h-12 bg-[#80B224] rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold mb-3">Reliability</h3>
-                            <p className="text-gray-600">Employing redundant design and advanced fault detection mechanisms to ensure network stability and availability.</p>
-                        </div>
-
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <div className="w-12 h-12 bg-[#80B224] rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold mb-3">Scalability</h3>
-                            <p className="text-gray-600">Modular design supports flexible expansion to easily accommodate network demands from business growth.</p>
-                        </div>
                     </div>
-                </div>
-            </section>
 
-            {/* Product Solutions */}
-            <section className="py-16 bg-[#F5F9F4]">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">Product Solutions</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div className="relative h-48">
+                        {/* Local Storage */}
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/network-switch.jpg"
-                                    alt="High-Performance Switch"
-                                    width={600}
-                                    height={400}
-                                    className="object-cover w-full h-full"
+                                    src="/rendering/performance.svg"
+                                    alt="Local Storage"
+                                    width={36}
+                                    height={36}
                                 />
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-3">High-Performance Switches</h3>
-                                <ul className="space-y-2 text-gray-600 mb-4">
-                                    <li>• 100/200/400G ports support</li>
-                                    <li>• Ultra-low latency design</li>
-                                    <li>• Intelligent routing algorithms</li>
-                                    <li>• Comprehensive monitoring</li>
-                                </ul>
-                                <button className="text-[#80B224] font-medium hover:underline">Learn More →</button>
-                            </div>
+                            <h3 className="font-bold text-xl mb-4 text-center">Networking Without Bottlenecks</h3>
+                            <p className="text-gray-600 text-center">
+                                AI workloads generate massive amounts of data. If your networking stack can’t keep up, performance suffers.
+                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div className="relative h-48">
+                        {/* Shared Storage */}
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/network-card.jpg"
-                                    alt="Network Adapter"
-                                    width={600}
-                                    height={400}
-                                    className="object-cover w-full h-full"
+                                    src="/rendering/low-latency.svg"
+                                    alt="Shared Storage"
+                                    width={36}
+                                    height={36}
                                 />
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-3">High-Performance Network Adapters</h3>
-                                <ul className="space-y-2 text-gray-600 mb-4">
-                                    <li>• RDMA technology support</li>
-                                    <li>• Hardware offload capabilities</li>
-                                    <li>• Multi-queue support</li>
-                                    <li>• Advanced virtualization features</li>
-                                </ul>
-                                <button className="text-[#80B224] font-medium hover:underline">Learn More →</button>
+                            <h3 className="font-bold text-xl mb-4 text-center">Canopy Wave has invested </h3>
+                            <p className="text-gray-600 text-center">
+                                deeply in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Tested in Production, Proven at Scale */}
+            <div className="bg-[#F9F9F9] py-4">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        {/* 左侧标题部分 */}
+                        <div className="lg:col-span-6">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                    Tested in Production, Proven at Scale
+                                </h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                    Everything we offer is tested and used in our own AI clusters, including multi-thousand GPU environments.
+                                </p>
+                            </SlideUp>
+                        </div>
+
+                        {/* 右侧特性部分 */}
+                        <div className="lg:col-span-6 border-l border-gray-200">
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/low-latency.svg"
+                                            alt="Low Latency"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Zero surprises during deployment</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/computing.svg"
+                                            alt="Computing"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Optimized compatibility</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/qos.svg"
+                                            alt="QoS"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Scalable, enterprise-ready components</h3>
+                                    </FadeIn>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* Use Cases */}
-            <section className="py-16">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">Use Cases</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="p-6 border border-gray-200 rounded-lg">
-                            <h3 className="text-xl font-semibold mb-3">Data Centers</h3>
-                            <p className="text-gray-600">Providing high-performance network infrastructure for large-scale data centers to support massive data transmission and processing requirements.</p>
-                        </div>
-
-                        <div className="p-6 border border-gray-200 rounded-lg">
-                            <h3 className="text-xl font-semibold mb-3">AI Computing</h3>
-                            <p className="text-gray-600">Delivering low-latency, high-bandwidth network connectivity for AI training and inference clusters to enhance computational efficiency.</p>
-                        </div>
-
-                        <div className="p-6 border border-gray-200 rounded-lg">
-                            <h3 className="text-xl font-semibold mb-3">Financial Trading</h3>
-                            <p className="text-gray-600">Offering ultra-low latency network solutions for financial institutions to meet the strict requirements of high-frequency trading.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Contact Us */}
-            <section className="py-16 bg-[#F5F9F4]">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-6">Need More Information?</h2>
-                        <p className="text-lg text-gray-600 mb-8">
-                            Our professional team is ready to provide detailed product information and technical support
+            {/* Bare-Metal Performance in a Virtual Environment*/}
+            <div className='bg-[#F5F9F4]'>
+                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32 text-center">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-4">Bare-Metal Performance in a Virtual Environment</h2>
+                    </SlideUp>
+                    <SlideUp>
+                        <p className="text-gray-600 mb-6">
+                            Our virtual machines are engineered to match the performance of physical hardware. We use GPU-accelerated instances and optimize our virtualization stack to ensure your rendering jobs run as fast and efficiently as possible—without the overhead that typically comes with virtualization
                         </p>
-                        <button className="bg-[#80B224] hover:bg-[#6c9a1e] text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                            Contact Us
-                        </button>
+                    </SlideUp>
+                    <SlideUp>
+                        <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] mb-12" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                            Launch H100 GPU Clusters
+                        </Button>
+                    </SlideUp>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Fiber Optic Cables</h3>
+                            <p className="text-gray-600 group-hover:text-white">Low-loss, high-speed connectivity</p>
+                        </div>
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Transceivers</h3>
+                            <p className="text-gray-600 group-hover:text-white">Fully tested for reliability and interoperability</p>
+                        </div>
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">NICs</h3>
+                            <p className="text-gray-600 group-hover:text-white">High-bandwidth, RDMA-capable options</p>
+                        </div>
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Switches</h3>
+                            <p className="text-gray-600 group-hover:text-white">InfiniBand, RoCEv2, and Ethernet-based switching at scale</p>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-6">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">DAC/AOC Cables</h3>
+                            <p className="text-gray-600 group-hover:text-white">Optimized for low latency and high data rates</p>
+                        </div>
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Data Center Racks</h3>
+                            <p className="text-gray-600 group-hover:text-white">Modular and airflow-optimized designs</p>
+                        </div>
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">PDUs</h3>
+                            <p className="text-gray-600 group-hover:text-white">Intelligent power control and monitoring</p>
+                        </div>
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <h3 className="font-bold mb-2 group-hover:text-white text-xl">Other Accessories</h3>
+                            <p className="text-gray-600 group-hover:text-white">All the essentials for fast, clean cluster deployment</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {/* Best Pricing. No Compromise on Quality */}
+            <div className="bg-[#F9F9F9] py-4">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        {/* 左侧标题部分 */}
+                        <div className="lg:col-span-6">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                    Best Pricing. No Compromise on Quality.
+                                </h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                    Thanks to our deep relationships with OEMs and supply chain partners
+                                </p>
+                            </SlideUp>
+                        </div>
+
+                        {/* 右侧特性部分 */}
+                        <div className="lg:col-span-6 border-l border-gray-200">
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/low-latency.svg"
+                                            alt="Low Latency"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Highly competitive pricing</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/computing.svg"
+                                            alt="Computing"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Fast lead times</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/qos.svg"
+                                            alt="QoS"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Guaranteed quality on every order</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            {/* From Equipment to Deployment */}
+            <div className="bg-[#F5F9F4] py-4">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        {/* 左侧标题部分 */}
+                        <div className="lg:col-span-6">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                    From Equipment to Deployment
+                                </h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                    Beyond supplying equipment, our team can also help you
+                                </p>
+                            </SlideUp>
+                        </div>
+
+                        {/* 右侧特性部分 */}
+                        <div className="lg:col-span-6 border-l border-gray-200">
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/low-latency.svg"
+                                            alt="Low Latency"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Design optimal topologies</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/computing.svg"
+                                            alt="Computing"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Match cables, optics, and NICs to your performance targets</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/qos.svg"
+                                            alt="QoS"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Build out racks and power configurations</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+                            <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-2">
+                                        <Image
+                                            src="/networking/qos.svg"
+                                            alt="QoS"
+                                            width={36}
+                                            height={36}
+                                        />
+                                    </div>
+                                    <FadeIn>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Integrate with existing infrastructure</h3>
+                                    </FadeIn>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Ready to Get Started Section */}
+            <div className="bg-[#F9F9F9] border-t border-gray-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
+                        <p className="text-gray-600 mb-8 mx-auto text-lg">
+                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
+                        </p>
+                    </SlideUp>
+                    <SlideUp>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                Launch GPU instances
+                            </Button>
+                            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                                Contact sales
+                            </Button>
+                        </div>
+                    </SlideUp>
+                </div>
+            </div>
 
             <Footer />
         </main>
