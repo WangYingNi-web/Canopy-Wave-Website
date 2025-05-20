@@ -3,6 +3,7 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { useRouter } from 'next/router';
+import SlideUp from '@/components/slide';
 
 interface BlogPost {
   id: number;
@@ -20,60 +21,97 @@ export default function BlogDetail() {
 
   const blogPost: BlogPost = {
     id: Number(id),
-    title: "GPU-DRIVEN AI: RESHAPING SERVER ECOSYSTEMS FOR THE FUTURE",
-    date: "MARCH 12, 2023",
+    title: "Joint Blog - Accelerate Enterprise AI",
+    date: "May 20, 2025",
     sections: [
       {
-        title: "1. Explosive Growth in AI Server Demand",
+        title: "1.Introduction",
         content: [
-          "The rapid advancement of Large Language Models (LLM) has caused industries, from health care to manufacturing, mining, research organizations and more to be increasingly reliant on AI. As they race to stay competitive, enterprises are investing heavily in AI infrastructure. According to recent research, the global AI server market is witnessing explosive growth, and year-over-year. Here's an in-depth look at the latest developments that helped to drive this critical emergence.",
-          "The global AI server market has experienced remarkable growth, with revenues increasing from $6.4B in 2021 to $21.9B in 2022, marking an 241.8% growth. Experts' projections forecast the penetration of AI server solutions in diverse healthcare, and edge computing applications has lead to rapid rise sales. Driven by increasing demand for AI capabilities across industries and the need for high-performance computing. New computational paradigm becoming apparent has. In 2024 alone, AI server shipments are expected to rise by 40.5%, heavily driven providers' key components' key components of AI and large."
+          "I am excited to invite Severi Tikkala, CTO of ConfidentialMind, to co-author this blog on the challenges of enabling AI in enterprises and how to navigate through these challenges.",
+          "AI isn't just a buzzword anymore. It's quickly becoming the backbone of modern enterprise strategy—transforming how companies operate, compete, and grow. Whether you're a Fortune 500 company or a fast-scaling startup, AI is no longer optional. It's essential.",
+          "So how do enterprises start with AI? Enterprises can start by using AI as a copilot to automate workflows, detecting anomalies, reaching decisions, and enhancing efficiencies."
         ]
       },
       {
-        title: "2. Technological Breakthroughs in GPU Architecture",
+        title: "2.Where Do Enterprises Start with AI?",
         content: [
-          "NVIDIA's Hopper™ Platform",
-          "NVIDIA's introduction of the H100 GPU, built on the NVIDIA H100™, signifies a paramount breakthrough. With unprecedented performance capabilities, the H100™ GPU established itself as a leading industry standard. The architecture integrates of H100 PCIe Gen5 bandwidth™ anances the former version was of 100GB/s PCIe4, being was withou",
-          "Groundbreaking Innovation in Others",
-          "Process GPU architecture, lire sharing the age with ground-breaking innovations. The introduction oflogies has led to significant improvements in AI computations. OtherAI training and inference tasks."
+          "A practical entry point for many enterprises is to use AI as a copilot, such as automating workflows, detecting anomalies, accelerating decision-making, and enhancing overall efficiency."
         ]
       },
       {
-        title: "3. Key Players and Ecosystem Development",
+        title: "3.Automating Workflows",
         content: [
-          "NVIDIA",
-          "Maintains leads, NVIDIA's architectures integrate AI frameworks likeses to deploy servers at and scale.",
-          "Cloud Providers",
-          "Major cloud providers are choosing high-end GPUs to achieve high-performance computing (HPC) workload AI workloads, accelerating energy efficiency.",
-          "Server Platforms",
-          "Leading server manufacturers leverage custom GPUs, higration™ to cost-effective memory, while security modules provide system resource™ allows + to provision to expand scalability are requirements.",
-          "AI Startups",
-          "Emergingd variousrtups' hardware solutions optimize and AI training with deep computing with applications more leading-edge server models."
+          "Repetitive tasks such as data entry, reporting, internal ticketing, and customer service triage drain valuable time and resources. With AI, enterprises can automate these processes and save time—dramatically. For instance, summarizing lengthy reports using AI can reduce reading time by over 90%.",
+          "By offloading routine work, employees can focus on strategic, high-impact initiatives—the kind that truly moves the business forward."
         ]
       },
       {
-        title: "4. Emerging Trends Shaping the Future",
+        title: "4.Detecting Anomalies",
         content: [
-          "Liquid Cooling Development",
-          "With GPU power densities increasing to 700+ watts/node liquid cooling™ is becoming prevalent. NVIDIA's NVIDIA HGX™ platform fits continuing the technology for range 1000W chips, while flexible and design.",
-          "Edge AI and Hybrid Architecture",
-          "The integration ofedge servers, dynamically allocating resources for GPU-like workloads thr.",
-          "Cloud-Native Development",
-          "Transition tog., NVIDIA's $10 GPU) packaging and more platform support forll cloud development has new AI software interoperability."
+          "AI excels at spotting anomalies across large datasets. Rather than relying on brittle, rule-based validation, AI can learn patterns from historical data and flag outliers or inconsistencies using techniques like fuzzy matching, anomaly detection, and NLP.",
+          "This makes it easier to identify subtle issues—like duplicate records with slight variations or inconsistent formatting—that traditional methods often miss."
         ]
       },
       {
-        title: "5. Market Outlook and Challenges",
+        title: "5.Enabling Faster, Smarter Decisions",
         content: [
-          "While the AI server market thrives, challenges persist.have significantly affect AI build up. The industry facegh-scale areas, while @ BIOS to target GPU's 1,000+ at 20% base cycle.",
-          "In 2025, NVIDIA's is expected to digitally Global Market GPU solution's, creackages that balances cost and latency."
+          "Enterprises today are awash in data but often struggle to derive timely insights. AI addresses this gap with real-time analytics, machine learning, and predictive modeling—turning data into action at unprecedented speed.",
+          "Whether you're forecasting demand, detecting fraud, or optimizing logistics, AI enables faster, more confident decision-making."
         ]
       },
       {
-        title: "Conclusion",
+        title: "6.Scaling Innovation",
         content: [
-          "The future of GPU-powered AI algorithms and ecosystems more infrastructure is entering new horizons across industries. As NVIDIA, AMD, and emerging players push the boundaries of compute density and efficiency, businesses must accomplish a clear focus leading to AI-ready computing. The market remains hardware and power-hungry while also requiring more balanced industry reports."
+          "AI isn't just about optimization. it's a catalyst for innovation. With generative AI, computer vision, and natural language processing, enterprises can explore ideas that were unimaginable just a few years ago.",
+          "From content generation to rapid prototyping, AI empowers teams to iterate, experiment, and scale innovation like never before."
+        ]
+      },
+      {
+        title: "7.But Wait, Can I Just Use ChatGPT or Deepseek?",
+        content: [
+          "That's the tempting path: drop a report into ChatGPT and ask for a summary. But here's the problem, data privacy and control.",
+          "Uploading internal documents to public AI models can inadvertently expose sensitive information. Once shared, your data may be used to train future models, potentially benefitting competitors.",
+          "You want your AI to learn from your business. But you don't want it to share your business."
+        ]
+      },
+      {
+        title: "8.Build Your Own AI",
+        content: [
+          "The solution? Enterprises need to build their own AI systems, ensuring that models learn from proprietary data without sharing it externally.",
+          "Until recently, this required deep infrastructure investments, including training massive LLMs to managing GPU drivers and data center logistics. But the landscape has changed.",
+          "Thanks to open-source LLMs and more accessible compute infrastructure, it's now feasible and smart for enterprises to develop private, high-performance AI solutions."
+        ]
+      },
+      {
+        title: "9.Your Infrastructure. Your Rules.",
+        content: [
+          "To make this real, enterprises need:",
+          "• A trusted partner for AI inference and deployment.",
+          "• A private cloud with dedicated infrastructure.",
+          "• Total control over configuration, access, and security.",
+          "That means no “noisy neighbors,” and no cross-tenant risks. Just your data, your environment, your compliance standards.",
+          "Whether you're meeting SOC 2 or regional data residency laws, a private AI cloud ensures you're covered. You decide where your data lives, and you control what happens to it, eliminating jurisdictional and compliance headaches."
+        ]
+      },
+      {
+        title: "10.AI That's Ready to Go",
+        content: [
+          "That's why Canopy Wave and ConfidentialMind have joined forces, to help enterprises kickstart their AI journey, quickly and securely.",
+          "We're offering a pre-configured Kubernetes environment loaded with pre-qualified LLMs such as Llama-4 and Deepseek, optimized for private deployments. Connecting your enterprise data with LLMs is quick and easy with premade data connectors, data ingestion, and RAG-pipelines.",
+          "You no longer need to worry about setting up infrastructure, managing drivers, or debugging environments. Just plug in and build.",
+          "With Canopy Wave's Instant GPU Private Cloud, you can spin up anywhere from 2 to thousands of H100/H200 GPUs instantly, no long procurement cycles, no supply chain delays, and no wasted engineering hours.",
+          "Whether you're training new models or deploying inference pipelines at scale, we deliver the performance and flexibility you need, out of the box."
+        ]
+      },
+      {
+        title: "11.Why This Partnership Matters",
+        content: [
+          "This collaboration brings together:",
+          "• Canopy Wave's private, high-performance GPU infrastructure",
+          "• ConfidentialMind's expertise in AI systems deployment",
+          "The result? A turnkey enterprise AI solution, without the traditional friction.",
+          "If your team is looking to move fast, stay secure, and scale intelligently, this is the shortcut you've been waiting for.",
+          "We're excited to share more updates, success stories, and technical guides soon. Stay tuned."
         ]
       }
     ]
@@ -82,11 +120,12 @@ export default function BlogDetail() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-16">
         <article className="prose max-w-none">
-          <h1 className="text-3xl font-bold mb-4">{blogPost.title}</h1>
-          <div className="text-gray-400 mb-8">{blogPost.date}</div>
-          
+          <SlideUp>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">{blogPost.title}</h1>
+            <div className="text-gray-400 mb-8">{blogPost.date}</div>
+          </SlideUp>
           {blogPost.sections.map((section, index) => (
             <div key={index} className="mb-8">
               <h2 className="text-xl font-bold mb-4">{section.title}</h2>

@@ -53,12 +53,12 @@ export default function ComputeServicesPage() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    •AI workloads require performing millions (or billions) of mathematical operations simultaneously.
+                                    •AI workloads require performing millions (or billions) of mathematical operations simultaneously
                                 </p>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    •GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently.
+                                    •GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently
                                 </p>
                             </SlideUp>
                             <SlideUp>
@@ -98,7 +98,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/gpus.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4" />
                             <h3 className="text-xl font-bold mb-4">NVIDIA GPUS</h3>
                             <p className="text-gray-600">
-                                Featuring access to NVIDIA HGX H100, HGX H200, with connection of NVLINKS and 400G RoCEV2 or InfiniBand networking.
+                                Featuring access to NVIDIA HGX H100, HGX H200, with connection of NVLINKS and 400G RoCEV2 or InfiniBand networking
                             </p>
                         </div>
 
@@ -107,7 +107,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4" />
                             <h3 className="text-xl font-bold mb-4">MULTI-GPU instances</h3>
                             <p className="text-gray-600">
-                                Train and fine-tune AI models across instance types that best suits your need: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by minute.
+                                Train and fine-tune AI models across instance types that best suits your need: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by minute
                             </p>
                         </div>
 
@@ -116,7 +116,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/cloud.svg" alt="Private Cloud" width={36} height={36} className="mb-4" />
                             <h3 className="text-xl font-bold mb-4">Canopy Wave Private Cloud</h3>
                             <p className="text-gray-600">
-                                Best GPU cluster performance in the industry. With 99.99% up time. Have all you GPUs under same datacenter, your workload and privacy is protected.
+                                Best GPU cluster performance in the industry. With 99.99% up time. Have all you GPUs under same datacenter, your workload and privacy is protected
                             </p>
                         </div>
                     </div>
@@ -136,11 +136,11 @@ export default function ComputeServicesPage() {
                                 <ul className="space-y-4 text-lg text-gray-600">
                                     <li className="flex items-start gap-3">
                                         <span className="text-[#8CC63F] mt-1">▶</span>
-                                        <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine.</p>
+                                        <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine</p>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <span className="text-[#8CC63F] mt-1">▶</span>
-                                        <p>Tailored for modern AI workloads, and are benchmark leaders in training and inference performance.</p>
+                                        <p>Tailored for modern AI workloads, and are benchmark leaders in training and inference performance</p>
                                     </li>
                                 </ul>
                             </SlideUp>
@@ -182,7 +182,7 @@ export default function ComputeServicesPage() {
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">141 GB of HBM3e memory</h3>
-                                        <p className="text-gray-600">Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access.</p>
+                                        <p className="text-gray-600">Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -262,7 +262,7 @@ export default function ComputeServicesPage() {
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">WHY NVIDIA</h2>
                         <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
-                            CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility.
+                            CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility
                         </p>
                     </SlideUp>
                     <SlideUp>
@@ -284,7 +284,7 @@ export default function ComputeServicesPage() {
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">CPU Servers</h2>
                         <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
-                            Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale.
+                            Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale
                         </p>
                         <div className="flex justify-center gap-4 mb-8">
                             <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -302,7 +302,7 @@ export default function ComputeServicesPage() {
                                 <h3 className="text-2xl font-bold">Processor</h3>
                             </div>
                             <p className="text-gray-600 mb-4">
-                                Utilize the latest 6th-Gen Intel Xeon Scalable processors, offering up to 64 vCPUs per instance.
+                                Utilize the latest 6th-Gen Intel Xeon Scalable processors, offering up to 64 vCPUs per instance
                             </p>
                         </div>
 
@@ -312,7 +312,7 @@ export default function ComputeServicesPage() {
                                 <h3 className="text-2xl font-bold">Memory</h3>
                             </div>
                             <p className="text-gray-600 mb-4">
-                                Each instance supports up to 256TB of DIMM, delivering high throughput for compute-intensive workloads.
+                                Each instance supports up to 256TB of DIMM, delivering high throughput for compute-intensive workloads
                             </p>
                         </div>
                     </div>
@@ -326,7 +326,7 @@ export default function ComputeServicesPage() {
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center">Intel Xeon Scalable Processors</h2>
                         <h3 className="text-3xl font-bold mb-6 text-center">(6TH GEN)</h3>
                         <p className="text-gray-600 mb-12 text-center max-w-4xl mx-auto">
-                            The latest generation utilizes a disaggregated design with multiple compute and I/O chiplets interconnected via EMIB (Embedded Multi-Die Interconnect Bridge).
+                            The latest generation utilizes a disaggregated design with multiple compute and I/O chiplets interconnected via EMIB (Embedded Multi-Die Interconnect Bridge)
                         </p>
                     </SlideUp>
 
@@ -337,7 +337,7 @@ export default function ComputeServicesPage() {
                                 <h3 className="text-xl font-bold">Core Count & Frequency</h3>
                             </div>
                             <p className="text-gray-600">
-                                Engineering samples (ES1) of Granite Rapids feature up to 56 cores (1.1-2.7 GHz base/turbo), with production models expected to reach 84-90 cores.
+                                Engineering samples (ES1) of Granite Rapids feature up to 56 cores (1.1-2.7 GHz base/turbo), with production models expected to reach 84-90 cores
                             </p>
                         </div>
 
@@ -347,7 +347,7 @@ export default function ComputeServicesPage() {
                                 <h3 className="text-xl font-bold">Memory Support</h3>
                             </div>
                             <p className="text-gray-600">
-                                12-channel DDR5-6400 with MCR DIMMs, delivering up to 1.6x higher bandwidth than previous generations.
+                                12-channel DDR5-6400 with MCR DIMMs, delivering up to 1.6x higher bandwidth than previous generations
                             </p>
                         </div>
 
@@ -357,7 +357,7 @@ export default function ComputeServicesPage() {
                                 <h3 className="text-xl font-bold">Cache & Interconnect</h3>
                             </div>
                             <p className="text-gray-600">
-                                Each compute tile includes 2MB L2 cache and 4MB L3 cache, while the platform supports PCIe Gen5 (136 lanes) and CXL 2.0 for GPU/FPGA acceleration.
+                                Each compute tile includes 2MB L2 cache and 4MB L3 cache, while the platform supports PCIe Gen5 (136 lanes) and CXL 2.0 for GPU/FPGA acceleration
                             </p>
                         </div>
                     </div>
@@ -373,7 +373,7 @@ export default function ComputeServicesPage() {
                                 <h2 className="text-4xl sm:text-5xl font-bold mb-6">Enhanced GPU cluster performance</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     canopywave uses powerful and efficient CPUs to enable higher utility and performance from GPU clusters.
-                                    Let CPUs handle generalized computing needs, freeing GPUs to focus on high-intensity tasks.
+                                    Let CPUs handle generalized computing needs, freeing GPUs to focus on high-intensity tasks
                                 </p>
                             </SlideUp>
                         </div>
@@ -382,7 +382,7 @@ export default function ComputeServicesPage() {
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Parallel Processing & AI Acceleration</h3>
-                                        <p className="text-gray-600">Modern CPU servers leverage AVX-512 and VNNI (Vector Neural Network Instructions) to boost AI inference throughput by 2-4x compared to older architectures.</p>
+                                        <p className="text-gray-600">Modern CPU servers leverage AVX-512 and VNNI (Vector Neural Network Instructions) to boost AI inference throughput by 2-4x compared to older architectures</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -390,7 +390,7 @@ export default function ComputeServicesPage() {
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Multi-Threading</h3>
-                                        <p className="text-gray-600">Hyper-Threading enables 112 threads on a 56-core CPU, optimizing multi-tasking efficiency for virtualization and HPC workloads.</p>
+                                        <p className="text-gray-600">Hyper-Threading enables 112 threads on a 56-core CPU, optimizing multi-tasking efficiency for virtualization and HPC workloads</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -398,7 +398,7 @@ export default function ComputeServicesPage() {
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Energy Efficiency</h3>
-                                        <p className="text-gray-600">Intel’s Dynamic Voltage and Frequency Scaling (DVFS) and RAPL (Runtime Average Power Limiting) reduce idle power consumption by 30%, while TCO improvements reach 68% through server consolidation (5-10:1 replacement ratio). </p>
+                                        <p className="text-gray-600">Intel’s Dynamic Voltage and Frequency Scaling (DVFS) and RAPL (Runtime Average Power Limiting) reduce idle power consumption by 30%, while TCO improvements reach 68% through server consolidation (5-10:1 replacement ratio) </p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -415,7 +415,7 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl font-bold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking.
+                                    Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking
                                 </p>
                                 <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/pricing'}>
                                     Get pricing
@@ -509,10 +509,10 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl font-bold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control.
+                                    Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control
                                 </p>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptim.
+                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptim
                                 </p>
                             </SlideUp>
                         </div>
@@ -537,7 +537,7 @@ export default function ComputeServicesPage() {
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
-                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract.
+                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>
                     </SlideUp>
                     <SlideUp>

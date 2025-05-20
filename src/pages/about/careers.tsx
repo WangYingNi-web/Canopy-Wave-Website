@@ -74,7 +74,7 @@ export default function Careers() {
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Insurance</h4>
                             <p className="text-gray-600 group-hover:text-white">
-                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees.
+                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
                             </p>
                         </div>
 
@@ -89,7 +89,7 @@ export default function Careers() {
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Catered lunch</h4>
                             <p className="text-gray-600 group-hover:text-white">
-                                Come together and mangia. We provide catered lunches in office and at our data centers from various local vendors.
+                                Come together and mangia. We provide catered lunches in office and at our data centers from various local vendors
                             </p>
                         </div>
 
@@ -118,11 +118,11 @@ export default function Careers() {
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-12 max-w-4xl">
-                            Experience comes in many forms, many skills are transferable, and passion goes a long way. If your experience is this close to what we&apos;re looking for, consider applying. We know that diversity of thought makes for the best problem-solving and creative thinking, which is why we&apos;re dedicated to adding new perspectives to the team and encourage everyone to apply.
+                            Experience comes in many forms, many skills are transferable, and passion goes a long way. If your experience is this close to what we&apos;re looking for, consider applying. We know that diversity of thought makes for the best problem-solving and creative thinking, which is why we&apos;re dedicated to adding new perspectives to the team and encourage everyone to apply
                         </p>
                     </SlideUp>
                     <div className="space-y-4">
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
+                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, DevOp</h3>
@@ -130,7 +130,7 @@ export default function Careers() {
                             <div className="text-gray-600">Santa Clara, CA</div>
                         </div>
 
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
+                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Kubernetes</h3>
@@ -138,7 +138,7 @@ export default function Careers() {
                             <div className="text-gray-600">Remote (United States)</div>
                         </div>
 
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
+                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Infrastructure</h3>
@@ -146,7 +146,7 @@ export default function Careers() {
                             <div className="text-gray-600">Santa Clara, CA</div>
                         </div>
 
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300">
+                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Front-end</h3>
@@ -165,12 +165,15 @@ export default function Careers() {
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8">
-                            Our diverse, expanding team is always looking for new talent. See our open in-office, hybrid, and remote tech jobs—and apply to your perfect fit today.
+                            Our diverse, expanding team is always looking for new talent. See our open in-office, hybrid, and remote tech jobs—and apply to your perfect fit today
                         </p>
                     </SlideUp>
                     <SlideUp>
                         <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-                            <button className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300">
+                            <button
+                                className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300"
+                                onClick={() => window.location.href = '/contact'}
+                            >
                                 Get started
                             </button>
                         </div>

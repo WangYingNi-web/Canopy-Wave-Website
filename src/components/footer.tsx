@@ -43,8 +43,7 @@ export default function Footer() {
                                 <li><IwsLink href="/model-training" className="text-gray-500 hover:text-gray-700">Model Training</IwsLink></li>
                                 <li><IwsLink href="/inference" className="text-gray-500 hover:text-gray-700">Inference</IwsLink></li>
                                 <li><IwsLink href="/rendering" className="text-gray-500 hover:text-gray-700">Rendering</IwsLink></li>
-                                <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-gray-700">Private Cloud</IwsLink></li>
-                                <li><IwsLink href="/gpu-cluster-management" className="text-gray-500 hover:text-gray-700">GPUs Cluster bring up and management</IwsLink></li>
+                                <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-gray-700">Private cloud and GPUs deployment</IwsLink></li>
                                 <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-gray-700">Networking Hardware Solution</IwsLink></li>
                             </ul>
                         </div>
@@ -69,16 +68,13 @@ export default function Footer() {
                         </div>
                         <div>
                             <h3 className="font-semibold mb-4">Resources</h3>
-                            <ul className="space-y-2">
-                                <li><IwsLink href="/documentation" className="text-gray-500 hover:text-gray-700">Documentation</IwsLink></li>
-                                <li><IwsLink href="/status" className="text-gray-500 hover:text-gray-700">Status</IwsLink></li>
-                                <li><IwsLink href="/blog" className="text-gray-500 hover:text-gray-700">Blog</IwsLink></li>
-                                <li><IwsLink href="/events" className="text-gray-500 hover:text-gray-700">Events & Webinars</IwsLink></li>
+                            <ul className="space-y-2 text-sm">
+                                <li><IwsLink href="/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li>
                             </ul>
                         </div>
                         <div>
                             <h3 className="font-semibold mb-4">About</h3>
-                            <ul className="space-y-2">
+                            <ul className="space-y-2 text-sm">
                                 <li><IwsLink href="/about" className="text-gray-500 hover:text-gray-700">About US</IwsLink></li>
                                 <li><IwsLink href="/careers" className="text-gray-500 hover:text-gray-700">Careers</IwsLink></li>
                                 <li><IwsLink href="/newsroom" className="text-gray-500 hover:text-gray-700">Newsroom</IwsLink></li>
@@ -90,7 +86,7 @@ export default function Footer() {
 
 
 
-                <div className="border-t -mx-[100vw] px-[100vw]">
+                <div className="border-t w-full">
                     <div className="flex flex-col sm:flex-row justify-between items-center pt-8">
                         <p className="text-sm text-gray-500 mb-4 sm:mb-0">© 2025 All rights reserved.</p>
                         <div className="flex items-center space-x-6">

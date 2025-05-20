@@ -23,7 +23,7 @@ export default function Careers() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
-                                Not everything we do lives in the cloud.
+                                Not everything we do lives in the cloud
                             </h1>
                         </SlideUp>
                         <SlideUp>

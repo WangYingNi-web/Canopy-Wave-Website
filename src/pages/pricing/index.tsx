@@ -16,7 +16,7 @@ export default function PricingPage() {
                 <SlideUp>
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">Compute</h1>
                     <p className="text-gray-600 mb-8">
-                        Get models to market faster with the latest and greatest NVIDIA chips.
+                        Get models to market faster with the latest and greatest NVIDIA chips
                     </p>
                 </SlideUp>
                 <SlideUp>
