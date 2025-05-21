@@ -25,7 +25,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative text-gray-600">
       <Header />
 
       {/* Hero Section */}
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
             <SlideUp>
               <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
-                About CanopyWave
+                About Us
               </h1>
             </SlideUp>
             <SlideUp>
@@ -80,14 +80,15 @@ export default function AboutPage() {
       <div className="bg-[#F5F9F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6">What we do</h2>
+            <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold text-center mb-6">What we do</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
-              CanopyWave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. We&apos;re a comprehensive platform and strategic partner designed to tackle today—and tomorrow&apos;s—challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads
+              Canopy Wave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. 
+              We&apos;re a comprehensive platform and strategic partner designed to tackle Today – and tomorrow's - challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads
             </p>
           </SlideUp>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
               <div className="w-16 h-16 mx-auto flex justify-center items-center">
                 <Image
@@ -132,7 +133,7 @@ export default function AboutPage() {
                 Servers are located all over the world, as close to users as possible
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className='bg-[#F9F9F9]'>
@@ -160,9 +161,6 @@ export default function AboutPage() {
                     </FadeIn>
 
                   </div>
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </button>
               </div>
 
@@ -177,9 +175,6 @@ export default function AboutPage() {
                     </FadeIn>
 
                   </div>
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </button>
               </div>
 
@@ -190,13 +185,10 @@ export default function AboutPage() {
                       <Image src="/about/key.svg" alt="Value icon" width={36} height={36} />
                     </div>
                     <FadeIn>
-                      <h3 className="text-xl font-semibold">Act Like An Owner</h3>
+                      <h3 className="text-xl font-semibold">Act like an owner</h3>
                     </FadeIn>
 
                   </div>
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </button>
               </div>
 
@@ -207,12 +199,9 @@ export default function AboutPage() {
                       <Image src="/about/experiences.svg" alt="Value icon" width={36} height={36} />
                     </div>
                     <FadeIn>
-                      <h3 className="text-xl font-semibold">Deliver Best-in-Class Experiences</h3>
+                      <h3 className="text-xl font-semibold">Deliver best-in-class experiences</h3>
                     </FadeIn>
                   </div>
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </button>
               </div>
 
@@ -223,12 +212,9 @@ export default function AboutPage() {
                       <Image src="/about/achieve.svg" alt="Value icon" width={36} height={36} />
                     </div>
                     <FadeIn>
-                      <h3 className="text-xl font-semibold">Achieve More Together</h3>
+                      <h3 className="text-xl font-semibold">Achieve more together</h3>
                     </FadeIn>
                   </div>
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </button>
               </div>
             </div>
@@ -244,7 +230,7 @@ export default function AboutPage() {
       <div className="bg-[#F9F9F9] py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-8">Work With Us</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-8">Work with us</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 mb-8">
@@ -252,8 +238,8 @@ export default function AboutPage() {
             </p>
           </SlideUp>
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => window.location.href = '/contact'}>
-              Get started
+            <button className="bg-[#8CC63F] text-white px-6 py-2 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => window.location.href = '/about/careers'}>
+              Careers
             </button>
           </div>
         </div>

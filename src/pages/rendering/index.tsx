@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SolutionsPage() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
 
             <div className="w-full h-[720px] relative mt-[84px]">

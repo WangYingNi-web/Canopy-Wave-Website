@@ -11,7 +11,7 @@ import { useScrollToHash } from '@/hooks/useScrollToHash';
 export default function PlatformPage() {
     useScrollToHash();
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen text-gray-600 relative">
             <Header />
 
             {/* Hero Section */}

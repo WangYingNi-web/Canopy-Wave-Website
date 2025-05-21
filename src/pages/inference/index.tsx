@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SolutionsPage() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
 
             <div className="w-full h-[720px] relative mt-[84px]">
@@ -127,7 +127,7 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">AI-Optimized Storage Solutions</h2>
+                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">AI-optimized storage solutions</h2>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">

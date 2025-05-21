@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SolutionsPage() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
 
             <div className="w-full h-[720px] relative mt-[84px]">
@@ -24,12 +24,13 @@ export default function SolutionsPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
-                                AI Model training
+                                AI model training
                             </h1>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-white text-lg mt-8 text-center">
-                                Get your AI model training done with Canopy Wave!
+                            Flexible and cost-effective
+                            AI training solutions
                             </p>
                         </SlideUp>
                     </div>
@@ -84,7 +85,7 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">High-Performance Networking for AI Workloads</h3>
+                                        <h3 className="font-bold text-xl group-hover:text-white">High-performance networking for AI workloads</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
@@ -105,7 +106,7 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">AI-Ready Storage Architecture</h3>
+                                        <h3 className="font-bold text-xl group-hover:text-white">AI-ready storage architecture</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
@@ -126,7 +127,7 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">Comprehensive Cluster Visibility</h3>
+                                        <h3 className="font-bold text-xl group-hover:text-white">Comprehensive cluster visibility</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
