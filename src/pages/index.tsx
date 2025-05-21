@@ -31,16 +31,26 @@ export default function Index() {
       <Header />
       <div className="w-full">
         {/* Hero Section */}
-        {/* Hero Section */}
         <div className="w-full h-[720px] relative mt-[84px]">
           <Image
             src="/home_banner.svg"
-            alt="cpu-nodes"
+            alt="Home_Banner"
             layout='fill'
             className="object-cover"
             priority
           />
+          <div className="absolute inset-0 z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+              <SlideUp>
+                <h1 className="text-6xl sm:text-8xl font-extrabold text-[#80B224] mt-4 text-center">
+                  Instant GPU <br /> Cluster for <br /> Enterprise AI
+                </h1>
+              </SlideUp>
+
+            </div>
+          </div>
         </div>
+
 
         {/* <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left pl-4">
@@ -136,7 +146,7 @@ export default function Index() {
                   Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                 </p>
                 <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
-                Get started →
+                  Get started →
                 </IwsLink>
               </div>
               <div className="w-full md:w-1/2">

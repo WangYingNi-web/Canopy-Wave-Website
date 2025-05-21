@@ -14,8 +14,8 @@ export default function NetworkingHardwarePage() {
 
             <div className="w-full h-[720px] relative mt-[84px]">
                 <Image
-                    src="/careers.svg"
-                    alt="cpu-nodes"
+                    src="/solutions-banner.svg"
+                    alt="Solutions"
                     layout='fill'
                     className="object-cover"
                     priority
@@ -55,33 +55,33 @@ export default function NetworkingHardwarePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Local Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex mb-6">
                                 <Image
-                                    src="/rendering/performance.svg"
+                                    src="/about/global.svg"
                                     alt="Local Storage"
                                     width={36}
                                     height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 text-center">Networking Without Bottlenecks</h3>
-                            <p className="text-gray-600 text-center">
-                                AI workloads generate massive amounts of data. If your networking stack can’t keep up, performance suffers.
+                            <h3 className="font-bold text-xl mb-4">Networking Without Bottlenecks</h3>
+                            <p className="text-gray-600">
+                                AI workloads generate massive amounts of data. If your networking stack can’t keep up, performance suffers
                             </p>
                         </div>
 
                         {/* Shared Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex mb-6">
                                 <Image
-                                    src="/rendering/low-latency.svg"
+                                    src="/about/achieve.svg"
                                     alt="Shared Storage"
                                     width={36}
                                     height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 text-center">Canopy Wave has invested </h3>
-                            <p className="text-gray-600 text-center">
-                                deeply in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
+                            <h3 className="font-bold text-xl mb-4">Canopy Wave has invested </h3>
+                            <p className="text-gray-600">
+                                Deeply in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
                             </p>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ export default function NetworkingHardwarePage() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
-                                    Everything we offer is tested and used in our own AI clusters, including multi-thousand GPU environments.
+                                    Everything we offer is tested and used in our own AI clusters, including multi-thousand GPU environments
                                 </p>
                             </SlideUp>
                         </div>
@@ -243,8 +243,8 @@ export default function NetworkingHardwarePage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/low-latency.svg"
-                                            alt="Low Latency"
+                                            src="/icon/pricing.svg"
+                                            alt="Pricing"
                                             width={36}
                                             height={36}
                                         />
@@ -318,8 +318,8 @@ export default function NetworkingHardwarePage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/low-latency.svg"
-                                            alt="Low Latency"
+                                            src="/icon/topologies.svg"
+                                            alt="Topologies"
                                             width={36}
                                             height={36}
                                         />
@@ -335,8 +335,8 @@ export default function NetworkingHardwarePage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/computing.svg"
-                                            alt="Computing"
+                                            src="/icon/cables.svg"
+                                            alt="Match cables"
                                             width={36}
                                             height={36}
                                         />
@@ -347,13 +347,12 @@ export default function NetworkingHardwarePage() {
                                 </div>
 
                             </div>
-
                             <div className="border-b-[1px] border-b-gray-200 py-10 p-4">
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/qos.svg"
-                                            alt="QoS"
+                                            src="/icon/configurations.svg"
+                                            alt="Configurations"
                                             width={36}
                                             height={36}
                                         />
@@ -368,8 +367,8 @@ export default function NetworkingHardwarePage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/qos.svg"
-                                            alt="QoS"
+                                            src="/icon/infrastructure.svg"
+                                            alt="Infrastructure"
                                             width={36}
                                             height={36}
                                         />
