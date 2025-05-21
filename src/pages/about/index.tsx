@@ -111,7 +111,7 @@ export default function AboutPage() {
                   width={36}
                   height={36}
                 />
-              </div>  
+              </div>
               <h3 className="text-xl font-semibold text-center mb-4 group-hover:text-white">Adaptable</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
                 Products that are powerful and opinionated by default, but flexible under the hood
@@ -252,7 +252,7 @@ export default function AboutPage() {
             </p>
           </SlideUp>
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300">
+            <button className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => window.location.href = '/contact'}>
               Get started
             </button>
           </div>

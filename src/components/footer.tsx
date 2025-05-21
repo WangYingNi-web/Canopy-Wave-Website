@@ -89,10 +89,10 @@ export default function Footer() {
                 <div className="border-t w-full">
                     <div className="flex flex-col sm:flex-row justify-between items-center pt-8">
                         <p className="text-sm text-gray-500 mb-4 sm:mb-0">© 2025 All rights reserved.</p>
-                        <div className="flex items-center space-x-6">
+                        {/* <div className="flex items-center space-x-6">
                             <IwsLink href="/terms" className="text-sm text-[#80B224] hover:text-[#6a9420]">Terms of Service</IwsLink>
                             <IwsLink href="/privacy" className="text-sm text-[#80B224] hover:text-[#6a9420]">Privacy Policy</IwsLink>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

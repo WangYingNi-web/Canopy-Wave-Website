@@ -78,7 +78,7 @@ export default function Index() {
         {/* Features Section */}
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl sm:text-5xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
               Instantly allocated GPU cluster <br /> with ready-to-go AI stack
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
@@ -121,7 +121,7 @@ export default function Index() {
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
-                <p className="text-gray-600 text-lg mb-6">Cluster at any size of H100 and H200 GPUs NVIDIA Quantum-2 3200Gb/ InfiniBand Networking Non-Blocking InfiniBand Network Design</p>
+                <p className="text-gray-600 text-lg mb-6">H100 extends NVIDIA’s market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
                 <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
@@ -129,7 +129,7 @@ export default function Index() {
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
-                <p className="text-gray-600 text-lg mb-6">Cluster at any size of H100 and H200 GPUs NVIDIA Quantum-2 3200Gb/ InfiniBand Networking Non-Blocking InfiniBand Network Design</p>
+                <p className="text-gray-600 text-lg mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
                 <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-lg font-medium">Learn More →</IwsLink>
               </div>
             </div>
@@ -169,68 +169,25 @@ export default function Index() {
             <h2 className="text-3xl sm:text-5xl font-bold mb-12 text-left">
               Latest CanopyWave News/Events
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* News Card 1 */}
-              <div className="group">
-                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
-                  <div className="absolute inset-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
-                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
+              <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="relative aspect-video w-full overflow-hidden">
+                  <Image
+                    src="/blog.svg"
+                    alt="Blog Image"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h4 className="text-xl font-semibold mb-3">Joint Blog - Accelerate Enterprise AI</h4>
+                  <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
+                  <div className="flex items-center gap-4">
+                    <IwsLink href="/blog" className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors">Article</IwsLink>
+                    <span className="text-gray-500 text-sm">May 20, 2025</span>
                   </div>
-                </div>
-                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
-                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
-                <div className="flex items-center gap-4">
-                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
-                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
-                </div>
-              </div>
-
-              {/* News Card 2 */}
-              <div className="group">
-                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
-                  <div className="absolute inset-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
-                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
-                  </div>
-                </div>
-                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
-                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
-                <div className="flex items-center gap-4">
-                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
-                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
-                </div>
-              </div>
-
-              {/* News Card 3 */}
-              <div className="group">
-                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
-                  <div className="absolute inset-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
-                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
-                  </div>
-                </div>
-                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
-                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
-                <div className="flex items-center gap-4">
-                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
-                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
-                </div>
-              </div>
-
-              {/* News Card 4 */}
-              <div className="group">
-                <div className="relative aspect-[4/3] w-full bg-[#8CC63F] mb-4">
-                  <div className="absolute inset-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-4">INSTANT GPU CLUSTER FOR ENTERPRISE AI</h3>
-                    <p className="text-lg font-medium">READY TO GET STARTED?</p>
-                  </div>
-                </div>
-                <h4 className="text-lg font-medium mb-2">Instant GPU Cluster for Enterprise</h4>
-                <p className="text-gray-600 mb-4">Instant GPU Cluster for Enterprise AI</p>
-                <div className="flex items-center gap-4">
-                  <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded">Article</span>
-                  <span className="text-gray-500 text-sm">Mar 19, 2025</span>
                 </div>
               </div>
             </div>
@@ -238,13 +195,13 @@ export default function Index() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-[#F9F9F9] py-16 sm:py-24">
+        <div className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <SlideUp>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start w-full">
-                  <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-8 py-6 text-base" onClick={() => router.push('/contact')}>Contact Sales</Button>
+                  <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-6 py-6 text-base" onClick={() => router.push('/contact')}>Contact Sales</Button>
                   <Button variant="outline" className="w-full sm:w-auto px-8 py-6 text-base" onClick={() => router.push('/pricing')}>Get Pricing</Button>
                 </div>
               </SlideUp>
