@@ -35,7 +35,7 @@ export default function Careers() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-white text-xl mt-8 text-center max-w-3xl mx-auto leading-relaxed">
-                            Stay informed about the latest developments, important announcements, and industry insights of Canopy Wave
+                                Stay informed about the latest developments, important announcements, and industry insights of Canopy Wave
                             </p>
                         </SlideUp>
                     </div>
@@ -47,28 +47,26 @@ export default function Careers() {
                     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
                         <div className="flex flex-col md:flex-row">
                             {/* 左侧部分 */}
-                            <div className="w-full md:w-1/2 bg-gradient-to-br from-[#8CC63F] to-[#7ab32f] p-12">
-                                <div className="text-white h-full flex flex-col justify-center">
-                                    <h2 className="text-4xl font-bold mb-6 leading-tight">Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption</h2>
-                                    <p className="text-lg opacity-90">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states</p>
-                                </div>
+                            <div className="w-full md:w-1/2 bg-[#F5F9F4] p-12 flex items-center justify-center">
+                                <Image
+                                    src="/confidentialmind-logo.svg"
+                                    alt="ConfidentialMind Logo"
+                                    width={600}
+                                    height={400}
+                                    className="object-contain"
+                                />
                             </div>
 
                             {/* 右侧内容部分 */}
                             <div className="w-full md:w-1/2 p-12 bg-white">
-                                <div className="flex gap-3 mb-6">
-                                    {/* <span className="bg-[#8CC63F] text-white px-4 py-2 rounded-full text-sm font-medium">Webinar</span>
-                                    <span className="bg-[#8CC63F] text-white px-4 py-2 rounded-full text-sm font-medium">On-Demand</span> */}
-                                </div>
-                                <div className="mb-8">
-                                    <p className="text-gray-800 text-lg leading-relaxed">This collaboration brings together Canopy Wave's cutting-edge instant GPU clusters and ConfidentialMind's deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications</p>
-                                </div>
+                                <h2 className="text-3xl font-bold mb-4 leading-tight text-gray-900">Canopy Wave And ConfidentialMind Join Forces To Accelerate Enterprise AI Adoption</h2>
+                                <p className="text-gray-600 text-sm mb-4">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states...</p>
                                 <button
                                     onClick={handleWatchClick}
-                                    className="bg-[#8CC63F] text-white px-8 py-3 rounded-full hover:bg-[#7ab32f] transition-all duration-300 text-lg font-medium flex items-center gap-2 group"
+                                    className="bg-[#8CC63F] text-white px-6 py-2 rounded-full hover:bg-[#7ab32f] transition-all duration-300 text-base font-medium flex items-center gap-2 group"
                                 >
                                     Watch
-                                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
