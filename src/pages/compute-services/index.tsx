@@ -66,7 +66,7 @@ export default function ComputeServicesPage() {
                                     <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/contact'}>
                                         Learn More
                                     </Button>
-                                    <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = 'https://cloud.canopywave.io/'}>
+                                    <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                         Launch GPU Clusters
                                     </Button>
                                 </div>
@@ -296,7 +296,7 @@ export default function ComputeServicesPage() {
                         </div>
                     </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                        <div className="p-6 bg-[#F5F9F4] rounded-lg text-left">
+                        <div className="p-6 bg-[#F5F9F4] rounded-lg text-left border border-gray-200">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} />
                                 <h3 className="text-2xl font-bold">Processor</h3>
@@ -306,7 +306,7 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-6 bg-[#F5F9F4] rounded-lg text-left">
+                        <div className="p-6 bg-[#F5F9F4] rounded-lg text-left border border-gray-200">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} />
                                 <h3 className="text-2xl font-bold">Memory</h3>

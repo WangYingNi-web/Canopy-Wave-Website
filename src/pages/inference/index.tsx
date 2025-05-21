@@ -47,7 +47,7 @@ export default function SolutionsPage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 mb-4 sm:pr-10">
                                     As AI continues to reshape industries, businesses need an inference solution that delivers speed, efficiency, and security—without overcomplicating infrastructure or budgets. At Canopy Wave, we’ve engineered our AI Inference platform to meet these needs head-on, offering a powerful, enterprise-ready solution that’s as flexible as it is reliable
                                 </p>
                             </SlideUp>

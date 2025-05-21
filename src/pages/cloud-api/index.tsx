@@ -401,6 +401,7 @@ export default function PlatformPage() {
                                 <li>Copy the generated API key for use in future API calls</li>
                             </ol>
                             <img src="/cloud/image.png" alt="Cloud Image" className="w-full h-auto mt-4" />
+                            <img src="/cloud/image2.png" alt="Cloud Image2" className="w-full h-auto mt-4" />
                         </div>
                     </section>
 

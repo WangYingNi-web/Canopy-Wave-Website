@@ -227,7 +227,7 @@ export default function NetworkingHardwarePage() {
                         <div className="lg:col-span-6">
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                                    Best Pricing. No Compromise on Quality.
+                                    Best Pricing. No Compromise on Quality
                                 </h2>
                             </SlideUp>
                             <SlideUp>

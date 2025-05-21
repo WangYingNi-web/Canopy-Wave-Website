@@ -64,7 +64,7 @@ export default function IcelandDataCenter() {
                             <SlideUp>
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <button
-                                        onClick={() => window.location.href = '/learn-more'}
+                                        onClick={() => window.location.href = '/contact'}
                                         className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
                                     >
                                         Learn More
