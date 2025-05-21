@@ -14,8 +14,8 @@ export default function SolutionsPage() {
 
             <div className="w-full h-[720px] relative mt-[84px]">
                 <Image
-                    src="/careers.svg"
-                    alt="cpu-nodes"
+                    src="/solutions-banner.svg"
+                    alt="Solutions"
                     layout='fill'
                     className="object-cover"
                     priority

@@ -701,8 +701,8 @@ export default function Header() {
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
                 {/* <li><IwsLink href="/data-center/US" className="block px-2 py-1 hover:bg-gray-100 rounded">US 1</IwsLink></li>
                 <li><IwsLink href="/data-center/canada" className="block px-2 py-1 hover:bg-gray-100 rounded">Canada 1</IwsLink></li> */}
-                <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 1</IwsLink></li>
-                <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded">Iceland 2</IwsLink></li>
+                <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 1</IwsLink></li>
+                <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 2</IwsLink></li>
               </ul>
             )}
           </div>

@@ -14,8 +14,8 @@ export default function SolutionsPage() {
 
             <div className="w-full h-[720px] relative mt-[84px]">
                 <Image
-                    src="/careers.svg"
-                    alt="cpu-nodes"
+                    src="/solutions-banner.svg"
+                    alt="Solutions"
                     layout='fill'
                     className="object-cover"
                     priority
@@ -31,13 +31,6 @@ export default function SolutionsPage() {
                             <p className="text-white text-lg mt-8 text-center">
                                 Performance of bare metal, with the flexibility and simplicity of the cloud
                             </p>
-                        </SlideUp>
-                        <SlideUp>
-                            <div className="sm:flex-row mx-auto flex justify-center mt-6">
-                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/contact'}>
-                                    Try Control Panel
-                                </Button>
-                            </div>
                         </SlideUp>
                     </div>
                 </div>
@@ -63,8 +56,8 @@ export default function SolutionsPage() {
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/rendering/performance.svg"
-                                    alt="High Frame Throughput"
+                                    src="/networking/qos.svg"
+                                    alt="QoS"
                                     width={36}
                                     height={36}
                                 />
@@ -79,15 +72,15 @@ export default function SolutionsPage() {
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/rendering/low-latency.svg"
-                                    alt="Ultra-Low Latency"
+                                    src="/icon/high.svg"
+                                    alt="High"
                                     width={36}
                                     height={36}
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Ultra-low latency</h3>
                             <p className="text-gray-600 text-center">
-                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees.
+                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
                             </p>
                         </div>
 
@@ -95,7 +88,7 @@ export default function SolutionsPage() {
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/rendering/gpus.svg"
+                                    src="/compute/memory.svg"
                                     alt="GPU and CPU-Based Rendering"
                                     width={36}
                                     height={36}
@@ -103,7 +96,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Supports GPU and CPU-based rendering engines</h3>
                             <p className="text-gray-600 text-center">
-                                Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors.
+                                Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors
                             </p>
                         </div>
                     </div>
@@ -275,8 +268,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/low-latency.svg"
-                                            alt="Low Latency"
+                                            src="/rendering/project.svg"
+                                            alt="Project"
                                             width={36}
                                             height={36}
                                         />
@@ -292,8 +285,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/computing.svg"
-                                            alt="Computing"
+                                            src="/rendering/enterprise.svg"
+                                            alt="Enterprise"
                                             width={36}
                                             height={36}
                                         />
@@ -309,8 +302,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/qos.svg"
-                                            alt="QoS"
+                                            src="/rendering/lifecycle.svg"
+                                            alt="Lifecycle"
                                             width={36}
                                             height={36}
                                         />

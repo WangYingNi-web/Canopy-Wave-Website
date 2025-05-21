@@ -14,8 +14,8 @@ export default function SolutionsPage() {
 
             <div className="w-full h-[720px] relative mt-[84px]">
                 <Image
-                    src="/careers.svg"
-                    alt="cpu-nodes"
+                    src="/solutions-banner.svg"
+                    alt="Solutions"
                     layout='fill'
                     className="object-cover"
                     priority
@@ -56,8 +56,8 @@ export default function SolutionsPage() {
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/rendering/performance.svg"
-                                    alt="Local Storage"
+                                    src="/cloud/experts.svg"
+                                    alt="Experts"
                                     width={36}
                                     height={36}
                                 />
@@ -72,8 +72,8 @@ export default function SolutionsPage() {
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/rendering/low-latency.svg"
-                                    alt="Shared Storage"
+                                    src="/icon/high.svg"
+                                    alt="High"
                                     width={36}
                                     height={36}
                                 />
@@ -88,8 +88,8 @@ export default function SolutionsPage() {
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex justify-center mb-6">
                                 <Image
-                                    src="/rendering/gpus.svg"
-                                    alt="Object Storage"
+                                    src="/cloud/software.svg"
+                                    alt="Software"
                                     width={36}
                                     height={36}
                                 />

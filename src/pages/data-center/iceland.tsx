@@ -83,8 +83,8 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Blonduos Section */}
-            <div id='iceland1' className="bg-[#F9F9F9] sm:py-20 py-10">
-                <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div id='iceland1' className="bg-[#F9F9F9]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
                             <SlideUp>
@@ -219,8 +219,8 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Akureyri Section */}
-            <div id='iceland2' className="bg-[#F5F9F4] sm:py-20 py-10">
-                <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div id='iceland2' className="bg-[#F5F9F4]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         {/* Left Content */}
                         <div>
