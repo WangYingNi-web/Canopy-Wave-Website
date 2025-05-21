@@ -12,7 +12,7 @@ import FadeIn from '@/components/FadeIn';
 export default function StorageServices() {
   useScrollToHash();
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen text-gray-600 relative">
       <Header />
 
       <div className="w-full h-[720px] relative mt-[84px]">

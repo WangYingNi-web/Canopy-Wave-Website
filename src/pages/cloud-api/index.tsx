@@ -117,6 +117,11 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 
 export default function PlatformPage() {
     useScrollToHash();
+    const [openSection, setOpenSection] = useState<string | null>('api-key');
+
+    const toggleSection = (section: string) => {
+        setOpenSection(openSection === section ? null : section);
+    };
 
     const apiEndpoints: ApiEndpointProps[] = [
         {
@@ -374,12 +379,12 @@ export default function PlatformPage() {
     ];
 
     return (
-        <main className="min-h-screen bg-[#F9F9F9] relative overflow-x-hidden">
+        <main className="min-h-screen bg-[#F9F9F9] text-gray-600 relative overflow-x-hidden">
             <Header />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40">
                 <SlideUp>
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-8">API Documentation</h1>
+                    <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-8">Manage Cloud via API</h1>
                 </SlideUp>
                 <SlideUp>
                     <p className="text-lg text-gray-600 text-center mb-16">
@@ -387,49 +392,94 @@ export default function PlatformPage() {
                     </p>
                 </SlideUp>
 
-
                 <div className="grid grid-cols-1 gap-8">
                     <section>
-                        <h3 className="font-bold text-3xl">Obtaining an API Key</h3>
-                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
-                            <p className="text-gray-600">
-                                To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io). After registering, follow these steps to generate an API key:
-                            </p>
-                            <ol className="list-decimal list-inside text-gray-600 mt-4">
-                                <li>In the left navigation bar, click on API Keys</li>
-                                <li>Click on New API Key to create a new key</li>
-                                <li>Copy the generated API key for use in future API calls</li>
-                            </ol>
-                            <img src="/cloud/image.png" alt="Cloud Image" className="w-full h-auto mt-4" />
-                            <img src="/cloud/image2.png" alt="Cloud Image2" className="w-full h-auto mt-4" />
-                        </div>
-                    </section>
-
-                    <section>
-                        <h3 className="font-bold text-3xl">Making an API Call</h3>
-                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
-                            <div className="text-gray-600">
-                                <p>To make a request to the API, include an HTTP Bearer header with your API key:</p>
-                                <code className="block bg-gray-100 p-2 rounded mt-2">Authorization: Bearer &lt;YOUR-API-KEY&gt;</code>
-                                <p className="mt-4">If the API call is invalid, an error Reply will be returned. For example:</p>
-                                <pre className="bg-gray-100 p-2 rounded mt-2">
-                                    <code suppressHydrationWarning>
-                                        {JSON.stringify({ error: "<error message>" }, null, 2)}
-                                    </code>
-                                </pre>
+                        <button
+                            onClick={() => toggleSection('api-key')}
+                            className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
+                        >
+                            <h3>Obtaining an API Key</h3>
+                            <svg
+                                className={`w-6 h-6 transform transition-transform ${openSection === 'api-key' ? 'rotate-180' : ''}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        {openSection === 'api-key' && (
+                            <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
+                                <p className="text-gray-600">
+                                    To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io). After registering, follow these steps to generate an API key:
+                                </p>
+                                <ol className="list-decimal list-inside text-gray-600 mt-4">
+                                    <li>In the left navigation bar, click on API Keys</li>
+                                    <li>Click on New API Key to create a new key</li>
+                                    <li>Copy the generated API key for use in future API calls</li>
+                                </ol>
+                                <img src="/cloud/image.png" alt="Cloud Image" className="w-full h-auto mt-4" />
+                                <img src="/cloud/image2.png" alt="Cloud Image2" className="w-full h-auto mt-4" />
                             </div>
-                        </div>
+                        )}
                     </section>
 
                     <section>
-                        <h3 className="font-bold text-3xl">REST API Endpoints</h3>
-                        {apiEndpoints.map((endpoint, index) => (
-                            <ApiEndpoint key={index} {...endpoint} />
-                        ))}
+                        <button
+                            onClick={() => toggleSection('api-call')}
+                            className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
+                        >
+                            <h3>Making an API Call</h3>
+                            <svg
+                                className={`w-6 h-6 transform transition-transform ${openSection === 'api-call' ? 'rotate-180' : ''}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        {openSection === 'api-call' && (
+                            <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
+                                <div className="text-gray-600">
+                                    <p>To make a request to the API, include an HTTP Bearer header with your API key:</p>
+                                    <code className="block bg-gray-100 p-2 rounded mt-2">Authorization: Bearer &lt;YOUR-API-KEY&gt;</code>
+                                    <p className="mt-4">If the API call is invalid, an error Reply will be returned. For example:</p>
+                                    <pre className="bg-gray-100 p-2 rounded mt-2">
+                                        <code suppressHydrationWarning>
+                                            {JSON.stringify({ error: "<error message>" }, null, 2)}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        )}
+                    </section>
+
+                    <section>
+                        <button
+                            onClick={() => toggleSection('api-endpoints')}
+                            className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
+                        >
+                            <h3>REST API Endpoints</h3>
+                            <svg
+                                className={`w-6 h-6 transform transition-transform ${openSection === 'api-endpoints' ? 'rotate-180' : ''}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        {openSection === 'api-endpoints' && (
+                            <div className="mt-4">
+                                {apiEndpoints.map((endpoint, index) => (
+                                    <ApiEndpoint key={index} {...endpoint} />
+                                ))}
+                            </div>
+                        )}
                     </section>
                 </div>
             </div>
-
 
             <Footer />
         </main>

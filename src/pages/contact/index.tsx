@@ -184,7 +184,7 @@ export default function Contact() {
     };
 
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
             <div className="bg-[#F5F9F4] py-12 sm:py-20 mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">

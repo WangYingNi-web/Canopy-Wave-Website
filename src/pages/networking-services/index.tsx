@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 export default function NetworkingServices() {
     useScrollToHash();
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen text-gray-600 relative">
             <Header />
             <div className="w-full h-[720px] relative mt-[84px]">
                 <Image

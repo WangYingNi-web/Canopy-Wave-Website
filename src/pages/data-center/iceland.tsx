@@ -8,7 +8,7 @@ import FadeIn from '@/components/FadeIn';
 
 export default function IcelandDataCenter() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen text-gray-600">
             <Header />
 
             {/* Hero Section */}
@@ -24,7 +24,7 @@ export default function IcelandDataCenter() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-7xl font-bold text-[#8CC63F] mt-16">
-                                Location
+                                Locations in planning
                             </h1>
                         </SlideUp>
                         <SlideUp>
@@ -43,7 +43,7 @@ export default function IcelandDataCenter() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[400px] rounded-lg overflow-hidden">
                             <Image
-                                src="/gpu.svg"
+                                src="/data-center/deploy.svg"
                                 alt="NVIDIA GPU"
                                 layout="fill"
                                 objectFit="cover"
@@ -118,7 +118,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">Sustainable Energy</h3>
+                                            <h3 className="text-xl font-bold mb-2">Sustainable energy</h3>
                                             <p className="text-gray-600">
                                                 Powered entirely by renewable energy sources, including geothermal and hydroelectric power, the campus ensures environmentally friendly operations
                                             </p>
@@ -140,7 +140,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">Energy Efficiency</h3>
+                                            <h3 className="text-xl font-bold mb-2">Energy efficiency</h3>
                                             <p className="text-gray-600">
                                                 The facility boasts a Power Usage Effectiveness (PUE) as low as 1.03, significantly lower than the European average of 1.55, indicating high energy efficiency
                                             </p>
@@ -162,7 +162,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">High Capacity</h3>
+                                            <h3 className="text-xl font-bold mb-2">High capacity</h3>
                                             <p className="text-gray-600">
                                                 With an expansion capability exceeding 100 MW and a fully built-out power capacity of 50 MW, the campus is equipped to handle substantial computational demands
                                             </p>
@@ -183,7 +183,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">Advanced Infrastructure</h3>
+                                            <h3 className="text-xl font-bold mb-2">Advanced infrastructure</h3>
                                             <p className="text-gray-600">
                                                 Designed to Tier 3 standards, the data center includes dual power feeds, indirect air cooling systems, uninterruptible power supplies (UPS), and generators to ensure high availability and reliability
                                             </p>
@@ -257,7 +257,7 @@ export default function IcelandDataCenter() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">100% Renewable Energy</h3>
+                            <h3 className="text-xl font-bold mb-3">100% Renewable energy</h3>
                             <p className="text-gray-600 text-sm">
                                 ICE03 is powered entirely by Iceland's renewable hydro and geothermal energy sources, contributing to its low carbon footprint
                             </p>
@@ -273,7 +273,7 @@ export default function IcelandDataCenter() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Efficient Cooling Systems</h3>
+                            <h3 className="text-xl font-bold mb-3">Efficient cooling systems</h3>
                             <p className="text-gray-600 text-sm">
                                 The facility utilizes both direct air cooling and liquid cooling technologies, achieving a Power Usage Effectiveness (PUE) as low as 1.2
                             </p>
@@ -289,7 +289,7 @@ export default function IcelandDataCenter() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Tier 3 Certification</h3>
+                            <h3 className="text-xl font-bold mb-3">Tier 3 certification</h3>
                             <p className="text-gray-600 text-sm">
                                 The facility meets Tier 3 standards, ensuring high availability and redundancy for mission-critical operations
                             </p>
@@ -305,7 +305,7 @@ export default function IcelandDataCenter() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Global Access</h3>
+                            <h3 className="text-xl font-bold mb-3">Global access</h3>
                             <p className="text-gray-600 text-sm">
                                 Akureyri's position offers low-latency connectivity to major interconnection hubs, including London (17.2 ms), Amsterdam (17.3 ms), and New York (55 ms)
                             </p>

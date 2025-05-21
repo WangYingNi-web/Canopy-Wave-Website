@@ -7,7 +7,7 @@ import SlideUp from '@/components/slide';
 
 export default function Careers() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
             <div className="w-full h-[720px] relative mt-[84px]">
@@ -27,7 +27,7 @@ export default function Careers() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-white text-lg mt-8 text-center">
-                                Our diverse, expanding team is always looking for new talent. See our open in-office, hybrid, and remote tech jobs—and apply to your perfect fit today
+                            Our growing, dynamic team is always looking for fresh talent.Explore our in-office, hybrid, and remote <br /> opportunities across tech roles - and apply to the role that aligns with your skills and goals
                             </p>
                         </SlideUp>
                     </div>
@@ -38,12 +38,12 @@ export default function Careers() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                            We are in the early stage of building an energetic, <br /> fast-moving, and fun team
+                        Even if you don’t meet every <br /> requirement, we’d love to hear from you
                         </h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-16 max-w-4xl">
-                            Canopy Wave is set to enable AI cloud services by deploying and operating hundreds of AI data centers worldwide, close to the end users and enterprises. The team is built by an experienced team with visionary leadership, well funded, and guided by industry leaders
+                        We are building a global network of AI data centers to power next generation cloud services. With hundreds of deployments planned worldwide—strategically located near end users and enterprises—we are positioned to deliver low-latency, high-performance AI infrastructure at scale. Backed by visionary leadership, deep industry expertise, and strong funding, our team is guided by pioneers shaping the future of AI computing
                         </p>
                     </SlideUp>
 
@@ -158,7 +158,7 @@ export default function Careers() {
             </div>
 
             {/* Contact Section */}
-            <div className="bg-[#F9F9F9] py-12 sm:py-24 border border-gray-200">
+            {/* <div className="bg-[#F9F9F9] py-12 sm:py-24 border border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-12">Come build the future with us</h2>
@@ -179,7 +179,7 @@ export default function Careers() {
                         </div>
                     </SlideUp>
                 </div>
-            </div>
+            </div> */}
 
             <Footer />
         </main>

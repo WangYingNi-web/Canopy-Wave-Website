@@ -31,11 +31,11 @@ export default function BlogPage() {
   ];
 
   return (
-    <main className="min-h-screen flex flex-col bg-[#F9F9F9]">
+    <main className="min-h-screen flex flex-col text-gray-600 bg-[#F9F9F9]">
       <Header />
       <div className=" flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-16">
         <SlideUp>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-16">NEWS/EVENTS</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-16">Blog</h1>
         </SlideUp>
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20 md:gap-20">
           <div className="w-full md:w-[650px]">

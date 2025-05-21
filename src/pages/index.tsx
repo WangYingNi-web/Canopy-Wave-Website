@@ -29,7 +29,7 @@ export default function Index() {
   return (
     <main>
       <Header />
-      <div className="w-full">
+      <div className="w-full text-gray-600">
         {/* Hero Section */}
         <div className="w-full h-[720px] relative mt-[84px]">
           <Image
@@ -51,36 +51,14 @@ export default function Index() {
           </div>
         </div>
 
-
-        {/* <div className="flex flex-col sm:flex-row items-center justify-around space-y-4 sm:space-y-0 sm:space-x-8 mt-8 px-4">
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl text-center sm:text-left pl-4">
-            Develop and scale your AI training and inferencing with private GPU cloud
-          </p>
-          <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-            <Button
-              onClick={() => router.push('/control-panel')}
-              className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] hover:bg-[#7ab32f] text-base sm:text-lg"
-            >
-              Try Control Panel
-            </Button>
-            <Button
-              onClick={() => router.push('/contact-sales')}
-              variant="outline"
-              className="w-full sm:w-auto px-6 py-3 border-2 border-white text-black hover:bg-white/10 text-base sm:text-lg"
-            >
-              Contact Sales
-            </Button>
-          </div>
-        </div> */}
-
-
-
         {/* Features Section */}
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
-              Instantly allocated GPU cluster <br /> with ready-to-go AI stack
-            </h2>
+            <SlideUp>
+              <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
+                Instantly allocated GPU cluster <br /> with ready-to-go AI stack
+              </h2>
+            </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
               <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
                 <Image src="/icon/optimized.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
@@ -112,9 +90,11 @@ export default function Index() {
         {/* Products Section */}
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
-              NVIDIA H100 &H200S Are Now Available
-            </h2>
+            <SlideUp>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-center sm:text-left">
+                NVIDIA H100 &H200S <br /> Are Now Available
+              </h2>
+            </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
@@ -141,13 +121,20 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
-                <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-10">Powered By Our Global Network</h2>
-                <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
-                  Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
-                </p>
-                <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
-                  Get started →
-                </IwsLink>
+                <SlideUp>
+                  <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-10">Powered By Our Global Network</h2>
+                </SlideUp>
+                <SlideUp>
+                  <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
+                    Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+                  </p>
+                </SlideUp>
+
+                <SlideUp>
+                  <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
+                    Get started →
+                  </IwsLink>
+                </SlideUp>
               </div>
               <div className="w-full md:w-1/2">
                 <Image
@@ -166,9 +153,11 @@ export default function Index() {
         {/* News Section */}
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-12 text-left">
-              Latest CanopyWave News/Events
-            </h2>
+            <SlideUp>
+              <h2 className="text-3xl sm:text-5xl font-bold mb-12 text-left">
+                Latest CanopyWave Blog: <br /> Insights and Updates from Our Team
+              </h2>
+            </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* News Card 1 */}
               <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">

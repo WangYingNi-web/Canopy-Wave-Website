@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SolutionsPage() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
 
             <div className="w-full h-[720px] relative mt-[84px]">
@@ -24,7 +24,7 @@ export default function SolutionsPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
-                            Canopy Wave Private Cloud and GPUs deployment
+                            Private Cloud and GPUs deployment
                             </h1>
                         </SlideUp>
                         {/* <SlideUp>

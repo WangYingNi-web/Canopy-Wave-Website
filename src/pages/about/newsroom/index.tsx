@@ -15,7 +15,7 @@ export default function Careers() {
     };
 
     return (
-        <main className="min-h-screen relative bg-white">
+        <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
             <div className="w-full h-[720px] relative mt-[84px]">
@@ -30,14 +30,12 @@ export default function Careers() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center leading-tight">
-                                Not everything we do <br className="hidden sm:block" />
-                                lives in the cloud
+                                Newsroom
                             </h1>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-white text-xl mt-8 text-center max-w-3xl mx-auto leading-relaxed">
-                                Connect with our team at a future event or conference and check out our upcoming and on-demand webinars.
-                                We hope to see you there!
+                            Stay informed about the latest developments, important announcements, and industry insights of Canopy Wave
                             </p>
                         </SlideUp>
                     </div>
@@ -59,8 +57,8 @@ export default function Careers() {
                             {/* 右侧内容部分 */}
                             <div className="w-full md:w-1/2 p-12 bg-white">
                                 <div className="flex gap-3 mb-6">
-                                    <span className="bg-[#8CC63F] text-white px-4 py-2 rounded-full text-sm font-medium">Webinar</span>
-                                    <span className="bg-[#8CC63F] text-white px-4 py-2 rounded-full text-sm font-medium">On-Demand</span>
+                                    {/* <span className="bg-[#8CC63F] text-white px-4 py-2 rounded-full text-sm font-medium">Webinar</span>
+                                    <span className="bg-[#8CC63F] text-white px-4 py-2 rounded-full text-sm font-medium">On-Demand</span> */}
                                 </div>
                                 <div className="mb-8">
                                     <p className="text-gray-800 text-lg leading-relaxed">This collaboration brings together Canopy Wave's cutting-edge instant GPU clusters and ConfidentialMind's deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications</p>

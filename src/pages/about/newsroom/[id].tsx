@@ -7,7 +7,7 @@ export default function NewsroomDetail() {
   const { id } = router.query;
 
   return (
-    <main className="min-h-screen bg-[#F9F9F9] relative">
+    <main className="min-h-screen bg-[#F9F9F9] text-gray-600 relative">
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="bg-[#F9F9F9] rounded-lg shadow-xl overflow-hidden my-8">
