@@ -431,7 +431,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Bare metal GPU cluster in private cloud</h2>
+                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Get full visibility of your Cluster</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking
                                 </p>
@@ -442,8 +442,8 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <Image
-                                src="/gpu.svg"
-                                alt="NVIDIA GPU Board"
+                                src="/compute/cluster.svg"
+                                alt="Cluster"
                                 width={600}
                                 height={400}
                                 className="w-full rounded-lg shadow-lg"

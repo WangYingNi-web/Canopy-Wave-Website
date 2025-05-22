@@ -29,18 +29,18 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[720px] relative mt-[84px]">
+      <div className="w-full h-[420px] relative mt-[84px]">
         <Image
-          src="/careers.svg"
+          src="/about/banner.svg"
           alt="cpu-nodes"
           layout='fill'
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
             <SlideUp>
-              <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
+              <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
                 About Us
               </h1>
             </SlideUp>

@@ -12,7 +12,7 @@ export default function SolutionsPage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[720px] relative mt-[84px]">
+            <div className="w-full h-[420px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
@@ -21,9 +21,9 @@ export default function SolutionsPage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[100px]">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-7xl font-bold text-white mt-16 text-center">
+                            <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
                             Private Cloud and GPUs deployment
                             </h1>
                         </SlideUp>
