@@ -15,7 +15,7 @@ export default function ComputeServicesPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[720px] relative mt-[84px]">
+            <div className="w-full h-[720px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/compute/banner.svg"
                     alt="cpu-nodes"
@@ -26,13 +26,13 @@ export default function ComputeServicesPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-7xl font-bold text-[#8CC63F] mt-16">
+                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F] mt-16">
                                 Compute Services
                             </h1>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-lg mt-8">
-                                Canopy Wave uses Virtualization technology to provide world leading performance GPU for AI training & inference
+                                Canopy Wave uses Virtualization technology to provide world leading <br /> performance GPU for AI training & inference
                             </p>
                         </SlideUp>
 
@@ -314,7 +314,7 @@ export default function ComputeServicesPage() {
                         </div>
                     </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                        <div className="p-6 bg-[#F5F9F4] rounded-lg text-left border border-gray-200">
+                        <div className="p-6 bg-[#F5F9F4] text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} />
                                 <h3 className="text-2xl font-bold">Processor</h3>
@@ -324,7 +324,7 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-6 bg-[#F5F9F4] rounded-lg text-left border border-gray-200">
+                        <div className="p-6 bg-[#F5F9F4] text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} />
                                 <h3 className="text-2xl font-bold">Memory</h3>
@@ -466,7 +466,7 @@ export default function ComputeServicesPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* HGX B200 Card */}
-                        <div className="border border-gray-200 p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="border border-gray-200 p-6 bg-[#F9F9F9]  rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX B200</h3>
                                 <Image
@@ -483,7 +483,7 @@ export default function ComputeServicesPage() {
                         </div>
 
                         {/* HGX H200 Card */}
-                        <div className="border border-gray-200 p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="border border-gray-200 p-6 bg-[#F9F9F9]  rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H200</h3>
                                 <Image
@@ -500,7 +500,7 @@ export default function ComputeServicesPage() {
                         </div>
 
                         {/* HGX H100 Card */}
-                        <div className="border border-gray-200 p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="border border-gray-200 p-6 bg-[#F9F9F9]  rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H100</h3>
                                 <Image
