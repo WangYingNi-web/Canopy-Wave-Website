@@ -15,26 +15,28 @@ export default function StorageServices() {
     <main className="min-h-screen text-gray-600 relative">
       <Header />
 
-      <div className="w-full h-[720px] relative mt-[84px]">
+      {/* Hero Section */}
+      <div className="w-full h-[720px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
-          src="/storage/banner.svg"
-          alt="banner"
+          src="/compute/banner.svg"
+          alt="cpu-nodes"
           layout='fill'
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-56">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
             <SlideUp>
-              <h1 className="text-5xl sm:text-7xl font-bold text-[#8CC63F] mb-6">
-                Storage Services<br />
+              <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F] mt-16">
+                Storage Services
               </h1>
             </SlideUp>
-            <SlideUp delay={0.2}>
-              <p className="text-gray-600 text-lg mb-12">
+            <SlideUp>
+              <p className="text-gray-600 text-lg mt-8">
                 Flexible storage architecture for any AI or enterprise workload
               </p>
             </SlideUp>
+
           </div>
         </div>
       </div>
@@ -224,7 +226,7 @@ export default function StorageServices() {
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
                 src="/storage/circuit-board.svg"
-                alt="Circuit Board" 
+                alt="Circuit Board"
                 layout="fill"
                 objectFit="cover"
                 className="filter brightness-90"
@@ -304,13 +306,13 @@ export default function StorageServices() {
                     <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
                   </FadeIn>
                 </div>
-                <FadeIn> 
-                <ul className="text-gray-600 space-y-1 pl-12">
-                  <li className="flex items-start">
-                    <span className="w-4 shrink-0">•</span>
-                    <span>Starts at 10PB with seamless scaling - auto-balances data when adding drives. Triple copies protect against hardware failures (auto-heals in minutes), while multi-site deployment guards against regional disasters</span>
-                  </li>
-                </ul>
+                <FadeIn>
+                  <ul className="text-gray-600 space-y-1 pl-12">
+                    <li className="flex items-start">
+                      <span className="w-4 shrink-0">•</span>
+                      <span>Starts at 10PB with seamless scaling - auto-balances data when adding drives. Triple copies protect against hardware failures (auto-heals in minutes), while multi-site deployment guards against regional disasters</span>
+                    </li>
+                  </ul>
                 </FadeIn>
               </div>
 

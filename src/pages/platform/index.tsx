@@ -26,7 +26,7 @@ export default function PlatformPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-7xl font-bold text-[#8CC63F] mt-16">
+                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F] mt-16">
                                 Platform
                             </h1>
                         </SlideUp>
