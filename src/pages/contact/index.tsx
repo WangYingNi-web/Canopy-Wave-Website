@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from 'react-hot-toast';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import SlideUp from '@/components/slide';
 
 export default function Contact() {
     const [loading, setLoading] = useState(false);
@@ -74,7 +75,7 @@ export default function Contact() {
                 'https://sequoia-paas.canopywave.io/api/v1/send_email',
                 {
                     subject: 'New Contact Form Submission',
-                    recipients: ['wangyingni@canopywave.com', 'liuuisj@canopywave.com'],
+                    recipients: ['andrew.li@canopywave.com', 'yachal@canopywave.com'],
                     body: emailBody
                 },
                 {
@@ -104,7 +105,6 @@ export default function Contact() {
                 throw new Error('Email sending failed');
             }
         } catch (error: any) {
-            console.error('Email sending failed:', error);
             const errorMessage = error.response?.data?.error || "Email sending failed";
             toast.error(errorMessage);
         } finally {
@@ -190,9 +190,12 @@ export default function Contact() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <div className="flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-1/2">
-                            <h1 className="text-5xl sm:text-6xl font-bold text-[#8CC63F] mb-6">Contact Us</h1>
+                        <SlideUp>
+                        <h1 className="text-5xl sm:text-7xl font-bold text-[#8CC63F] mb-6">Contact Us</h1>
+
+                        </SlideUp>
                             <p className="text-base text-gray-700 mb-4 max-w-md">
-                                We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level.
+                                We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level
                             </p>
                             <div className="mt-4">
                                 <h2 className="text-lg font-bold mb-2">TECHNICAL AND ACCOUNT SUPPORT</h2>

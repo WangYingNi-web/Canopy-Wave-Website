@@ -15,7 +15,7 @@ export default function ComputeServicesPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[720px] relative mt-[84px] bg-[#EDF2E4]">
+            <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/compute/banner.svg"
                     alt="cpu-nodes"
@@ -24,9 +24,9 @@ export default function ComputeServicesPage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F] mt-16">
+                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
                                 Compute Services
                             </h1>
                         </SlideUp>
@@ -45,7 +45,7 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-1/2">
-                            <Image src="/compute/power.svg" alt="GPU" width={500} height={400} className="w-full" />
+                            <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-full" />
                         </div>
                         <div className="w-full md:w-1/2">
                             <SlideUp>
@@ -431,7 +431,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Get full visibility of your Cluster</h2>
+                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking
                                 </p>
@@ -442,8 +442,8 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <Image
-                                src="/compute/cluster.svg"
-                                alt="Cluster"
+                                src="/compute/bare-metal.svg"
+                                alt="Bare Metal"
                                 width={600}
                                 height={400}
                                 className="w-full rounded-lg shadow-lg"
@@ -525,7 +525,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
+                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Get full visibility of your Cluster</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control
                                 </p>
@@ -536,8 +536,8 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <Image
-                                src="/gpu.svg"
-                                alt="NVIDIA GPU Board"
+                                src="/compute/cluster.svg"
+                                alt="Cluster"
                                 width={600}
                                 height={400}
                                 className="w-full rounded-lg shadow-lg"

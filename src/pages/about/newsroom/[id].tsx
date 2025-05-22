@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import SlideUp from '@/components/slide';
 
 export default function NewsroomDetail() {
   const router = useRouter();
@@ -12,8 +13,10 @@ export default function NewsroomDetail() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="bg-[#F9F9F9] rounded-lg shadow-xl overflow-hidden my-8">
           <div className="p-8">
+            <SlideUp>
             <h2 className="text-4xl font-extrabold mb-6 text-center">Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states. This collaboration brings together Canopy Wave’s cutting-edge instant GPU clusters and ConfidentialMind’s deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications.</p>
+            </SlideUp>
+            <p className="text-gray-700 mb-6 leading-relaxed">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states. This collaboration brings together Canopy Wave’s cutting-edge instant GPU clusters and ConfidentialMind’s deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications</p>
             <h3 className="text-3xl font-bold mb-4">Unlocking Instant Cloud AI Infrastructure</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">Canopy Wave offers an on-demand, high-performance GPU cloud that scales dynamically, enabling enterprises to access anywhere from as few as 2 H100 GPUs to thousands of H100/H200 GPUs. This flexibility ensures that businesses of all sizes can leverage the power of AI without the burden of procuring and managing their own hardware. Canopy Wave's instant GPU cluster enables enterprises and ISVs to instantly release AI applications on the GPU without the long lead time of procurement, construction, and stack tuning. Canopy Wave provides a full stack of AI drivers with Rail-optimized infrastructure.</p>
             <h3 className="text-3xl font-bold mb-4">Enterprise AI software infrastructure</h3>
@@ -34,7 +37,7 @@ export default function NewsroomDetail() {
 
       <div className="bg-[#F5F9F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
-          <h3 className="text-2xl font-bold mb-4 text-center">For Business Matters</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center">For Business Matters</h3>
           <p className="text-gray-800 mb-4 text-center">Hai Vo-Dinh<br />Senior Director of Product<br />Canopy Wave</p>
           <p className="text-gray-800 mb-4 text-center">Email: hai @ canopywave.com</p>
           <p className="text-gray-800 mb-4 text-center">Website: <a href="https://canopywave.com/" className="text-[#8CC63F]" target="_blank">canopywave.com</a></p>
@@ -42,7 +45,7 @@ export default function NewsroomDetail() {
           <p className="text-gray-800 mb-4 text-center">Email: markku @ confidentialmind.com</p>
           <p className="text-gray-800 mb-4 text-center">Phone: +358 50 302 6510</p>
           <p className="text-gray-800 mb-4 text-center">Website: <a href="http://www.confidentialmind.com" className="text-[#8CC63F]" target="_blank">confidentialmind.com</a></p>
-          <h3 className="text-2xl font-bold mb-4 text-center text-[#8CC63F]">For Media and Generic Inquiries</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-[#8CC63F]">For Media and Generic Inquiries</h3>
           <p className="text-gray-800 mb-4 text-center">Wendy Li<br />Marketing Director</p>
           <p className="text-gray-800 mb-4 text-center">Email: wendy@canopywave.com</p>
           <p className="text-gray-800 text-center">Website: <a href="http://www.canopywave.com" className="text-[#8CC63F]" target="_blank">canopywave.com</a></p>

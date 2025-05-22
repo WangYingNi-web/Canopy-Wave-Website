@@ -7,8 +7,8 @@ export default function Footer() {
     return (
         <footer className="border-t bg-[#F9F9F9]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="flex flex-col sm:flex-row justify-between items-center border-b pb-8">
-                    <div className="flex items-center space-x-4 mb-4 sm:mb-0">
+            <div className="flex flex-col sm:flex-row justify-between items-center border-b pb-8">
+                    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
                         <Image
                             src="/canopy.svg"
                             alt="Canopy Wave Logo"

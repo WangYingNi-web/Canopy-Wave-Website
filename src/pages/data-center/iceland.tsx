@@ -12,7 +12,7 @@ export default function IcelandDataCenter() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[420px] relative mt-[84px]">
+            <div className="w-full h-[450px] relative mt-[84px]">
                 <Image
                     src="/data-center/banner.svg"
                     alt="cpu-nodes"
@@ -315,7 +315,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Where Will You Deploy Section */}
-            <div className="bg-[#F9F9F9] sm:py-20 py-10">
+            <div className="bg-[#F9F9F9] border border-gray-200 sm:py-20 py-10">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div>
                         <SlideUp>

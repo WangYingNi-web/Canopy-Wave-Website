@@ -18,7 +18,7 @@ export default function Careers() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[420px] relative mt-[84px]">
+            <div className="w-full h-[450px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="cpu-nodes"
