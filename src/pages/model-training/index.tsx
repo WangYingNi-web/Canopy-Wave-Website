@@ -23,7 +23,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
+                            <h1 className="text-5xl sm:text-8xl font-extrabold text-white text-center">
                                 AI model training
                             </h1>
                         </SlideUp>
@@ -42,7 +42,7 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
                     <div className="text-center">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Flexible and Cost-Effective <br /> AI Training Solutions</h2>
+                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Flexible and Cost-Effective <br /> AI Training Solutions</h2>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-center max-w-4xl mx-auto mt-10">
@@ -61,7 +61,7 @@ export default function SolutionsPage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                     State-of-the-Art GPU Infrastructure
                                 </h2>
                             </SlideUp>
@@ -145,7 +145,7 @@ export default function SolutionsPage() {
             <div className="bg-[#F9F9F9] border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>
