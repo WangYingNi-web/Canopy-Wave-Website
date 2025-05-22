@@ -45,7 +45,7 @@ export default function NetworkingServices() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                     InfiniBand  Networking
                                 </h2>
                             </SlideUp>
@@ -176,7 +176,7 @@ export default function NetworkingServices() {
             <div className="bg-[#F9F9F9] py-4">
                 <div id="private-cloud" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">RoceV2 Networking</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">RoceV2 Networking</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
@@ -250,7 +250,7 @@ export default function NetworkingServices() {
             <div className="bg-[#F9F9F9] border border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">

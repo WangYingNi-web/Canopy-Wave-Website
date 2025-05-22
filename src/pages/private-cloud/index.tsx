@@ -23,7 +23,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[100px]">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
+                            <h1 className="text-5xl sm:text-8xl font-extrabold text-white text-center">
                             Private Cloud and GPUs deployment
                             </h1>
                         </SlideUp>
@@ -41,7 +41,7 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Purpose-Built AI Infrastructure—Delivered Fast, Powered by Excellence</h2>
+                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Purpose-Built AI Infrastructure—Delivered Fast, Powered by Excellence</h2>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
@@ -62,7 +62,7 @@ export default function SolutionsPage() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 text-center">The World’s Best Infrastructure Experts</h3>
+                            <h3 className="font-extrabold text-xl mb-4 text-center">The World’s Best Infrastructure Experts</h3>
                             <p className="text-gray-600 text-center">
                             At Canopy Wave, you’re not just getting a service—you’re partnering with a team of elite infrastructure professionals who have built and scaled some of the largest AI data centers in the world. We bring deep experience, precision, and efficiency to every deployment
                             </p>
@@ -78,7 +78,7 @@ export default function SolutionsPage() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 text-center">Unmatched Deployment Speed</h3>
+                            <h3 className="font-extrabold text-xl mb-4 text-center">Unmatched Deployment Speed</h3>
                             <p className="text-gray-600 text-center">
                             Need to scale fast? We specialize in turning white space into a production-ready AI cluster in as little as two weeks. Our team has the proven ability to deploy clusters with over 2,000 GPUs in record time—so your AI workloads don't wait
                             </p>
@@ -94,7 +94,7 @@ export default function SolutionsPage() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 text-center">End-to-End Software Stack Ready to Run</h3>
+                            <h3 className="font-extrabold text-xl mb-4 text-center">End-to-End Software Stack Ready to Run</h3>
                             <p className="text-gray-600 text-center">
                             We provide a fully integrated software stack optimized for AI training and inference. When we hand over the cluster, it's not just powered on—it's production-ready. No configuration delays. No extra setup. Just log in and start scaling your AI workloads
                             </p>
@@ -193,7 +193,7 @@ export default function SolutionsPage() {
             <div className="bg-[#F9F9F9] border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>

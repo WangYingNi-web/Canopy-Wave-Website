@@ -41,7 +41,7 @@ export default function NetworkingHardwarePage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
+                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
@@ -63,7 +63,7 @@ export default function NetworkingHardwarePage() {
                                     height={36}
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4">Networking Without Bottlenecks</h3>
+                            <h3 className="font-extrabold text-xl mb-4">Networking Without Bottlenecks</h3>
                             <p className="text-gray-600">
                                 AI workloads generate massive amounts of data. If your networking stack can’t keep up, performance suffers
                             </p>
@@ -95,7 +95,7 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                     Tested in Production, Proven at Scale
                                 </h2>
                             </SlideUp>
@@ -167,7 +167,7 @@ export default function NetworkingHardwarePage() {
             <div className='bg-[#F5F9F4]'>
                 <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32 text-center">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-4">Bare-Metal Performance in a Virtual Environment</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">Bare-Metal Performance in a Virtual Environment</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-6">
@@ -226,7 +226,7 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                     Best Pricing. No Compromise on Quality
                                 </h2>
                             </SlideUp>
@@ -301,7 +301,7 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                     From Equipment to Deployment
                                 </h2>
                             </SlideUp>
@@ -388,7 +388,7 @@ export default function NetworkingHardwarePage() {
             <div className="bg-[#F9F9F9] border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Ready to get started?</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>
