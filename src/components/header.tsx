@@ -5,6 +5,7 @@ import IwsLink from './IwsLink'
 import { useRouter } from 'next/router'
 import { router as routerList } from './../router'
 import { useState, useEffect, useRef } from 'react';
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const router = useRouter()
@@ -118,10 +119,10 @@ export default function Header() {
                 </button>
 
                 {showProducts && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] bg-opacity-90 absolute -left-8 py-6 mt-2 shadow-lg border-t border-gray-100 z-50 min-w-[560px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <div className="grid grid-cols-4 gap-8">
-                        <div>
+                      <div className="grid grid-cols-6 gap-8">
+                        <div className="col-span-3">
                           <h3 className="font-semibold mb-4">
                             <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F] flex items-center">
                               Compute Services
@@ -143,7 +144,7 @@ export default function Header() {
                           <ul className="space-y-2 text-sm">
                             <li>
                               <div>
-                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-gray-900 flex items-center">
+                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-gray-900 flex items-center whitespace-nowrap">
                                   GPU Cloud on-demand Cluster
                                   <svg
                                     className="w-4 h-4 ml-1"
@@ -169,7 +170,7 @@ export default function Header() {
                             <li><IwsLink href="/compute-services#bare-metal" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>Bare Metal GPU Cluster</IwsLink></li>
                           </ul>
                         </div>
-                        <div>
+                        <div className='col-span-3'>
                           <h3 className="font-semibold mb-4">
                             <IwsLink href="/storage-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
                               Storage Services
@@ -196,7 +197,7 @@ export default function Header() {
                             <li><IwsLink href="/storage-services#rdma-storage" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RDMA Storage</IwsLink></li> */}
                           </ul>
                         </div>
-                        <div>
+                        <div className='col-span-3'>
                           <h3 className="font-semibold mb-4">
                             <IwsLink href="/networking-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
                               Networking Services
@@ -220,7 +221,7 @@ export default function Header() {
                             <li><IwsLink href="/networking-services#private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RoceV2 Networking</IwsLink></li>
                           </ul>
                         </div>
-                        <div>
+                        <div className='col-span-3'>
                           <h3 className="font-semibold mb-4">
                             <IwsLink href="/platform" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
                               Platform
@@ -272,7 +273,7 @@ export default function Header() {
                 </button>
 
                 {showSolutions && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] bg-opacity-90 absolute -left-8 py-6 mt-2 shadow-lg border-t border-gray-100 z-50 min-w-[300px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Model Training</IwsLink></li>
@@ -308,7 +309,7 @@ export default function Header() {
                 </button>
 
                 {showPricing && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] bg-opacity-90 absolute -left-8 py-6 mt-2 shadow-lg border-t border-gray-100 z-50 min-w-[280px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA SXM5 H100</IwsLink></li>
@@ -344,34 +345,34 @@ export default function Header() {
                 </button>
 
                 {showDataCenter && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] bg-opacity-90 absolute -left-8 py-6 mt-2 shadow-lg border-t border-gray-100 z-50 min-w-[280px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <ul className="space-y-2 text-sm">
-                            <li>
-                              <div>
-                                <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-gray-900 flex items-center">
-                                  Locations in planning
-                                  <svg
-                                    className="w-4 h-4 ml-1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M19 9l-7 7-7-7"
-                                    />
-                                  </svg>
-                                </IwsLink>
-                                <ul className="pl-4 mt-2 space-y-2">
-                                <li><IwsLink href="/data-center/iceland#iceland1" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
-                                <li><IwsLink href="/data-center/iceland#iceland2" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
+                      <ul className="space-y-2 text-sm">
+                        <li>
+                          <div>
+                            <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-gray-900 flex items-center">
+                              Locations in planning
+                              <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </IwsLink>
+                            <ul className="pl-4 mt-2 space-y-2">
+                              <li><IwsLink href="/data-center/iceland#iceland1" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
+                              <li><IwsLink href="/data-center/iceland#iceland2" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
 
                     </div>
                   </div>
@@ -400,7 +401,7 @@ export default function Header() {
                 </button>
 
                 {showResources && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] bg-opacity-90 absolute -left-8 py-6 mt-2 shadow-lg border-t border-gray-100 z-50 min-w-[280px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/cloud-api" className="text-gray-600 hover:text-gray-900">Manage Cloud Via API</IwsLink></li>
@@ -431,7 +432,7 @@ export default function Header() {
                 </button>
 
                 {showAbout && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] bg-opacity-90 absolute -left-8 py-6 mt-2 shadow-lg border-t border-gray-100 z-50 min-w-[280px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900">About US</IwsLink></li>
@@ -715,12 +716,34 @@ export default function Header() {
               </svg>
             </button>
             {showMobileDataCenter && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                {/* <li><IwsLink href="/data-center/US" className="block px-2 py-1 hover:bg-gray-100 rounded">US 1</IwsLink></li>
-                <li><IwsLink href="/data-center/canada" className="block px-2 py-1 hover:bg-gray-100 rounded">Canada 1</IwsLink></li> */}
-                <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 1</IwsLink></li>
-                <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 2</IwsLink></li>
-              </ul>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <div>
+                      <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-gray-900 flex items-center">
+                        Locations in planning
+                        <svg
+                          className="w-4 h-4 ml-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </IwsLink>
+                      <ul className="pl-4 mt-2 space-y-2">
+                        <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 1</IwsLink></li>
+                        <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 2</IwsLink></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             )}
           </div>
           <div className="relative">
@@ -779,8 +802,22 @@ export default function Header() {
               </ul>
             )}
           </div>
+
+          {/* 新增 Canopy Wave Cloud 按钮 */}
+          <div className="relative">
+            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+              Canopy Wave Cloud
+            </Button>
+          </div>
+          {/* 新增 Contact US 按钮 */}
+          <div className="relative mt-2">
+            <Button variant="outline" className="text-gray-600 hover:text-gray-900 w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+
+              Contact US
+            </Button>
+          </div>
         </div>
       </div>
-    </nav >
+    </nav>
   )
 }

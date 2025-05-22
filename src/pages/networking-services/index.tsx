@@ -13,7 +13,7 @@ export default function NetworkingServices() {
     return (
         <main className="min-h-screen text-gray-600 relative">
             <Header />
-            <div className="w-full h-[720px] relative mt-[84px]">
+            <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/networking/banner.svg"
                     alt="banner"
@@ -22,9 +22,9 @@ export default function NetworkingServices() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F] mt-12">
+                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
                                 Networking<br />
                                 Services
                             </h1>

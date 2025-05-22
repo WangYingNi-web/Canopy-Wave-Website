@@ -12,7 +12,7 @@ export default function NetworkingHardwarePage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[420px] relative mt-[84px]">
+            <div className="w-full h-[450px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"

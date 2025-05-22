@@ -4,13 +4,16 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
+import { useRouter } from 'next/router';
 
 export default function Careers() {
+    const router = useRouter();
+
     return (
         <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[420px] relative mt-[84px]">
+            <div className="w-full h-[450px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="cpu-nodes"
@@ -27,7 +30,7 @@ export default function Careers() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-white text-lg mt-8 text-center">
-                            Our growing, dynamic team is always looking for fresh talent.Explore our in-office, hybrid, and remote <br /> opportunities across tech roles - and apply to the role that aligns with your skills and goals
+                                Our growing, dynamic team is always looking for fresh talent.Explore our in-office, hybrid, and remote <br /> opportunities across tech roles - and apply to the role that aligns with your skills and goals
                             </p>
                         </SlideUp>
                     </div>
@@ -38,12 +41,12 @@ export default function Careers() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                        Even if you don’t meet every <br /> requirement, we’d love to hear from you
+                            Even if you don’t meet every <br /> requirement, we’d love to hear from you
                         </h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-16 max-w-4xl">
-                        We are building a global network of AI data centers to power next generation cloud services. With hundreds of deployments planned worldwide—strategically located near end users and enterprises—we are positioned to deliver low-latency, high-performance AI infrastructure at scale. Backed by visionary leadership, deep industry expertise, and strong funding, our team is guided by pioneers shaping the future of AI computing
+                            We are building a global network of AI data centers to power next generation cloud services. With hundreds of deployments planned worldwide—strategically located near end users and enterprises—we are positioned to deliver low-latency, high-performance AI infrastructure at scale. Backed by visionary leadership, deep industry expertise, and strong funding, our team is guided by pioneers shaping the future of AI computing
                         </p>
                     </SlideUp>
 
@@ -122,7 +125,7 @@ export default function Careers() {
                         </p>
                     </SlideUp>
                     <div className="space-y-4">
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
+                        <div onClick={() => router.push('/about/job-application?position=devops')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, DevOp</h3>
@@ -130,15 +133,14 @@ export default function Careers() {
                             <div className="text-gray-600">Santa Clara, CA</div>
                         </div>
 
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
+                        <div onClick={() => router.push('/about/job-application?position=kubernetes')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Kubernetes</h3>
                             </div>
                             <div className="text-gray-600">Remote (United States)</div>
                         </div>
-
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
+                        <div onClick={() => router.push('/about/job-application?position=infrastructure')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Infrastructure</h3>
@@ -146,7 +148,7 @@ export default function Careers() {
                             <div className="text-gray-600">Santa Clara, CA</div>
                         </div>
 
-                        <div className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200">
+                        <div onClick={() => router.push('/about/job-application?position=frontend')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Front-end</h3>

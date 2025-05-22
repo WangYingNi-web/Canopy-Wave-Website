@@ -29,7 +29,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[420px] relative mt-[84px]">
+      <div className="w-full h-[450px] relative mt-[84px]">
         <Image
           src="/about/banner.svg"
           alt="cpu-nodes"
@@ -199,7 +199,7 @@ export default function AboutPage() {
                       <Image src="/about/experiences.svg" alt="Value icon" width={36} height={36} />
                     </div>
                     <FadeIn>
-                      <h3 className="text-xl font-semibold">Deliver best-in-class experiences</h3>
+                      <h3 className="text-xl font-semibold text-left">Deliver best-in-class experiences</h3>
                     </FadeIn>
                   </div>
                 </button>
@@ -227,7 +227,7 @@ export default function AboutPage() {
       </div>
 
       {/* Contact Section */}
-      <div className="bg-[#F9F9F9] py-16 sm:py-24">
+      <div className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-8">Work with us</h2>

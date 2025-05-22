@@ -16,7 +16,7 @@ export default function StorageServices() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[720px] relative mt-[84px] bg-[#EDF2E4]">
+      <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/compute/banner.svg"
           alt="cpu-nodes"
@@ -25,9 +25,9 @@ export default function StorageServices() {
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
             <SlideUp>
-              <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F] mt-16">
+              <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
                 Storage Services
               </h1>
             </SlideUp>
