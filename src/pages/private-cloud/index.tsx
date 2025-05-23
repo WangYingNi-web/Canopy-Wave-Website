@@ -21,9 +21,9 @@ export default function SolutionsPage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[100px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-extrabold text-white text-center">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
                             Private Cloud and GPUs deployment
                             </h1>
                         </SlideUp>
@@ -60,6 +60,7 @@ export default function SolutionsPage() {
                                     alt="Experts"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-extrabold text-xl mb-4 text-center">The World’s Best Infrastructure Experts</h3>
@@ -76,6 +77,7 @@ export default function SolutionsPage() {
                                     alt="High"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-extrabold text-xl mb-4 text-center">Unmatched Deployment Speed</h3>
@@ -92,6 +94,7 @@ export default function SolutionsPage() {
                                     alt="Software"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-extrabold text-xl mb-4 text-center">End-to-End Software Stack Ready to Run</h3>
@@ -130,6 +133,7 @@ export default function SolutionsPage() {
                                             alt="Low Latency"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -151,6 +155,7 @@ export default function SolutionsPage() {
                                             alt="Computing"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -172,6 +177,7 @@ export default function SolutionsPage() {
                                             alt="QoS"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>

@@ -40,9 +40,9 @@ export default function Index() {
             priority
           />
           <div className="absolute inset-0 z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
               <SlideUp>
-                <h1 className="text-6xl sm:text-8xl font-extrabold text-[#80B224] text-center text-shadow-lg">
+                <h1 className="text-6xl sm:text-7xl font-extrabold text-[#80B224] text-center text-shadow-lg">
                   Instant GPU <br /> Cluster for <br /> Enterprise AI
                 </h1>
               </SlideUp>
@@ -60,23 +60,23 @@ export default function Index() {
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/optimized.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                <Image src="/icon/optimized.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">OPTIMIZED STACK</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Pre-qualified and optimized GPU and AI drivers</p>
               </div>
-              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/resource.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                <Image src="/icon/resource.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">DEDICATED RESOURCE</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Fully secured resources with the flexibility to optimize your stacks and application</p>
               </div>
-              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/high.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                <Image src="/icon/high.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">HIGH PERFORMANCE</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
               </div>
-              <div className="p-6 border border-gray-200 rounded-lg transition-all duration-300 hover:bg-[#8CC63F] group">
-                <Image src="/icon/used.svg" alt="Optimized Stack" width={34} height={34} className="mb-6" />
+              <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                <Image src="/icon/used.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white">PAY ONLY USED</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
               </div>
@@ -98,7 +98,7 @@ export default function Index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray'/>
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">H100 extends NVIDIA’s market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
@@ -106,7 +106,7 @@ export default function Index() {
               </div>
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} />
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H200S</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>

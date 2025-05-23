@@ -31,12 +31,18 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     /* 添加这行来强制使用亮色模式 */
     color-scheme: light;
     overflow-x: hidden;
   }
+
+  .svg-gray {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(10%) saturate(10%) hue-rotate(180deg) brightness(70%) contrast(90%);
+  }
+
   /* img {
     max-width: 100%;
     height: auto;

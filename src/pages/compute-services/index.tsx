@@ -26,7 +26,7 @@ export default function ComputeServicesPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
                                 Compute Services
                             </h1>
                         </SlideUp>
@@ -53,12 +53,12 @@ export default function ComputeServicesPage() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    •AI workloads require performing millions (or billions) of mathematical operations simultaneously
+                                    AI workloads require performing millions (or billions) of mathematical operations simultaneously
                                 </p>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    •GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently
+                                    GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently
                                 </p>
                             </SlideUp>
                             <SlideUp>
@@ -94,8 +94,8 @@ export default function ComputeServicesPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* NVIDIA GPUs Card */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Image src="/compute/gpus.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4" />
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <Image src="/compute/gpus.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-xl font-bold mb-4">NVIDIA GPUs</h3>
                             <p className="text-gray-600">
                                 Featuring access to NVIDIA HGX H100, HGX H200, with connection of NVLINKS and 400G RoCEV2 or InfiniBand networking
@@ -103,8 +103,8 @@ export default function ComputeServicesPage() {
                         </div>
 
                         {/* Multi-GPU Instances Card */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Image src="/compute/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4" />
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <Image src="/compute/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-xl font-bold mb-4">MULTI-GPU instances</h3>
                             <p className="text-gray-600">
                                 Train and fine-tune AI models across instance types that best suits your need: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by minute
@@ -112,8 +112,8 @@ export default function ComputeServicesPage() {
                         </div>
 
                         {/* Private Cloud Card */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <Image src="/compute/cloud.svg" alt="Private Cloud" width={36} height={36} className="mb-4" />
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <Image src="/compute/cloud.svg" alt="Private Cloud" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-xl font-bold mb-4">Canopy Wave private cloud</h3>
                             <p className="text-gray-600">
                                 Best GPU cluster performance in the industry. With 99.99% up time. Have all you GPUs under same datacenter, your workload and privacy is protected
@@ -178,7 +178,7 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2 space-y-8">
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
-                                <Image src="/compute/memory.svg" alt="Memory" width={96} height={96} className="mt-1" />
+                                <Image src="/compute/memory.svg" alt="Memory" width={96} height={96} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">141 GB of HBM3e memory</h3>
@@ -187,7 +187,7 @@ export default function ComputeServicesPage() {
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
-                                <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1" />
+                                <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">4.8 TB/s memory bandwidth</h3>
@@ -197,7 +197,7 @@ export default function ComputeServicesPage() {
 
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
-                                <Image src="/compute/model.svg" alt="Workloads" width={34} height={34} className="mt-1" />
+                                <Image src="/compute/model.svg" alt="Workloads" width={34} height={34} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Optimized for memory-bound workloads, including:</h3>
@@ -234,7 +234,7 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2 space-y-8">
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
-                                <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={44} height={44} className="mt-1" />
+                                <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Higher Accuracy</h3>
@@ -243,7 +243,7 @@ export default function ComputeServicesPage() {
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
-                                <Image src="/compute/performance.svg" alt="Better Performance" width={44} height={44} className="mt-1" />
+                                <Image src="/compute/performance.svg" alt="Better Performance" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Better Performance</h3>
@@ -252,7 +252,7 @@ export default function ComputeServicesPage() {
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
-                                <Image src="/compute/light.svg" alt="Flexible Configurations" width={44} height={44} className="mt-1" />
+                                <Image src="/compute/light.svg" alt="Flexible Configurations" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Flexible Configurations</h3>
@@ -261,7 +261,7 @@ export default function ComputeServicesPage() {
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm pl-8">
-                                <Image src="/compute/compute.svg" alt="Better Access" width={50} height={46} className="mt-1" />
+                                <Image src="/compute/compute.svg" alt="Better Access" width={50} height={46} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Better Access to compute</h3>
@@ -316,7 +316,7 @@ export default function ComputeServicesPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                         <div className="p-6 bg-[#F5F9F4] text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} />
+                                <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} className='svg-gray'/>
                                 <h3 className="text-2xl font-bold">Processor</h3>
                             </div>
                             <p className="text-gray-600 mb-4">
@@ -326,7 +326,7 @@ export default function ComputeServicesPage() {
 
                         <div className="p-6 bg-[#F5F9F4] text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} />
+                                <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} className='svg-gray'/>
                                 <h3 className="text-2xl font-bold">Memory</h3>
                             </div>
                             <p className="text-gray-600 mb-4">
@@ -349,9 +349,9 @@ export default function ComputeServicesPage() {
                     </SlideUp>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} />
+                                <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} className='svg-gray'/>
                                 <h3 className="text-xl font-bold">Core count & frequency</h3>
                             </div>
                             <p className="text-gray-600">
@@ -359,9 +359,9 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} />
+                                <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} className='svg-gray'/>
                                 <h3 className="text-xl font-bold">Memory support</h3>
                             </div>
                             <p className="text-gray-600">
@@ -369,9 +369,9 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} />
+                                <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} className='svg-gray'/>
                                 <h3 className="text-xl font-bold">Cache & interconnect</h3>
                             </div>
                             <p className="text-gray-600">
@@ -466,7 +466,7 @@ export default function ComputeServicesPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* HGX B200 Card */}
-                        <div className="border border-gray-200 p-6 bg-[#F9F9F9]  rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX B200</h3>
                                 <Image
@@ -483,7 +483,7 @@ export default function ComputeServicesPage() {
                         </div>
 
                         {/* HGX H200 Card */}
-                        <div className="border border-gray-200 p-6 bg-[#F9F9F9]  rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H200</h3>
                                 <Image
@@ -500,7 +500,7 @@ export default function ComputeServicesPage() {
                         </div>
 
                         {/* HGX H100 Card */}
-                        <div className="border border-gray-200 p-6 bg-[#F9F9F9]  rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H100</h3>
                                 <Image

@@ -24,7 +24,7 @@ export default function Careers() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[120px]">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
                                 Careers
                             </h1>
                         </SlideUp>
@@ -40,7 +40,7 @@ export default function Careers() {
             <div className="bg-[#F5F9F4] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                             Even if you don’t meet every <br /> requirement, we’d love to hear from you
                         </h2>
                     </SlideUp>
@@ -51,13 +51,14 @@ export default function Careers() {
                     </SlideUp>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-16 h-16">
                                 <Image
                                     src="/about/healthcare.svg"
                                     alt="Healthcare"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Healthcare</h4>
@@ -66,13 +67,14 @@ export default function Careers() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-16 h-16">
                                 <Image
                                     src="/about/insurance.svg"
                                     alt="Insurance"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Insurance</h4>
@@ -81,13 +83,14 @@ export default function Careers() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-16 h-16">
                                 <Image
                                     src="/about/lunch.svg"
                                     alt="Catered Lunch"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Catered lunch</h4>
@@ -96,13 +99,14 @@ export default function Careers() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg hover:bg-[#80B224] group transition-all duration-300">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-16 h-16">
                                 <Image
                                     src="/about/pto.svg"
                                     alt="Flexible PTO"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Flexible PTO</h4>
@@ -117,7 +121,7 @@ export default function Careers() {
             <div className="bg-[#F9F9F9] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Open positions</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Open positions</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-12 max-w-4xl">
@@ -173,7 +177,7 @@ export default function Careers() {
                     <SlideUp>
                         <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                             <button
-                                className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:bg-[#80B224] transition-all duration-300"
+                                className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:shadow-lg  transition-all duration-300"
                                 onClick={() => window.location.href = '/contact'}
                             >
                                 Get started

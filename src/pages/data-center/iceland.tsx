@@ -14,8 +14,8 @@ export default function IcelandDataCenter() {
             {/* Hero Section */}
             <div className="w-full h-[450px] relative mt-[84px]">
                 <Image
-                    src="/data-center/banner.svg"
-                    alt="cpu-nodes"
+                    src="/about/banner.svg"
+                    alt="banner"
                     layout='fill'
                     className="object-cover"
                     priority
@@ -23,12 +23,12 @@ export default function IcelandDataCenter() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-extrabold text-[#8CC63F]">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
                                 Locations in planning
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-lg mt-8">
+                            <p className="text-white text-lg mt-8 text-center">
                                 At canopywave, we’ve set down roots across the globe with these world-class office spaces
                             </p>
                         </SlideUp>
@@ -52,7 +52,7 @@ export default function IcelandDataCenter() {
                         </div>
                         <div className="pl-4">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                     Deploy close to your users — from the dashboard or API
                                 </h2>
                             </SlideUp>
@@ -88,7 +88,7 @@ export default function IcelandDataCenter() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Blonduos</h2>
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Blonduos</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
@@ -114,6 +114,7 @@ export default function IcelandDataCenter() {
                                             alt="Sustainable Energy"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <div>
@@ -136,6 +137,7 @@ export default function IcelandDataCenter() {
                                             alt="Energy Efficiency"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <div>
@@ -158,6 +160,7 @@ export default function IcelandDataCenter() {
                                             alt="High Capacity"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <div>
@@ -179,6 +182,7 @@ export default function IcelandDataCenter() {
                                             alt="Advanced Infrastructure"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <div>
@@ -201,6 +205,7 @@ export default function IcelandDataCenter() {
                                             alt="Certifications"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <div>
@@ -225,7 +230,7 @@ export default function IcelandDataCenter() {
                         {/* Left Content */}
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Akureyri</h2>
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Akureyri</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
@@ -248,13 +253,14 @@ export default function IcelandDataCenter() {
                     {/* Features Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
                         {/* 100% Renewable Energy */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-12 h-12 mb-4">
                                 <Image
                                     src="/data-center/renewable.svg"
                                     alt="Renewable Energy"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="text-xl font-bold mb-3">100% Renewable energy</h3>
@@ -264,13 +270,14 @@ export default function IcelandDataCenter() {
                         </div>
 
                         {/* Efficient Cooling Systems */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-12 h-12 mb-4">
                                 <Image
                                     src="/data-center/cooling.svg"
                                     alt="Cooling Systems"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Efficient cooling systems</h3>
@@ -280,13 +287,14 @@ export default function IcelandDataCenter() {
                         </div>
 
                         {/* Tier 3 Certification */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-12 h-12 mb-4">
                                 <Image
                                     src="/data-center/tier3.svg"
                                     alt="Tier 3 Certification"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Tier 3 certification</h3>
@@ -296,13 +304,14 @@ export default function IcelandDataCenter() {
                         </div>
 
                         {/* Global Access */}
-                        <div className="p-6 bg-white rounded-lg shadow-sm">
+                        <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="w-12 h-12 mb-4">
                                 <Image
                                     src="/data-center/global.svg"
                                     alt="Global Access"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Global access</h3>
@@ -319,7 +328,7 @@ export default function IcelandDataCenter() {
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div>
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
                                 Where will you deploy?
                             </h2>
                         </SlideUp>

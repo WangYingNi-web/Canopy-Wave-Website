@@ -24,7 +24,7 @@ export default function NetworkingServices() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
                                 Networking<br />
                                 Services
                             </h1>
@@ -71,6 +71,7 @@ export default function NetworkingServices() {
                                             alt="Low Latency"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -92,6 +93,7 @@ export default function NetworkingServices() {
                                             alt="Computing"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -113,6 +115,7 @@ export default function NetworkingServices() {
                                             alt="QoS"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -134,6 +137,7 @@ export default function NetworkingServices() {
                                             alt="Tolerance"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -155,6 +159,7 @@ export default function NetworkingServices() {
                                             alt="Scalability"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -184,13 +189,14 @@ export default function NetworkingServices() {
                         </p>
                     </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
                                     src="/compute/fast.svg"
                                     alt="High Performance"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 group-hover:text-white">High Performance</h3>
@@ -199,13 +205,14 @@ export default function NetworkingServices() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
                                     src="/icon/high.svg"
                                     alt="Workloads"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 group-hover:text-white">Excellent for AI Workloads</h3>
@@ -214,13 +221,14 @@ export default function NetworkingServices() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
                                     src="/networking/scalability.svg"
                                     alt="Scalability"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 group-hover:text-white">Scalability</h3>
@@ -229,13 +237,14 @@ export default function NetworkingServices() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg text-center hover:bg-[#80B224] group transition-all duration-300 cursor-pointer">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
                             <div className="flex justify-center mb-6">
                                 <Image
                                     src="/compute/model.svg"
                                     alt="Advanced Congestion Control"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 group-hover:text-white">Advanced Congestion Control</h3>
