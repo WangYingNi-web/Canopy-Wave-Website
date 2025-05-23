@@ -65,7 +65,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">High frame throughput</h3>
                             <p className="text-gray-600 text-center">
-                                for ultra-low-latency access
+                            Achieves thousands of frames per second via distributed parallel processing, ideal for 4K/8K real-time animation and industrial-scale droplet production
                             </p>
                         </div>
 
@@ -82,7 +82,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Ultra-low latency</h3>
                             <p className="text-gray-600 text-center">
-                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
+                            Reduces latency to 0.1ms using lightweight compression (SDVoE) and 6G ULLC technologies, critical for surgical robotics and cloud gaming
                             </p>
                         </div>
 
@@ -99,7 +99,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Supports GPU and CPU-based rendering engines</h3>
                             <p className="text-gray-600 text-center">
-                                Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors
+                            Optimizes hybrid workflows through dynamic task scheduling and CUDA/OpenCL acceleration, enhancing real-time rendering efficiency in gaming and simulations
                             </p>
                         </div>
                     </div>

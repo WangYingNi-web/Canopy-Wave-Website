@@ -126,7 +126,7 @@ export default function Index() {
                 </SlideUp>
                 <SlideUp>
                   <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
-                    Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+                    Our data centers are powered by Canopy Wave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                   </p>
                 </SlideUp>
 

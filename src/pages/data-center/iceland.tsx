@@ -24,7 +24,7 @@ export default function IcelandDataCenter() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
                             <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
-                                Locations in planning
+                                Data Center
                             </h1>
                         </SlideUp>
                         <SlideUp>
@@ -323,6 +323,48 @@ export default function IcelandDataCenter() {
                 </div>
             </div>
 
+            {/* Future Locations Section */}
+            <div id='future-locations' className="bg-[#F9F9F9] py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[400px] w-full">
+                            <Image
+                                src="/about/future-locations.svg"
+                                alt="Future Locations"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-lg"
+                            />
+                        </div>
+                        <div>
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">FUTURE LOCATIONS IN PLANNING</h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-8 text-lg">
+                                    As part of our ongoing growth strategy, we are actively planning additional deployments to support increasing demand and ensure long term scalability
+                                </p>
+                            </SlideUp>
+                            <SlideUp>
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <button
+                                        onClick={() => window.location.href = '/contact'}
+                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                                    >
+                                        Learn More
+                                    </button>
+                                    <button
+                                        onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                                        className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                                    >
+                                        Launch GPU Clusters
+                                    </button>
+                                </div>
+                            </SlideUp>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* Where Will You Deploy Section */}
             <div className="bg-[#F9F9F9] border border-gray-200 sm:py-20 py-10">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">

@@ -289,7 +289,6 @@ export default function JobApplication() {
                                 {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
                             </div>
 
-
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                     Resume/CV <span className="text-red-500">*</span>

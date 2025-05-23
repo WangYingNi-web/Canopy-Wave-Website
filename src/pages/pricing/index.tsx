@@ -42,7 +42,7 @@ export default function PricingPage() {
                                 height={24}
                                 className="mr-8"
                             />
-                            <h3 className="text-xl font-semibold">NVIDIA SXM5 H100</h3>
+                            <h3 className="text-xl font-semibold">NVIDIA HGX H100</h3>
                         </div>
                     </div>
                     <div className="overflow-x-auto">
@@ -99,7 +99,7 @@ export default function PricingPage() {
                                 width={24}
                                 height={24}
                             />
-                            <h3 className="text-xl font-semibold">NVIDIA SXM5 H200</h3>
+                            <h3 className="text-xl font-semibold">NVIDIA HGX H200</h3>
                         </div>
                     </div>
                     <div className="overflow-x-auto">
@@ -238,7 +238,8 @@ export default function PricingPage() {
                 <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative">
                     <div className="flex flex-col lg:flex-row justify-between items-center">
                         <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">Call us for competitive pricing</h2>
+                            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white">Contact us for 
+                            competitive pricing</h2>
                         </div>
                         <div className="hidden lg:block">
                             <Image

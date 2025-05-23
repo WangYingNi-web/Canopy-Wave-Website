@@ -32,7 +32,7 @@ export default function PlatformPage() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-lg mt-8">
-                            Unlock higher performance and usage out of your clusters for faster time to market
+                                Unlock higher performance and usage out of your clusters for faster time to market
                             </p>
                         </SlideUp>
 
@@ -41,50 +41,54 @@ export default function PlatformPage() {
             </div>
 
             <div className="bg-[#F5F9F4]">
-                <div  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-                    <div id="dcim-platform" className="flex flex-col md:flex-row gap-12">
-                        <div className="w-full md:w-1/2 p-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                    {/* 上半部分：左侧标题和右侧图片 */}
+                    <div className="flex flex-col md:flex-row items-start gap-16 mb-6">
+                        {/* 左侧标题部分 */}
+                        <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Canopy DCIM</h2>
-                                <p className="text-gray-600 mb-8 text-lg">
-                                    Empower world-class AI infrastructure with our DCIM (Data  <br /> Center Infrastructure Management) platform—unlocking peak performance and complete operational visibility
+                                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                                    Empower world-class AI infrastructure with our DCIM (Data Center Infrastructure Management) platform—unlocking peak performance and complete operational visibility
                                 </p>
-                            </SlideUp>
-                            <SlideUp>
-                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.location.href = '/compute-services#bare-metal'}>
-                                    Get Full Visibility Of Your Cluster
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white text-base font-medium px-8 py-3" onClick={() => window.location.href = '/compute-services#bare-metal'}>
+                                    GET FULL VISIBILITY OF YOUR CLUSTER
                                 </Button>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8">
-                            <div className="flex items-start gap-4 p-8 rounded-lg shadow-sm">
-                                <Image src="/platform/cookbook.svg" alt="Cookbook" width={96} height={96} className="mt-1 svg-gray" />
-                                <FadeIn>
-                                    <div>
-                                        <h3 className="font-bold mb-2 text-xl">Performance Cookbook</h3>
-                                        <p className="text-gray-600">Image servers, configure BIOS, manage driver versions, and more—all streamlined through our platform. Use our Performance Cookbook to unlock peak performance without the need for manual tuning by engineers</p>
-                                    </div>
-                                </FadeIn>
-                            </div>
-                            <div className="flex items-start gap-4 p-8 rounded-lg shadow-sm">
-                                <Image src="/platform/visualization.svg" alt="Visualization" width={92} height={92} className="mt-1 svg-gray" />
-                                <FadeIn>
-                                    <div>
-                                        <h3 className="font-bold mb-2 text-xl">Visualization</h3>
-                                        <p className="text-gray-600">Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
-                                    </div>
-                                </FadeIn>
+                        {/* 右侧图片部分 */}
+                        <div className="w-full md:w-1/2 -mt-10">
+                            <div>
+                                <Image
+                                    src="/platform/dcim.svg"
+                                    alt="DCIM Dashboard"
+                                    width={600}
+                                    height={400}
+                                    className="w-full"
+                                />
 
                             </div>
-                            <div className="flex items-start gap-4 p-8 rounded-lg shadow-sm">
-                                <Image src="/platform/failures.svg" alt="Detecting Failures" width={92} height={92} className="mt-1 svg-gray" />
-                                <FadeIn>
-                                    <div>
-                                        <h3 className="font-bold mb-2 text-xl">Detecting Failures</h3>
-                                        <p className="text-gray-600">Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime</p>
-                                    </div>
-                                </FadeIn>
-                            </div>
+                        </div>
+                    </div>
+
+                    {/* 下半部分：三个卡片 */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center">
+                            <Image src="/platform/cookbook.svg" alt="Performance Cookbook" width={36} height={36} className="mb-4 svg-gray" />
+                            <h3 className="font-bold text-xl mb-3">Performance Cookbook</h3>
+                            <p className="text-gray-600">Image servers, configure BIOS, manage driver versions, and more—all streamlined through our platform. Use our Performance Cookbook to unlock peak performance without the need for manual tuning by engineers</p>
+                        </div>
+
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center">
+                            <Image src="/platform/visualization.svg" alt="Visualization" width={36} height={36} className="mb-4 svg-gray" />
+                            <h3 className="font-bold text-xl mb-3">Visualization</h3>
+                            <p className="text-gray-600">Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
+                        </div>
+
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center">
+                            <Image src="/platform/failures.svg" alt="Detecting Failures" width={36} height={36} className="mb-4 svg-gray" />
+                            <h3 className="font-bold text-xl mb-3">Detecting Failures</h3>
+                            <p className="text-gray-600">Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime</p>
                         </div>
                     </div>
                 </div>
@@ -93,20 +97,33 @@ export default function PlatformPage() {
 
             {/* GPU Cloud Platform Features */}
             <div className="bg-[#F9F9F9]">
-                <div id='cloud-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <div className="text-center mb-12">
-                        <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">Wave GPU Cloud Platform</h2>
-                        </SlideUp>
-                        <SlideUp>
-                            <p className="text-gray-600 text-lg">Using Canopy Wave cloud platform to get access and manage your MULTI-GPU instances</p>
-                            <Button className="w-full mt-6 sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                Launch GPU Clusters
-                            </Button>
-                        </SlideUp>
-                    </div>
+                <div id='cloud-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-20">
+                    <div className="flex flex-col md:flex-row items-start gap-16">
+                        <div className="w-full md:w-1/2">
+                            <div>
+                                <Image
+                                    src="/platform/cloud-platform.png"
+                                    alt="DCIM Dashboard"
+                                    width={600}
+                                    height={300}
+                                    className="w-full h-auto"
+                                />
+                            </div>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Wave GPU Cloud Platform</h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 text-lg">Using Canopy Wave cloud platform to get access and manage your MULTI-GPU instances</p>
+                                <Button className="w-full mt-6 sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                    Launch GPU Clusters
+                                </Button>
+                            </SlideUp>
+                        </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
                         <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
                             <Image src="/platform/manage.svg" alt="Manage Instances" width={36} height={36} className="mb-4 mx-auto svg-gray" />
                             <h3 className="font-bold text-xl mb-3">Manage Instances</h3>
@@ -138,7 +155,7 @@ export default function PlatformPage() {
             <div className="bg-[#F9F9F9] border border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Do More With Mission Control</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Learn more about platform now</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
