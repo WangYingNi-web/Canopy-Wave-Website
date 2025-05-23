@@ -38,7 +38,7 @@ export default function NetworkingHardwarePage() {
 
             {/* Canopy Wave Networking Hardware Solutions */}
             <div className='bg-[#F5F9F4]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
                             <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
@@ -92,7 +92,7 @@ export default function NetworkingHardwarePage() {
 
             {/* Tested in Production, Proven at Scale */}
             <div className="bg-[#F9F9F9] py-4">
-                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
@@ -170,7 +170,7 @@ export default function NetworkingHardwarePage() {
 
             {/* Bare-Metal Performance in a Virtual Environment*/}
             <div className='bg-[#F5F9F4]'>
-                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32 text-center">
+                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">Bare-Metal Performance in a Virtual Environment</h2>
                     </SlideUp>
@@ -226,7 +226,7 @@ export default function NetworkingHardwarePage() {
 
             {/* Best Pricing. No Compromise on Quality */}
             <div className="bg-[#F9F9F9] py-4">
-                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
@@ -304,7 +304,7 @@ export default function NetworkingHardwarePage() {
 
             {/* From Equipment to Deployment */}
             <div className="bg-[#F5F9F4] py-4">
-                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
@@ -398,7 +398,7 @@ export default function NetworkingHardwarePage() {
 
             {/* Ready to Get Started Section */}
             <div className="bg-[#F9F9F9] border-t border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
