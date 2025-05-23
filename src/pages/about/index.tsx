@@ -32,7 +32,7 @@ export default function AboutPage() {
       <div className="w-full h-[450px] relative mt-[84px]">
         <Image
           src="/about/banner.svg"
-          alt="cpu-nodes"
+          alt="banner"
           layout='fill'
           className="object-cover"
           priority

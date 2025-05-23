@@ -34,7 +34,6 @@ export default function Contact() {
     });
 
     const handleSubmit = async () => {
-        console.log('Form Data:', formData);
         const newErrors = {
             firstName: validateField('firstName', formData.firstName),
             lastName: validateField('lastName', formData.lastName),
@@ -47,12 +46,9 @@ export default function Contact() {
             message: validateField('message', formData.message),
         };
 
-        // 添加日志来查看验证结果
-        console.log('Validation errors:', newErrors);
         setErrors(newErrors);
 
         if (Object.values(newErrors).some(error => error !== '')) {
-            console.log('Form validation failed');
             return;
         }
 

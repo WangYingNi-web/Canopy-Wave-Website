@@ -19,7 +19,7 @@ export default function StorageServices() {
       <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/compute/banner.svg"
-          alt="cpu-nodes"
+          alt="banner"
           layout='fill'
           className="object-cover"
           priority
