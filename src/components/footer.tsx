@@ -50,11 +50,11 @@ export default function Footer() {
                         <div>
                             <h3 className="font-semibold mb-4">Pricing</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><IwsLink href="/pricing/h100" className="text-gray-500 hover:text-gray-700">NVIDIA SXM5 H100</IwsLink></li>
-                                <li><IwsLink href="/pricing/h200" className="text-gray-500 hover:text-gray-700">NVIDIA SXM5 H200</IwsLink></li>
-                                <li><IwsLink href="/pricing/cpu" className="text-gray-500 hover:text-gray-700">Network Shared Storage</IwsLink></li>
-                                <li><IwsLink href="/pricing/cloud-storage" className="text-gray-500 hover:text-gray-700">Object Storage</IwsLink></li>
-                                <li><IwsLink href="/pricing/rdma" className="text-gray-500 hover:text-gray-700">Additional public IP address</IwsLink></li>
+                                <li><IwsLink href="/pricing#H100" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H100</IwsLink></li>
+                                <li><IwsLink href="/pricing#H200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H200</IwsLink></li>
+                                <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Network Shared Storage</IwsLink></li>
+                                <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Object Storage</IwsLink></li>
+                                <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Additional public IP address</IwsLink></li>
                             </ul>
                         </div>
                         <div>
@@ -62,8 +62,10 @@ export default function Footer() {
                             <ul className="space-y-2 text-sm">
                                 {/* <li><IwsLink href="/us1" className="text-gray-500 hover:text-gray-700">US 1</IwsLink></li>
                                 <li><IwsLink href="/canada1" className="text-gray-500 hover:text-gray-700">Canada 1</IwsLink></li> */}
-                                <li><IwsLink href="/iceland" className="text-gray-500 hover:text-gray-700">Iceland 1</IwsLink></li>
-                                <li><IwsLink href="/iceland" className="text-gray-500 hover:text-gray-700">Iceland 2</IwsLink></li>
+                                {/* <li><IwsLink href="/data-center/iceland#iceland1" className="text-gray-500 hover:text-gray-700">Iceland 1</IwsLink></li>
+                                <li><IwsLink href="/data-center/iceland#iceland2" className="text-gray-500 hover:text-gray-700">Iceland 2</IwsLink></li> */}
+                                <li><IwsLink href="/data-center/iceland" className="text-gray-500 hover:text-gray-700">Our Datacenter</IwsLink></li>
+                                <li><IwsLink href="/data-center/iceland#future-locations" className="text-gray-500 hover:text-gray-700">Future locations</IwsLink></li>
                             </ul>
                         </div>
                         <div>

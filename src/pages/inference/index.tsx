@@ -154,7 +154,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Local Storage</h3>
                             <p className="text-gray-600 text-center">
-                                Fast I/O for scratch files
+                            For ultra-low-latency access
                             </p>
                         </div>
 
@@ -171,7 +171,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Shared Storage</h3>
                             <p className="text-gray-600 text-center">
-                                We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
+                            For collaborative workloads
                             </p>
                         </div>
 
@@ -188,7 +188,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Object Storage</h3>
                             <p className="text-gray-600 text-center">
-                                Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors
+                            for scalable and cost-efficient data management
                             </p>
                         </div>
                     </div>
