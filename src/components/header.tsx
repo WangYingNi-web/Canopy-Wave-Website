@@ -459,7 +459,7 @@ export default function Header() {
                 href="/contact"
                 className="text-gray-600 hover:text-gray-900 text-sm font-medium"
               >
-                Contact US
+                Contact Us
               </IwsLink>
             </div>
           </div>
@@ -809,11 +809,11 @@ export default function Header() {
               Canopy Wave Cloud
             </Button>
           </div>
-          {/* 新增 Contact US 按钮 */}
+          {/* 新增 Contact Us 按钮 */}
           <div className="relative mt-2">
             <Button variant="outline" className="text-gray-600 hover:text-gray-900 w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
 
-              Contact US
+              Contact Us
             </Button>
           </div>
         </div>

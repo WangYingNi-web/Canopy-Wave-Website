@@ -176,8 +176,8 @@ export default function ComputeServicesPage() {
                                 </Button>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8">
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                        <div className="w-full md:w-1/2 space-y-8 border-l border-gray-200">
+                            <div className="flex items-start gap-4 p-6 border-b border-gray-200">
                                 <Image src="/compute/memory.svg" alt="Memory" width={96} height={96} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -186,7 +186,7 @@ export default function ComputeServicesPage() {
                                     </div>
                                 </FadeIn>
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                            <div className="flex items-start gap-4 p-6 border-b border-gray-200">
                                 <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -196,7 +196,7 @@ export default function ComputeServicesPage() {
                                 </FadeIn>
 
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                            <div className="flex items-start gap-4 p-6 border-b-[1px] border-b-gray-200">
                                 <Image src="/compute/model.svg" alt="Workloads" width={34} height={34} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -232,8 +232,8 @@ export default function ComputeServicesPage() {
                                 </Button>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8">
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                        <div className="w-full md:w-1/2 space-y-8 border-l border-gray-200">
+                            <div className="flex items-start gap-4 p-6 border-b border-gray-200">
                                 <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -242,7 +242,7 @@ export default function ComputeServicesPage() {
                                     </div>
                                 </FadeIn>
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                            <div className="flex items-start gap-4 p-6 border-b border-gray-200">
                                 <Image src="/compute/performance.svg" alt="Better Performance" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -251,7 +251,7 @@ export default function ComputeServicesPage() {
                                     </div>
                                 </FadeIn>
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm">
+                            <div className="flex items-start gap-4 p-6 border-b border-gray-200">
                                 <Image src="/compute/light.svg" alt="Flexible Configurations" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -260,7 +260,7 @@ export default function ComputeServicesPage() {
                                     </div>
                                 </FadeIn>
                             </div>
-                            <div className="flex items-start gap-4 p-6 rounded-lg shadow-sm pl-8">
+                            <div className="flex items-start gap-4 p-6 border-b border-gray-200">
                                 <Image src="/compute/compute.svg" alt="Better Access" width={50} height={46} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
@@ -564,7 +564,7 @@ export default function ComputeServicesPage() {
                                 Launch GPU instances
                             </Button>
                             <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                Contact sales
+                                Contact Us
                             </Button>
                         </div>
                     </SlideUp>

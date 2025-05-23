@@ -190,7 +190,7 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <SlideUp>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start w-full">
-                  <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-6 py-6 text-base" onClick={() => router.push('/contact')}>Contact Sales</Button>
+                  <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-6 py-6 text-base" onClick={() => router.push('/contact')}>Contact Us</Button>
                   <Button variant="outline" className="w-full sm:w-auto px-8 py-6 text-base" onClick={() => router.push('/pricing')}>Get Pricing</Button>
                 </div>
               </SlideUp>
