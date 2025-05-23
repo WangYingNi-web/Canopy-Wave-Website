@@ -23,7 +23,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-extrabold text-white text-center">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
                             Inference
                             </h1>
                         </SlideUp>
@@ -63,6 +63,7 @@ export default function SolutionsPage() {
                                             alt="Low Latency"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -84,6 +85,7 @@ export default function SolutionsPage() {
                                             alt="Computing"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -105,6 +107,7 @@ export default function SolutionsPage() {
                                             alt="QoS"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -146,6 +149,7 @@ export default function SolutionsPage() {
                                     alt="Local Storage"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Local Storage</h3>
@@ -162,6 +166,7 @@ export default function SolutionsPage() {
                                     alt="Shared Storage"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Shared Storage</h3>
@@ -178,6 +183,7 @@ export default function SolutionsPage() {
                                     alt="Object Storage"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4 text-center">Object Storage</h3>

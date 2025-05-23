@@ -29,7 +29,7 @@ export default function Careers() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[120px]">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-bold text-white text-center leading-tight">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center leading-tight">
                                 Newsroom
                             </h1>
                         </SlideUp>
@@ -44,7 +44,7 @@ export default function Careers() {
 
             <div className="bg-gradient-to-b from-[#F9F9F9] to-white py-4">
                 <div className="max-w-7xl mx-auto px-4 py-16">
-                    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
                         <div className="flex flex-col md:flex-row">
                             {/* 左侧部分 */}
                             <div className="w-full md:w-1/2 bg-[#F5F9F4] p-12 flex items-center justify-center">
@@ -59,7 +59,7 @@ export default function Careers() {
 
                             {/* 右侧内容部分 */}
                             <div className="w-full md:w-1/2 p-12 bg-white">
-                                <h2 className="text-3xl font-bold mb-4 leading-tight text-gray-900">Canopy Wave And ConfidentialMind Join Forces To Accelerate Enterprise AI Adoption</h2>
+                                <h2 className="text-3xl font-extrabold mb-4 leading-tight text-gray-900">Canopy Wave And ConfidentialMind Join Forces To Accelerate Enterprise AI Adoption</h2>
                                 <p className="text-gray-600 text-sm mb-4">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states...</p>
                                 <button
                                     onClick={handleWatchClick}

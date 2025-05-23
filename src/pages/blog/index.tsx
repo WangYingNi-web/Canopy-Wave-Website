@@ -68,27 +68,27 @@ export default function BlogPage() {
             />
           </div>
         </div>
-        <section className="bg-[#8CC63F] rounded-lg shadow-lg p-20 text-center mt-28 relative">
-          <div className="flex justify-between items-center">
-            <div className="text-left">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Explore Our AI Solutions</h2>
-              <Button
-                className="bg-white text-[#8CC63F] hover:bg-gray-100 text-lg px-8 py-3 mt-4"
-                onClick={() => window.location.href = '/contact'}
-              >
-                Contact Us
-              </Button>
+          <section className="bg-[#8CC63F] rounded-lg shadow-lg p-20 text-center mt-28 relative">
+            <div className="flex justify-between items-center">
+              <div className="text-left">
+                <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Explore Our AI Solutions</h2>
+                <Button
+                  className="bg-white text-[#8CC63F] hover:bg-gray-100 text-lg px-8 py-3 mt-4"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  Contact Us
+                </Button>
+              </div>
+              <div className="absolute right-20 top-1/2 transform -translate-y-1/2 hidden lg:block">
+                <Image
+                  src="/boxes.svg"
+                  alt="Boxes illustration"
+                  width={300}
+                  height={200}
+                />
+              </div>
             </div>
-            <div className="absolute right-20 top-1/2 transform -translate-y-1/2 hidden lg:block">
-              <Image
-                src="/boxes.svg"
-                alt="Boxes illustration"
-                width={300}
-                height={200}
-              />
-            </div>
-          </div>
-        </section>
+          </section>
       </div>
 
       <Footer />

@@ -27,7 +27,7 @@ export default function StorageServices() {
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
             <SlideUp>
-              <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
+              <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
                 Storage Services
               </h1>
             </SlideUp>
@@ -67,6 +67,7 @@ export default function StorageServices() {
                   alt="Performance"
                   width={36}
                   height={36}
+                  className='svg-gray'
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Performance Where IT Counts</h3>
@@ -80,6 +81,7 @@ export default function StorageServices() {
                   alt="Scalability"
                   width={36}
                   height={36}
+                  className='svg-gray'
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Scalability For<br />Growth</h3>
@@ -93,6 +95,7 @@ export default function StorageServices() {
                   alt="Collaboration"
                   width={38}
                   height={38}
+                  className='svg-gray'
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Seamlesss Collaboration</h3>
@@ -106,6 +109,7 @@ export default function StorageServices() {
                   alt="Cloud Native"
                   width={36}
                   height={36}
+                  className='svg-gray'
                 />
               </div>
               <h3 className="font-bold text-xl mb-4">Cloud-Native Readiness</h3>
@@ -137,7 +141,7 @@ export default function StorageServices() {
               {/* Performance Optimized Design */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} />
+                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray'/>
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Performance Optimized Design</h3>
                   </FadeIn>
@@ -166,7 +170,7 @@ export default function StorageServices() {
               {/* Security Isolation Mechanism */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} />
+                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray'/>
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Security Isolation Mechanism</h3>
                   </FadeIn>
@@ -192,7 +196,7 @@ export default function StorageServices() {
               {/* HPC Compatibility */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} />
+                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray'/>
                   <FadeIn>
                     <h3 className="text-2xl font-bold">HPC Compatibility</h3>
                   </FadeIn>
@@ -250,7 +254,7 @@ export default function StorageServices() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* File-based */}
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4" />
+              <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-xl font-bold mb-4">File-Based</h3>
               <p className="text-gray-600">
                 All servers see the same folder structure like your local PC. Files stay unique - no duplicates, no matter where they're physically stored
@@ -259,7 +263,7 @@ export default function StorageServices() {
 
             {/* ​​Multi-server file access​ */}
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Image src="/storage/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4" />
+              <Image src="/storage/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-xl font-bold mb-4">Multi-Server File Access</h3>
               <p className="text-gray-600">
                 Multi-server editing with auto-conflict resolution. Works like Google Docs for servers - changes appear instantly everywhere, no version chaos
@@ -268,7 +272,7 @@ export default function StorageServices() {
 
             {/* ​​Distributed Harmony Engine​ */}
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Image src="/storage/harmony-icon.svg" alt="Private Cloud" width={36} height={36} className="mb-4" />
+              <Image src="/storage/harmony-icon.svg" alt="Private Cloud" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-xl font-bold mb-4">Distributed Harmony Engine</h3>
               <p className="text-gray-600">
                 Auto-schedules distributed tasks like traffic lights. Smart scheduling prevents file access conflicts. For example, AI training gets 40% faster with hot data auto-prioritized in fast storage
@@ -301,7 +305,7 @@ export default function StorageServices() {
               {/* Designed for scalability and durability */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} />
+                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray'/>
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
                   </FadeIn>
@@ -320,7 +324,7 @@ export default function StorageServices() {
               {/* Accessed using HTTP-based protocols */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} />
+                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray'/>
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Accessed using HTTP-based protocols</h3>
                   </FadeIn>
@@ -338,7 +342,7 @@ export default function StorageServices() {
               {/* Optimized for unstructured data */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} />
+                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray'/>
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Optimized for unstructured data</h3>
                   </FadeIn>

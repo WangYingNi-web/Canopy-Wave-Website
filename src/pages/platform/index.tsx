@@ -26,7 +26,7 @@ export default function PlatformPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-extrabold text-[#8CC63F]">
+                            <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
                                 Platform
                             </h1>
                         </SlideUp>
@@ -58,7 +58,7 @@ export default function PlatformPage() {
                         </div>
                         <div className="w-full md:w-1/2 space-y-8">
                             <div className="flex items-start gap-4 p-8 rounded-lg shadow-sm">
-                                <Image src="/platform/cookbook.svg" alt="Cookbook" width={96} height={96} className="mt-1" />
+                                <Image src="/platform/cookbook.svg" alt="Cookbook" width={96} height={96} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Performance Cookbook</h3>
@@ -67,7 +67,7 @@ export default function PlatformPage() {
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-8 rounded-lg shadow-sm">
-                                <Image src="/platform/visualization.svg" alt="Visualization" width={92} height={92} className="mt-1" />
+                                <Image src="/platform/visualization.svg" alt="Visualization" width={92} height={92} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Visualization</h3>
@@ -77,7 +77,7 @@ export default function PlatformPage() {
 
                             </div>
                             <div className="flex items-start gap-4 p-8 rounded-lg shadow-sm">
-                                <Image src="/platform/failures.svg" alt="Detecting Failures" width={92} height={92} className="mt-1" />
+                                <Image src="/platform/failures.svg" alt="Detecting Failures" width={92} height={92} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-2 text-xl">Detecting Failures</h3>
@@ -108,25 +108,25 @@ export default function PlatformPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
                         <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/manage.svg" alt="Manage Instances" width={36} height={36} className="mb-4 mx-auto" />
+                            <Image src="/platform/manage.svg" alt="Manage Instances" width={36} height={36} className="mb-4 mx-auto svg-gray" />
                             <h3 className="font-bold text-xl mb-3">Manage Instances</h3>
                             <p className="text-gray-600">Launch, delete or take snapshots of your GPU instances using our GPU cloud platform</p>
                         </div>
 
                         <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/storage.svg" alt="Attached Storage" width={36} height={36} className="mb-4 mx-auto" />
+                            <Image src="/platform/storage.svg" alt="Attached Storage" width={36} height={36} className="mb-4 mx-auto svg-gray" />
                             <h3 className="font-bold text-xl mb-3">Attached Storage</h3>
                             <p className="text-gray-600">Attached or unmount Block Volumes storage, Shared File System storage and object storage all in the GPU cloud platform</p>
                         </div>
 
                         <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/security.svg" alt="Security Group" width={36} height={36} className="mb-4 mx-auto" />
+                            <Image src="/platform/security.svg" alt="Security Group" width={36} height={36} className="mb-4 mx-auto svg-gray" />
                             <h3 className="font-bold text-xl mb-3">Set security group</h3>
                             <p className="text-gray-600">Generate, add, delete or change your SSH or API keys. Set different security groups and how to work with your team</p>
                         </div>
 
                         <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/billing.svg" alt="Access to Billings" width={36} height={36} className="mb-4 mx-auto" />
+                            <Image src="/platform/billing.svg" alt="Access to Billings" width={36} height={36} className="mb-4 mx-auto svg-gray" />
                             <h3 className="font-bold text-xl mb-3">Access to billings</h3>
                             <p className="text-gray-600">View and pay your bills all in the one place</p>
                         </div>

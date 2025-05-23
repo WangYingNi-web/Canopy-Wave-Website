@@ -21,9 +21,9 @@ export default function NetworkingHardwarePage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[100px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
+                            <h1 className="text-6xl sm:text-7xl font-bold text-white text-center">
                                 Networking Hardware Solution
                             </h1>
                         </SlideUp>
@@ -61,6 +61,7 @@ export default function NetworkingHardwarePage() {
                                     alt="Local Storage"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-extrabold text-xl mb-4">Networking Without Bottlenecks</h3>
@@ -77,6 +78,7 @@ export default function NetworkingHardwarePage() {
                                     alt="Shared Storage"
                                     width={36}
                                     height={36}
+                                    className='svg-gray'
                                 />
                             </div>
                             <h3 className="font-bold text-xl mb-4">Canopy Wave has invested </h3>
@@ -116,6 +118,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Low Latency"
                                             width={36}
                                             height={36}
+                                            className="svg-gray"
                                         />
                                     </div>
                                     <FadeIn>
@@ -133,6 +136,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Computing"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -150,6 +154,7 @@ export default function NetworkingHardwarePage() {
                                             alt="QoS"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -247,6 +252,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Pricing"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -264,6 +270,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Computing"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -281,6 +288,7 @@ export default function NetworkingHardwarePage() {
                                             alt="QoS"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -322,6 +330,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Topologies"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -339,6 +348,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Match cables"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -355,6 +365,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Configurations"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>
@@ -371,6 +382,7 @@ export default function NetworkingHardwarePage() {
                                             alt="Infrastructure"
                                             width={36}
                                             height={36}
+                                            className='svg-gray'
                                         />
                                     </div>
                                     <FadeIn>

@@ -40,7 +40,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
             <SlideUp>
-              <h1 className="text-5xl sm:text-8xl font-bold text-white text-center">
+              <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
                 About Us
               </h1>
             </SlideUp>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <div className="bg-[#F5F9F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold text-center mb-6">What we do</h2>
+            <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold text-center mb-6">What we do</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className='pt-4'>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6">Our Values</h2>
+                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Our Values</h2>
               </SlideUp>
               <SlideUp>
                 <p className="text-gray-600 mb-8">
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                   <div className="flex items-center gap-8">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                      <Image src="/about/curious.svg" alt="Value icon" width={36} height={36} />
+                      <Image src="/about/curious.svg" alt="Value icon" width={36} height={36} className='svg-gray' />
                     </div>
                     <FadeIn>
                       <h3 className="text-xl font-semibold">Be curious at your core</h3>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                   <div className="flex items-center gap-8">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                      <Image src="/about/employees.svg" alt="Value icon" width={36} height={36} />
+                      <Image src="/about/employees.svg" alt="Value icon" width={36} height={36} className='svg-gray' />
                     </div>
                     <FadeIn>
                       <h3 className="text-xl font-semibold">Empower employees</h3>
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                   <div className="flex items-center gap-8">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                      <Image src="/about/key.svg" alt="Value icon" width={36} height={36} />
+                      <Image src="/about/key.svg" alt="Value icon" width={36} height={36} className='svg-gray' />
                     </div>
                     <FadeIn>
                       <h3 className="text-xl font-semibold">Act like an owner</h3>
@@ -196,7 +196,7 @@ export default function AboutPage() {
                 <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                   <div className="flex items-center gap-8">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                      <Image src="/about/experiences.svg" alt="Value icon" width={36} height={36} />
+                      <Image src="/about/experiences.svg" alt="Value icon" width={36} height={36} className='svg-gray' />
                     </div>
                     <FadeIn>
                       <h3 className="text-xl font-semibold text-left">Deliver best-in-class experiences</h3>
@@ -209,7 +209,7 @@ export default function AboutPage() {
                 <button className="w-full py-6 flex items-center justify-between gap-8 hover:text-[#80B224] transition-colors">
                   <div className="flex items-center gap-8">
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                      <Image src="/about/achieve.svg" alt="Value icon" width={36} height={36} />
+                      <Image src="/about/achieve.svg" alt="Value icon" width={36} height={36} className='svg-gray' />
                     </div>
                     <FadeIn>
                       <h3 className="text-xl font-semibold">Achieve more together</h3>
@@ -230,7 +230,7 @@ export default function AboutPage() {
       <div className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-8">Work with us</h2>
+            <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 sm:mb-8">Work with us</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 mb-8">
