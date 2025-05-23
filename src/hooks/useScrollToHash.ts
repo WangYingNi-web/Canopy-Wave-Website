@@ -11,7 +11,7 @@ export const useScrollToHash = () => {
         setTimeout(() => {
           const element = document.querySelector(hash);
           if (element) {
-            const headerOffset = 100; // 头部导航的高度
+            const headerOffset = 70; // 头部导航的高度
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

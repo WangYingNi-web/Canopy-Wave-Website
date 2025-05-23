@@ -41,7 +41,7 @@ export default function PlatformPage() {
             </div>
 
             <div className="bg-[#F5F9F4]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                <div id='dcim-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     {/* 上半部分：左侧标题和右侧图片 */}
                     <div className="flex flex-col md:flex-row items-start gap-16 mb-6">
                         {/* 左侧标题部分 */}
@@ -97,7 +97,7 @@ export default function PlatformPage() {
 
             {/* GPU Cloud Platform Features */}
             <div className="bg-[#F9F9F9]">
-                <div id='cloud-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-20">
+                <div id='cloud-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row items-start gap-16">
                         <div className="w-full md:w-1/2">
                             <div>
@@ -151,7 +151,7 @@ export default function PlatformPage() {
                 </div>
             </div>
 
-            {/* Mission Control CTA Section */}
+            {/* Learn more about platform now Section */}
             <div className="bg-[#F9F9F9] border border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
                     <SlideUp>

@@ -42,7 +42,7 @@ export default function ComputeServicesPage() {
 
             {/* Highly Performant Section */}
             <div className="bg-[#F5F9F4]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-1/2">
                             <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-full" />
@@ -79,7 +79,7 @@ export default function ComputeServicesPage() {
 
             {/* GPU Cluster Features Section */}
             <div id="gpu-cloud" className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="text-center mb-16">
                         <SlideUp>
                             <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">Canopy Wave on-demand GPU Cluster</h2>
@@ -126,7 +126,7 @@ export default function ComputeServicesPage() {
 
             {/* Leadership Section */}
             <div className='bg-[#F5F9F4]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
@@ -161,7 +161,7 @@ export default function ComputeServicesPage() {
 
             {/* H200 Section */}
             <div className="bg-[#F9F9F9]">
-                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-24">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
@@ -217,7 +217,7 @@ export default function ComputeServicesPage() {
 
             {/* NVIDIA HGX H100 Section */}
             <div className="bg-[#F5F9F4]">
-                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
@@ -276,7 +276,7 @@ export default function ComputeServicesPage() {
 
             {/* Why NVIDIA Section */}
             <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">Why NVIDIA</h2>
                         <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
@@ -298,7 +298,7 @@ export default function ComputeServicesPage() {
 
             {/* CPU Servers Section */}
             <div className='bg-[#F5F9F4]'>
-                <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
+                <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">CPU Nodes</h2>
                         <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
@@ -339,7 +339,7 @@ export default function ComputeServicesPage() {
 
             {/* Intel Xeon Processors Section */}
             <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-center">Intel Xeon Scalable Processors</h2>
                         <h3 className="text-3xl font-extrabold mb-6 text-center">(6TH Gen)</h3>
@@ -384,7 +384,7 @@ export default function ComputeServicesPage() {
 
             {/* Enhanced GPU Cluster Performance Section */}
             <div className="bg-[#F5F9F4]">
-                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
@@ -427,7 +427,7 @@ export default function ComputeServicesPage() {
 
             {/* Bare Metal GPU Section */}
             <div className='bg-[#F9F9F9]'>
-                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
@@ -455,7 +455,7 @@ export default function ComputeServicesPage() {
 
             {/* NVIDIA GPU Products Section */}
             <div className='bg-[#F5F9F4]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-center">Get the latest and greatest NVIDIA GPUs</h2>
                         <h3 className="text-4xl sm:text-5xl font-extrabold mb-6 text-center">Managed and tuned by world leading infrastructure team</h3>
@@ -521,7 +521,7 @@ export default function ComputeServicesPage() {
 
             {/* Cluster Visibility Section */}
             <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
@@ -549,7 +549,7 @@ export default function ComputeServicesPage() {
 
             {/* Ready to Get Started Section */}
             <div className="bg-[#F9F9F9] border border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Ready to get started?</h2>
                     </SlideUp>

@@ -5,8 +5,10 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import SlideUp from '@/components/slide';
 import FadeIn from '@/components/FadeIn';
+import { useScrollToHash } from '@/hooks/useScrollToHash';
 
 export default function IcelandDataCenter() {
+    useScrollToHash();
     return (
         <main className="min-h-screen text-gray-600">
             <Header />
@@ -38,7 +40,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Deploy Section */}
-            <div className="bg-[#F5F9F4] sm:py-20 py-10">
+            <div className="bg-[#F5F9F4] sm:py-24 py-16">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -84,7 +86,7 @@ export default function IcelandDataCenter() {
 
             {/* Blonduos Section */}
             <div id='iceland1' className="bg-[#F9F9F9]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
                             <SlideUp>
@@ -225,7 +227,7 @@ export default function IcelandDataCenter() {
 
             {/* Akureyri Section */}
             <div id='iceland2' className="bg-[#F5F9F4]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         {/* Left Content */}
                         <div>
@@ -324,7 +326,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Future Locations Section */}
-            <div id='future-locations' className="bg-[#F9F9F9] py-24 sm:py-32">
+            <div id='future-locations' className="bg-[#F9F9F9] py-16 sm:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[400px] w-full">
@@ -338,7 +340,7 @@ export default function IcelandDataCenter() {
                         </div>
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">FUTURE LOCATIONS IN PLANNING</h2>
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Future Locations in Planning</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
@@ -366,7 +368,7 @@ export default function IcelandDataCenter() {
                 </div>
             </div>
             {/* Where Will You Deploy Section */}
-            <div className="bg-[#F9F9F9] border border-gray-200 sm:py-20 py-10">
+            <div className="bg-[#F9F9F9] border border-gray-200 sm:py-24 py-16">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div>
                         <SlideUp>
