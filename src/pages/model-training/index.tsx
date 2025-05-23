@@ -159,7 +159,7 @@ export default function SolutionsPage() {
                                 Launch GPU instances
                             </Button>
                             <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                Contact sales
+                                Contact Us
                             </Button>
                         </div>
                     </SlideUp>

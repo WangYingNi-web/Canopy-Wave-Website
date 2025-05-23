@@ -155,7 +155,7 @@ export default function CanadaDataCenter() {
                         Contact our team to learn more about our Canada data center capabilities
                     </p>
                     <button className="bg-white text-[#8CC63F] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-                        Contact Sales
+                        Contact Us
                     </button>
                 </div>
             </section>

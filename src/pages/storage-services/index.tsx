@@ -224,7 +224,7 @@ export default function StorageServices() {
       </div>
 
       {/* Shared Storage Section */}
-      <div id='shared-storage' className="bg-[#F5F9F4] sm:py-16 py-12">
+      <div id='shared-storage' className="bg-[#F5F9F4] sm:py-20 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -385,7 +385,7 @@ export default function StorageServices() {
                 Launch GPU instances
               </Button>
               <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                Contact sales
+                Contact Us
               </Button>
             </div>
           </SlideUp>
