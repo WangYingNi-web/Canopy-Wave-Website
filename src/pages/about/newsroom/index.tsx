@@ -18,6 +18,10 @@ interface BlogPost {
 export default function Newsroom() {
     useScrollToHash();
     const router = useRouter();
+    const handleBlogClick = () => {
+        const id = '1';
+        router.push(`/blog/${id}`);
+    };
     const handleWatchClick = () => {
         const id = '1';
         router.push(`newsroom/${id}`);
@@ -81,7 +85,7 @@ export default function Newsroom() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
-                        <div key={post.id} className="group cursor-pointer" onClick={handleWatchClick}>
+                        <div key={post.id} className="group cursor-pointer" onClick={handleBlogClick}>
                             <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src="/blog.svg"
