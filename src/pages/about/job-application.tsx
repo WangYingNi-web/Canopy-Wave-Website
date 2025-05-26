@@ -11,6 +11,7 @@ import type { FormEvent, ChangeEvent } from 'react';
 export default function JobApplication() {
     const router = useRouter();
     const { position } = router.query;
+    const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState<{
         name: string;
         email: string;
@@ -104,130 +105,73 @@ export default function JobApplication() {
         return !Object.values(newErrors).some(error => error !== '');
     };
 
-    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-    //     if (!isFormValid()) {
-    //         toast.error('Please complete all required fields');
-    //         return;
-    //     }
-
-    //     try {
-    //         const formDataToSend = new FormData();
-    //         formDataToSend.append('subject', `New Job Application: ${position || 'Position Not Specified'}`);
-    //         formDataToSend.append('recipients', JSON.stringify([
-    //             'wangyingni@canopywave.com',
-    //             'liuuisj@canopywave.com'
-    //         ]));
-    //         formDataToSend.append('body', `
-    //             New job application received:
-
-    //             Position: ${position || 'Not Specified'}
-    //             Name: ${formData.name}
-    //             Email: ${formData.email}
-    //             Phone: ${formData.phone}
-    //         `.trim());
-
-    //         // 添加简历文件作为附件
-    //         if (formData.resume) {
-    //             formDataToSend.append('attachment', formData.resume, formData.resume.name);
-    //         }
-
-    //         // 发送邮件
-    //         const response = await fetch('', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Authorization': 'Bearer alsfkjalsdkfjldksjfalksdjfljk13123',
-    //                 'Content-Type': 'application/json',
-    //                 // 不要设置 Content-Type，让浏览器自动设置正确的 multipart/form-data
-    //             },
-    //             mode: 'cors',
-    //             body: formDataToSend
-    //         });
-
-    //         let errorMessage = 'Failed to submit application. Please try again later';
-
-    //         if (!response.ok) {
-    //             // 尝试获取详细的错误信息
-    //             const contentType = response.headers.get('content-type');
-    //             if (contentType && contentType.includes('application/json')) {
-    //                 const errorData = await response.json();
-    //                 errorMessage = errorData.message || errorData.error || errorMessage;
-    //             } else {
-    //                 const textError = await response.text();
-    //                 errorMessage = textError || errorMessage;
-    //             }
-    //             throw new Error(errorMessage);
-    //         }
-
-    //         // 提交成功后的处理
-    //         toast.success("Application submitted successfully!");
-    //         router.push('/about/careers');
-    //     } catch (error) {
-    //         console.error('Error submitting application:', error);
-    //         toast.error(error instanceof Error ? error.message : 'An unexpected error occurred');
-    //     }
-    // };
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!isFormValid()) {
             toast.error('Please complete required fields');
             return;
         }
+
+        // 添加文件大小检查（1MB 限制）
+        if (formData.resume && formData.resume.size > 1 * 1024 * 1024) {
+            toast.error('Resume file must be less than 1MB');
+            return;
+        }
+
+        setIsLoading(true);
+
         try {
-            // 将简历文件转换为 Base64
-            let resumeBase64 = '';
+            const formDataToSend = new FormData();
+            formDataToSend.append('subject', `New Job Application from ${formData.name}`);
+            formDataToSend.append('recipients', 'andrew.li@canopywave.com, yachal@canopywave.com');
+
+            // 构建邮件正文
+            const emailBody = `
+New Job Application Details:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Message: ${formData.message}
+`;
+
+            formDataToSend.append('body', emailBody);
+
+            // 添加简历文件作为附件
             if (formData.resume) {
-                const reader = new FileReader();
-                resumeBase64 = await new Promise((resolve, reject) => {
-                    reader.onload = () => resolve(reader.result as string);
-                    reader.onerror = reject;
-                    reader.readAsDataURL(formData.resume as File);
-                });
+                formDataToSend.append('attachment', formData.resume);
             }
 
-            // 发送邮件
-            const response = await fetch('https://sequoia-paas.canopywave.io/api/v1/send_email', {
+            const response = await fetch('https://sequoia-paas.canopywave.io/api/v1/send_email_with_attachment', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer alsfkjalsdkfjldksjfalksdjfljk13123',
-                    'Accept': 'application/json'
+                    'Authorization': 'Bearer alsfkjalsdkfjldksjfalksdjfljk13123'
                 },
-                mode: 'cors', // 明确指定使用 CORS
-                credentials: 'include', // 包含凭证（如果需要）
-                body: JSON.stringify({
-                    subject: `New Job Application: ${position || 'Position Not Specified'}`,
-                    recipients: [
-                        'wangyingni@canopywave.com',
-                        'liuuisj@canopywave.com'
-                    ],
-                    body: `
-                        New job application received:
-                        
-                        Position: ${position || 'Not Specified'}
-                        Name: ${formData.name}
-                        Email: ${formData.email}
-                        Phone: ${formData.phone}
-                        Message: ${formData.message}
-                        
-                        Resume: ${resumeBase64}
-                    `.trim()
-                })
+                body: formDataToSend
             });
+
+            if (response.status === 413) {
+                toast.error('File is too large. Please upload a file less than 1MB');
+                return;
+            }
 
             if (!response.ok) {
                 const errorData = await response.json().catch(() => null);
                 throw new Error(errorData?.message || 'Failed to send email');
             }
 
-            // 提交成功后的处理
-            toast.success("Application submitted successfully!");
-            router.push('/about/careers');
+            const responseData = await response.json();
+            if (responseData.message === 'Email with attachment sent successfully!') {
+                toast.success("Application submitted successfully!");
+                router.push('/about/careers');
+            } else {
+                throw new Error('Failed to send email');
+            }
         } catch (error: any) {
-            console.error('Error submitting application:', error);
             const errorMessage = error.response?.data?.error || "Failed to submit application. Please try again later";
             toast.error(errorMessage);
+        }   finally {
+            setIsLoading(false);
         }
     };
 
@@ -330,9 +274,17 @@ export default function JobApplication() {
                             <div className="pt-4">
                                 <button
                                     type="submit"
-                                    className="w-full bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#80B224] transition-colors duration-200"
+                                    disabled={isLoading}
+                                    className="w-full bg-[#8CC63F] text-white px-6 py-3 rounded-md hover:bg-[#80B224] transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed"
                                 >
-                                    Submit application
+                                    {isLoading ? (
+                                        <div className="flex items-center justify-center">
+                                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                                            Submitting...
+                                        </div>
+                                    ) : (
+                                        'Submit application'
+                                    )}
                                 </button>
                             </div>
                         </form>
