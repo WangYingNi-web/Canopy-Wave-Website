@@ -234,7 +234,7 @@ export default function AboutPage() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 mb-8">
-              Ready to shape the future? Join CanopyWave and help drive the future of technology with a team redefining what's possible
+              Ready to shape the future? Join Canopy Wave and help drive the future of technology with a team redefining what's possible
             </p>
           </SlideUp>
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">

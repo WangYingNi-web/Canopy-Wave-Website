@@ -265,8 +265,8 @@ export default function SolutionsPage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
-                                    Your creative assets are your intellectual property—and we treat them that way. Our infrastructure is built on a private cloud with end-to-end encryption, strict access control, and enterprise-grade data protection
+                                <p className="text-gray-600 mb-4 sm:pr-10">
+                                    Your creative assets are your intellectual property—and we treat them <br /> that way. Our infrastructure is built on a private cloud with end-to-end encryption, strict access control, and enterprise-grade data protection
                                 </p>
                             </SlideUp>
                         </div>

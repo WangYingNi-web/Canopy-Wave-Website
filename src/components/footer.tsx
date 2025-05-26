@@ -40,10 +40,10 @@ export default function Footer() {
                         <div>
                             <h3 className="font-semibold mb-4">Solutions</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><IwsLink href="/model-training" className="text-gray-500 hover:text-gray-700">Model Training</IwsLink></li>
+                                <li><IwsLink href="/model-training" className="text-gray-500 hover:text-gray-700">AI Model Training</IwsLink></li>
                                 <li><IwsLink href="/inference" className="text-gray-500 hover:text-gray-700">Inference</IwsLink></li>
                                 <li><IwsLink href="/rendering" className="text-gray-500 hover:text-gray-700">Rendering</IwsLink></li>
-                                <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-gray-700">Private cloud and GPUs deployment</IwsLink></li>
+                                <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-gray-700">Private Cloud and GPUs Deployment</IwsLink></li>
                                 <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-gray-700">Networking Hardware Solution</IwsLink></li>
                             </ul>
                         </div>
@@ -54,7 +54,7 @@ export default function Footer() {
                                 <li><IwsLink href="/pricing#H200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H200</IwsLink></li>
                                 <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Network Shared Storage</IwsLink></li>
                                 <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Object Storage</IwsLink></li>
-                                <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Additional public IP address</IwsLink></li>
+                                <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Additional Public IP Address</IwsLink></li>
                             </ul>
                         </div>
                         <div>
@@ -80,7 +80,7 @@ export default function Footer() {
                                 <li><IwsLink href="/about" className="text-gray-500 hover:text-gray-700">About Us</IwsLink></li>
                                 <li><IwsLink href="/about/careers" className="text-gray-500 hover:text-gray-700">Careers</IwsLink></li>
                                 <li><IwsLink href="/about/newsroom" className="text-gray-500 hover:text-gray-700">Newsroom</IwsLink></li>
-                                <li><IwsLink href="/blog" className="text-gray-500 hover:text-gray-700">Blog</IwsLink></li>
+                                {/* <li><IwsLink href="/blog" className="text-gray-500 hover:text-gray-700">Blog</IwsLink></li> */}
                             </ul>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ export default function Footer() {
                     <div className="flex flex-col sm:flex-row justify-between items-center pt-8">
                         <p className="text-sm text-gray-500 mb-4 sm:mb-0">© 2025 All rights reserved.</p>
                         <div className="flex items-center space-x-6">
-                            <IwsLink href="/legal" className="text-sm text-[#80B224] hover:text-[#6a9420]">Terms of Use</IwsLink>
+                            {/* <IwsLink href="/legal" className="text-sm text-[#80B224] hover:text-[#6a9420]">Terms of Use</IwsLink> */}
                             <IwsLink href="/terms" className="text-sm text-[#80B224] hover:text-[#6a9420]">Terms of Service</IwsLink>
                             <IwsLink href="/privacy" className="text-sm text-[#80B224] hover:text-[#6a9420]">Privacy Policy</IwsLink>
                         </div>

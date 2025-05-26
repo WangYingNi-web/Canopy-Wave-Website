@@ -42,7 +42,7 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
                     <div className="text-center">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Flexible and Cost-Effective <br /> AI Training Solutions</h2>
+                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">GPU Clusters on Tap </h2>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-center max-w-4xl mx-auto mt-10">
@@ -62,7 +62,7 @@ export default function SolutionsPage() {
                         <div className="lg:col-span-6">
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
-                                    State-of-the-Art GPU Infrastructure
+                                    State-of-the-art GPU infrastructure
                                 </h2>
                             </SlideUp>
                             <SlideUp>

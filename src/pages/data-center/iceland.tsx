@@ -31,7 +31,7 @@ export default function IcelandDataCenter() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-white text-lg mt-8 text-center">
-                                At canopywave, we’ve set down roots across the globe with these world-class office spaces
+                                At Canopy Wave, we’ve set down roots across the globe with these world-class office spaces
                             </p>
                         </SlideUp>
 
@@ -40,7 +40,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Deploy Section */}
-            <div className="bg-[#F5F9F4] sm:py-24 py-16">
+            {/* <div className="bg-[#F5F9F4] sm:py-24 py-16">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -82,15 +82,15 @@ export default function IcelandDataCenter() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            {/* Blonduos Section */}
+            {/* Blönduós Section */}
             <div id='iceland1' className="bg-[#F9F9F9]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Blonduos</h2>
+                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Blönduós</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">

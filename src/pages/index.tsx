@@ -62,22 +62,22 @@ export default function Index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/optimized.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
-                <h3 className="text-xl font-bold mb-4 group-hover:text-white">OPTIMIZED STACK</h3>
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">Optimized stack</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Pre-qualified and optimized GPU and AI drivers</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                <Image src="/icon/resource.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
-                <h3 className="text-xl font-bold mb-4 group-hover:text-white">DEDICATED RESOURCE</h3>
+                <Image src="/icon/resource.svg" alt="Dedicated resource" width={34} height={34} className="mb-6 svg-gray" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">Dedicated resource</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Fully secured resources with the flexibility to optimize your stacks and application</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                <Image src="/icon/high.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
-                <h3 className="text-xl font-bold mb-4 group-hover:text-white">HIGH PERFORMANCE</h3>
+                <Image src="/icon/high.svg" alt="High performance" width={34} height={34} className="mb-6 svg-gray" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">High performance</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                <Image src="/icon/used.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
-                <h3 className="text-xl font-bold mb-4 group-hover:text-white">PAY ONLY USED</h3>
+                <Image src="/icon/used.svg" alt="Pay only used" width={34} height={34} className="mb-6 svg-gray" />
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">Pay only used</h3>
                 <p className="text-gray-600 group-hover:text-white text-lg">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function Index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray'/>
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-2xl font-bold ml-6">NVIDIA H100</h3>
                 </div>
                 <p className="text-gray-600 text-lg mb-6">H100 extends NVIDIA’s market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
@@ -174,7 +174,7 @@ export default function Index() {
                   <h4 className="text-xl font-semibold mb-3">Joint Blog - Accelerate Enterprise AI</h4>
                   <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
                   <div className="flex items-center gap-4">
-                    <IwsLink href="/blog" className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors">Article</IwsLink>
+                    <IwsLink href="/about/newsroom#blog" className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors">Article</IwsLink>
                     <span className="text-gray-500 text-sm">May 20, 2025</span>
                   </div>
                 </div>
@@ -189,9 +189,19 @@ export default function Index() {
             <h2 className="text-3xl sm:text-5xl font-extrabold mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <SlideUp>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start w-full">
-                  <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-6 py-6 text-base" onClick={() => router.push('/contact')}>Contact Us</Button>
-                  <Button variant="outline" className="w-full sm:w-auto px-8 py-6 text-base" onClick={() => router.push('/pricing')}>Get Pricing</Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button
+                    onClick={() => window.location.href = '/contact'}
+                    className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                  >
+                    Contact Us
+                  </button>
+                  <button
+                    onClick={() => window.location.href = '/pricing'}
+                    className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                  >
+                    Get Pricing
+                  </button>
                 </div>
               </SlideUp>
             </div>
