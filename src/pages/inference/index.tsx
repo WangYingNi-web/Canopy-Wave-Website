@@ -43,7 +43,7 @@ export default function SolutionsPage() {
                         <div className="lg:col-span-6">
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
-                                    Inference
+                                Enterprise-Grade AI Acceleration
                                 </h2>
                             </SlideUp>
                             <SlideUp>

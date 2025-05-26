@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import SlideUp from '@/components/slide';
+import Link from 'next/link';
 
 export default function PricingPage() {
     return (
@@ -151,7 +152,7 @@ export default function PricingPage() {
                     <SlideUp>
                         <h2 className="text-5xl sm:text-7xl font-extrabold mb-4">Other charges</h2>
                         <p className="text-gray-600 mb-8 px-4">
-                            Canopywave also provides high-performance storage and networking services
+                            Canopy Wave also provides high-performance storage and networking services
                         </p>
                     </SlideUp>
                     <SlideUp>
@@ -235,22 +236,24 @@ export default function PricingPage() {
                 </div>
 
                 {/* Contact Section */}
-                <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative">
-                    <div className="flex flex-col lg:flex-row justify-between items-center">
-                        <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
-                            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white">Contact us for 
-                            competitive pricing</h2>
+                <Link href="/contact">
+                    <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative cursor-pointer hover:bg-[#7DB535] transition-colors duration-300">
+                        <div className="flex flex-col lg:flex-row justify-between items-center">
+                            <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
+                                <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white">Contact us for
+                                    competitive pricing</h2>
+                            </div>
+                            <div className="hidden lg:block">
+                                <Image
+                                    src="/boxes.svg"
+                                    alt="Boxes illustration"
+                                    width={300}
+                                    height={200}
+                                />
+                            </div>
                         </div>
-                        <div className="hidden lg:block">
-                            <Image
-                                src="/boxes.svg"
-                                alt="Boxes illustration"
-                                width={300}
-                                height={200}
-                            />
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </Link>
             </div>
 
             <Footer />

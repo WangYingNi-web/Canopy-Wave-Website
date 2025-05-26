@@ -342,7 +342,7 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-center">Intel Xeon Scalable Processors</h2>
-                        <h3 className="text-3xl font-extrabold mb-6 text-center">(6TH Gen)</h3>
+                        <h3 className="text-3xl font-extrabold mb-6 text-center">(6th Gen)</h3>
                         <p className="text-gray-600 mb-12 text-center max-w-4xl mx-auto">
                             The latest generation utilizes a disaggregated design with multiple compute and I/O chiplets interconnected via EMIB (Embedded Multi-Die Interconnect Bridge)
                         </p>
@@ -390,7 +390,7 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">Enhanced GPU cluster performance</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    canopywave uses powerful and efficient CPUs to enable higher utility and performance from GPU clusters.
+                                    Canopy Wave uses powerful and efficient CPUs to enable higher utility and performance from GPU clusters.
                                     Let CPUs handle generalized computing needs, freeing GPUs to focus on high-intensity tasks
                                 </p>
                             </SlideUp>
@@ -431,7 +431,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">Bare Metal GPU Cluster in Private Cloud</h2>
+                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">Bare metal GPU cluster in private cloud</h2>
                                 <p className="text-gray-600 mb-8 text-lg">
                                     Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking
                                 </p>
@@ -530,7 +530,7 @@ export default function ComputeServicesPage() {
                                     Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control
                                 </p>
                                 <p className="text-gray-600 mb-8 text-lg">
-                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptim
+                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime
                                 </p>
                             </SlideUp>
                         </div>

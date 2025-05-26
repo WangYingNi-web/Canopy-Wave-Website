@@ -218,7 +218,7 @@ export default function Header() {
                           </h3>
                           <ul className="space-y-2 text-sm">
                             <li><IwsLink href="/networking-services#infiniband-networking" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>InfiniBand Networking</IwsLink></li>
-                            <li><IwsLink href="/networking-services#private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RoceV2 Networking</IwsLink></li>
+                            <li><IwsLink href="/networking-services#private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => setShowProducts(false)}>RoCEv2 Networking</IwsLink></li>
                           </ul>
                         </div>
                         <div>
@@ -276,7 +276,7 @@ export default function Header() {
                   <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Model Training</IwsLink></li>
+                        <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>AI Model Training</IwsLink></li>
                         <li><IwsLink href="/inference" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Inference</IwsLink></li>
                         <li><IwsLink href="/rendering" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Rendering</IwsLink></li>
                         <li><IwsLink href="/private-cloud" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>Private Cloud and GPUs Deployment</IwsLink></li>
@@ -437,10 +437,30 @@ export default function Header() {
                   <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900">About Us</IwsLink></li>
-                        <li><IwsLink href="/about/careers" className="text-gray-600 hover:text-gray-900">Careers</IwsLink></li>
-                        <li><IwsLink href="/about/newsroom" className="text-gray-600 hover:text-gray-900">Newsroom</IwsLink></li>
-                        <li><IwsLink href="/blog" className="text-gray-600 hover:text-gray-900">Blog</IwsLink></li>
+                        <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>About Us</IwsLink></li>
+                        <li><IwsLink href="/about/careers" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>Careers</IwsLink></li>
+                        <div>
+                          <IwsLink href="/about/newsroom" className="text-gray-600 hover:text-gray-900 flex items-center">
+                            Newsroom
+                            <svg
+                              className="w-4 h-4 ml-1"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </IwsLink>
+                          <ul className="pl-4 mt-2 space-y-2">
+                            <li><IwsLink href="/about/newsroom#blog" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>Blog</IwsLink></li>
+                            <li><IwsLink href="/about/newsroom#events" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>Events</IwsLink></li>
+                          </ul>
+                        </div>
                       </ul>
                     </div>
                   </div>

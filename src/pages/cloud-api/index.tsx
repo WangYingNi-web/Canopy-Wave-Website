@@ -411,7 +411,7 @@ export default function PlatformPage() {
                         {openSection === 'api-key' && (
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
                                 <p className="text-gray-600">
-                                    To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io). After registering, follow these steps to generate an API key:
+                                    To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io),then follow these steps to generate an API key:
                                 </p>
                                 <ol className="list-decimal list-inside text-gray-600 mt-4">
                                     <li>In the left navigation bar, click on API Keys</li>
