@@ -153,7 +153,7 @@ export default function Header() {
                           <ul className="space-y-2 text-sm">
                             <li>
                               <div>
-                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-gray-900 flex items-center" onClick={() => setShowProducts(false)}>
+                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
                                   GPU Cloud on-demand Cluster
                                   <svg
                                     className="w-4 h-4 ml-1"
@@ -181,7 +181,7 @@ export default function Header() {
                         </div>
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/storage-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/storage-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]" onClick={() => setShowProducts(false)}>
                               Storage Services
                               <svg
                                 className="w-4 h-4 ml-1"
@@ -208,7 +208,7 @@ export default function Header() {
                         </div>
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/networking-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/networking-services" className="flex items-center text-gray-900 hover:text-[#8CC63F]" onClick={() => setShowProducts(false)}>
                               Networking Services
                               <svg
                                 className="w-4 h-4 ml-1"
@@ -232,7 +232,7 @@ export default function Header() {
                         </div>
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/platform" className="flex items-center text-gray-900 hover:text-[#8CC63F]">
+                            <IwsLink href="/platform" className="flex items-center text-gray-900 hover:text-[#8CC63F]" onClick={() => setShowProducts(false)}>
                               Platform
                               <svg
                                 className="w-4 h-4 ml-1"
@@ -359,7 +359,7 @@ export default function Header() {
                       <ul className="space-y-2 text-sm">
                         <li>
                           <div>
-                            <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-gray-900 flex items-center" onClick={() => { setShowDataCenter(false) }}>
+                            <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => { setShowDataCenter(false) }}>
                               Our Datacenter
                               <svg
                                 className="w-4 h-4 ml-1"
@@ -449,7 +449,7 @@ export default function Header() {
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>About Us</IwsLink></li>
                         <li><IwsLink href="/about/careers" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>Careers</IwsLink></li>
                         <div>
-                          <IwsLink href="/about/newsroom" className="text-gray-600 hover:text-gray-900 flex items-center" onClick={() => setShowAbout(false)}>
+                          <IwsLink href="/about/newsroom" className="text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => setShowAbout(false)}>
                             Newsroom
                             <svg
                               className="w-4 h-4 ml-1"
@@ -488,7 +488,7 @@ export default function Header() {
               </IwsLink>
               <IwsLink
                 href="/contact"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
+                className="text-gray-600 hover:text-[#8CC63F] text-sm font-medium"
               >
                 Contact Us
               </IwsLink>
