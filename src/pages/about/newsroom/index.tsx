@@ -73,7 +73,7 @@ export default function Newsroom() {
             <div id='blog' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Blog</h2>
+                        <h2 className="text-5xl sm:text-6xl font-bold text-gray-600">Blog</h2>
                     </SlideUp>
 
                     {/* <Link href="/blog" className="text-gray-600 hover:text-gray-600 inline-flex items-center">
@@ -124,7 +124,7 @@ export default function Newsroom() {
             <div id='events' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Events</h2>
+                        <h2 className="text-5xl sm:text-6xl font-bold text-gray-600">Events</h2>
                     </SlideUp>
                     {/* <Link href="/events" className="text-gray-600 hover:text-gray-600 inline-flex items-center">
                         <span className="flex items-center">

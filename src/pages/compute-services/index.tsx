@@ -337,7 +337,7 @@ export default function ComputeServicesPage() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-                        <div className="p-8 text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div className="p-8 text-left rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-6 mb-6">
                                 <div className="rounded-lg">
                                     <Image src="/compute/model.svg" alt="CPU Icon" width={40} height={40} className='svg-gray' />
@@ -349,7 +349,7 @@ export default function ComputeServicesPage() {
                             </p>
                         </div>
 
-                        <div className="p-8 text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div className="p-8 text-left rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-6 mb-6">
                                 <div className="rounded-lg">
                                     <Image src="/compute/memory.svg" alt="Memory Icon" width={40} height={40} className='svg-gray' />

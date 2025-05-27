@@ -240,8 +240,8 @@ export default function PricingPage() {
                     <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative cursor-pointer hover:bg-[#7DB535] transition-colors duration-300">
                         <div className="flex flex-col lg:flex-row justify-between items-center">
                             <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
-                                <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white">Contact us for
-                                    competitive pricing</h2>
+                                <h2 className="text-4xl sm:text-6xl font-extrabold text-white">Contact us for competitive
+                                <br />pricing</h2>
                             </div>
                             <div className="hidden lg:block">
                                 <Image
