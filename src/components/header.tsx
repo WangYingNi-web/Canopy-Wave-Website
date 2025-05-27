@@ -29,9 +29,9 @@ export default function Header() {
 
 
 
-
-
   const [showMobileSubMenu, setShowMobileSubMenu] = useState<string | null>(null);
+  const [showDataCenterSubMenu, setShowDataCenterSubMenu] = useState(false);
+  const [showAboutSubMenu, setshowAboutSubMenu] = useState(false);
 
 
 
@@ -42,7 +42,16 @@ export default function Header() {
   const resourcesRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
 
-
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setShowMobileProducts(false);
+    setShowMobileSolutions(false);
+    setShowMobilePricing(false);
+    setShowMobileDataCenter(false);
+    setShowMobileResources(false);
+    setShowMobileAbout(false);
+    setShowMobileSubMenu(null);
+  };
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -124,7 +133,7 @@ export default function Header() {
                       <div className="grid grid-cols-4 gap-8">
                         <div>
                           <h3 className="font-semibold mb-4">
-                            <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F] flex items-center">
+                            <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
                               Compute Services
                               <svg
                                 className="w-4 h-4 ml-1"
@@ -144,7 +153,7 @@ export default function Header() {
                           <ul className="space-y-2 text-sm">
                             <li>
                               <div>
-                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-gray-900 flex items-center">
+                                <IwsLink href="/compute-services#gpu-cloud" className="text-gray-600 hover:text-gray-900 flex items-center" onClick={() => setShowProducts(false)}>
                                   GPU Cloud on-demand Cluster
                                   <svg
                                     className="w-4 h-4 ml-1"
@@ -350,7 +359,7 @@ export default function Header() {
                       <ul className="space-y-2 text-sm">
                         <li>
                           <div>
-                            <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-gray-900 flex items-center">
+                            <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-gray-900 flex items-center" onClick={() => { setShowDataCenter(false) }}>
                               Our Datacenter
                               <svg
                                 className="w-4 h-4 ml-1"
@@ -440,7 +449,7 @@ export default function Header() {
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>About Us</IwsLink></li>
                         <li><IwsLink href="/about/careers" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>Careers</IwsLink></li>
                         <div>
-                          <IwsLink href="/about/newsroom" className="text-gray-600 hover:text-gray-900 flex items-center">
+                          <IwsLink href="/about/newsroom" className="text-gray-600 hover:text-gray-900 flex items-center" onClick={() => setShowAbout(false)}>
                             Newsroom
                             <svg
                               className="w-4 h-4 ml-1"
@@ -559,11 +568,10 @@ export default function Header() {
                     </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'compute' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H200</IwsLink></li>
-                    <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA HGX H100</IwsLink></li>
-                    <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded">CPU Nodes</IwsLink></li>
-                    <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded">Bare Metal GPU Cluster</IwsLink></li>
-
+                  <IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink>
+                    <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
+                    <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>CPU Nodes</IwsLink></li>
+                    <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Bare Metal GPU Cluster</IwsLink></li>
                   </ul>
                 </li>
                 <li>
@@ -590,11 +598,9 @@ export default function Header() {
                     </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'storage' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/storage-services#local-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Local Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#shared-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Shared Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#object-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Object Storage</IwsLink></li>
-                    {/* <li><IwsLink href="/storage-services#cloud-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">Cloud Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#rdma-storage" className="block px-2 py-1 hover:bg-gray-100 rounded">RDMA Storage</IwsLink></li> */}
+                    <li><IwsLink href="/storage-services#local-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Local Storage</IwsLink></li>
+                    <li><IwsLink href="/storage-services#shared-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Shared Storage</IwsLink></li>
+                    <li><IwsLink href="/storage-services#object-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
                   </ul>
                 </li>
                 <li>
@@ -621,7 +627,7 @@ export default function Header() {
                     </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'networking' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/networking-hardware">Networking Hardware Solution</IwsLink></li>
+                    <li><IwsLink href="/networking-hardware" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
                   </ul>
                 </li>
                 <li>
@@ -648,8 +654,8 @@ export default function Header() {
                     </svg>
                   </button>
                   <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'platform' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/platform#dcim-platform" className="text-gray-600 hover:text-gray-900">Canopy DCIM Platform</IwsLink></li>
-                    <li><IwsLink href="/platform#cloud-platform" className="text-gray-600 hover:text-gray-900">Wave GPU cloud platform</IwsLink></li>
+                    <li><IwsLink href="/platform#dcim-platform" className="text-gray-600 hover:text-gray-900" onClick={closeMobileMenu}>Canopy DCIM Platform</IwsLink></li>
+                    <li><IwsLink href="/platform#cloud-platform" className="text-gray-600 hover:text-gray-900" onClick={closeMobileMenu}>Wave GPU cloud platform</IwsLink></li>
                   </ul>
                 </li>
               </ul>
@@ -679,11 +685,11 @@ export default function Header() {
             </button>
             {showMobileSolutions && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded">Model Training</IwsLink></li>
-                <li><IwsLink href="/inference" className="block px-2 py-1 hover:bg-gray-100 rounded">Inference</IwsLink></li>
-                <li><IwsLink href="/rendering" className="block px-2 py-1 hover:bg-gray-100 rounded">Rendering</IwsLink></li>
-                <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded">Private Cloud and GPUs Deployment</IwsLink></li>
-                <li><IwsLink href="/networking-hardware" className="block px-2 py-1 hover:bg-gray-100 rounded">Networking Hardware Solution</IwsLink></li>
+                <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Model Training</IwsLink></li>
+                <li><IwsLink href="/inference" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Inference</IwsLink></li>
+                <li><IwsLink href="/rendering" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Rendering</IwsLink></li>
+                <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Private Cloud and GPUs Deployment</IwsLink></li>
+                <li><IwsLink href="/networking-hardware" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
               </ul>
             )}
           </div>
@@ -709,11 +715,11 @@ export default function Header() {
             </button>
             {showMobilePricing && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA SXM5 H100</IwsLink></li>
-                <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded">NVIDIA SXM5 H200</IwsLink></li>
-                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded">Network Shared Storage</IwsLink></li>
-                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded">Object Storage</IwsLink></li>
-                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded">Additional Public IP Address</IwsLink></li>
+                <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
+                <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
+                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
+                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
+                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
               </ul>
             )}
           </div>
@@ -741,10 +747,16 @@ export default function Header() {
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
                 <li>
                   <div>
-                    <IwsLink href="/data-center/iceland" className="block px-2 py-1 hover:bg-gray-100 rounded flex items-center justify-between">
-                      Our Datacenter
+                    <button
+                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setShowDataCenterSubMenu(!showDataCenterSubMenu)
+                      }}
+                    >
+                      <span>Our Datacenter</span>
                       <svg
-                        className="w-4 h-4 ml-1"
+                        className={`w-4 h-4 transform transition-transform duration-200 ${showDataCenterSubMenu ? 'rotate-180' : ''}`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -756,14 +768,19 @@ export default function Header() {
                           d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                    </IwsLink>
-                    <ul className="pl-4 mt-2 space-y-2">
-                      <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 1</IwsLink></li>
-                      <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Iceland 2</IwsLink></li>
+                    </button>
+
+                    {showDataCenterSubMenu && (
+                      <ul className={`pl-4 mt-2 space-y-2`}>
+                        <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
+                        <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
+                      </ul>
+                    )}
+                    <ul className="pl-2 mt-1 py-1 hover:bg-gray-100">
+                      <li>
+                        <IwsLink href="/data-center/iceland#future-locations" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowDataCenter(false) }}>Future locations</IwsLink>
+                      </li>
                     </ul>
-                    <div className="mt-2">
-                      <IwsLink href="/data-center/iceland#future-locations" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowMobileDataCenter(false); setIsOpen(false); }}>Future locations</IwsLink>
-                    </div>
                   </div>
                 </li>
               </ul>
@@ -791,7 +808,7 @@ export default function Header() {
             </button>
             {showMobileResources && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li><IwsLink href="/cloud-api" className="block px-2 py-1 hover:bg-gray-100 rounded">Manage Cloud Via API</IwsLink></li>
+                <li><IwsLink href="/cloud-api" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Manage Cloud Via API</IwsLink></li>
               </ul>
             )}
           </div>
@@ -818,10 +835,39 @@ export default function Header() {
             </button>
             {showMobileAbout && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/about" className="block px-2 py-1 hover:bg-gray-100 rounded">About Us</IwsLink></li>
-                <li><IwsLink href="/about/careers" className="block px-2 py-1 hover:bg-gray-100 rounded">Careers</IwsLink></li>
-                <li><IwsLink href="/about/newsroom" className="block px-2 py-1 hover:bg-gray-100 rounded">Newsroom</IwsLink></li>
-                <li><IwsLink href="/blog" className="block px-2 py-1 hover:bg-gray-100 rounded">Blog</IwsLink></li>
+                <li><IwsLink href="/about" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>About Us</IwsLink></li>
+                <li><IwsLink href="/about/careers" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Careers</IwsLink></li>
+              <div>
+                    <button
+                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setshowAboutSubMenu(!showAboutSubMenu)
+                      }}
+                    >
+                      <span>Newsroom</span>
+                      <svg
+                        className={`w-4 h-4 transform transition-transform duration-200 ${showAboutSubMenu ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {showAboutSubMenu && (
+                      <ul className={`pl-4 mt-2 space-y-2`}>
+                        <li><IwsLink href="/about/newsroom#blog" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Blog</IwsLink></li>
+                        <li><IwsLink href="/about/newsroom#events" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Events</IwsLink></li>
+                      </ul>
+                    )}
+                  </div>
+              
               </ul>
             )}
           </div>

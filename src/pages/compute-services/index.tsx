@@ -45,19 +45,21 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-1/2">
-                            <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-full" />
+                            <SlideUp>
+                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-full" />
+                            </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-4 sm:mb-8">Massive Parallel Processing Power</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <p className="text-gray-600 mb-2 text-lg">
                                     AI workloads require performing millions (or billions) of mathematical operations simultaneously
                                 </p>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <p className="text-gray-600 mb-4 text-lg">
                                     GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently
                                 </p>
                             </SlideUp>
@@ -123,7 +125,6 @@ export default function ComputeServicesPage() {
                 </div>
             </div>
 
-
             {/* Leadership Section */}
             <div className='bg-[#F5F9F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -147,21 +148,23 @@ export default function ComputeServicesPage() {
 
                         </div>
                         <div className="w-full md:w-1/2">
-                            <Image
-                                src="/compute/h200.svg"
-                                alt="NVIDIA H200 GPU"
-                                width={500}
-                                height={300}
-                                className="w-full rounded-lg"
-                            />
+                            <SlideUp>
+                                <Image
+                                    src="/compute/h200.svg"
+                                    alt="NVIDIA H200 GPU"
+                                    width={500}
+                                    height={300}
+                                    className="w-full rounded-lg"
+                                />
+                            </SlideUp>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* H200 Section */}
-            <div className="bg-[#F9F9F9]">
-                <div id="hgx-h200" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-24">
+            <div id="hgx-h200" className="bg-[#F9F9F9] sm:py-20 py-12">
+                <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
@@ -216,8 +219,8 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* NVIDIA HGX H100 Section */}
-            <div className="bg-[#F5F9F4]">
-                <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div id="hgx-h100" className="bg-[#F5F9F4] sm:py-20 py-12">
+                <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
@@ -275,8 +278,8 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* Why NVIDIA Section */}
-            <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <div className='bg-[#F9F9F9] sm:py-20 py-12'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">Why NVIDIA</h2>
                         <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
@@ -297,39 +300,63 @@ export default function ComputeServicesPage() {
             </div>
 
             {/* CPU Servers Section */}
-            <div className='bg-[#F5F9F4]'>
-                <div id="cpu-node" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-                    <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">CPU Nodes</h2>
-                        <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
-                            Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale
-                        </p>
-                        <div className="flex justify-center gap-4 mb-8">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                Launch CPU Servers
-                            </Button>
-                            <Button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-800 border border-gray-200" onClick={() => window.location.href = '/contact'}>
-                                Learn More
-                            </Button>
+            <div id="cpu-node" className='bg-[#F5F9F4] py-16 sm:py-20'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-16">
+                        <div className="w-full md:w-1/2">
+                            <SlideUp>
+                                <Image
+                                    src="/compute/cpu-servers.svg"
+                                    alt="Cpu Servers"
+                                    width={550}
+                                    height={400}
+                                    className="w-full"
+                                />
+                            </SlideUp>
                         </div>
-                    </SlideUp>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                        <div className="p-6 bg-[#F5F9F4] text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} className='svg-gray'/>
+                        <div className="w-full md:w-1/2 space-y-8">
+                            <SlideUp>
+                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold mb-6">CPU Nodes</h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 text-lg leading-relaxed">
+                                    Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale
+                                </p>
+                            </SlideUp>
+                            <SlideUp>
+                                <div className="flex flex-col sm:flex-row gap-6 pt-2">
+                                    <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-8 py-3" onClick={() => window.location.href = '/contact'}>
+                                        Learn More
+                                    </Button>
+                                    <Button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                        Launch CPU Servers
+                                    </Button>
+                                </div>
+                            </SlideUp>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                        <div className="p-8 text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex items-center gap-6 mb-6">
+                                <div className="rounded-lg">
+                                    <Image src="/compute/model.svg" alt="CPU Icon" width={40} height={40} className='svg-gray' />
+                                </div>
                                 <h3 className="text-2xl font-bold">Processor</h3>
                             </div>
-                            <p className="text-gray-600 mb-4">
+                            <p className="text-gray-600 text-l leading-relaxed">
                                 Utilize the latest 6th-Gen Intel Xeon Scalable processors, offering up to 64 vCPUs per instance
                             </p>
                         </div>
 
-                        <div className="p-6 bg-[#F5F9F4] text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} className='svg-gray'/>
+                        <div className="p-8 text-left border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div className="flex items-center gap-6 mb-6">
+                                <div className="rounded-lg">
+                                    <Image src="/compute/memory.svg" alt="Memory Icon" width={40} height={40} className='svg-gray' />
+                                </div>
                                 <h3 className="text-2xl font-bold">Memory</h3>
                             </div>
-                            <p className="text-gray-600 mb-4">
+                            <p className="text-gray-600 text-l leading-relaxed">
                                 Each instance supports up to 256TB of DIMM, delivering high throughput for compute-intensive workloads
                             </p>
                         </div>
@@ -351,7 +378,7 @@ export default function ComputeServicesPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} className='svg-gray'/>
+                                <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} className='svg-gray' />
                                 <h3 className="text-xl font-bold">Core count & frequency</h3>
                             </div>
                             <p className="text-gray-600">
@@ -361,7 +388,7 @@ export default function ComputeServicesPage() {
 
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} className='svg-gray'/>
+                                <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} className='svg-gray' />
                                 <h3 className="text-xl font-bold">Memory support</h3>
                             </div>
                             <p className="text-gray-600">
@@ -371,7 +398,7 @@ export default function ComputeServicesPage() {
 
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} className='svg-gray'/>
+                                <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} className='svg-gray' />
                                 <h3 className="text-xl font-bold">Cache & interconnect</h3>
                             </div>
                             <p className="text-gray-600">
@@ -427,7 +454,7 @@ export default function ComputeServicesPage() {
 
             {/* Bare Metal GPU Section */}
             <div className='bg-[#F9F9F9]'>
-                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-12">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
@@ -441,13 +468,15 @@ export default function ComputeServicesPage() {
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <Image
-                                src="/compute/bare-metal.svg"
-                                alt="Bare Metal"
-                                width={600}
-                                height={400}
-                                className="w-full rounded-lg shadow-lg"
-                            />
+                            <SlideUp>
+                                <Image
+                                    src="/compute/bare-metal.svg"
+                                    alt="Bare Metal"
+                                    width={580}
+                                    height={400}
+                                    className="w-full rounded-lg shadow-lg"
+                                />
+                            </SlideUp>
                         </div>
                     </div>
                 </div>
@@ -458,59 +487,61 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-center">Get the latest and greatest NVIDIA GPUs</h2>
-                        <h3 className="text-4xl sm:text-5xl font-extrabold mb-6 text-center">Managed and tuned by world leading infrastructure team</h3>
-                        <p className="text-gray-600 mb-16 text-center max-w-4xl mx-auto">
+                        <p className="text-gray-600 text-lg mb-16 text-center max-w-4xl mx-auto">
                             Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability. We use highest safety stander to ensure data security
                         </p>
                     </SlideUp>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* HGX B200 Card */}
-                        <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
-                            <div className="mb-6">
-                                <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX B200</h3>
-                                <Image
-                                    src="/compute/b200.svg"
-                                    alt="NVIDIA HGX B200"
-                                    width={400}
-                                    height={300}
-                                    className="w-full rounded-lg mb-4"
-                                />
-                                <p className="text-gray-600 text-center">
+                        <div className="rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+                            <div>
+                                <div className="relative h-64 mb-8 bg-black rounded-xl overflow-hidden">
+                                    <Image
+                                        src="/compute/b200.svg"
+                                        alt="NVIDIA HGX B200"
+                                        layout='fill'
+                                        className="object-contain p-4"
+                                    />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4">NVIDIA HGX B200</h3>
+                                <p className="text-gray-600 text-lg leading-relaxed">
                                     The NVIDIA HGX B200, powered by eight NVIDIA Blackwell GPUs and fifth-generation NVLink™, delivers up to 3× faster training and 15× faster inference compared to previous generations, making it the ideal unified AI platform for businesses at any stage
                                 </p>
                             </div>
                         </div>
 
                         {/* HGX H200 Card */}
-                        <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
-                            <div className="mb-6">
-                                <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H200</h3>
-                                <Image
-                                    src="/compute/h200-1.svg"
-                                    alt="NVIDIA HGX H200"
-                                    width={400}
-                                    height={300}
-                                    className="w-full rounded-lg mb-4"
-                                />
-                                <p className="text-gray-600 text-center">
+                        <div className="rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+                            <div>
+                                <div className="relative h-64 mb-8 bg-black rounded-xl overflow-hidden">
+                                    <Image
+                                        src="/compute/h200-1.svg"
+                                        alt="NVIDIA HGX H200"
+                                        layout='fill'
+                                        className="object-contain p-4"
+                                    />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4">NVIDIA HGX H200</h3>
+                                <p className="text-gray-600 text-lg leading-relaxed">
                                     The first GPU featuring HBM3e memory, the H200 sets new standards for generative AI and HPC workloads with unprecedented memory capacity and bandwidth, significantly accelerating LLM training and inference performance
                                 </p>
                             </div>
                         </div>
 
                         {/* HGX H100 Card */}
-                        <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
-                            <div className="mb-6">
-                                <h3 className="text-2xl font-bold mb-4 text-center">NVIDIA HGX H100</h3>
-                                <Image
-                                    src="/compute/h100.svg"
-                                    alt="NVIDIA HGX H100"
-                                    width={400}
-                                    height={300}
-                                    className="w-full rounded-lg mb-4"
-                                />
-                                <p className="text-gray-600 text-center">
+                        <div className="rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+                            <div>
+                                <div className="relative h-64 mb-8 bg-black rounded-xl overflow-hidden">
+                                    <Image
+                                        src="/compute/h100.svg"
+                                        alt="NVIDIA HGX H100"
+                                        layout='fill'
+                                        className="object-contain p-4"
+                                    />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4">NVIDIA HGX H100</h3>
+                                <p className="text-gray-600 text-lg leading-relaxed">
                                     Built on the NVIDIA Hopper™ architecture with dedicated Transformer Engine, the H100 accelerates LLMs by up to 30×, setting new benchmarks for conversational AI and efficiently powering trillion-parameter language models
                                 </p>
                             </div>

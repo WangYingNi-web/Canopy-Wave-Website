@@ -42,7 +42,7 @@ export default function Newsroom() {
     ];
 
     return (
-        <main className="min-h-screen relative text-gray-600">
+        <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
             <Header />
             {/* Hero Section */}
             <div className="w-full h-[450px] relative mt-[84px]">
@@ -72,7 +72,10 @@ export default function Newsroom() {
             {/* Blog Section */}
             <div id='blog' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Blog</h2>
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Blog</h2>
+                    </SlideUp>
+
                     {/* <Link href="/blog" className="text-gray-600 hover:text-gray-600 inline-flex items-center">
                         <span className="flex items-center">
                             See All
@@ -120,7 +123,9 @@ export default function Newsroom() {
             {/* Events Section */}
             <div id='events' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Events</h2>
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Events</h2>
+                    </SlideUp>
                     {/* <Link href="/events" className="text-gray-600 hover:text-gray-600 inline-flex items-center">
                         <span className="flex items-center">
                             See All
