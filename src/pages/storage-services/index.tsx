@@ -120,7 +120,7 @@ export default function StorageServices() {
       </div>
 
       {/* Local Storage Section */}
-      <div id='local-storage' className="bg-[#F9F9F9] sm:py-16 py-12">
+      <div id='local-storage' className="bg-[#F9F9F9] sm:py-20 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
@@ -284,7 +284,7 @@ export default function StorageServices() {
       </div>
 
       {/* Object Storage */}
-      <div id='object-storage' className="bg-[#F9F9F9] sm:py-16 py-12">
+      <div id='object-storage' className="bg-[#F9F9F9] sm:py-20 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>

@@ -66,8 +66,11 @@ export default function SolutionsPage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
-                                    Canopy Wave delivers high-performance GPU clusters powered by the latest NVIDIA GPUs, including the B200, H200, and H100. Our infrastructure is built for 99.99% uptime, backed by 24/7 expert support and aligned with the highest security standards to ensure data protection and reliability
+                                <p className="text-gray-600 mb-4 sm:pr-10">
+                                    Canopy Wave delivers high-performance GPU clusters powered by the latest NVIDIA GPUs, including the B200, H200, and H100
+                                </p>
+                                <p className="text-gray-600 mb-4 sm:pr-10">
+                                Our infrastructure is built for 99.99% uptime, backed by 24/7 expert support and aligned with the highest security standards to ensure data protection and reliability
                                 </p>
                             </SlideUp>
                         </div>

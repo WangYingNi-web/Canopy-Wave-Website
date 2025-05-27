@@ -334,7 +334,7 @@ export default function SolutionsPage() {
             <div className="bg-[#F9F9F9] border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Scalable Infrastructure for Projects of Any Size</h2>
+                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Whether you're rendering a single 4K animation or a complex feature-length film, our VM-based infrastructure scales horizontally and vertically, supporting as many rendering nodes as your project requires—without the headache of managing hardware
                         </p>

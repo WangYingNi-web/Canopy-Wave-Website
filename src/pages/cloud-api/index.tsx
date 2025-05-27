@@ -117,11 +117,19 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 
 export default function PlatformPage() {
     useScrollToHash();
-    const [openSection, setOpenSection] = useState<string | null>('api-key');
+    const [sections, setSections] = useState<Record<string, boolean>>({
+        'api-key': true,
+        'api-call': false,
+        'api-endpoints': false
+    });
 
     const toggleSection = (section: string) => {
-        setOpenSection(openSection === section ? null : section);
+        setSections(prev => ({
+            ...prev,
+            [section]: !prev[section]
+        }));
     };
+
 
     const apiEndpoints: ApiEndpointProps[] = [
         {
@@ -400,7 +408,7 @@ export default function PlatformPage() {
                         >
                             <h3>Obtaining an API Key</h3>
                             <svg
-                                className={`w-6 h-6 transform transition-transform ${openSection === 'api-key' ? 'rotate-180' : ''}`}
+                                className={`w-6 h-6 transform transition-transform ${sections['api-key'] ? 'rotate-180' : ''}`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -408,7 +416,7 @@ export default function PlatformPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        {openSection === 'api-key' && (
+                        {sections['api-key'] && (
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
                                 <p className="text-gray-600">
                                     To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io),then follow these steps to generate an API key:
@@ -431,7 +439,7 @@ export default function PlatformPage() {
                         >
                             <h3>Making an API Call</h3>
                             <svg
-                                className={`w-6 h-6 transform transition-transform ${openSection === 'api-call' ? 'rotate-180' : ''}`}
+                                className={`w-6 h-6 transform transition-transform ${sections['api-call'] ? 'rotate-180' : ''}`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -439,7 +447,7 @@ export default function PlatformPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        {openSection === 'api-call' && (
+                        {sections['api-call'] && (
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
                                 <div className="text-gray-600">
                                     <p>To make a request to the API, include an HTTP Bearer header with your API key:</p>
@@ -462,7 +470,7 @@ export default function PlatformPage() {
                         >
                             <h3>REST API Endpoints</h3>
                             <svg
-                                className={`w-6 h-6 transform transition-transform ${openSection === 'api-endpoints' ? 'rotate-180' : ''}`}
+                                className={`w-6 h-6 transform transition-transform ${sections['api-endpoints'] ? 'rotate-180' : ''}`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -470,7 +478,7 @@ export default function PlatformPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        {openSection === 'api-endpoints' && (
+                        {sections['api-endpoints'] && (
                             <div className="mt-4">
                                 {apiEndpoints.map((endpoint, index) => (
                                     <ApiEndpoint key={index} {...endpoint} />
