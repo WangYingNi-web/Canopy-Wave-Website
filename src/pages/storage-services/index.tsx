@@ -141,7 +141,7 @@ export default function StorageServices() {
               {/* Performance Optimized Design */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray'/>
+                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray' />
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Performance Optimized Design</h3>
                   </FadeIn>
@@ -170,7 +170,7 @@ export default function StorageServices() {
               {/* Security Isolation Mechanism */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray'/>
+                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray' />
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Security Isolation Mechanism</h3>
                   </FadeIn>
@@ -196,7 +196,7 @@ export default function StorageServices() {
               {/* HPC Compatibility */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray'/>
+                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray' />
                   <FadeIn>
                     <h3 className="text-2xl font-bold">HPC Compatibility</h3>
                   </FadeIn>
@@ -305,7 +305,7 @@ export default function StorageServices() {
               {/* Designed for scalability and durability */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray'/>
+                  <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray' />
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
                   </FadeIn>
@@ -324,7 +324,7 @@ export default function StorageServices() {
               {/* Accessed using HTTP-based protocols */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray'/>
+                  <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray' />
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Accessed using HTTP-based protocols</h3>
                   </FadeIn>
@@ -342,7 +342,7 @@ export default function StorageServices() {
               {/* Optimized for unstructured data */}
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray'/>
+                  <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray' />
                   <FadeIn>
                     <h3 className="text-2xl font-bold">Optimized for unstructured data</h3>
                   </FadeIn>
@@ -371,8 +371,11 @@ export default function StorageServices() {
       </div>
 
       {/* Ready to Get Started Section */}
-      <div className="bg-[#F9F9F9] border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
+      <div
+        className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+        style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
             <p className="text-gray-600 mb-8 mx-auto text-lg">

@@ -256,8 +256,11 @@ export default function NetworkingServices() {
                 </div>
             </div>
 
-            <div className="bg-[#F9F9F9] border border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+            <div
+                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
                     </SlideUp>

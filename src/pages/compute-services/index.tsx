@@ -577,10 +577,21 @@ export default function ComputeServicesPage() {
                     </div>
                 </div>
             </div>
-
+            {/* <video
+                className="w-[400px] h-[400px] mx-auto rounded-lg"
+                autoPlay
+                muted
+                loop
+            >
+                <source src="/videos/aaaa.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video> */}
             {/* Ready to Get Started Section */}
-            <div className="bg-[#F9F9F9] border border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div
+                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Ready to get started?</h2>
                     </SlideUp>

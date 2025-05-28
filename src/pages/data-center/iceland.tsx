@@ -368,8 +368,11 @@ export default function IcelandDataCenter() {
                 </div>
             </div>
             {/* Where Will You Deploy Section */}
-            <div className="bg-[#F9F9F9] border border-gray-200 sm:py-24 py-16">
-                <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div
+                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
                         <SlideUp>
                             <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">

@@ -84,7 +84,7 @@ export default function AboutPage() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
-              Canopy Wave is a cloud purpose-built for scaling, supporting, and accelerating GenAI. 
+              Canopy Wave is a cloud purpose-built for scaling, supporting, and accelerating GenAI.
               We&apos;re a comprehensive platform and strategic partner designed to tackle Today – and tomorrow's - challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads
             </p>
           </SlideUp>
@@ -227,8 +227,11 @@ export default function AboutPage() {
       </div>
 
       {/* Contact Section */}
-      <div className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <div
+        className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+        style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 sm:mb-8">Work with us</h2>
           </SlideUp>
