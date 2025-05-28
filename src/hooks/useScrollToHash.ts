@@ -20,7 +20,7 @@ export const useScrollToHash = () => {
               behavior: 'smooth'
             });
           }
-        }, 200);
+        }, 100);
       }
     };
 

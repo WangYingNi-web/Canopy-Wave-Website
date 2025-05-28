@@ -184,9 +184,12 @@ export default function Index() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24">
+        <div
+          className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+          style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl sm:text-5xl font-extrabold mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
+            <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <SlideUp>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -207,6 +210,7 @@ export default function Index() {
             </div>
           </div>
         </div>
+
       </div>
 
       <Footer />

@@ -2,30 +2,42 @@
 
 import Image from 'next/image';
 import IwsLink from './IwsLink'
+import { useRouter } from 'next/router'
 
 export default function Footer() {
+    const router = useRouter()
+
+    const reloadClick = () => {
+        router.push('/').then(() => {
+            router.reload();
+        });
+    };
+
     return (
         <footer className="border-t bg-[#F9F9F9]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="flex flex-col sm:flex-row justify-between items-center border-b pb-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+                <div className="flex flex-col sm:flex-row justify-between items-center border-b pb-8">
                     <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
-                        <Image
-                            src="/canopy.svg"
-                            alt="Canopy Wave Logo"
-                            width={48}
-                            height={48}
-                        />
-                        <span className="font-bold text-gray-600">Canopy Wave</span>
+                        <IwsLink href="/" className="flex items-center">
+                            <Image
+                                src="/canopy.svg"
+                                alt="Canopy Wave Logo"
+                                width={50}
+                                height={50}
+                                priority
+                            />
+                            <span className="text-l font-bold text-gray-600 ml-2">Canopy Wave</span>
+                        </IwsLink>
                     </div>
                     <IwsLink
                         href="/contact"
                         className="px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50 mb-4 sm:mb-0"
                     >
-                        Contact us
+                        How To Buy
                     </IwsLink>
                 </div>
 
-                
+
                 <div className="flex flex-col lg:flex-row justify-between items-start mb-12 pt-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 w-full lg:w-auto">
                         <div>
@@ -89,7 +101,7 @@ export default function Footer() {
 
 
                 <div className="border-t w-full">
-                    <div className="flex flex-col sm:flex-row justify-between items-center pt-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-center pt-12">
                         <p className="text-sm text-gray-500 mb-4 sm:mb-0">© 2025 All rights reserved.</p>
                         <div className="flex items-center space-x-6">
                             {/* <IwsLink href="/legal" className="text-sm text-[#80B224] hover:text-[#6a9420]">Terms of Use</IwsLink> */}

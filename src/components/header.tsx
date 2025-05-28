@@ -52,6 +52,13 @@ export default function Header() {
     setShowMobileAbout(false);
     setShowMobileSubMenu(null);
   };
+
+  // const reloadClick = () => {
+  //   router.push('/').then(() => {
+  //     router.reload();
+  //   });
+  // };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -134,7 +141,7 @@ export default function Header() {
                         <div>
                           <h3 className="font-semibold mb-4">
                             <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
-                              Compute Services
+                              Compute Services  
                               <svg
                                 className="w-4 h-4 ml-1"
                                 fill="none"
