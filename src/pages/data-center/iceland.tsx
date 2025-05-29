@@ -14,7 +14,7 @@ export default function IcelandDataCenter() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[450px] relative mt-[84px]">
+            <div className="w-full h-[550px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -23,9 +23,9 @@ export default function IcelandDataCenter() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
+                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
                                 Data Center
                             </h1>
                         </SlideUp>
@@ -54,7 +54,7 @@ export default function IcelandDataCenter() {
                         </div>
                         <div className="pl-4">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     Deploy close to your users — from the dashboard or API
                                 </h2>
                             </SlideUp>
@@ -86,11 +86,11 @@ export default function IcelandDataCenter() {
 
             {/* Blönduós Section */}
             <div id='iceland1' className="bg-[#F9F9F9]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Blönduós</h2>
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Blönduós</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
@@ -232,7 +232,7 @@ export default function IcelandDataCenter() {
                         {/* Left Content */}
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Akureyri</h2>
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Akureyri</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
@@ -340,7 +340,7 @@ export default function IcelandDataCenter() {
                         </div>
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Future Locations in Planning</h2>
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Future Locations in Planning</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-8 text-lg">
@@ -370,12 +370,12 @@ export default function IcelandDataCenter() {
             {/* Where Will You Deploy Section */}
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                            <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                 Where will you deploy?
                             </h2>
                         </SlideUp>

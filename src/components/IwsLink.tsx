@@ -27,15 +27,12 @@ function IwsLink(props: Props) {
     const targetHash = href.split('#')[1] || '';
     
     if (currentPath === targetPath && currentHash === targetHash) {
-      // 如果路由和哈希都没有变化，调用reload方法
+      // 先滚动到顶部，然后重新加载页面
+      window.scrollTo(0, 0);
       router.reload();
-      console.log("1111");
-      
     }else {
       // 如果路由或哈希变化，使用push方法
       router.push(href);
-      console.log("2222");
-      console.log("变化了");
     }
   };
 

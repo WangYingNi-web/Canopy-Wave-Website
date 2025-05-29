@@ -12,7 +12,7 @@ export default function SolutionsPage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[450px] relative mt-[84px]">
+            <div className="w-full h-[550px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
@@ -21,14 +21,14 @@ export default function SolutionsPage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
+                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
                                 Rendering
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-lg mt-8 text-center">
+                            <p className="text-white text-xl mt-8 text-center">
                                 Performance of bare metal, with the flexibility and simplicity of the cloud
                             </p>
                         </SlideUp>
@@ -38,13 +38,13 @@ export default function SolutionsPage() {
 
             {/* Bare-Metal Performance in a Virtual Environment */}
             <div className='bg-[#F5F9F4]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Bare-Metal Performance in a Virtual Environment</h2>
+                            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Bare-Metal Performance in a Virtual Environment</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-xl text-center max-w-4xl mx-auto mb-16">
                                 Our virtual machines are engineered to match the performance of physical hardware. We use GPU-accelerated instances and optimize our virtualization stack to ensure your rendering jobs run as fast and efficiently as possible—without the overhead that typically comes with virtualization
                             </p>
                         </SlideUp>
@@ -113,12 +113,12 @@ export default function SolutionsPage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     On-Demand Flexibility and Minute-Based Billing
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-xl mb-4 sm:pr-10 text-justify">
                                     No more waiting in queues or paying for idle time. With Canopy Wave, you can spin up powerful rendering nodes instantly and only pay for what you use, down to the minute
                                 </p>
                             </SlideUp>
@@ -188,10 +188,10 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Flexible Storage for All Rendering Workflows</h2>
+                            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Flexible Storage for All Rendering Workflows</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-xl text-center max-w-4xl mx-auto mb-16">
                                 Rendering workflows involve a mix of large assets, intermediate files, and final outputs. Our platform offers local, shared, and object storage options, optimized for performance and collaboration
                             </p>
                         </SlideUp>
@@ -260,13 +260,13 @@ export default function SolutionsPage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     Secure, Private Cloud Architecture
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10">
-                                    Your creative assets are your intellectual property—and we treat them <br /> that way. Our infrastructure is built on a private cloud with end-to-end encryption, strict access control, and enterprise-grade data protection
+                                <p className="text-gray-600 text-xl mb-4 sm:pr-10">
+                                    Your creative assets are your intellectual property—and we treat them that way. Our infrastructure is built on a private cloud with end-to-end encryption, strict access control, and enterprise-grade data protection
                                 </p>
                             </SlideUp>
                         </div>
@@ -333,11 +333,11 @@ export default function SolutionsPage() {
             {/* Ready to Get Started Section */}
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Whether you're rendering a single 4K animation or a complex feature-length film, our VM-based infrastructure scales horizontally and vertically, supporting as many rendering nodes as your project requires—without the headache of managing hardware
                         </p>

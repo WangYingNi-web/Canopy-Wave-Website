@@ -16,7 +16,7 @@ export default function StorageServices() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
+      <div className="w-full h-[550px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/compute/banner.svg"
           alt="banner"
@@ -25,9 +25,9 @@ export default function StorageServices() {
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
             <SlideUp>
-              <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
+              <h1 className="text-6xl sm:text-8xl font-black text-[#8CC63F] text-shadow-lg">
                 Storage Services
               </h1>
             </SlideUp>
@@ -43,12 +43,12 @@ export default function StorageServices() {
 
       {/* Multi-tier Storage Architecture Section */}
       <div className='bg-[#F5F9F4]'>
-        <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
+            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
           </SlideUp>
           <SlideUp>
-            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6">
+            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-lg">
               Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture
             </p>
           </SlideUp>
@@ -125,8 +125,8 @@ export default function StorageServices() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Local Storage</h2>
-                <p className="text-gray-600 mb-8">15.6TB of NVMe storage, physically attached to the GPU servers</p>
+                <h2 className="text-4xl sm:text-5xl font-black mb-6">Local Storage</h2>
+                <p className="text-gray-600 mb-8 text-lg">15.6TB of NVMe storage, physically attached to the GPU servers</p>
               </SlideUp>
               <SlideUp>
                 <button
@@ -238,8 +238,8 @@ export default function StorageServices() {
             </div>
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Shared Storage</h2>
-                <p className="text-gray-600 mb-8">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
+                <h2 className="text-4xl sm:text-5xl font-black mb-6">Shared Storage</h2>
+                <p className="text-gray-600 mb-8 text-lg">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
               </SlideUp>
               <SlideUp>
                 <button
@@ -289,8 +289,8 @@ export default function StorageServices() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Object Storage</h2>
-                <p className="text-gray-600 mb-8">10PB+ Object File System, accessed via S3 APIs</p>
+                <h2 className="text-4xl sm:text-5xl font-black mb-6">Object Storage</h2>
+                <p className="text-gray-600 mb-8 text-lg">10PB+ Object File System, accessed via S3 APIs</p>
               </SlideUp>
               <SlideUp>
                 <button
@@ -373,11 +373,11 @@ export default function StorageServices() {
       {/* Ready to Get Started Section */}
       <div
         className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-        style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        // // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
+            <h2 className="text-4xl sm:text-5xl font-black mb-6">Ready to get started?</h2>
             <p className="text-gray-600 mb-8 mx-auto text-lg">
               Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
             </p>
