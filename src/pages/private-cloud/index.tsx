@@ -12,7 +12,7 @@ export default function SolutionsPage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[450px] relative mt-[84px]">
+            <div className="w-full h-[550px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
@@ -23,7 +23,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
+                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
                             Private Cloud and GPUs deployment
                             </h1>
                         </SlideUp>
@@ -38,13 +38,13 @@ export default function SolutionsPage() {
 
             {/* Purpose-Built AI Infrastructure—Delivered Fast, Powered by Excellence*/}
             <div className='bg-[#F9F9F9]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Purpose-Built AI Infrastructure—Delivered Fast, Powered by Excellence</h2>
+                            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Purpose-Built AI Infrastructure—Delivered Fast, Powered by Excellence</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-xl text-center max-w-4xl mx-auto mb-16">
                             When speed, scale, and reliability matter most, Canopy Wave delivers. Our private cloud solution is designed to help enterprises deploy high-performance AI infrastructure quickly and securely—with everything from hardware sourcing to full-stack software ready from day one
                             </p>
                         </SlideUp>
@@ -63,7 +63,7 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-extrabold text-xl mb-4 text-center">The World’s Best Infrastructure Experts</h3>
+                            <h3 className="font-black text-xl mb-4 text-center">The World’s Best Infrastructure Experts</h3>
                             <p className="text-gray-600 text-center">
                             At Canopy Wave, you’re not just getting a service—you’re partnering with a team of elite infrastructure professionals who have built and scaled some of the largest AI data centers in the world. We bring deep experience, precision, and efficiency to every deployment
                             </p>
@@ -80,7 +80,7 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-extrabold text-xl mb-4 text-center">Unmatched Deployment Speed</h3>
+                            <h3 className="font-black text-xl mb-4 text-center">Unmatched Deployment Speed</h3>
                             <p className="text-gray-600 text-center">
                             Need to scale fast? We specialize in turning white space into a production-ready AI cluster in as little as two weeks. Our team has the proven ability to deploy clusters with over 2,000 GPUs in record time—so your AI workloads don't wait
                             </p>
@@ -97,7 +97,7 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-extrabold text-xl mb-4 text-center">End-to-End Software Stack Ready to Run</h3>
+                            <h3 className="font-black text-xl mb-4 text-center">End-to-End Software Stack Ready to Run</h3>
                             <p className="text-gray-600 text-center">
                             We provide a fully integrated software stack optimized for AI training and inference. When we hand over the cluster, it's not just powered on—it's production-ready. No configuration delays. No extra setup. Just log in and start scaling your AI workloads
                             </p>
@@ -117,7 +117,7 @@ export default function SolutionsPage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-xl mb-4 sm:pr-10">
                                 Canopy Wave’s supply chain control and vendor relationships mean less waiting and more doing. Whether you're sourcing GPUs, networking gear, or storage systems, we take the hassle out of procurement and help you access the hardware you need—faster and at scale
                                 </p>
                             </SlideUp>
@@ -198,11 +198,11 @@ export default function SolutionsPage() {
             {/* Ready to Get Started Section */}
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Ready to get started?</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>

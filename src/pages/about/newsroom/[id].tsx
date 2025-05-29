@@ -14,7 +14,7 @@ export default function NewsroomDetail() {
         <div className="bg-[#F9F9F9] rounded-lg shadow-xl overflow-hidden my-8">
           <div className="p-8">
             <SlideUp>
-            <h2 className="text-4xl font-extrabold mb-6 text-center">Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption</h2>
+            <h2 className="text-4xl font-black mb-6 text-center">Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption</h2>
             </SlideUp>
             <p className="text-gray-700 mb-6 leading-relaxed">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states. This collaboration brings together Canopy Wave’s cutting-edge instant GPU clusters and ConfidentialMind’s deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications</p>
             <h3 className="text-3xl font-bold mb-4">Unlocking Instant Cloud AI Infrastructure</h3>

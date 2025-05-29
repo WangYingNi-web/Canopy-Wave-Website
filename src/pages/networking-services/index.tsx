@@ -13,7 +13,7 @@ export default function NetworkingServices() {
     return (
         <main className="min-h-screen text-gray-600 relative">
             <Header />
-            <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
+            <div className="w-full h-[550px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/networking/banner.svg"
                     alt="banner"
@@ -24,7 +24,7 @@ export default function NetworkingServices() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
+                            <h1 className="text-6xl sm:text-8xl font-black text-[#8CC63F] text-shadow-lg">
                                 Networking<br />
                                 Services
                             </h1>
@@ -40,17 +40,17 @@ export default function NetworkingServices() {
 
             {/* NVIDIA QUANTUM INFINIBAND CLUSTER NETWORKING */}
             <div className="bg-[#F5F9F4] py-4">
-                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     InfiniBand  Networking
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-lg">
                                     Quantum InfiniBand is a high-performance interconnect solution
                                     primarily developed by NVIDIA for AI workloads.
                                     InfiniBand networking is used to support next-generation
@@ -181,10 +181,10 @@ export default function NetworkingServices() {
             <div className="bg-[#F9F9F9] py-4">
                 <div id="private-cloud" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">RoceV2 Networking</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">RoceV2 Networking</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16 text-lg">
                             Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI
                         </p>
                     </SlideUp>
@@ -258,11 +258,11 @@ export default function NetworkingServices() {
 
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">

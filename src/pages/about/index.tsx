@@ -29,7 +29,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[450px] relative mt-[84px]">
+      <div className="w-full h-[550px] relative mt-[84px]">
         <Image
           src="/about/banner.svg"
           alt="banner"
@@ -38,9 +38,9 @@ export default function AboutPage() {
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
             <SlideUp>
-              <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
+              <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
                 About Us
               </h1>
             </SlideUp>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <div className="bg-[#F5F9F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl text-gray-600 font-extrabold text-center mb-6">What we do</h2>
+            <h2 className="text-4xl sm:text-5xl text-gray-600 font-black text-center mb-6">What we do</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className='pt-4'>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Our Values</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-6">Our Values</h2>
               </SlideUp>
               <SlideUp>
                 <p className="text-gray-600 mb-8">
@@ -229,11 +229,11 @@ export default function AboutPage() {
       {/* Contact Section */}
       <div
         className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-        style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 sm:mb-8">Work with us</h2>
+            <h2 className="text-4xl sm:text-5xl font-black mb-10 sm:mb-8">Work with us</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 mb-8">

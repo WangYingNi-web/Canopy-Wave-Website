@@ -15,7 +15,7 @@ export default function PricingPage() {
             {/* Hero Section */}
             <div className="text-center py-16 pt-40 px-4">
                 <SlideUp>
-                    <h1 className="text-5xl sm:text-6xl font-extrabold mb-4">Compute</h1>
+                    <h1 className="text-5xl sm:text-6xl font-black mb-4">Compute</h1>
                     <p className="text-gray-600 mb-8">
                         Get models to market faster with the latest and greatest NVIDIA chips
                     </p>
@@ -150,7 +150,7 @@ export default function PricingPage() {
                 {/* Other Charges Section */}
                 <div id='other' className="text-center py-16 mb-16 scroll-mt-24">
                     <SlideUp>
-                        <h2 className="text-5xl sm:text-6xl font-extrabold mb-4">Other charges</h2>
+                        <h2 className="text-5xl sm:text-6xl font-black mb-4">Other charges</h2>
                         <p className="text-gray-600 mb-8 px-4">
                             Canopy Wave also provides high-performance storage and networking services
                         </p>
@@ -240,7 +240,7 @@ export default function PricingPage() {
                     <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative cursor-pointer hover:bg-[#7DB535] transition-colors duration-300">
                         <div className="flex flex-col lg:flex-row justify-between items-center">
                             <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
-                                <h2 className="text-4xl sm:text-6xl font-extrabold text-white">Contact us for competitive
+                                <h2 className="text-4xl sm:text-6xl font-black text-white">Contact us for competitive
                                 <br />pricing</h2>
                             </div>
                             <div className="hidden lg:block">

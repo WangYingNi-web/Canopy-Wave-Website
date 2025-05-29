@@ -12,7 +12,7 @@ export default function NetworkingHardwarePage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[450px] relative mt-[84px]">
+            <div className="w-full h-[550px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
@@ -23,7 +23,7 @@ export default function NetworkingHardwarePage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-bold text-white text-center">
+                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
                                 Networking Hardware Solution
                             </h1>
                         </SlideUp>
@@ -38,13 +38,13 @@ export default function NetworkingHardwarePage() {
 
             {/* Canopy Wave Networking Hardware Solutions */}
             <div className='bg-[#F5F9F4]'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
+                            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-xl text-center max-w-4xl mx-auto mb-16">
                                 At Canopy Wave, we know that networking is the backbone—and often the bottleneck—of modern AI infrastructure. That’s why we’ve built a comprehensive, field-tested hardware solution designed to eliminate performance constraints and deliver seamless scalability.
                                 We don’t just sell components—we engineer, qualify, and deploy them in our own high-performance environments, ensuring you get equipment that’s trusted, reliable, and built to perform under real-world AI workloads
                             </p>
@@ -64,7 +64,7 @@ export default function NetworkingHardwarePage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-extrabold text-xl mb-4">Networking Without Bottlenecks</h3>
+                            <h3 className="font-black text-xl mb-4">Networking Without Bottlenecks</h3>
                             <p className="text-gray-600">
                                 AI workloads generate massive amounts of data. If your networking stack can’t keep up, performance suffers
                             </p>
@@ -97,12 +97,12 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     Tested in Production, Proven at Scale
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-xl mb-4 sm:pr-10 text-justify">
                                     Everything we offer is tested and used in our own AI clusters, including multi-thousand GPU environments
                                 </p>
                             </SlideUp>
@@ -172,10 +172,10 @@ export default function NetworkingHardwarePage() {
             <div className='bg-[#F5F9F4]'>
                 <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24 text-center">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">Bare-Metal Performance in a Virtual Environment</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-8">Bare-Metal Performance in a Virtual Environment</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-gray-600 text-xl mb-8">
                             Our virtual machines are engineered to match the performance of physical hardware. We use GPU-accelerated instances and optimize our virtualization stack to ensure your rendering jobs run as fast and efficiently as possible—without the overhead that typically comes with virtualization
                         </p>
                     </SlideUp>
@@ -231,12 +231,12 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     Best Pricing. No Compromise on Quality
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-xl mb-4 sm:pr-10 text-justify">
                                     Thanks to our deep relationships with OEMs and supply chain partners
                                 </p>
                             </SlideUp>
@@ -309,12 +309,12 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
                                     From Equipment to Deployment
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-xl mb-4 sm:pr-10 text-justify">
                                     Beyond supplying equipment, our team can also help you
                                 </p>
                             </SlideUp>
@@ -399,11 +399,11 @@ export default function NetworkingHardwarePage() {
             {/* Ready to Get Started Section */}
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Ready to get started?</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Ready to get started?</h2>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>

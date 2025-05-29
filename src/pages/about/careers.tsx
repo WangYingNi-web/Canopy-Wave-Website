@@ -13,7 +13,7 @@ export default function Careers() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[450px] relative mt-[84px]">
+            <div className="w-full h-[550px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -22,9 +22,9 @@ export default function Careers() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[120px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center">
+                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
                                 Careers
                             </h1>
                         </SlideUp>
@@ -40,7 +40,7 @@ export default function Careers() {
             <div className="bg-[#F5F9F4] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">
                             Even if you don’t meet every <br /> requirement, we’d love to hear from you
                         </h2>
                     </SlideUp>
@@ -121,7 +121,7 @@ export default function Careers() {
             <div className="bg-[#F9F9F9] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Open positions</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Open positions</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-12 max-w-4xl">

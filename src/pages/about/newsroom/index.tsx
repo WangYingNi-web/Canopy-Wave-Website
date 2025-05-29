@@ -45,7 +45,7 @@ export default function Newsroom() {
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[450px] relative mt-[84px]">
+            <div className="w-full h-[550px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -54,9 +54,9 @@ export default function Newsroom() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[120px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-white text-center leading-tight">
+                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center leading-tight">
                                 Newsroom
                             </h1>
                         </SlideUp>

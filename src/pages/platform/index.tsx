@@ -15,7 +15,7 @@ export default function PlatformPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[450px] relative mt-[84px] bg-[#EDF2E4]">
+            <div className="w-full h-[550px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/platform/banner.svg"
                     alt="banner"
@@ -24,9 +24,9 @@ export default function PlatformPage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-extrabold text-[#8CC63F]">
+                            <h1 className="text-6xl sm:text-8xl font-black text-[#8CC63F] text-shadow-lg">
                                 Platform
                             </h1>
                         </SlideUp>
@@ -47,7 +47,7 @@ export default function PlatformPage() {
                         {/* 左侧标题部分 */}
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Canopy DCIM</h2>
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Canopy DCIM</h2>
                                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                                     Empower world-class AI infrastructure with our DCIM (Data Center Infrastructure Management) platform—unlocking peak performance and complete operational visibility
                                 </p>
@@ -112,7 +112,7 @@ export default function PlatformPage() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Wave GPU Cloud Platform</h2>
+                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Wave GPU Cloud Platform</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 text-lg">Using Canopy Wave cloud platform to get access and manage your MULTI-GPU instances</p>
@@ -154,11 +154,11 @@ export default function PlatformPage() {
             {/* Learn more about platform now Section */}
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">Learn more about platform now</h2>
+                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Learn more about platform now</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8 mx-auto text-lg">

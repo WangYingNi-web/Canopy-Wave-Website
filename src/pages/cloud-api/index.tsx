@@ -392,7 +392,7 @@ export default function PlatformPage() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40">
                 <SlideUp>
-                    <h1 className="text-5xl sm:text-6xl font-extrabold text-center mb-8">Manage Cloud via API</h1>
+                    <h1 className="text-5xl sm:text-6xl font-black text-center mb-8">Manage Cloud via API</h1>
                 </SlideUp>
                 <SlideUp>
                     <p className="text-lg text-gray-600 text-center mb-16">

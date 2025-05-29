@@ -102,20 +102,18 @@ export default function Header() {
                   height={50}
                   priority
                 />
-                <span className="text-l font-bold text-gray-600 ml-2">Canopy Wave</span>
+                <span className="text-lg font-bold text-gray-600 ml-2">Canopy Wave</span>
               </IwsLink>
             </div>
           </div>
 
           {/* 右侧导航部分 */}
-          <div className="hidden md:flex flex-1 justify-between items-center">
+          <div className="hidden md:flex flex-1 items-center justify-between pl-20">
             {/* 导航菜单居中 */}
-            <div className="flex-1"></div>
             <div className="flex items-center space-x-8 h-16">
-
               <div className="relative" ref={menuRef}>
                 <button
-                  className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 text-[16px] font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowProducts(!showProducts)}
                 >
                   Products
@@ -135,7 +133,7 @@ export default function Header() {
                 </button>
 
                 {showProducts && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-[30px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         <div>
@@ -269,7 +267,7 @@ export default function Header() {
 
               <div className="relative" ref={solutionsRef}>
                 <button
-                  className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 text-[16px] font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowSolutions(!showSolutions)}
                 >
                   Solutions
@@ -289,7 +287,7 @@ export default function Header() {
                 </button>
 
                 {showSolutions && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowSolutions(false) }}>AI Model Training</IwsLink></li>
@@ -305,7 +303,7 @@ export default function Header() {
 
               <div className="relative" ref={pricingRef}>
                 <button
-                  className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 text-[16px] font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowPricing(!showPricing)}
                 >
                   Pricing
@@ -325,7 +323,7 @@ export default function Header() {
                 </button>
 
                 {showPricing && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
@@ -341,7 +339,7 @@ export default function Header() {
 
               <div className="relative" ref={datacenterRef}>
                 <button
-                  className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 text-[16px] font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowDataCenter(!showDataCenter)}
                 >
                   Data Center
@@ -361,7 +359,7 @@ export default function Header() {
                 </button>
 
                 {showDataCenter && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li>
@@ -399,7 +397,7 @@ export default function Header() {
 
               <div className="relative" ref={resourcesRef}>
                 <button
-                  className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 text-[16px] font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowResources(!showResources)}
                 >
                   Resources
@@ -419,7 +417,7 @@ export default function Header() {
                 </button>
 
                 {showResources && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/cloud-api" className="text-gray-600 hover:text-gray-900">Manage Cloud Via API</IwsLink></li>
@@ -428,9 +426,10 @@ export default function Header() {
                   </div>
                 )}
               </div>
+
               <div className="relative" ref={aboutRef}>
                 <button
-                  className="text-gray-600 text-sm font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 text-[16px] font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowAbout(!showAbout)}
                 >
                   About
@@ -450,7 +449,7 @@ export default function Header() {
                 </button>
 
                 {showAbout && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-8 shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900" onClick={() => setShowAbout(false)}>About Us</IwsLink></li>
@@ -484,10 +483,10 @@ export default function Header() {
               </div>
             </div>
             {/* 右侧按钮组 */}
-            <div className="flex items-center space-x-4 ml-16">
+            <div className="flex items-center space-x-4">
               <IwsLink
                 href="https://cloud.canopywave.io/"
-                className="px-4 py-2 text-white bg-[#8CC63F] rounded hover:bg-[#7ab32f] transition-colors text-sm font-medium"
+                className="px-[16px] py-2 text-white bg-[#8CC63F] rounded hover:bg-[#7ab32f] transition-colors text-[16px] font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -495,7 +494,7 @@ export default function Header() {
               </IwsLink>
               <IwsLink
                 href="/contact"
-                className="text-gray-600 hover:text-[#8CC63F] text-sm font-medium"
+                className="text-gray-600 hover:text-[#8CC63F] text-[16px] font-medium"
               >
                 Contact Us
               </IwsLink>

@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
-		// maxWidth: {
-		// 	'7xl': '1400px',
-		// },
+		maxWidth: {
+			'7xl': '1330px',
+		},
 		extend: {
 			textShadow: {
 			  'lg': '2px 2px 4px rgba(0, 0, 0, 0.25)',

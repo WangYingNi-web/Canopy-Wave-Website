@@ -31,7 +31,7 @@ export default function Index() {
       <Header />
       <div className="w-full text-gray-600">
         {/* Hero Section */}
-        <div className="w-full h-[450px] relative mt-[84px]">
+        <div className="w-full h-[550px] relative mt-[84px]">
           <Image
             src="/home_banner.svg"
             alt="Home_Banner"
@@ -40,9 +40,9 @@ export default function Index() {
             priority
           />
           <div className="absolute inset-0 z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
               <SlideUp>
-                <h1 className="text-6xl sm:text-7xl font-extrabold text-[#80B224] text-center text-shadow-lg">
+                <h1 className="text-6xl sm:text-8xl font-black text-[#80B224] text-center text-shadow-lg">
                   Instant GPU <br /> Cluster for <br /> Enterprise AI
                 </h1>
               </SlideUp>
@@ -52,10 +52,10 @@ export default function Index() {
         </div>
 
         {/* Features Section */}
-        <div className="bg-[#F9F9F9] py-12 sm:py-20">
+        <div className="bg-[#F9F9F9] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
-              <h2 className="text-4xl sm:text-5xl md:text-5xl font-extrabold mb-12 sm:mb-16 text-center">
+              <h2 className="text-4xl sm:text-5xl md:text-5xl font-black mb-12 sm:mb-16 text-center">
                 Instantly allocated GPU cluster <br /> with ready-to-go AI stack
               </h2>
             </SlideUp>
@@ -91,7 +91,7 @@ export default function Index() {
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 sm:mb-16 text-center">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-12 sm:mb-16 text-center">
                 NVIDIA H100 &H200S <br /> Are Now Available
               </h2>
             </SlideUp>
@@ -122,7 +122,7 @@ export default function Index() {
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
                 <SlideUp>
-                  <h2 className="text-3xl sm:text-5xl font-extrabold mb-8 sm:mb-10">Powered By Our Global Network</h2>
+                  <h2 className="text-3xl sm:text-5xl font-black mb-8 sm:mb-10">Powered By Our Global Network</h2>
                 </SlideUp>
                 <SlideUp>
                   <p className="text-gray-600 mb-8 text-lg sm:text-xl leading-relaxed">
@@ -137,14 +137,16 @@ export default function Index() {
                 </SlideUp>
               </div>
               <div className="w-full md:w-1/2">
-                <Image
-                  src="/World.svg"
-                  alt="Global Network"
-                  width={750}
-                  height={480}
-                  className="w-full"
-                  priority
-                />
+                <SlideUp>
+                  <Image
+                    src="/World.svg"
+                    alt="Global Network"
+                    width={750}
+                    height={480}
+                    className="w-full"
+                    priority
+                  />
+                </SlideUp>
               </div>
             </div>
           </div>
@@ -154,7 +156,7 @@ export default function Index() {
         <div className="bg-[#F9F9F9] py-12 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
-              <h2 className="text-3xl sm:text-5xl font-extrabold mb-12 text-left">
+              <h2 className="text-3xl sm:text-5xl font-black mb-12 text-left">
                 Latest CanopyWave Blog: Insights and Updates <br /> from Our Team
               </h2>
             </SlideUp>
@@ -186,10 +188,10 @@ export default function Index() {
         {/* Contact Section */}
         <div
           className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-          style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
+            <h2 className="text-4xl sm:text-5xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <SlideUp>
                 <div className="flex flex-col sm:flex-row gap-4">
