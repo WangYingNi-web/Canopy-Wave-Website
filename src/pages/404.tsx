@@ -4,7 +4,7 @@ import IwsLink from '@/components/IwsLink'
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-[#F5F9F4]">
+    <main className="min-h-screen bg-[#F5F7F4]">
       <Header />
       <div className="min-h-[calc(100vh)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
         <div className="flex flex-col items-center justify-center text-center py-16">

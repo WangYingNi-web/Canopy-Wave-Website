@@ -37,7 +37,7 @@ export default function SolutionsPage() {
             </div>
 
             {/* Bare-Metal Performance in a Virtual Environment */}
-            <div className='bg-[#F5F9F4]'>
+            <div className='bg-[#F5F7F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="text-center mb-16">
                         <SlideUp>
@@ -184,7 +184,7 @@ export default function SolutionsPage() {
             </div>
 
             {/* Bare-Metal Performance in a Virtual Environment */}
-            <div className='bg-[#F5F9F4]'>
+            <div className='bg-[#F5F7F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                     <div className="text-center mb-16">
                         <SlideUp>
