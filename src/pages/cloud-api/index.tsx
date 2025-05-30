@@ -40,7 +40,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 }) => (
     <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
         <div className="text-gray-600">
-            <strong className="text-2xl">{title}</strong>
+            <strong className="text-l">{title}</strong>
             <div className="mt-2">
                 <span className="font-semibold">{method}</span>{' '}
                 <code className="bg-gray-100 px-2 py-1 rounded">{endpoint}</code>
@@ -392,10 +392,10 @@ export default function PlatformPage() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40">
                 <SlideUp>
-                    <h1 className="text-5xl sm:text-6xl font-black text-center mb-8">Manage Cloud via API</h1>
+                    <h1 className="text-4xl sm:text-5xl font-black text-center mb-8">Manage Cloud via API</h1>
                 </SlideUp>
                 <SlideUp>
-                    <p className="text-lg text-gray-600 text-center mb-16">
+                    <p className="text-sm text-gray-600 text-center mb-16">
                         Canopy Wave supports a set of REST API to enable servers to develop management clients or to integrate VMS functionality into users' own custom management infrastructure
                     </p>
                 </SlideUp>
@@ -418,7 +418,7 @@ export default function PlatformPage() {
                         </button>
                         {sections['api-key'] && (
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 text-sm">
                                     To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io),then follow these steps to generate an API key:
                                 </p>
                                 <ol className="list-decimal list-inside text-gray-600 mt-4">

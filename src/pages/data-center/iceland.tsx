@@ -14,7 +14,7 @@ export default function IcelandDataCenter() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[500px] relative mt-[84px]">
+            <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -25,12 +25,12 @@ export default function IcelandDataCenter() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-black text-white text-center">
+                            <h1 className="text-5xl sm:text-6xl font-black text-white text-center">
                                 Data Center
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-lg mt-8 text-center">
+                            <p className="text-white text-sm mt-8 text-center">
                                 At Canopy Wave, we’ve set down roots across the globe with these world-class office spaces
                             </p>
                         </SlideUp>
@@ -54,12 +54,12 @@ export default function IcelandDataCenter() {
                         </div>
                         <div className="pl-4">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
                                     Deploy close to your users — from the dashboard or API
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-6 text-lg">
+                                <p className="text-gray-600 mb-6 text-sm">
                                     Your app's performance depends on how close you can deploy to your end users. With canopywave, you can deploy in strategic locations within seconds, dramatically reducing latency and delivering the seamless experience your users demand
                                 </p>
                             </SlideUp>
@@ -67,13 +67,13 @@ export default function IcelandDataCenter() {
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <button
                                         onClick={() => window.location.href = '/contact'}
-                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
                                     >
                                         Learn More
                                     </button>
                                     <button
                                         onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                                        className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                                        className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200 text-sm"
                                     >
                                         Launch GPU Clusters
                                     </button>
@@ -90,10 +90,10 @@ export default function IcelandDataCenter() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Blönduós</h2>
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Blönduós</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <p className="text-gray-600 mb-8 text-sm">
                                     The Blönduós Data Center, situated in northern Iceland, is a state-of-the-art facility designed for high-performance computing (HPC) and artificial intelligence (AI) workloads. Leveraging Iceland's cool climate and abundant renewable energy, the campus offers sustainable and efficient data center solutions
                                 </p>
                             </SlideUp>
@@ -121,8 +121,8 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">Sustainable energy</h3>
-                                            <p className="text-gray-600">
+                                            <h3 className="text-l font-bold mb-2">Sustainable energy</h3>
+                                            <p className="text-gray-600 text-sm">
                                                 Powered entirely by renewable energy sources, including geothermal and hydroelectric power, the campus ensures environmentally friendly operations
                                             </p>
                                         </FadeIn>
@@ -144,8 +144,8 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">Energy efficiency</h3>
-                                            <p className="text-gray-600">
+                                            <h3 className="text-l font-bold mb-2">Energy efficiency</h3>
+                                            <p className="text-gray-600 text-sm">
                                                 The facility boasts a Power Usage Effectiveness (PUE) as low as 1.03, significantly lower than the European average of 1.55, indicating high energy efficiency
                                             </p>
                                         </FadeIn>
@@ -167,8 +167,8 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">High capacity</h3>
-                                            <p className="text-gray-600">
+                                            <h3 className="text-l font-bold mb-2">High capacity</h3>
+                                            <p className="text-gray-600 text-sm">
                                                 With an expansion capability exceeding 100 MW and a fully built-out power capacity of 50 MW, the campus is equipped to handle substantial computational demands
                                             </p>
                                         </FadeIn>
@@ -189,8 +189,8 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">Advanced infrastructure</h3>
-                                            <p className="text-gray-600">
+                                            <h3 className="text-l font-bold mb-2">Advanced infrastructure</h3>
+                                            <p className="text-gray-600 text-sm">
                                                 Designed to Tier 3 standards, the data center includes dual power feeds, indirect air cooling systems, uninterruptible power supplies (UPS), and generators to ensure high availability and reliability
                                             </p>
                                         </FadeIn>
@@ -212,8 +212,8 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-xl font-bold mb-2">8 Certifications</h3>
-                                            <p className="text-gray-600">
+                                            <h3 className="text-l font-bold mb-2">8 Certifications</h3>
+                                            <p className="text-gray-600 text-sm">
                                                 Reflecting its commitment to information security and data protection
                                             </p>
                                         </FadeIn>
@@ -232,10 +232,10 @@ export default function IcelandDataCenter() {
                         {/* Left Content */}
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Akureyri</h2>
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Akureyri</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <p className="text-gray-600 mb-8 text-sm">
                                     The Akureyri data center (ICE03) is a cutting-edge facility designed to meet the growing demands of high-performance computing (HPC) and artificial intelligence (AI) workloads. Strategically located in northern Iceland, ICE03 leverages the region's cool climate and abundant renewable energy resources to deliver sustainable and efficient data center services
                                 </p>
                             </SlideUp>
@@ -265,7 +265,7 @@ export default function IcelandDataCenter() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">100% Renewable energy</h3>
+                            <h3 className="text-l font-bold mb-3">100% Renewable energy</h3>
                             <p className="text-gray-600 text-sm">
                                 ICE03 is powered entirely by Iceland's renewable hydro and geothermal energy sources, contributing to its low carbon footprint
                             </p>
@@ -282,7 +282,7 @@ export default function IcelandDataCenter() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Efficient cooling systems</h3>
+                            <h3 className="text-l font-bold mb-3">Efficient cooling systems</h3>
                             <p className="text-gray-600 text-sm">
                                 The facility utilizes both direct air cooling and liquid cooling technologies, achieving a Power Usage Effectiveness (PUE) as low as 1.2
                             </p>
@@ -299,7 +299,7 @@ export default function IcelandDataCenter() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Tier 3 certification</h3>
+                            <h3 className="text-l font-bold mb-3">Tier 3 certification</h3>
                             <p className="text-gray-600 text-sm">
                                 The facility meets Tier 3 standards, ensuring high availability and redundancy for mission-critical operations
                             </p>
@@ -316,7 +316,7 @@ export default function IcelandDataCenter() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Global access</h3>
+                            <h3 className="text-l font-bold mb-3">Global access</h3>
                             <p className="text-gray-600 text-sm">
                                 Akureyri's position offers low-latency connectivity to major interconnection hubs, including London (17.2 ms), Amsterdam (17.3 ms), and New York (55 ms)
                             </p>
@@ -340,10 +340,10 @@ export default function IcelandDataCenter() {
                         </div>
                         <div>
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-black mb-6">Future Locations in Planning</h2>
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Future Locations in Planning</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <p className="text-gray-600 mb-8 text-sm">
                                     As part of our ongoing growth strategy, we are actively planning additional deployments to support increasing demand and ensure long term scalability
                                 </p>
                             </SlideUp>
@@ -351,13 +351,13 @@ export default function IcelandDataCenter() {
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <button
                                         onClick={() => window.location.href = '/contact'}
-                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
                                     >
                                         Learn More
                                     </button>
                                     <button
                                         onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                                        className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                                        className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200 text-sm"
                                     >
                                         Launch GPU Clusters
                                     </button>
@@ -375,12 +375,12 @@ export default function IcelandDataCenter() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-black mb-6">
+                            <h2 className="text-3xl sm:text-4xl font-black mb-6">
                                 Where will you deploy?
                             </h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 mb-8 text-lg max-w-3xl">
+                            <p className="text-gray-600 mb-8 text-sm max-w-3xl">
                                 Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                             </p>
                         </SlideUp>
@@ -388,13 +388,13 @@ export default function IcelandDataCenter() {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                                    className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                                    className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
                                 >
                                     Try Control Panel
                                 </button>
                                 <button
                                     onClick={() => window.location.href = '/contact'}
-                                    className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                                    className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200 text-sm"
                                 >
                                     Contact Us
                                 </button>

@@ -43,7 +43,7 @@ export default function BlogPage() {
               <div className="mt-8">
                 {blogPosts.map((post) => (
                   <div key={post.id} className="border-b pb-20">
-                    <h2 className="text-2xl font-bold mb-12">{post.title}</h2>
+                    <h2 className="text-l font-bold mb-12">{post.title}</h2>
                     <p className="text-gray-600 mb-12">{post.description}</p>
                     <div className="flex items-center justify-between">
                       <Link
@@ -71,9 +71,9 @@ export default function BlogPage() {
           <section className="bg-[#8CC63F] rounded-lg shadow-lg p-20 text-center mt-28 relative">
             <div className="flex justify-between items-center">
               <div className="text-left">
-                <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Explore Our AI Solutions</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Explore Our AI Solutions</h2>
                 <Button
-                  className="bg-white text-[#8CC63F] hover:bg-gray-100 text-lg px-8 py-3 mt-4"
+                  className="bg-white text-[#8CC63F] hover:bg-gray-100 text-sm px-8 py-3 mt-4"
                   onClick={() => window.location.href = '/contact'}
                 >
                   Contact Us

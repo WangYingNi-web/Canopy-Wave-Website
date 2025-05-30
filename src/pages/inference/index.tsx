@@ -12,7 +12,7 @@ export default function SolutionsPage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[500px] relative mt-[84px]">
+            <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
@@ -23,12 +23,12 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-black text-white text-center">
+                            <h1 className="text-5xl sm:text-6xl font-black text-white text-center">
                             Inference
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-lg mt-8 text-center">
+                            <p className="text-white text-sm mt-8 text-center">
                             Unlock Fast, Flexible, and Secure AI Inference with Canopy Wave
                             </p>
                         </SlideUp>
@@ -42,12 +42,12 @@ export default function SolutionsPage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
                                 Enterprise-Grade AI Acceleration
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-lg mb-4 sm:pr-10">
+                                <p className="text-gray-600 text-sm mb-4 sm:pr-10">
                                     As AI continues to reshape industries, businesses need an inference solution that delivers speed, efficiency, and security—without overcomplicating infrastructure or budgets. At Canopy Wave, we’ve engineered our AI Inference platform to meet these needs head-on, offering a powerful, enterprise-ready solution that’s as flexible as it is reliable
                                 </p>
                             </SlideUp>
@@ -67,11 +67,11 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-black text-lg group-hover:text-white">Flexible, Cost-Efficient Usage</h3>
+                                        <h3 className="font-black text-l group-hover:text-white">Flexible, Cost-Efficient Usage</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px]">
+                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px] text-sm">
                                         Traditional infrastructure models can tie up resources and budgets—even when usage is low. Canopy Wave offers a minute-based billing model, allowing you to scale on-demand and only pay for what you use. Whether you're running short bursts of inference tasks or need continuous uptime, our pricing adapts to your workload—not the other way around
                                     </p>
                                 </FadeIn>
@@ -89,11 +89,11 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-lg group-hover:text-white">Virtual Machines with Bare-Metal Performance</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Virtual Machines with Bare-Metal Performance</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px]">
+                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px] text-sm">
                                         One common trade-off with cloud-based AI services is the performance drop when using virtual machines. Not at Canopy Wave. Our platform is optimized to deliver VM-based infrastructure that performs on par with bare metal, giving you the speed and low latency required for high-throughput AI inference—without the operational complexity of managing physical servers
                                     </p>
                                 </FadeIn>
@@ -111,11 +111,11 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-lg group-hover:text-white">Built on Private Cloud for Maximum Security</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Built on Private Cloud for Maximum Security</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px]">
+                                    <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px] text-sm">
                                         We understand that data privacy and compliance are top priorities. That's why our solution is hosted in a private cloud environment, ensuring full data isolation, enhanced control, and enterprise-grade security. You maintain ownership and visibility of your data throughout its lifecycle
                                     </p>
                                 </FadeIn>
@@ -130,10 +130,10 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">AI-optimized storage solutions</h2>
+                            <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">AI-optimized storage solutions</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-lg text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-sm text-center max-w-4xl mx-auto mb-16">
                                 Every AI inference pipeline depends on fast and reliable access to data. Canopy Wave supports a flexible, multi-tiered storage architecture
                             </p>
                         </SlideUp>
@@ -152,8 +152,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-lg mb-4 text-center">Local Storage</h3>
-                            <p className="text-gray-600 text-center">
+                            <h3 className="font-bold text-sm mb-4 text-center">Local Storage</h3>
+                            <p className="text-gray-600 text-center text-sm">
                             For ultra-low-latency access
                             </p>
                         </div>
@@ -169,8 +169,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-lg mb-4 text-center">Shared Storage</h3>
-                            <p className="text-gray-600 text-center">
+                            <h3 className="font-bold text-sm mb-4 text-center">Shared Storage</h3>
+                            <p className="text-gray-600 text-center text-sm">
                             For collaborative workloads
                             </p>
                         </div>
@@ -186,8 +186,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-lg mb-4 text-center">Object Storage</h3>
-                            <p className="text-gray-600 text-center">
+                            <h3 className="font-bold text-sm mb-4 text-center">Object Storage</h3>
+                            <p className="text-gray-600 text-center text-sm">
                             for scalable and cost-efficient data management
                             </p>
                         </div>
@@ -203,8 +203,8 @@ export default function SolutionsPage() {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Ready to get started?</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-lg">
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+                        <p className="text-gray-600 mb-8 mx-auto text-sm">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>
                     </SlideUp>

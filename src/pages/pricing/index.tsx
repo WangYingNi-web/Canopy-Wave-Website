@@ -23,7 +23,7 @@ export default function PricingPage() {
                 <SlideUp>
                     <button
                         onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
                     >
                         Try Control Panel
                     </button>
@@ -43,7 +43,7 @@ export default function PricingPage() {
                                 height={24}
                                 className="mr-8"
                             />
-                            <h3 className="text-xl font-semibold">NVIDIA HGX H100</h3>
+                            <h3 className="text-sm font-semibold">NVIDIA HGX H100</h3>
                         </div>
                     </div>
                     <div className="overflow-x-auto">
@@ -100,7 +100,7 @@ export default function PricingPage() {
                                 width={24}
                                 height={24}
                             />
-                            <h3 className="text-xl font-semibold">NVIDIA HGX H200</h3>
+                            <h3 className="text-sm font-semibold">NVIDIA HGX H200</h3>
                         </div>
                     </div>
                     <div className="overflow-x-auto">
@@ -158,7 +158,7 @@ export default function PricingPage() {
                     <SlideUp>
                         <button
                             onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                            className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md mb-16"
+                            className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md mb-16 text-sm"
                         >
                             Try Control Panel
                         </button>
@@ -174,7 +174,7 @@ export default function PricingPage() {
                                     height={24}
                                     className='svg-gray'
                                 />
-                                <h3 className="text-xl font-semibold">Storage</h3>
+                                <h3 className="text-sm font-semibold">Storage</h3>
                             </div>
                             <div className="overflow-x-auto">
                                 <div className="min-w-[300px]">
@@ -211,7 +211,7 @@ export default function PricingPage() {
                                     className='svg-gray'
 
                                 />
-                                <h3 className="text-xl font-semibold">Networking</h3>
+                                <h3 className="text-sm font-semibold">Networking</h3>
                             </div>
                             <div className="overflow-x-auto">
                                 <div className="min-w-[300px]">
@@ -240,7 +240,7 @@ export default function PricingPage() {
                     <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative cursor-pointer hover:bg-[#7DB535] transition-colors duration-300">
                         <div className="flex flex-col lg:flex-row justify-between items-center">
                             <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
-                                <h2 className="text-4xl sm:text-6xl font-black text-white">Contact us for competitive
+                                <h2 className="text-4xl sm:text-5xl font-black text-white">Contact us for competitive
                                 <br />pricing</h2>
                             </div>
                             <div className="hidden lg:block">

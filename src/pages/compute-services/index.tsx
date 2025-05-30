@@ -15,7 +15,7 @@ export default function ComputeServicesPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[500px] relative mt-[84px] bg-[#F5F7F4]">
+            <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">
                 <Image
                     src="/compute/banner.svg"
                     alt="banner"
@@ -26,12 +26,12 @@ export default function ComputeServicesPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
                         <SlideUp>
-                        <h1 className="text-6xl sm:text-7xl font-black text-[#80B224] text-shadow-lg">
+                        <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
                                 Compute Services
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-lg mt-8">
+                            <p className="text-gray-600 text-sm mt-8">
                                 Canopy Wave uses Virtualization technology to provide world leading <br /> performance GPU for AI training & inference
                             </p>
                         </SlideUp>
@@ -43,7 +43,7 @@ export default function ComputeServicesPage() {
             {/* Highly Performant Section */}
             <div className="bg-[#F5F7F4]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-16">
-                    <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-full" />
@@ -51,15 +51,15 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-4 sm:mb-8">Massive Parallel Processing Power</h2>
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-4 sm:mb-8">Massive Parallel Processing Power</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-2 text-lg">
+                                <p className="text-gray-600 mb-2 text-sm">
                                     AI workloads require performing millions (or billions) of mathematical operations simultaneously
                                 </p>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 text-lg">
+                                <p className="text-gray-600 mb-4 text-sm">
                                     GPUs have thousands of cores designed for parallel computation, ideal for training and running neural networks efficiently
                                 </p>
                             </SlideUp>
@@ -84,7 +84,7 @@ export default function ComputeServicesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div className="text-center mb-16">
                         <SlideUp>
-                            <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">Canopy Wave on-demand GPU Cluster</h2>
+                            <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Canopy Wave on-demand GPU Cluster</h2>
                         </SlideUp>
                         <SlideUp>
                             <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -98,8 +98,8 @@ export default function ComputeServicesPage() {
                         {/* NVIDIA GPUs Card */}
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <Image src="/compute/gpus.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
-                            <h3 className="text-xl font-bold mb-4">NVIDIA GPUs</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-l font-bold mb-4">NVIDIA GPUs</h3>
+                            <p className="text-gray-600 text-sm">
                                 Featuring access to NVIDIA HGX H100, HGX H200, with connection of NVLINKS and 400G RoCEV2 or InfiniBand networking
                             </p>
                         </div>
@@ -107,8 +107,8 @@ export default function ComputeServicesPage() {
                         {/* Multi-GPU Instances Card */}
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <Image src="/compute/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4 svg-gray" />
-                            <h3 className="text-xl font-bold mb-4">MULTI-GPU instances</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-l font-bold mb-4">MULTI-GPU instances</h3>
+                            <p className="text-gray-600 text-sm">
                                 Train and fine-tune AI models across instance types that best suits your need: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by minute
                             </p>
                         </div>
@@ -116,8 +116,8 @@ export default function ComputeServicesPage() {
                         {/* Private Cloud Card */}
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <Image src="/compute/cloud.svg" alt="Private Cloud" width={36} height={36} className="mb-4 svg-gray" />
-                            <h3 className="text-xl font-bold mb-4">Canopy Wave private cloud</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-l font-bold mb-4">Canopy Wave private cloud</h3>
+                            <p className="text-gray-600 text-sm">
                                 Best GPU cluster performance in the industry. With 99.99% up time. Have all you GPUs under same datacenter, your workload and privacy is protected
                             </p>
                         </div>
@@ -131,10 +131,10 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">Leadership in AI-Optimized H100 and H200</h2>
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Leadership in AI-Optimized H100 and H200</h2>
                             </SlideUp>
                             <SlideUp>
-                                <ul className="space-y-4 text-lg text-gray-600">
+                                <ul className="space-y-4 text-sm text-gray-600">
                                     <li className="flex items-start gap-3">
                                         <span className="text-[#8CC63F] mt-1">▶</span>
                                         <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine</p>
@@ -168,8 +168,8 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">NVIDIA HGX H200</h2>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">NVIDIA HGX H200</h2>
+                                <p className="text-gray-600 mb-8 text-sm">
                                     Unmatched Memory Bandwidth & Capacity for Large AI Models
                                 </p>
                             </SlideUp>
@@ -184,8 +184,8 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/memory.svg" alt="Memory" width={96} height={96} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">141 GB of HBM3e memory</h3>
-                                        <p className="text-gray-600">Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access</p>
+                                        <h3 className="font-bold mb-2 text-l">141 GB of HBM3e memory</h3>
+                                        <p className="text-gray-600 text-sm">Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -193,8 +193,8 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">4.8 TB/s memory bandwidth</h3>
-                                        <p className="text-gray-600">the fastest of any NVIDIA GPU to date</p>
+                                        <h3 className="font-bold mb-2 text-l">4.8 TB/s memory bandwidth</h3>
+                                        <p className="text-gray-600 text-sm">the fastest of any NVIDIA GPU to date</p>
                                     </div>
                                 </FadeIn>
 
@@ -203,7 +203,7 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/model.svg" alt="Workloads" width={34} height={34} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Optimized for memory-bound workloads, including:</h3>
+                                        <h3 className="font-bold mb-2 text-l">Optimized for memory-bound workloads, including:</h3>
                                         <ul className="space-y-2 text-gray-600">
                                             <li>• Large transformer models</li>
                                             <li>• Retrieval-augmented generation (RAG)</li>
@@ -224,8 +224,8 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">NVIDIA HGX H100</h2>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">NVIDIA HGX H100</h2>
+                                <p className="text-gray-600 mb-8 text-sm">
                                     Transformer Engine: Purpose-Built for Training and Running Large AI Models
                                 </p>
                             </SlideUp>
@@ -240,8 +240,8 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Higher Accuracy</h3>
-                                        <p className="text-gray-600">Transformer Engine uses FP8 precision (8-bit floating point) with dynamic range scaling</p>
+                                        <h3 className="font-bold mb-2 text-l">Higher Accuracy</h3>
+                                        <p className="text-gray-600 text-sm">Transformer Engine uses FP8 precision (8-bit floating point) with dynamic range scaling</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -249,8 +249,8 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/performance.svg" alt="Better Performance" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Better Performance</h3>
-                                        <p className="text-gray-600">Delivers up to 9x faster training and 30x faster inference vs old-generation GPUs like A100</p>
+                                        <h3 className="font-bold mb-2 text-l">Better Performance</h3>
+                                        <p className="text-gray-600 text-sm">Delivers up to 9x faster training and 30x faster inference vs old-generation GPUs like A100</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -258,8 +258,8 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/light.svg" alt="Flexible Configurations" width={44} height={44} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Flexible Configurations</h3>
-                                        <p className="text-gray-600">Dynamically switches between FP8 and FP16/FP32 for optimal accuracy + speed</p>
+                                        <h3 className="font-bold mb-2 text-l">Flexible Configurations</h3>
+                                        <p className="text-gray-600 text-sm">Dynamically switches between FP8 and FP16/FP32 for optimal accuracy + speed</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -267,8 +267,8 @@ export default function ComputeServicesPage() {
                                 <Image src="/compute/compute.svg" alt="Better Access" width={50} height={46} className="mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Better Access to compute</h3>
-                                        <p className="text-gray-600">Includes 72 billion transistors, 80 GB of HBM3 memory, and supports NVLink and PCIe 5.0 for fast interconnects</p>
+                                        <h3 className="font-bold mb-2 text-l">Better Access to compute</h3>
+                                        <p className="text-gray-600 text-sm">Includes 72 billion transistors, 80 GB of HBM3 memory, and supports NVLink and PCIe 5.0 for fast interconnects</p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -281,8 +281,8 @@ export default function ComputeServicesPage() {
             <div className='bg-[#F9F9F9] sm:py-20 py-12'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">Why NVIDIA</h2>
-                        <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg">
+                        <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Why NVIDIA</h2>
+                        <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-sm">
                             CUDA is the de facto standard for AI/ML workloads, with deep integration into frameworks like TensorFlow and PyTorch. It’s not just hardware, but also the ecosystem that forms massive compatibility
                         </p>
                     </SlideUp>
@@ -316,10 +316,10 @@ export default function ComputeServicesPage() {
                         </div>
                         <div className="w-full md:w-1/2 space-y-8">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">CPU Nodes</h2>
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">CPU Nodes</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-lg leading-relaxed">
+                                <p className="text-gray-600 text-sm leading-relaxed">
                                     Our CPU instances are optimized for general-purpose, compute-heavy, and memory-bound applications, providing flexibility and performance at scale
                                 </p>
                             </SlideUp>
@@ -342,9 +342,9 @@ export default function ComputeServicesPage() {
                                 <div className="rounded-lg">
                                     <Image src="/compute/model.svg" alt="CPU Icon" width={40} height={40} className='svg-gray' />
                                 </div>
-                                <h3 className="text-2xl font-bold">Processor</h3>
+                                <h3 className="text-l font-bold">Processor</h3>
                             </div>
-                            <p className="text-gray-600 text-l leading-relaxed">
+                            <p className="text-gray-600 text-sm leading-relaxed">
                                 Utilize the latest 6th-Gen Intel Xeon Scalable processors, offering up to 64 vCPUs per instance
                             </p>
                         </div>
@@ -354,9 +354,9 @@ export default function ComputeServicesPage() {
                                 <div className="rounded-lg">
                                     <Image src="/compute/memory.svg" alt="Memory Icon" width={40} height={40} className='svg-gray' />
                                 </div>
-                                <h3 className="text-2xl font-bold">Memory</h3>
+                                <h3 className="text-l font-bold">Memory</h3>
                             </div>
-                            <p className="text-gray-600 text-l leading-relaxed">
+                            <p className="text-gray-600 text-sm leading-relaxed">
                                 Each instance supports up to 256TB of DIMM, delivering high throughput for compute-intensive workloads
                             </p>
                         </div>
@@ -368,7 +368,7 @@ export default function ComputeServicesPage() {
             <div className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6 text-center">Intel Xeon Scalable Processors</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6 text-center">Intel Xeon Scalable Processors</h2>
                         <h3 className="text-3xl font-black mb-6 text-center">(6th Gen)</h3>
                         <p className="text-gray-600 mb-12 text-center max-w-4xl mx-auto">
                             The latest generation utilizes a disaggregated design with multiple compute and I/O chiplets interconnected via EMIB (Embedded Multi-Die Interconnect Bridge)
@@ -379,9 +379,9 @@ export default function ComputeServicesPage() {
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/core.svg" alt="Core Count" width={36} height={36} className='svg-gray' />
-                                <h3 className="text-xl font-bold">Core count & frequency</h3>
+                                <h3 className="text-l font-bold">Core count & frequency</h3>
                             </div>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 text-sm">
                                 Engineering samples (ES1) of Granite Rapids feature up to 56 cores (1.1-2.7 GHz base/turbo), with production models expected to reach 84-90 cores
                             </p>
                         </div>
@@ -389,9 +389,9 @@ export default function ComputeServicesPage() {
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/memory.svg" alt="Memory Support" width={36} height={36} className='svg-gray' />
-                                <h3 className="text-xl font-bold">Memory support</h3>
+                                <h3 className="text-l font-bold">Memory support</h3>
                             </div>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 text-sm">
                                 12-channel DDR5-6400 with MCR DIMMs, delivering up to 1.6x higher bandwidth than previous generations
                             </p>
                         </div>
@@ -399,9 +399,9 @@ export default function ComputeServicesPage() {
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
                                 <Image src="/compute/cache.svg" alt="Cache" width={36} height={36} className='svg-gray' />
-                                <h3 className="text-xl font-bold">Cache & interconnect</h3>
+                                <h3 className="text-l font-bold">Cache & interconnect</h3>
                             </div>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 text-sm">
                                 Each compute tile includes 2MB L2 cache and 4MB L3 cache, while the platform supports PCIe Gen5 (136 lanes) and CXL 2.0 for GPU/FPGA acceleration
                             </p>
                         </div>
@@ -415,8 +415,8 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="w-full md:w-1/2 p-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">Enhanced GPU cluster performance</h2>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Enhanced GPU cluster performance</h2>
+                                <p className="text-gray-600 mb-8 text-sm">
                                     Canopy Wave uses powerful and efficient CPUs to enable higher utility and performance from GPU clusters.
                                     Let CPUs handle generalized computing needs, freeing GPUs to focus on high-intensity tasks
                                 </p>
@@ -426,24 +426,24 @@ export default function ComputeServicesPage() {
                             <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Parallel processing & AI acceleration</h3>
-                                        <p className="text-gray-600">Modern CPU servers leverage AVX-512 and VNNI (Vector Neural Network Instructions) to boost AI inference throughput by 2-4x compared to older architectures</p>
+                                        <h3 className="font-bold mb-2 text-l">Parallel processing & AI acceleration</h3>
+                                        <p className="text-gray-600 text-sm">Modern CPU servers leverage AVX-512 and VNNI (Vector Neural Network Instructions) to boost AI inference throughput by 2-4x compared to older architectures</p>
                                     </div>
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Multi-threading</h3>
-                                        <p className="text-gray-600">Hyper-Threading enables 112 threads on a 56-core CPU, optimizing multi-tasking efficiency for virtualization and HPC workloads</p>
+                                        <h3 className="font-bold mb-2 text-l">Multi-threading</h3>
+                                        <p className="text-gray-600 text-sm">Hyper-Threading enables 112 threads on a 56-core CPU, optimizing multi-tasking efficiency for virtualization and HPC workloads</p>
                                     </div>
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-xl">Energy efficiency</h3>
-                                        <p className="text-gray-600">Intel’s Dynamic Voltage and Frequency Scaling (DVFS) and RAPL (Runtime Average Power Limiting) reduce idle power consumption by 30%, while TCO improvements reach 68% through server consolidation (5-10:1 replacement ratio) </p>
+                                        <h3 className="font-bold mb-2 text-l">Energy efficiency</h3>
+                                        <p className="text-gray-600 text-sm">Intel’s Dynamic Voltage and Frequency Scaling (DVFS) and RAPL (Runtime Average Power Limiting) reduce idle power consumption by 30%, while TCO improvements reach 68% through server consolidation (5-10:1 replacement ratio) </p>
                                     </div>
                                 </FadeIn>
                             </div>
@@ -458,8 +458,8 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">Bare metal GPU cluster in private cloud</h2>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Bare metal GPU cluster in private cloud</h2>
+                                <p className="text-gray-600 mb-8 text-sm">
                                     Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking
                                 </p>
                                 <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/pricing'}>
@@ -486,8 +486,8 @@ export default function ComputeServicesPage() {
             <div className='bg-[#F5F7F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6 text-center">Get the latest and greatest NVIDIA GPUs</h2>
-                        <p className="text-gray-600 text-lg mb-16 text-center max-w-4xl mx-auto">
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6 text-center">Get the latest and greatest NVIDIA GPUs</h2>
+                        <p className="text-gray-600 text-sm mb-16 text-center max-w-4xl mx-auto">
                             Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability. We use highest safety stander to ensure data security
                         </p>
                     </SlideUp>
@@ -504,8 +504,8 @@ export default function ComputeServicesPage() {
                                         className="object-contain p-4"
                                     />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4">NVIDIA HGX B200</h3>
-                                <p className="text-gray-600 text-lg leading-relaxed">
+                                <h3 className="text-l font-bold mb-4">NVIDIA HGX B200</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
                                     The NVIDIA HGX B200, powered by eight NVIDIA Blackwell GPUs and fifth-generation NVLink™, delivers up to 3× faster training and 15× faster inference compared to previous generations, making it the ideal unified AI platform for businesses at any stage
                                 </p>
                             </div>
@@ -522,8 +522,8 @@ export default function ComputeServicesPage() {
                                         className="object-contain p-4"
                                     />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4">NVIDIA HGX H200</h3>
-                                <p className="text-gray-600 text-lg leading-relaxed">
+                                <h3 className="text-l font-bold mb-4">NVIDIA HGX H200</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
                                     The first GPU featuring HBM3e memory, the H200 sets new standards for generative AI and HPC workloads with unprecedented memory capacity and bandwidth, significantly accelerating LLM training and inference performance
                                 </p>
                             </div>
@@ -540,8 +540,8 @@ export default function ComputeServicesPage() {
                                         className="object-contain p-4"
                                     />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4">NVIDIA HGX H100</h3>
-                                <p className="text-gray-600 text-lg leading-relaxed">
+                                <h3 className="text-l font-bold mb-4">NVIDIA HGX H100</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
                                     Built on the NVIDIA Hopper™ architecture with dedicated Transformer Engine, the H100 accelerates LLMs by up to 30×, setting new benchmarks for conversational AI and efficiently powering trillion-parameter language models
                                 </p>
                             </div>
@@ -556,11 +556,11 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl text-gray-600 font-black mb-6">Get full visibility of your Cluster</h2>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Get full visibility of your Cluster</h2>
+                                <p className="text-gray-600 mb-8 text-sm">
                                     Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control
                                 </p>
-                                <p className="text-gray-600 mb-8 text-lg">
+                                <p className="text-gray-600 mb-8 text-sm">
                                     Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime
                                 </p>
                             </SlideUp>
@@ -593,10 +593,10 @@ export default function ComputeServicesPage() {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl text-gray-600 font-bold mb-6">Ready to get started?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 mb-8 mx-auto text-lg">
+                        <p className="text-gray-600 mb-8 mx-auto text-sm">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>
                     </SlideUp>

@@ -16,7 +16,7 @@ export default function StorageServices() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[500px] relative mt-[84px] bg-[#EDF2E4]">
+      <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/compute/banner.svg"
           alt="banner"
@@ -27,12 +27,12 @@ export default function StorageServices() {
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
             <SlideUp>
-              <h1 className="text-6xl sm:text-7xl font-black text-[#80B224] text-shadow-lg">
+              <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
                 Storage Services
               </h1>
             </SlideUp>
             <SlideUp>
-              <p className="text-gray-600 text-lg mt-8">
+              <p className="text-gray-600 text-sm mt-8">
                 Flexible storage architecture for any AI or enterprise workload
               </p>
             </SlideUp>
@@ -45,16 +45,16 @@ export default function StorageServices() {
       <div className='bg-[#F5F7F4]'>
         <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
           </SlideUp>
           <SlideUp>
-            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-lg">
+            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-sm">
               Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture
             </p>
           </SlideUp>
           <SlideUp>
             <div className="flex justify-center pb-8">
-              <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md" onClick={() => window.location.href = '/contact'}>
+              <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm" onClick={() => window.location.href = '/contact'}>
                 Learn more
               </button>
             </div>
@@ -70,8 +70,8 @@ export default function StorageServices() {
                   className='svg-gray'
                 />
               </div>
-              <h3 className="font-bold text-xl mb-4">Performance Where IT Counts</h3>
-              <p className="text-gray-600">Uses SSD storage to analyze data access in real time, prioritizing hot data (like transactions) in fast tiers for microsecond speeds. Smart algorithms auto-move data between tiers</p>
+              <h3 className="font-bold text-l mb-4">Performance Where IT Counts</h3>
+              <p className="text-gray-600 text-sm">Uses SSD storage to analyze data access in real time, prioritizing hot data (like transactions) in fast tiers for microsecond speeds. Smart algorithms auto-move data between tiers</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -84,8 +84,8 @@ export default function StorageServices() {
                   className='svg-gray'
                 />
               </div>
-              <h3 className="font-bold text-xl mb-4">Scalability For<br />Growth</h3>
-              <p className="text-gray-600">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption</p>
+              <h3 className="font-bold text-l mb-4">Scalability For<br />Growth</h3>
+              <p className="text-gray-600 text-sm">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -98,8 +98,8 @@ export default function StorageServices() {
                   className='svg-gray'
                 />
               </div>
-              <h3 className="font-bold text-xl mb-4">Seamlesss Collaboration</h3>
-              <p className="text-gray-600">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work</p>
+              <h3 className="font-bold text-l mb-4">Seamlesss Collaboration</h3>
+              <p className="text-gray-600 text-sm">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -112,8 +112,8 @@ export default function StorageServices() {
                   className='svg-gray'
                 />
               </div>
-              <h3 className="font-bold text-xl mb-4">Cloud-Native Readiness</h3>
-              <p className="text-gray-600">Object storage offers standard APIs with cross-region sync & auto-tiering. Pools mixed storage, runs in containers, and copies data across regions in under 1 second</p>
+              <h3 className="font-bold text-l mb-4">Cloud-Native Readiness</h3>
+              <p className="text-gray-600 text-sm">Object storage offers standard APIs with cross-region sync & auto-tiering. Pools mixed storage, runs in containers, and copies data across regions in under 1 second</p>
             </div>
           </div>
         </div>
@@ -125,13 +125,13 @@ export default function StorageServices() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-black mb-6">Local Storage</h2>
-                <p className="text-gray-600 mb-8 text-lg">15.6TB of NVMe storage, physically attached to the GPU servers</p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-6">Local Storage</h2>
+                <p className="text-gray-600 mb-8 text-sm">15.6TB of NVMe storage, physically attached to the GPU servers</p>
               </SlideUp>
               <SlideUp>
                 <button
                   onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
                 >
                   Try Control Panel
                 </button>
@@ -143,7 +143,7 @@ export default function StorageServices() {
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray' />
                   <FadeIn>
-                    <h3 className="text-2xl font-bold">Performance Optimized Design</h3>
+                    <h3 className="text-l font-bold">Performance Optimized Design</h3>
                   </FadeIn>
 
                 </div>
@@ -172,7 +172,7 @@ export default function StorageServices() {
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray' />
                   <FadeIn>
-                    <h3 className="text-2xl font-bold">Security Isolation Mechanism</h3>
+                    <h3 className="text-l font-bold">Security Isolation Mechanism</h3>
                   </FadeIn>
                 </div>
                 <FadeIn>
@@ -198,7 +198,7 @@ export default function StorageServices() {
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray' />
                   <FadeIn>
-                    <h3 className="text-2xl font-bold">HPC Compatibility</h3>
+                    <h3 className="text-l font-bold">HPC Compatibility</h3>
                   </FadeIn>
                 </div>
                 <FadeIn>
@@ -238,13 +238,13 @@ export default function StorageServices() {
             </div>
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-black mb-6">Shared Storage</h2>
-                <p className="text-gray-600 mb-8 text-lg">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-6">Shared Storage</h2>
+                <p className="text-gray-600 mb-8 text-sm">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
               </SlideUp>
               <SlideUp>
                 <button
                   onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md mb-12"
+                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md mb-12 text-sm"
                 >
                   Try Control Panel
                 </button>
@@ -255,8 +255,8 @@ export default function StorageServices() {
             {/* File-based */}
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
-              <h3 className="text-xl font-bold mb-4">File-Based</h3>
-              <p className="text-gray-600">
+              <h3 className="text-l font-bold mb-4">File-Based</h3>
+              <p className="text-gray-600 text-sm">
                 All servers see the same folder structure like your local PC. Files stay unique - no duplicates, no matter where they're physically stored
               </p>
             </div>
@@ -264,8 +264,8 @@ export default function StorageServices() {
             {/* ​​Multi-server file access​ */}
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4 svg-gray" />
-              <h3 className="text-xl font-bold mb-4">Multi-Server File Access</h3>
-              <p className="text-gray-600">
+              <h3 className="text-l font-bold mb-4">Multi-Server File Access</h3>
+              <p className="text-gray-600 text-sm">
                 Multi-server editing with auto-conflict resolution. Works like Google Docs for servers - changes appear instantly everywhere, no version chaos
               </p>
             </div>
@@ -273,8 +273,8 @@ export default function StorageServices() {
             {/* ​​Distributed Harmony Engine​ */}
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/harmony-icon.svg" alt="Private Cloud" width={36} height={36} className="mb-4 svg-gray" />
-              <h3 className="text-xl font-bold mb-4">Distributed Harmony Engine</h3>
-              <p className="text-gray-600">
+              <h3 className="text-l font-bold mb-4">Distributed Harmony Engine</h3>
+              <p className="text-gray-600 text-sm">
                 Auto-schedules distributed tasks like traffic lights. Smart scheduling prevents file access conflicts. For example, AI training gets 40% faster with hot data auto-prioritized in fast storage
               </p>
             </div>
@@ -289,13 +289,13 @@ export default function StorageServices() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <SlideUp>
-                <h2 className="text-4xl sm:text-5xl font-black mb-6">Object Storage</h2>
-                <p className="text-gray-600 mb-8 text-lg">10PB+ Object File System, accessed via S3 APIs</p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-6">Object Storage</h2>
+                <p className="text-gray-600 mb-8 text-sm">10PB+ Object File System, accessed via S3 APIs</p>
               </SlideUp>
               <SlideUp>
                 <button
                   onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                  className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
                 >
                   Try Control Panel
                 </button>
@@ -307,7 +307,7 @@ export default function StorageServices() {
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/performance-icon.svg" alt="Performance" width={36} height={36} className='svg-gray' />
                   <FadeIn>
-                    <h3 className="text-2xl font-bold">Designed for scalability and durability</h3>
+                    <h3 className="text-l font-bold">Designed for scalability and durability</h3>
                   </FadeIn>
                 </div>
                 <FadeIn>
@@ -326,7 +326,7 @@ export default function StorageServices() {
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/hpc-icon.svg" alt="Security" width={36} height={36} className='svg-gray' />
                   <FadeIn>
-                    <h3 className="text-2xl font-bold">Accessed using HTTP-based protocols</h3>
+                    <h3 className="text-l font-bold">Accessed using HTTP-based protocols</h3>
                   </FadeIn>
                 </div>
                 <FadeIn>
@@ -344,7 +344,7 @@ export default function StorageServices() {
                 <div className="flex items-center gap-4 mb-4">
                   <Image src="/storage/compatibility.svg" alt="HPC" width={36} height={36} className='svg-gray' />
                   <FadeIn>
-                    <h3 className="text-2xl font-bold">Optimized for unstructured data</h3>
+                    <h3 className="text-l font-bold">Optimized for unstructured data</h3>
                   </FadeIn>
                 </div>
                 <FadeIn>
@@ -377,8 +377,8 @@ export default function StorageServices() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
-            <h2 className="text-4xl sm:text-5xl font-black mb-6">Ready to get started?</h2>
-            <p className="text-gray-600 mb-8 mx-auto text-lg">
+            <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+            <p className="text-gray-600 mb-8 mx-auto text-sm">
               Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
             </p>
           </SlideUp>

@@ -13,7 +13,7 @@ export default function NetworkingServices() {
     return (
         <main className="min-h-screen text-gray-600 relative">
             <Header />
-            <div className="w-full h-[500px] relative mt-[84px] bg-[#EDF2E4]">
+            <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/compute/banner.svg"
                     alt="banner"
@@ -24,13 +24,13 @@ export default function NetworkingServices() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-black text-[#80B224] text-shadow-lg">
+                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
                                 Networking<br />
                                 Services
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-lg mt-8">
+                            <p className="text-gray-600 text-sm mt-8">
                                 Get the best RDMA Networking purposely build for AI
                             </p>
                         </SlideUp>
@@ -45,12 +45,12 @@ export default function NetworkingServices() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-4xl sm:text-5xl font-black mb-6">
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
                                     InfiniBand  Networking
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-lg">
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-sm">
                                     Quantum InfiniBand is a high-performance interconnect solution
                                     primarily developed by NVIDIA for AI workloads.
                                     InfiniBand networking is used to support next-generation
@@ -75,11 +75,11 @@ export default function NetworkingServices() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">Ultra-High Bandwidth and Low Latency</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Ultra-High Bandwidth and Low Latency</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white">
+                                    <p className="text-gray-600 group-hover:text-white text-sm">
                                         We use 400G none-blocking InfiniBand Networking to connect across all compute network, the latency is  in the microsecond range
                                     </p>
                                 </FadeIn>
@@ -97,11 +97,11 @@ export default function NetworkingServices() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">In-Network Computing</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">In-Network Computing</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white">
+                                    <p className="text-gray-600 group-hover:text-white text-sm">
                                         SHARP (Scalable Hierarchical Aggregation and Reduction Protocol): Offloads collective operations like reductions into the network fabric, greatly speeding up performance for distributed AI training
                                     </p>
                                 </FadeIn>
@@ -119,11 +119,11 @@ export default function NetworkingServices() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">Congestion Control and QoS</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Congestion Control and QoS</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white">
+                                    <p className="text-gray-600 group-hover:text-white text-sm">
                                         We use Adaptive Routing and Explicit Congestion Notification ensure traffic flows smoothly even under heavy load
                                     </p>
                                 </FadeIn>
@@ -141,11 +141,11 @@ export default function NetworkingServices() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">Reliability and Fault Tolerance</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Reliability and Fault Tolerance</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white">
+                                    <p className="text-gray-600 group-hover:text-white text-sm">
                                         We design our Infiniband networking with Enhanced error detection and correction with support for failover and redundancy
                                     </p>
                                 </FadeIn>
@@ -163,11 +163,11 @@ export default function NetworkingServices() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-xl group-hover:text-white">Scalability</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Scalability</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white">
+                                    <p className="text-gray-600 group-hover:text-white text-sm">
                                         With up to 15% higher effective throughput than alternatives, run your GPU clusters at their maximum potential and accelerate time to market
                                     </p>
                                 </FadeIn>
@@ -181,10 +181,10 @@ export default function NetworkingServices() {
             <div className="bg-[#F9F9F9] py-4">
                 <div id="private-cloud" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">RoceV2 Networking</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">RoceV2 Networking</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16 text-lg">
+                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16 text-sm">
                             Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI
                         </p>
                     </SlideUp>
@@ -199,8 +199,8 @@ export default function NetworkingServices() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">High Performance</h3>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <h3 className="font-bold text-l mb-4 group-hover:text-white">High Performance</h3>
+                            <p className="text-gray-600 text-sm group-hover:text-white">
                                 RDMA bypasses the CPU for data transfers, reducing latency and CPU overhead
                             </p>
                         </div>
@@ -215,8 +215,8 @@ export default function NetworkingServices() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">Excellent for AI Workloads</h3>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <h3 className="font-bold text-l mb-4 group-hover:text-white">Excellent for AI Workloads</h3>
+                            <p className="text-gray-600 text-sm group-hover:text-white">
                                 Used in distributed AI training systems where fast GPU-to-GPU communication across nodes is needed
                             </p>
                         </div>
@@ -231,8 +231,8 @@ export default function NetworkingServices() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">Scalability</h3>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <h3 className="font-bold text-l mb-4 group-hover:text-white">Scalability</h3>
+                            <p className="text-gray-600 text-sm group-hover:text-white">
                                 Supports multi-tenant cloud environments
                             </p>
                         </div>
@@ -247,8 +247,8 @@ export default function NetworkingServices() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-xl mb-4 group-hover:text-white">Advanced Congestion Control</h3>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <h3 className="font-bold text-l mb-4 group-hover:text-white">Advanced Congestion Control</h3>
+                            <p className="text-gray-600 text-sm group-hover:text-white">
                                 We build our RoceV2 Networking resilience to congestion and packet loss
                             </p>
                         </div>
@@ -262,10 +262,10 @@ export default function NetworkingServices() {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 mb-8 mx-auto text-lg">
+                        <p className="text-gray-600 mb-8 mx-auto text-sm">
                             Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs
                         </p>
                     </SlideUp>

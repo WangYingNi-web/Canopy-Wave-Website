@@ -13,7 +13,7 @@ export default function Careers() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[500px] relative mt-[84px]">
+            <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -24,12 +24,12 @@ export default function Careers() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-black text-white text-center">
+                            <h1 className="text-5xl sm:text-6xl font-black text-white text-center">
                                 Careers
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-lg mt-8 text-center">
+                            <p className="text-white text-sm mt-8 text-center">
                                 Our growing, dynamic team is always looking for fresh talent.Explore our in-office, hybrid, and remote <br /> opportunities across tech roles - and apply to the role that aligns with your skills and goals
                             </p>
                         </SlideUp>
@@ -40,7 +40,7 @@ export default function Careers() {
             <div className="bg-[#F5F7F4] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6">
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6">
                             Even if you don’t meet every <br /> requirement, we’d love to hear from you
                         </h2>
                     </SlideUp>
@@ -62,7 +62,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Healthcare</h4>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <p className="text-gray-600 group-hover:text-white text-sm">
                                 Our employees have access to high-quality medical, dental, and vision coverage
                             </p>
                         </div>
@@ -78,7 +78,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Insurance</h4>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <p className="text-gray-600 group-hover:text-white text-sm">
                                 We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
                             </p>
                         </div>
@@ -94,7 +94,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Catered lunch</h4>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <p className="text-gray-600 group-hover:text-white text-sm">
                                 Come together and mangia. We provide catered lunches in office and at our data centers from various local vendors
                             </p>
                         </div>
@@ -110,7 +110,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Flexible PTO</h4>
-                            <p className="text-gray-600 group-hover:text-white">
+                            <p className="text-gray-600 group-hover:text-white text-sm">
                                 We believe in a healthy work-life balance. Take the time you need to recharge with flexible PTO
                             </p>
                         </div>
@@ -121,7 +121,7 @@ export default function Careers() {
             <div className="bg-[#F9F9F9] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-black mb-6">Open positions</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Open positions</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-12 max-w-4xl">
@@ -167,7 +167,7 @@ export default function Careers() {
             {/* <div className="bg-[#F9F9F9] py-12 sm:py-24 border border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-10 sm:mb-12">Come build the future with us</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-12">Come build the future with us</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8">
