@@ -16,10 +16,10 @@ export default function GPUClusterManagementPage() {
             <section className="relative bg-[#80B224] from-gray-900 to-gray-800 text-white py-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl">
-                        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+                        <h1 className="text-3xl sm:text-4xl font-bold mb-6">
                         GPU Cluster Deployment & Management Experts
                         </h1>
-                        <p className="text-xl text-gray-200 mb-8">
+                        <p className="text-sm text-gray-200 mb-8">
                         From planning and design to deployment and daily operations, we provide end-to-end GPU cluster solutions to support your AI and high-performance computing needs.
                         </p>
                         <div className="flex flex-wrap gap-4">
@@ -40,7 +40,7 @@ export default function GPUClusterManagementPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Service Advantages</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-sm text-gray-600 max-w-3xl mx-auto">
                             With rich experience and expertise, we provide comprehensive GPU cluster solutions for our clients
                         </p>
                     </div>
@@ -48,24 +48,24 @@ export default function GPUClusterManagementPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Advantage Card 1 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <h3 className="text-xl font-semibold mb-2">Professional Planning & Design</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-sm font-semibold mb-2">Professional Planning & Design</h3>
+                            <p className="text-gray-600 text-sm">
                                 We provide customized GPU cluster architecture design based on your business needs and budget, including hardware selection, network topology, and cooling solutions.
                             </p>
                         </div>
 
                         {/* Advantage Card 2 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <h3 className="text-xl font-semibold mb-2">Efficient Deployment</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-sm font-semibold mb-2">Efficient Deployment</h3>
+                            <p className="text-gray-600 text-sm">
                                 Our professional team handles hardware installation, system configuration, software deployment, and performance optimization to ensure your GPU cluster is quickly operational.
                             </p>
                         </div>
 
                         {/* Advantage Card 3 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <h3 className="text-xl font-semibold mb-2">24/7 Operational Support</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-sm font-semibold mb-2">24/7 Operational Support</h3>
+                            <p className="text-gray-600 text-sm">
                                 We provide round-the-clock monitoring and technical support to ensure your GPU cluster runs stably and handle any issues promptly.
                             </p>
                         </div>
@@ -78,7 +78,7 @@ export default function GPUClusterManagementPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Process</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-sm text-gray-600 max-w-3xl mx-auto">
                             We provide end-to-end GPU cluster deployment and management services, from requirement analysis to continuous operation
                         </p>
                     </div>
@@ -120,7 +120,7 @@ export default function GPUClusterManagementPage() {
                         {activeTab === 'deployment' && (
                             <div className="grid md:grid-cols-2 gap-8 items-center">
                                 <div>
-                                    <h3 className="text-2xl font-semibold mb-4">GPU Cluster Deployment</h3>
+                                    <h3 className="text-l font-semibold mb-4">GPU Cluster Deployment</h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start">
                                             <span className="text-[#80B224] mr-2">✓</span>
@@ -159,7 +159,7 @@ export default function GPUClusterManagementPage() {
                         {activeTab === 'management' && (
                             <div className="grid md:grid-cols-2 gap-8 items-center">
                                 <div>
-                                    <h3 className="text-2xl font-semibold mb-4">GPU Cluster Management</h3>
+                                    <h3 className="text-l font-semibold mb-4">GPU Cluster Management</h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start">
                                             <span className="text-[#80B224] mr-2">✓</span>
@@ -198,7 +198,7 @@ export default function GPUClusterManagementPage() {
                         {activeTab === 'optimization' && (
                             <div className="grid md:grid-cols-2 gap-8 items-center">
                                 <div>
-                                    <h3 className="text-2xl font-semibold mb-4">Performance Optimization</h3>
+                                    <h3 className="text-l font-semibold mb-4">Performance Optimization</h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start">
                                             <span className="text-[#80B224] mr-2">✓</span>
@@ -242,7 +242,7 @@ export default function GPUClusterManagementPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-sm text-gray-600 max-w-3xl mx-auto">
                             We have provided GPU cluster solutions for clients across various industries, helping them achieve their business goals
                         </p>
                     </div>
@@ -251,7 +251,7 @@ export default function GPUClusterManagementPage() {
                         {/* Case 1 */}
                         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">AI Research Institute</h3>
+                                <h3 className="text-sm font-semibold mb-2">AI Research Institute</h3>
                                 <p className="text-gray-600 mb-4">
                                     Deployed a high-performance computing cluster with 200 NVIDIA H100 GPUs for a top AI research institute, supporting large-scale language model training.
                                 </p>
@@ -262,7 +262,7 @@ export default function GPUClusterManagementPage() {
                         {/* Case 2 */}
                         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">FinTech Company</h3>
+                                <h3 className="text-sm font-semibold mb-2">FinTech Company</h3>
                                 <p className="text-gray-600 mb-4">
                                     Built a low-latency GPU inference cluster for a fintech company, supporting real-time risk control and fraud detection, reducing response time by 80%.
                                 </p>
@@ -273,7 +273,7 @@ export default function GPUClusterManagementPage() {
                         {/* Case 3 */}
                         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Biomedical Enterprise</h3>
+                                <h3 className="text-sm font-semibold mb-2">Biomedical Enterprise</h3>
                                 <p className="text-gray-600 mb-4">
                                     Deployed a GPU computing cluster for a biomedical enterprise, accelerating drug molecule simulation and protein structure prediction, reducing R&D cycle by 40%.
                                 </p>
@@ -289,7 +289,7 @@ export default function GPUClusterManagementPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your GPU Cluster Project?</h2>
-                        <p className="text-lg text-gray-600 mb-8">
+                        <p className="text-sm text-gray-600 mb-8">
                             Contact our expert team to get a customized GPU cluster solution
                         </p>
                         <div className="bg-[#F5F7F4] p-8 rounded-lg shadow-md">

@@ -123,12 +123,12 @@ export default function BlogDetail() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-16">
         <article className="prose max-w-none">
           <SlideUp>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">{blogPost.title}</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4">{blogPost.title}</h1>
             <div className="text-gray-400 mb-8">{blogPost.date}</div>
           </SlideUp>
           {blogPost.sections.map((section, index) => (
             <div key={index} className="mb-8">
-              <h2 className="text-xl font-bold mb-4">{section.title}</h2>
+              <h2 className="text-sm font-bold mb-4">{section.title}</h2>
               {section.content.map((paragraph, pIndex) => (
                 <p key={pIndex} className="mb-4 text-gray-600">
                   {paragraph}

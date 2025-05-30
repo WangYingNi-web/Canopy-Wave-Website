@@ -194,11 +194,11 @@ export default function Contact() {
                                 We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level
                             </p>
                             <div className="mt-4">
-                                <h2 className="text-lg font-bold mb-2">TECHNICAL AND ACCOUNT SUPPORT</h2>
+                                <h2 className="text-sm font-bold mb-2">TECHNICAL AND ACCOUNT SUPPORT</h2>
                                 <p className="text-gray-600 mb-2 max-w-md">We're here to help! If you have technical issues or questions about your account <a href="mailto:support@canopywave.com" className="text-[#8CC63F]">support@canopywave.com</a></p>
                             </div>
                             <div className="mt-4">
-                                <h2 className="text-lg font-bold mb-2">CONTACT INFORMATION</h2>
+                                <h2 className="text-sm font-bold mb-2">CONTACT INFORMATION</h2>
                                 <p className="text-gray-600 mb-2 max-w-md">For general queries, including partnership opportunities, please email <a href="mailto:sales@canopywave.com" className="text-[#8CC63F]">sales@canopywave.com</a></p>
                             </div>
                         </div>

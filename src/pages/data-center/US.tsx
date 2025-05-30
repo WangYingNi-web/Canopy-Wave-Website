@@ -21,7 +21,7 @@ export default function USDataCenter() {
                 <div className="absolute inset-0 bg-[#80B224] flex items-center justify-center">
                     <div className="text-center text-white">
                         <h1 className="text-5xl font-bold mb-6">US Data Center</h1>
-                        <p className="text-xl max-w-2xl mx-auto">
+                        <p className="text-sm max-w-2xl mx-auto">
                             High-Performance Computing Infrastructure in Silicon Valley
                         </p>
                     </div>
@@ -42,8 +42,8 @@ export default function USDataCenter() {
                                     height={64}
                                     className="mx-auto mb-6"
                                 />
-                                <h3 className="text-xl font-semibold mb-4">High Performance</h3>
-                                <p className="text-gray-600">
+                                <h3 className="text-sm font-semibold mb-4">High Performance</h3>
+                                <p className="text-gray-600 text-sm">
                                     Latest NVIDIA H100/H200 GPU clusters
                                 </p>
                             </div>
@@ -57,8 +57,8 @@ export default function USDataCenter() {
                                     height={64}
                                     className="mx-auto mb-6"
                                 />
-                                <h3 className="text-xl font-semibold mb-4">Low Latency</h3>
-                                <p className="text-gray-600">
+                                <h3 className="text-sm font-semibold mb-4">Low Latency</h3>
+                                <p className="text-gray-600 text-sm">
                                     Direct connection to major internet exchanges
                                 </p>
                             </div>
@@ -72,8 +72,8 @@ export default function USDataCenter() {
                                     height={64}
                                     className="mx-auto mb-6"
                                 />
-                                <h3 className="text-xl font-semibold mb-4">Enterprise Security</h3>
-                                <p className="text-gray-600">
+                                <h3 className="text-sm font-semibold mb-4">Enterprise Security</h3>
+                                <p className="text-gray-600 text-sm">
                                     SOC 2 Type II certified facility
                                 </p>
                             </div>
@@ -126,7 +126,7 @@ export default function USDataCenter() {
                     <h2 className="text-3xl font-bold text-center mb-16">Facility Specifications</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <h3 className="text-xl font-semibold mb-6">Computing Power</h3>
+                            <h3 className="text-sm font-semibold mb-6">Computing Power</h3>
                             <ul className="space-y-4">
                                 <li>• 1000+ NVIDIA H100/H200 GPUs</li>
                                 <li>• High-performance CPU clusters</li>
@@ -135,7 +135,7 @@ export default function USDataCenter() {
                             </ul>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg">
-                            <h3 className="text-xl font-semibold mb-6">Network</h3>
+                            <h3 className="text-sm font-semibold mb-6">Network</h3>
                             <ul className="space-y-4">
                                 <li>• 100Gbps backbone</li>
                                 <li>• Multi-carrier connectivity</li>
@@ -200,10 +200,10 @@ export default function USDataCenter() {
             <section className="bg-[#8CC63F] py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-                    <p className="text-white text-xl mb-8">
+                    <p className="text-white text-sm mb-8">
                         Contact our team to learn more about our US data center capabilities
                     </p>
-                    <button className="bg-white text-[#8CC63F] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <button className="bg-white text-[#8CC63F] px-8 py-4 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors">
                         Contact Us
                     </button>
                 </div>

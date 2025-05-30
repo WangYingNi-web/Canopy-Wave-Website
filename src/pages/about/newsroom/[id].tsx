@@ -37,7 +37,7 @@ export default function NewsroomDetail() {
 
       <div className="bg-[#F5F7F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center">For Business Matters</h3>
+          <h3 className="text-l sm:text-3xl font-bold mb-4 text-center">For Business Matters</h3>
           <p className="text-gray-800 mb-4 text-center">Hai Vo-Dinh<br />Senior Director of Product<br />Canopy Wave</p>
           <p className="text-gray-800 mb-4 text-center">Email: hai @ canopywave.com</p>
           <p className="text-gray-800 mb-4 text-center">Website: <a href="https://canopywave.com/" className="text-[#8CC63F]" target="_blank">canopywave.com</a></p>
@@ -45,7 +45,7 @@ export default function NewsroomDetail() {
           <p className="text-gray-800 mb-4 text-center">Email: markku @ confidentialmind.com</p>
           <p className="text-gray-800 mb-4 text-center">Phone: +358 50 302 6510</p>
           <p className="text-gray-800 mb-4 text-center">Website: <a href="http://www.confidentialmind.com" className="text-[#8CC63F]" target="_blank">confidentialmind.com</a></p>
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-[#8CC63F]">For Media and Generic Inquiries</h3>
+          <h3 className="text-l sm:text-3xl font-bold mb-4 text-center text-[#8CC63F]">For Media and Generic Inquiries</h3>
           <p className="text-gray-800 mb-4 text-center">Wendy Li<br />Marketing Director</p>
           <p className="text-gray-800 mb-4 text-center">Email: wendy@canopywave.com</p>
           <p className="text-gray-800 text-center">Website: <a href="http://www.canopywave.com" className="text-[#8CC63F]" target="_blank">canopywave.com</a></p>

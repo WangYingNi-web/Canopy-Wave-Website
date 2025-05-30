@@ -45,7 +45,7 @@ export default function Newsroom() {
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[500px] relative mt-[84px]">
+            <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -56,12 +56,12 @@ export default function Newsroom() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-7xl font-black text-white text-center leading-tight">
+                            <h1 className="text-4xl sm:text-5xl font-black text-white text-center leading-tight">
                                 Newsroom
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-xl mt-8 text-center max-w-3xl mx-auto leading-relaxed">
+                            <p className="text-white text-sm mt-8 text-center max-w-3xl mx-auto leading-relaxed">
                                 Stay informed about the latest developments, important announcements, and industry insights of Canopy Wave
                             </p>
                         </SlideUp>
@@ -73,7 +73,7 @@ export default function Newsroom() {
             <div id='blog' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
                     <SlideUp>
-                        <h2 className="text-5xl sm:text-6xl font-bold text-gray-600">Blog</h2>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Blog</h2>
                     </SlideUp>
 
                     {/* <Link href="/blog" className="text-gray-600 hover:text-gray-600 inline-flex items-center">
@@ -97,7 +97,7 @@ export default function Newsroom() {
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-600 mb-2">{post.title}</h3>
+                            <h3 className="text-sm font-semibold text-gray-600 mb-2">{post.title}</h3>
                             <div className="flex items-center space-x-4 text-sm text-gray-500">
                                 <IwsLink
                                     href="/blog/1"
@@ -124,7 +124,7 @@ export default function Newsroom() {
             <div id='events' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
                     <SlideUp>
-                        <h2 className="text-5xl sm:text-6xl font-bold text-gray-600">Events</h2>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Events</h2>
                     </SlideUp>
                     {/* <Link href="/events" className="text-gray-600 hover:text-gray-600 inline-flex items-center">
                         <span className="flex items-center">
@@ -146,7 +146,7 @@ export default function Newsroom() {
                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-600 mb-2 truncate">Canopy Wave and ConfidentialMind Joint Event</h3>
+                        <h3 className="text-sm font-semibold text-gray-600 mb-2 truncate">Canopy Wave and ConfidentialMind Joint Event</h3>
                         <div className="flex items-center space-x-4 text-sm text-gray-500">
                             <IwsLink
                                 href="/about/newsroom/1"
