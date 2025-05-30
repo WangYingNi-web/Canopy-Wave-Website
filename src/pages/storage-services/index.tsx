@@ -16,7 +16,7 @@ export default function StorageServices() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[550px] relative mt-[84px] bg-[#EDF2E4]">
+      <div className="w-full h-[500px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/compute/banner.svg"
           alt="banner"
@@ -25,9 +25,9 @@ export default function StorageServices() {
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
             <SlideUp>
-              <h1 className="text-6xl sm:text-8xl font-black text-[#8CC63F] text-shadow-lg">
+              <h1 className="text-6xl sm:text-7xl font-black text-[#8CC63F] text-shadow-lg">
                 Storage Services
               </h1>
             </SlideUp>
@@ -373,7 +373,7 @@ export default function StorageServices() {
       {/* Ready to Get Started Section */}
       <div
         className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-        // // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>

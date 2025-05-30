@@ -21,18 +21,24 @@ function IwsLink(props: Props) {
     if (onClick) {
       onClick(e);
     }
-    const currentPath = router.asPath.split('#')[0];
-    const currentHash = router.asPath.split('#')[1] || '';
-    const targetPath = href.split('#')[0];
-    const targetHash = href.split('#')[1] || '';
-    
-    if (currentPath === targetPath && currentHash === targetHash) {
-      // 先滚动到顶部，然后重新加载页面
-      window.scrollTo(0, 0);
-      router.reload();
-    }else {
-      // 如果路由或哈希变化，使用push方法
-      router.push(href);
+    const isExternalLink = /^https?:\/\//.test(href); // 判断是否是外部链接
+
+    if (isExternalLink) {
+      // 外部链接直接打开
+      window.open(href, target || '_blank', `noopener,noreferrer`);
+    } else {
+      // 内部路由链接处理
+      const currentPath = router.asPath.split('#')[0];
+      const currentHash = router.asPath.split('#')[1] || '';
+      const targetPath = href.split('#')[0];
+      const targetHash = href.split('#')[1] || '';
+
+      if (currentPath === targetPath && currentHash === targetHash) {
+        window.scrollTo(0, 0);
+        router.reload();
+      } else {
+        router.push(href);
+      }
     }
   };
 

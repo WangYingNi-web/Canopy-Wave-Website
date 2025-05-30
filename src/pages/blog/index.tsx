@@ -35,7 +35,7 @@ export default function BlogPage() {
       <Header />
       <div className=" flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-16">
         <SlideUp>
-          <h1 className="text-5xl sm:text-8xl font-bold mb-16">Blog</h1>
+          <h1 className="text-5xl sm:text-7xl font-bold mb-16">Blog</h1>
         </SlideUp>
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 sm:gap-20 md:gap-20">
           <div className="w-full md:w-[650px]">

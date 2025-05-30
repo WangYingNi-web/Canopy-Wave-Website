@@ -12,7 +12,7 @@ export default function NetworkingHardwarePage() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
 
-            <div className="w-full h-[550px] relative mt-[84px]">
+            <div className="w-full h-[500px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
@@ -21,9 +21,9 @@ export default function NetworkingHardwarePage() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
+                            <h1 className="text-6xl sm:text-7xl font-black text-white text-center">
                                 Networking Hardware Solution
                             </h1>
                         </SlideUp>
@@ -399,7 +399,7 @@ export default function NetworkingHardwarePage() {
             {/* Ready to Get Started Section */}
             <div
                 className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
