@@ -15,7 +15,7 @@ export default function NetworkingServices() {
             <Header />
             <div className="w-full h-[500px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
-                    src="/networking/banner.svg"
+                    src="/compute/banner.svg"
                     alt="banner"
                     layout='fill'
                     className="object-cover"
@@ -39,7 +39,7 @@ export default function NetworkingServices() {
             </div>
 
             {/* NVIDIA QUANTUM INFINIBAND CLUSTER NETWORKING */}
-            <div className="bg-[#F5F9F4] py-4">
+            <div className="bg-[#F5F7F4] py-4">
                 <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}

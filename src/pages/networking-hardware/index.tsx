@@ -37,7 +37,7 @@ export default function NetworkingHardwarePage() {
             </div>
 
             {/* Canopy Wave Networking Hardware Solutions */}
-            <div className='bg-[#F5F9F4]'>
+            <div className='bg-[#F5F7F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="text-center mb-16">
                         <SlideUp>
@@ -169,7 +169,7 @@ export default function NetworkingHardwarePage() {
             </div>
 
             {/* Bare-Metal Performance in a Virtual Environment*/}
-            <div className='bg-[#F5F9F4]'>
+            <div className='bg-[#F5F7F4]'>
                 <div id="hgx-h100" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24 text-center">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-black mb-8">Bare-Metal Performance in a Virtual Environment</h2>
@@ -303,7 +303,7 @@ export default function NetworkingHardwarePage() {
             </div>
 
             {/* From Equipment to Deployment */}
-            <div className="bg-[#F5F9F4] py-4">
+            <div className="bg-[#F5F7F4] py-4">
                 <div id="infiniband-networking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         {/* 左侧标题部分 */}

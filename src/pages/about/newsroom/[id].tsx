@@ -35,7 +35,7 @@ export default function NewsroomDetail() {
        
       </div>
 
-      <div className="bg-[#F5F9F4]">
+      <div className="bg-[#F5F7F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center">For Business Matters</h3>
           <p className="text-gray-800 mb-4 text-center">Hai Vo-Dinh<br />Senior Director of Product<br />Canopy Wave</p>

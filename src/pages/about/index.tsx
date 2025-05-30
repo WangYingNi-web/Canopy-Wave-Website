@@ -77,7 +77,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div> */}
-      <div className="bg-[#F5F9F4]">
+      <div className="bg-[#F5F7F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl text-gray-600 font-black text-center mb-6">What we do</h2>

@@ -42,7 +42,7 @@ export default function StorageServices() {
       </div>
 
       {/* Multi-tier Storage Architecture Section */}
-      <div className='bg-[#F5F9F4]'>
+      <div className='bg-[#F5F7F4]'>
         <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SlideUp>
             <h2 className="text-4xl sm:text-5xl font-black text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
@@ -224,7 +224,7 @@ export default function StorageServices() {
       </div>
 
       {/* Shared Storage Section */}
-      <div id='shared-storage' className="bg-[#F5F9F4] sm:py-20 py-12">
+      <div id='shared-storage' className="bg-[#F5F7F4] sm:py-20 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden">

@@ -4,7 +4,6 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
-import FadeIn from '@/components/FadeIn';
 import { Button } from "@/components/ui/button";
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 
@@ -17,7 +16,7 @@ export default function PlatformPage() {
             {/* Hero Section */}
             <div className="w-full h-[500px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
-                    src="/platform/banner.svg"
+                    src="/compute/banner.svg"
                     alt="banner"
                     layout='fill'
                     className="object-cover"
@@ -40,7 +39,7 @@ export default function PlatformPage() {
                 </div>
             </div>
 
-            <div className="bg-[#F5F9F4]">
+            <div className="bg-[#F5F7F4]">
                 <div id='dcim-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     {/* 上半部分：左侧标题和右侧图片 */}
                     <div className="flex flex-col md:flex-row items-start gap-16 mb-6">
@@ -59,14 +58,15 @@ export default function PlatformPage() {
                         {/* 右侧图片部分 */}
                         <div className="w-full md:w-1/2 -mt-10">
                             <div>
-                                <Image
-                                    src="/platform/dcim.svg"
-                                    alt="DCIM Dashboard"
-                                    width={600}
-                                    height={400}
-                                    className="w-full"
-                                />
-
+                                <SlideUp>
+                                    <Image
+                                        src="/platform/dcim.svg"
+                                        alt="DCIM Dashboard"
+                                        width={600}
+                                        height={400}
+                                        className="w-full"
+                                    />
+                                </SlideUp>
                             </div>
                         </div>
                     </div>
@@ -101,13 +101,15 @@ export default function PlatformPage() {
                     <div className="flex flex-col md:flex-row items-start gap-16">
                         <div className="w-full md:w-1/2">
                             <div>
-                                <Image
-                                    src="/platform/cloud-platform.png"
-                                    alt="DCIM Dashboard"
-                                    width={600}
-                                    height={300}
-                                    className="w-full h-auto"
-                                />
+                                <SlideUp>
+                                    <Image
+                                        src="/platform/cloud-platform.png"
+                                        alt="DCIM Dashboard"
+                                        width={600}
+                                        height={300}
+                                        className="w-full h-auto"
+                                    />
+                                </SlideUp>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">

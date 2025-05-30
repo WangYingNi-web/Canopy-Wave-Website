@@ -37,7 +37,7 @@ export default function Careers() {
                 </div>
             </div>
 
-            <div className="bg-[#F5F9F4] py-4">
+            <div className="bg-[#F5F7F4] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-black mb-6">
@@ -129,7 +129,7 @@ export default function Careers() {
                         </p>
                     </SlideUp>
                     <div className="space-y-4">
-                        <div onClick={() => router.push('/about/job-application?position=devops')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
+                        <div onClick={() => router.push('/about/job-application?position=devops')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, DevOp</h3>
@@ -137,14 +137,14 @@ export default function Careers() {
                             <div className="text-gray-600">Santa Clara, CA</div>
                         </div>
 
-                        <div onClick={() => router.push('/about/job-application?position=kubernetes')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
+                        <div onClick={() => router.push('/about/job-application?position=kubernetes')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Kubernetes</h3>
                             </div>
                             <div className="text-gray-600">Remote (United States)</div>
                         </div>
-                        <div onClick={() => router.push('/about/job-application?position=infrastructure')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
+                        <div onClick={() => router.push('/about/job-application?position=infrastructure')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Infrastructure</h3>
@@ -152,7 +152,7 @@ export default function Careers() {
                             <div className="text-gray-600">Santa Clara, CA</div>
                         </div>
 
-                        <div onClick={() => router.push('/about/job-application?position=frontend')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F9F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
+                        <div onClick={() => router.push('/about/job-application?position=frontend')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
                                 <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Front-end</h3>

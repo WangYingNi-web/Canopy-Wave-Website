@@ -178,7 +178,7 @@ Message: ${formData.message}
     return (
         <main className="min-h-screen relative text-gray-600">
             <Header />
-            <div className="pt-[140px] pb-20 bg-[#F5F9F4]">
+            <div className="pt-[140px] pb-20 bg-[#F5F7F4]">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h1 className="text-5xl sm:text-6xl font-bold mb-10">Job Application</h1>
