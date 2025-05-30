@@ -13,7 +13,7 @@ export default function Careers() {
         <main className="min-h-screen relative text-gray-600">
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[550px] relative mt-[84px]">
+            <div className="w-full h-[500px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -24,7 +24,7 @@ export default function Careers() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-6xl sm:text-8xl font-black text-white text-center">
+                            <h1 className="text-6xl sm:text-7xl font-black text-white text-center">
                                 Careers
                             </h1>
                         </SlideUp>

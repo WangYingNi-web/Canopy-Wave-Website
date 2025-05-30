@@ -31,7 +31,7 @@ export default function Index() {
       <Header />
       <div className="w-full text-gray-600">
         {/* Hero Section */}
-        <div className="w-full h-[550px] relative mt-[84px]">
+        <div className="w-full h-[500px] relative mt-[84px]">
           <Image
             src="/home_banner.svg"
             alt="Home_Banner"
@@ -40,9 +40,9 @@ export default function Index() {
             priority
           />
           <div className="absolute inset-0 z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
               <SlideUp>
-                <h1 className="text-6xl sm:text-8xl font-black text-[#80B224] text-center text-shadow-lg">
+                <h1 className="text-6xl sm:text-7xl font-black text-[#80B224] text-center text-shadow-lg">
                   Instant GPU <br /> Cluster for <br /> Enterprise AI
                 </h1>
               </SlideUp>
@@ -188,7 +188,7 @@ export default function Index() {
         {/* Contact Section */}
         <div
           className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-        // style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-4xl sm:text-5xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
