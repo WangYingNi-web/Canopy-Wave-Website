@@ -27,7 +27,7 @@ export default function StorageServices() {
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
             <SlideUp>
-              <h1 className="text-6xl sm:text-7xl font-black text-[#8CC63F] text-shadow-lg">
+              <h1 className="text-6xl sm:text-7xl font-black text-[#80B224] text-shadow-lg">
                 Storage Services
               </h1>
             </SlideUp>
