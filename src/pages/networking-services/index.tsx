@@ -257,8 +257,8 @@ export default function NetworkingServices() {
             </div>
 
             <div
-                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28"
+                style={{ backgroundImage: "url('/contact-section.png')", backgroundSize: "cover", width: "100%" }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
