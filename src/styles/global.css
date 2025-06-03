@@ -46,7 +46,9 @@
   .font-sans {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
-  
+  .font-black {
+    font-weight: 900 !important;
+  }
   /* 苹果设备使用原生San Francisco */
   .apple-font .font-sans {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
