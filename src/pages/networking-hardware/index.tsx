@@ -28,7 +28,7 @@ export default function NetworkingHardwarePage() {
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-sm mt-8 text-center">
+                            <p className="text-white text-l mt-8 text-center">
                                 High-Performance, Proven Equipment for Scalable AI Infrastructure
                             </p>
                         </SlideUp>
@@ -44,7 +44,7 @@ export default function NetworkingHardwarePage() {
                             <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">Canopy Wave Networking Hardware Solutions</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-sm text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-l text-center max-w-4xl mx-auto mb-16">
                                 At Canopy Wave, we know that networking is the backbone—and often the bottleneck—of modern AI infrastructure. That’s why we’ve built a comprehensive, field-tested hardware solution designed to eliminate performance constraints and deliver seamless scalability.
                                 We don’t just sell components—we engineer, qualify, and deploy them in our own high-performance environments, ensuring you get equipment that’s trusted, reliable, and built to perform under real-world AI workloads
                             </p>
@@ -65,7 +65,7 @@ export default function NetworkingHardwarePage() {
                                 />
                             </div>
                             <h3 className="font-black text-l mb-4">Networking Without Bottlenecks</h3>
-                            <p className="text-gray-600 text-sm">
+                            <p className="text-gray-600 text-l">
                                 AI workloads generate massive amounts of data. If your networking stack can’t keep up, performance suffers
                             </p>
                         </div>
@@ -82,7 +82,7 @@ export default function NetworkingHardwarePage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4">Canopy Wave has invested </h3>
-                            <p className="text-gray-600 text-sm">
+                            <p className="text-gray-600 text-l">
                                 Deeply in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
                             </p>
                         </div>
@@ -102,7 +102,7 @@ export default function NetworkingHardwarePage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-sm mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-l mb-4 sm:pr-10 text-justify">
                                     Everything we offer is tested and used in our own AI clusters, including multi-thousand GPU environments
                                 </p>
                             </SlideUp>
@@ -175,7 +175,7 @@ export default function NetworkingHardwarePage() {
                         <h2 className="text-3xl sm:text-4xl font-black mb-8">Bare-Metal Performance in a Virtual Environment</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 text-sm mb-8">
+                        <p className="text-gray-600 text-l mb-8">
                             Our virtual machines are engineered to match the performance of physical hardware. We use GPU-accelerated instances and optimize our virtualization stack to ensure your rendering jobs run as fast and efficiently as possible—without the overhead that typically comes with virtualization
                         </p>
                     </SlideUp>
@@ -186,38 +186,38 @@ export default function NetworkingHardwarePage() {
                     </SlideUp>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">Fiber Optic Cables</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">Low-loss, high-speed connectivity</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">Fiber Optic Cables</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">Low-loss, high-speed connectivity</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">Transceivers</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">Fully tested for reliability and interoperability</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">Transceivers</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">Fully tested for reliability and interoperability</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">NICs</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">High-bandwidth, RDMA-capable options</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">NICs</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">High-bandwidth, RDMA-capable options</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">Switches</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">InfiniBand, RoCEv2, and Ethernet-based switching at scale</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">Switches</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">InfiniBand, RoCEv2, and Ethernet-based switching at scale</p>
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-6">
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">DAC/AOC Cables</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">Optimized for low latency and high data rates</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">DAC/AOC Cables</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">Optimized for low latency and high data rates</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">Data Center Racks</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">Modular and airflow-optimized designs</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">Data Center Racks</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">Modular and airflow-optimized designs</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">PDUs</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">Intelligent power control and monitoring</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">PDUs</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">Intelligent power control and monitoring</p>
                         </div>
                         <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <h3 className="font-bold mb-2 group-hover:text-white text-sm">Other Accessories</h3>
-                            <p className="text-gray-600 group-hover:text-white text-sm">All the essentials for fast, clean cluster deployment</p>
+                            <h3 className="font-bold mb-2 group-hover:text-white text-l">Other Accessories</h3>
+                            <p className="text-gray-600 group-hover:text-white text-l">All the essentials for fast, clean cluster deployment</p>
                         </div>
                     </div>
 
@@ -236,7 +236,7 @@ export default function NetworkingHardwarePage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-sm mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-l mb-4 sm:pr-10 text-justify">
                                     Thanks to our deep relationships with OEMs and supply chain partners
                                 </p>
                             </SlideUp>
@@ -314,7 +314,7 @@ export default function NetworkingHardwarePage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-sm mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-l mb-4 sm:pr-10 text-justify">
                                     Beyond supplying equipment, our team can also help you
                                 </p>
                             </SlideUp>
@@ -404,7 +404,7 @@ export default function NetworkingHardwarePage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-sm">
+                        <p className="text-gray-600 mb-8 mx-auto text-l">
                             Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
                         </p>
                     </SlideUp>

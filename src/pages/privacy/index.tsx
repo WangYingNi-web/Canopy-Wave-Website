@@ -14,7 +14,7 @@ export default function PrivacyPage() {
             <Header />
             <div className="bg-[#F9F9F9] py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
-                    <section className="px-4 py-8">
+                    <section className="px-4 py-8 text-sm">
                         <SlideUp>
                             <h1 className="text-3xl sm:text-4xl font-bold mt-8 mb-10 text-center">Privacy Policy</h1>
                         </SlideUp>
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
                         <p className="mb-4">This Privacy Policy describes how Canopy Wave collects and uses your personal data in relation to Canopy Wave' websites, services, events, and experiences that reference this Privacy Policy (together, the "Services"). This Privacy Notice also does not apply to any products, services or content that are offered by third parties having their own privacy policies.</p>
                         <p className="mb-4">When you use Canopy Wave AI Services, the controller of the personal data you provide is Canopy Wave Inc., an enterprise incorporated under the laws of the United States, with operation center in 2350 Mission College Blvd, Santa Clara, CA 95054, United States.</p>
                         <p className="mb-4">Both companies in the following referred to as: "Canopy Wave", “us’, “we”, “our”. How to contact us: Canopy Wave Privacy Office: privacy@canopywave.com</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">1. Sources of personal data</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">1. Sources of personal data</h2>
                         <p className="mb-4">Canopy Wave processes personal data provided by data subjects themselves or collected when they use our Services:</p>
                         <ul className="list-disc pl-5 mb-4">
                             <li>Registration information required for registering the Services. When you choose to sign up for our Service through your Google account (or any other third-party account permitted by Canopy Wave), you are also authorizing us to receive, store, and use such information that you have agreed that Google or such other third parties could provide to us through their application programming interface.</li>
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
                             <li>You may provide information on behalf of another person or entity. If you completed the registration on behalf of another entity or if you otherwise provide information regarding another person or entity, you represent to us that you were authorized by that person or entity to use the submitted information.</li>
                             <li>When you visit or access our Services, upon your consent, we may use (and authorize 3rd parties to use) pixels, cookies and other technologies (collectively, "Cookies").</li>
                         </ul>
-                        <h2 className="text-l font-bold mt-8 mb-4">2. Personal data we process</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">2. Personal data we process</h2>
                         <p className="mb-4">Canopy Wave processes personal data related to its potential and current customers (individuals or representatives of legal entities), individuals who use the cloud services (users), and users of the Website. The categories of processed personal data include:</p>
                         <ul className="list-disc pl-5 mb-4">
                             <li>Full name</li>
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
                             <li>Partially obscured copies of your ID document (when this is requested, only the following field being visible: picture, name and surname, nationality place and type of document, first 4 digits of the document number), in specific cases of our KYC process.</li>
                         </ul>
                         <p className="mb-4">Sensitive personal data: We do not intentionally collect sensitive personal data (for example, information revealing race, ethnic origin, political opinions, religion, etc.) and we ask our users not to provide us with such information.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">3. Why we process your personal data</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">3. Why we process your personal data</h2>
                         <p className="mb-4">We only collect and use personal data for the scopes which are necessary in connection with the processing of your request/query, to verify your identity if you contact us, to send you our newsletter, enhance both the performance and the content of our websites, to tailor our services and our websites to our customers' and users' preferences, to analyze trends and to comply with any law in accordance with the applicable legislation, to protect us and our users/customers, from fraud or other illegal activities. More specifically to:</p>
                         <ul className="list-disc pl-5 mb-4">
                             <li>To provide appropriate feedback to your questions and requests, and/or to fulfill the necessary steps to conclude an agreement with you.</li>
@@ -74,9 +74,9 @@ export default function PrivacyPage() {
                             <li>To perform audits and (internal) checks aimed at verifying that our internal processes are indeed operated in compliance with applicable legal, contractual and regulatory requirements.</li>
                             <li>Moreover, we engage in notifications and promotional communications, (marketing): subject to your approval, we may send you notifications, either via email/SMS notification and web notifications or via WhatsApp - messages and other promotional updates about new features, offerings, events and special opportunities or any other information we think our customers and users will find valuable.</li>
                         </ul>
-                        <h2 className="text-l font-bold mt-8 mb-4">4. Your consent when requested by applicable law</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">4. Your consent when requested by applicable law</h2>
                         <p className="mb-4">Some non-EEA legislations, require your consent for us to process the personal data. Where and when this is the case, please consider that by accessing, viewing and using the websites you consent to the processing of Personal Information as described in this Privacy Notice. You have the right to withdraw your consent at any time, which will not affect the lawfulness of the processing until that time.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">5. To whom we disclose your personal data</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">5. To whom we disclose your personal data</h2>
                         <p className="mb-4">We may disclose certain personal data to the following recipients to the extent required or permitted by applicable law and/or based on our legal interests. More specifically:</p>
                         <ul className="list-disc pl-5 mb-4">
                             <li>Third party vendors providing services to us, to facilitate or evaluate our services, such as: ITSM, CRM, ERP, billing and other systems required for administrating Canopy Wave business processes, legal advisers, accountants, suppliers of payment services.</li>
@@ -86,18 +86,18 @@ export default function PrivacyPage() {
                         </ul>
                         <p className="mb-4">Where we use WhatsApp as a mean of communication for our communications with customers, we will share your Personal data with this provider. Please consider that the Privacy Notice of WhatsApp will apply to this processing activities, we recommend you to get acquainted with it at: <a href="https://www.whatsapp.com/legal/privacy-policy">WhatsApp Privacy Policy</a></p>
                         <p className="mb-4">Upon having obtained your consent, we may share your Personal data with third parties - marketing and analytics vendors, which analyze the activities of our webpage Users, (such as Google LLC providing Google Analytics service). We will never use your data other than described in this Policy except with your prior consent.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">6. Retention of your personal data</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">6. Retention of your personal data</h2>
                         <p className="mb-4">We retain your Personal data only for as long as it is necessary to fulfil the scopes described in this Policy. The exact length of time may vary depending on the type of data, the scope of the processing, the category of users involved and -most importantly- whether we are compelled to retain certain Personal Data due to - most frequently and as an example - tax requirements or other legal requirements under applicable law, fraud prevention or safety. When we process the partially obscured copies of your ID, we retain it for a maximum of 18 months, to maintain the necessary records for our yearly audits.</p>
                         <p className="mb-4">Please consider that non-Personal data may be retained and used by Canopy Wave without limitation for archiving purposes, public interest, statistical, historical or scientifical research purposes.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">7. Cookies</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">7. Cookies</h2>
                         <p className="mb-4">We use cookies and similar tracking technologies to track the activity on the Website and store certain information. Cookies – when not necessary for the functioning of the websites- are collected and stored upon your consent.</p>
                         <p className="mb-4">Third party services</p>
                         <p className="mb-4">Certain Services on the Website are managed by third parties. It is possible that these parties use information about your online activity, among others to provide advertisements for products and services which may interest you. Without derogation to the foregoing, you please be aware your activity on the Website may enable third parties, such as online search engines, to rely on the nature of your activity, to present to you adapted advertisements in the framework of your online activities. The activity of these third parties is subject to the privacy policy used by them alone, and is done in their full and exclusive responsibility, without Canopy Wave having any responsibility whatsoever for it. Please consult the privacy policies of these third parties.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">8. Security</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">8. Security</h2>
                         <p className="mb-4">Canopy Wave has a team dedicated to ensuring the security of your personal data. We have implemented technical, administrative and physical security measures meant to protect the personal data we process, and we make a point of making sure that these measures are always state-of-the-art and are adequately tested by us. Despite our best efforts, please keep in mind that no security measures are impenetrable, and no website or internet transmission is ever completely secure, and we cannot guarantee (i) that unauthorized access, hacking, data loss, or other breaches shall never occur; and (ii) the security of your data; any transmission is at your own risk.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">9. Children</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">9. Children</h2>
                         <p className="mb-4">Our websites and/or services are not intended for use under the age of 18. We do not knowingly process Personal data from anyone under the age of 18. If you are a parent or guardian of someone under that age limit, you may contact us to exercise their rights on their behalf as detailed in this Privacy Notice.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">10. Specific jurisdictions</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">10. Specific jurisdictions</h2>
                         <p className="mb-4">We provide additional information about the processing of your data to our visitors located in some specific jurisdictions:</p>
                         <h3 className="text-sm font-bold mt-8 mb-4">10.1 US</h3>
                         <p className="mb-4">The information contained under paragraphs 2 and 3 are meant to provide the necessary disclosures and to serve as a Notice at Collection under the California Privacy Rights Act, as are required by the California Consumer Privacy Act, as amended by the California Privacy Rights Act, Colorado Privacy Act, Connecticut Data Privacy Act, Utah Consumer Privacy Act, and Virginia Consumer Data Protection Act, Delaware Privacy Act:</p>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
                             <li>You may lodge a complaint about the manner we process your personal information.</li>
                         </ul>
                         <p className="mb-4">When you consent to our processing your personal information for a specified purpose, you may withdraw your consent at any time. You can exercise your rights by contacting us at: privacy@canopywave.com</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">11. Your Rights</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">11. Your Rights</h2>
                         <p className="mb-4">As Canopy Wave is subject to the General Data Protection Regulation (GDPR), all our visitors and website users, notwithstanding their location, enjoy the following rights:</p>
                         <ul className="list-disc pl-5 mb-4">
                             <li>The right to request Canopy Wave to provide you access to, correct or delete your Personal data;</li>
@@ -123,9 +123,9 @@ export default function PrivacyPage() {
                             <li>The right to object to such processing and to withdraw the consent you previously provided.</li>
                             <li>The right to request that Canopy Wave provides you with a machine-readable copy of your Personal data and not to be subject to automated decisions.</li>
                         </ul>
-                        <h2 className="text-l font-bold mt-8 mb-4">12. Updates</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">12. Updates</h2>
                         <p className="mb-4">Our business is constantly developing and changing, and our Privacy Notice may also change. We may update this Privacy Notice from time to time and publish a new version on our websites. We recommend you keep an eye on possible updates. If we plan any material changes, we will – of course – inform you.</p>
-                        <h2 className="text-l font-bold mt-8 mb-4">13. Questions?</h2>
+                        <h2 className="text-sm font-bold mt-8 mb-4">13. Questions?</h2>
                         <p className="mb-4">If you have any query or question about this Privacy Notice or about the manner we process Personal data, please contact our Privacy Office at: 2350 Mission College Blvd, Santa Clara, CA 95054, United States: privacy@canopywave.com</p>
 
                     </section>

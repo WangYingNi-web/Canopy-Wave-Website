@@ -14,7 +14,7 @@ export default function TermsPage() {
             <Header />
             <div className="bg-[#F9F9F9] py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
-                    <section className="px-4 py-8">
+                    <section className="px-4 py-8 text-sm">
                         <SlideUp>
                         <h1 className="text-3xl sm:text-4xl font-bold mt-8 mb-10 text-center">Terms of Service</h1>
                         </SlideUp>

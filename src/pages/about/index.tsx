@@ -45,7 +45,7 @@ export default function AboutPage() {
               </h1>
             </SlideUp>
             <SlideUp>
-              <p className="text-white text-sm mt-8 text-center">
+              <p className="text-white text-l mt-8 text-center">
                 The AI Hyperscaler™ empowering the future
               </p>
             </SlideUp>
@@ -58,7 +58,7 @@ export default function AboutPage() {
           <div>
             <span className="text-[#8CC63F] text-base font-semibold uppercase mb-6 block">About Us</span>
             <h2 className="text-5xl font-bold text-[#1A202C] mb-8">We are Canopy Wave</h2>
-            <p className="text-gray-600 mb-10 text-sm leading-relaxed">
+            <p className="text-gray-600 mb-10 text-l leading-relaxed">
               Canopy Wave is dedicated to helping Enterprise optimize their AI workload budget, whether for development, fine-tuning, or inferencing. We own and operate thousands of H100/H200 GPUs, running with renewable energy with the cutting-edge management infrastructure to provide users high performance and reliable GPU resources.
             </p>
             <button className="bg-[#8CC63F] text-white px-8 py-3 text-base rounded-lg hover:bg-[#80B224] transition-all duration-300">
@@ -98,7 +98,7 @@ export default function AboutPage() {
                   height={36}
                 />
               </div>
-              <h3 className="text-sm font-semibold text-center mb-4 group-hover:text-white">Straightforward</h3>
+              <h3 className="text-l font-semibold text-center mb-4 group-hover:text-white">Straightforward</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
                 We handle the complexity so customers can spend less time managing their infrastructure
               </p>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                   height={36}
                 />
               </div>
-              <h3 className="text-sm font-semibold text-center mb-4 group-hover:text-white">Adaptable</h3>
+              <h3 className="text-l font-semibold text-center mb-4 group-hover:text-white">Adaptable</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
                 Products that are powerful and opinionated by default, but flexible under the hood
               </p>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   height={36}
                 />
               </div>
-              <h3 className="text-sm font-semibold text-center mb-4 group-hover:text-white">Global</h3>
+              <h3 className="text-l font-semibold text-center mb-4 group-hover:text-white">Global</h3>
               <p className="text-gray-600 text-center group-hover:text-white">
                 Servers are located all over the world, as close to users as possible
               </p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
                       <Image src="/about/experiences.svg" alt="Value icon" width={36} height={36} className='svg-gray' />
                     </div>
                     <FadeIn>
-                      <h3 className="text-sm font-semibold text-left">Deliver best-in-class experiences</h3>
+                      <h3 className="text-l font-semibold text-left">Deliver best-in-class experiences</h3>
                     </FadeIn>
                   </div>
                 </button>

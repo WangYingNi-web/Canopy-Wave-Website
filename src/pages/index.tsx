@@ -62,23 +62,23 @@ export default function Index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/optimized.svg" alt="Optimized Stack" width={34} height={34} className="mb-6 svg-gray" />
-                <h3 className="text-sm font-bold mb-4 group-hover:text-white">Optimized stack</h3>
-                <p className="text-gray-600 group-hover:text-white text-sm">Pre-qualified and optimized GPU and AI drivers</p>
+                <h3 className="text-l font-bold mb-4 group-hover:text-white">Optimized stack</h3>
+                <p className="text-gray-600 group-hover:text-white text-l">Pre-qualified and optimized GPU and AI drivers</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/resource.svg" alt="Dedicated resource" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-l font-bold mb-4 group-hover:text-white">Dedicated resource</h3>
-                <p className="text-gray-600 group-hover:text-white text-sm">Fully secured resources with the flexibility to optimize your stacks and application</p>
+                <p className="text-gray-600 group-hover:text-white text-l">Fully secured resources with the flexibility to optimize your stacks and application</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/high.svg" alt="High performance" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-l font-bold mb-4 group-hover:text-white">High performance</h3>
-                <p className="text-gray-600 group-hover:text-white text-sm">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
+                <p className="text-gray-600 group-hover:text-white text-l">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/used.svg" alt="Pay only used" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-l font-bold mb-4 group-hover:text-white">Pay only used</h3>
-                <p className="text-gray-600 group-hover:text-white text-sm">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
+                <p className="text-gray-600 group-hover:text-white text-l">Only pay for the GPU you use at the wholesale price. No wasted spending to test and integrate different versions of drivers</p>
               </div>
             </div>
           </div>
@@ -101,16 +101,16 @@ export default function Index() {
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-l font-bold ml-6">NVIDIA H100</h3>
                 </div>
-                <p className="text-gray-600 text-sm mb-6">H100 extends NVIDIA’s market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
-                <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-sm font-medium">Learn More →</IwsLink>
+                <p className="text-gray-600 text-l mb-6">H100 extends NVIDIA’s market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
+                <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
               </div>
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-l font-bold ml-6">NVIDIA H200S</h3>
                 </div>
-                <p className="text-gray-600 text-sm mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
-                <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-sm font-medium">Learn More →</IwsLink>
+                <p className="text-gray-600 text-l mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
+                <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
               </div>
             </div>
           </div>
@@ -125,13 +125,13 @@ export default function Index() {
                   <h2 className="text-3xl sm:text-4xl font-black mb-8 sm:mb-10">Powered By Our Global Network</h2>
                 </SlideUp>
                 <SlideUp>
-                  <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+                  <p className="text-gray-600 mb-8 text-l leading-relaxed">
                     Our data centers are powered by Canopy Wave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                   </p>
                 </SlideUp>
 
                 <SlideUp>
-                  <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-sm">
+                  <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
                     Get started →
                   </IwsLink>
                 </SlideUp>
@@ -173,7 +173,7 @@ export default function Index() {
                   />
                 </div>
                 <div className="p-6">
-                  <h4 className="text-sm font-semibold mb-3">Joint Blog - Accelerate Enterprise AI</h4>
+                  <h4 className="text-l font-semibold mb-3">Joint Blog - Accelerate Enterprise AI</h4>
                   <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
                   <div className="flex items-center gap-4">
                     <IwsLink href="/about/newsroom#blog" className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors">Article</IwsLink>

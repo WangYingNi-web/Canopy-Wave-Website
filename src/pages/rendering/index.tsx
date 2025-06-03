@@ -28,7 +28,7 @@ export default function SolutionsPage() {
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-sm mt-8 text-center">
+                            <p className="text-white text-l mt-8 text-center">
                                 Performance of bare metal, with the flexibility and simplicity of the cloud
                             </p>
                         </SlideUp>
@@ -44,7 +44,7 @@ export default function SolutionsPage() {
                             <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">Bare-Metal Performance in a Virtual Environment</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-sm text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-l text-center max-w-4xl mx-auto mb-16">
                                 Our virtual machines are engineered to match the performance of physical hardware. We use GPU-accelerated instances and optimize our virtualization stack to ensure your rendering jobs run as fast and efficiently as possible—without the overhead that typically comes with virtualization
                             </p>
                         </SlideUp>
@@ -64,7 +64,7 @@ export default function SolutionsPage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">High frame throughput</h3>
-                            <p className="text-gray-600 text-center text-sm">
+                            <p className="text-gray-600 text-center text-l">
                             Achieves thousands of frames per second via distributed parallel processing, ideal for 4K/8K real-time animation and industrial-scale droplet production
                             </p>
                         </div>
@@ -81,7 +81,7 @@ export default function SolutionsPage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Ultra-low latency</h3>
-                            <p className="text-gray-600 text-center text-sm">
+                            <p className="text-gray-600 text-center text-l">
                             Reduces latency to 0.1ms using lightweight compression (SDVoE) and 6G ULLC technologies, critical for surgical robotics and cloud gaming
                             </p>
                         </div>
@@ -98,7 +98,7 @@ export default function SolutionsPage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Supports GPU and CPU-based rendering engines</h3>
-                            <p className="text-gray-600 text-center text-sm">
+                            <p className="text-gray-600 text-center text-l">
                             Optimizes hybrid workflows through dynamic task scheduling and CUDA/OpenCL acceleration, enhancing real-time rendering efficiency in gaming and simulations
                             </p>
                         </div>
@@ -118,7 +118,7 @@ export default function SolutionsPage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-sm mb-4 sm:pr-10 text-justify">
+                                <p className="text-gray-600 text-l mb-4 sm:pr-10 text-justify">
                                     No more waiting in queues or paying for idle time. With Canopy Wave, you can spin up powerful rendering nodes instantly and only pay for what you use, down to the minute
                                 </p>
                             </SlideUp>
@@ -191,7 +191,7 @@ export default function SolutionsPage() {
                             <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">Flexible Storage for All Rendering Workflows</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-sm text-center max-w-4xl mx-auto mb-16">
+                            <p className="text-gray-600 text-l text-center max-w-4xl mx-auto mb-16">
                                 Rendering workflows involve a mix of large assets, intermediate files, and final outputs. Our platform offers local, shared, and object storage options, optimized for performance and collaboration
                             </p>
                         </SlideUp>
@@ -211,7 +211,7 @@ export default function SolutionsPage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Local Storage</h3>
-                            <p className="text-gray-600 text-center text-sm">
+                            <p className="text-gray-600 text-center text-l">
                                 Fast I/O for scratch files
                             </p>
                         </div>
@@ -228,7 +228,7 @@ export default function SolutionsPage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Shared Storage</h3>
-                            <p className="text-gray-600 text-center text-sm">
+                            <p className="text-gray-600 text-center text-l">
                                 We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
                             </p>
                         </div>
@@ -245,7 +245,7 @@ export default function SolutionsPage() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Object Storage</h3>
-                            <p className="text-gray-600 text-center text-sm">
+                            <p className="text-gray-600 text-center text-l">
                                 Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors
                             </p>
                         </div>
@@ -265,7 +265,7 @@ export default function SolutionsPage() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-sm mb-4 sm:pr-10">
+                                <p className="text-gray-600 text-l mb-4 sm:pr-10">
                                     Your creative assets are your intellectual property—and we treat them that way. Our infrastructure is built on a private cloud with end-to-end encryption, strict access control, and enterprise-grade data protection
                                 </p>
                             </SlideUp>
@@ -338,8 +338,8 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-sm">
-                            Whether you're rendering a single 4K animation or a complex feature-length film, our VM-based infrastructure scales horizontally and vertically, supporting as many rendering nodes as your project requires—without the headache of managing hardware
+                        <p className="text-gray-600 mb-8 mx-auto text-l">
+                            Whether you're rendering a single 4K animation or a complex feature-length film, our VM-based infrastructure scales horizontally and vertically, <br /> supporting as many rendering nodes as your project requires—without the headache of managing hardware
                         </p>
                     </SlideUp>
                     <SlideUp>
