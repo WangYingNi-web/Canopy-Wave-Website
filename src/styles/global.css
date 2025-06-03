@@ -37,10 +37,30 @@
     /* 添加这行来强制使用亮色模式 */
     color-scheme: light;
     overflow-x: hidden;
+    /* font-family: 'San Francisco', sans-serif; */
   }
 
   .svg-gray {
     filter: brightness(0) saturate(100%) invert(50%) sepia(10%) saturate(10%) hue-rotate(180deg) brightness(70%) contrast(90%);
+  }
+  .font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* 苹果设备使用原生San Francisco */
+  .apple-font .font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* Windows设备使用Inter字体（接近San Francisco） */
+  .windows-font .font-sans {
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+    font-synthesis: none; /* 禁用浏览器自动加粗/倾斜 */
+  }
+  
+  /* 如果需要更接近的Roboto变体 */
+  .windows-font .font-sans-alt {
+    font-family: var(--font-roboto), -apple-system, sans-serif;
   }
 
   /* img {
