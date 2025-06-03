@@ -181,7 +181,7 @@ Message: ${formData.message}
             <div className="pt-[140px] pb-20 bg-[#F5F7F4]">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h1 className="text-5xl sm:text-6xl font-bold mb-10">Job Application</h1>
+                        <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-center">Job Application</h1>
                     </SlideUp>
                     <div className="bg-white p-8 rounded-lg shadow-sm">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>

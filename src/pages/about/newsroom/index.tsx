@@ -61,8 +61,8 @@ export default function Newsroom() {
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-sm mt-8 text-center max-w-3xl mx-auto leading-relaxed">
-                                Stay informed about the latest developments, important announcements, and industry insights of Canopy Wave
+                            <p className="text-white text-l mt-8 text-center max-w-3xl mx-auto leading-relaxed">
+                                Stay informed about the latest developments, important announcements, and industry insights of <br /> Canopy Wave
                             </p>
                         </SlideUp>
                     </div>

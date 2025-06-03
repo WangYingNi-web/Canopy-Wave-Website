@@ -29,7 +29,7 @@ export default function Careers() {
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-sm mt-8 text-center">
+                            <p className="text-white text-l mt-8 text-center">
                                 Our growing, dynamic team is always looking for fresh talent.Explore our in-office, hybrid, and remote <br /> opportunities across tech roles - and apply to the role that aligns with your skills and goals
                             </p>
                         </SlideUp>
@@ -62,7 +62,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Healthcare</h4>
-                            <p className="text-gray-600 group-hover:text-white text-sm">
+                            <p className="text-gray-600 group-hover:text-white text-l">
                                 Our employees have access to high-quality medical, dental, and vision coverage
                             </p>
                         </div>
@@ -78,7 +78,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Insurance</h4>
-                            <p className="text-gray-600 group-hover:text-white text-sm">
+                            <p className="text-gray-600 group-hover:text-white text-l">
                                 We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
                             </p>
                         </div>
@@ -94,7 +94,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Catered lunch</h4>
-                            <p className="text-gray-600 group-hover:text-white text-sm">
+                            <p className="text-gray-600 group-hover:text-white text-l">
                                 Come together and mangia. We provide catered lunches in office and at our data centers from various local vendors
                             </p>
                         </div>
@@ -110,7 +110,7 @@ export default function Careers() {
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Flexible PTO</h4>
-                            <p className="text-gray-600 group-hover:text-white text-sm">
+                            <p className="text-gray-600 group-hover:text-white text-l">
                                 We believe in a healthy work-life balance. Take the time you need to recharge with flexible PTO
                             </p>
                         </div>
@@ -131,7 +131,7 @@ export default function Careers() {
                     <div className="space-y-4">
                         <div onClick={() => router.push('/about/job-application?position=devops')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
-                                <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
+                                <span className="text-l text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, DevOp</h3>
                             </div>
                             <div className="text-gray-600">Santa Clara, CA</div>
@@ -139,14 +139,14 @@ export default function Careers() {
 
                         <div onClick={() => router.push('/about/job-application?position=kubernetes')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
-                                <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
+                                <span className="text-l text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Kubernetes</h3>
                             </div>
                             <div className="text-gray-600">Remote (United States)</div>
                         </div>
                         <div onClick={() => router.push('/about/job-application?position=infrastructure')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
-                                <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
+                                <span className="text-l text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Infrastructure</h3>
                             </div>
                             <div className="text-gray-600">Santa Clara, CA</div>
@@ -154,7 +154,7 @@ export default function Careers() {
 
                         <div onClick={() => router.push('/about/job-application?position=frontend')} className="flex items-center justify-between p-6 bg-gray-50 hover:bg-[#F5F7F4] rounded-lg transition-all duration-300 border-b border-gray-200 cursor-pointer">
                             <div className="flex-1">
-                                <span className="text-sm text-[#8CC63F] mb-2 block">ENGINEERING</span>
+                                <span className="text-l text-[#8CC63F] mb-2 block">ENGINEERING</span>
                                 <h3 className="font-semibold">Software Engineer, Front-end</h3>
                             </div>
                             <div className="text-gray-600">Santa Clara, CA</div>

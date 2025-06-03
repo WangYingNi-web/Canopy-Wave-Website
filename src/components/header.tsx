@@ -133,7 +133,7 @@ export default function Header() {
                 </button>
 
                 {showProducts && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-[30px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         <div>
@@ -287,7 +287,7 @@ export default function Header() {
                 </button>
 
                 {showSolutions && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>AI Model Training</IwsLink></li>
@@ -323,7 +323,7 @@ export default function Header() {
                 </button>
 
                 {showPricing && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
@@ -339,7 +339,7 @@ export default function Header() {
 
               <div className="relative" ref={datacenterRef}>
                 <button
-                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
+                  className="text-gray-600 whitespace-nowrap text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowDataCenter(!showDataCenter)}
                 >
                   Data Center
@@ -359,7 +359,7 @@ export default function Header() {
                 </button>
 
                 {showDataCenter && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[28px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li>
@@ -417,7 +417,7 @@ export default function Header() {
                 </button>
 
                 {showResources && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li>
@@ -449,7 +449,7 @@ export default function Header() {
                 </button>
 
                 {showAbout && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[30px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>About Us</IwsLink></li>
@@ -487,11 +487,11 @@ export default function Header() {
 
           {/* 右侧按钮组 */}
           <div className="hidden custom:flex items-center space-x-4">
-            <IwsLink href="/contact">
-              <Button variant="outline" className="text-sm max-1207:text-xs">Contact Us</Button>
-            </IwsLink>
             <IwsLink href="/cloud-api">
               <Button className="bg-[#8CC63F] hover:bg-[#7AB530] text-white text-sm max-1207:text-xs">Canopy Wave Cloud</Button>
+            </IwsLink>
+            <IwsLink href="/contact">
+              <Button variant="outline" className="text-sm max-1207:text-xs">Contact Us</Button>
             </IwsLink>
           </div>
 

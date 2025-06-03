@@ -30,7 +30,7 @@ export default function NetworkingServices() {
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-sm mt-8">
+                            <p className="text-gray-600 text-l mt-8">
                                 Get the best RDMA Networking purposely build for AI
                             </p>
                         </SlideUp>
@@ -50,7 +50,7 @@ export default function NetworkingServices() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 mb-4 sm:pr-10 text-sm">
+                                <p className="text-gray-600 mb-4 sm:pr-10 text-l">
                                     Quantum InfiniBand is a high-performance interconnect solution
                                     primarily developed by NVIDIA for AI workloads.
                                     InfiniBand networking is used to support next-generation
@@ -79,7 +79,7 @@ export default function NetworkingServices() {
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white text-sm">
+                                    <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
                                         We use 400G none-blocking InfiniBand Networking to connect across all compute network, the latency is  in the microsecond range
                                     </p>
                                 </FadeIn>
@@ -101,7 +101,7 @@ export default function NetworkingServices() {
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white text-sm">
+                                    <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
                                         SHARP (Scalable Hierarchical Aggregation and Reduction Protocol): Offloads collective operations like reductions into the network fabric, greatly speeding up performance for distributed AI training
                                     </p>
                                 </FadeIn>
@@ -123,7 +123,7 @@ export default function NetworkingServices() {
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white text-sm">
+                                    <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
                                         We use Adaptive Routing and Explicit Congestion Notification ensure traffic flows smoothly even under heavy load
                                     </p>
                                 </FadeIn>
@@ -145,7 +145,7 @@ export default function NetworkingServices() {
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white text-sm">
+                                    <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
                                         We design our Infiniband networking with Enhanced error detection and correction with support for failover and redundancy
                                     </p>
                                 </FadeIn>
@@ -167,7 +167,7 @@ export default function NetworkingServices() {
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
-                                    <p className="text-gray-600 group-hover:text-white text-sm">
+                                    <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
                                         With up to 15% higher effective throughput than alternatives, run your GPU clusters at their maximum potential and accelerate time to market
                                     </p>
                                 </FadeIn>
@@ -184,7 +184,7 @@ export default function NetworkingServices() {
                         <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">RoceV2 Networking</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16 text-sm">
+                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16 text-l">
                             Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI
                         </p>
                     </SlideUp>
@@ -200,7 +200,7 @@ export default function NetworkingServices() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 group-hover:text-white">High Performance</h3>
-                            <p className="text-gray-600 text-sm group-hover:text-white">
+                            <p className="text-gray-600 text-l group-hover:text-white">
                                 RDMA bypasses the CPU for data transfers, reducing latency and CPU overhead
                             </p>
                         </div>
@@ -216,7 +216,7 @@ export default function NetworkingServices() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 group-hover:text-white">Excellent for AI Workloads</h3>
-                            <p className="text-gray-600 text-sm group-hover:text-white">
+                            <p className="text-gray-600 text-l group-hover:text-white">
                                 Used in distributed AI training systems where fast GPU-to-GPU communication across nodes is needed
                             </p>
                         </div>
@@ -232,7 +232,7 @@ export default function NetworkingServices() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 group-hover:text-white">Scalability</h3>
-                            <p className="text-gray-600 text-sm group-hover:text-white">
+                            <p className="text-gray-600 text-l group-hover:text-white">
                                 Supports multi-tenant cloud environments
                             </p>
                         </div>
@@ -248,7 +248,7 @@ export default function NetworkingServices() {
                                 />
                             </div>
                             <h3 className="font-bold text-l mb-4 group-hover:text-white">Advanced Congestion Control</h3>
-                            <p className="text-gray-600 text-sm group-hover:text-white">
+                            <p className="text-gray-600 text-l group-hover:text-white">
                                 We build our RoceV2 Networking resilience to congestion and packet loss
                             </p>
                         </div>
@@ -265,7 +265,7 @@ export default function NetworkingServices() {
                         <h2 className="text-3xl sm:text-4xl font-black mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
                     </SlideUp>
                     <SlideUp>
-                        <p className="text-gray-600 mb-8 mx-auto text-sm">
+                        <p className="text-gray-600 mb-8 mx-auto text-l">
                             Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs
                         </p>
                     </SlideUp>

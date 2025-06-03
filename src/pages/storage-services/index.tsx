@@ -32,7 +32,7 @@ export default function StorageServices() {
               </h1>
             </SlideUp>
             <SlideUp>
-              <p className="text-gray-600 text-sm mt-8">
+              <p className="text-gray-600 text-l mt-8">
                 Flexible storage architecture for any AI or enterprise workload
               </p>
             </SlideUp>
@@ -48,13 +48,13 @@ export default function StorageServices() {
             <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">Our Data Centers offer Multi-Tier <br /> Storage Architecture</h2>
           </SlideUp>
           <SlideUp>
-            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-sm">
+            <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-l">
               Our enterprise-class storage solutions are built on self-controlled hardware infrastructure and achieve technological differentiation through a four-layer architecture
             </p>
           </SlideUp>
           <SlideUp>
             <div className="flex justify-center pb-8">
-              <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm" onClick={() => window.location.href = '/contact'}>
+              <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-l" onClick={() => window.location.href = '/contact'}>
                 Learn more
               </button>
             </div>
@@ -71,7 +71,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-l mb-4">Performance Where IT Counts</h3>
-              <p className="text-gray-600 text-sm">Uses SSD storage to analyze data access in real time, prioritizing hot data (like transactions) in fast tiers for microsecond speeds. Smart algorithms auto-move data between tiers</p>
+              <p className="text-gray-600 text-l">Uses SSD storage to analyze data access in real time, prioritizing hot data (like transactions) in fast tiers for microsecond speeds. Smart algorithms auto-move data between tiers</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -84,8 +84,8 @@ export default function StorageServices() {
                   className='svg-gray'
                 />
               </div>
-              <h3 className="font-bold text-l mb-4">Scalability For<br />Growth</h3>
-              <p className="text-gray-600 text-sm">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption</p>
+              <h3 className="font-bold text-l mb-4">Scalability For Growth</h3>
+              <p className="text-gray-600 text-l">Uses distributed storage to manage exabyte-scale unstructured data. Cross-rack/data center distribution enables seamless capacity expansion without service disruption</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -99,7 +99,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-l mb-4">Seamlesss Collaboration</h3>
-              <p className="text-gray-600 text-sm">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work</p>
+              <p className="text-gray-600 text-l">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -113,7 +113,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-l mb-4">Cloud-Native Readiness</h3>
-              <p className="text-gray-600 text-sm">Object storage offers standard APIs with cross-region sync & auto-tiering. Pools mixed storage, runs in containers, and copies data across regions in under 1 second</p>
+              <p className="text-gray-600 text-l">Object storage offers standard APIs with cross-region sync & auto-tiering. Pools mixed storage, runs in containers, and copies data across regions in under 1 second</p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function StorageServices() {
             <div>
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Local Storage</h2>
-                <p className="text-gray-600 mb-8 text-sm">15.6TB of NVMe storage, physically attached to the GPU servers</p>
+                <p className="text-gray-600 mb-8 text-l">15.6TB of NVMe storage, physically attached to the GPU servers</p>
               </SlideUp>
               <SlideUp>
                 <button
@@ -239,7 +239,7 @@ export default function StorageServices() {
             <div>
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Shared Storage</h2>
-                <p className="text-gray-600 mb-8 text-sm">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
+                <p className="text-gray-600 mb-8 text-l">2PB+ centralized parallel file system, accessible by multiple machines over a network</p>
               </SlideUp>
               <SlideUp>
                 <button
@@ -256,7 +256,7 @@ export default function StorageServices() {
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-l font-bold mb-4">File-Based</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-l">
                 All servers see the same folder structure like your local PC. Files stay unique - no duplicates, no matter where they're physically stored
               </p>
             </div>
@@ -265,7 +265,7 @@ export default function StorageServices() {
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-l font-bold mb-4">Multi-Server File Access</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-l">
                 Multi-server editing with auto-conflict resolution. Works like Google Docs for servers - changes appear instantly everywhere, no version chaos
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function StorageServices() {
             <div className="border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Image src="/storage/harmony-icon.svg" alt="Private Cloud" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-l font-bold mb-4">Distributed Harmony Engine</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-l">
                 Auto-schedules distributed tasks like traffic lights. Smart scheduling prevents file access conflicts. For example, AI training gets 40% faster with hot data auto-prioritized in fast storage
               </p>
             </div>
@@ -290,7 +290,7 @@ export default function StorageServices() {
             <div>
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Object Storage</h2>
-                <p className="text-gray-600 mb-8 text-sm">10PB+ Object File System, accessed via S3 APIs</p>
+                <p className="text-gray-600 mb-8 text-l">10PB+ Object File System, accessed via S3 APIs</p>
               </SlideUp>
               <SlideUp>
                 <button
@@ -378,7 +378,7 @@ export default function StorageServices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
             <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
-            <p className="text-gray-600 mb-8 mx-auto text-sm">
+            <p className="text-gray-600 mb-8 mx-auto text-l">
               Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
             </p>
           </SlideUp>
