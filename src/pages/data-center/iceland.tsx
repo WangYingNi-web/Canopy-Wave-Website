@@ -369,8 +369,8 @@ export default function IcelandDataCenter() {
             </div>
             {/* Where Will You Deploy Section */}
             <div
-                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28"
+                style={{ backgroundImage: "url('/contact-section.png')", backgroundSize: "cover", width: "100%" }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
@@ -381,7 +381,7 @@ export default function IcelandDataCenter() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 mb-8 text-l max-w-3xl">
-                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
+                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us <br /> to reserve a long term contract
                             </p>
                         </SlideUp>
                         <SlideUp>
