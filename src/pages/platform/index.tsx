@@ -6,6 +6,7 @@ import Image from 'next/image';
 import SlideUp from '@/components/slide';
 import { Button } from "@/components/ui/button";
 import { useScrollToHash } from '@/hooks/useScrollToHash';
+import BackgroundTransition from '@/components/BackgroundTransition';
 
 export default function PlatformPage() {
     useScrollToHash();
@@ -154,11 +155,13 @@ export default function PlatformPage() {
             </div>
 
             {/* Learn more about platform now Section */}
-            <div
-                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.png')", backgroundSize: "cover", width: "100%" }}
-            >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
+                <BackgroundTransition
+                    defaultImage="/contact-section1.webp"
+                    activeImage="/contact-section2.webp"
+                    className="w-full h-full absolute inset-0"
+                />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6">Learn more about platform now</h2>
                     </SlideUp>

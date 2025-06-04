@@ -4,13 +4,12 @@ import Header from './../components/header'
 import Footer from './../components/footer'
 import Image from 'next/image'
 import IwsLink from '@/components/IwsLink'
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button"
 import SlideUp from '@/components/slide';
 import PartnerCarousel from '@/components/carousel';
+import { useInView } from 'react-intersection-observer';
+// import EuropeMap from '@/components/EuropeMap'
 
 export default function Index() {
-  const router = useRouter();
   const partnerLogos = [
     { id: 1, width: 55, height: 40 },
     { id: 2, width: 45, height: 40 },
@@ -25,7 +24,12 @@ export default function Index() {
     { id: 11, width: 50, height: 40 },
     { id: 12, width: 50, height: 40 },
     { id: 13, width: 50, height: 40 },
-];
+  ];
+  const { ref, inView } = useInView({
+    threshold: 0.9,
+    triggerOnce: true // 只触发一次
+  });
+
   return (
     <main>
       <Header />
@@ -137,6 +141,9 @@ export default function Index() {
                 </SlideUp>
               </div>
               <div className="w-full md:w-1/2">
+                {/* <SlideUp>
+                  <EuropeMap />
+                </SlideUp> */}
                 <SlideUp>
                   <Image
                     src="/World.svg"
@@ -187,8 +194,14 @@ export default function Index() {
 
         {/* Contact Section */}
         <div
-          className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-36"
-          style={{ backgroundImage: "url('/contact-section.png')", backgroundSize: "cover", width: "100%" }}
+          ref={ref}
+          className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
+          style={{
+            backgroundImage: `url('/contact-section${inView ? '2' : '1'}.webp')`,
+            backgroundSize: "cover",
+            width: "100%",
+            transition: "background-image 0.5s ease-in-out"
+          }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
