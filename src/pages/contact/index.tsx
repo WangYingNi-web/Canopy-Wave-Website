@@ -187,7 +187,7 @@ export default function Contact() {
                     <div className="flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-1/2">
                         <SlideUp>
-                        <h1 className="text-5xl sm:text-6xl font-bold text-[#8CC63F] mb-6">Contact Us</h1>
+                        <h1 className="text-5xl sm:text-6xl font-black text-[#8CC63F] mb-6">Contact Us</h1>
 
                         </SlideUp>
                             <p className="text-base text-gray-700 mb-4 max-w-md">
