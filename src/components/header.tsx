@@ -517,7 +517,15 @@ export default function Header() {
       </div>
 
       {/* 移动端折叠菜单 */}
-      <div className={`md:hidden ${isOpen ? '' : 'hidden'}`} id="mobile-menu">
+      <div 
+        className={`md:hidden no-scrollbar ${isOpen ? '' : 'hidden'}`} 
+        id="mobile-menu"
+        style={{
+          maxHeight: 'calc(100vh - 80px)',
+          overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch'
+        }}
+      >
         <div className="px-2 pt-2 pb-3 sm:px-3">
           <div className="relative">
             <button
