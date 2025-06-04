@@ -7,6 +7,7 @@ import Footer from '@/components/footer';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import SlideUp from '@/components/slide';
 import FadeIn from '@/components/FadeIn';
+import BackgroundTransition from '@/components/BackgroundTransition';
 
 export default function ComputeServicesPage() {
     useScrollToHash();
@@ -26,7 +27,7 @@ export default function ComputeServicesPage() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
                         <SlideUp>
-                        <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
+                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
                                 Compute Services
                             </h1>
                         </SlideUp>
@@ -587,11 +588,13 @@ export default function ComputeServicesPage() {
                 Your browser does not support the video tag.
             </video> */}
             {/* Ready to Get Started Section */}
-            <div
-                className="bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32"
-                style={{ backgroundImage: "url('/contact-section.png')", backgroundSize: "cover", width: "100%" }}
-            >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
+                <BackgroundTransition
+                    defaultImage="/contact-section1.webp"
+                    activeImage="/contact-section2.webp"
+                    className="w-full h-full absolute inset-0"
+                />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
                     </SlideUp>

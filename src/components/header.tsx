@@ -487,9 +487,7 @@ export default function Header() {
 
           {/* 右侧按钮组 */}
           <div className="hidden custom:flex items-center space-x-4">
-            <IwsLink href="/cloud-api">
-              <Button className="bg-[#8CC63F] hover:bg-[#7AB530] text-white text-sm max-1207:text-xs">Canopy Wave Cloud</Button>
-            </IwsLink>
+            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>Canopy Wave Cloud</Button>
             <IwsLink href="/contact">
               <Button variant="outline" className="text-sm max-1207:text-xs">Contact Us</Button>
             </IwsLink>
