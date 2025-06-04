@@ -43,15 +43,11 @@ function IwsLink(props: Props) {
   };
 
   return (
-    <Link href={href}>
-      <a 
-        className={className} 
-        onClick={handleClick}
-        target={target}
-        rel={rel}
-      >
-        {children}
-      </a>
+    <Link href={href} className={className}
+      onClick={handleClick}
+      target={target}
+      rel={rel}>
+      {children}
     </Link>
   );
 }
