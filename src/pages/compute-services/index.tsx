@@ -47,7 +47,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-full" />
+                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-[93%]" />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -132,17 +132,15 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Leadership in AI-Optimized H100 and H200</h2>
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Leadership in AI-Optimized <br /> H100 and H200</h2>
                             </SlideUp>
                             <SlideUp>
                                 <ul className="space-y-4 text-l text-gray-600">
                                     <li className="flex items-start gap-3">
-                                        <span className="text-[#8CC63F] mt-1">▶</span>
                                         <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine</p>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <span className="text-[#8CC63F] mt-1">▶</span>
-                                        <p>Tailored for modern AI workloads, and are benchmark leaders in training and inference performance</p>
+                                        <p>Tailored for modern AI workloads, and are benchmark leaders in training <br /> and inference performance</p>
                                     </li>
                                 </ul>
                             </SlideUp>

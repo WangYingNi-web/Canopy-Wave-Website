@@ -200,7 +200,7 @@ export default function Index() {
             backgroundImage: `url('/contact-section${inView ? '2' : '1'}.webp')`,
             backgroundSize: "cover",
             width: "100%",
-            transition: "background-image 0.5s ease-in-out"
+            transition: "background-image 0.9s ease-in-out"
           }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-8">

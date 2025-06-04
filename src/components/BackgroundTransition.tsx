@@ -28,6 +28,7 @@ export default function BackgroundTransition({
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        transition: 'background-image 0.9s ease-in-out'
       }}
     />
   );
