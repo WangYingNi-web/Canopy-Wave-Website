@@ -20,7 +20,7 @@ interface PartnerCarouselProps {
 
 export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
   return (
-    <div className="bg-gray-50 py-4 sm:py-6">
+    <div className="bg-gray-50 py-4 sm:py-16">
       <div className="max-w-7xl mx-auto">
         <Carousel
           opts={{
@@ -44,7 +44,7 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
                     alt={`Partner ${logo.id}`}
                     width={logo.width}
                     height={logo.height}
-                    className="w-full h-auto object-contain"
+                    className="w-auto h-[30px] object-contain"
                   />
                 </div>
               </CarouselItem>
