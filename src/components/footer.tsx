@@ -15,7 +15,7 @@ export default function Footer() {
                         <div className="flex items-center">
                             <IwsLink href="/" className="flex items-center">
                                 <Image
-                                    src="/canopy.svg"
+                                    src="/canopy.png"
                                     alt="Canopy Wave Logo"
                                     width={45}
                                     height={45}

@@ -406,7 +406,7 @@ export default function PlatformPage() {
                             onClick={() => toggleSection('api-key')}
                             className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
                         >
-                            <h3>Obtaining an API Key</h3>
+                            <h3 className="text-2xl">Obtaining an API Key</h3>
                             <svg
                                 className={`w-6 h-6 transform transition-transform ${sections['api-key'] ? 'rotate-180' : ''}`}
                                 fill="none"
@@ -437,7 +437,7 @@ export default function PlatformPage() {
                             onClick={() => toggleSection('api-call')}
                             className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
                         >
-                            <h3>Making an API Call</h3>
+                            <h3 className="text-2xl">Making an API Call</h3>
                             <svg
                                 className={`w-6 h-6 transform transition-transform ${sections['api-call'] ? 'rotate-180' : ''}`}
                                 fill="none"
@@ -468,7 +468,7 @@ export default function PlatformPage() {
                             onClick={() => toggleSection('api-endpoints')}
                             className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
                         >
-                            <h3>REST API Endpoints</h3>
+                            <h3 className="text-2xl">REST API Endpoints</h3>
                             <svg
                                 className={`w-6 h-6 transform transition-transform ${sections['api-endpoints'] ? 'rotate-180' : ''}`}
                                 fill="none"
