@@ -25,9 +25,9 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="60x60" href="/Icon-adaptation/apple-touch-icon-60x60.png?v=1" />
           
           {/* 通用图标 */}
-          <link rel="icon" type="image/png" sizes="32x32" href="/Icon-adaptation/favicon-32x32.png?v=1" />
+          {/* <link rel="icon" type="image/png" sizes="32x32" href="/Icon-adaptation/favicon-32x32.png?v=1" />
           <link rel="icon" type="image/png" sizes="16x16" href="/Icon-adaptation/favicon-16x16.png?v=1" />
-          <link rel="shortcut icon" href="/favicon.ico?v=1" />
+          <link rel="shortcut icon" href="/favicon.ico?v=1" /> */}
           
           {/* 添加网站名称和主题颜色 */}
           <meta name="application-name" content="Canopy" />
