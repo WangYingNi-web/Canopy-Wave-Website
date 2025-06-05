@@ -13,7 +13,7 @@ export default function SlideUp({ children, delay = 0 }: SlideUpProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{
-        duration: 0.8,
+        duration: 0.9,
         delay: delay,
         ease: "easeOut"
       }}
