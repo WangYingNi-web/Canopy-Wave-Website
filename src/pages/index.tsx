@@ -7,7 +7,7 @@ import IwsLink from '@/components/IwsLink'
 import SlideUp from '@/components/slide';
 import PartnerCarousel from '@/components/carousel';
 import { useInView } from 'react-intersection-observer';
-// import EuropeMap from '@/components/EuropeMap'
+import EuropeMap from '@/components/EuropeMap'
 
 export default function Index() {
   const partnerLogos = [
@@ -121,7 +121,7 @@ export default function Index() {
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-[#F9F9F9] py-12 sm:py-20">
+        <div className="bg-[#F9F9F9] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
@@ -141,10 +141,10 @@ export default function Index() {
                 </SlideUp>
               </div>
               <div className="w-full md:w-1/2">
-                {/* <SlideUp>
-                  <EuropeMap />
-                </SlideUp> */}
                 <SlideUp>
+                  <EuropeMap />
+                </SlideUp>
+                {/* <SlideUp>
                   <Image
                     src="/World.svg"
                     alt="Global Network"
@@ -153,7 +153,7 @@ export default function Index() {
                     className="w-full"
                     priority
                   />
-                </SlideUp>
+                </SlideUp> */}
               </div>
             </div>
           </div>
