@@ -41,7 +41,6 @@ export default function PricingPage() {
                                 alt="H100"
                                 width={24}
                                 height={24}
-                                className="mr-8"
                             />
                             <h3 className="text-sm font-semibold">NVIDIA HGX H100</h3>
                         </div>

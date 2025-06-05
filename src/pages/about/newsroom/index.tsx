@@ -56,12 +56,12 @@ export default function Newsroom() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-4xl sm:text-5xl font-black text-white text-center leading-tight">
+                            <h1 className="text-4xl sm:text-5xl font-black text-[#80B224] text-center leading-tight">
                                 Newsroom
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-l mt-8 text-center max-w-3xl mx-auto leading-relaxed">
+                            <p className="text-gray-600 text-l mt-8 text-center max-w-3xl mx-auto leading-relaxed">
                                 Stay informed about the latest developments, important announcements, and industry insights of <br /> Canopy Wave
                             </p>
                         </SlideUp>
