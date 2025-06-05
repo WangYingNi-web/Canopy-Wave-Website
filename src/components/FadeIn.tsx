@@ -10,17 +10,17 @@ interface FadeInProps {
 export default function FadeIn({ 
   children, 
   delay = 0, 
-  duration = 1.25 
+  duration = 0.75 // 更快的动画时间
 }: FadeInProps) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, scale: 0.9 }}  // 添加缩放效果
+      whileInView={{ opacity: 1, scale: 1 }}  // 缩放回正常
       viewport={{ once: true }}
       transition={{
         duration: duration,
         delay: delay,
-        ease: "easeOut"
+        ease: "easeInOut"  // 使用更平滑的过渡
       }}
     >
       {children}
