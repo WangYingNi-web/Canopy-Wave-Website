@@ -26,12 +26,12 @@ export default function IcelandDataCenter() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-6xl font-black text-white text-center">
+                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center">
                                 Data Center
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-l mt-8 text-center">
+                            <p className="text-gray-600 text-l mt-8 text-center">
                                 At Canopy Wave, we’ve set down roots across the globe with these world-class office spaces
                             </p>
                         </SlideUp>

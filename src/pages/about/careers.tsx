@@ -24,12 +24,12 @@ export default function Careers() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-6xl font-black text-white text-center">
+                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center">
                                 Careers
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-l mt-8 text-center">
+                            <p className="text-gray-600 text-l mt-8 text-center">
                                 Our growing, dynamic team is always looking for fresh talent.Explore our in-office, hybrid, and remote <br /> opportunities across tech roles - and apply to the role that aligns with your skills and goals
                             </p>
                         </SlideUp>
