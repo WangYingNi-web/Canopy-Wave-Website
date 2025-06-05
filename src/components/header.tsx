@@ -98,12 +98,12 @@ export default function Header() {
                 <Image
                   src="/canopy.png"
                   alt="Canopy Wave Logo"
-                  width={35}
-                  height={35}
+                  width={45}
+                  height={45}
                   className="md:w-[40px] md:h-[40px] lg:w-[45px] lg:h-[45px]"
                   priority
                 />
-                <span className="text-sm font-bold text-gray-600 ml-2">Canopy Wave</span>
+                <span className="whitespace-nowrap text-sm font-bold text-gray-600 ml-2">Canopy Wave</span>
               </IwsLink>
             </div>
           </div>
