@@ -15,6 +15,7 @@ interface ApiEndpointProps {
         required?: string[];
         optional?: string[];
     };
+    reply: string;
     body?: {
         required?: {
             name: string;
@@ -26,7 +27,6 @@ interface ApiEndpointProps {
         }[];
         example?: string;
     };
-    reply: string;
 }
 
 const ApiEndpoint: React.FC<ApiEndpointProps> = ({
@@ -35,8 +35,8 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
     endpoint,
     description,
     query,
-    body,
-    reply
+    reply,
+    body
 }) => (
     <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
         <div className="text-gray-600">
@@ -72,10 +72,12 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                     )}
                 </div>
             )}
-
+            <div className="mt-4">
+                <strong>Response: </strong>{reply}
+            </div>
             {body && (
                 <div className="mt-4">
-                    <strong>Request Body</strong>
+                    {/* <strong>Request Body</strong> */}
                     {body.required && (
                         <div className="mt-2">
                             <div>Required:</div>
@@ -108,9 +110,6 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                 </div>
             )}
 
-            <div className="mt-4">
-                <strong>Response: </strong>{reply}
-            </div>
         </div>
     </div>
 );
@@ -133,11 +132,18 @@ export default function PlatformPage() {
 
     const apiEndpoints: ApiEndpointProps[] = [
         {
-            title: "List Projects",
+            title: "List projects",
             method: "GET",
             endpoint: "https://cloud-api.canopywave.io/api/v1/projects",
-            description: "Returns the list of names of the projects you have permission to access. Many API calls will require project as a parameter.",
-            reply: "Returns a list of project names"
+            reply: `This will return the list of names of the projects you have permission to access. Many API calls will require project as a parameter`,
+            body: {
+                example: `${JSON.stringify({
+                    "data": [
+                        "andrew.li@canopywave.com",
+                        "cynthia@canopywave.com"
+                    ]
+                }, null, 2)}`,
+            },
         },
         {
             title: "List Instances",
@@ -419,7 +425,7 @@ export default function PlatformPage() {
                         {sections['api-key'] && (
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
                                 <p className="text-gray-600 text-l">
-                                    To manage Canopy Wave Cloud via the API, users must first register for an account at Canopy Wave (https://cloud.canopywave.io),then follow these steps to generate an API key:
+                                    To manage Canopy Wave Cloud via the API, users must first register for an account at <a href="https://cloud.canopywave.io" target="_blank" className="text-blue-500 hover:underline">Canopy Wave</a> (https://cloud.canopywave.io). After registering, follow these steps to generate an API key.
                                 </p>
                                 <ol className="list-decimal list-inside text-gray-600 mt-4">
                                     <li>In the left navigation bar, click on API Keys</li>
@@ -451,11 +457,30 @@ export default function PlatformPage() {
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
                                 <div className="text-gray-600">
                                     <p>To make a request to the API, include an HTTP Bearer header with your API key:</p>
-                                    <code className="block bg-gray-100 p-2 rounded mt-2">Authorization: Bearer &lt;YOUR-API-KEY&gt;</code>
-                                    <p className="mt-4">If the API call is invalid, an error Reply will be returned. For example:</p>
-                                    <pre className="bg-gray-100 p-2 rounded mt-2">
+                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                                        <code>Authorization: Bearer &lt;YOUR-API-KEY&gt;</code>
+                                    </pre>
+
+                                    <p className="mt-6">A successful API call will return the following structure:</p>
+                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
                                         <code suppressHydrationWarning>
-                                            {JSON.stringify({ error: "<error message>" }, null, 2)}
+                                            {JSON.stringify({
+                                                "data": "<PAYLOAD>"
+                                            }, null, 2)}
+                                        </code>
+                                    </pre>
+
+                                    <p className="mt-6">If the API call is invalid, an error Reply will be returned. For example, a 401 Unauthorized error indicates that the request was not authorized:</p>
+                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                                        <code>401: Unauthorized</code>
+                                    </pre>
+
+                                    <p className="mt-4">The error Reply will include an error message, formatted as follows:</p>
+                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                                        <code suppressHydrationWarning>
+                                            {JSON.stringify({
+                                                "error": "<error message>"
+                                            }, null, 2)}
                                         </code>
                                     </pre>
                                 </div>
