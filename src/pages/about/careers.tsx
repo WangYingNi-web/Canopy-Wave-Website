@@ -5,6 +5,7 @@ import Footer from '@/components/footer';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
 import { useRouter } from 'next/router';
+import BackgroundTransition from '@/components/BackgroundTransition';
 
 export default function Careers() {
     const router = useRouter();
@@ -164,28 +165,28 @@ export default function Careers() {
             </div>
 
             {/* Contact Section */}
-            {/* <div className="bg-[#F9F9F9] py-12 sm:py-24 border border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
+                <BackgroundTransition
+                    defaultImage="/contact-section1.webp"
+                    activeImage="/contact-section2.webp"
+                    className="w-full h-full absolute inset-0"
+                />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-12">Come build the future with us</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-8">Work with us</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 mb-8">
-                            Our diverse, expanding team is always looking for new talent. See our open in-office, hybrid, and remote tech jobs—and apply to your perfect fit today
+                            Ready to shape the future? Join Canopy Wave and help drive the future of technology with a team redefining what's possible
                         </p>
                     </SlideUp>
-                    <SlideUp>
-                        <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-                            <button
-                                className="bg-[#8CC63F] text-white px-8 py-3 rounded-lg hover:shadow-lg  transition-all duration-300"
-                                onClick={() => window.location.href = '/contact'}
-                            >
-                                Get started
-                            </button>
-                        </div>
-                    </SlideUp>
+                    <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                        <button className="bg-[#8CC63F] text-white px-4 py-2 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => router.push('/about/job-application?position=infrastructure')}>
+                            Open positions
+                        </button>
+                    </div>
                 </div>
-            </div> */}
+            </div>
 
             <Footer />
         </main>

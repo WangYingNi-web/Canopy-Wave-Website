@@ -12,7 +12,7 @@ interface BackgroundTransitionProps {
 export default function BackgroundTransition({
   defaultImage,
   activeImage,
-  threshold = 0.8, // 降低触发阈值，使动画更早开始
+  threshold = 0.9, // 降低触发阈值，使动画更早开始
   triggerOnce = true,
   className = '',
 }: BackgroundTransitionProps) {
