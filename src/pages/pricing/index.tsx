@@ -1,11 +1,11 @@
 "use client";
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import SlideUp from '@/components/slide';
-import Link from 'next/link';
+import BackgroundTransition from '@/components/BackgroundTransition';
+import { Button } from "@/components/ui/button";
 
 export default function PricingPage() {
     return (
@@ -13,7 +13,7 @@ export default function PricingPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="text-center py-16 pt-40 px-4">
+            {/* <div className="text-center py-16 pt-40 px-4">
                 <SlideUp>
                     <h1 className="text-4xl sm:text-5xl font-black mb-4">Compute</h1>
                     <p className="text-gray-600 mb-8">
@@ -28,12 +28,57 @@ export default function PricingPage() {
                         Try Control Panel
                     </button>
                 </SlideUp>
+            </div> */}
+            <div className="w-full h-[490px] relative mt-[84px]">
+                <Image
+                    src="/about/banner.svg"
+                    alt="banner"
+                    layout='fill'
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
+                        <SlideUp>
+                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center">
+                                GPU Cloud Pricing
+                            </h1>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 text-l mt-8 text-center">
+                                Get access to world-class cloud resources and the best GPUs on the market
+                            </p>
+                        </SlideUp>
+
+                    </div>
+                </div>
+            </div>
+
+            <div className='bg-[#F9F9F9]'>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                    <div className="text-center">
+                        <SlideUp>
+                            <h1 className="text-4xl sm:text-5xl font-black mb-8">Compute</h1>
+                            <p className="text-gray-600 mb-8">
+                                Get models to market faster with the latest and greatest NVIDIA chips
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <button
+                                onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                                className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
+                            >
+                                Try Control Panel
+                            </button>
+                        </SlideUp>
+                    </div>
+                </div>
             </div>
 
             {/* Pricing Tables Container */}
             <div className="max-w-7xl mx-auto px-4 space-y-12 mb-16">
                 {/* NVIDIA HGX H100 */}
-                <div className="mb-16 scroll-mt-24">
+                <div id='H100' className="mb-16 scroll-mt-24">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
@@ -234,27 +279,27 @@ export default function PricingPage() {
                     </div>
                 </div>
 
-                {/* Contact Section */}
-                <Link href="/contact">
-                    <section className="bg-[#8CC63F] rounded-lg shadow-lg p-8 sm:p-20 text-center my-20 relative cursor-pointer hover:bg-[#7DB535] transition-colors duration-300">
-                        <div className="flex flex-col lg:flex-row justify-between items-center">
-                            <div className="text-center lg:text-left w-full lg:w-auto mb-8 lg:mb-0">
-                                <h2 className="text-4xl sm:text-5xl font-black text-white">Contact us for competitive
-                                <br />pricing</h2>
-                            </div>
-                            <div className="hidden lg:block">
-                                <Image
-                                    src="/boxes.svg"
-                                    alt="Boxes illustration"
-                                    width={300}
-                                    height={200}
-                                />
-                            </div>
-                        </div>
-                    </section>
-                </Link>
             </div>
-
+            {/* Contact Section */}
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
+                <BackgroundTransition
+                    defaultImage="/contact-section1.webp"
+                    activeImage="/contact-section2.webp"
+                    className="w-full h-full absolute inset-0"
+                />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <SlideUp>
+                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Contact us for competitive</h2>
+                    </SlideUp>
+                    <SlideUp>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                Contact Sales
+                            </Button>
+                        </div>
+                    </SlideUp>
+                </div>
+            </div>
             <Footer />
         </main>
     );

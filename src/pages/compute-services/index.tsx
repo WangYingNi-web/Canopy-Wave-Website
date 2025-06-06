@@ -178,39 +178,58 @@ export default function ComputeServicesPage() {
                                 </Button>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8 border-l border-gray-200">
+                        <div className="w-full md:w-1/2 border-l border-gray-200">
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/memory.svg" alt="Memory" width={96} height={96} className="mt-1 svg-gray" />
-                                <FadeIn>
-                                    <div>
-                                        <h3 className="font-bold mb-2 text-l">141 GB of HBM3e memory</h3>
-                                        <p className="text-gray-600 text-l">Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access</p>
+                                <div>
+                                    <div className="flex items-center gap-4 mb-2">
+                                        <Image src="/compute/memory.svg" alt="Memory" width={36} height={36} className="mt-1 svg-gray" />
+                                        <FadeIn>
+                                            <h3 className="text-l font-bold">141 GB of HBM3e memory</h3>
+                                        </FadeIn>
                                     </div>
-                                </FadeIn>
+                                    <FadeIn>
+                                        <ul className="text-gray-600 space-y-1 pl-[53px]">
+                                            <li className="flex items-start">
+                                                <span>Large language models (LLMs) and generative AI systems need to process huge datasets and massive parameter matrices. Speed and scale depend heavily on how fast and how much memory the GPU can access</span>
+                                            </li>
+                                        </ul>
+                                    </FadeIn>
+                                </div>
                             </div>
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1 svg-gray" />
-                                <FadeIn>
-                                    <div>
-                                        <h3 className="font-bold mb-2 text-l">4.8 TB/s memory bandwidth</h3>
-                                        <p className="text-gray-600 text-l">the fastest of any NVIDIA GPU to date</p>
+                                <div>
+                                    <div className="flex items-center gap-4 mb-2">
+                                        <Image src="/compute/fast.svg" alt="Bandwidth" width={36} height={36} className="mt-1 svg-gray" />
+                                        <FadeIn>
+                                            <h3 className="text-l font-bold">4.8 TB/s memory bandwidth</h3>
+                                        </FadeIn>
                                     </div>
-                                </FadeIn>
-
+                                    <FadeIn>
+                                        <ul className="text-gray-600 space-y-1 pl-[53px]">
+                                            <li className="flex items-start">
+                                                <span>the fastest of any NVIDIA GPU to date</span>
+                                            </li>
+                                        </ul>
+                                    </FadeIn>
+                                </div>
                             </div>
                             <div className="flex items-start gap-4 p-6 border-b-[1px] border-b-gray-200">
-                                <Image src="/compute/model.svg" alt="Workloads" width={34} height={34} className="mt-1 svg-gray" />
-                                <FadeIn>
-                                    <div>
-                                        <h3 className="font-bold mb-2 text-l">Optimized for memory-bound workloads, including:</h3>
-                                        <ul className="space-y-2 text-gray-600">
+                                <div>
+                                    <div className="flex items-center gap-4 mb-2">
+                                        <Image src="/compute/model.svg" alt="Workloads" width={34} height={34} className="mt-1 svg-gray" />
+                                        <FadeIn>
+                                            <h3 className="text-l font-bold">Optimized for memory-bound workloads, including:</h3>
+                                        </FadeIn>
+                                    </div>
+                                    <FadeIn>
+                                        <ul className="text-gray-600 space-y-1 pl-[53px]">
                                             <li>• Large transformer models</li>
                                             <li>• Retrieval-augmented generation (RAG)</li>
                                             <li>• Generative vision-language models</li>
                                             <li>• Inference on massive context windows (e.g. greater than 100k tokens)</li>
                                         </ul>
-                                    </div>
-                                </FadeIn>
+                                    </FadeIn>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -234,39 +253,39 @@ export default function ComputeServicesPage() {
                                 </Button>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8 border-l border-gray-200">
+                        <div className="w-full md:w-1/2 space-y-4 border-l border-gray-200">
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={44} height={44} className="mt-1 svg-gray" />
+                                <Image src="/compute/accuracy.svg" alt="Higher Accuracy" width={36} height={36} className="-mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-l">Higher Accuracy</h3>
+                                        <h3 className="font-bold mb-4 text-l">Higher Accuracy</h3>
                                         <p className="text-gray-600 text-l">Transformer Engine uses FP8 precision (8-bit floating point) with dynamic range scaling</p>
                                     </div>
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/performance.svg" alt="Better Performance" width={44} height={44} className="mt-1 svg-gray" />
+                                <Image src="/compute/performance.svg" alt="Better Performance" width={36} height={36} className="-mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-l">Better Performance</h3>
+                                        <h3 className="font-bold mb-4 text-l">Better Performance</h3>
                                         <p className="text-gray-600 text-l">Delivers up to 9x faster training and 30x faster inference vs old-generation GPUs like A100</p>
                                     </div>
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/light.svg" alt="Flexible Configurations" width={44} height={44} className="mt-1 svg-gray" />
+                                <Image src="/compute/light.svg" alt="Flexible Configurations" width={36} height={36} className="-mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-l">Flexible Configurations</h3>
+                                        <h3 className="font-bold mb-4 text-l">Flexible Configurations</h3>
                                         <p className="text-gray-600 text-l">Dynamically switches between FP8 and FP16/FP32 for optimal accuracy + speed</p>
                                     </div>
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/compute.svg" alt="Better Access" width={50} height={46} className="mt-1 svg-gray" />
+                                <Image src="/compute/compute.svg" alt="Better Access" width={36} height={32} className="-mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
-                                        <h3 className="font-bold mb-2 text-l">Better Access to compute</h3>
+                                        <h3 className="font-bold mb-4 text-l">Better Access to compute</h3>
                                         <p className="text-gray-600 text-l">Includes 72 billion transistors, 80 GB of HBM3 memory, and supports NVLink and PCIe 5.0 for fast interconnects</p>
                                     </div>
                                 </FadeIn>
@@ -557,10 +576,10 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Get full visibility of your Cluster</h2>
                                 <p className="text-gray-600 mb-8 text-l">
-                                    Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control
+                                    Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one <br /> single dashboard to get your cluster fully under control
                                 </p>
                                 <p className="text-gray-600 mb-8 text-l">
-                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime
+                                    Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry <br /> leading performance and uptime
                                 </p>
                             </SlideUp>
                         </div>

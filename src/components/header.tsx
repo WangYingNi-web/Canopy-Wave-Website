@@ -326,12 +326,37 @@ export default function Header() {
                   <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
-                        <li><IwsLink href="/pricing#H200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink></li>
-                        <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink></li>
-                        <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Object Storage</IwsLink></li>
-                        <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Additional Public IP Address</IwsLink></li>
+                        <li>
+                          <div>
+                            <IwsLink href="/pricing" className="text-sm text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
+                              GPU Cloud Pricing
+                              <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </IwsLink>
+                            <ul className="pl-4 mt-2 space-y-2">
+                              <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
+                              <li><IwsLink href="/pricing#H200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink></li>
+                              <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink></li>
+                              <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Object Storage</IwsLink></li>
+                              <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Additional Public IP Address</IwsLink></li>
+                            </ul>
+
+                          </div>
+                        </li>
+
                       </ul>
+
                     </div>
                   </div>
                 )}
@@ -517,8 +542,8 @@ export default function Header() {
       </div>
 
       {/* 移动端折叠菜单 */}
-      <div 
-        className={`md:hidden no-scrollbar ${isOpen ? '' : 'hidden'}`} 
+      <div
+        className={`md:hidden no-scrollbar ${isOpen ? '' : 'hidden'}`}
         id="mobile-menu"
         style={{
           maxHeight: 'calc(100vh - 80px)',
@@ -720,12 +745,45 @@ export default function Header() {
               </svg>
             </button>
             {showMobilePricing && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
-                <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
-                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
-                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
-                <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
+
+
+
+              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
+                <li>
+                  <div>
+                    <button
+                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setShowDataCenterSubMenu(!showDataCenterSubMenu)
+                      }}
+                    >
+                      <span>GPU Cloud Pricing</span>
+                      <svg
+                        className={`w-4 h-4 transform transition-transform duration-200 ${showDataCenterSubMenu ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {showDataCenterSubMenu && (
+                      <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
+                        <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
+                        <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
+                        <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
+                        <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
+                        <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
+                      </ul>
+                    )}
+                  </div>
+                </li>
               </ul>
             )}
           </div>

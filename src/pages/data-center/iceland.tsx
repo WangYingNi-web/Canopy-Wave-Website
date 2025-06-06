@@ -41,7 +41,7 @@ export default function IcelandDataCenter() {
             </div>
 
             {/* Deploy Section */}
-            {/* <div className="bg-[#F5F7F4] sm:py-24 py-16">
+            <div className="bg-[#F5F7F4] sm:py-24 py-16">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -83,7 +83,7 @@ export default function IcelandDataCenter() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             {/* Blönduós Section */}
             <div id='iceland1' className="bg-[#F9F9F9]">
@@ -117,7 +117,7 @@ export default function IcelandDataCenter() {
                                             alt="Sustainable Energy"
                                             width={36}
                                             height={36}
-                                            className='svg-gray'
+                                            className='svg-gray -mt-1'
                                         />
                                     </div>
                                     <div>
@@ -140,7 +140,7 @@ export default function IcelandDataCenter() {
                                             alt="Energy Efficiency"
                                             width={36}
                                             height={36}
-                                            className='svg-gray'
+                                            className='svg-gray -mt-1'
                                         />
                                     </div>
                                     <div>
@@ -163,7 +163,7 @@ export default function IcelandDataCenter() {
                                             alt="High Capacity"
                                             width={36}
                                             height={36}
-                                            className='svg-gray'
+                                            className='svg-gray -mt-1'
                                         />
                                     </div>
                                     <div>
@@ -185,7 +185,7 @@ export default function IcelandDataCenter() {
                                             alt="Advanced Infrastructure"
                                             width={36}
                                             height={36}
-                                            className='svg-gray'
+                                            className='svg-gray -mt-1'
                                         />
                                     </div>
                                     <div>
@@ -208,7 +208,7 @@ export default function IcelandDataCenter() {
                                             alt="Certifications"
                                             width={36}
                                             height={36}
-                                            className='svg-gray'
+                                            className='svg-gray -mt-1'
                                         />
                                     </div>
                                     <div>
