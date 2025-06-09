@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -14,6 +15,9 @@ export default function NetworkingServices() {
     return (
         <main className="min-h-screen text-gray-600 relative">
             <Header />
+            <Head>
+                <title>Networking Services That Enhance Performance | Canopy Wave</title>
+            </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
                     src="/compute/banner.svg"
