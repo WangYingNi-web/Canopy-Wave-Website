@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from './../components/header'
 import Footer from './../components/footer'
 import Image from 'next/image'
@@ -33,6 +34,9 @@ export default function Index() {
 
   return (
     <main>
+      <Head>
+        <title>Instant GPU Cluster for Enterprise AI | Canopy Wave</title>
+      </Head>
       <Header />
       <div className="w-full text-gray-600">
         {/* Hero Section */}
@@ -97,7 +101,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-                NVIDIA H100 &H200S <br /> Are Now Available
+                NVIDIA H100 &H200 <br /> now available
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
@@ -112,7 +116,7 @@ export default function Index() {
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
-                  <h3 className="text-l font-bold ml-6">NVIDIA H200S</h3>
+                  <h3 className="text-l font-bold ml-6">NVIDIA H200</h3>
                 </div>
                 <p className="text-gray-600 text-l mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
                 <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
@@ -195,12 +199,12 @@ export default function Index() {
 
         {/* Contact Section */}
         <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
-                <BackgroundTransition
-                    defaultImage="/contact-section1.webp"
-                    activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
-                />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BackgroundTransition
+            defaultImage="/contact-section1.webp"
+            activeImage="/contact-section2.webp"
+            className="w-full h-full absolute inset-0"
+          />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <SlideUp>

@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import Header from '@/components/header';
@@ -14,7 +15,9 @@ export default function ComputeServicesPage() {
     return (
         <main className="min-h-screen text-gray-600">
             <Header />
-
+            <Head>
+               <title>GPUs for AI Models and Innovation | Canopy Wave</title>
+            </Head>
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">
                 <Image

@@ -512,7 +512,7 @@ export default function Header() {
 
           {/* 右侧按钮组 */}
           <div className="hidden custom:flex items-center space-x-4">
-            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>Canopy Wave Cloud</Button>
+            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>Go to Canopy Wave Cloud</Button>
             <IwsLink href="/contact">
               <Button variant="outline" className="text-sm max-1207:text-xs">Contact Us</Button>
             </IwsLink>
@@ -931,7 +931,6 @@ export default function Header() {
                     </ul>
                   )}
                 </div>
-
               </ul>
             )}
           </div>
@@ -939,7 +938,7 @@ export default function Header() {
             {/* 新增 Canopy Wave Cloud 按钮 */}
             <div className="relative">
               <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                Canopy Wave Cloud
+              Go to Canopy Wave Cloud
               </Button>
             </div>
             {/* 新增 Contact US 按钮 */}

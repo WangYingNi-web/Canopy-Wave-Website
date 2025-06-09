@@ -274,7 +274,7 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="flex flex-col mb-4">
-                                    <label className="mb-1 text-gray-700 text-sm">I plan to use CanopyWave for:<span className="text-red-500">*</span></label>
+                                    <label className="mb-1 text-gray-700 text-sm">I plan to use Canopy Wave for<span className="text-red-500">*</span></label>
                                     <select
                                         name="purpose"
                                         value={formData.purpose}

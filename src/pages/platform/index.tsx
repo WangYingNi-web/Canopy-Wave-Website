@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -13,7 +14,9 @@ export default function PlatformPage() {
     return (
         <main className="min-h-screen text-gray-600 relative">
             <Header />
-
+            <Head>
+                <title>Empower AI with Our Platform for Peak Performance</title>
+            </Head>
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
@@ -74,19 +77,19 @@ export default function PlatformPage() {
 
                     {/* 下半部分：三个卡片 */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
                             <Image src="/platform/cookbook.svg" alt="Performance Cookbook" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Performance Cookbook</h3>
                             <p className="text-gray-600 text-l">Image servers, configure BIOS, manage driver versions, and more—all streamlined through our platform. Use our Performance Cookbook to unlock peak performance without the need for manual tuning by engineers</p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
                             <Image src="/platform/visualization.svg" alt="Visualization" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Visualization</h3>
                             <p className="text-gray-600 text-l">Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
                             <Image src="/platform/failures.svg" alt="Detecting Failures" width={36} height={40} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Detecting Failures</h3>
                             <p className="text-gray-600 text-l">Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime</p>

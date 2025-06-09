@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -15,7 +16,9 @@ export default function StorageServices() {
   return (
     <main className="min-h-screen text-gray-600 relative">
       <Header />
-
+      <Head>
+        <title>Storage for AI | Canopy Wave</title>
+      </Head>
       {/* Hero Section */}
       <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
