@@ -27,24 +27,29 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
             align: "start",
             loop: true,
             dragFree: true,
+            duration: 20000, // 减少动画持续时间
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 0, // 设置为0，无停顿
+              stopOnInteraction: false, // 不因用户交互而停止
+              stopOnMouseEnter: false, // 鼠标悬停时不停止
+              playOnInit: true, // 初始化时立即开始播放
             }),
           ]}
           className="w-full overflow-visible"
         >
-          <CarouselContent className="-ml-12">
-            {logos.map((logo) => (
-              <CarouselItem key={logo.id} className="pl-12 basis-1/2 sm:basis-1/3 md:basis-1/6">
+          <CarouselContent className="-ml-12 flex animate-scroll">
+            {/* 复制一遍logos数组以确保无缝循环 */}
+            {[...logos, ...logos].map((logo, index) => (
+              <CarouselItem key={`${logo.id}-${index}`} className="pl-12 basis-1/2 sm:basis-1/3 md:basis-1/6 flex-shrink-0">
                 <div className="flex justify-center items-center w-full h-full px-4">
                   <Image
                     src={`/brand/${logo.id}.svg`}
                     alt={`Partner ${logo.id}`}
                     width={logo.width}
                     height={logo.height}
-                    className="w-auto h-[30px] object-contain"
+                    className="object-contain"
                   />
                 </div>
               </CarouselItem>

@@ -11,19 +11,19 @@ import BackgroundTransition from '@/components/BackgroundTransition';
 
 export default function AboutPage() {
   const partnerLogos = [
-    { id: 1, width: 110, height: 80 },
-    { id: 2, width: 90, height: 80 },
-    { id: 3, width: 100, height: 80 },
+    { id: 1, width: 130, height: 100 },
+    { id: 2, width: 80, height: 80 },
+    { id: 3, width: 80, height: 70 },
     { id: 4, width: 100, height: 80 },
     { id: 5, width: 120, height: 80 },
     { id: 6, width: 120, height: 80 },
     { id: 7, width: 120, height: 80 },
-    { id: 8, width: 90, height: 80 },
+    { id: 8, width: 90, height: 70 },
     { id: 9, width: 120, height: 80 },
-    { id: 10, width: 90, height: 80 },
-    { id: 11, width: 100, height: 80 },
+    { id: 10, width: 85, height: 70 },
+    { id: 11, width: 90, height: 70 },
     { id: 12, width: 100, height: 80 },
-    { id: 13, width: 100, height: 80 },
+    { id: 13, width: 90, height: 70 },
   ];
 
   return (
