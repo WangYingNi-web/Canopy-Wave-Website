@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import { useState } from 'react';
 import axios from "axios";
 import { toast } from 'react-hot-toast';
@@ -181,6 +182,9 @@ export default function Contact() {
 
     return (
         <main className="min-h-screen relative text-gray-600">
+            <Head>
+                <title>Canopy Wave - Contact Us</title>
+            </Head>
             <Header />
             <div className="bg-[#F5F7F4] py-12 sm:py-20 mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">

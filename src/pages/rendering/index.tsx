@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import Image from "next/image";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -11,6 +12,11 @@ import BackgroundTransition from '@/components/BackgroundTransition';
 export default function SolutionsPage() {
     return (
         <main className="min-h-screen relative text-gray-600">
+            <Head>
+                <title>Canopy Wave - Solutions</title>
+                <meta name="description" content="Canopy Wave Solutions" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Header />
 
             <div className="w-full h-[490px] relative mt-[84px]">

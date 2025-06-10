@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import Image from "next/image";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -11,8 +12,10 @@ import BackgroundTransition from '@/components/BackgroundTransition';
 export default function SolutionsPage() {
     return (
         <main className="min-h-screen relative text-gray-600">
+            <Head>
+                <title>Canopy Wave - AI Model Training</title>
+            </Head>
             <Header />
-
             <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
@@ -71,7 +74,7 @@ export default function SolutionsPage() {
                                     Canopy Wave delivers high-performance GPU clusters powered by the latest NVIDIA GPUs, including the B200, H200, and H100
                                 </p>
                                 <p className="text-gray-600 text-l mb-4 sm:pr-10">
-                                Our infrastructure is built for 99.99% uptime, backed by 24/7 expert support and aligned with the highest security standards to ensure data protection and reliability
+                                    Our infrastructure is built for 99.99% uptime, backed by 24/7 expert support and aligned with the highest security standards to ensure data protection and reliability
                                 </p>
                             </SlideUp>
                         </div>

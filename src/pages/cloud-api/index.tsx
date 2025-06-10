@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import { useState } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -826,6 +827,9 @@ export default function PlatformPage() {
 
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-600 relative overflow-x-hidden">
+            <Head>
+                <title>Canopy Wave - Manage Cloud via API</title>
+            </Head>
             <Header />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40">

@@ -16,7 +16,7 @@ export default function NetworkingServices() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Networking Services That Enhance Performance | Canopy Wave</title>
+                <title>Canopy Wave - Networking Services That Enhance Performance</title>
             </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image

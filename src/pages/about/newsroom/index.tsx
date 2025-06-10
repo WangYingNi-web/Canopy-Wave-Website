@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -17,16 +18,23 @@ interface BlogPost {
     description: string;
     date: string;
 }
+interface NewsroomPost {
+    id: number;
+    title: string;
+    description: string;
+    date: string;
+}
 export default function Newsroom() {
     useScrollToHash();
     const router = useRouter();
-    const handleBlogClick = () => {
-        const id = '1';
-        router.push(`/blog/${id}`);
+    const handleBlogClick = (title: string) => {
+        // 将标题转换为URL友好的格式，处理空格和连字符
+        const blogTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        router.push(`/blog/${blogTitle}`);
     };
-    const handleWatchClick = () => {
-        const id = '1';
-        router.push(`newsroom/${id}`);
+    const handleWatchClick = (title : string) => {
+        const newsTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        router.push(`/about/newsroom/${newsTitle}`);
     };
     const blogPosts: BlogPost[] = [
         {
@@ -35,16 +43,23 @@ export default function Newsroom() {
             description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
             date: "May 20, 2025"
         },
-        // {
-        //   id: 2,
-        //   title: "INSTANT GPU CLUSTER FOR ENTERPRISE AI",
-        //   description: "Instant GPU Cluster for Enterprise AIInstant GPU Cluster for Enterprise AIInstant GPU Cluster for Enterprise AI",
-        //   date: "April 2, 2023"
-        // },
+    ];
+    const newsroomPosts: NewsroomPost[] = [
+        {
+            id: 1,
+            title: "Canopy Wave and ConfidentialMind Joint Event",
+            description: "Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states",
+            date: "April 1, 2025"
+        },
     ];
 
     return (
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
+            <Head>
+                <title>Canopy Wave - News and Press Releases</title>
+                <meta name="description" content="Newsroom - Canopy Wave" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
             <Header />
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px]">
@@ -90,7 +105,7 @@ export default function Newsroom() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
-                        <div key={post.id} className="group cursor-pointer" onClick={handleBlogClick}>
+                        <div key={post.id} className="group cursor-pointer" onClick={() => handleBlogClick(post.title)}>
                             <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src="/blog.svg"
@@ -102,7 +117,7 @@ export default function Newsroom() {
                             <h3 className="text-sm font-semibold text-gray-600 mb-2">{post.title}</h3>
                             <div className="flex items-center space-x-4 text-sm text-gray-500">
                                 <IwsLink
-                                    href="/blog/1"
+                                    href={`/blog/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
                                     className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
                                     onClick={(e) => e.stopPropagation()}
                                 >
@@ -138,28 +153,32 @@ export default function Newsroom() {
                     </Link> */}
                 </div>
 
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="group cursor-pointer" onClick={handleWatchClick}>
-                        <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                            <Image
-                                src="/confidentialmind-logo.svg"
-                                alt="ConfidentialMind Logo"
-                                layout="fill"
-                                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
+                    {newsroomPosts.map((post) => (
+                        <div key={post.id} className="group cursor-pointer" onClick={() => handleWatchClick(post.title)}>
+                            <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                                <Image
+                                    src="/confidentialmind-logo.svg"
+                                    alt="ConfidentialMind Logo"
+                                    layout="fill"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <h3 className="text-sm font-semibold text-gray-600 mb-2 truncate">{post.title}</h3>
+                            <div className="flex items-center space-x-4 text-sm text-gray-500">
+                                <IwsLink
+                                    href={`/about/newsroom/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
+                                    className="text-[#8CC63F] hover:text-[#7AB82F] transition-colors duration-200 flex items-center"
+                                >
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                </IwsLink>
+                            </div>
                         </div>
-                        <h3 className="text-sm font-semibold text-gray-600 mb-2 truncate">Canopy Wave and ConfidentialMind Joint Event</h3>
-                        <div className="flex items-center space-x-4 text-sm text-gray-500">
-                            <IwsLink
-                                href="/about/newsroom/1"
-                                className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                Article
-                            </IwsLink>
-                            <span>May 20,2025</span>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
