@@ -103,7 +103,7 @@ export default function Header() {
                   className="md:w-[40px] md:h-[40px] lg:w-[45px] lg:h-[45px]"
                   priority
                 />
-                <span className="whitespace-nowrap text-sm font-bold text-gray-600 ml-2">Canopy Wave</span>
+                <span className="whitespace-nowrap text-l font-bold text-gray-600 ml-2">Canopy Wave</span>
               </IwsLink>
             </div>
           </div>

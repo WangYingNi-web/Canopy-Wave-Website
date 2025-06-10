@@ -13,19 +13,19 @@ import BackgroundTransition from '@/components/BackgroundTransition';
 
 export default function Index() {
   const partnerLogos = [
-    { id: 1, width: 55, height: 40 },
-    { id: 2, width: 45, height: 40 },
-    { id: 3, width: 50, height: 40 },
-    { id: 4, width: 50, height: 40 },
-    { id: 5, width: 60, height: 40 },
-    { id: 6, width: 60, height: 40 },
-    { id: 7, width: 60, height: 40 },
-    { id: 8, width: 45, height: 40 },
-    { id: 9, width: 60, height: 40 },
-    { id: 10, width: 45, height: 40 },
-    { id: 11, width: 50, height: 40 },
-    { id: 12, width: 50, height: 40 },
-    { id: 13, width: 50, height: 40 },
+    { id: 1, width: 130, height: 100 },
+    { id: 2, width: 80, height: 80 },
+    { id: 3, width: 80, height: 70 },
+    { id: 4, width: 100, height: 80 },
+    { id: 5, width: 120, height: 80 },
+    { id: 6, width: 120, height: 80 },
+    { id: 7, width: 120, height: 80 },
+    { id: 8, width: 90, height: 70 },
+    { id: 9, width: 120, height: 80 },
+    { id: 10, width: 85, height: 70 },
+    { id: 11, width: 90, height: 70 },
+    { id: 12, width: 100, height: 80 },
+    { id: 13, width: 90, height: 70 },
   ];
   const { ref, inView } = useInView({
     threshold: 0.9,

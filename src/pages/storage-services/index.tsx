@@ -22,7 +22,7 @@ export default function StorageServices() {
       {/* Hero Section */}
       <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
-          src="/compute/banner.svg"
+          src="/storage/banner.svg"
           alt="banner"
           layout='fill'
           className="object-cover"
