@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -12,6 +13,9 @@ export default function Careers() {
 
     return (
         <main className="min-h-screen relative text-gray-600">
+            <Head>
+                <title>Canopy Wave - Explore Our Open Positions</title>
+            </Head>
             <Header />
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px]">

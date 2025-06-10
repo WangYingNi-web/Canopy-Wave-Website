@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -27,6 +28,9 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen relative text-gray-600">
+      <Head>
+        <title>Canopy Wave - About Us</title>
+      </Head>
       <Header />
 
       {/* Hero Section */}

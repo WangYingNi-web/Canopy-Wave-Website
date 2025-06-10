@@ -17,7 +17,7 @@ export default function StorageServices() {
     <main className="min-h-screen text-gray-600 relative">
       <Header />
       <Head>
-        <title>Storage for AI | Canopy Wave</title>
+        <title>Canopy Wave - Storage for AI</title>
       </Head>
       {/* Hero Section */}
       <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
@@ -130,7 +130,7 @@ export default function StorageServices() {
             <div>
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Local Storage</h2>
-                <p className="text-gray-600 mb-8 text-l">15.6TB of NVMe storage, physically attached to the GPU servers</p>
+                <p className="text-gray-600 mb-8 text-l">11.5TB of NVMe storage for H100 VMs, 13.4TB for H200 VMs</p>
               </SlideUp>
               <SlideUp>
                 <button

@@ -16,7 +16,7 @@ export default function ComputeServicesPage() {
         <main className="min-h-screen text-gray-600">
             <Header />
             <Head>
-               <title>GPUs for AI Models and Innovation | Canopy Wave</title>
+               <title>Canopy Wave - GPUs for AI Models and Innovation</title>
             </Head>
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">
@@ -475,7 +475,7 @@ export default function ComputeServicesPage() {
 
             {/* Bare Metal GPU Section */}
             <div className='bg-[#F9F9F9]'>
-                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-12">
+                <div id="bare-metal" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>

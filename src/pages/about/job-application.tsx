@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '@/components/header';
@@ -177,6 +178,9 @@ Message: ${formData.message}
 
     return (
         <main className="min-h-screen relative text-gray-600">
+            <Head>
+                <title>Canopy Wave - Job Application</title>
+            </Head>
             <Header />
             <div className="pt-[140px] pb-20 bg-[#F5F7F4]">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

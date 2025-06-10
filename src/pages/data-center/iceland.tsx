@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Image from 'next/image';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -12,6 +13,9 @@ export default function IcelandDataCenter() {
     useScrollToHash();
     return (
         <main className="min-h-screen text-gray-600">
+            <Head>
+                <title>Canopy Wave - Sustainable and Efficient Data Center Solutions</title>
+            </Head>
             <Header />
 
             {/* Hero Section */}

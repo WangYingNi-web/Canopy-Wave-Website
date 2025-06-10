@@ -1,5 +1,6 @@
 "use client";
 
+import Head from 'next/head';
 import Image from 'next/image';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -10,6 +11,9 @@ import { Button } from "@/components/ui/button";
 export default function PricingPage() {
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-600">
+            <Head>
+                <title>Canopy Wave - GPU Cloud Pricing</title>
+            </Head>
             <Header />
 
             {/* Hero Section */}

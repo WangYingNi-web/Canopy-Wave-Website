@@ -47,7 +47,7 @@ export default function BlogPage() {
                     <p className="text-gray-600 mb-12">{post.description}</p>
                     <div className="flex items-center justify-between">
                       <Link
-                        href={`/blog/${post.id}`}
+                        href={`/blog/${encodeURIComponent(post.title)}`}
                         className="text-[#8CC63F] hover:text-[#7ab32f]"
                       >
                         Read more →

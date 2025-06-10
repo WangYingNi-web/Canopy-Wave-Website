@@ -35,7 +35,7 @@ export default function Index() {
   return (
     <main>
       <Head>
-        <title>Instant GPU Cluster for Enterprise AI | Canopy Wave</title>
+        <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
       </Head>
       <Header />
       <div className="w-full text-gray-600">
