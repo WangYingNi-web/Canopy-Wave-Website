@@ -200,8 +200,8 @@ export default function Index() {
         {/* Contact Section */}
         <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
           <BackgroundTransition
-            defaultImage="/contact-section1.webp"
-            activeImage="/contact-section2.webp"
+            defaultImage="/contact-section1.png"
+            activeImage="/contact-section2.png"
             className="w-full h-full absolute inset-0"
           />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
