@@ -861,12 +861,13 @@ export default function PlatformPage() {
                         {sections['api-key'] && (
                             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
                                 <p className="text-gray-600 text-l">
-                                    To manage Canopy Wave Cloud via the API, users must first register for an account at <a href="https://cloud.canopywave.io" target="_blank" className="text-blue-500 hover:underline">Canopy Wave</a> (https://cloud.canopywave.io). After registering, follow these steps to generate an API key.
+                                    To manage Canopy Wave Cloud via the API, users must first register for an account at <a href="https://cloud.canopywave.io" target="_blank" className="text-[#80B224] hover:underline">Canopy Wave</a>
+                                    (<a href="https://cloud.canopywave.io" target="_blank" className="text-[#80B224] hover:underline">https://cloud.canopywave.io</a>). After registering, follow these steps to generate an API key.
                                 </p>
                                 <ol className="list-decimal list-inside text-gray-600 mt-4">
-                                    <li>In the left navigation bar, click on API Keys</li>
-                                    <li>Click on New API Key to create a new key</li>
-                                    <li>Copy the generated API key for use in future API calls</li>
+                                    <li>In the left navigation bar, click on <strong>API Keys</strong>.</li>
+                                    <li>Click on <strong>New API Key</strong> to create a new key.</li>
+                                    <li>Copy the generated API key for use in future API calls.</li>
                                 </ol>
                                 {/* <img src="/cloud/image.png" alt="Cloud Image" className="w-full h-auto mt-4" /> */}
                                 <img src="/cloud/image2.png" alt="Cloud Image2" className="w-full h-auto mt-4" />
