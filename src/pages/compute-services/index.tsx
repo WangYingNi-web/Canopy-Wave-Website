@@ -285,7 +285,7 @@ export default function ComputeServicesPage() {
                                 </FadeIn>
                             </div>
                             <div className="flex items-start gap-4 p-6 border-b border-gray-200">
-                                <Image src="/compute/compute.svg" alt="Better Access" width={36} height={32} className="-mt-1 svg-gray" />
+                                <Image src="/compute/compute.svg" alt="Better Access" width={36} height={36} className="-mt-1 svg-gray" />
                                 <FadeIn>
                                     <div>
                                         <h3 className="font-bold mb-4 text-l">Better Access to compute</h3>
@@ -361,7 +361,7 @@ export default function ComputeServicesPage() {
                         <div className="p-8 text-left rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-6 mb-6">
                                 <div className="rounded-lg">
-                                    <Image src="/compute/model.svg" alt="CPU Icon" width={40} height={40} className='svg-gray' />
+                                    <Image src="/compute/model.svg" alt="CPU Icon" width={36} height={36} className='svg-gray' />
                                 </div>
                                 <h3 className="text-l font-bold">Processor</h3>
                             </div>
@@ -373,7 +373,7 @@ export default function ComputeServicesPage() {
                         <div className="p-8 text-left rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-6 mb-6">
                                 <div className="rounded-lg">
-                                    <Image src="/compute/memory.svg" alt="Memory Icon" width={40} height={40} className='svg-gray' />
+                                    <Image src="/compute/memory.svg" alt="Memory Icon" width={36} height={36} className='svg-gray' />
                                 </div>
                                 <h3 className="text-l font-bold">Memory</h3>
                             </div>
