@@ -1,6 +1,7 @@
 "use client";
 
 import Head from 'next/head';
+import Link from 'next/link';
 import Header from './../components/header'
 import Footer from './../components/footer'
 import Image from 'next/image'
@@ -172,29 +173,58 @@ export default function Index() {
                 Latest CanopyWave Blog: Insights and Updates <br /> from Our Team
               </h2>
             </SlideUp>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-20">
               {/* News Card 1 */}
-              <a href="/blog/joint-blog-accelerate-enterprise-ai" target="_blank" className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="relative aspect-video w-full overflow-hidden">
-                  <Image
-                    src="/blog.svg"
-                    alt="Blog Image"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-l font-semibold mb-3">
-                    Joint Blog - Accelerate Enterprise AI
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
-                  <div className="flex items-center gap-4">
-                    <IwsLink href="/about/newsroom#blog" className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors">Article</IwsLink>
-                    <span className="text-gray-500 text-sm">May 20, 2025</span>
+              <Link href="/blog/joint-blog-accelerate-enterprise-ai">
+                <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src="/blog1.svg"
+                      alt="Blog Image"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-l font-semibold mb-3">
+                      Joint Blog - Accelerate Enterprise AI
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
+                    <br />
+                    <div className="flex items-center gap-4">
+                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Article</span>
+                      <span className="text-gray-500 text-sm">April 16, 2025</span>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </Link>
+              {/* News Card 2 */}
+              <Link href="/blog/the-rise-of-enterprise-ai:-trends-in-inferencing-and-gpu-resource-planning">
+                <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src="/blog2.png"
+                      alt="Blog Image"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-l font-semibold mb-3">
+                      The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-6">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
+                    <div className="flex items-center gap-4">
+                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Article</span>
+                      <span className="text-gray-500 text-sm">May 15, 2025</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
+            
           </div>
         </div>
 
@@ -234,9 +264,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-
       </div>
-
       <Footer />
     </main>
   )

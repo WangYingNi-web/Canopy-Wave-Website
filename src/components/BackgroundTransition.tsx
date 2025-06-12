@@ -136,6 +136,7 @@ export default function BackgroundTransition({
         backgroundRepeat: 'no-repeat',
         opacity: isActive ? 1 : 0.7,
         transform: isActive ? 'scale(1)' : `scale(${initialScale})`,
+        filter: isInView ? 'saturate(1.2)' : 'saturate(0.7)',
         transition: `
           background-image ${fadeDuration}ms ease-in-out,
           opacity ${fadeDuration}ms ease-in-out,

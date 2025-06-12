@@ -17,6 +17,7 @@ interface BlogPost {
     title: string;
     description: string;
     date: string;
+    image: string;
 }
 interface NewsroomPost {
     id: number;
@@ -32,7 +33,7 @@ export default function Newsroom() {
         const blogTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
         router.push(`/blog/${blogTitle}`);
     };
-    const handleWatchClick = (title : string) => {
+    const handleWatchClick = (title: string) => {
         const newsTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
         router.push(`/about/newsroom/${newsTitle}`);
     };
@@ -41,7 +42,15 @@ export default function Newsroom() {
             id: 1,
             title: "Joint Blog - Accelerate Enterprise AI",
             description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
-            date: "May 20, 2025"
+            date: "April 16, 2025",
+            image: "/blog1.svg"
+        },
+        {
+            id: 2,
+            title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
+            description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
+            date: "May 15, 2025",
+            image: "/blog2.png"
         },
     ];
     const newsroomPosts: NewsroomPost[] = [
@@ -108,7 +117,7 @@ export default function Newsroom() {
                         <div key={post.id} className="group cursor-pointer" onClick={() => handleBlogClick(post.title)}>
                             <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
                                 <Image
-                                    src="/blog.svg"
+                                    src={post.image}
                                     alt={post.title}
                                     layout="fill"
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
