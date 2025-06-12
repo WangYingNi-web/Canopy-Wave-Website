@@ -199,10 +199,17 @@ export default function Index() {
         {/* Contact Section */}
         <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
           <BackgroundTransition
-            defaultImage="/contact-section1.png"
-            activeImage="/contact-section2.png"
+            defaultImage="/contact-section1.webp"  // 灰色图片
+            activeImage="/contact-section2.webp"   // 绿色图片
             className="w-full h-full absolute inset-0"
+            fadeDuration={3000} // 3秒淡入淡出
+            scaleDuration={2500} // 2.5秒缩放
+            initialScale={0.92}  // 初始缩放更小
           />
+          {/* 内容容器 - 确保在图片上方显示 */}
+          <div className="relative z-10 container mx-auto px-4">
+            {/* 您的内容在这里 */}
+          </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
