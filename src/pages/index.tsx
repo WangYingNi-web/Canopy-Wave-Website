@@ -44,7 +44,7 @@ export default function Index() {
           <Image
             src="/home_banner.svg"
             alt="Home_Banner"
-            layout='fill'
+            fill
             className="object-cover"
             priority
           />
@@ -101,7 +101,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-                NVIDIA H100 &H200 <br /> now available
+                NVIDIA H100 & H200 GPUs <br /> now available
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
@@ -179,9 +179,8 @@ export default function Index() {
                   <Image
                     src="/blog.svg"
                     alt="Blog Image"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">

@@ -21,7 +21,7 @@ export default function NetworkingHardwarePage() {
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />

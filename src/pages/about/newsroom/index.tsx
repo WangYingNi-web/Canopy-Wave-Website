@@ -66,7 +66,7 @@ export default function Newsroom() {
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />

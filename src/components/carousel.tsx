@@ -50,6 +50,7 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
                     width={logo.width}
                     height={logo.height}
                     className="object-contain"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                   />
                 </div>
               </CarouselItem>

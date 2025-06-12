@@ -23,7 +23,7 @@ export default function IcelandDataCenter() {
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />
@@ -52,9 +52,8 @@ export default function IcelandDataCenter() {
                             <Image
                                 src="/data-center/deploy.svg"
                                 alt="NVIDIA GPU"
-                                layout="fill"
-                                objectFit="cover"
-                                className="filter brightness-90"
+                                fill                                
+                                className="object-cover filter brightness-90"
                             />
                         </div>
                         <div className="pl-4">
@@ -338,9 +337,8 @@ export default function IcelandDataCenter() {
                             <Image
                                 src="/about/future-locations.svg"
                                 alt="Future Locations"
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-lg"
+                                fill
+                                className="object-cover cover rounded-lg"
                             />
                         </div>
                         <div>

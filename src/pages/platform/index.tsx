@@ -22,7 +22,7 @@ export default function PlatformPage() {
                 <Image
                     src="/compute/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />

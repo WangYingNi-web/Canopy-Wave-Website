@@ -38,7 +38,7 @@ export default function AboutPage() {
         <Image
           src="/about/banner.svg"
           alt="banner"
-          layout='fill'
+          fill
           className="object-cover"
           priority
         />

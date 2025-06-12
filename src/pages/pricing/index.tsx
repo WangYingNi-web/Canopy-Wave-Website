@@ -37,7 +37,7 @@ export default function PricingPage() {
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />

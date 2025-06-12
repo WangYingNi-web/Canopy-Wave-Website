@@ -22,7 +22,7 @@ export default function NetworkingServices() {
                 <Image
                     src="/compute/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />
