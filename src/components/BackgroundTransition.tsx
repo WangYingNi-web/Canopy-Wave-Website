@@ -54,7 +54,7 @@ export default function BackgroundTransition({
   return ( 
     <div 
       ref={ref} 
-      className={`${className} transition-all duration-[4000ms] ease-out`} // 增加到4秒，使用ease-out
+      className={`${className} transition-all duration-[3000ms] ease-out`} // 增加到4秒，使用ease-out
       style={{ 
         backgroundImage: `url(${currentImage})`, 
         backgroundSize: 'cover', 
