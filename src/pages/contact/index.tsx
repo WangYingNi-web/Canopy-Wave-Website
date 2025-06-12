@@ -429,7 +429,7 @@ export default function Contact() {
                                                 onChange={handleCheckboxChange}
                                                 className="mr-2"
                                             />
-                                            <span className="text-gray-600">I agree to receive marketing communications from CanopyWave.</span>
+                                            <span className="text-gray-600">I agree to receive marketing communications from Canopy Wave.</span>
                                         </div>
                                     </div>
                                 </div>

@@ -20,18 +20,17 @@ export default function NetworkingServices() {
             </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
-                    src="/compute/banner.svg"
+                    src="/networking/banner.svg"
                     alt="banner"
                     fill
                     className="object-cover"
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
-                                Networking<br />
-                                Services
+                                Networking Services
                             </h1>
                         </SlideUp>
                         <SlideUp>

@@ -20,14 +20,14 @@ export default function BlogPage() {
       id: 1,
       title: "Joint Blog - Accelerate Enterprise AI",
       description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
-      date: "May 20, 2025"
+      date: "April 16, 2025"
     },
-    // {
-    //   id: 2,
-    //   title: "INSTANT GPU CLUSTER FOR ENTERPRISE AI",
-    //   description: "Instant GPU Cluster for Enterprise AIInstant GPU Cluster for Enterprise AIInstant GPU Cluster for Enterprise AI",
-    //   date: "April 2, 2023"
-    // },
+    {
+      id: 2,
+      title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
+      description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
+      date: "May 15, 2025"
+    },
   ];
 
   return (
@@ -62,7 +62,7 @@ export default function BlogPage() {
           </div>
           <div className="w-full md:w-[580px]">
             <img
-              src="/blog.svg"
+              src="/blog1.svg"
               alt="Blog"
               className="w-full h-auto"
             />
