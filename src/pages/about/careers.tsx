@@ -22,7 +22,7 @@ export default function Careers() {
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />

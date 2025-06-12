@@ -10,11 +10,12 @@ export default function EuropeMap() {
         <div ref={ref} className="w-full h-[400px] relative">
             {/* 背景世界地图 */}
             <Image
-                src="/Slice 27.svg"
-                alt="World Map"
+                src="/iceland-world.svg"
+                alt="iceland world Map"
                 width={580}
                 height={400}
                 className="object-contain transform translate-x-10 -translate-y-8" // 添加transform和translate类来移动图片
+                style={{ width: 'auto', height: 'auto' }}
                 priority
             />
 

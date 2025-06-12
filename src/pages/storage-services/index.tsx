@@ -24,7 +24,7 @@ export default function StorageServices() {
         <Image
           src="/storage/banner.svg"
           alt="banner"
-          layout='fill'
+          fill
           className="object-cover"
           priority
         />
@@ -235,9 +235,8 @@ export default function StorageServices() {
               <Image
                 src="/storage/circuit-board.svg"
                 alt="Circuit Board"
-                layout="fill"
-                objectFit="cover"
-                className="filter brightness-90"
+                fill
+                className="object-cover filter brightness-90"
               />
             </div>
             <div>

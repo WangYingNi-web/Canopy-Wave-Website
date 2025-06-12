@@ -23,7 +23,7 @@ export default function ComputeServicesPage() {
                 <Image
                     src="/compute/banner.svg"
                     alt="banner"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />
@@ -521,7 +521,7 @@ export default function ComputeServicesPage() {
                                     <Image
                                         src="/compute/b200.svg"
                                         alt="NVIDIA HGX B200"
-                                        layout='fill'
+                                        fill
                                         className="object-contain p-4"
                                     />
                                 </div>
@@ -539,7 +539,7 @@ export default function ComputeServicesPage() {
                                     <Image
                                         src="/compute/h200-1.svg"
                                         alt="NVIDIA HGX H200"
-                                        layout='fill'
+                                        fill
                                         className="object-contain p-4"
                                     />
                                 </div>
@@ -557,7 +557,7 @@ export default function ComputeServicesPage() {
                                     <Image
                                         src="/compute/h100.svg"
                                         alt="NVIDIA HGX H100"
-                                        layout='fill'
+                                        fill
                                         className="object-contain p-4"
                                     />
                                 </div>

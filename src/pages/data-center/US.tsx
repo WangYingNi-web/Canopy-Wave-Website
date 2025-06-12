@@ -14,7 +14,7 @@ export default function USDataCenter() {
                 <Image
                     src="/us-dc.jpg"
                     alt="US Data Center"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />

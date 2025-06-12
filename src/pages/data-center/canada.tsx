@@ -14,7 +14,7 @@ export default function CanadaDataCenter() {
                 <Image
                     src="/canada-dc.jpg"
                     alt="Canada Data Center"
-                    layout='fill'
+                    fill
                     className="object-cover"
                     priority
                 />
