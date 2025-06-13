@@ -186,7 +186,7 @@ Registered webinars: ${blogPost.title}
                   <div className="flex-shrink-0 flex items-center justify-center">
                     <Image src="/blog/human.svg" alt="Value icon" width={24} height={24} className='svg-gray' />
                   </div>
-                  <h3 className="text-l text-gray-800 pl-4">James Liao <br /> Chief Technology Officer Canopy Wave</h3>
+                  <h3 className="text-l text-gray-800 pl-4">James Liao <br /> Chief Technology Officer, Co-founder</h3>
                   <div className="flex-shrink-0 flex items-center justify-center ml-16">
                     <Image src="/blog/clock.svg" alt="Value icon" width={24} height={24} className='svg-gray' />
                   </div>
