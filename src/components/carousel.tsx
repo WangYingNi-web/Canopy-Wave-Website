@@ -44,12 +44,26 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
             {[...logos, ...logos].map((logo, index) => (
               <CarouselItem key={`${logo.id}-${index}`} className="pl-12 basis-1/2 sm:basis-1/3 md:basis-1/6 flex-shrink-0">
                 <div className="flex justify-center items-center w-full h-full px-4">
+                  {/* <Image
+                    src={`/brand/${logo.id}.svg`}
+                    alt={`Partner ${logo.id}`}
+                    width={logo.width}
+                    height={logo.height}
+                    className="object-contain"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
+                  /> */}
                   <Image
                     src={`/brand/${logo.id}.svg`}
                     alt={`Partner ${logo.id}`}
                     width={logo.width}
                     height={logo.height}
                     className="object-contain"
+                    style={{
+                      width: 'auto',
+                      height: 'auto',
+                      maxWidth: '100%',
+                      maxHeight: '100%'
+                    }}
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                   />
                 </div>

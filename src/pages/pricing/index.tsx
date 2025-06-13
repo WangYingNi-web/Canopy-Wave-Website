@@ -297,7 +297,7 @@ export default function PricingPage() {
                     </SlideUp>
                     <SlideUp>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('/contact', 'noopener,noreferrer')}>
                                 Contact Sales
                             </Button>
                         </div>

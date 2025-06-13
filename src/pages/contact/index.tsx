@@ -205,6 +205,13 @@ export default function Contact() {
                                 <h2 className="text-sm font-bold mb-2">CONTACT INFORMATION</h2>
                                 <p className="text-gray-600 mb-2 max-w-md">For general queries, including partnership opportunities, please email <a href="mailto:sales@canopywave.com" className="text-[#8CC63F]">sales@canopywave.com</a></p>
                             </div>
+                            <div className="mt-4">
+                                <h2 className="text-sm font-bold mb-2">OFFICE ADDRESS</h2>
+                                <p className="text-gray-600 mb-2 max-w-md">
+                                    2350 Mission College Boulevard 350<br/>
+                                    Santa Clara, CA 95054
+                                </p>
+                            </div>
                         </div>
                         <div className="w-full md:w-1/2">
                             <form

@@ -1,3 +1,6 @@
+"use client";
+
+import Head from 'next/head';
 import React from 'react';
 import Header from '@/components/header'
 import Footer from '@/components/footer'
@@ -109,7 +112,7 @@ export default function BlogDetail() {
             },
           ],
         }
-      
+
       case 'the-rise-of-enterprise-ai:-trends-in-inferencing-and-gpu-resource-planning':
         return {
           id: 2,
@@ -132,13 +135,13 @@ export default function BlogDetail() {
             },
             {
               title: '',
-              content:[
+              content: [
                 <>AI is evolving fast—are your GPU clusters keeping up? Watch the webinar to learn more or <Link href="/contact" className="text-[#80B224] hover:text-[#6b9a1f] underline">contact us</Link> to get started now.</>,
               ]
             }
           ]
         }
-      
+
       default:
         return null
     }
@@ -186,6 +189,9 @@ export default function BlogDetail() {
 
   return (
     <main className={getBackgroundClass()}>
+      <Head>
+        <title>Canopy Wave - Blog</title>
+      </Head>
       <Header />
       {renderBlogLayout()}
       <Footer />

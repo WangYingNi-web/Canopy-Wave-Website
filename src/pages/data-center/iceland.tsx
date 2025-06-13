@@ -105,8 +105,8 @@ export default function IcelandDataCenter() {
                                 <Image
                                     src="/data-center/iceland1-map.svg"
                                     alt="Iceland Map"
-                                    layout="fill"
-                                    objectFit="contain"
+                                    fill
+                                    className="object-contain"
                                 />
                             </div>
                         </div>
@@ -250,8 +250,8 @@ export default function IcelandDataCenter() {
                             <Image
                                 src="/data-center/iceland2-map.svg"
                                 alt="Iceland Map"
-                                layout="fill"
-                                objectFit="contain"
+                                fill
+                                className='object-contain'
                             />
                         </div>
                     </div>
@@ -267,6 +267,7 @@ export default function IcelandDataCenter() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h3 className="text-l font-bold mb-3">100% Renewable energy</h3>
@@ -284,6 +285,7 @@ export default function IcelandDataCenter() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h3 className="text-l font-bold mb-3">Efficient cooling systems</h3>
@@ -301,6 +303,7 @@ export default function IcelandDataCenter() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h3 className="text-l font-bold mb-3">Tier 3 certification</h3>
@@ -318,6 +321,7 @@ export default function IcelandDataCenter() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h3 className="text-l font-bold mb-3">Global access</h3>

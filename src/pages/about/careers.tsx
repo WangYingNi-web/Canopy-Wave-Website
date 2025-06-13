@@ -64,6 +64,8 @@ export default function Careers() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
+
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Healthcare</h4>
@@ -80,6 +82,7 @@ export default function Careers() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Insurance</h4>
@@ -96,6 +99,7 @@ export default function Careers() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Catered lunch</h4>
@@ -112,6 +116,7 @@ export default function Careers() {
                                     width={36}
                                     height={36}
                                     className='svg-gray'
+                                    style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
                             <h4 className="font-bold mb-4 group-hover:text-white">Flexible PTO</h4>
