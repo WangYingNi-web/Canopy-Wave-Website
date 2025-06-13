@@ -163,7 +163,7 @@ Registered webinars: ${blogPost.title}
         <div className="w-full mb-12">
           <SlideUp>
             <img
-              src="/CTO.png"
+              src="/CTO.svg"
               alt="Blog"
               className="w-full h-auto rounded-[20px] shadow-md"
             />
@@ -184,11 +184,11 @@ Registered webinars: ${blogPost.title}
                 </div>
                 <div className="flex items-center">
                   <div className="flex-shrink-0 flex items-center justify-center">
-                    <Image src="/blog/human.svg" alt="Value icon" width={24} height={24} className='svg-gray' />
+                    <Image src="/blog/human.svg" alt="Value icon" width={24} height={24} className='svg-gray' style={{ width: '24px', height: '24px' }}/>
                   </div>
                   <h3 className="text-l text-gray-800 pl-4">James Liao <br /> Chief Technology Officer, Co-founder</h3>
                   <div className="flex-shrink-0 flex items-center justify-center ml-16">
-                    <Image src="/blog/clock.svg" alt="Value icon" width={24} height={24} className='svg-gray' />
+                    <Image src="/blog/clock.svg" alt="Value icon" width={24} height={24} className='svg-gray' style={{ width: '24px', height: '24px' }}/>
                   </div>
                   <h3 className="text-l text-gray-800 pl-4">24 min. webinar</h3>
                 </div>

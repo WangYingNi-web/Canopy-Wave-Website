@@ -119,7 +119,7 @@ export default function Newsroom() {
                                 <Image
                                     src={post.image}
                                     alt={post.title}
-                                    layout="fill"
+                                    fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
@@ -170,7 +170,7 @@ export default function Newsroom() {
                                 <Image
                                     src="/confidentialmind-logo.svg"
                                     alt="ConfidentialMind Logo"
-                                    layout="fill"
+                                    fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>

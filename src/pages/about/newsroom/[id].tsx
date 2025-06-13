@@ -1,3 +1,6 @@
+"use client";
+
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -9,12 +12,15 @@ export default function NewsroomDetail() {
 
   return (
     <main className="min-h-screen bg-[#F9F9F9] text-gray-600 relative">
+      <Head>
+        <title>Canopy Wave - New Events</title>
+      </Head>
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="bg-[#F9F9F9] rounded-lg shadow-xl overflow-hidden my-8">
           <div className="p-8">
             <SlideUp>
-            <h2 className="text-3xl font-bold mb-6 text-center">Canopy Wave and ConfidentialMind Join Forces to <br /> Accelerate Enterprise AI Adoption</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">Canopy Wave and ConfidentialMind Join Forces to <br /> Accelerate Enterprise AI Adoption</h2>
             </SlideUp>
             <p className="text-gray-700 mb-6 leading-relaxed">Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states. This collaboration brings together Canopy Wave’s cutting-edge instant GPU clusters and ConfidentialMind’s deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications</p>
             <h3 className="text-xl font-bold mb-4">Unlocking Instant Cloud AI Infrastructure</h3>
@@ -31,8 +37,8 @@ export default function NewsroomDetail() {
             <p className="text-gray-700 mb-6 leading-relaxed">This partnership between Canopy Wave and ConfidentialMind paves the way for enterprises to accelerate their AI journey with instant access to powerful compute resources and highly secure, cost-efficient AI infrastructure. Stay tuned for more updates on how this collaboration is transforming AI infrastructure and enterprise AI innovation.</p>
           </div>
         </div>
-       
-       
+
+
       </div>
 
       <div className="bg-[#F5F7F4]">
@@ -50,7 +56,7 @@ export default function NewsroomDetail() {
           <p className="text-gray-800 mb-4 text-center">Email: wendy@canopywave.com</p>
           <p className="text-gray-800 text-center">Website: <a href="http://www.canopywave.com" className="text-[#8CC63F]" target="_blank">canopywave.com</a></p>
         </div>
-        </div>
+      </div>
       <Footer />
     </main>
   );
