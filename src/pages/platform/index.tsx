@@ -20,7 +20,7 @@ export default function PlatformPage() {
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
-                    src="/compute/banner.svg"
+                    src="/platform/banner.svg"
                     alt="banner"
                     fill
                     className="object-cover"
