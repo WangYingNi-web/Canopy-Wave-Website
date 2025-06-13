@@ -133,7 +133,7 @@ export default function BlogDetail() {
             {
               title: '',
               content:[
-                <>AI is evolving fast—are your GPU clusters keeping up? Watch the webinar to learn more or <Link href="/contact" className="text-blue-600 hover:text-blue-800 underline">contact us</Link> to get started now.</>,
+                <>AI is evolving fast—are your GPU clusters keeping up? Watch the webinar to learn more or <Link href="/contact" className="text-[#80B224] hover:text-[#6b9a1f] underline">contact us</Link> to get started now.</>,
               ]
             }
           ]
