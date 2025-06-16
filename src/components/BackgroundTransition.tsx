@@ -20,7 +20,7 @@ export default function BackgroundTransition({
   className = '',
   fadeDuration = 2500,
   scaleDuration = 2000,
-  initialScale = 0.9,
+  initialScale = 0.95,
 }: BackgroundTransitionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);

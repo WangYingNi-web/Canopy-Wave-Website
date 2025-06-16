@@ -178,21 +178,23 @@ export default function Careers() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-8">Work with us</h2>
-                    </SlideUp>
-                    <SlideUp>
-                        <p className="text-gray-600 mb-8">
-                            Ready to shape the future? Join Canopy Wave and help drive the future of technology with a team redefining what's possible
-                        </p>
-                    </SlideUp>
-                    <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-                        <button className="bg-[#8CC63F] text-white px-4 py-2 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => router.push('/about/job-application?position=infrastructure')}>
-                            Open positions
-                        </button>
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-8">Work with us</h2>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 mb-8">
+                                Ready to shape the future? Join Canopy Wave and help drive the future of technology with a team redefining what's possible
+                            </p>
+                        </SlideUp>
+                        <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                            <button className="bg-[#8CC63F] text-white px-4 py-2 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => router.push('/about/job-application?position=infrastructure')}>
+                                Open positions
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

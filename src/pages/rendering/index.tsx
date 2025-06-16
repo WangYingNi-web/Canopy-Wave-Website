@@ -72,7 +72,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">High frame throughput</h3>
                             <p className="text-gray-600 text-center text-l">
-                            Achieves thousands of frames per second via distributed parallel processing, ideal for 4K/8K real-time animation and industrial-scale droplet production
+                                Achieves thousands of frames per second via distributed parallel processing, ideal for 4K/8K real-time animation and industrial-scale droplet production
                             </p>
                         </div>
 
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Ultra-low latency</h3>
                             <p className="text-gray-600 text-center text-l">
-                            Reduces latency to 0.1ms using lightweight compression (SDVoE) and 6G ULLC technologies, critical for surgical robotics and cloud gaming
+                                Reduces latency to 0.1ms using lightweight compression (SDVoE) and 6G ULLC technologies, critical for surgical robotics and cloud gaming
                             </p>
                         </div>
 
@@ -106,7 +106,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Supports GPU and CPU-based rendering engines</h3>
                             <p className="text-gray-600 text-center text-l">
-                            Optimizes hybrid workflows through dynamic task scheduling and CUDA/OpenCL acceleration, enhancing real-time rendering efficiency in gaming and simulations
+                                Optimizes hybrid workflows through dynamic task scheduling and CUDA/OpenCL acceleration, enhancing real-time rendering efficiency in gaming and simulations
                             </p>
                         </div>
                     </div>
@@ -342,26 +342,29 @@ export default function SolutionsPage() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-l">
-                            Our VM-based infrastructure scales horizontally and vertically, <br /> supporting as many rendering nodes as your project requires—without the headache of managing hardware
-                        </p>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                Try Control Panel
-                            </Button>
-                            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                Contact Us
-                            </Button>
-                        </div>
-                    </SlideUp>
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
+                            <p className="text-gray-600 mb-8 mx-auto text-l">
+                                Our VM-based infrastructure scales horizontally and vertically, <br /> supporting as many rendering nodes as your project requires—without the headache of managing hardware
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                    Try Control Panel
+                                </Button>
+                                <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                                    Contact Us
+                                </Button>
+                            </div>
+                        </SlideUp>
+                    </div>
                 </div>
+
             </div>
 
 

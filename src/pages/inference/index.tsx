@@ -29,12 +29,12 @@ export default function SolutionsPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center">
-                            Inference
+                                Inference
                             </h1>
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-l mt-8 text-center">
-                            Unlock Fast, Flexible, and Secure AI Inference with Canopy Wave
+                                Unlock Fast, Flexible, and Secure AI Inference with Canopy Wave
                             </p>
                         </SlideUp>
                     </div>
@@ -48,7 +48,7 @@ export default function SolutionsPage() {
                         <div className="lg:col-span-6">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl font-black mb-6">
-                                Enterprise-Grade AI Acceleration
+                                    Enterprise-Grade AI Acceleration
                                 </h2>
                             </SlideUp>
                             <SlideUp>
@@ -159,7 +159,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Local Storage</h3>
                             <p className="text-gray-600 text-center text-l">
-                            For ultra-low-latency access
+                                For ultra-low-latency access
                             </p>
                         </div>
 
@@ -176,7 +176,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Shared Storage</h3>
                             <p className="text-gray-600 text-center text-l">
-                            For collaborative workloads
+                                For collaborative workloads
                             </p>
                         </div>
 
@@ -193,7 +193,7 @@ export default function SolutionsPage() {
                             </div>
                             <h3 className="font-bold text-l mb-4 text-center">Object Storage</h3>
                             <p className="text-gray-600 text-center text-l">
-                            for scalable and cost-efficient data management
+                                for scalable and cost-efficient data management
                             </p>
                         </div>
                     </div>
@@ -206,26 +206,29 @@ export default function SolutionsPage() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-l">
-                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
-                        </p>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                Launch GPU instances
-                            </Button>
-                            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                Contact Us
-                            </Button>
-                        </div>
-                    </SlideUp>
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+                            <p className="text-gray-600 mb-8 mx-auto text-l">
+                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                    Launch GPU instances
+                                </Button>
+                                <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                                    Contact Us
+                                </Button>
+                            </div>
+                        </SlideUp>
+                    </div>
                 </div>
+
             </div>
 
             <Footer />

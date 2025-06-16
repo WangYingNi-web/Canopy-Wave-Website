@@ -196,25 +196,27 @@ export default function Newsroom() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-l">
-                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
-                        </p>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                Launch GPU instances
-                            </Button>
-                            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                Contact Us
-                            </Button>
-                        </div>
-                    </SlideUp>
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+                            <p className="text-gray-600 mb-8 mx-auto text-l">
+                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                    Launch GPU instances
+                                </Button>
+                                <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                                    Contact Us
+                                </Button>
+                            </div>
+                        </SlideUp>
+                    </div>
                 </div>
             </div>
 

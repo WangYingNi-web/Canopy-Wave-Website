@@ -264,24 +264,26 @@ export default function NetworkingServices() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
-                    </SlideUp>
-                    <SlideUp>
-                        <p className="text-gray-600 mb-8 mx-auto text-l">
-                            Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs
-                        </p>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/contact'}>
-                                Get started
-                            </Button>
-                        </div>
-                    </SlideUp>
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-6">Incredibly Fast Networking <br /> Services For GenAI</h2>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 mb-8 mx-auto text-l">
+                                Don’t let a shoddy network slow you down. Get the absolute most out of your GPUs
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/contact'}>
+                                    Get started
+                                </Button>
+                            </div>
+                        </SlideUp>
+                    </div>
                 </div>
             </div>
 

@@ -52,7 +52,7 @@ export default function IcelandDataCenter() {
                             <Image
                                 src="/data-center/deploy.svg"
                                 alt="NVIDIA GPU"
-                                fill                                
+                                fill
                                 className="object-cover filter brightness-90"
                             />
                         </div>
@@ -379,36 +379,38 @@ export default function IcelandDataCenter() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div>
-                        <SlideUp>
-                            <h2 className="text-3xl sm:text-4xl font-black mb-6">
-                                Where will you deploy?
-                            </h2>
-                        </SlideUp>
-                        <SlideUp>
-                            <p className="text-gray-600 mb-8 text-l max-w-3xl">
-                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us <br /> to reserve a long term contract
-                            </p>
-                        </SlideUp>
-                        <SlideUp>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <button
-                                    onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                                    className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
-                                >
-                                    Try Control Panel
-                                </button>
-                                <button
-                                    onClick={() => window.location.href = '/contact'}
-                                    className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200 text-sm"
-                                >
-                                    Contact Us
-                                </button>
-                            </div>
-                        </SlideUp>
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <div>
+                            <SlideUp>
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
+                                    Where will you deploy?
+                                </h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-gray-600 mb-8 text-l max-w-3xl">
+                                    Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us <br /> to reserve a long term contract
+                                </p>
+                            </SlideUp>
+                            <SlideUp>
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <button
+                                        onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
+                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
+                                    >
+                                        Try Control Panel
+                                    </button>
+                                    <button
+                                        onClick={() => window.location.href = '/contact'}
+                                        className="bg-white hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200 text-sm"
+                                    >
+                                        Contact Us
+                                    </button>
+                                </div>
+                            </SlideUp>
+                        </div>
                     </div>
                 </div>
             </div>

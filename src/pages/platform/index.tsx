@@ -162,9 +162,10 @@ export default function PlatformPage() {
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"
                     activeImage="/contact-section2.webp"
-                    className="w-full h-full absolute inset-0"
+                    className="w-full h-full"
                 />
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="relative z-30 container mx-auto px-4">
+                <div className="relative max-w-7xl mx-auto">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6">Learn more about platform now</h2>
                     </SlideUp>
@@ -189,6 +190,7 @@ export default function PlatformPage() {
                             </button>
                         </div>
                     </SlideUp>
+                </div>
                 </div>
             </div>
 
