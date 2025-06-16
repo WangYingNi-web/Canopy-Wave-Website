@@ -50,7 +50,7 @@ export default function Newsroom() {
             title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
             description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
             date: "May 15, 2025",
-            image: "/blog2.png"
+            image: "/blog2.svg"
         },
     ];
     const newsroomPosts: NewsroomPost[] = [
@@ -114,8 +114,8 @@ export default function Newsroom() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
-                        <div key={post.id} className="group cursor-pointer" onClick={() => handleBlogClick(post.title)}>
-                            <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                        <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleBlogClick(post.title)}>
+                            <div className="relative h-56 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
@@ -123,8 +123,8 @@ export default function Newsroom() {
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
-                            <h3 className="text-sm font-semibold text-gray-600 mb-2">{post.title}</h3>
-                            <div className="flex items-center space-x-4 text-sm text-gray-500">
+                            <h3 className="text-sm font-semibold text-gray-600 mb-2 flex-grow">{post.title}</h3>
+                            <div className="flex items-center space-x-4 text-sm text-gray-500 mt-auto">
                                 <IwsLink
                                     href={`/blog/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
                                     className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
@@ -162,11 +162,10 @@ export default function Newsroom() {
                     </Link> */}
                 </div>
 
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {newsroomPosts.map((post) => (
                         <div key={post.id} className="group cursor-pointer" onClick={() => handleWatchClick(post.title)}>
-                            <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                            <div className="relative h-56 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src="/confidentialmind-logo.svg"
                                     alt="ConfidentialMind Logo"

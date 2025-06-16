@@ -66,7 +66,7 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
-  
+
     if (!value.trim()) {
       setFormErrors(prev => ({
         ...prev,
@@ -163,7 +163,7 @@ Registered webinars: ${blogPost.title}
         <div className="w-full mb-12">
           <SlideUp>
             <img
-              src="/CTO.svg"
+              src="/blog/banner.svg"
               alt="Blog"
               className="w-full h-auto rounded-[20px] shadow-md"
             />
@@ -184,11 +184,11 @@ Registered webinars: ${blogPost.title}
                 </div>
                 <div className="flex items-center">
                   <div className="flex-shrink-0 flex items-center justify-center">
-                    <Image src="/blog/human.svg" alt="Value icon" width={24} height={24} className='svg-gray' style={{ width: '24px', height: '24px' }}/>
+                    <Image src="/blog/human.svg" alt="Value icon" width={24} height={24} className='svg-gray' style={{ width: '24px', height: '24px' }} />
                   </div>
                   <h3 className="text-l text-gray-800 pl-4">James Liao <br /> Chief Technology Officer, Co-founder</h3>
                   <div className="flex-shrink-0 flex items-center justify-center ml-16">
-                    <Image src="/blog/clock.svg" alt="Value icon" width={24} height={24} className='svg-gray' style={{ width: '24px', height: '24px' }}/>
+                    <Image src="/blog/clock.svg" alt="Value icon" width={24} height={24} className='svg-gray' style={{ width: '24px', height: '24px' }} />
                   </div>
                   <h3 className="text-l text-gray-800 pl-4">24 min. webinar</h3>
                 </div>
@@ -220,7 +220,6 @@ Registered webinars: ${blogPost.title}
             <div className="top-8">
               <div className="bg-gradient-to-br bg-[#F1F3F6] p-10 rounded-[20px]">
                 <h3 className="text-xl font-bold text-[#333] mb-4">Watch the webinar on-demand</h3>
-
                 {submitMessage && (
                   <div className={`mb-4 p-3 rounded-md text-sm ${submitMessage.includes('成功')
                     ? 'bg-green-100 text-green-700 border border-green-300'
@@ -242,7 +241,6 @@ Registered webinars: ${blogPost.title}
                       value={formData.email}
                       onChange={handleInputChange}
                       onBlur={handleBlur}
-                      required
                       disabled={isSubmitting}
                       className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#80B224] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${formErrors.email ? 'border-red-500' : 'border-gray-300'
                         }`}
@@ -263,7 +261,6 @@ Registered webinars: ${blogPost.title}
                       value={formData.firstName}
                       onChange={handleInputChange}
                       onBlur={handleBlur}
-                      required
                       disabled={isSubmitting}
                       className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#80B224] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${formErrors.firstName ? 'border-red-500' : 'border-gray-300'
                         }`}
@@ -284,7 +281,6 @@ Registered webinars: ${blogPost.title}
                       value={formData.lastName}
                       onChange={handleInputChange}
                       onBlur={handleBlur}
-                      required
                       disabled={isSubmitting}
                       className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#80B224] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${formErrors.lastName ? 'border-red-500' : 'border-gray-300'
                         }`}
@@ -305,7 +301,6 @@ Registered webinars: ${blogPost.title}
                       value={formData.companyName}
                       onChange={handleInputChange}
                       onBlur={handleBlur}
-                      required
                       disabled={isSubmitting}
                       className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#80B224] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${formErrors.companyName ? 'border-red-500' : 'border-gray-300'
                         }`}
@@ -325,7 +320,6 @@ Registered webinars: ${blogPost.title}
                       value={formData.country}
                       onChange={handleInputChange}
                       onBlur={handleBlur}
-                      required
                       disabled={isSubmitting}
                       className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#80B224] focus:border-transparent bg-white disabled:bg-gray-100 disabled:cursor-not-allowed ${formErrors.country ? 'border-red-500' : 'border-gray-300'
                         }`}

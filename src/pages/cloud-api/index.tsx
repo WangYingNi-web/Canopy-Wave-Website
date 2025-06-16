@@ -1,6 +1,5 @@
-"use client";
-
 import Head from 'next/head';
+import Image from 'next/image';
 import { useState } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -84,8 +83,8 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 
             {body && (
                 <div className="mt-4">
-                    
-                    
+
+
                     <div className='mt-4'>{method === 'POST' && <strong>Body</strong>}</div>
                     {body.required && (
                         <div className="mt-2">
@@ -141,6 +140,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 
 export default function PlatformPage() {
     useScrollToHash();
+    const [activeSection, setActiveSection] = useState('introduction');
     const [sections, setSections] = useState<Record<string, boolean>>({
         'api-key': true,
         'api-call': false,
@@ -153,7 +153,6 @@ export default function PlatformPage() {
             [section]: !prev[section]
         }));
     };
-
 
     const apiEndpoints: ApiEndpointProps[] = [
         {
@@ -459,7 +458,7 @@ export default function PlatformPage() {
                 }, null, 2)
             },
             reply: "Returns the id of the new instance",
-
+      
         },
         {
             title: "Restart Instance",
@@ -499,7 +498,7 @@ export default function PlatformPage() {
                     project: "your-project",
                     id: "your-instance-id"
                 }, null, 2),
-
+      
                 requiredExample: JSON.stringify({
                     "project": "cynthia@canopywave.com",
                     "region": "sequoia",
@@ -823,83 +822,139 @@ export default function PlatformPage() {
             },
             reply: "Return a list of billing info"
         }
+      ];
+
+    const navigationItems = [
+        { id: 'introduction', label: 'Introduction' },
+        { id: 'api-key', label: 'Obtaining an API Key' },
+        { id: 'api-call', label: 'Making an API Call' },
+        { id: 'api-endpoints', label: 'REST API Endpoints' }
     ];
 
+    const scrollToSection = (sectionId: string) => {
+        setActiveSection(sectionId);
+        const element = document.getElementById(sectionId);
+        if (element) {
+            // 计算Header高度和额外偏移量
+            const headerHeight = 84; // Header的高度
+            const extraOffset = 25; // 额外的偏移量
+            const totalOffset = headerHeight + extraOffset;
+            
+            // 获取元素位置
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - totalOffset;
+            
+            // 平滑滚动到计算后的位置
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
-        <main className="min-h-screen bg-[#F9F9F9] text-gray-600 relative overflow-x-hidden">
+        <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
             <Head>
-                <title>Canopy Wave - Manage Cloud via API</title>
+                <title>Canopy Wave - API Documentation</title>
             </Head>
             <Header />
+            
+            {/* Hero Section */}
+            <div className="w-full h-[490px] relative mt-[84px]">
+                <Image
+                    src="/about/banner.svg"
+                    alt="banner"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+                        <SlideUp>
+                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center">
+                                Manage Cloud Via API
+                            </h1>
+                        </SlideUp>
+                    </div>
+                </div>
+            </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40">
-                <SlideUp>
-                    <h1 className="text-3xl sm:text-4xl font-black text-center mb-8">Manage Cloud via API</h1>
-                </SlideUp>
-                <SlideUp>
-                    <p className="text-l text-gray-600 text-center mb-16">
-                        Canopy Wave supports a set of REST API to enable servers to develop management clients or to integrate VMS functionality into users' own custom management infrastructure
-                    </p>
-                </SlideUp>
-
-                <div className="grid grid-cols-1 gap-8">
-                    <section>
-                        <button
-                            onClick={() => toggleSection('api-key')}
-                            className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
-                        >
-                            <h3 className="text-2xl">Obtaining an API Key</h3>
-                            <svg
-                                className={`w-6 h-6 transform transition-transform ${sections['api-key'] ? 'rotate-180' : ''}`}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {sections['api-key'] && (
-                            <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
-                                <p className="text-gray-600 text-l">
-                                    To manage Canopy Wave Cloud via the API, users must first register for an account at <a href="https://cloud.canopywave.io" target="_blank" className="text-[#80B224] hover:underline">Canopy Wave</a>
-                                    (<a href="https://cloud.canopywave.io" target="_blank" className="text-[#80B224] hover:underline">https://cloud.canopywave.io</a>). After registering, follow these steps to generate an API key.
-                                </p>
-                                <ol className="list-decimal list-inside text-gray-600 mt-4">
-                                    <li>In the left navigation bar, click on <strong>API Keys</strong>.</li>
-                                    <li>Click on <strong>New API Key</strong> to create a new key.</li>
-                                    <li>Copy the generated API key for use in future API calls.</li>
-                                </ol>
-                                {/* <img src="/cloud/image.png" alt="Cloud Image" className="w-full h-auto mt-4" /> */}
-                                <img src="/cloud/image2.png" alt="Cloud Image2" className="w-full h-auto mt-4" />
+            {/* Main Content Area */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 mb-24">
+                <div className="flex gap-8">
+                    {/* Left Sidebar Navigation */}
+                    <div className="w-64 flex-shrink-0">
+                        <div className="sticky top-24">
+                            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Articles in this section</h3>
+                                <nav className="space-y-2">
+                                    {navigationItems.map((item) => (
+                                        <button
+                                            key={item.id}
+                                            onClick={() => scrollToSection(item.id)}
+                                            className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
+                                                activeSection === item.id
+                                                    ? 'bg-blue-50 text-blue-700 font-medium'
+                                                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                            }`}
+                                        >
+                                            {item.label}
+                                        </button>
+                                    ))}
+                                </nav>
                             </div>
-                        )}
-                    </section>
+                        </div>
+                    </div>
 
-                    <section>
-                        <button
-                            onClick={() => toggleSection('api-call')}
-                            className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
-                        >
-                            <h3 className="text-2xl">Making an API Call</h3>
-                            <svg
-                                className={`w-6 h-6 transform transition-transform ${sections['api-call'] ? 'rotate-180' : ''}`}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {sections['api-call'] && (
-                            <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
-                                <div className="text-gray-600">
-                                    <p>To make a request to the API, include an HTTP Bearer header with your API key:</p>
-                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                    {/* Right Content Area */}
+                    <div className="flex-1 min-w-0">
+                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                            <h1 className="text-3xl sm:text-4xl font-black mb-8">API Documentation</h1>
+                            
+                            {/* Introduction Section */}
+                            <section id="introduction" className="mb-12">
+                                <h2 className="text-2xl font-bold mb-4">Introduction</h2>
+                                <p className="text-gray-600 text-lg leading-relaxed">
+                                    Canopy Wave supports a set of REST API to enable servers to develop management clients or to 
+                                    integrate VMS functionality into users' own custom management infrastructure.
+                                </p>
+                            </section>
+
+                            {/* Obtaining an API Key Section */}
+                            <section id="api-key" className="mb-12">
+                                <h2 className="text-2xl font-bold mb-4">Obtaining an API Key</h2>
+                                <div className="prose max-w-none">
+                                    <p className="text-gray-600 mb-4">
+                                        To manage Canopy Wave Cloud via the API, users must first register for an account at{' '}
+                                        <a href="https://cloud.canopywave.io" target="_blank" className="text-[#80B224] hover:underline">
+                                            Canopy Wave
+                                        </a>{' '}
+                                        (<a href="https://cloud.canopywave.io" target="_blank" className="text-[#80B224] hover:underline">
+                                            https://cloud.canopywave.io
+                                        </a>). After registering, follow these steps to generate an API key.
+                                    </p>
+                                    <ol className="list-decimal list-inside text-gray-600 space-y-2">
+                                        <li>In the left navigation bar, click on <strong>API Keys</strong>.</li>
+                                        <li>Click on <strong>New API Key</strong> to create a new key.</li>
+                                        <li>Copy the generated API key for use in future API calls.</li>
+                                    </ol>
+                                    <div className="mt-6">
+                                        <img src="/cloud/image2.png" alt="API Key Generation" className="w-full h-auto rounded-lg border" />
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/* Making an API Call Section */}
+                            <section id="api-call" className="mb-12">
+                                <h2 className="text-2xl font-bold mb-4">Making an API Call</h2>
+                                <div className="prose max-w-none">
+                                    <p className="text-gray-600 mb-4">To make a request to the API, include an HTTP Bearer header with your API key:</p>
+                                    <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
                                         <code>Authorization: Bearer &lt;YOUR-API-KEY&gt;</code>
                                     </pre>
 
-                                    <p className="mt-6">A successful API call will return the following structure:</p>
-                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                                    <p className="text-gray-600 mt-6 mb-4">A successful API call will return the following structure:</p>
+                                    <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
                                         <code suppressHydrationWarning>
                                             {JSON.stringify({
                                                 "data": "<PAYLOAD>"
@@ -907,13 +962,16 @@ export default function PlatformPage() {
                                         </code>
                                     </pre>
 
-                                    <p className="mt-6">If the API call is invalid, an error Reply will be returned. For example, a 401 Unauthorized error indicates that the request was not authorized:</p>
-                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                                    <p className="text-gray-600 mt-6 mb-4">
+                                        If the API call is invalid, an error Reply will be returned. For example, a 401 Unauthorized error 
+                                        indicates that the request was not authorized:
+                                    </p>
+                                    <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
                                         <code>401: Unauthorized</code>
                                     </pre>
 
-                                    <p className="mt-4">The error Reply will include an error message, formatted as follows:</p>
-                                    <pre className="bg-gray-100 p-4 rounded mt-4 text-sm">
+                                    <p className="text-gray-600 mt-4 mb-4">The error Reply will include an error message, formatted as follows:</p>
+                                    <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
                                         <code suppressHydrationWarning>
                                             {JSON.stringify({
                                                 "error": "<error message>"
@@ -921,33 +979,19 @@ export default function PlatformPage() {
                                         </code>
                                     </pre>
                                 </div>
-                            </div>
-                        )}
-                    </section>
+                            </section>
 
-                    <section>
-                        <button
-                            onClick={() => toggleSection('api-endpoints')}
-                            className="w-full flex items-center justify-between font-bold text-3xl p-4 hover:bg-gray-50 rounded-lg transition-colors"
-                        >
-                            <h3 className="text-2xl">REST API Endpoints</h3>
-                            <svg
-                                className={`w-6 h-6 transform transition-transform ${sections['api-endpoints'] ? 'rotate-180' : ''}`}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {sections['api-endpoints'] && (
-                            <div className="mt-4">
-                                {apiEndpoints.map((endpoint, index) => (
-                                    <ApiEndpoint key={index} {...endpoint} />
-                                ))}
-                            </div>
-                        )}
-                    </section>
+                            {/* REST API Endpoints Section */}
+                            <section id="api-endpoints">
+                                <h2 className="text-2xl font-bold mb-6">REST API Endpoints</h2>
+                                <div className="space-y-6">
+                                    {apiEndpoints.map((endpoint, index) => (
+                                        <ApiEndpoint key={index} {...endpoint} />
+                                    ))}
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
 
