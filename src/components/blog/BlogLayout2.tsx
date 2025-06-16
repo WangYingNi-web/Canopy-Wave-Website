@@ -176,7 +176,7 @@ Registered webinars: ${blogPost.title}
           <div className="lg:col-span-8 pr-10">
             <SlideUp>
               <div className="text-left mb-12">
-                <h1 className="text-4xl sm:text-5xl font-bold text-[#333] mb-6 leading-tight">
+                <h1 className="text-3xl sm:text-4xl font-black text-[#333] mb-6 leading-tight">
                   {blogPost.title}
                 </h1>
                 <div className="text-lg mb-8 text-[#4A5568] font-medium">
@@ -200,7 +200,7 @@ Registered webinars: ${blogPost.title}
             {blogPost.sections.map((section, index) => (
               <div key={index} className="mb-12">
                 {section.title && (
-                  <h2 className="text-3xl text-[#333] font-bold mb-6">
+                  <h2 className="text-2xl text-[#333] font-black mb-6">
                     {section.title}
                   </h2>
                 )}
