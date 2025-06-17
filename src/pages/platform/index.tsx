@@ -90,7 +90,7 @@ export default function PlatformPage() {
                         </div>
 
                         <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
-                            <Image src="/platform/failures.svg" alt="Detecting Failures" width={36} height={40} className="mb-4 svg-gray" />
+                            <Image src="/platform/failures.svg" alt="Detecting Failures" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Detecting Failures</h3>
                             <p className="text-gray-600 text-l">Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime</p>
                         </div>
