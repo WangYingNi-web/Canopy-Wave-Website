@@ -150,23 +150,13 @@ export default function Index() {
                 <SlideUp>
                   <EuropeMap />
                 </SlideUp>
-                {/* <SlideUp>
-                  <Image
-                    src="/World.svg"
-                    alt="Global Network"
-                    width={750}
-                    height={480}
-                    className="w-full"
-                    priority
-                  />
-                </SlideUp> */}
               </div>
             </div>
           </div>
         </div>
 
         {/* News Section */}
-        <div className="bg-[#F9F9F9] py-12 sm:py-20">
+        <div className="bg-[#F9F9F9] sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 text-left">
