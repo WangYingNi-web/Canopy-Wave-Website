@@ -24,6 +24,8 @@ interface NewsroomPost {
     title: string;
     description: string;
     date: string;
+    image?: string;
+    link?: string;
 }
 export default function Newsroom() {
     useScrollToHash();
@@ -33,9 +35,10 @@ export default function Newsroom() {
         const blogTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
         router.push(`/blog/${blogTitle}`);
     };
-    const handleWatchClick = (title: string) => {
-        const newsTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
-        router.push(`/about/newsroom/${newsTitle}`);
+    const handleWatchClick = (post: NewsroomPost) => {
+        if (post.link) {
+            router.push(post.link);
+        }
     };
     const blogPosts: BlogPost[] = [
         {
@@ -45,20 +48,30 @@ export default function Newsroom() {
             date: "April 16, 2025",
             image: "/blog1.svg"
         },
-        {
-            id: 2,
-            title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
-            description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
-            date: "May 15, 2025",
-            image: "/blog2.svg"
-        },
+        // {
+        //     id: 2,
+        //     title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
+        //     description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
+        //     date: "May 15, 2025",
+        //     image: "/blog2.svg"
+        // },
     ];
     const newsroomPosts: NewsroomPost[] = [
         {
             id: 1,
             title: "Canopy Wave and ConfidentialMind Joint Event",
             description: "Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states",
-            date: "April 1, 2025"
+            date: "April 1, 2025",
+            image: "/confidentialmind-logo.svg",
+            link: "/events/canopy-confidentialmind-partnership" // 更新为events链接
+        },
+        {
+            id: 2,
+            title: "AI Agent Summit Keynote by James Liao",
+            description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
+            date: "May 15, 2025",
+            image: "/blog2.svg",
+            link: "/events/ai-agent-summit-keynote" // 更新为events链接
         },
     ];
 
@@ -164,11 +177,11 @@ export default function Newsroom() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {newsroomPosts.map((post) => (
-                        <div key={post.id} className="group cursor-pointer" onClick={() => handleWatchClick(post.title)}>
+                        <div key={post.id} className="group cursor-pointer" onClick={() => handleWatchClick(post)}>
                             <div className="relative h-56 mb-4 overflow-hidden rounded-lg">
                                 <Image
-                                    src="/confidentialmind-logo.svg"
-                                    alt="ConfidentialMind Logo"
+                                    src={post.image || "/confidentialmind-logo.svg"}
+                                    alt={post.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
@@ -184,6 +197,7 @@ export default function Newsroom() {
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                     </svg>
                                 </IwsLink>
+                                {/* <span>{post.date}</span> */}
                             </div>
                         </div>
                     ))}

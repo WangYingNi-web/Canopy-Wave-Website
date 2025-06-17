@@ -160,7 +160,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 text-left">
-                Latest CanopyWave Blog: Insights and Updates <br /> from Our Team
+                Latest Canopy Wave Blog/Events: Insights and Updates <br /> from Our Team
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-20">

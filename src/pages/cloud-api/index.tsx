@@ -894,7 +894,7 @@ export default function PlatformPage() {
                                             onClick={() => scrollToSection(item.id)}
                                             className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
                                                 activeSection === item.id
-                                                    ? 'bg-green-50 text-green-700 font-medium'
+                                                    ? 'bg-green-50 text-[#80B224] font-medium'
                                                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                                             }`}
                                         >
