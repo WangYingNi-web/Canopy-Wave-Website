@@ -443,7 +443,7 @@ export default function ComputeServicesPage() {
                                 </p>
                             </SlideUp>
                         </div>
-                        <div className="w-full md:w-1/2 space-y-8 border-l border-gray-200">
+                        <div className="w-full md:w-1/2 border-l border-gray-200">
                             <div className="flex items-start gap-4 p-6 shadow-sm border-b border-gray-200">
                                 <FadeIn>
                                     <div>
@@ -610,10 +610,12 @@ export default function ComputeServicesPage() {
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
                 <BackgroundTransition
-                    defaultImage="/contact-section1.webp"
-                    activeImage="/contact-section2.webp"
-                    className="w-full h-full"
-                />
+            defaultImage="/contact-section1.webp"  // 暗色版本
+            activeImage="/contact-section2.webp"   // 亮色版本
+            className="w-full h-full"
+            fadeDuration={4000}  // 4秒的点亮过程
+            threshold={0.7}  // 当70%进入视口时触发
+          />
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <SlideUp>

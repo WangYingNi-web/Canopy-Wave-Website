@@ -115,7 +115,7 @@ export default function PrivacyPage() {
                         <ul className="list-disc pl-5 mb-4">
                             <li>You may request copies of your personal information and information about how it is processed.</li>
                             <li>You may request that inaccurate personal information is corrected.</li>
-                            <li>You may request deletion of personal information that is no longer necessary for the purposes underlying the processing, processed based on withdrawn consent, or processed in non-compliance with applicable legal requirements; and</li>
+                            <li>You may request deletion of personal information that is no longer necessary for the purposes underlying the processing, processed based on withdrawn consent, or processed in non-compliance with applicable legal requirements</li>
                             <li>You may lodge a complaint about the manner we process your personal information.</li>
                         </ul>
                         <p className="mb-4">When you consent to our processing your personal information for a specified purpose, you may withdraw your consent at any time. You can exercise your rights by contacting us at: privacy@canopywave.com</p>

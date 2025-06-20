@@ -95,21 +95,21 @@ export default function PricingPage() {
                         </div>
                     </div>
                     <div className="overflow-x-auto">
-                        <div className="min-w-[600px] lg:w-full">
+                        <div className="min-w-[600px] lg:w-full text-sm">
                             <table className="w-full">
                                 <thead>
                                     <tr className="border-b">
-                                        <th className="py-3 text-left whitespace-nowrap w-[18%]">Instance Type</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">Instance Type</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">vCPUs</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
-                                        <th className="py-3 text-center whitespace-nowrap w-[18%]">NVMe Storage</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">NVMe Storage</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">Public IP</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="border-b">
-                                        <td className="py-4">2x NVIDIA SXM5 H100</td>
+                                        <td className="py-4 text-center">2x NVIDIA SXM5 H100</td>
                                         <td className="py-4 text-center">40</td>
                                         <td className="py-4 text-center">400 GB</td>
                                         <td className="py-4 text-center">2 TB</td>
@@ -117,7 +117,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center font-semibold">$4.50</td>
                                     </tr>
                                     <tr className="border-b">
-                                        <td className="py-4">4x NVIDIA SXM5 H100</td>
+                                        <td className="py-4 text-center">4x NVIDIA SXM5 H100</td>
                                         <td className="py-4 text-center">80</td>
                                         <td className="py-4 text-center">800 GB</td>
                                         <td className="py-4 text-center">4 TB</td>
@@ -125,7 +125,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center font-semibold">$9.00</td>
                                     </tr>
                                     <tr className="border-b">
-                                        <td className="py-4">8x NVIDIA SXM5 H100</td>
+                                        <td className="py-4 text-center">8x NVIDIA SXM5 H100</td>
                                         <td className="py-4 text-center">160</td>
                                         <td className="py-4 text-center">1.5 TB</td>
                                         <td className="py-4 text-center">6 TB</td>
@@ -152,11 +152,11 @@ export default function PricingPage() {
                         </div>
                     </div>
                     <div className="overflow-x-auto">
-                        <div className="min-w-[600px] lg:w-full">
+                        <div className="min-w-[600px] lg:w-full text-sm">
                             <table className="w-full">
                                 <thead>
                                     <tr className="border-b">
-                                        <th className="py-3 text-left whitespace-nowrap w-[18%]">Instance Type</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">Instance Type</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">vCPUs</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[18%]">NVMe Storage</th>
@@ -166,7 +166,7 @@ export default function PricingPage() {
                                 </thead>
                                 <tbody>
                                     <tr className="border-b">
-                                        <td className="py-4">2x NVIDIA SXM5 H200</td>
+                                        <td className="py-4 text-center">2x NVIDIA SXM5 H200</td>
                                         <td className="py-4 text-center">40</td>
                                         <td className="py-4 text-center">400 GB</td>
                                         <td className="py-4 text-center">2 TB</td>
@@ -174,7 +174,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center font-semibold">$6.00</td>
                                     </tr>
                                     <tr className="border-b">
-                                        <td className="py-4">4x NVIDIA SXM5 H200</td>
+                                        <td className="py-4 text-center">4x NVIDIA SXM5 H200</td>
                                         <td className="py-4 text-center">80</td>
                                         <td className="py-4 text-center">800 GB</td>
                                         <td className="py-4 text-center">4 TB</td>
@@ -182,7 +182,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center font-semibold">$12.00</td>
                                     </tr>
                                     <tr className="border-b">
-                                        <td className="py-4">8x NVIDIA SXM5 H200</td>
+                                        <td className="py-4 text-center">8x NVIDIA SXM5 H200</td>
                                         <td className="py-4 text-center">160</td>
                                         <td className="py-4 text-center">1.5 TB</td>
                                         <td className="py-4 text-center">8 TB</td>
@@ -226,21 +226,21 @@ export default function PricingPage() {
                             </div>
                             <div className="overflow-x-auto">
                                 <div className="min-w-[300px]">
-                                    <table className="w-full">
+                                    <table className="w-full text-sm">
                                         <thead>
                                             <tr className="border-b">
-                                                <th className="py-3 text-left">Product</th>
-                                                <th className="py-3 text-right">Price</th>
+                                                <th className="py-3 text-center">Product</th>
+                                                <th className="py-3 text-center">Price</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr className="border-b">
                                                 <td className="py-4">Network Shared Storage</td>
-                                                <td className="py-4 text-right">$ 0.07 per GB per month</td>
+                                                <td className="py-4">$ 0.07 per GB per month</td>
                                             </tr>
                                             <tr className="border-b">
                                                 <td className="py-4">Object Storage</td>
-                                                <td className="py-4 text-right">$ 0.04 per GB per month</td>
+                                                <td className="py-4">$ 0.04 per GB per month</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -263,17 +263,17 @@ export default function PricingPage() {
                             </div>
                             <div className="overflow-x-auto">
                                 <div className="min-w-[300px]">
-                                    <table className="w-full">
+                                    <table className="w-full text-sm">
                                         <thead>
                                             <tr className="border-b">
-                                                <th className="py-3 text-left">Product</th>
-                                                <th className="py-3 text-right">Price</th>
+                                                <th className="py-4">Product</th>
+                                                <th className="py-4">Price</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr className="border-b">
                                                 <td className="py-4">Additional public IP address</td>
-                                                <td className="py-4 text-right">$ 4.00 per IP per month</td>
+                                                <td className="py-4">$ 4.00 per IP per month</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -286,11 +286,16 @@ export default function PricingPage() {
             </div>
             {/* Contact Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
-                <BackgroundTransition
-                    defaultImage="/contact-section1.webp"
-                    activeImage="/contact-section2.webp"
-                    className="w-full h-full"
-                />
+                {/* 背景图片 - 在小屏幕时隐藏 */}
+                <div className="hidden md:block">
+                    <BackgroundTransition
+                        defaultImage="/contact-section1.webp"  // 暗色版本
+                        activeImage="/contact-section2.webp"   // 亮色版本
+                        className="w-full h-full"
+                        fadeDuration={4000}  // 4秒的点亮过程
+                        threshold={0.7}  // 当70%进入视口时触发
+                    />
+                </div>
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <SlideUp>
@@ -306,6 +311,7 @@ export default function PricingPage() {
                     </div>
                 </div>
             </div>
+            
             <Footer />
         </main>
     );

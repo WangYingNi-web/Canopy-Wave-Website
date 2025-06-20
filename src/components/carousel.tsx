@@ -27,7 +27,7 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
             align: "start",
             loop: true,
             dragFree: true,
-            duration: 20000, // 减少动画持续时间
+            duration: 27000, // 减少动画持续时间
           }}
           plugins={[
             Autoplay({

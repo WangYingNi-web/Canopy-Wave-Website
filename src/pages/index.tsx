@@ -222,35 +222,37 @@ export default function Index() {
         <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
           {/* 背景图片容器 - 绝对定位覆盖整个区域 */}
           <BackgroundTransition
-            defaultImage="/contact-section1.webp"
-            activeImage="/contact-section2.webp"
-            className="w-full h-full" // 移除了 absolute inset-0，因为组件内部已处理
+            defaultImage="/contact-section1.webp"  // 暗色版本
+            activeImage="/contact-section2.webp"   // 亮色版本
+            className="w-full h-full"
+            fadeDuration={4000}  // 4秒的点亮过程
+            threshold={0.7}  // 当70%进入视口时触发
           />
 
           {/* 内容容器 - 确保在图片上方显示 */}
           <div className="relative z-30 container mx-auto px-4">
             {/* 标题和内容 */}
             <div className="relative max-w-7xl mx-auto">
-            <SlideUp>
-            <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
-            </SlideUp>
+              <SlideUp>
+                <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-12">Have Questions? Get in Touch!</h2>
+              </SlideUp>
               <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <SlideUp>
-                  <button
-                    onClick={() => window.location.href = '/contact'}
-                    className="bg-[#8CC63F] text-sm hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
-                  >
-                    Contact Us
-                  </button>
+                    <button
+                      onClick={() => window.location.href = '/contact'}
+                      className="bg-[#8CC63F] text-sm hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md"
+                    >
+                      Contact Us
+                    </button>
                   </SlideUp>
                   <SlideUp>
-                  <button
-                    onClick={() => window.location.href = '/pricing'}
-                    className="bg-white text-sm hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
-                  >
-                    Get Pricing
-                  </button>
+                    <button
+                      onClick={() => window.location.href = '/pricing'}
+                      className="bg-white text-sm hover:bg-gray-50 text-gray-800 px-6 py-2 rounded-md border border-gray-200"
+                    >
+                      Get Pricing
+                    </button>
                   </SlideUp>
                 </div>
               </div>

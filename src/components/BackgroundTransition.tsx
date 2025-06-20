@@ -1,5 +1,5 @@
+import React, { useEffect, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
 
 interface BackgroundTransitionProps {
   defaultImage: string;
@@ -8,8 +8,7 @@ interface BackgroundTransitionProps {
   className?: string;
   triggerOnce?: boolean;
   fadeDuration?: number;
-  scaleDuration?: number;
-  initialScale?: number;
+  direction?: 'up' | 'down';
 }
 
 export default function BackgroundTransition({
@@ -18,14 +17,14 @@ export default function BackgroundTransition({
   threshold = 0.9,
   triggerOnce = true,
   className = '',
-  fadeDuration = 2500,
-  scaleDuration = 2000,
-  initialScale = 0.95,
+  fadeDuration = 3000,
+  direction = 'up',
 }: BackgroundTransitionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [activeImageLoaded, setActiveImageLoaded] = useState(false);
+  const [revealProgress, setRevealProgress] = useState(0);
   const isInView = useInView(ref, {
     amount: threshold,
     once: triggerOnce,
@@ -36,15 +35,12 @@ export default function BackgroundTransition({
   useEffect(() => {
     let isMounted = true;
     
-    // 预加载默认图片
     const defaultImg = new Image();
     defaultImg.src = defaultImage;
     
-    // 预加载激活图片
     const activeImg = new Image();
     activeImg.src = activeImage;
     
-    // 当激活图片加载完成
     activeImg.onload = () => {
       if (isMounted) {
         setIsLoaded(true);
@@ -52,7 +48,6 @@ export default function BackgroundTransition({
       }
     };
     
-    // 错误处理
     activeImg.onerror = () => {
       console.error(`Failed to load active image: ${activeImage}`);
       if (isMounted) {
@@ -66,19 +61,53 @@ export default function BackgroundTransition({
     };
   }, [defaultImage, activeImage]);
 
-  // 当进入视口且图片加载完成后激活效果
+  // 当进入视口且图片加载完成后开始动画
   useEffect(() => {
     if (isInView && isLoaded) {
       setIsActive(true);
+      
+      // 使用 requestAnimationFrame 实现平滑的进度动画
+      let startTime: number;
+      const animate = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / fadeDuration, 1);
+        
+        // 使用缓动函数让动画更自然
+        const easedProgress = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        setRevealProgress(easedProgress);
+        
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+      
+      requestAnimationFrame(animate);
     }
-  }, [isInView, isLoaded]);
+  }, [isInView, isLoaded, fadeDuration]);
+
+  // 根据进度计算遮罩位置
+  const getMaskImage = () => {
+    if (!isActive) {
+      return 'linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)';
+    }
+    
+    const revealHeight = revealProgress * 100;
+    
+    if (direction === 'up') {
+      return `linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) ${revealHeight}%, rgba(0,0,0,0) ${revealHeight + 5}%, rgba(0,0,0,0) 100%)`;
+    } else {
+      const startPoint = 100 - revealHeight;
+      return `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) ${revealHeight}%, rgba(0,0,0,0) ${revealHeight + 5}%, rgba(0,0,0,0) 100%)`;
+    }
+  };
 
   return (
     <div 
       ref={ref}
-      className={`${className} absolute inset-0`}
+      className={`${className} absolute inset-0 overflow-hidden`}
     >
-      {/* 1. 默认背景 - 始终显示 */}
+      {/* 1. 默认背景图片（浅色效果） */}
       <div
         className="absolute inset-0"
         style={{
@@ -86,13 +115,21 @@ export default function BackgroundTransition({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: isActive ? 0 : 1,
-          transition: `opacity ${fadeDuration}ms ease-in-out`,
           zIndex: 10
         }}
       />
       
-      {/* 2. 激活背景 - 仅在加载后显示 */}
+      {/* 浅色覆盖层 - 使用白色半透明覆盖 */}
+      <div 
+        className="absolute inset-0 z-15"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.6)', // 浅色覆盖效果
+          transition: `opacity ${fadeDuration}ms ease-in-out`,
+          opacity: isActive ? 0 : 1, // 激活时淡出
+        }}
+      />
+      
+      {/* 2. 亮色背景图片 - 使用动态遮罩实现逐步显示 */}
       {activeImageLoaded && (
         <div
           className="absolute inset-0"
@@ -101,16 +138,32 @@ export default function BackgroundTransition({
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: isActive ? 1 : 0,
-            transform: isActive ? 'scale(1)' : `scale(${initialScale})`,
-            filter: isActive ? 'saturate(1.3)' : 'saturate(0.6)',
-            transition: `
-              opacity ${fadeDuration}ms ease-in-out,
-              transform ${scaleDuration}ms ease-in-out,
-              filter ${fadeDuration}ms ease-in-out
-            `,
-            willChange: 'transform, opacity',
-            zIndex: 20
+            zIndex: 20,
+            maskImage: getMaskImage(),
+            WebkitMaskImage: getMaskImage(),
+          }}
+        />
+      )}
+      
+      {/* 3. 光照效果 - 跟随遮罩边缘移动 */}
+      {isActive && revealProgress > 0 && (
+        <div 
+          className="absolute inset-0 z-30 pointer-events-none"
+          style={{
+            background: direction === 'up' 
+              ? `linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) ${(revealProgress * 100) - 10}%, rgba(255,255,255,0.6) ${revealProgress * 100}%, rgba(255,255,255,0.3) ${(revealProgress * 100) + 5}%, rgba(255,255,255,0) ${(revealProgress * 100) + 15}%, rgba(255,255,255,0) 100%)`
+              : `linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) ${(revealProgress * 100) - 10}%, rgba(255,255,255,0.6) ${revealProgress * 100}%, rgba(255,255,255,0.3) ${(revealProgress * 100) + 5}%, rgba(255,255,255,0) ${(revealProgress * 100) + 15}%, rgba(255,255,255,0) 100%)`,
+          }}
+        />
+      )}
+      
+      {/* 4. 额外的闪光效果 - 在动画完成时触发 */}
+      {revealProgress >= 0.9 && (
+        <div 
+          className="absolute inset-0 z-40 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%)',
+            opacity: Math.sin((revealProgress - 0.9) * 10) * 0.5,
           }}
         />
       )}

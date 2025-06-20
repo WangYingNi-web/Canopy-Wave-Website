@@ -15,8 +15,8 @@ export default function EuropeMap() {
                     <Image
                         src="/iceland-world.svg"
                         alt="iceland world Map"
-                        layout="fill"
-                        objectFit="contain"
+                        fill
+                        className='object-contain'
                         priority
                     />
                 </div>
