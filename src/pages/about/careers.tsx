@@ -174,7 +174,7 @@ export default function Careers() {
             </div>
 
             {/* Contact Section */}
-            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
                 <BackgroundTransition
                     defaultImage="/contact-section1.webp"  // 暗色版本
                     activeImage="/contact-section2.webp"   // 亮色版本
@@ -188,9 +188,10 @@ export default function Careers() {
                             <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-8">Work with us</h2>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 mb-8">
-                                Ready to shape the future? Join Canopy Wave and help drive the future of technology with a team redefining what's possible
-                            </p>
+                            <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
+                                <span>Ready to shape the future? Join Canopy Wave and help drive the future of technology</span>
+                                <span>with a team redefining what's possible</span>
+                            </div>
                         </SlideUp>
                         <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                             <button className="bg-[#8CC63F] text-white px-4 py-2 rounded-lg hover:bg-[#80B224] transition-all duration-300" onClick={() => router.push('/about/job-application?position=infrastructure')}>

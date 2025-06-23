@@ -152,35 +152,36 @@ export default function SolutionsPage() {
             </div>
 
             {/* Ready to Get Started Section */}
-            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
                 <BackgroundTransition
-            defaultImage="/contact-section1.webp"  // 暗色版本
-            activeImage="/contact-section2.webp"   // 亮色版本
-            className="w-full h-full"
-            fadeDuration={4000}  // 4秒的点亮过程
-            threshold={0.7}  // 当70%进入视口时触发
-          />
+                    defaultImage="/contact-section1.webp"  // 暗色版本
+                    activeImage="/contact-section2.webp"   // 亮色版本
+                    className="w-full h-full"
+                    fadeDuration={4000}  // 4秒的点亮过程
+                    threshold={0.7}  // 当70%进入视口时触发
+                />
                 <div className="relative z-30 container mx-auto px-4">
-                <div className="relative max-w-7xl mx-auto">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
-                        <p className="text-gray-600 mb-8 mx-auto text-l">
-                            Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
-                        </p>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                Launch GPU instances
-                            </Button>
-                            <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                Contact Us
-                            </Button>
-                        </div>
-                    </SlideUp>
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+                            <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
+                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
+                                <span>or contact us to reserve a long term contract</span>
+                            </div>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                    Launch GPU instances
+                                </Button>
+                                <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+                                    Contact Us
+                                </Button>
+                            </div>
+                        </SlideUp>
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
 
             <Footer />

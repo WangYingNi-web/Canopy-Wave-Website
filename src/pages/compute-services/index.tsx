@@ -50,7 +50,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} className="w-[93%]" />
+                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={570} height={400} />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -509,7 +509,7 @@ export default function ComputeServicesPage() {
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6 text-center">Get the latest and greatest NVIDIA GPUs</h2>
                         <p className="text-gray-600 text-l mb-16 text-center max-w-4xl mx-auto">
-                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability. We use highest safety stander to ensure data security
+                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability We use highest safety stander to ensure data security
                         </p>
                     </SlideUp>
 
@@ -608,37 +608,46 @@ export default function ComputeServicesPage() {
                 Your browser does not support the video tag.
             </video> */}
             {/* Ready to Get Started Section */}
-            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
-                <BackgroundTransition
-            defaultImage="/contact-section1.webp"  // 暗色版本
-            activeImage="/contact-section2.webp"   // 亮色版本
-            className="w-full h-full"
-            fadeDuration={4000}  // 4秒的点亮过程
-            threshold={0.7}  // 当70%进入视口时触发
-          />
-                <div className="relative z-30 container mx-auto px-4">
-                    <div className="relative max-w-7xl mx-auto">
-                        <SlideUp>
-                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
-                        </SlideUp>
-                        <SlideUp>
-                            <p className="text-gray-600 mb-8 mx-auto text-l">
-                                Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract
-                            </p>
-                        </SlideUp>
-                        <SlideUp>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                    Launch GPU instances
-                                </Button>
-                                <Button variant="outline" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-                                    Contact Us
-                                </Button>
-                            </div>
-                        </SlideUp>
-                    </div>
-                </div>
-            </div>
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24 overflow-hidden"> {/* 增加最小高度 */}
+  <BackgroundTransition
+    defaultImage="/contact-section1.webp"
+    activeImage="/contact-section2.webp"
+    className="w-full h-full"
+    fadeDuration={4000}
+    threshold={0.7}
+  />
+  <div className="relative z-30 container mx-auto px-4">
+    <div className="relative max-w-7xl mx-auto">
+      <SlideUp>
+        <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
+      </SlideUp>
+      <SlideUp>
+        {/* 使用 flex 布局替代 br 换行 */}
+        <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
+          <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
+          <span>or contact us to reserve a long term contract</span>
+        </div>
+      </SlideUp>
+      <SlideUp>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button 
+            className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" 
+            onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}
+          >
+            Launch GPU instances
+          </Button>
+          <Button 
+            variant="outline" 
+            className="w-full sm:w-auto"
+            onClick={() => window.location.href = '/contact'}
+          >
+            Contact Us
+          </Button>
+        </div>
+      </SlideUp>
+    </div>
+  </div>
+</div>
 
             <Footer />
         </main>

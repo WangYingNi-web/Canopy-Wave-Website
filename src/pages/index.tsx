@@ -163,7 +163,7 @@ export default function Index() {
                 Latest Canopy Wave Blog/Events: Insights and Updates <br /> from Our Team
               </h2>
             </SlideUp>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
               {/* News Card 1 */}
               <Link href="/blog/joint-blog-accelerate-enterprise-ai">
                 <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
@@ -181,8 +181,7 @@ export default function Index() {
                       Joint Blog - Accelerate Enterprise AI
                     </h4>
                     <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
-                    <br />
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 mt-[28px]">
                       <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Article</span>
                       <span className="text-gray-500 text-sm">April 16, 2025</span>
                     </div>
@@ -190,6 +189,31 @@ export default function Index() {
                 </div>
               </Link>
               {/* News Card 2 */}
+              <Link href="/events/canopy-confidentialmind-partnership">
+                <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src="/confidentialmind-logo.svg"
+                      alt="confidentialmind Image"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-l font-semibold mb-3">
+                    Canopy Wave and ConfidentialMind Join Forces to
+                    Accelerate Enterprise AI Adoption
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
+                    <div className="flex items-center gap-4">
+                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
+                      <span className="text-gray-500 text-sm">April 1, 2025</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              {/* News Card 3 */}
               <Link href="/blog/the-rise-of-enterprise-ai:-trends-in-inferencing-and-gpu-resource-planning">
                 <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="relative aspect-video w-full overflow-hidden">
@@ -205,9 +229,9 @@ export default function Index() {
                     <h4 className="text-l font-semibold mb-3">
                       The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning
                     </h4>
-                    <p className="text-gray-600 text-sm mb-6">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
+                    <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
                     <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Article</span>
+                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
                       <span className="text-gray-500 text-sm">May 15, 2025</span>
                     </div>
                   </div>
@@ -217,7 +241,6 @@ export default function Index() {
 
           </div>
         </div>
-
         {/* Contact Section */}
         <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
           {/* 背景图片容器 - 绝对定位覆盖整个区域 */}

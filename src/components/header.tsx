@@ -576,16 +576,14 @@ export default function Header() {
             {showMobileProducts && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
                 <li>
-                  <button
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowMobileSubMenu(showMobileSubMenu === 'compute' ? null : 'compute');
-                    }}
+                  <IwsLink
+                    href="/compute-services"
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
+                    onClick={closeMobileMenu}
                   >
                     <span>Compute Services</span>
                     <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'compute' ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -597,8 +595,8 @@ export default function Header() {
                         d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </button>
-                  <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'compute' ? 'block' : 'hidden'}`}>
+                  </IwsLink>
+                  <ul className={`pl-4 mt-2 space-y-2`}>
                     <IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink>
                     <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
                     <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>CPU Nodes</IwsLink></li>
@@ -606,16 +604,14 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <button
-                    className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowMobileSubMenu(showMobileSubMenu === 'storage' ? null : 'storage');
-                    }}
+                  <IwsLink 
+                    href="/storage-services" 
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between" 
+                    onClick={closeMobileMenu}
                   >
                     <span>Storage Services</span>
                     <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'storage' ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -627,24 +623,22 @@ export default function Header() {
                         d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </button>
-                  <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'storage' ? 'block' : 'hidden'}`}>
+                  </IwsLink>
+                  <ul className={`pl-4 mt-2 space-y-2`}>
                     <li><IwsLink href="/storage-services#local-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Local Storage</IwsLink></li>
                     <li><IwsLink href="/storage-services#shared-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Shared Storage</IwsLink></li>
                     <li><IwsLink href="/storage-services#object-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
                   </ul>
                 </li>
                 <li>
-                  <button
-                    className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowMobileSubMenu(showMobileSubMenu === 'networking' ? null : 'networking');
-                    }}
+                  <IwsLink 
+                    href="/networking-services" 
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between" 
+                    onClick={closeMobileMenu}
                   >
                     <span>Networking Services</span>
                     <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'networking' ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -656,22 +650,20 @@ export default function Header() {
                         d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </button>
-                  <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'networking' ? 'block' : 'hidden'}`}>
+                  </IwsLink>
+                  <ul className={`pl-4 mt-2 space-y-2`}>
                     <li><IwsLink href="/networking-hardware" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
                   </ul>
                 </li>
                 <li>
-                  <button
-                    className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowMobileSubMenu(showMobileSubMenu === 'platform' ? null : 'platform');
-                    }}
+                  <IwsLink 
+                    href="/platform" 
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between" 
+                    onClick={closeMobileMenu}
                   >
                     <span>Platform</span>
                     <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSubMenu === 'platform' ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -683,12 +675,12 @@ export default function Header() {
                         d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </button>
-                  <ul className={`pl-4 mt-2 space-y-2 ${showMobileSubMenu === 'platform' ? 'block' : 'hidden'}`}>
-                    <li><IwsLink href="/platform#dcim-platform" className="text-gray-600 hover:text-gray-900 text-sm" onClick={closeMobileMenu}>Canopy DCIM Platform</IwsLink></li>
-                    <li><IwsLink href="/platform#cloud-platform" className="text-gray-600 hover:text-gray-900 text-sm" onClick={closeMobileMenu}>Wave GPU cloud platform</IwsLink></li>
+                  </IwsLink>
+                  <ul className={`pl-4 mt-2 space-y-2`}>
+                    <li><IwsLink href="/networking-hardware" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
                   </ul>
                 </li>
+                
               </ul>
             )}
           </div>
@@ -753,14 +745,11 @@ export default function Header() {
                   <div>
                     <button
                       className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowDataCenterSubMenu(!showDataCenterSubMenu)
-                      }}
+                      onClick={() => window.location.href = '/pricing'}
                     >
                       <span>GPU Cloud Pricing</span>
                       <svg
-                        className={`w-4 h-4 transform transition-transform duration-200 ${showDataCenterSubMenu ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transform transition-transform duration-200`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -773,7 +762,7 @@ export default function Header() {
                         />
                       </svg>
                     </button>
-                    {showDataCenterSubMenu && (
+           
                       <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
                         <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
                         <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
@@ -781,7 +770,7 @@ export default function Header() {
                         <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
                         <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
                       </ul>
-                    )}
+    
                   </div>
                 </li>
               </ul>
@@ -813,14 +802,11 @@ export default function Header() {
                   <div>
                     <button
                       className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowDataCenterSubMenu(!showDataCenterSubMenu)
-                      }}
+                      onClick={() => window.location.href = '/data-center/iceland'}
                     >
                       <span>Our Datacenter</span>
                       <svg
-                        className={`w-4 h-4 transform transition-transform duration-200 ${showDataCenterSubMenu ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transform transition-transform duration-200`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -834,12 +820,10 @@ export default function Header() {
                       </svg>
                     </button>
 
-                    {showDataCenterSubMenu && (
                       <ul className={`pl-4 mt-2 space-y-2`}>
                         <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
                         <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
                       </ul>
-                    )}
                     <ul className="pl-2 mt-1 py-1 hover:bg-gray-100">
                       <li>
                         <IwsLink href="/data-center/iceland#future-locations" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowDataCenter(false) }}>Future locations</IwsLink>
@@ -904,14 +888,11 @@ export default function Header() {
                 <div>
                   <button
                     className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setshowAboutSubMenu(!showAboutSubMenu)
-                    }}
+                    onClick={() => window.location.href = '/about/newsroom'}
                   >
                     <span>Newsroom</span>
                     <svg
-                      className={`w-4 h-4 transform transition-transform duration-200 ${showAboutSubMenu ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 transform transition-transform duration-200`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -924,12 +905,11 @@ export default function Header() {
                       />
                     </svg>
                   </button>
-                  {showAboutSubMenu && (
                     <ul className={`pl-4 mt-2 space-y-2`}>
                       <li><IwsLink href="/about/newsroom#blog" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Blog</IwsLink></li>
                       <li><IwsLink href="/about/newsroom#events" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Events</IwsLink></li>
                     </ul>
-                  )}
+       
                 </div>
               </ul>
             )}
@@ -938,7 +918,7 @@ export default function Header() {
             {/* 新增 Canopy Wave Cloud 按钮 */}
             <div className="relative">
               <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-              Go to Canopy Wave Cloud
+                Go to Canopy Wave Cloud
               </Button>
             </div>
             {/* 新增 Contact US 按钮 */}
