@@ -26,6 +26,8 @@ export default function ComputeServicesPage() {
                     fill
                     className="object-cover"
                     priority
+                    sizes="100vw"
+                    quality={85}
                 />
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
