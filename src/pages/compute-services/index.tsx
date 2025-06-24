@@ -21,13 +21,12 @@ export default function ComputeServicesPage() {
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">
                 <Image
-                    src="/compute/banner.webp"
+                    src="/compute/banner.svg"
                     alt="banner"
                     fill
                     className="object-cover"
                     priority
-                    sizes="100vw"
-                    quality={85}
+                
                 />
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">

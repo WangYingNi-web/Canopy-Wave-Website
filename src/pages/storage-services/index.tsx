@@ -23,7 +23,7 @@ export default function StorageServices() {
       <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/storage/banner.svg"
-          alt="banner"
+          alt="banner" 
           fill
           className="object-cover"
           priority
