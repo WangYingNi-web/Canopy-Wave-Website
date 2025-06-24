@@ -32,7 +32,7 @@ export default function Index() {
     threshold: 0.9,
     triggerOnce: true // 只触发一次
   });
-
+  
   return (
     <main>
       <Head>

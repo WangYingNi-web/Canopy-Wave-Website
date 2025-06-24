@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import '../styles/global.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'react-hot-toast';
@@ -13,12 +14,26 @@ const inter = Inter({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div id="root" className={inter.className}> {/* 应用字体类名 */}
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <Component {...pageProps} />
-        <Toaster />
-      </ThemeProvider>
-    </div>
+    <>
+      <Head>
+        {/* 预加载关键图片资源 */}
+        <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/storage/banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/platform/banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/networking/banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/blog/banner.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/api-banner.svg" as="image" type="image/svg+xml" />
+      </Head>
+      <div id="root" className={inter.className}> {/* 应用字体类名 */}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Component {...pageProps} />
+          <Toaster />
+        </ThemeProvider>
+      </div>
+    </>
   )
 }
 
