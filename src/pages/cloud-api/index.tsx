@@ -369,7 +369,7 @@ export default function PlatformPage() {
         {
             title: "List instance Types",
             method: "GET",
-            endpoint: "https://cloud-api.canopywave.io/api/v1/images",
+            endpoint: "https://cloud-api.canopywave.io/api/v1/instance-types",
             reply: `Returns a list of all available instance types`,
             body: {
                 example: `${JSON.stringify({

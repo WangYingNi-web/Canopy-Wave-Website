@@ -214,8 +214,8 @@ export default function SolutionsPage() {
                         <SlideUp>
                             <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                <span>or contact us to reserve a long term contract</span>
+                                <span>Whether you're scaling AI training, deploying inference at the edge, or building your next-generation data platform, </span>
+                                <span>Canopy Wave has the team, tools, and technology to make it happen—fast</span>
                             </div>
                         </SlideUp>
                         <SlideUp>

@@ -86,7 +86,7 @@ export default function NetworkingHardwarePage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4">Canopy Wave has invested </h3>
+                            <h3 className="font-black text-l mb-4">Canopy Wave has invested </h3>
                             <p className="text-gray-600 text-l">
                                 Deeply in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
                             </p>
@@ -102,8 +102,8 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
-                                    Tested in Production, Proven at Scale
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6 sm:mt-10">
+                                    Tested in Production, <br /> Proven at Scale
                                 </h2>
                             </SlideUp>
                             <SlideUp>
@@ -236,8 +236,8 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
-                                    Best Pricing. No Compromise on Quality
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6 sm:mt-10">
+                                    Best Pricing. <br /> No Compromise on Quality
                                 </h2>
                             </SlideUp>
                             <SlideUp>
@@ -271,8 +271,8 @@ export default function NetworkingHardwarePage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/computing.svg"
-                                            alt="Computing"
+                                            src="/networking/high.svg"
+                                            alt="high"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -289,8 +289,8 @@ export default function NetworkingHardwarePage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/qos.svg"
-                                            alt="QoS"
+                                            src="/networking/good.svg"
+                                            alt="good"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -314,7 +314,7 @@ export default function NetworkingHardwarePage() {
                         {/* 左侧标题部分 */}
                         <div className="lg:col-span-6">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl font-black mb-6">
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6 sm:mt-10">
                                     From Equipment to Deployment
                                 </h2>
                             </SlideUp>
@@ -415,8 +415,8 @@ export default function NetworkingHardwarePage() {
                         <SlideUp>
                             <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                <span>or contact us to reserve a long term contract</span>
+                                <span>Whether you're building a new AI cluster or expanding your existing infrastructure, </span>
+                                <span>Canopy Wave helps you get the right gear at the right price—without compromising performance</span>
                             </div>
                         </SlideUp>
                         <SlideUp>

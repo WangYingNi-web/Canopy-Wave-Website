@@ -43,7 +43,7 @@ export default function Index() {
         {/* Hero Section */}
         <div className="w-full h-[490px] relative mt-[84px]">
           <Image
-            src="/home_banner.svg"
+            src="/image 93.webp"
             alt="Home_Banner"
             fill
             className="object-cover"

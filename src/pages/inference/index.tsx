@@ -64,8 +64,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/low-latency.svg"
-                                            alt="Low Latency"
+                                            src="/networking/teams.svg"
+                                            alt="Teams"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -86,8 +86,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/computing.svg"
-                                            alt="Computing"
+                                            src="/networking/performance.svg"
+                                            alt="Performance"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -108,8 +108,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/qos.svg"
-                                            alt="QoS"
+                                            src="/networking/security.svg"
+                                            alt="Security"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -215,8 +215,8 @@ export default function SolutionsPage() {
                         <SlideUp>
                             <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                <span>or contact us to reserve a long term contract</span>
+                                <span>No matter your model size or dataset complexity,we have the storage solution</span>
+                                <span>to keep inference smooth and responsive</span>
                             </div>
                         </SlideUp>
                         <SlideUp>

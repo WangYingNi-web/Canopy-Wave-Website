@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import Header from '@/components/header';
@@ -137,8 +138,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/low-latency.svg"
-                                            alt="Low Latency"
+                                            src="/networking/freelancers.svg"
+                                            alt="Freelancers"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -155,8 +156,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/computing.svg"
-                                            alt="Computing"
+                                            src="/networking/studios.svg"
+                                            alt="Studios"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
@@ -173,8 +174,8 @@ export default function SolutionsPage() {
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="p-2">
                                         <Image
-                                            src="/networking/qos.svg"
-                                            alt="QoS"
+                                            src="/networking/teams.svg"
+                                            alt="Teams"
                                             width={36}
                                             height={36}
                                             className='svg-gray'
