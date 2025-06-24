@@ -21,7 +21,7 @@ export default function ComputeServicesPage() {
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">
                 <Image
-                    src="/compute/banner.svg"
+                    src="/compute/banner.webp"
                     alt="banner"
                     fill
                     className="object-cover"
