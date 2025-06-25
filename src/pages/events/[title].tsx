@@ -122,6 +122,7 @@ export default function EventDetail() {
     <main className={getBackgroundClass()}>
       <Head>
         <title>Canopy Wave - {eventPost.title}</title>
+        <link rel="preload" href="/blog/banner.svg" as="image" type="image/svg+xml" />
       </Head>
       <Header />
       {renderEventLayout()}

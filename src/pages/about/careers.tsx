@@ -15,6 +15,7 @@ export default function Careers() {
         <main className="min-h-screen relative text-gray-600">
             <Head>
                 <title>Canopy Wave - Explore Our Open Positions</title>
+                <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             <Header />
             {/* Hero Section */}

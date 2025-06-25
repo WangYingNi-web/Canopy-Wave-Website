@@ -16,6 +16,7 @@ export default function PlatformPage() {
             <Header />
             <Head>
                 <title>Empower AI with Our Platform for Peak Performance</title>
+                <link rel="preload" href="/platform/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">

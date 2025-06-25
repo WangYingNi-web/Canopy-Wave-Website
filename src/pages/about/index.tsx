@@ -31,6 +31,7 @@ export default function AboutPage() {
     <main className="min-h-screen relative text-gray-600">
       <Head>
         <title>Canopy Wave - About Us</title>
+        <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
       </Head>
       <Header />
 

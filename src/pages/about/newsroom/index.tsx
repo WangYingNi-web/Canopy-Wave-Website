@@ -79,6 +79,7 @@ export default function Newsroom() {
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
             <Head>
                 <title>Canopy Wave - News and Press Releases</title>
+                <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
                 <meta name="description" content="Newsroom - Canopy Wave" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>

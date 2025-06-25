@@ -13,6 +13,7 @@ export default function PricingPage() {
         <main className="min-h-screen bg-[#F9F9F9] text-gray-600">
             <Head>
                 <title>Canopy Wave - GPU Cloud Pricing</title>
+                <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             <Header />
 

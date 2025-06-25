@@ -38,6 +38,7 @@ export default function Index() {
     <main>
       <Head>
         <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
+        <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" />
       </Head>
       <Header />
       <div className="w-full text-gray-600">

@@ -17,6 +17,7 @@ export default function ComputeServicesPage() {
             <Header />
             <Head>
                 <title>Canopy Wave - GPUs for AI Models and Innovation</title>
+                <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">

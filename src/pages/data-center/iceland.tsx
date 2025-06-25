@@ -15,6 +15,7 @@ export default function IcelandDataCenter() {
         <main className="min-h-screen text-gray-600">
             <Head>
                 <title>Canopy Wave - Sustainable and Efficient Data Center Solutions</title>
+                <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             <Header />
 

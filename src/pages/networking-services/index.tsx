@@ -17,6 +17,7 @@ export default function NetworkingServices() {
             <Header />
             <Head>
                 <title>Canopy Wave - Networking Services That Enhance Performance</title>
+                <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
             </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
@@ -193,8 +194,8 @@ export default function NetworkingServices() {
                         </p>
                     </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
-                            <div className="flex justify-center mb-6">
+                    <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-left transition-all duration-300 cursor-pointer">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/compute/fast.svg"
                                     alt="High Performance"

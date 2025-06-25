@@ -15,6 +15,7 @@ export default function SolutionsPage() {
         <main className="min-h-screen relative text-gray-600">
             <Head>
                 <title>Canopy Wave - Solutions</title>
+                <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
                 <meta name="description" content="Canopy Wave Solutions" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
