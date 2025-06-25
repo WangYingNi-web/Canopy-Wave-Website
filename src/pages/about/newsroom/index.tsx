@@ -128,7 +128,7 @@ export default function Newsroom() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
                         <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleBlogClick(post.title)}>
-                            <div className="relative h-56 mb-4 overflow-hidden rounded-lg">
+                            <div className="relative h-60 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
@@ -178,7 +178,7 @@ export default function Newsroom() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {newsroomPosts.map((post) => (
                         <div key={post.id} className="group cursor-pointer" onClick={() => handleWatchClick(post)}>
-                            <div className="relative h-56 mb-4 overflow-hidden rounded-lg">
+                            <div className="relative h-60 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src={post.image || "/confidentialmind-logo.svg"}
                                     alt={post.title}
@@ -189,7 +189,7 @@ export default function Newsroom() {
                             <h3 className="text-sm font-semibold text-gray-600 mb-2 truncate">{post.title}</h3>
                             <div className="flex items-center space-x-4 text-sm text-gray-500">
                                 <IwsLink
-                                    href={`/about/newsroom/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
+                                    href={post.link || '#'}
                                     className="text-[#8CC63F] hover:text-[#7AB82F] transition-colors duration-200 flex items-center"
                                 >
                                     Read More

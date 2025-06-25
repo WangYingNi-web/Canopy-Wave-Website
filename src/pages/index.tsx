@@ -11,6 +11,7 @@ import PartnerCarousel from '@/components/carousel';
 import { useInView } from 'react-intersection-observer';
 import EuropeMap from '@/components/EuropeMap'
 import BackgroundTransition from '@/components/BackgroundTransition';
+import GlassmorphismBanner from "@/components/GlassmorphismBanner";
 
 export default function Index() {
   const partnerLogos = [
@@ -40,10 +41,11 @@ export default function Index() {
       </Head>
       <Header />
       <div className="w-full text-gray-600">
+        {/* <GlassmorphismBanner /> */}
         {/* Hero Section */}
         <div className="w-full h-[490px] relative mt-[84px]">
           <Image
-            src="/home_banner.svg"
+            src="/1882341088.svg"
             alt="Home_Banner"
             fill
             className="object-cover"
