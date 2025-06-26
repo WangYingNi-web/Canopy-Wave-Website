@@ -63,7 +63,7 @@ export default function SolutionsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* High Frame Throughput */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/networking/qos.svg"
                                     alt="QoS"
@@ -72,15 +72,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">High frame throughput</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">High frame throughput</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 Achieves thousands of frames per second via distributed parallel processing, ideal for 4K/8K real-time animation and industrial-scale droplet production
                             </p>
                         </div>
 
                         {/* Ultra-Low Latency */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/icon/high.svg"
                                     alt="High"
@@ -89,15 +89,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Ultra-low latency</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Ultra-low latency</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 Reduces latency to 0.1ms using lightweight compression (SDVoE) and 6G ULLC technologies, critical for surgical robotics and cloud gaming
                             </p>
                         </div>
 
                         {/* GPU and CPU-Based Rendering */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/compute/memory.svg"
                                     alt="GPU and CPU-Based Rendering"
@@ -106,8 +106,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Supports GPU and CPU-based rendering engines</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Supports GPU and CPU-based rendering engines</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 Optimizes hybrid workflows through dynamic task scheduling and CUDA/OpenCL acceleration, enhancing real-time rendering efficiency in gaming and simulations
                             </p>
                         </div>
@@ -210,7 +210,7 @@ export default function SolutionsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Local Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/rendering/performance.svg"
                                     alt="Local Storage"
@@ -219,15 +219,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Local Storage</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Local Storage</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 Fast I/O for scratch files
                             </p>
                         </div>
 
                         {/* Shared Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/rendering/low-latency.svg"
                                     alt="Shared Storage"
@@ -236,15 +236,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Shared Storage</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Shared Storage</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 We offer top-tier life insurance as well as short-term and long-term disability insurance to our employees
                             </p>
                         </div>
 
                         {/* Object Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/rendering/gpus.svg"
                                     alt="Object Storage"
@@ -253,8 +253,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Object Storage</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Object Storage</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 Come together and mangia. We provide cateredlunches in office and at our data centers fromvariouslocalvendors
                             </p>
                         </div>

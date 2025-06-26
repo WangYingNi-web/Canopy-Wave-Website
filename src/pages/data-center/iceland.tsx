@@ -49,14 +49,17 @@ export default function IcelandDataCenter() {
             <div className="bg-[#F5F7F4] sm:py-24 py-16">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[400px] rounded-lg overflow-hidden">
-                            <Image
-                                src="/data-center/deploy.svg"
-                                alt="NVIDIA GPU"
-                                fill
-                                className="object-cover filter brightness-90"
-                            />
-                        </div>
+                        <SlideUp>
+                            <div className="relative h-[400px] rounded-lg overflow-hidden">
+                                <Image
+                                    src="/data-center/deploy.svg"
+                                    alt="NVIDIA GPU"
+                                    fill
+                                    className="object-cover filter brightness-90"
+                                />
+                            </div>
+                        </SlideUp>
+
                         <div className="pl-4">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl font-black mb-6">
@@ -338,14 +341,16 @@ export default function IcelandDataCenter() {
             <div id='future-locations' className="bg-[#F9F9F9] py-16 sm:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[400px] w-full">
-                            <Image
-                                src="/about/future-locations.svg"
-                                alt="Future Locations"
-                                fill
-                                className="object-cover cover rounded-lg"
-                            />
-                        </div>
+                        <SlideUp>
+                            <div className="relative h-[400px] w-full">
+                                <Image
+                                    src="/about/future-locations.svg"
+                                    alt="Future Locations"
+                                    fill
+                                    className="object-cover cover rounded-lg"
+                                />
+                            </div>
+                        </SlideUp>
                         <div>
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Future Locations in Planning</h2>
@@ -378,12 +383,12 @@ export default function IcelandDataCenter() {
             {/* Where Will You Deploy Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
                 <BackgroundTransition
-            defaultImage="/contact-section1.webp"  // 暗色版本
-            activeImage="/contact-section2.webp"   // 亮色版本
-            className="w-full h-full"
-            fadeDuration={4000}  // 4秒的点亮过程
-            threshold={0.7}  // 当70%进入视口时触发
-          />
+                    defaultImage="/contact-section1.webp"  // 暗色版本
+                    activeImage="/contact-section2.webp"   // 亮色版本
+                    className="w-full h-full"
+                    fadeDuration={4000}  // 4秒的点亮过程
+                    threshold={0.7}  // 当70%进入视口时触发
+                />
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <div>
@@ -393,10 +398,10 @@ export default function IcelandDataCenter() {
                                 </h2>
                             </SlideUp>
                             <SlideUp>
-                            <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                <span>or contact us to reserve a long term contract</span>
-                            </div>
+                                <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
+                                    <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
+                                    <span>or contact us to reserve a long term contract</span>
+                                </div>
                             </SlideUp>
                             <SlideUp>
                                 <div className="flex flex-col sm:flex-row gap-4">

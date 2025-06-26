@@ -27,7 +27,7 @@ export default function ComputeServicesPage() {
                     fill
                     className="object-cover"
                     priority
-                
+
                 />
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
@@ -589,13 +589,16 @@ export default function ComputeServicesPage() {
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <Image
-                                src="/compute/cluster.svg"
-                                alt="Cluster"
-                                width={600}
-                                height={400}
-                                className="w-full rounded-lg shadow-lg"
-                            />
+                            <SlideUp>
+                                <Image
+                                    src="/compute/cluster.svg"
+                                    alt="Cluster"
+                                    width={600}
+                                    height={400}
+                                    className="w-full rounded-lg shadow-lg"
+                                />
+                            </SlideUp>
+
                         </div>
                     </div>
                 </div>
@@ -611,45 +614,45 @@ export default function ComputeServicesPage() {
             </video> */}
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24 overflow-hidden"> {/* 增加最小高度 */}
-  <BackgroundTransition
-    defaultImage="/contact-section1.webp"
-    activeImage="/contact-section2.webp"
-    className="w-full h-full"
-    fadeDuration={4000}
-    threshold={0.7}
-  />
-  <div className="relative z-30 container mx-auto px-4">
-    <div className="relative max-w-7xl mx-auto">
-      <SlideUp>
-        <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
-      </SlideUp>
-      <SlideUp>
-        {/* 使用 flex 布局替代 br 换行 */}
-        <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-          <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-          <span>or contact us to reserve a long term contract</span>
-        </div>
-      </SlideUp>
-      <SlideUp>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button 
-            className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" 
-            onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}
-          >
-            Launch GPU instances
-          </Button>
-          <Button 
-            variant="outline" 
-            className="w-full sm:w-auto"
-            onClick={() => window.location.href = '/contact'}
-          >
-            Contact Us
-          </Button>
-        </div>
-      </SlideUp>
-    </div>
-  </div>
-</div>
+                <BackgroundTransition
+                    defaultImage="/contact-section1.webp"
+                    activeImage="/contact-section2.webp"
+                    className="w-full h-full"
+                    fadeDuration={4000}
+                    threshold={0.7}
+                />
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
+                        </SlideUp>
+                        <SlideUp>
+                            {/* 使用 flex 布局替代 br 换行 */}
+                            <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
+                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
+                                <span>or contact us to reserve a long term contract</span>
+                            </div>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button
+                                    className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]"
+                                    onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}
+                                >
+                                    Launch GPU instances
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    className="w-full sm:w-auto"
+                                    onClick={() => window.location.href = '/contact'}
+                                >
+                                    Contact Us
+                                </Button>
+                            </div>
+                        </SlideUp>
+                    </div>
+                </div>
+            </div>
 
             <Footer />
         </main>

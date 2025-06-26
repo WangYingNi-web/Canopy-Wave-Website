@@ -78,22 +78,22 @@ export default function PlatformPage() {
 
                     {/* 下半部分：三个卡片 */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-left">
                             <Image src="/platform/cookbook.svg" alt="Performance Cookbook" width={36} height={36} className="mb-4 svg-gray" />
-                            <h3 className="font-bold text-l mb-3">Performance Cookbook</h3>
-                            <p className="text-gray-600 text-l">Image servers, configure BIOS, manage driver versions, and more—all streamlined through our platform. Use our Performance Cookbook to unlock peak performance without the need for manual tuning by engineers</p>
+                            <h3 className="font-bold text-l mb-3 text-left">Performance Cookbook</h3>
+                            <p className="text-gray-600 text-l text-left">Image servers, configure BIOS, manage driver versions, and more—all streamlined through our platform. Use our Performance Cookbook to unlock peak performance without the need for manual tuning by engineers</p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-left">
                             <Image src="/platform/visualization.svg" alt="Visualization" width={36} height={36} className="mb-4 svg-gray" />
-                            <h3 className="font-bold text-l mb-3">Visualization</h3>
-                            <p className="text-gray-600 text-l">Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
+                            <h3 className="font-bold text-l mb-3 text-left">Visualization</h3>
+                            <p className="text-gray-600 text-l text-left">Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center">
+                        <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-left">
                             <Image src="/platform/failures.svg" alt="Detecting Failures" width={36} height={36} className="mb-4 svg-gray" />
-                            <h3 className="font-bold text-l mb-3">Detecting Failures</h3>
-                            <p className="text-gray-600 text-l">Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime</p>
+                            <h3 className="font-bold text-l mb-3 text-left">Detecting Failures</h3>
+                            <p className="text-gray-600 text-l text-left">Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry leading performance and uptime</p>
                         </div>
                     </div>
                 </div>
@@ -131,26 +131,26 @@ export default function PlatformPage() {
 
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
-                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/manage.svg" alt="Manage Instances" width={36} height={36} className="mb-4 mx-auto svg-gray" />
+                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-left">
+                            <Image src="/platform/manage.svg" alt="Manage Instances" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Manage Instances</h3>
                             <p className="text-gray-600 text-l">Launch, delete or take snapshots of your GPU instances using our GPU cloud platform</p>
                         </div>
 
-                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/storage.svg" alt="Attached Storage" width={36} height={36} className="mb-4 mx-auto svg-gray" />
+                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-left flex flex-col items-left">
+                            <Image src="/platform/storage.svg" alt="Attached Storage" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Attached Storage</h3>
                             <p className="text-gray-600 text-l">Attached or unmount Block Volumes storage, Shared File System storage and object storage all in the GPU cloud platform</p>
                         </div>
 
-                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/security.svg" alt="Security Group" width={36} height={36} className="mb-4 mx-auto svg-gray" />
+                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-left">
+                            <Image src="/platform/security.svg" alt="Security Group" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Set security group</h3>
                             <p className="text-gray-600 text-l">Generate, add, delete or change your SSH or API keys. Set different security groups and how to work with your team</p>
                         </div>
 
-                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-center">
-                            <Image src="/platform/billing.svg" alt="Access to Billings" width={36} height={36} className="mb-4 mx-auto svg-gray" />
+                        <div className="border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 text-left">
+                            <Image src="/platform/billing.svg" alt="Access to Billings" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3">Access to billings</h3>
                             <p className="text-gray-600 text-l">View and pay your bills all in the one place</p>
                         </div>

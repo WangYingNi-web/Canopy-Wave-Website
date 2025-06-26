@@ -193,8 +193,8 @@ export default function NetworkingServices() {
                             Create virtual, accelerated networks to manage your cloud resources on CanopyWave—powered by NVIDIA BlueField-3 DPUs. Securely and efficiently connect compute, storage, and everything else for GenAI
                         </p>
                     </SlideUp>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-left transition-all duration-300 cursor-pointer">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-left transition-all duration-300 cursor-pointer">
                             <div className="flex justify-start mb-6">
                                 <Image
                                     src="/compute/fast.svg"
@@ -210,8 +210,8 @@ export default function NetworkingServices() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
-                            <div className="flex justify-center mb-6">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-left transition-all duration-300 cursor-pointer">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/icon/high.svg"
                                     alt="Workloads"
@@ -226,8 +226,8 @@ export default function NetworkingServices() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
-                            <div className="flex justify-center mb-6">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-left transition-all duration-300 cursor-pointer">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/networking/scalability.svg"
                                     alt="Scalability"
@@ -242,8 +242,8 @@ export default function NetworkingServices() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-center transition-all duration-300 cursor-pointer">
-                            <div className="flex justify-center mb-6">
+                        <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg text-left transition-all duration-300 cursor-pointer">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/compute/model.svg"
                                     alt="Advanced Congestion Control"
@@ -263,12 +263,12 @@ export default function NetworkingServices() {
 
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24 overflow-hidden">
                 <BackgroundTransition
-            defaultImage="/contact-section1.webp"  // 暗色版本
-            activeImage="/contact-section2.webp"   // 亮色版本
-            className="w-full h-full"
-            fadeDuration={4000}  // 4秒的点亮过程
-            threshold={0.7}  // 当70%进入视口时触发
-          />
+                    defaultImage="/contact-section1.webp"  // 暗色版本
+                    activeImage="/contact-section2.webp"   // 亮色版本
+                    className="w-full h-full"
+                    fadeDuration={4000}  // 4秒的点亮过程
+                    threshold={0.7}  // 当70%进入视口时触发
+                />
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <SlideUp>

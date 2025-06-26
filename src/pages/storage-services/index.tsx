@@ -24,7 +24,7 @@ export default function StorageServices() {
       <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/storage/banner.svg"
-          alt="banner" 
+          alt="banner"
           fill
           className="object-cover"
           priority
@@ -232,14 +232,16 @@ export default function StorageServices() {
       <div id='shared-storage' className="bg-[#F5F7F4] sm:py-20 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
+          <SlideUp>
             <div className="relative min-h-[200px] h-[300px] sm:h-[350px] md:h-[380px] rounded-lg overflow-hidden">
-              <Image
-                src="/storage/circuit-board.svg"
-                alt="Circuit Board"
-                fill
-                className="object-contain sm:object-cover"
-              />
+                <Image
+                  src="/storage/circuit-board.svg"
+                  alt="Circuit Board"
+                  fill
+                  className="object-contain sm:object-cover"
+                />
             </div>
+            </SlideUp>
             <div>
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Shared Storage</h2>

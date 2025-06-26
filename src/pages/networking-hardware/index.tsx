@@ -182,7 +182,7 @@ export default function NetworkingHardwarePage() {
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 text-l mb-8">
-                            Our virtual machines are engineered to match the performance of physical hardware. We use GPU-accelerated instances and optimize our virtualization stack to ensure your rendering jobs run as fast and efficiently as possible—without the overhead that typically comes with virtualization
+                            Our virtual machines are engineered to match the performance of physical hardware. <br /> We use GPU-accelerated instances and optimize our virtualization stack to ensure  <br />  your rendering jobs run as fast and efficiently as possible—without the overhead  <br />  that typically comes with virtualization
                         </p>
                     </SlideUp>
                     <SlideUp>

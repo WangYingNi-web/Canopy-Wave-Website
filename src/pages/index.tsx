@@ -42,11 +42,11 @@ export default function Index() {
       </Head>
       <Header />
       <div className="w-full text-gray-600">
-        {/* <GlassmorphismBanner /> */}
+        {/* <GlassmorphismBanner />  */}
         {/* Hero Section */}
         <div className="w-full h-[490px] relative mt-[84px]">
           <Image
-            src="/1882341088.svg"
+            src="/home_banner.svg"
             alt="Home_Banner"
             fill
             className="object-cover"

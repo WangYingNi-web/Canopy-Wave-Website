@@ -60,7 +60,7 @@ export default function SolutionsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Local Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/cloud/experts.svg"
                                     alt="Experts"
@@ -69,15 +69,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-black text-l mb-4 text-center">The World’s Best Infrastructure Experts</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-black text-l mb-4 text-left">The World’s Best Infrastructure Experts</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 At Canopy Wave, you’re not just getting a service—you’re partnering with a team of elite infrastructure professionals who have built and scaled some of the largest AI data centers in the world. We bring deep experience, precision, and efficiency to every deployment
                             </p>
                         </div>
 
                         {/* Shared Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/icon/high.svg"
                                     alt="High"
@@ -86,15 +86,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-black text-l mb-4 text-center">Unmatched Deployment Speed</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-black text-l mb-4 text-left">Unmatched Deployment Speed</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 Need to scale fast? We specialize in turning white space into a production-ready AI cluster in as little as two weeks. Our team has the proven ability to deploy clusters with over 2,000 GPUs in record time—so your AI workloads don't wait
                             </p>
                         </div>
 
                         {/* Object Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/cloud/software.svg"
                                     alt="Software"
@@ -103,8 +103,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-black text-l mb-4 text-center">End-to-End Software Stack Ready to Run</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-black text-l mb-4 text-left">End-to-End Software Stack Ready to Run</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 We provide a fully integrated software stack optimized for AI training and inference. When we hand over the cluster, it's not just powered on—it's production-ready. No configuration delays. No extra setup. Just log in and start scaling your AI workloads
                             </p>
                         </div>

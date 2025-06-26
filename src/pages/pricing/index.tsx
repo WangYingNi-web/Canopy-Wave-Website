@@ -237,11 +237,11 @@ export default function PricingPage() {
                                         <tbody>
                                             <tr className="border-b">
                                                 <td className="py-4">Network Shared Storage</td>
-                                                <td className="py-4">$ 0.07 per GB per month</td>
+                                                <td className="py-4 font-bold">$ 0.07 per GB per month</td>
                                             </tr>
                                             <tr className="border-b">
                                                 <td className="py-4">Object Storage</td>
-                                                <td className="py-4">$ 0.04 per GB per month</td>
+                                                <td className="py-4 font-bold">$ 0.04 per GB per month</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -274,7 +274,7 @@ export default function PricingPage() {
                                         <tbody>
                                             <tr className="border-b">
                                                 <td className="py-4">Additional public IP address</td>
-                                                <td className="py-4">$ 4.00 per IP per month</td>
+                                                <td className="py-4 font-bold">$ 4.00 per IP per month</td>
                                             </tr>
                                         </tbody>
                                     </table>

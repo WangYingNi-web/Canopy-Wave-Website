@@ -149,7 +149,7 @@ export default function SolutionsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Local Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/rendering/performance.svg"
                                     alt="Local Storage"
@@ -158,15 +158,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Local Storage</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Local Storage</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 For ultra-low-latency access
                             </p>
                         </div>
 
                         {/* Shared Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/rendering/low-latency.svg"
                                     alt="Shared Storage"
@@ -175,15 +175,15 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Shared Storage</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Shared Storage</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 For collaborative workloads
                             </p>
                         </div>
 
                         {/* Object Storage */}
                         <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
-                            <div className="flex justify-center mb-6">
+                            <div className="flex justify-start mb-6">
                                 <Image
                                     src="/rendering/gpus.svg"
                                     alt="Object Storage"
@@ -192,8 +192,8 @@ export default function SolutionsPage() {
                                     className='svg-gray'
                                 />
                             </div>
-                            <h3 className="font-bold text-l mb-4 text-center">Object Storage</h3>
-                            <p className="text-gray-600 text-center text-l">
+                            <h3 className="font-bold text-l mb-4 text-left">Object Storage</h3>
+                            <p className="text-gray-600 text-left text-l">
                                 for scalable and cost-efficient data management
                             </p>
                         </div>
