@@ -40,12 +40,12 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
     reply,
     body
 }) => (
-    <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
+    <div className="border border-gray-200 p-4 sm:p-8 rounded-lg hover:shadow-lg transition-all duration-300 mt-4">
         <div className="text-gray-600">
             <strong className="text-l">{title}</strong>
-            <div className="mt-2">
+            <div className="mt-2 flex flex-wrap items-center gap-2">
                 <span className="font-semibold">{method}</span>{' '}
-                <code className="bg-gray-100 px-2 py-1 rounded">{endpoint}</code>
+                <code className="bg-gray-100 px-2 py-1 rounded break-all">{endpoint}</code>
             </div>
             {description && <p className="mt-2">{description}</p>}
 
@@ -57,7 +57,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                             <div>Required:</div>
                             <ul className="list-disc list-inside pl-4">
                                 {query.required.map((param, index) => (
-                                    <li key={index}>{param}</li>
+                                    <li key={index} className="break-words">{param}</li>
                                 ))}
                             </ul>
                         </div>
@@ -67,7 +67,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                             <div>Optional:</div>
                             <ul className="list-disc list-inside pl-4">
                                 {query.optional.map((param, index) => (
-                                    <li key={index}>{param}</li>
+                                    <li key={index} className="break-words">{param}</li>
                                 ))}
                             </ul>
                         </div>
@@ -83,15 +83,13 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 
             {body && (
                 <div className="mt-4">
-
-
                     <div className='mt-4'>{method === 'POST' && <strong>Body</strong>}</div>
                     {body.required && (
                         <div className="mt-2">
                             <div>Required:</div>
                             <ul className="list-disc list-inside pl-4">
                                 {body.required.map((field, index) => (
-                                    <li key={index}>
+                                    <li key={index} className="break-words">
                                         <strong>{field.name}</strong>: {field.description}
                                     </li>
                                 ))}
@@ -99,7 +97,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                         </div>
                     )}
                     {body.example && (
-                        <pre className="bg-gray-100 p-4 rounded-lg mt-2 overflow-x-auto">
+                        <pre className="bg-gray-100 p-4 rounded-lg mt-2 overflow-x-auto text-sm max-w-full">
                             <code suppressHydrationWarning>{body.example}</code>
                         </pre>
                     )}
@@ -109,7 +107,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                             <div>Optional:</div>
                             <ul className="list-disc list-inside pl-4">
                                 {body.optional.map((field, index) => (
-                                    <li key={index}>
+                                    <li key={index} className="break-words">
                                         <strong>{field.name}</strong>: {field.description}
                                     </li>
                                 ))}
@@ -117,7 +115,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                         </div>
                     )}
                     {body.optionalExample && (
-                        <pre className="bg-gray-100 p-4 rounded-lg mt-2 overflow-x-auto">
+                        <pre className="bg-gray-100 p-4 rounded-lg mt-2 overflow-x-auto text-sm max-w-full">
                             <code suppressHydrationWarning>{body.optionalExample}</code>
                         </pre>
                     )}
@@ -127,13 +125,12 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
                         </div>
                     </div>}
                     {body.requiredExample && method.toUpperCase() === 'POST' && (
-                        <pre className="bg-gray-100 p-4 rounded-lg mt-2 overflow-x-auto">
+                        <pre className="bg-gray-100 p-4 rounded-lg mt-2 overflow-x-auto text-sm max-w-full">
                             <code suppressHydrationWarning>{body.requiredExample}</code>
                         </pre>
                     )}
                 </div>
             )}
-
         </div>
     </div>
 );
@@ -458,7 +455,7 @@ export default function PlatformPage() {
                 }, null, 2)
             },
             reply: "Returns the id of the new instance",
-      
+
         },
         {
             title: "Restart Instance",
@@ -498,7 +495,7 @@ export default function PlatformPage() {
                     project: "your-project",
                     id: "your-instance-id"
                 }, null, 2),
-      
+
                 requiredExample: JSON.stringify({
                     "project": "cynthia@canopywave.com",
                     "region": "sequoia",
@@ -822,7 +819,7 @@ export default function PlatformPage() {
             },
             reply: "Return a list of billing info"
         }
-      ];
+    ];
 
     const navigationItems = [
         { id: 'introduction', label: 'Introduction' },
@@ -839,11 +836,11 @@ export default function PlatformPage() {
             const headerHeight = 84; // Header的高度
             const extraOffset = 25; // 额外的偏移量
             const totalOffset = headerHeight + extraOffset;
-            
+
             // 获取元素位置
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - totalOffset;
-            
+
             // 平滑滚动到计算后的位置
             window.scrollTo({
                 top: offsetPosition,
@@ -858,7 +855,7 @@ export default function PlatformPage() {
                 <title>Canopy Wave - API Documentation</title>
             </Head>
             <Header />
-            
+
             {/* Hero Section */}
             <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
@@ -881,22 +878,21 @@ export default function PlatformPage() {
 
             {/* Main Content Area */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 mb-24">
-                <div className="flex gap-8">
-                    {/* Left Sidebar Navigation */}
-                    <div className="w-64 flex-shrink-0">
-                        <div className="sticky top-24">
+                <div className="flex flex-col lg:flex-row gap-8">
+                    {/* Left Sidebar Navigation - 在小屏幕上显示为水平导航 */}
+                    <div className="lg:w-64 lg:flex-shrink-0 mb-8 lg:mb-0">
+                        <div className="lg:sticky lg:top-24">
                             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Articles in this section</h3>
-                                <nav className="space-y-2">
+                                <nav className="flex flex-wrap lg:flex-col gap-2">
                                     {navigationItems.map((item) => (
                                         <button
                                             key={item.id}
                                             onClick={() => scrollToSection(item.id)}
-                                            className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                                                activeSection === item.id
+                                            className={`text-left px-3 py-2 rounded-md text-sm transition-colors ${activeSection === item.id
                                                     ? 'bg-green-50 text-[#80B224] font-medium'
                                                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                                            }`}
+                                                }`}
                                         >
                                             {item.label}
                                         </button>
@@ -908,14 +904,14 @@ export default function PlatformPage() {
 
                     {/* Right Content Area */}
                     <div className="flex-1 min-w-0">
-                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
                             <h1 className="text-3xl sm:text-4xl font-black mb-8">API Documentation</h1>
-                            
+
                             {/* Introduction Section */}
                             <section id="introduction" className="mb-12">
                                 <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                                 <p className="text-gray-600 text-lg leading-relaxed">
-                                    Canopy Wave supports a set of REST API to enable servers to develop management clients or to 
+                                    Canopy Wave supports a set of REST API to enable servers to develop management clients or to
                                     integrate VMS functionality into users' own custom management infrastructure.
                                 </p>
                             </section>
@@ -963,7 +959,7 @@ export default function PlatformPage() {
                                     </pre>
 
                                     <p className="text-gray-600 mt-6 mb-4">
-                                        If the API call is invalid, an error Reply will be returned. For example, a 401 Unauthorized error 
+                                        If the API call is invalid, an error Reply will be returned. For example, a 401 Unauthorized error
                                         indicates that the request was not authorized:
                                     </p>
                                     <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
