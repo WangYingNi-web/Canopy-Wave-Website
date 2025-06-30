@@ -216,8 +216,8 @@ export default function SolutionsPage() {
                         <SlideUp>
                             <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>No matter your model size or dataset complexity,we have the storage solution</span>
-                                <span>to keep inference smooth and responsive</span>
+                                <span className="block sm:hidden">No matter your model size or dataset complexity,we have the storage solution to keep inference smooth and responsive</span>
+                                <span className="hidden sm:block">No matter your model size or dataset complexity,we have the storage solution <br /> to keep inference smooth and responsive</span>
                             </div>
                         </SlideUp>
                         <SlideUp>

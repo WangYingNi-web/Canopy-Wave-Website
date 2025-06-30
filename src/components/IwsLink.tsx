@@ -22,7 +22,7 @@ function IwsLink(props: Props) {
       onClick(e);
     }
     const isExternalLink = /^https?:\/\//.test(href); // 判断是否是外部链接
-
+  
     if (isExternalLink) {
       // 外部链接直接打开
       window.open(href, target || '_blank', `noopener,noreferrer`);
@@ -32,8 +32,23 @@ function IwsLink(props: Props) {
       const currentHash = router.asPath.split('#')[1] || '';
       const targetPath = href.split('#')[0];
       const targetHash = href.split('#')[1] || '';
-
-      if (currentPath === targetPath && currentHash === targetHash) {
+  
+      // 特殊处理pricing页面的#other锚点链接
+      if (currentPath === '/pricing' && targetPath === '/pricing' && targetHash === 'other') {
+        // 只滚动到锚点位置，不刷新页面
+        const element = document.getElementById('other');
+        if (element) {
+          const headerOffset = 60; // 头部导航的高度
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      } else if (currentPath === targetPath && currentHash === targetHash) {
+        // 其他情况保持原有逻辑
         window.scrollTo(0, 0);
         router.reload();
       } else {

@@ -5,10 +5,12 @@ import Image from 'next/image';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import SlideUp from '@/components/slide';
+import { useScrollToHash } from '@/hooks/useScrollToHash';
 import BackgroundTransition from '@/components/BackgroundTransition';
 import { Button } from "@/components/ui/button";
 
 export default function PricingPage() {
+    useScrollToHash();
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-600">
             <Head>
@@ -18,22 +20,6 @@ export default function PricingPage() {
             <Header />
 
             {/* Hero Section */}
-            {/* <div className="text-center py-16 pt-40 px-4">
-                <SlideUp>
-                    <h1 className="text-4xl sm:text-5xl font-black mb-4">Compute</h1>
-                    <p className="text-gray-600 mb-8">
-                        Get models to market faster with the latest and greatest NVIDIA chips
-                    </p>
-                </SlideUp>
-                <SlideUp>
-                    <button
-                        onClick={() => window.open('https://cloud.canopywave.io/', '_blank')}
-                        className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-sm"
-                    >
-                        Try Control Panel
-                    </button>
-                </SlideUp>
-            </div> */}
             <div className="w-full h-[490px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
@@ -83,7 +69,7 @@ export default function PricingPage() {
             {/* Pricing Tables Container */}
             <div className="max-w-7xl mx-auto px-4 space-y-12 mb-16">
                 {/* NVIDIA HGX H100 */}
-                <div id='H100' className="mb-16 scroll-mt-24">
+                <div id='H100' className="mb-16">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
@@ -140,7 +126,7 @@ export default function PricingPage() {
                 </div>
 
                 {/* NVIDIA HGX H200 */}
-                <div id='H200' className="mb-16 scroll-mt-24">
+                <div id='H200' className="mb-16">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
@@ -197,7 +183,7 @@ export default function PricingPage() {
                 </div>
 
                 {/* Other Charges Section */}
-                <div id='other' className="text-center py-16 mb-16 scroll-mt-24">
+                <div id='other' className="text-center py-16 mb-16">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-black mb-4">Other charges</h2>
                         <p className="text-gray-600 mb-8 px-4">

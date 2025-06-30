@@ -399,8 +399,8 @@ export default function IcelandDataCenter() {
                             </SlideUp>
                             <SlideUp>
                                 <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                    <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                    <span>or contact us to reserve a long term contract</span>
+                                    <span className="block sm:hidden">Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract</span>
+                                    <span className="hidden sm:block">Create your Canopy Wave cloud account to launch GPU clusters immediately <br /> or contact us to reserve a long term contract</span>
                                 </div>
                             </SlideUp>
                             <SlideUp>

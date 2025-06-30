@@ -164,10 +164,12 @@ export default function SolutionsPage() {
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <SlideUp>
-                            <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
+                        </SlideUp>
+                        <SlideUp>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                <span>or contact us to reserve a long term contract</span>
+                                <span className="block sm:hidden">Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract</span>
+                                <span className="hidden sm:block">Create your Canopy Wave cloud account to launch GPU clusters immediately <br /> or contact us to reserve a long term contract</span>
                             </div>
                         </SlideUp>
                         <SlideUp>

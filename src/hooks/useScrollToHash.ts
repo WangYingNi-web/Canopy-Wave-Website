@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { log } from 'console';
 
 export const useScrollToHash = () => {
   const router = useRouter();
@@ -11,7 +12,11 @@ export const useScrollToHash = () => {
         setTimeout(() => {
           const element = document.querySelector(hash);
           if (element) {
-            const headerOffset = 60; // 头部导航的高度
+            let headerOffset = 50; // 默认头部导航的高度
+
+            if (hash === '#H100' || hash === '#H200') {
+              headerOffset = 100;
+            }
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

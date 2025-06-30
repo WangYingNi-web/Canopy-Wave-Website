@@ -232,15 +232,15 @@ export default function StorageServices() {
       <div id='shared-storage' className="bg-[#F5F7F4] sm:py-20 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-8">
-          <SlideUp>
-            <div className="relative min-h-[200px] h-[300px] sm:h-[350px] md:h-[380px] rounded-lg overflow-hidden">
+            <SlideUp>
+              <div className="relative min-h-[200px] h-[300px] sm:h-[350px] md:h-[380px] rounded-lg overflow-hidden">
                 <Image
                   src="/storage/circuit-board.svg"
                   alt="Circuit Board"
                   fill
                   className="object-contain sm:object-cover"
                 />
-            </div>
+              </div>
             </SlideUp>
             <div>
               <SlideUp>
@@ -386,12 +386,13 @@ export default function StorageServices() {
         <div className="relative z-30 container mx-auto px-4">
           <div className="relative max-w-7xl mx-auto">
             <SlideUp>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
+              <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
+            </SlideUp>
+            <SlideUp>
               <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                <span>or contact us to reserve a long term contract</span>
+                <span className="block sm:hidden">Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract</span>
+                <span className="hidden sm:block">Create your Canopy Wave cloud account to launch GPU clusters immediately <br /> or contact us to reserve a long term contract</span>
               </div>
-
             </SlideUp>
             <SlideUp>
               <div className="flex flex-col sm:flex-row gap-4">

@@ -190,8 +190,8 @@ export default function Careers() {
                         </SlideUp>
                         <SlideUp>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Ready to shape the future? Join Canopy Wave and help drive the future of technology</span>
-                                <span>with a team redefining what's possible</span>
+                                <span className="block sm:hidden">Ready to shape the future? Join Canopy Wave and help drive the future of technology with a team redefining what's possible</span>
+                                <span className="hidden sm:block">Ready to shape the future? Join Canopy Wave and help drive the future of technology <br /> with a team redefining what's possible</span>
                             </div>
                         </SlideUp>
                         <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">

@@ -405,19 +405,19 @@ export default function NetworkingHardwarePage() {
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
                 <BackgroundTransition
-            defaultImage="/contact-section1.webp"  // 暗色版本
-            activeImage="/contact-section2.webp"   // 亮色版本
-            className="w-full h-full"
-            fadeDuration={4000}  // 4秒的点亮过程
-            threshold={0.7}  // 当70%进入视口时触发
-          />
+                    defaultImage="/contact-section1.webp"  // 暗色版本
+                    activeImage="/contact-section2.webp"   // 亮色版本
+                    className="w-full h-full"
+                    fadeDuration={4000}  // 4秒的点亮过程
+                    threshold={0.7}  // 当70%进入视口时触发
+                />
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <SlideUp>
                             <h2 className="text-3xl sm:text-4xl font-black mb-6">Ready to get started?</h2>
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Whether you're building a new AI cluster or expanding your existing infrastructure, </span>
-                                <span>Canopy Wave helps you get the right gear at the right price—without compromising performance</span>
+                                <span className="block sm:hidden">Whether you're building a new AI cluster or expanding your existing infrastructure, Canopy Wave helps you get the right gear at the right price—without compromising performance</span>
+                                <span className="hidden sm:block">Whether you're building a new AI cluster or expanding your existing infrastructure, <br /> Canopy Wave helps you get the right gear at the right price—without compromising performance</span>
                             </div>
                         </SlideUp>
                         <SlideUp>

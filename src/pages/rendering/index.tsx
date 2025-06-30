@@ -342,22 +342,22 @@ export default function SolutionsPage() {
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-24 overflow-hidden">
                 <BackgroundTransition
-            defaultImage="/contact-section1.webp"  // 暗色版本
-            activeImage="/contact-section2.webp"   // 亮色版本
-            className="w-full h-full"
-            fadeDuration={4000}  // 4秒的点亮过程
-            threshold={0.7}  // 当70%进入视口时触发
-          />
+                    defaultImage="/contact-section1.webp"  // 暗色版本
+                    activeImage="/contact-section2.webp"   // 亮色版本
+                    className="w-full h-full"
+                    fadeDuration={4000}  // 4秒的点亮过程
+                    threshold={0.7}  // 当70%进入视口时触发
+                />
                 <div className="relative z-30 container mx-auto px-4">
                     <div className="relative max-w-7xl mx-auto">
                         <SlideUp>
                             <h2 className="text-3xl sm:text-4xl font-black mb-6">Scalable Infrastructure for <br /> Projects of Any Size</h2>
-                            <p className="text-gray-600 mb-8 mx-auto text-l">
-                                Our VM-based infrastructure scales horizontally and vertically, <br /> supporting as many rendering nodes as your project requires—without the headache of managing hardware
+                            <p className="block sm:hidden">Our VM-based infrastructure scales horizontally and vertically,supporting as many rendering nodes as your project requires—without the headache of managing hardware</p>
+                            <p className="hidden sm:block">Our VM-based infrastructure scales horizontally and vertically, <br /> supporting as many rendering nodes as your project requires—without the headache of managing hardware
                             </p>
                         </SlideUp>
                         <SlideUp>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4 mt-6">
                                 <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                     Try Control Panel
                                 </Button>

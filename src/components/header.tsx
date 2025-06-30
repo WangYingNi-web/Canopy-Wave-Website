@@ -53,12 +53,6 @@ export default function Header() {
     setShowMobileSubMenu(null);
   };
 
-  // const reloadClick = () => {
-  //   router.push('/').then(() => {
-  //     router.reload();
-  //   });
-  // };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -526,16 +520,30 @@ export default function Header() {
               aria-controls="mobile-menu"
               onClick={() => setIsOpen(!isOpen)}
             >
+              
               <span className="sr-only">Open main menu</span>
-              {/* Heroicon name: menu */}
-              <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              {/* 根据菜单状态显示不同的图标 */}
+              {isOpen ? (
+                // X形状图标 - 当菜单打开时显示
+                <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              ) : (
+                // 三条横线图标 - 当菜单关闭时显示
+                <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -652,7 +660,8 @@ export default function Header() {
                     </svg>
                   </IwsLink>
                   <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/networking-hardware" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
+                    <li><IwsLink href="/networking-services#infiniband-networking" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>InfiniBand Networking</IwsLink></li>
+                    <li><IwsLink href="/networking-services#private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>RoCEv2 Networking</IwsLink></li>
                   </ul>
                 </li>
                 <li>
@@ -677,7 +686,8 @@ export default function Header() {
                     </svg>
                   </IwsLink>
                   <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/networking-hardware" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
+                    <li><IwsLink href="/platform#dcim-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Canopy DCIM Platform</IwsLink></li>
+                    <li><IwsLink href="/platform#cloud-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Wave GPU cloud platform</IwsLink></li>
                   </ul>
                 </li>
                 
@@ -737,9 +747,6 @@ export default function Header() {
               </svg>
             </button>
             {showMobilePricing && (
-
-
-
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
                 <li>
                   <div>

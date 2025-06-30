@@ -37,7 +37,10 @@ export default function ComputeServicesPage() {
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-l mt-8">
+                            <p className="text-gray-600 text-l mt-8 block sm:hidden">
+                                Canopy Wave uses Virtualization technology to provide world leading performance GPU for AI training & inference
+                            </p>
+                            <p className="text-gray-600 text-l mt-8 hidden sm:block">
                                 Canopy Wave uses Virtualization technology to provide world leading <br /> performance GPU for AI training & inference
                             </p>
                         </SlideUp>
@@ -627,10 +630,9 @@ export default function ComputeServicesPage() {
                             <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
                         </SlideUp>
                         <SlideUp>
-                            {/* 使用 flex 布局替代 br 换行 */}
                             <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span>Create your Canopy Wave cloud account to launch GPU clusters immediately</span>
-                                <span>or contact us to reserve a long term contract</span>
+                                <span className="block sm:hidden">Create your Canopy Wave cloud account to launch GPU clusters immediately or contact us to reserve a long term contract</span>
+                                <span className="hidden sm:block">Create your Canopy Wave cloud account to launch GPU clusters immediately <br /> or contact us to reserve a long term contract</span>
                             </div>
                         </SlideUp>
                         <SlideUp>
