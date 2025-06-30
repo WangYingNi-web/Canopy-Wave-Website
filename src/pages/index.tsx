@@ -162,7 +162,10 @@ export default function Index() {
         <div className="bg-[#F9F9F9] sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
-              <h2 className="text-3xl sm:text-4xl font-black mb-12 text-left">
+              <h2 className="block sm:hidden text-3xl sm:text-4xl font-black mb-12 text-left">
+                Latest Canopy Wave Blog/Events: Insights and Updates from Our Team
+              </h2>
+              <h2 className="hidden sm:block text-3xl sm:text-4xl font-black mb-12 text-left">
                 Latest Canopy Wave Blog/Events: Insights and Updates <br /> from Our Team
               </h2>
             </SlideUp>
