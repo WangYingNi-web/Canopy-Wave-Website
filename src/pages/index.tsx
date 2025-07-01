@@ -64,9 +64,25 @@ export default function Index() {
             </div>
           </div>
         </div> */}
-        <Spline
-          scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
-        />
+        <div style={{
+          position: 'relative',
+          overflow: 'hidden',
+          height: '700px'
+        }}>
+          <Spline
+            scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
+          />
+          {/* 添加覆盖层隐藏徽标 */}
+          <div style={{
+            position: 'absolute',
+            bottom: 15,
+            right: 10,
+            width: '190px',  // 覆盖区域宽度
+            height: '50px',  // 覆盖区域高度
+            backgroundColor: '#F5F9F4', // 背景色需匹配你的场景
+            zIndex: 10
+          }} />
+        </div>
 
         {/* Features Section */}
         <div className="bg-[#F9F9F9] py-12 sm:py-16">
