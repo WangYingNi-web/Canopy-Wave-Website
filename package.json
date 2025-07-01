@@ -1,5 +1,9 @@
 {
   "name": "i-website",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
   "version": "1.0.0",
   "description": "基于Next.js构建企业网站",
   "main": "index.js",
@@ -19,6 +23,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
     "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.10.17",
     "@types/node": "^17.0.14",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
@@ -27,6 +32,7 @@
     "axios": "^1.9.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel": "8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.10.1",
