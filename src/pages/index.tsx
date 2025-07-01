@@ -12,6 +12,7 @@ import { useInView } from 'react-intersection-observer';
 import EuropeMap from '@/components/EuropeMap'
 import BackgroundTransition from '@/components/BackgroundTransition';
 import GlassmorphismBanner from "@/components/GlassmorphismBanner";
+import Spline from '@splinetool/react-spline';
 
 export default function Index() {
   const partnerLogos = [
@@ -33,7 +34,7 @@ export default function Index() {
     threshold: 0.9,
     triggerOnce: true // 只触发一次
   });
-  
+
   return (
     <main>
       <Head>
@@ -44,7 +45,7 @@ export default function Index() {
       <div className="w-full text-gray-600">
         {/* <GlassmorphismBanner />  */}
         {/* Hero Section */}
-        <div className="w-full h-[490px] relative mt-[84px]">
+        {/* <div className="w-full h-[490px] relative mt-[84px]">
           <Image
             src="/home_banner.svg"
             alt="Home_Banner"
@@ -62,7 +63,10 @@ export default function Index() {
 
             </div>
           </div>
-        </div>
+        </div> */}
+        <Spline
+          scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
+        />
 
         {/* Features Section */}
         <div className="bg-[#F9F9F9] py-12 sm:py-16">
@@ -208,8 +212,8 @@ export default function Index() {
                   </div>
                   <div className="p-6">
                     <h4 className="text-l font-semibold mb-3">
-                    Canopy Wave and ConfidentialMind Join Forces to
-                    Accelerate Enterprise AI Adoption
+                      Canopy Wave and ConfidentialMind Join Forces to
+                      Accelerate Enterprise AI Adoption
                     </h4>
                     <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
                     <div className="flex items-center gap-4">

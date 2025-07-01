@@ -211,6 +211,24 @@
   resolved "https://registry.npmmirror.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
 
+"@splinetool/react-spline@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@splinetool/react-spline/-/react-spline-4.0.0.tgz"
+  integrity sha512-FqrV7/K2q998Y0t83QUauQxsifKWAg9CFZoSb64qRuH7IfHkDs5/OgU1ACkg0aTgsEPtFlH+kATQ+8X6MrizHQ==
+  dependencies:
+    blurhash "2.0.5"
+    lodash.debounce "4.0.8"
+    react-merge-refs "2.1.1"
+    thumbhash "0.1.1"
+
+"@splinetool/runtime@*":
+  version "1.10.17"
+  resolved "https://registry.npmjs.org/@splinetool/runtime/-/runtime-1.10.17.tgz"
+  integrity sha512-6oGKGGP3JBum8U6TWUEc0ncNYTu9b1kG3uvQNIo2Z0+o66ZLevmQjy1+TTDPhFn8Lvj2WwLMcYG0Q/Z/+xdw0Q==
+  dependencies:
+    on-change "^4.0.0"
+    semver-compare "^1.0.0"
+
 "@swc/counter@0.1.3":
   version "0.1.3"
   resolved "https://registry.npmmirror.com/@swc/counter/-/counter-0.1.3.tgz"
@@ -559,6 +577,11 @@ binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmmirror.com/binary-extensions/-/binary-extensions-2.2.0.tgz"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
+
+blurhash@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/blurhash/-/blurhash-2.0.5.tgz"
+  integrity sha512-cRygWd7kGBQO3VEhPiTgq4Wc43ctsM+o46urrmPOiuAe+07fzlSB9OJVdpgDL0jPqXUVQ9ht7aq7kxOeJHRK+w==
 
 bplist-parser@^0.2.0:
   version "0.2.0"
@@ -2070,6 +2093,11 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
+lodash.debounce@4.0.8:
+  version "4.0.8"
+  resolved "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
+  integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
+
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmmirror.com/lodash.merge/-/lodash.merge-4.6.2.tgz"
@@ -2218,7 +2246,7 @@ next-themes@^0.2.1:
   resolved "https://registry.npmmirror.com/next-themes/-/next-themes-0.2.1.tgz"
   integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
 
-next@*, next@^15.3.3:
+next@*, next@^15.3.3, next@>=14.2.0:
   version "15.3.3"
   resolved "https://registry.npmmirror.com/next/-/next-15.3.3.tgz"
   integrity sha512-JqNj29hHNmCLtNvd090SyRbXJiivQ+58XjCcrC50Crb5g5u2zi7Y2YivbsEfzk6AtVI80akdOQbaMZwWB1Hthw==
@@ -2381,6 +2409,11 @@ oblivious-set@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/oblivious-set/-/oblivious-set-1.0.0.tgz"
   integrity sha512-z+pI07qxo4c2CulUHCDf9lcqDlMSo72N/4rLUpRXf6fu+q8vjt8y0xS+Tlf8NTJDdTXHbdeO1n3MlbctwEoXZw==
+
+on-change@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/on-change/-/on-change-4.0.2.tgz"
+  integrity sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==
 
 once@^1.3.0:
   version "1.4.0"
@@ -2736,6 +2769,11 @@ react-is@^16.13.1:
   resolved "https://registry.npmmirror.com/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-merge-refs@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/react-merge-refs/-/react-merge-refs-2.1.1.tgz"
+  integrity sha512-jLQXJ/URln51zskhgppGJ2ub7b2WFKGq3cl3NYKtlHoTG+dN2q7EzWrn3hN3EgPsTMvpR9tpq5ijdp7YwFZkag==
+
 react-query@^3.22.0:
   version "3.39.3"
   resolved "https://registry.npmmirror.com/react-query/-/react-query-3.39.3.tgz"
@@ -2857,6 +2895,11 @@ scheduler@^0.23.0:
   integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
   dependencies:
     loose-envify "^1.1.0"
+
+semver-compare@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/semver-compare/-/semver-compare-1.0.0.tgz"
+  integrity sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==
 
 semver@^6.3.0:
   version "6.3.1"
@@ -3183,6 +3226,11 @@ thenify-all@^1.0.0:
   integrity sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==
   dependencies:
     any-promise "^1.0.0"
+
+thumbhash@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/thumbhash/-/thumbhash-0.1.1.tgz"
+  integrity sha512-kH5pKeIIBPQXAOni2AiY/Cu/NKdkFREdpH+TLdM0g6WA7RriCv0kPLgP731ady67MhTAqrVG/4mnEeibVuCJcg==
 
 titleize@^3.0.0:
   version "3.0.0"
