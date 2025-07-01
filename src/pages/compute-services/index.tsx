@@ -55,7 +55,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={570} height={400} />
+                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={570} height={400} style={{ width: '95%', height: 'auto' }} />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">

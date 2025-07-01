@@ -14,6 +14,8 @@ import BackgroundTransition from '@/components/BackgroundTransition';
 import GlassmorphismBanner from "@/components/GlassmorphismBanner";
 import Spline from '@splinetool/react-spline';
 
+
+
 export default function Index() {
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
@@ -39,7 +41,8 @@ export default function Index() {
     <main>
       <Head>
         <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
-        <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" />
+        {/* <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" /> */}
+        <link rel="preload" href="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode" as="fetch" crossOrigin="anonymous"></link>
       </Head>
       <Header />
       <div className="w-full text-gray-600">
@@ -67,7 +70,8 @@ export default function Index() {
         <div style={{
           position: 'relative',
           overflow: 'hidden',
-          height: '700px'
+          height: '600px',
+          backgroundColor: '#F5F9F4',
         }}>
           <Spline
             scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
@@ -75,11 +79,11 @@ export default function Index() {
           {/* 添加覆盖层隐藏徽标 */}
           <div style={{
             position: 'absolute',
-            bottom: 15,
-            right: 10,
-            width: '190px',  // 覆盖区域宽度
-            height: '50px',  // 覆盖区域高度
-            backgroundColor: '#F5F9F4', // 背景色需匹配你的场景
+            bottom: 0,
+            right: 0,
+            width: '100%',
+            height: '60px',
+            backgroundColor: '#F5F9F4',
             zIndex: 10
           }} />
         </div>
