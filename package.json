@@ -23,7 +23,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
     "@splinetool/react-spline": "^4.0.0",
-    "@splinetool/runtime": "^1.10.17",
+    "@splinetool/runtime": "^1.10.19",
     "@types/node": "^17.0.14",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
