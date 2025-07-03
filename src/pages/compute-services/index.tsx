@@ -53,9 +53,9 @@ export default function ComputeServicesPage() {
             <div className="bg-[#F5F7F4]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-16">
                     <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="w-full md:w-1/2">
+                        <div className="w-full md:w-1/2 sm:pr-10">
                             <SlideUp>
-                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={570} height={400} style={{ width: '95%', height: 'auto' }} />
+                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} style={{ width: '100%', height: 'auto' }} />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -173,7 +173,7 @@ export default function ComputeServicesPage() {
             <div id="hgx-h200" className="bg-[#F9F9F9] sm:py-20 py-12">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="flex flex-col md:flex-row gap-12">
-                        <div className="w-full md:w-1/2 p-6">
+                        <div className="w-full md:w-1/2 pt-6 pb-6 sm:pr-6">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">NVIDIA HGX H200</h2>
                                 <p className="text-gray-600 mb-8 text-l">
@@ -181,9 +181,19 @@ export default function ComputeServicesPage() {
                                 </p>
                             </SlideUp>
                             <SlideUp>
-                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                <Button className="w-full sm:w-auto mb-12 bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                     Launch H200 GPU Clusters
                                 </Button>
+                            </SlideUp>
+                            <SlideUp>
+                                <Image
+                                    src="/compute/Nvidia_HGX_H200.svg"
+                                    alt="NVIDIA HGX H200"
+                                    width={500}
+                                    height={300}
+                                    style={{ width: '100%', height: 'auto' }}
+                                    className="w-full rounded-lg shadow-md"
+                                />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2 border-l border-gray-200">
@@ -248,7 +258,7 @@ export default function ComputeServicesPage() {
             <div id="hgx-h100" className="bg-[#F5F7F4] sm:py-20 py-12">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="flex flex-col md:flex-row gap-12">
-                        <div className="w-full md:w-1/2 p-6">
+                        <div className="w-full md:w-1/2 pt-6 pb-6 sm:pr-6">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">NVIDIA HGX H100</h2>
                                 <p className="text-gray-600 mb-8 text-l">
@@ -256,9 +266,18 @@ export default function ComputeServicesPage() {
                                 </p>
                             </SlideUp>
                             <SlideUp>
-                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                <Button className="w-full sm:w-auto mb-12 bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                     Launch H100 GPU Clusters
                                 </Button>
+                            </SlideUp>
+                            <SlideUp>
+                                <Image
+                                    src="/compute/Nvidia_HGX_H100.svg"
+                                    alt="NVIDIA HGX H100"
+                                    width={500}
+                                    height={300}
+                                    className="w-full rounded-lg shadow-md"
+                                />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2 space-y-4 border-l border-gray-200">

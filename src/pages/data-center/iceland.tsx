@@ -105,14 +105,39 @@ export default function IcelandDataCenter() {
                                     The Blönduós Data Center, situated in northern Iceland, is a state-of-the-art facility designed for high-performance computing (HPC) and artificial intelligence (AI) workloads. Leveraging Iceland's cool climate and abundant renewable energy, the campus offers sustainable and efficient data center solutions
                                 </p>
                             </SlideUp>
-                            <div className="relative h-[400px] w-full">
-                                <Image
-                                    src="/data-center/iceland1-map.svg"
-                                    alt="Iceland Map"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
+                            <SlideUp>
+                                <div className='flex flex-col sm:flex-row gap-4 mb-8'>
+                                    <Image
+                                        src="/data-center/Blönduós.svg"
+                                        alt="Blönduós"
+                                        width={0}
+                                        height={0}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 50vw"
+                                        className="w-full md:max-w-[45%] h-auto rounded-lg shadow-md"
+                                        style={{ objectFit: 'contain' }}
+                                    />
+                                    <Image
+                                        src="/data-center/Blönduós2.svg"
+                                        alt="Blönduós2"
+                                        width={0}
+                                        height={0}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 50vw"
+                                        className="w-full md:max-w-[45%] h-auto rounded-lg shadow-md"
+                                        style={{ objectFit: 'contain' }}
+                                    />
+                                </div>
+                            </SlideUp>
+                            <SlideUp>
+                                <div className="relative h-[380px] w-full">
+                                    <Image
+                                        src="/data-center/iceland1-map.svg"
+                                        alt="Iceland Map"
+                                        fill
+                                        className="object-contain"
+                                        priority
+                                    />
+                                </div>
+                            </SlideUp>
                         </div>
                         <div className="space-y-12">
                             {/* Sustainable Energy */}
@@ -129,7 +154,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-l font-bold mb-2">Sustainable energy</h3>
+                                            <h3 className="text-l font-bold mb-4">Sustainable energy</h3>
                                             <p className="text-gray-600 text-l">
                                                 Powered entirely by renewable energy sources, including geothermal and hydroelectric power, the campus ensures environmentally friendly operations
                                             </p>
@@ -152,7 +177,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-l font-bold mb-2">Energy efficiency</h3>
+                                            <h3 className="text-l font-bold mb-4">Energy efficiency</h3>
                                             <p className="text-gray-600 text-l">
                                                 The facility boasts a Power Usage Effectiveness (PUE) as low as 1.03, significantly lower than the European average of 1.55, indicating high energy efficiency
                                             </p>
@@ -175,7 +200,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-l font-bold mb-2">High capacity</h3>
+                                            <h3 className="text-l font-bold mb-4">High capacity</h3>
                                             <p className="text-gray-600 text-l">
                                                 With an expansion capability exceeding 100 MW and a fully built-out power capacity of 50 MW, the campus is equipped to handle substantial computational demands
                                             </p>
@@ -197,7 +222,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-l font-bold mb-2">Advanced infrastructure</h3>
+                                            <h3 className="text-l font-bold mb-4">Advanced infrastructure</h3>
                                             <p className="text-gray-600 text-l">
                                                 Designed to Tier 3 standards, the data center includes dual power feeds, indirect air cooling systems, uninterruptible power supplies (UPS), and generators to ensure high availability and reliability
                                             </p>
@@ -220,7 +245,7 @@ export default function IcelandDataCenter() {
                                     </div>
                                     <div>
                                         <FadeIn>
-                                            <h3 className="text-l font-bold mb-2">8 Certifications</h3>
+                                            <h3 className="text-l font-bold mb-4">8 Certifications</h3>
                                             <p className="text-gray-600 text-l">
                                                 Reflecting its commitment to information security and data protection
                                             </p>

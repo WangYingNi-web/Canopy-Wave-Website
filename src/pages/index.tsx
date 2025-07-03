@@ -41,14 +41,14 @@ export default function Index() {
     <main>
       <Head>
         <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
-        {/* <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" /> */}
-        <link rel="preload" href="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode" as="fetch" crossOrigin="anonymous"></link>
+        <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" />
+        {/* <link rel="preload" href="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode" as="fetch" crossOrigin="anonymous"></link> */}
       </Head>
       <Header />
       <div className="w-full text-gray-600">
         {/* <GlassmorphismBanner />  */}
-        {/* Hero Section */}
-        {/* <div className="w-full h-[490px] relative mt-[84px]">
+
+        <div className="w-full h-[490px] relative mt-[84px]">
           <Image
             src="/home_banner.svg"
             alt="Home_Banner"
@@ -66,29 +66,25 @@ export default function Index() {
 
             </div>
           </div>
-        </div> */}
-        <div style={{
-          position: 'relative',
-          overflow: 'hidden',
-          height: '600px',
-          backgroundColor: '#F5F9F4',
-        }}>
-          <Spline
-            scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
-          />
-          {/* 添加覆盖层隐藏徽标 */}
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            right: 0,
-            width: '100%',
-            height: '60px',
-            backgroundColor: '#F5F9F4',
-            zIndex: 10
-          }} />
         </div>
+        {/* <div className="relative overflow-hidden h-[700px] bg-[#F5F9F4]">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full px-5">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-800 mb-4 drop-shadow-sm">
+              Instant GPU Cluster for <br /> Enterprise AI
+            </h1>
+            <p className="hidden md:block text-base lg:text-xl text-gray-600 max-w-3xl mx-auto">
+              可选的副标题或描述文字
+            </p>
+          </div>
+          
+          <Spline
+            scene="https://prod.spline.design/Lv2S5gwKZE6V7VUs/scene.splinecode" 
+          />
+          <div className="absolute bottom-0 right-0 w-full h-[60px] bg-[#F5F9F4] z-20" />
+        </div> */}
 
         {/* Features Section */}
+        {/* <div className="bg-[#F9F9F9] py-12 sm:pb-16 pt-0"> */}
         <div className="bg-[#F9F9F9] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>

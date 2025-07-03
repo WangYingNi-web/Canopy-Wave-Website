@@ -16,6 +16,7 @@ const nextConfig = {
     },
     images: {
         // 禁用图片优化警告
+        // unoptimized: false,
         unoptimized: true,
         // 或者使用以下配置来忽略特定警告
         dangerouslyAllowSVG: true,
