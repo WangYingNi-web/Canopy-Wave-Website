@@ -60,7 +60,7 @@ export default function Index() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
               <SlideUp>
                 <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center text-shadow-lg">
-                  Instant GPU <br /> Cluster for <br /> Enterprise AI2
+                  Instant GPU <br /> Cluster for <br /> Enterprise AI
                 </h1>
               </SlideUp>
 
