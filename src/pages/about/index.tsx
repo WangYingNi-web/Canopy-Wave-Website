@@ -92,7 +92,7 @@ export default function AboutPage() {
           <SlideUp>
             <p className="text-gray-600 text-center mb-16 max-w-4xl mx-auto">
               Canopy Wave is a <Link href="/compute-services" className="text-[#80B224] hover:text-[#6b9a1f]">cloud</Link> purpose-built for scaling, supporting, and accelerating GenAI.
-              We&apos;re a comprehensive platform and strategic partner designed to tackle Today – and tomorrow's - challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. <br /> Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads
+              We&apos;re a comprehensive platform and strategic partner designed to tackle today - and tomorrow's - challenges of deploying AI at scale.We manage the complexities of AI growth to make supercomputing accessible and push the limits of what&apos; possible. <br /> Our teams create modern solutions to support modern technology. Get the premier choice for working with GenAI workloads
             </p>
           </SlideUp>
           {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

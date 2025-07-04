@@ -38,10 +38,10 @@ export default function ComputeServicesPage() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-l mt-8 block sm:hidden">
-                                Canopy Wave uses Virtualization technology to provide world leading performance GPU for AI training & inference
+                                Canopy Wave uses Virtualization technology to provide world-leading performance GPU for AI training & inference
                             </p>
                             <p className="text-gray-600 text-l mt-8 hidden sm:block">
-                                Canopy Wave uses Virtualization technology to provide world leading <br /> performance GPU for AI training & inference
+                                Canopy Wave uses Virtualization technology to provide world-leading <br /> performance GPU for AI training & inference
                             </p>
                         </SlideUp>
 
@@ -109,7 +109,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/gpus.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-l font-bold mb-4">NVIDIA GPUs</h3>
                             <p className="text-gray-600 text-l">
-                                Featuring access to NVIDIA HGX H100, HGX H200, with connection of NVLINKS and 400G RoCEV2 or InfiniBand networking
+                                Featuring access to NVIDIA HGX H100, HGX H200, with connections of NVLINKS and 400G RoCEV2 or InfiniBand networking
                             </p>
                         </div>
 
@@ -118,7 +118,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/multi.svg" alt="Multi-GPU Instances" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-l font-bold mb-4">MULTI-GPU instances</h3>
                             <p className="text-gray-600 text-l">
-                                Train and fine-tune AI models across instance types that best suits your need: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by minute
+                                Train and fine-tune AI models across instance types that best suit your needs: 1x, 2x, 4x, 8x and up to 64 NVIDIA GPUs instances, real on-demand, billed by the minute
                             </p>
                         </div>
 
@@ -127,7 +127,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/cloud.svg" alt="Private Cloud" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-l font-bold mb-4">Canopy Wave private cloud</h3>
                             <p className="text-gray-600 text-l">
-                                Best GPU cluster performance in the industry. With 99.99% up time. Have all you GPUs under same datacenter, your workload and privacy is protected
+                                Best GPU cluster performance in the industry. With 99.99% up-time. Have all your GPUs under the same datacenter, your workload and privacy are protected
                             </p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <ul className="space-y-4 text-l text-gray-600">
                                     <li className="flex items-start gap-3">
-                                        <p>The most high-end GPU platforms custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine</p>
+                                        <p>The most high-end GPU platforms are custom-built for AI and include large numbers of Tensor Cores, NVLink and Transformer Engine</p>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <p>Tailored for modern AI workloads, and are benchmark leaders in training <br /> and inference performance</p>
@@ -533,7 +533,7 @@ export default function ComputeServicesPage() {
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6 text-center">Get the latest and greatest NVIDIA GPUs</h2>
                         <p className="text-gray-600 text-l mb-16 text-center max-w-4xl mx-auto">
-                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability We use highest safety stander to ensure data security
+                            Canopy Wave provides the best performing GPUs clusters with 99.99% uptime, 24/7 support to maximize reliability We use the highest safety standards to ensure data security
                         </p>
                     </SlideUp>
 
@@ -587,7 +587,7 @@ export default function ComputeServicesPage() {
                                 </div>
                                 <h3 className="text-l font-bold mb-4">NVIDIA HGX H100</h3>
                                 <p className="text-gray-600 text-l leading-relaxed">
-                                    Built on the NVIDIA Hopper™ architecture with dedicated Transformer Engine, the H100 accelerates LLMs by up to 30×, setting new benchmarks for conversational AI and efficiently powering trillion-parameter language models
+                                    Built on the NVIDIA Hopper™ architecture with a dedicated Transformer Engine, the H100 accelerates LLMs by up to 30×, setting new benchmarks for conversational AI and efficiently powering trillion-parameter language models
                                 </p>
                             </div>
                         </div>
@@ -603,7 +603,7 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Get full visibility of your Cluster</h2>
                                 <p className="text-gray-600 mb-8 text-l">
-                                    Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one <br /> single dashboard to get your cluster fully under control
+                                    Canopy Wave DCIM Platform can provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one <br /> single dashboard to get your cluster fully under control
                                 </p>
                                 <p className="text-gray-600 mb-8 text-l">
                                     Our DCIM platform can help early detect possible failure and send out corresponding work orders to minimize interruption and keep industry <br /> leading performance and uptime

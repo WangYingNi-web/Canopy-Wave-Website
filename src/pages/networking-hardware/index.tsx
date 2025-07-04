@@ -89,7 +89,7 @@ export default function NetworkingHardwarePage() {
                             </div>
                             <h3 className="font-black text-l mb-4">Canopy Wave has invested </h3>
                             <p className="text-gray-600 text-l">
-                                Deeply in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
+                                Deeply involved in selecting and validating the world’s best OEM partners, ensuring our customers receive hardware that meets the highest standards for bandwidth, latency, and reliability
                             </p>
                         </div>
                     </div>

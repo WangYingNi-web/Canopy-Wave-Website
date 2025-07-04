@@ -62,7 +62,7 @@ export default function Newsroom() {
             title: "Canopy Wave and ConfidentialMind Joint Event",
             description: "Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states",
             date: "April 1, 2025",
-            image: "/confidentialmind-logo.svg",
+            image: "/confidentialmind-logo.png",
             link: "/events/canopy-confidentialmind-partnership" // 更新为events链接
         },
         {
@@ -181,7 +181,7 @@ export default function Newsroom() {
                         <div key={post.id} className="group cursor-pointer" onClick={() => handleWatchClick(post)}>
                             <div className="relative h-60 mb-4 overflow-hidden rounded-lg">
                                 <Image
-                                    src={post.image || "/confidentialmind-logo.svg"}
+                                    src={post.image || "/confidentialmind-logo.png"}
                                     alt={post.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"

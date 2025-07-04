@@ -87,7 +87,7 @@ export default function PlatformPage() {
                         <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-left">
                             <Image src="/platform/visualization.svg" alt="Visualization" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="font-bold text-l mb-3 text-left">Visualization</h3>
-                            <p className="text-gray-600 text-l text-left">Canopy Wave DCIM Platform provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
+                            <p className="text-gray-600 text-l text-left">Canopy Wave DCIM Platform can provide you with full visibility of the cluster. Getting to know your utilization rate, health condition, and uptime in one single dashboard to get your cluster fully under control</p>
                         </div>
 
                         <div className="border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 text-center flex flex-col items-left">
@@ -122,7 +122,7 @@ export default function PlatformPage() {
                                 <h2 className="text-3xl sm:text-4xl font-black mb-6">Wave GPU Cloud Platform</h2>
                             </SlideUp>
                             <SlideUp>
-                                <p className="text-gray-600 text-l">Using Canopy Wave cloud platform to get access and manage your MULTI-GPU instances</p>
+                                <p className="text-gray-600 text-l">Using Canopy Wave cloud platform to get access to and manage your MULTI-GPU instances</p>
                                 <Button className="w-full mt-6 sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                     Launch GPU Clusters
                                 </Button>

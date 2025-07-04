@@ -36,7 +36,7 @@ export default function NetworkingServices() {
                         </SlideUp>
                         <SlideUp>
                             <p className="text-gray-600 text-l mt-8">
-                                Get the best RDMA Networking purposely build for AI
+                                Get the best RDMA Networking purposely built for AI
                             </p>
                         </SlideUp>
                     </div>
@@ -85,7 +85,7 @@ export default function NetworkingServices() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
-                                        We use 400G none-blocking InfiniBand Networking to connect across all compute network, the latency is  in the microsecond range
+                                        We use 400G non-blocking InfiniBand Networking to connect across all compute network, the latency is  in the microsecond range
                                     </p>
                                 </FadeIn>
                             </div>

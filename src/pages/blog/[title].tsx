@@ -25,7 +25,7 @@ export default function BlogDetail() {
               content: [
                 'I am excited to invite Severi Tikkala, CTO of ConfidentialMind, to co-author this blog on the challenges of enabling AI in enterprises and how to navigate through these challenges.',
                 "AI isn't just a buzzword anymore. It's quickly becoming the backbone of modern enterprise strategy—transforming how companies operate, compete, and grow. Whether you're a Fortune 500 company or a fast-scaling startup, AI is no longer optional. It's essential.",
-                'So how do enterprises start with AI? Enterprises can start by using AI as a copilot to automate workflows, detecting anomalies, reaching decisions, and enhancing efficiencies. ',
+                'So how do enterprises start with AI? Enterprises can start by using AI as a copilot to automate workflows, detect anomalies, reach decisions, and enhance efficiencies. ',
               ],
             },
             {
@@ -58,7 +58,7 @@ export default function BlogDetail() {
             {
               title: 'Scaling Innovation',
               content: [
-                'AI isn’t just about optimization. it’s a catalyst for innovation. With generative AI, computer vision, and natural language processing, enterprises can explore ideas that were unimaginable just a few years ago.',
+                'AI isn’t just about optimization. It’s a catalyst for innovation. With generative AI, computer vision, and natural language processing, enterprises can explore ideas that were unimaginable just a few years ago.',
                 'From content generation to rapid prototyping, AI empowers teams to iterate, experiment, and scale innovation like never before.',
               ],
             },
@@ -74,7 +74,7 @@ export default function BlogDetail() {
               title: 'Build Your Own AI',
               content: [
                 'The solution? Enterprises need to build their own AI systems, ensuring that models learn from proprietary data without sharing it externally.',
-                'Until recently, this required deep infrastructure investments, including training massive LLMs to managing GPU drivers and data center logistics. But the landscape has changed.',
+                'Until recently, this required deep infrastructure investments, including training massive LLMs to manage GPU drivers and data center logistics. But the landscape has changed.',
                 "Thanks to open-source LLMs and more accessible compute infrastructure, it's now feasible and smart for enterprises to develop private, high-performance AI solutions.",
               ],
             },
@@ -93,9 +93,9 @@ export default function BlogDetail() {
               title: "AI That's Ready to Go",
               content: [
                 'That’s why Canopy Wave and ConfidentialMind have joined forces, to help enterprises kickstart their AI journey, quickly and securely.',
-                'We’re offering a pre-configured Kubernetes environment loaded with pre-qualified LLMs such as Llama-4 and Deepseek, optimized for private deployments. Connecting your enterprise data with LLMs is quick and easy with premade data connectors, data ingestion, and RAG-pipelines.',
+                'We’re offering a pre-configured Kubernetes environment loaded with pre-qualified LLMs such as Llama-4 and DeepSeek, optimized for private deployments. Connecting your enterprise data with LLMs is quick and easy with premade data connectors, data ingestion, and RAG-pipelines.',
                 'You no longer need to worry about setting up infrastructure, managing drivers, or debugging environments. Just plug in and build.',
-                "With Canopy Wave's Instant GPU Private Cloud, you can spin up anywhere from 2 to thousands of H100/H200 GPUs instantly, no long procurement cycles, no supply chain delays, and no wasted engineering hours.",
+                "With Canopy Wave's Instant GPU Private Cloud, you can spin up anywhere from 2 to thousands of H100/H200 GPUs instantly, with no long procurement cycles, no supply chain delays, and no wasted engineering hours.",
                 "Whether you're training new models or deploying inference pipelines at scale, we deliver the performance and flexibility you need, out of the box.",
               ],
             },

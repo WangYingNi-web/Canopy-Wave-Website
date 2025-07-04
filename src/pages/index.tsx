@@ -106,7 +106,7 @@ export default function Index() {
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/high.svg" alt="High performance" width={34} height={34} className="mb-6 svg-gray" />
                 <h3 className="text-l font-bold mb-4 group-hover:text-white">High performance</h3>
-                <p className="text-gray-600 group-hover:text-white text-l">Optimized infrastructure to achieve highest performance of clusters of GPU</p>
+                <p className="text-gray-600 group-hover:text-white text-l">Optimized infrastructure to achieve the highest performance of clusters of GPU</p>
               </div>
               <div className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300">
                 <Image src="/icon/used.svg" alt="Pay only used" width={34} height={34} className="mb-6 svg-gray" />
@@ -159,7 +159,7 @@ export default function Index() {
                 </SlideUp>
                 <SlideUp>
                   <p className="text-gray-600 mb-8 text-l leading-relaxed">
-                    Our data centers are powered by Canopy Wave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+                    Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                   </p>
                 </SlideUp>
 
@@ -182,11 +182,8 @@ export default function Index() {
         <div className="bg-[#F9F9F9] sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
-              <h2 className="block sm:hidden text-3xl sm:text-4xl font-black mb-12 text-left">
-                Latest Canopy Wave Blog/Events: Insights and Updates from Our Team
-              </h2>
-              <h2 className="hidden sm:block text-3xl sm:text-4xl font-black mb-12 text-left">
-                Latest Canopy Wave Blog/Events: Insights and Updates <br /> from Our Team
+              <h2 className="text-3xl sm:text-4xl font-black mb-12 text-left">
+                Explore Canopy Wave: Fresh Blog Posts & Events
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
@@ -219,7 +216,7 @@ export default function Index() {
                 <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="relative aspect-video w-full overflow-hidden">
                     <Image
-                      src="/confidentialmind-logo.svg"
+                      src="/confidentialmind-logo.png"
                       alt="confidentialmind Image"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"

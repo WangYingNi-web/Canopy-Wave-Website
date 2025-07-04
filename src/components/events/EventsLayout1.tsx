@@ -19,7 +19,7 @@ const EventsLayout1: React.FC<EventsLayout1Props> = ({ eventPost }) => {
               </h2>
             </SlideUp>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states. This collaboration brings together Canopy Wave's cutting-edge instant GPU clusters and ConfidentialMind's deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications
+              Santa Clara, United States and Espoo, Finland, April 1, 2025 – Canopy Wave is excited to announce a strategic partnership with ConfidentialMind to revolutionize AI adoption within enterprises and nation states. This collaboration brings together Canopy Wave's cutting-edge instant GPU clusters and ConfidentialMind's deep AI expertise to provide businesses with a seamless, turn-key solution for deploying AI applications.
             </p>
             <h3 className="text-xl font-bold mb-4">Unlocking Instant Cloud AI Infrastructure</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -34,7 +34,7 @@ const EventsLayout1: React.FC<EventsLayout1Props> = ({ eventPost }) => {
               "We often see that companies pushing the boundaries of AI are limited in maximizing their results due to hardware constraints. By combining our cutting-edge cloud GPU infrastructure powered by the H100 and H200 and our innovative approach to AI infrastructure management with ConfidentialMind's secure AI platform, we will deliver a highly reliable, scalable, and cost-efficient cloud-based AI solution for enterprises worldwide." Hai Vo-Dinh, Sr. Director of Product, Canopy Wave.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              "A major barrier to developing and deploying generative AI at enterprises is often the high cost of procuring the GPU compute, developing the secure infrastructure required to run generative AI systems internally or complexities in integrating AI platforms with existing infrastructure. Our partnership with Canopy Wave removes all those challenges, and because we provide the entire AI technology stack – hardware and software – we can offer the complete package at very attractive prices." Severi Tikkala, CTO & Co-founder, ConfidentialMind.
+              "A major barrier to developing and deploying generative AI at enterprises is often the high cost of procuring the GPU compute, developing the secure infrastructure required to run generative AI systems internally or complexities in integrating AI platforms with existing infrastructure. Our partnership with Canopy Wave removes all those challenges, and because we provide the entire AI technology stack-hardware and software-we can offer the complete package at very attractive prices." Severi Tikkala, CTO & Co-founder, ConfidentialMind.
             </p>
             <h3 className="text-xl font-bold mb-4">About Canopy Wave</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -55,10 +55,10 @@ const EventsLayout1: React.FC<EventsLayout1Props> = ({ eventPost }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-32">
           <h3 className="text-l sm:text-2xl font-bold mb-4 text-center">For Business Matters</h3>
           <p className="text-gray-800 mb-4 text-center">Hai Vo-Dinh<br />Senior Director of Product<br />Canopy Wave</p>
-          <p className="text-gray-800 mb-4 text-center">Email: hai @ canopywave.com</p>
+          <p className="text-gray-800 mb-4 text-center">Email: hai@canopywave.com</p>
           <p className="text-gray-800 mb-4 text-center">Website: <a href="https://canopywave.com/" className="text-[#8CC63F]" target="_blank">canopywave.com</a></p>
-          <p className="text-gray-800 mb-4 text-center">Markku Räsänen<br />CEO & Co-founder<br />Confidentialmind Oy</p>
-          <p className="text-gray-800 mb-4 text-center">Email: markku @ confidentialmind.com</p>
+          <p className="text-gray-800 mb-4 text-center">Markku Räsänen<br />CEO & Co-founder<br />ConfidentialMind Oy</p>
+          <p className="text-gray-800 mb-4 text-center">Email: markku@confidentialmind.com</p>
           <p className="text-gray-800 mb-4 text-center">Phone: +358 50 302 6510</p>
           <p className="text-gray-800 mb-4 text-center">Website: <a href="http://www.confidentialmind.com" className="text-[#8CC63F]" target="_blank">confidentialmind.com</a></p>
           <h3 className="text-l sm:text-2xl font-bold mb-4 text-center text-[#8CC63F]">For Media and Generic Inquiries</h3>

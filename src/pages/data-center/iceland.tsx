@@ -68,7 +68,7 @@ export default function IcelandDataCenter() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-6 text-l">
-                                    Your app's performance depends on how close you can deploy to your end users. With canopywave, you can deploy in strategic locations within seconds, dramatically reducing latency and delivering the seamless experience your users demand
+                                    Your app's performance depends on how close you can deploy to your end users. With Canopy Wave, you can deploy in strategic locations within seconds, dramatically reducing latency and delivering the seamless experience your users demand
                                 </p>
                             </SlideUp>
                             <SlideUp>

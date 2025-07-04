@@ -104,7 +104,7 @@ export default function StorageServices() {
                 />
               </div>
               <h3 className="font-bold text-l mb-4">Seamlesss Collaboration</h3>
-              <p className="text-gray-600 text-l">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during team work</p>
+              <p className="text-gray-600 text-l">Global file system enables multi-node read/write. Smart load balancing optimizes access paths automatically, with version control and file locking to keep data consistent during teamwork</p>
             </div>
 
             <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300">
@@ -263,7 +263,7 @@ export default function StorageServices() {
               <Image src="/storage/file.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
               <h3 className="text-l font-bold mb-4">File-Based</h3>
               <p className="text-gray-600 text-l">
-                All servers see the same folder structure like your local PC. Files stay unique - no duplicates, no matter where they're physically stored
+                All servers see the same folder structure as your local PC. Files stay unique - no duplicates, no matter where they're physically stored
               </p>
             </div>
 
