@@ -192,7 +192,7 @@ export default function Index() {
                 <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="relative aspect-video w-full overflow-hidden">
                     <Image
-                      src="/blog1.svg"
+                      src="/blog3.webp"
                       alt="Blog Image"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"
