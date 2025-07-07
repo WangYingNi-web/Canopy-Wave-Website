@@ -76,7 +76,7 @@ export default function Index() {
               可选的副标题或描述文字
             </p> */}
           </div>
-          
+
           <Spline
             scene="https://prod.spline.design/TjYOaAXtOEc7y-ph/scene.splinecode"
           />
@@ -85,7 +85,7 @@ export default function Index() {
 
         {/* Features Section */}
         <div className="bg-[#F9F9F9] py-12 sm:pb-16 pt-0">
-        {/* <div className="bg-[#F9F9F9] py-12 sm:py-16"> */}
+          {/* <div className="bg-[#F9F9F9] py-12 sm:py-16"> */}
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
@@ -191,13 +191,18 @@ export default function Index() {
               <Link href="/blog/joint-blog-accelerate-enterprise-ai">
                 <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src="/blog1.svg"
-                      alt="Blog Image"
-                      fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
+
+                      <object type="image/svg+xml" data="image.svg" width="300" height="200">
+                        <Image
+                          src="/blog1.svg"
+                          alt="Blog Image"
+                          fill
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </object>
+
+
                   </div>
                   <div className="p-6">
                     <h4 className="text-l font-semibold mb-3">

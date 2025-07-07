@@ -355,6 +355,12 @@ export default function NetworkingHardwarePage() {
                                             width={36}
                                             height={36}
                                             className='svg-gray'
+                                            style={{
+                                                width: 36,
+                                                height: 36,
+                                                minWidth: 36,  // 防止压缩
+                                                minHeight: 36
+                                            }}
                                         />
                                     </div>
                                     <FadeIn>

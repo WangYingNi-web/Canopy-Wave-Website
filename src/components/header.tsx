@@ -718,7 +718,7 @@ export default function Header() {
             </button>
             {showMobileSolutions && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Model Training</IwsLink></li>
+                <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>AI Model Training</IwsLink></li>
                 <li><IwsLink href="/inference" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Inference</IwsLink></li>
                 <li><IwsLink href="/rendering" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Rendering</IwsLink></li>
                 <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Private Cloud and GPUs Deployment</IwsLink></li>
