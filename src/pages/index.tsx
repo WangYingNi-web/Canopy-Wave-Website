@@ -48,7 +48,7 @@ export default function Index() {
       <div className="w-full text-gray-600">
         {/* <GlassmorphismBanner />  */}
 
-        <div className="w-full h-[490px] relative mt-[84px]">
+        {/* <div className="w-full h-[490px] relative mt-[84px]">
           <Image
             src="/home_banner.svg"
             alt="Home_Banner"
@@ -66,26 +66,26 @@ export default function Index() {
 
             </div>
           </div>
-        </div>
-        {/* <div className="relative overflow-hidden h-[700px] bg-[#F5F9F4]">
+        </div> */}
+        <div className="relative overflow-hidden h-[700px] bg-[#F5F9F4]">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full px-5">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-800 mb-4 drop-shadow-sm">
+            {/* <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-800 mb-4 drop-shadow-sm">
               Instant GPU Cluster for <br /> Enterprise AI
             </h1>
             <p className="hidden md:block text-base lg:text-xl text-gray-600 max-w-3xl mx-auto">
               可选的副标题或描述文字
-            </p>
+            </p> */}
           </div>
           
           <Spline
-            scene="https://prod.spline.design/Lv2S5gwKZE6V7VUs/scene.splinecode" 
+            scene="https://prod.spline.design/TjYOaAXtOEc7y-ph/scene.splinecode"
           />
           <div className="absolute bottom-0 right-0 w-full h-[60px] bg-[#F5F9F4] z-20" />
-        </div> */}
+        </div>
 
         {/* Features Section */}
-        {/* <div className="bg-[#F9F9F9] py-12 sm:pb-16 pt-0"> */}
-        <div className="bg-[#F9F9F9] py-12 sm:py-16">
+        <div className="bg-[#F9F9F9] py-12 sm:pb-16 pt-0">
+        {/* <div className="bg-[#F9F9F9] py-12 sm:py-16"> */}
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
