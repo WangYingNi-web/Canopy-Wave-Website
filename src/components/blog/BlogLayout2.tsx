@@ -352,12 +352,12 @@ Registered webinars: ${blogPost.title}
                       className="mt-1 h-4 w-4 text-[#80B224] focus:ring-[#80B224] border-gray-300 rounded disabled:cursor-not-allowed"
                     />
                     <label htmlFor="marketing" className="text-sm text-[#2D3748]">
-                      I agree to receive marketing communications from CanopyWave.
+                      I agree to receive marketing communications from Canopy Wave.
                     </label>
                   </div>
 
                   <div className="text-xs text-[#4A5568] leading-relaxed">
-                    You can unsubscribe at any time by clicking "Unsubscribe" at the bottom of any marketing email you receive from us and updating your email preferences. See CanopyWave's{' '}
+                    You can unsubscribe at any time by clicking "Unsubscribe" at the bottom of any marketing email you receive from us and updating your email preferences. See Canopy Wave's{' '}
                     <a href="/privacy" className="text-[#80B224] hover:underline">
                       Privacy Policy
                     </a>{' '}

@@ -62,7 +62,7 @@ export default function BlogPage() {
           </div>
           <div className="w-full md:w-[580px]">
             <img
-              src="/blog1.svg"
+              src="/blog3.webp"
               alt="Blog"
               className="w-full h-auto"
             />

@@ -27,7 +27,7 @@ const GPUPerformanceWebinar = () => {
             </h1>
 
             <p className="text-lg text-gray-300 mb-8">
-              How CanopyWave's stack stays AI-first from all angles
+              How Canopy Wave's stack stays AI-first from all angles
             </p>
           </div>
         </div>

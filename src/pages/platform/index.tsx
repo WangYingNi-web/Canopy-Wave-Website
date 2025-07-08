@@ -47,7 +47,7 @@ export default function PlatformPage() {
             <div className="bg-[#F5F7F4]">
                 <div id='dcim-platform' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     {/* 上半部分：左侧标题和右侧图片 */}
-                    <div className="flex flex-col md:flex-row items-start gap-16 mb-6">
+                    <div className="flex flex-col md:flex-row items-start gap-16 mb-12">
                         {/* 左侧标题部分 */}
                         <div className="w-full md:w-1/2">
                             <SlideUp>
@@ -61,11 +61,11 @@ export default function PlatformPage() {
                             </SlideUp>
                         </div>
                         {/* 右侧图片部分 */}
-                        <div className="w-full md:w-1/2 -mt-10">
+                        <div className="w-full md:w-1/2">
                             <div>
                                 <SlideUp>
                                     <Image
-                                        src="/platform/dcim.svg"
+                                        src="/platform/dcim.png"
                                         alt="DCIM Dashboard"
                                         width={600}
                                         height={400}

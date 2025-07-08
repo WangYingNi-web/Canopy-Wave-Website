@@ -187,7 +187,7 @@ export default function ComputeServicesPage() {
                             </SlideUp>
                             <SlideUp>
                                 <Image
-                                    src="/compute/Nvidia_HGX_H200.svg"
+                                    src="/compute/Nvidia_HGX_H200.png"
                                     alt="NVIDIA HGX H200"
                                     width={500}
                                     height={300}
@@ -272,7 +272,7 @@ export default function ComputeServicesPage() {
                             </SlideUp>
                             <SlideUp>
                                 <Image
-                                    src="/compute/Nvidia_HGX_H100.svg"
+                                    src="/compute/Nvidia_HGX_H100.png"
                                     alt="NVIDIA HGX H100"
                                     width={500}
                                     height={300}
