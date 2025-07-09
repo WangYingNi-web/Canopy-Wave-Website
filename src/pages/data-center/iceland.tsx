@@ -52,7 +52,7 @@ export default function IcelandDataCenter() {
                         <SlideUp>
                             <div className="relative h-[400px] rounded-lg overflow-hidden">
                                 <Image
-                                    src="/data-center/deploy.svg"
+                                    src="/data-center/deploy.png"
                                     alt="NVIDIA GPU"
                                     fill
                                     className="object-cover filter brightness-90"
@@ -108,7 +108,7 @@ export default function IcelandDataCenter() {
                             <SlideUp>
                                 <div className='flex flex-col sm:flex-row gap-4 mb-8'>
                                     <Image
-                                        src="/data-center/Blönduós.svg"
+                                        src="/data-center/Blönduós.png"
                                         alt="Blönduós"
                                         width={0}
                                         height={0}
@@ -117,7 +117,7 @@ export default function IcelandDataCenter() {
                                         style={{ objectFit: 'contain' }}
                                     />
                                     <Image
-                                        src="/data-center/Blönduós2.svg"
+                                        src="/data-center/Blönduós2.png"
                                         alt="Blönduós2"
                                         width={0}
                                         height={0}
@@ -130,7 +130,7 @@ export default function IcelandDataCenter() {
                             <SlideUp>
                                 <div className="relative h-[380px] w-full">
                                     <Image
-                                        src="/data-center/iceland1-map.svg"
+                                        src="/data-center/iceland1-map.png"
                                         alt="Iceland Map"
                                         fill
                                         className="object-contain"
@@ -277,7 +277,7 @@ export default function IcelandDataCenter() {
                         {/* Right Content - Map */}
                         <div className="relative h-[400px] w-full -mt-16">
                             <Image
-                                src="/data-center/iceland2-map.svg"
+                                src="/data-center/iceland2-map.png"
                                 alt="Iceland Map"
                                 fill
                                 className='object-contain'
@@ -369,7 +369,7 @@ export default function IcelandDataCenter() {
                         <SlideUp>
                             <div className="relative h-[400px] w-full">
                                 <Image
-                                    src="/about/future-locations.svg"
+                                    src="/data-center/future-locations.png"
                                     alt="Future Locations"
                                     fill
                                     className="object-cover cover rounded-lg"

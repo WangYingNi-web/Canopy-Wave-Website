@@ -55,7 +55,7 @@ export default function ComputeServicesPage() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2 sm:pr-10">
                             <SlideUp>
-                                <Image src="/compute/processing-power.svg" alt="Processing Power" width={500} height={400} style={{ width: '100%', height: 'auto' }} />
+                                <Image src="/compute/processing-power.png" alt="Processing Power" width={500} height={400} style={{ width: '100%', height: 'auto' }} />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -157,7 +157,7 @@ export default function ComputeServicesPage() {
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <Image
-                                    src="/compute/h200.svg"
+                                    src="/compute/h200.png"
                                     alt="NVIDIA H200 GPU"
                                     width={500}
                                     height={300}
@@ -351,7 +351,7 @@ export default function ComputeServicesPage() {
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <Image
-                                    src="/compute/cpu-servers.svg"
+                                    src="/compute/cpu-servers.png"
                                     alt="Cpu Servers"
                                     width={550}
                                     height={400}
@@ -515,7 +515,7 @@ export default function ComputeServicesPage() {
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <Image
-                                    src="/compute/bare-metal.svg"
+                                    src="/compute/bare-metal.png"
                                     alt="Bare Metal"
                                     width={580}
                                     height={400}
@@ -543,7 +543,7 @@ export default function ComputeServicesPage() {
                             <div>
                                 <div className="relative h-64 mb-8 bg-black rounded-xl overflow-hidden">
                                     <Image
-                                        src="/compute/b200.svg"
+                                        src="/compute/b200.png"
                                         alt="NVIDIA HGX B200"
                                         fill
                                         className="object-contain p-4"
@@ -561,7 +561,7 @@ export default function ComputeServicesPage() {
                             <div>
                                 <div className="relative h-64 mb-8 bg-black rounded-xl overflow-hidden">
                                     <Image
-                                        src="/compute/h200-1.svg"
+                                        src="/compute/h200-1.png"
                                         alt="NVIDIA HGX H200"
                                         fill
                                         className="object-contain p-4"
@@ -579,7 +579,7 @@ export default function ComputeServicesPage() {
                             <div>
                                 <div className="relative h-64 mb-8 bg-black rounded-xl overflow-hidden">
                                     <Image
-                                        src="/compute/h100.svg"
+                                        src="/compute/h100.png"
                                         alt="NVIDIA HGX H100"
                                         fill
                                         className="object-contain p-4"
@@ -613,7 +613,7 @@ export default function ComputeServicesPage() {
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <Image
-                                    src="/compute/cluster.svg"
+                                    src="/compute/cluster.png"
                                     alt="Cluster"
                                     width={600}
                                     height={400}
