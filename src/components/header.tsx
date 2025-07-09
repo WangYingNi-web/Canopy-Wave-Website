@@ -11,6 +11,9 @@ export default function Header() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const currentRouter = routerList.find((e) => e.path === router.asPath)?.name
+  // console.log(currentRouter,"currentRouter");
+  const [activeMenu, setActiveMenu] = useState<string>('home');
+
 
   const [showProducts, setShowProducts] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
@@ -520,7 +523,7 @@ export default function Header() {
               aria-controls="mobile-menu"
               onClick={() => setIsOpen(!isOpen)}
             >
-              
+
               <span className="sr-only">Open main menu</span>
               {/* 根据菜单状态显示不同的图标 */}
               {isOpen ? (
@@ -562,9 +565,11 @@ export default function Header() {
         <div className="px-2 pt-2 pb-3 sm:px-3">
           <div className="relative">
             <button
-              className={`flex items-center block w-full text-left text-gray-600 ${currentRouter === 'home' ? 'bg-gray-200' : ''
-                } px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobileProducts(!showMobileProducts)}
+              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'products' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => {
+                setShowMobileProducts(!showMobileProducts);
+                setActiveMenu('products');
+              }}
             >
               Products
               <svg
@@ -612,9 +617,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <IwsLink 
-                    href="/storage-services" 
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between" 
+                  <IwsLink
+                    href="/storage-services"
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
                     onClick={closeMobileMenu}
                   >
                     <span>Storage Services</span>
@@ -639,9 +644,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <IwsLink 
-                    href="/networking-services" 
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between" 
+                  <IwsLink
+                    href="/networking-services"
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
                     onClick={closeMobileMenu}
                   >
                     <span>Networking Services</span>
@@ -665,9 +670,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <IwsLink 
-                    href="/platform" 
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between" 
+                  <IwsLink
+                    href="/platform"
+                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
                     onClick={closeMobileMenu}
                   >
                     <span>Platform</span>
@@ -690,16 +695,18 @@ export default function Header() {
                     <li><IwsLink href="/platform#cloud-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Wave GPU cloud platform</IwsLink></li>
                   </ul>
                 </li>
-                
+
               </ul>
             )}
           </div>
 
           <div className="relative">
             <button
-              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 ${currentRouter === 'solutions' ? 'bg-gray-200' : ''
-                } px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobileSolutions(!showMobileSolutions)}
+              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'solutions' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => {
+                setShowMobileSolutions(!showMobileSolutions);
+                setActiveMenu('solutions');
+              }}
             >
               Solutions
               <svg
@@ -728,8 +735,11 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobilePricing(!showMobilePricing)}
+              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'pricing' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => {
+                setShowMobilePricing(!showMobilePricing);
+                setActiveMenu('pricing');
+              }}
             >
               Pricing
               <svg
@@ -769,15 +779,15 @@ export default function Header() {
                         />
                       </svg>
                     </button>
-           
-                      <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                        <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
-                        <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
-                        <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
-                        <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
-                        <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
-                      </ul>
-    
+
+                    <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
+                      <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
+                      <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
+                      <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
+                      <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
+                      <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
+                    </ul>
+
                   </div>
                 </li>
               </ul>
@@ -785,8 +795,11 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobileDataCenter(!showMobileDataCenter)}
+              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'datacenter' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => {
+                setShowMobileDataCenter(!showMobileDataCenter);
+                setActiveMenu('datacenter');
+              }}
             >
               Data Center
               <svg
@@ -827,10 +840,10 @@ export default function Header() {
                       </svg>
                     </button>
 
-                      <ul className={`pl-4 mt-2 space-y-2`}>
-                        <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
-                        <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
-                      </ul>
+                    <ul className={`pl-4 mt-2 space-y-2`}>
+                      <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
+                      <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
+                    </ul>
                     <ul className="pl-2 mt-1 py-1 hover:bg-gray-100">
                       <li>
                         <IwsLink href="/data-center/iceland#future-locations" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowDataCenter(false) }}>Future locations</IwsLink>
@@ -843,8 +856,11 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobileResources(!showMobileResources)}
+              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'resources' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => {
+                setShowMobileResources(!showMobileResources);
+                setActiveMenu('resources');
+              }}
             >
               Resources
               <svg
@@ -869,9 +885,11 @@ export default function Header() {
           </div>
           <div className="relative">
             <button
-              className={`flex items-center block w-full text-left text-gray-600 hover:bg-gray-200
-              px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => setShowMobileAbout(!showMobileAbout)}
+              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'about' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+              onClick={() => {
+                setShowMobileAbout(!showMobileAbout);
+                setActiveMenu('about');
+              }}
             >
               About
               <svg
@@ -912,11 +930,11 @@ export default function Header() {
                       />
                     </svg>
                   </button>
-                    <ul className={`pl-4 mt-2 space-y-2`}>
-                      <li><IwsLink href="/about/newsroom#blog" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Blog</IwsLink></li>
-                      <li><IwsLink href="/about/newsroom#events" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Events</IwsLink></li>
-                    </ul>
-       
+                  <ul className={`pl-4 mt-2 space-y-2`}>
+                    <li><IwsLink href="/about/newsroom#blog" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Blog</IwsLink></li>
+                    <li><IwsLink href="/about/newsroom#events" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Events</IwsLink></li>
+                  </ul>
+
                 </div>
               </ul>
             )}
