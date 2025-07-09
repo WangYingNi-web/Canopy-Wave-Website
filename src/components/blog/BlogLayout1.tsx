@@ -24,7 +24,7 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
         <div className="w-full mb-12">
           <SlideUp>
             <img
-              src="/blog3.webp"
+              src="/blog1.webp"
               alt="Blog"
               className="w-full h-auto rounded-[20px] shadow-md"
             />

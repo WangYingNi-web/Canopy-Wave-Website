@@ -46,7 +46,7 @@ export default function Newsroom() {
             title: "Joint Blog - Accelerate Enterprise AI",
             description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
             date: "April 16, 2025",
-            image: "/blog1.svg"
+            image: "/blog1.webp"
         },
         // {
         //     id: 2,
