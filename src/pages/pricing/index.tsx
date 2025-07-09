@@ -91,7 +91,7 @@ export default function PricingPage() {
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">NVMe Storage</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">Public IP</th>
-                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour/GPU</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -101,7 +101,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">400 GB</td>
                                         <td className="py-4 text-center">2 TB</td>
                                         <td className="py-4 text-center">1</td>
-                                        <td className="py-4 text-center font-semibold">$4.50</td>
+                                        <td className="py-4 text-center font-semibold">$2.25</td>
                                     </tr>
                                     <tr className="border-b">
                                         <td className="py-4 text-center">4x NVIDIA SXM5 H100</td>
@@ -109,7 +109,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">800 GB</td>
                                         <td className="py-4 text-center">4 TB</td>
                                         <td className="py-4 text-center">1</td>
-                                        <td className="py-4 text-center font-semibold">$9.00</td>
+                                        <td className="py-4 text-center font-semibold">$4.50</td>
                                     </tr>
                                     <tr className="border-b">
                                         <td className="py-4 text-center">8x NVIDIA SXM5 H100</td>
@@ -117,7 +117,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">1.5 TB</td>
                                         <td className="py-4 text-center">6 TB</td>
                                         <td className="py-4 text-center">1</td>
-                                        <td className="py-4 text-center font-semibold">$18.00</td>
+                                        <td className="py-4 text-center font-semibold">$9.00</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -148,7 +148,7 @@ export default function PricingPage() {
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[18%]">NVMe Storage</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">Public IP</th>
-                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour/GPU</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -158,7 +158,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">400 GB</td>
                                         <td className="py-4 text-center">2 TB</td>
                                         <td className="py-4 text-center">1</td>
-                                        <td className="py-4 text-center font-semibold">$6.00</td>
+                                        <td className="py-4 text-center font-semibold">$3.00</td>
                                     </tr>
                                     <tr className="border-b">
                                         <td className="py-4 text-center">4x NVIDIA SXM5 H200</td>
@@ -166,7 +166,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">800 GB</td>
                                         <td className="py-4 text-center">4 TB</td>
                                         <td className="py-4 text-center">1</td>
-                                        <td className="py-4 text-center font-semibold">$12.00</td>
+                                        <td className="py-4 text-center font-semibold">$6.00</td>
                                     </tr>
                                     <tr className="border-b">
                                         <td className="py-4 text-center">8x NVIDIA SXM5 H200</td>
@@ -174,7 +174,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">1.5 TB</td>
                                         <td className="py-4 text-center">8 TB</td>
                                         <td className="py-4 text-center">1</td>
-                                        <td className="py-4 text-center font-semibold">$24.00</td>
+                                        <td className="py-4 text-center font-semibold">$12.00</td>
                                     </tr>
                                 </tbody>
                             </table>

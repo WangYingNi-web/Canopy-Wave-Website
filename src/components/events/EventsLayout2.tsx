@@ -110,8 +110,8 @@ Registered webinars: ${eventPost.title}
         body: JSON.stringify({
           subject: `New registration information for webinars - ${eventPost.title}`,
           recipients: [
-            // "sales@canopywave.com",
-            "wangyingni@canopywave.com",
+            "sales@canopywave.com",
+            // "wangyingni@canopywave.com",
           ],
           body: emailBody
         })
