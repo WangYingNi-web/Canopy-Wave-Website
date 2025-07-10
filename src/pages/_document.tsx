@@ -36,6 +36,29 @@ class MyDocument extends Document {
 
           {/* 添加 Safari 固定标签图标 */}
           {/* <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#1a2a6c" /> */}
+          
+          {/* 添加 JSON-LD 结构化数据 */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Canopy Wave",
+                "url": "https://canopywave.com",
+                "logo": "https://canopywave.com/canopy.svg",
+                "description": "Canopy Wave - Instant GPU Cluster for Enterprise AI",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressCountry": "2350 Mission College Boulevard 350 Santa Clara, CA 95054"
+                },
+                "sameAs": [
+                  "https://www.linkedin.com/company/canopywave/",
+                  "https://x.com/canopywave_cw?s=21"
+                ]
+              })
+            }}
+          />
         </Head>
         <body>
           <Main />
