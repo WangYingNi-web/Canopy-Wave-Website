@@ -11,7 +11,6 @@ import PartnerCarousel from '@/components/carousel';
 import { useInView } from 'react-intersection-observer';
 import EuropeMap from '@/components/EuropeMap'
 import BackgroundTransition from '@/components/BackgroundTransition';
-import GlassmorphismBanner from "@/components/GlassmorphismBanner";
 import Spline from '@splinetool/react-spline';
 
 
@@ -46,7 +45,6 @@ export default function Index() {
       </Head>
       <Header />
       <div className="w-full text-gray-600">
-        {/* <GlassmorphismBanner />  */}
 
         <div className="w-full h-[490px] relative mt-[84px]">
           <Image
