@@ -146,7 +146,7 @@ export default function PricingPage() {
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">Instance Type</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">vCPUs</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
-                                        <th className="py-3 text-center whitespace-nowrap w-[18%]">NVMe Storage</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">NVMe Storage</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[12%]">Public IP</th>
                                         <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour/GPU</th>
                                     </tr>
