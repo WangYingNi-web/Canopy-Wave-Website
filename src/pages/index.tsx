@@ -45,7 +45,7 @@ export default function Index() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // 5秒切换一次
+    }, 10000); // 10秒切换一次
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -109,7 +109,7 @@ export default function Index() {
               {slide.id === 2 && (
                 <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
               )}
-
+  
 
               <div className="absolute inset-0 z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">

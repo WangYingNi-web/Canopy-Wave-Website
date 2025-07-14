@@ -14,7 +14,7 @@ export default function Header() {
   // console.log(currentRouter,"currentRouter");
   const [activeMenu, setActiveMenu] = useState<string>('home');
 
-  const [showGB, setShowGB] = useState(false);
+
   const [showProducts, setShowProducts] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [showPricing, setShowPricing] = useState(false);
@@ -37,7 +37,7 @@ export default function Header() {
   const [showAboutSubMenu, setshowAboutSubMenu] = useState(false);
 
 
-  const GBRef = useRef<HTMLDivElement>(null);
+
   const menuRef = useRef<HTMLDivElement>(null);
   const solutionsRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
@@ -58,10 +58,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      GBRef
-      if (GBRef.current && !GBRef.current.contains(event.target as Node)) {
-        setShowGB(false);
-      }
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setShowProducts(false);
       }
@@ -112,75 +108,48 @@ export default function Header() {
           {/* 中间导航部分 */}
           <div className="hidden custom:flex flex-1 justify-center">
             <div className="flex items-center space-x-2 md:space-x-4 lg:space-x-6">
-
-              <div className="relative" ref={GBRef}>
+              <div className="relative text-sm" ref={menuRef}>
                 <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
-                  onClick={() => setShowGB(!showGB)}
-                >
-                  <span>GB200 NVL72 <span className='flash'>NEW</span></span>
-                  <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showGB ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={3}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {showGB && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[13px] shadow-lg border-t border-gray-100 z-50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <ul className="space-y-2 text-sm">
-                        <li>
-                          <IwsLink href="/gb200-nvl72" className="text-gray-600 hover:text-gray-900 text-sm">
-                            Learn More
-                          </IwsLink>
-                        </li>
-                        <li><IwsLink href="https://cloud.canopywave.io/" className="text-gray-600 hover:text-gray-900 text-sm">Launch Now</IwsLink></li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div className="relative" ref={menuRef}>
-                <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
+                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowProducts(!showProducts)}
                 >
                   Products
                   <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showProducts ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showProducts ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={3}
+                      strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
 
                 {showProducts && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-[13px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         <div>
                           <h3 className="font-semibold mb-4">
                             <IwsLink href="/compute-services" className="text-gray-900 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
                               Compute Services
+                              {/* <svg
+                                className="w-4 h-4 ml-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg> */}
                             </IwsLink>
                           </h3>
                           <ul className="space-y-2 text-sm">
@@ -203,6 +172,7 @@ export default function Header() {
                                   </svg> */}
                                 </IwsLink>
                                 <ul className="pl-4 mt-2 space-y-2">
+                                  <li><IwsLink href="/gb200-nvl72" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}><span>GB200 NVL72 <span className='flash'>NEW</span></span></IwsLink></li>
                                   <li><IwsLink href="/compute-services#hgx-h200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>NVIDIA HGX H200</IwsLink></li>
                                   <li><IwsLink href="/compute-services#hgx-h100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>NVIDIA HGX H100</IwsLink></li>
                                 </ul>
@@ -295,28 +265,27 @@ export default function Header() {
 
               <div className="relative" ref={solutionsRef}>
                 <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
+                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowSolutions(!showSolutions)}
                 >
                   Solutions
                   <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showSolutions ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showSolutions ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={3}
+                      strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
 
                 {showSolutions && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[13px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>AI Model Training</IwsLink></li>
@@ -332,28 +301,27 @@ export default function Header() {
 
               <div className="relative" ref={pricingRef}>
                 <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
+                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowPricing(!showPricing)}
                 >
                   Pricing
                   <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showPricing ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showPricing ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={3}
+                      strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
 
                 {showPricing && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[13px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li>
@@ -394,28 +362,27 @@ export default function Header() {
 
               <div className="relative" ref={datacenterRef}>
                 <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
+                  className="text-gray-600 whitespace-nowrap text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowDataCenter(!showDataCenter)}
                 >
                   Data Center
                   <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showDataCenter ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showDataCenter ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns=""
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={3}
+                      strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
 
                 {showDataCenter && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[13px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li>
@@ -453,28 +420,27 @@ export default function Header() {
 
               <div className="relative" ref={resourcesRef}>
                 <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
+                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowResources(!showResources)}
                 >
                   Resources
                   <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showResources ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showResources ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns=""
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={3}
+                      strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
 
                 {showResources && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[13px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li>
@@ -486,28 +452,27 @@ export default function Header() {
 
               <div className="relative" ref={aboutRef}>
                 <button
-                  className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
+                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-gray-900 flex items-center"
                   onClick={() => setShowAbout(!showAbout)}
                 >
                   About
                   <svg
-                    className={`mt-1 w-3 h-3 transition-transform duration-200 ${showAbout ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showAbout ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns=""
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={3}
+                      strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
 
                 {showAbout && (
-                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[13px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/about" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>About Us</IwsLink></li>
@@ -547,7 +512,7 @@ export default function Header() {
           <div className="hidden custom:flex items-center space-x-4">
             <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>Go to Canopy Wave Cloud</Button>
             <IwsLink href="/contact">
-              <Button variant="outline" className="text-sm max-1207:text-[14px]">Contact Us</Button>
+              <Button variant="outline" className="text-sm max-1207:text-xs">Contact Us</Button>
             </IwsLink>
           </div>
 
@@ -975,7 +940,7 @@ export default function Header() {
               </ul>
             )}
           </div>
-          <div className="mt-5 space-y-2">
+          <div className="mt-4 space-y-2">
             {/* 新增 Canopy Wave Cloud 按钮 */}
             <div className="relative">
               <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -985,6 +950,7 @@ export default function Header() {
             {/* 新增 Contact US 按钮 */}
             <div className="relative mt-2">
               <Button variant="outline" className="text-gray-600 hover:text-gray-900 w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
+
                 Contact US
               </Button>
             </div>
