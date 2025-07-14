@@ -26,7 +26,18 @@
     --radius: 0.5rem
   }
 }
+@keyframes flash {
+  0%, 100% {
+    color: #FACC15;
+  }
+  50% {
+    color: #FDE047;
+  }
+}
 
+.flash {
+  animation: flash 1s infinite;
+}
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

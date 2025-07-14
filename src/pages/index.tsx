@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from './../components/header'
@@ -11,11 +12,43 @@ import PartnerCarousel from '@/components/carousel';
 import { useInView } from 'react-intersection-observer';
 import EuropeMap from '@/components/EuropeMap'
 import BackgroundTransition from '@/components/BackgroundTransition';
+import { Button } from "@/components/ui/button";
 import Spline from '@splinetool/react-spline';
 
 
 
 export default function Index() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      id: 1,
+      background: '/home_banner.svg',
+      title: 'Instant GPU',
+      subtitle: 'Cluster for',
+      highlight: 'Enterprise AI',
+      titleColor: 'text-[#80B224]',
+      bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+    },
+    {
+      id: 2,
+      background: '/banner2.jpg',
+      title: 'On-Demand',
+      subtitle: 'NVIDIA GB200 NVL72',
+      highlight: 'Aiming to Next-Generation AI and Computing Technologies',
+      titleColor: 'text-white',
+      subtitleColor: 'text-[#80B224]',
+      bgColor: 'bg-black'
+    }
+  ];
+
+  // 自动轮播
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // 5秒切换一次
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
     { id: 2, width: 80, height: 80 },
@@ -46,22 +79,85 @@ export default function Index() {
       <Header />
       <div className="w-full text-gray-600">
 
-        <div className="w-full h-[490px] relative mt-[84px]">
-          <Image
-            src="/home_banner.svg"
-            alt="Home_Banner"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
-              <SlideUp>
-                <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center text-shadow-lg">
-                  Instant GPU <br /> Cluster for <br /> Enterprise AI
-                </h1>
-              </SlideUp>
+        {/* 轮播图Banner */}
+        <div className="w-full h-[550px] relative mt-[84px] overflow-hidden">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${index === currentSlide ? 'translate-x-0' :
+                index < currentSlide ? '-translate-x-full' : 'translate-x-full'
+                }`}
+            >
+              {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
+              {slide.id === 2 && (
+                <div className="absolute inset-0 bg-black z-0" />
+              )}
 
+              <Image
+                src={slide.background}
+                alt={`Banner ${slide.id}`}
+                fill
+                className="object-cover"
+                style={slide.id === 2 ? {
+                  transform: 'scale(1.1) translateX(5%)',
+                  transformOrigin: 'center center'
+                } : {}}
+                priority={index === 0}
+              />
+
+              {/* 黑色遮罩层 - 仅对第二张图片 */}
+              {slide.id === 2 && (
+                <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
+              )}
+
+
+              <div className="absolute inset-0 z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+                  <SlideUp>
+                    {slide.id === 1 ? (
+                      <h1 className={`text-5xl sm:text-6xl font-black ${slide.titleColor} text-center text-shadow-lg`}>
+                        {slide.title} <br /> {slide.subtitle} <br /> {slide.highlight}
+                      </h1>
+                    ) : (
+                      <div className="text-center">
+                        <h1 className={`text-4xl sm:text-5xl font-bold ${slide.titleColor} mb-4`}>
+                          {slide.title}
+                        </h1>
+                        <h2 className={`text-3xl sm:text-4xl font-black ${slide.subtitleColor} mb-6`}>
+                          {slide.subtitle}
+                        </h2>
+                        <p className={`text-lg sm:text-xl ${slide.titleColor} mb-8 max-w-3xl mx-auto`}>
+                          {slide.highlight}
+                        </p>
+                        <div className="flex gap-4 justify-center">
+                          <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3" onClick={() => window.location.href = '/gb200-nvl72'}>
+                            Learn More
+                          </Button>
+                          <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                            Launch Now
+                          </Button>
+                        </div>
+                      </div>
+                    )}
+                  </SlideUp>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* 轮播指示器 */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="flex space-x-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                    ? 'bg-[#80B224] scale-125'
+                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                    }`}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -176,8 +272,8 @@ export default function Index() {
           </div>
         </div>
 
-                {/* News Section */}
-                <div className="bg-[#F9F9F9] sm:py-20">
+        {/* News Section */}
+        <div className="bg-[#F9F9F9] sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 text-left">

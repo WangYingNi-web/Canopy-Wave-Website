@@ -118,7 +118,7 @@ export default function Header() {
                   className="mt-5 text-gray-900 text-[14px] max-1207:text-[14px] font-medium hover:text-[#8CC63F] flex flex-col items-center"
                   onClick={() => setShowGB(!showGB)}
                 >
-                  <span>GB200 NVL72</span>
+                  <span>GB200 NVL72 <span className='flash'>NEW</span></span>
                   <svg
                     className={`mt-1 w-3 h-3 transition-transform duration-200 ${showGB ? 'rotate-180' : ''}`}
                     fill="none"
@@ -985,7 +985,6 @@ export default function Header() {
             {/* 新增 Contact US 按钮 */}
             <div className="relative mt-2">
               <Button variant="outline" className="text-gray-600 hover:text-gray-900 w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-
                 Contact US
               </Button>
             </div>
