@@ -156,7 +156,7 @@ export default function BlogDetail() {
               content: [
                 'With Canopy Wave and NVIDIA GB200 NVL72, you get more than just cutting-edge technology—you get a partner dedicated to your success. Let us help you unlock new possibilities, accelerate your projects, and stay ahead in the fast-moving world of AI.',
                 'Ready to experience the next level of AI computing? Reserve your spot today!',
-                '[canopywave.com](https://www.canopywave.com)'
+                // '[canopywave.com](https://www.canopywave.com)'
               ]
             }
           ]
