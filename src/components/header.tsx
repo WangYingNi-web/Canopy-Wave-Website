@@ -10,8 +10,6 @@ import { Button } from "@/components/ui/button";
 export default function Header() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
-  const currentRouter = routerList.find((e) => e.path === router.asPath)?.name
-  // console.log(currentRouter,"currentRouter");
   const [activeMenu, setActiveMenu] = useState<string>('home');
 
 

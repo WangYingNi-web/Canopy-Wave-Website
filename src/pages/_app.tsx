@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
  
         {/* 预加载关键图片资源 */}
+        <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.png" as="image" type="image/svg+xml" />
         {/* <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" /> */}
         {/* <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
         <link rel="preload" href="/storage/banner.svg" as="image" type="image/svg+xml" /> */}
