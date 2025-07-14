@@ -48,13 +48,13 @@ export default function Newsroom() {
             date: "April 16, 2025",
             image: "/blog1.webp"
         },
-        // {
-        //     id: 2,
-        //     title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
-        //     description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
-        //     date: "May 15, 2025",
-        //     image: "/blog2.svg"
-        // },
+        {
+            id: 2,
+            title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
+            description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
+            date: "July 14, 2025",
+            image: "/blog/blog2.png"
+        },
     ];
     const newsroomPosts: NewsroomPost[] = [
         {
@@ -129,13 +129,16 @@ export default function Newsroom() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
                         <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleBlogClick(post.title)}>
-                            <div className="relative h-60 mb-4 overflow-hidden rounded-lg">
-                                <Image
-                                    src={post.image}
-                                    alt={post.title}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
+                            <div className="relative mb-4 overflow-hidden rounded-lg shadow-xl">
+                                <div className="aspect-[16/9] w-full overflow-hidden">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.title}
+                                        fill
+                                        className="object-cover transition-all duration-300 group-hover:scale-105"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                </div>
                             </div>
                             <h3 className="text-sm font-semibold text-gray-600 mb-2 flex-grow">{post.title}</h3>
                             <div className="flex items-center space-x-4 text-sm text-gray-500 mt-auto">

@@ -113,30 +113,50 @@ export default function BlogDetail() {
           ],
         }
 
-      case 'the-rise-of-enterprise-ai:-trends-in-inferencing-and-gpu-resource-planning':
+      case 'canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72':
         return {
           id: 2,
-          title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
-          description: "AI Agent Summit Keynote by James Liao @Canopy Wave",
+          title: 'Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72',
+          description: 'Revolutionizing AI Infrastructure with Cutting-Edge Technology',
           sections: [
-            {
-              title: 'How Canopy Wave Ensures Secure AI-Driven Innovation',
-              content: [
-                'Organizations are increasingly using AI to save costs and generate revenue. Recently countless open-source models have democratized access to AI’s capabilities. Although this is beneficial, it also increases the risk of data breaches. As enterprises harness AI’s potential while safeguarding their confidential information, the demand for secure and private cloud services have surged. We will examine professional strategies for optimizing the security and efficiency in AI deployments, and how Canopy Wave can help.'
-              ]
-            },
-            {
-              title: 'Key takeaways',
-              content: [
-                '• Rising costs of training AI combined with slow revenue growth have caused a convergence in AI models.',
-                '• Increasing accessibility of open-source AI models will lead to the adoption of AI inferencing in various industries.',
-                '• Unlike consumers, enterprises possess trade secrets and confidential information that must be protected. To safeguard these assets, we spot a rising demand for privatized clouds and proprietary AI models.'
-              ]
-            },
             {
               title: '',
               content: [
-                <>AI is evolving fast—are your GPU clusters keeping up? Watch the webinar to learn more or <Link href="/contact" className="text-[#80B224] hover:text-[#6b9a1f] underline">contact us</Link> to get started now.</>,
+                'Canopy Wave is thrilled to announce our upcoming GPU cluster service, powered by the revolutionary NVIDIA GB200 NVL72 platform. This launch not only sets a new benchmark for AI and high-performance computing, but also brings Canopy Wave\'s unique expertise and service excellence to the forefront of the AI infrastructure revolution.'
+              ]
+            },
+            {
+              title: 'Why Choose Canopy Wave + GB200 NVL72?',
+              content: [
+                'The NVIDIA GB200 NVL72 is built for the next era of AI, supporting trillion-parameter models and massive data workloads with:',
+                '• 30x faster LLM inference and 4x faster LLM training compared to the previous generation (HGX H100)',
+                '• 25x higher energy efficiency thanks to advanced FP4 quantization and the latest Transformer engine',
+                '• Unmatched memory and bandwidth: 13.4TB HBM3e GPU memory, 17TB CPU memory, and 130TB/s NVLink bandwidth',
+                'But at Canopy Wave, we believe technology should work for you—not the other way around.',
+                'Here\'s how we make that happen:'
+              ]
+            },
+            {
+              title: 'The Canopy Wave Advantage',
+              content: [
+                '1. Effortless Start, Instant Results',
+                'No complicated setup. Our platform is ready to go, with popular AI tools pre-installed. You can launch your projects in minutes, not days.',
+                '2. Grows With You',
+                'Whether you\'re a startup or a global enterprise, our flexible system lets you scale up or down as your needs change. Only pay for what you use.',
+                '3. Real People, Real Support',
+                'Our expert team is here 24/7 to answer questions, solve problems, and help you get the most out of your AI projects—no matter your experience level.',
+                '4. Worry-Free Security and Reliability',
+                'Your data and work are protected in our secure, high-availability data centers. Focus on your ideas—we\'ll handle the rest.',
+                '5. All-in-One AI Platform',
+                'From data preparation to training, testing, and deployment, Canopy Wave supports your entire AI journey. Whether you\'re working with text, images, video, or scientific data, we\'ve got you covered.'
+              ]
+            },
+            {
+              title: 'Step Into the Future of AI',
+              content: [
+                'With Canopy Wave and NVIDIA GB200 NVL72, you get more than just cutting-edge technology—you get a partner dedicated to your success. Let us help you unlock new possibilities, accelerate your projects, and stay ahead in the fast-moving world of AI.',
+                'Ready to experience the next level of AI computing? Reserve your spot today!',
+                '[canopywave.com](https://www.canopywave.com)'
               ]
             }
           ]

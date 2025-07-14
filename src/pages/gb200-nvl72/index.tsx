@@ -86,7 +86,6 @@ export default function GB200NVL72Page() {
           </SlideFromLeft>
           <div className="flex-1 flex justify-center lg:justify-end w-full mt-4 lg:mt-0">
             <SlideUp>
-              {/* 给style试试 */}
               <div className="relative w-full max-w-md lg:max-w-none">
                 <Image
                   src="/gb200-nvl72/nvidia-gb200-nvl72.webp"
