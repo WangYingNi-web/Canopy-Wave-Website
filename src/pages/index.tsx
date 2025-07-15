@@ -20,20 +20,76 @@ import Spline from '@splinetool/react-spline';
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  // 在现有的 useState 声明附近添加
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  // 修改新闻轮播的状态管理 - 从中间位置开始，确保左右都能滑动
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(40); // 设置为扩展数组的中间位置
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // 在现有的处理函数附近添加
-  const handleNextNews = () => {
-    if (currentNewsIndex < 1) { // 最多可以向右移动1位（显示卡片2,3,4）
-      setCurrentNewsIndex(currentNewsIndex + 1);
+  // 新闻卡片数据
+  const newsCards = [
+    {
+      id: 1,
+      href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",
+      image: "/blog/blog2.png",
+      title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
+      description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
+      date: "July 14, 2025"
+    },
+    {
+      id: 2,
+      href: "/events/ai-agent-summit-keynote",
+      image: "/blog2.svg",
+      title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
+      description: "by James Liao @Canopy Wave",
+      date: "May 15, 2025"
+    },
+    {
+      id: 3,
+      href: "/blog/joint-blog-accelerate-enterprise-ai",
+      image: "/blog1.webp",
+      title: "Joint Blog - Accelerate Enterprise AI",
+      description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
+      date: "April 16, 2025"
+    },
+    {
+      id: 4,
+      href: "/events/canopy-confidentialmind-partnership",
+      image: "/confidentialmind-logo.png",
+      title: "Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption",
+      description: "by James Liao @Canopy Wave",
+      date: "April 1, 2025"
     }
+  ];
+
+  // 创建扩展的卡片数组以支持无缝循环
+  const getExtendedCards = () => {
+    // 创建足够多的重复卡片以支持无限滑动
+    const repeats = 100; // 增加重复次数
+    const extended = [];
+    for (let i = 0; i < repeats; i++) {
+      extended.push(...newsCards);
+    }
+    return extended;
+  };
+
+  // 获取当前显示的卡片起始索引
+  const getDisplayStartIndex = () => {
+    const totalCards = newsCards.length;
+    const baseIndex = Math.floor(getExtendedCards().length / 2) - totalCards;
+    return baseIndex + (currentNewsIndex % totalCards);
+  };
+
+  const handleNextNews = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentNewsIndex(prev => prev + 1);
+    setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const handlePrevNews = () => {
-    if (currentNewsIndex > 0) {
-      setCurrentNewsIndex(currentNewsIndex - 1);
-    }
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentNewsIndex(prev => prev - 1);
+    setTimeout(() => setIsTransitioning(false), 300);
   };
   const slides = [
     {
@@ -321,145 +377,66 @@ export default function Index() {
                 </IwsLink>
               </div>
             </SlideUp>
+
             {/* News Cards Carousel */}
             <div className="relative -mx-3">
               <div className="overflow-hidden">
                 <div
                   className="flex transition-transform duration-300 ease-in-out"
-                  style={{ transform: `translateX(-${currentNewsIndex * (100 / 3)}%)` }}
+                  style={{
+                    transform: `translateX(-${currentNewsIndex * (100 / 3)}%)`
+                  }}
                 >
-                  {/* News Card 1 */}
-                  <div className="w-1/3 flex-shrink-0 px-3">
-                    <Link href="/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72">
-                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
-                        <div className="relative h-[220px] w-full overflow-hidden">
-                          <Image
-                            src="/blog/blog2.png"
-                            alt="blog2 Image"
-                            fill
-                            sizes="(max-width: 640px) 100vw, 33vw"
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                        </div>
-                        <div className="h-[200px] p-6 flex flex-col flex-grow">
-                          <h4 className="text-l font-semibold mb-3 line-clamp-2">
-                            Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72
-                          </h4>
-                          <p className="text-gray-600 text-sm mb-6 line-clamp-2">Revolutionizing AI Infrastructure with Cutting-Edge Technology</p>
-                          <div className="flex flex-wrap items-center gap-4 mt-auto">
-                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
-                            <span className="text-gray-500 text-sm">July 14, 2025</span>
+                  {getExtendedCards().map((card, index) => (
+                    <div key={`${card.id}-${Math.floor(index / newsCards.length)}-${index}`} className="w-1/3 flex-shrink-0 px-3">
+                      <Link href={card.href}>
+                        <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                          <div className="relative h-[220px] w-full overflow-hidden">
+                            <Image
+                              src={card.image}
+                              alt={`${card.title} Image`}
+                              fill
+                              sizes="(max-width: 640px) 100vw, 33vw"
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              unoptimized={card.image.includes('.webp')}
+                            />
+                          </div>
+                          <div className="h-[200px] p-6 flex flex-col flex-grow">
+                            <h4 className="text-l font-semibold mb-3 line-clamp-2">
+                              {card.title}
+                            </h4>
+                            <p className="text-gray-600 text-sm mb-6 line-clamp-2">{card.description}</p>
+                            <div className="flex flex-wrap items-center gap-4 mt-auto">
+                              <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
+                              <span className="text-gray-500 text-sm">{card.date}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  </div>
-
-                  {/* News Card 2 */}
-                  <div className="w-1/3 flex-shrink-0 px-3">
-                    <Link href="/events/ai-agent-summit-keynote">
-                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
-                        <div className="relative h-[220px] w-full overflow-hidden">
-                          <Image
-                            src="/blog2.svg"
-                            alt="Blog Image"
-                            fill
-                            sizes="(max-width: 640px) 100vw, 33vw"
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                        </div>
-                        <div className="h-[200px] p-6 flex flex-col flex-grow">
-                          <h4 className="text-l font-semibold mb-3">
-                            The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning
-                          </h4>
-                          <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
-                          <div className="flex flex-wrap items-center gap-4 mt-auto">
-                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
-                            <span className="text-gray-500 text-sm">May 15, 2025</span>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-
-                  {/* News Card 3 */}
-                  <div className="w-1/3 flex-shrink-0 px-3">
-                    <Link href="/blog/joint-blog-accelerate-enterprise-ai">
-                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
-                        <div className="relative h-[220px] w-full overflow-hidden">
-                          <Image
-                            src="/blog1.webp"
-                            alt="Blog Image"
-                            fill
-                            sizes="(max-width: 640px) 100vw, 33vw"
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                            unoptimized
-                          />
-                        </div>
-                        <div className="h-[200px] p-6 flex flex-col flex-grow">
-                          <h4 className="text-l font-semibold mb-3">
-                            Joint Blog - Accelerate Enterprise AI
-                          </h4>
-                          <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
-                          <div className="flex flex-wrap items-center gap-4 mt-auto">
-                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
-                            <span className="text-gray-500 text-sm">April 16, 2025</span>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-
-                  {/* News Card 4 */}
-                  <div className="w-1/3 flex-shrink-0 px-3">
-                    <Link href="/events/canopy-confidentialmind-partnership">
-                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
-                        <div className="relative h-[220px] w-full overflow-hidden">
-                          <Image
-                            src="/confidentialmind-logo.png"
-                            alt="confidentialmind Image"
-                            fill
-                            sizes="(max-width: 640px) 100vw, 33vw"
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                        </div>
-                        <div className="h-[200px] p-6 flex flex-col flex-grow">
-                          <h4 className="text-l font-semibold mb-3">
-                            Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption
-                          </h4>
-                          <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
-                          <div className="flex flex-wrap items-center gap-4 mt-auto">
-                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
-                            <span className="text-gray-500 text-sm">April 1, 2025</span>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               </div>
-              {/* Navigation Buttons */}
-              {currentNewsIndex > 0 && (
-                <button
-                  onClick={handlePrevNews}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              )}
+              {/* Navigation Buttons - Always visible */}
+              <button
+                onClick={handlePrevNews}
+                disabled={isTransitioning}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10 disabled:opacity-50"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
-              {currentNewsIndex < 1 && (
-                <button
-                  onClick={handleNextNews}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              )}
+              <button
+                onClick={handleNextNews}
+                disabled={isTransitioning}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10 disabled:opacity-50"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

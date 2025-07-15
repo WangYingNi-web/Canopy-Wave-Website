@@ -57,7 +57,7 @@ export default function GB200NVL72Page() {
       <Header />
       <Head>
         <title>Canopy Wave | On-Demand NVIDIA GB200 NVL72</title>
-        <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" />
+        {/* <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" /> */}
         <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
       </Head>
       {/* Hero Section */}
