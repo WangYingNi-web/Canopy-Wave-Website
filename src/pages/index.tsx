@@ -19,6 +19,7 @@ import Spline from '@splinetool/react-spline';
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   const slides = [
     {
       id: 1,
@@ -41,14 +42,28 @@ export default function Index() {
     }
   ];
 
-  // 自动轮播
+  //  自动轮播
   useEffect(() => {
+    if (!autoPlay) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 10000); // 10秒切换一次
+    }, 6000); // 6秒切换一次
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [slides.length, autoPlay]);
+
+  // 手动切换处理函数
+  const handleManualSlideChange = (index: number) => {
+    setCurrentSlide(index);
+    setAutoPlay(false); // 暂停自动播放
+
+    // 3秒后恢复自动播放
+    setTimeout(() => {
+      setAutoPlay(true);
+    }, 1000);
+  };
+
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
     { id: 2, width: 80, height: 80 },
@@ -109,7 +124,7 @@ export default function Index() {
               {slide.id === 2 && (
                 <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
               )}
-  
+
 
               <div className="absolute inset-0 z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
@@ -151,10 +166,10 @@ export default function Index() {
               {slides.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => handleManualSlideChange(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                    ? 'bg-[#80B224] scale-125'
-                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                      ? 'bg-[#80B224] scale-125'
+                      : 'bg-white bg-opacity-50 hover:bg-opacity-75'
                     }`}
                 />
               ))}
