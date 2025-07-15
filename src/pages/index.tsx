@@ -20,6 +20,21 @@ import Spline from '@splinetool/react-spline';
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
+  // 在现有的 useState 声明附近添加
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+
+  // 在现有的处理函数附近添加
+  const handleNextNews = () => {
+    if (currentNewsIndex < 1) { // 最多可以向右移动1位（显示卡片2,3,4）
+      setCurrentNewsIndex(currentNewsIndex + 1);
+    }
+  };
+
+  const handlePrevNews = () => {
+    if (currentNewsIndex > 0) {
+      setCurrentNewsIndex(currentNewsIndex - 1);
+    }
+  };
   const slides = [
     {
       id: 1,
@@ -168,8 +183,8 @@ export default function Index() {
                   key={index}
                   onClick={() => handleManualSlideChange(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                      ? 'bg-[#80B224] scale-125'
-                      : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                    ? 'bg-[#80B224] scale-125'
+                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
                     }`}
                 />
               ))}
@@ -288,88 +303,163 @@ export default function Index() {
         </div>
 
         {/* News Section */}
-        <div className="bg-[#F9F9F9] sm:py-20">
+        <div className="bg-[#F9F9F9] py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
-              <h2 className="text-3xl sm:text-4xl font-black mb-12 text-left">
-                Explore Canopy Wave: Fresh Blog Posts & Events
-              </h2>
+              <div className='flex items-center justify-between mb-12'>
+                <h2 className="text-3xl sm:text-4xl font-black text-left">
+                  Explore Canopy Wave: Fresh Blog Posts & Events
+                </h2>
+                {/* See All Link */}
+                <IwsLink href="/about/newsroom" className="text-gray-600 hover:text-[#8CC63F] inline-flex items-center">
+                  <span className="flex items-center">
+                    See All
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                </IwsLink>
+              </div>
             </SlideUp>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
-              {/* News Card 1 */}
-              <Link href="/blog/joint-blog-accelerate-enterprise-ai">
-                <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer lg:h-[400px] h-[450px] flex flex-col">
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src="/blog1.webp"
-                      alt="Blog Image"
-                      fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      unoptimized
-                    />
+            {/* News Cards Carousel */}
+            <div className="relative -mx-3">
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-300 ease-in-out"
+                  style={{ transform: `translateX(-${currentNewsIndex * (100 / 3)}%)` }}
+                >
+                  {/* News Card 1 */}
+                  <div className="w-1/3 flex-shrink-0 px-3">
+                    <Link href="/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72">
+                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                        <div className="relative h-[220px] w-full overflow-hidden">
+                          <Image
+                            src="/blog/blog2.png"
+                            alt="blog2 Image"
+                            fill
+                            sizes="(max-width: 640px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="h-[200px] p-6 flex flex-col flex-grow">
+                          <h4 className="text-l font-semibold mb-3 line-clamp-2">
+                            Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72
+                          </h4>
+                          <p className="text-gray-600 text-sm mb-6 line-clamp-2">Revolutionizing AI Infrastructure with Cutting-Edge Technology</p>
+                          <div className="flex flex-wrap items-center gap-4 mt-auto">
+                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
+                            <span className="text-gray-500 text-sm">July 14, 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h4 className="text-l font-semibold mb-3">
-                      Joint Blog - Accelerate Enterprise AI
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
-                    <div className="flex flex-wrap items-center gap-4 mt-auto">
-                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Article</span>
-                      <span className="text-gray-500 text-sm">April 16, 2025</span>
-                    </div>
+
+                  {/* News Card 2 */}
+                  <div className="w-1/3 flex-shrink-0 px-3">
+                    <Link href="/events/ai-agent-summit-keynote">
+                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                        <div className="relative h-[220px] w-full overflow-hidden">
+                          <Image
+                            src="/blog2.svg"
+                            alt="Blog Image"
+                            fill
+                            sizes="(max-width: 640px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="h-[200px] p-6 flex flex-col flex-grow">
+                          <h4 className="text-l font-semibold mb-3">
+                            The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning
+                          </h4>
+                          <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
+                          <div className="flex flex-wrap items-center gap-4 mt-auto">
+                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
+                            <span className="text-gray-500 text-sm">May 15, 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* News Card 3 */}
+                  <div className="w-1/3 flex-shrink-0 px-3">
+                    <Link href="/blog/joint-blog-accelerate-enterprise-ai">
+                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                        <div className="relative h-[220px] w-full overflow-hidden">
+                          <Image
+                            src="/blog1.webp"
+                            alt="Blog Image"
+                            fill
+                            sizes="(max-width: 640px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            unoptimized
+                          />
+                        </div>
+                        <div className="h-[200px] p-6 flex flex-col flex-grow">
+                          <h4 className="text-l font-semibold mb-3">
+                            Joint Blog - Accelerate Enterprise AI
+                          </h4>
+                          <p className="text-gray-600 text-sm mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind</p>
+                          <div className="flex flex-wrap items-center gap-4 mt-auto">
+                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
+                            <span className="text-gray-500 text-sm">April 16, 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* News Card 4 */}
+                  <div className="w-1/3 flex-shrink-0 px-3">
+                    <Link href="/events/canopy-confidentialmind-partnership">
+                      <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                        <div className="relative h-[220px] w-full overflow-hidden">
+                          <Image
+                            src="/confidentialmind-logo.png"
+                            alt="confidentialmind Image"
+                            fill
+                            sizes="(max-width: 640px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="h-[200px] p-6 flex flex-col flex-grow">
+                          <h4 className="text-l font-semibold mb-3">
+                            Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption
+                          </h4>
+                          <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
+                          <div className="flex flex-wrap items-center gap-4 mt-auto">
+                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
+                            <span className="text-gray-500 text-sm">April 1, 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
-              </Link>
-              {/* News Card 2 */}
-              <Link href="/events/canopy-confidentialmind-partnership">
-                <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer lg:h-[400px] h-[450px] flex flex-col">
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src="/confidentialmind-logo.png"
-                      alt="confidentialmind Image"
-                      fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h4 className="text-l font-semibold mb-3">
-                      Canopy Wave and ConfidentialMind Join Forces to
-                      Accelerate Enterprise AI Adoption
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
-                    <div className="flex flex-wrap items-center gap-4 mt-auto">
-                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
-                      <span className="text-gray-500 text-sm">April 1, 2025</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              {/* News Card 3 */}
-              <Link href="/blog/the-rise-of-enterprise-ai:-trends-in-inferencing-and-gpu-resource-planning">
-                <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer lg:h-[400px] h-[450px] flex flex-col">
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src="/blog2.svg"
-                      alt="Blog Image"
-                      fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h4 className="text-l font-semibold mb-3">
-                      The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-6">by James Liao @Canopy Wave</p>
-                    <div className="flex flex-wrap items-center gap-4 mt-auto">
-                      <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">Read More</span>
-                      <span className="text-gray-500 text-sm">May 15, 2025</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              </div>
+              {/* Navigation Buttons */}
+              {currentNewsIndex > 0 && (
+                <button
+                  onClick={handlePrevNews}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+              )}
+
+              {currentNewsIndex < 1 && (
+                <button
+                  onClick={handleNextNews}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              )}
             </div>
           </div>
         </div>

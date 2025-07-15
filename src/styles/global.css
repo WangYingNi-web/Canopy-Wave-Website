@@ -28,10 +28,10 @@
 }
 @keyframes flash {
   0%, 100% {
-    color: #FACC15;
+    color: #9ddb4b;
   }
   50% {
-    color: #FDE047;
+    color: #80B224;
   }
 }
 
