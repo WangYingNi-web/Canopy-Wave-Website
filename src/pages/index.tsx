@@ -330,7 +330,7 @@ export default function Index() {
                   <Image src="/icon/NvidiaH100.svg" alt="GB200" width={34} height={34} className='svg-gray' />
                   <h3 className="text-l font-bold ml-6">NVIDIA GB200 NVL72</h3>
                 </div>
-                <p className="text-gray-600 text-l mb-6">NVIDIA GB200 NVL72
+                <p className="text-gray-600 text-l mb-6">
                   GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
                 <IwsLink href="/gb200-nvl72" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
               </div>
