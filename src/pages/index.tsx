@@ -384,7 +384,8 @@ export default function Index() {
                 <div
                   className="flex transition-transform duration-300 ease-in-out"
                   style={{
-                    transform: `translateX(-${currentNewsIndex * (100 / 3)}%)`
+                    transform: `translateX(-${currentNewsIndex * (100 / 3)}%)`,
+                    minWidth: '1250px' 
                   }}
                 >
                   {getExtendedCards().map((card, index) => (
