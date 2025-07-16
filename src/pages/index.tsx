@@ -305,25 +305,34 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-                NVIDIA H100 & H200 GPUs <br /> now available
+                NVIDIA H100, H200 & GB200 GPUs <br /> now available
               </h2>
             </SlideUp>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-l font-bold ml-6">NVIDIA H100</h3>
                 </div>
-                <p className="text-gray-600 text-l mb-6">H100 extends NVIDIA’s market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
+                <p className="text-gray-600 text-l mb-6">H100 extends NVIDIA's market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
                 <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
               </div>
               <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
                 <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
+                  <Image src="/icon/NvidiaH100.svg" alt="H200" width={34} height={34} className='svg-gray' />
                   <h3 className="text-l font-bold ml-6">NVIDIA H200</h3>
                 </div>
                 <p className="text-gray-600 text-l mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
                 <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
+              </div>
+              <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
+                <div className="flex items-center mb-6">
+                  <Image src="/icon/NvidiaH100.svg" alt="GB200" width={34} height={34} className='svg-gray' />
+                  <h3 className="text-l font-bold ml-6">NVIDIA GB200 NVL72</h3>
+                </div>
+                <p className="text-gray-600 text-l mb-6">NVIDIA GB200 NVL72
+                  GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
+                <IwsLink href="/gb200-nvl72" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
               </div>
             </div>
           </div>
@@ -385,7 +394,7 @@ export default function Index() {
                   className="flex transition-transform duration-300 ease-in-out"
                   style={{
                     transform: `translateX(-${currentNewsIndex * (100 / 3)}%)`,
-                    minWidth: '1250px' 
+                    minWidth: '1250px'
                   }}
                 >
                   {getExtendedCards().map((card, index) => (
