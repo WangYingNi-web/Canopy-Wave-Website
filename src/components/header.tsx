@@ -609,7 +609,8 @@ export default function Header() {
                     </svg>
                   </IwsLink>
                   <ul className={`pl-4 mt-2 space-y-2`}>
-                    <IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink>
+                    <li><IwsLink href="/gb200-nvl72" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}><span>NVIDIA GB200 NVL72 <span className='flash'>NEW</span></span></IwsLink></li>
+                    <li><IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
                     <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
                     <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>CPU Nodes</IwsLink></li>
                     <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Bare Metal GPU Cluster</IwsLink></li>

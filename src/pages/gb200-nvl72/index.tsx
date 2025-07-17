@@ -127,6 +127,7 @@ export default function GB200NVL72Page() {
                 width={1300}
                 height={400}
                 className="rounded-lg object-contain transition-transform duration-500 group-hover:scale-105"
+                priority
               />
             </div>
           </SlideUp>
