@@ -61,7 +61,7 @@ export default function GB200NVL72Page() {
         <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
       </Head>
       {/* Hero Section */}
-      <div className="w-full h-[700px]  mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">
+      <div className="w-full h-[790px] lg:h-[700px] mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
           <SlideFromLeft>
             <div className="flex-1 max-w-2xl text-center lg:text-left">
@@ -260,7 +260,7 @@ export default function GB200NVL72Page() {
       </div>
 
       <div className="bg-[#F9F9F9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div className='mt-6'>
               <SlideUp>
