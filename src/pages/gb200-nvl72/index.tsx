@@ -244,7 +244,7 @@ export default function GB200NVL72Page() {
             {/* ​​24/7 Support​ */}
             <div className="border border-gray-200 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div id="training-count" className="text-4xl font-black text-[#8CC63F] mb-2">0x</div>
-              <p className="text-gray-600">Faster LLM learning
+              <p className="text-gray-600">Faster LLM training
                 <br /> VS
                 <br /> HGX H100</p>
             </div>
