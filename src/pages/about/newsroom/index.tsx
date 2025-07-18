@@ -8,7 +8,7 @@ import SlideUp from '@/components/slide';
 import { useRouter } from 'next/router';
 import React from 'react';
 import IwsLink from '@/components/IwsLink'
-import Link  from 'next/navigation';
+import Link from 'next/navigation';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import { Button } from "@/components/ui/button";
 import BackgroundTransition from '@/components/BackgroundTransition';
@@ -131,7 +131,7 @@ export default function Newsroom() {
                     {blogPosts.map((post) => (
                         <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleBlogClick(post.title)}>
                             <div className="relative mb-4 overflow-hidden rounded-lg shadow-xl">
-                                <div className="aspect-[16/9] w-full overflow-hidden">
+                                <div className="relative aspect-[16/9] w-full overflow-hidden">
                                     <Image
                                         src={post.image}
                                         alt={post.title}

@@ -63,13 +63,14 @@ export default function Index() {
   // 创建扩展的卡片数组以支持无缝循环
   const getExtendedCards = () => {
     // 创建足够多的重复卡片以支持无限滑动
-    const repeats = 100; // 增加重复次数
+    const repeats = 20; // 增加重复次数
     const extended = [];
     for (let i = 0; i < repeats; i++) {
       extended.push(...newsCards);
     }
     return extended;
   };
+  
 
   // 获取当前显示的卡片起始索引
   const getDisplayStartIndex = () => {

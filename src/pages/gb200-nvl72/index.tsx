@@ -284,8 +284,7 @@ export default function GB200NVL72Page() {
                 </div>
               </SlideUp>
             </div>
-            <div className="space-y-12">
-
+            <div>
               <div className="flex items-start gap-4 p-6 border-b-[1px] border-b-gray-200">
                 <div>
                   <div className="flex items-center gap-4 mb-2">
