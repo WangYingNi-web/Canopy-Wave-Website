@@ -70,7 +70,7 @@ export default function Index() {
     }
     return extended;
   };
-  
+
 
   // 获取当前显示的卡片起始索引
   const getDisplayStartIndex = () => {
@@ -108,6 +108,16 @@ export default function Index() {
       title: 'On-Demand',
       subtitle: 'NVIDIA GB200 NVL72',
       highlight: 'Aiming to Next-Generation AI and Computing Technologies',
+      titleColor: 'text-white',
+      subtitleColor: 'text-[#80B224]',
+      bgColor: 'bg-black'
+    },
+    {
+      id: 3,
+      background: '/hgx-b200/5.png',
+      title: 'On-Demand',
+      subtitle: 'NVIDIA HGX 200',
+      highlight: 'The Foundation of Your AI Workloads and Computing Technologies',
       titleColor: 'text-white',
       subtitleColor: 'text-[#80B224]',
       bgColor: 'bg-black'
@@ -176,24 +186,40 @@ export default function Index() {
                 }`}
             >
               {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
-              {slide.id === 2 && (
+              {slide.id !== 1 && (
                 <div className="absolute inset-0 bg-black z-0" />
               )}
-
-              <Image
-                src={slide.background}
-                alt={`Banner ${slide.id}`}
-                fill
-                className="object-cover"
-                style={slide.id === 2 ? {
-                  transform: 'scale(1.1) translateX(5%)',
-                  transformOrigin: 'center center'
-                } : {}}
-                priority={index === 0}
-              />
+              {slide.id === 3 ? (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src={slide.background}
+                    alt={`Banner ${slide.id}`}
+                    width={850}
+                    height={550}
+                    className="object-cover"
+                    style={slide.id === 3 ? {
+                      transform: 'scale(0.8)',
+                      transformOrigin: 'center center'
+                    } : {}}
+                    priority={index === 0}
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={slide.background}
+                  alt={`Banner ${slide.id}`}
+                  fill
+                  className="object-cover"
+                  style={slide.id === 2 ? {
+                    transform: 'scale(1.1) translateX(5%)',
+                    transformOrigin: 'center center'
+                  } : {}}
+                  priority={index === 0}
+                />
+              )}
 
               {/* 黑色遮罩层 - 仅对第二张图片 */}
-              {slide.id === 2 && (
+              {slide.id !== 1 && (
                 <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
               )}
 
@@ -217,7 +243,8 @@ export default function Index() {
                           {slide.highlight}
                         </p>
                         <div className="flex gap-4 justify-center">
-                          <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3" onClick={() => window.location.href = '/gb200-nvl72'}>
+                          <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3"
+                            onClick={() => window.location.href = slide.id === 2 ? '/gb200-nvl72' : '/hgx-b200'}>
                             Learn More
                           </Button>
                           <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
@@ -306,27 +333,76 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-                NVIDIA H100, H200 & GB200 GPUs <br /> now available
+                NVIDIA H100, H200, B200 & GB200 GPUs <br /> now available
               </h2>
             </SlideUp>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-8">
-              <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
-                <div className="flex items-center mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
+              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+                {/* 添加背景装饰 */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
-                  <h3 className="text-l font-bold ml-6">NVIDIA H100</h3>
+                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA H100</h3>
                 </div>
-                <p className="text-gray-600 text-l mb-6">H100 extends NVIDIA's market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
-                <IwsLink href="/compute-services#hgx-h100" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
+                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">H100 extends NVIDIA's market-leading inference leadership with several advancements that accelerate inference by up to 30X and deliver the lowest latency</p>
+                <IwsLink href="/compute-services#hgx-h100" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </IwsLink>
               </div>
-              <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 rounded-lg p-8 sm:p-10">
-                <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="H200" width={34} height={34} className='svg-gray' />
-                  <h3 className="text-l font-bold ml-6">NVIDIA H200</h3>
+
+              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+                {/* 添加背景装饰 */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="flex items-center mb-6 relative z-10">
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
+                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA H200</h3>
                 </div>
-                <p className="text-gray-600 text-l mb-6">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
-                <IwsLink href="/compute-services#hgx-h200" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
+                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">The NVIDIA H200 GPU supercharges generative AI and high-performance computing (HPC) workloads with game-changing performance and memory capabilities</p>
+                <IwsLink href="/compute-services#hgx-h200" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </IwsLink>
               </div>
-              <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
+              
+              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+                {/* 添加背景装饰 */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="flex items-center mb-6 relative z-10">
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
+                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA HGX B200</h3>
+                </div>
+                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">The NVIDIA HGX B200 GPU is based on the latest Blackwell architecture with 180GB of HBM3e memory at 8TB/s. As a premier accelerated scale-up x86 platform with up to 15X faster real-time inference performance, 12X lower cost, and 12X less energy use, HGX B200 is designed for the most demanding AI, data analytics, and high-performance computing (HPC) workloads</p>
+                <IwsLink href="/hgx-b200" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </IwsLink>
+              </div>
+
+              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+                {/* 添加背景装饰 */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="flex items-center mb-6 relative z-10">
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
+                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA GB200 NVL72</h3>
+                </div>
+                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
+                <IwsLink href="/gb200-nvl72" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </IwsLink>
+              </div>
+             
+
+              {/* <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
                   <Image src="/icon/NvidiaH100.svg" alt="GB200" width={34} height={34} className='svg-gray' />
                   <h3 className="text-l font-bold ml-6">NVIDIA GB200 NVL72</h3>
@@ -334,7 +410,7 @@ export default function Index() {
                 <p className="text-gray-600 text-l mb-6">
                   GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
                 <IwsLink href="/gb200-nvl72" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

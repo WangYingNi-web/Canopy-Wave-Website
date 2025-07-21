@@ -273,7 +273,7 @@ export default function HGXB200Page() {
                                         src="/hgx-b200/b200.png"
                                         alt="B200"
                                         width={500}
-                                        height={300}
+                                        height={350}
                                         className="rounded-lg"
                                         priority
                                     />
@@ -298,7 +298,7 @@ export default function HGXB200Page() {
                                     </FadeIn>
                                 </div>
                             </div>
-                            <div className="flex items-start gap-4 p-8 border-b-[1px] border-b-gray-200">
+                            <div className="flex items-start gap-4 p-6 border-b-[1px] border-b-gray-200">
                                 <div>
                                     <div className="flex items-center gap-4 mb-2">
                                         <Image src="/compute/fast.svg" alt="Workloads" width={34} height={34} className="mt-1 svg-gray" />
