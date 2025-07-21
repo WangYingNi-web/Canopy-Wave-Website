@@ -171,7 +171,7 @@ export default function Header() {
                                 </IwsLink>
                                 <ul className="pl-4 mt-2 space-y-2">
                                   <li><IwsLink href="/gb200-nvl72" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}><span>NVIDIA GB200 NVL72 <span className='flash'>NEW</span></span></IwsLink></li>
-                                  <li><IwsLink href="/hgx-b200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>NVIDIA HGX B200</IwsLink></li>
+                                  <li><IwsLink href="/hgx-b200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}><span>NVIDIA HGX B200 <span className='flash'>NEW</span></span></IwsLink></li>
                                   <li><IwsLink href="/compute-services#hgx-h200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>NVIDIA HGX H200</IwsLink></li>
                                   <li><IwsLink href="/compute-services#hgx-h100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>NVIDIA HGX H100</IwsLink></li>
                                 </ul>
