@@ -65,10 +65,10 @@ export default function GB200NVL72Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
           <SlideFromLeft>
             <div className="flex-1 max-w-2xl text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-gray-600 mb-4 lg:mb-8">
+              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-black text-gray-600 mb-4 lg:mb-8">
                 On-Demand<br />
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl">NVIDIA GB200</span><br />
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl">NVL72</span>
+                <span className="text-5xl sm:text-6xl lg:text-6xl">NVIDIA GB200</span><br />
+                <span className="text-5xl sm:text-6xl lg:text-6xl">NVL72</span>
               </h1>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 lg:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
               No matter the task — AI training, data crunching, or heavy graphics — GB200 brings unmatched
