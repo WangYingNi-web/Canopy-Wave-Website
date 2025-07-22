@@ -61,14 +61,14 @@ export default function HGXB200Page() {
                 <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
             </Head>
             {/* Hero Section */}
-            <div className="w-full h-[790px] lg:h-[700px] mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">
+            <div className="w-full h-[850px] lg:h-[700px] mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
                     <SlideFromLeft>
                         <div className="flex-1 max-w-2xl text-center lg:text-left">
-                            <h1 className="text-5xl sm:text-6xl lg:text-6xl font-black text-gray-600 mb-4 lg:mb-8">
+                            <h1 className="text-5xl sm:text-6xl font-black text-gray-600 mb-4 lg:mb-8">
                                 On-Demand<br />
-                                <span className="text-5xl sm:text-6xl lg:text-6xl">NVIDIA HGX</span><br />
-                                <span className="text-5xl sm:text-6xl lg:text-6xl">B200</span>
+                                <span className="text-5xl sm:text-6xl">NVIDIA HGX</span><br />
+                                <span className="text-5xl sm:text-6xl">B200</span>
                             </h1>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 lg:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Introducing the groundbreaking NVIDIA HGX B200, the world's first system powered by the revolutionary NVIDIA Blackwell architecture
@@ -207,7 +207,7 @@ export default function HGXB200Page() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 mb-6 text-l">
-                                    It has demonstrated <Link href="https://www.nvidia.com/en-gb/data-center/gb200-nvl72/" className="text-[#80B224] hover:text-[#6b9a1f] underline">outstanding performance</Link> in large-scale AI training, deep learning, and high-performance workloads, delivering unprecedented compute power and efficiency
+                                    It has demonstrated <Link href="https://nvdam.widen.net/s/wwnsxrhm2w/blackwell-datasheet-3384703" className="text-[#80B224] hover:text-[#6b9a1f] underline">outstanding performance</Link> in large-scale AI training, deep learning, and high-performance workloads, delivering unprecedented compute power and efficiency
                                     
                                 </p>
                             </SlideUp>

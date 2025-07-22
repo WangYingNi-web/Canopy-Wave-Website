@@ -116,7 +116,7 @@ export default function Index() {
       id: 3,
       background: '/hgx-b200/5.png',
       title: 'On-Demand',
-      subtitle: 'NVIDIA HGX 200',
+      subtitle: 'NVIDIA HGX B200',
       highlight: 'The Foundation of Your AI Workloads and Computing Technologies',
       titleColor: 'text-white',
       subtitleColor: 'text-[#80B224]',
