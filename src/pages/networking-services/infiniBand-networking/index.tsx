@@ -82,11 +82,8 @@ export default function NetworkingServices() {
                             <SlideUp>
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-[#8BC34A] mb-2">2x</div>
-                                    <div className="font-semibold text-gray-800 mb-2">Data Throughput</div>
+                                    <div className="font-semibold text-gray-800 mb-4">Data Throughput</div>
                                     <div className="text-sm text-gray-600">400Gb/s</div>
-                                    <div className="text-xs text-gray-500 mt-4">
-                                        New MPI All-to-All IN-Network Computing acceleration engine
-                                    </div>
                                 </div>
                             </SlideUp>
                         </div>
@@ -96,7 +93,7 @@ export default function NetworkingServices() {
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-[#8BC34A] mb-2">4x</div>
                                     <div className="font-semibold text-gray-800 mb-4">MPI Performance</div>
-                                    <div className="text-sm text-gray-600">Aggregated bidirectional throughput of 51.2 Tb/s with 64 400Gb/s ports</div>
+                                    <div className="text-sm text-gray-600">New MPI All-to-All IN-Network Computing acceleration engine</div>
                                 </div>
                             </SlideUp>
                         </div>
@@ -105,7 +102,7 @@ export default function NetworkingServices() {
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-[#8BC34A] mb-2">3.2x</div>
                                     <div className="font-semibold text-gray-800 mb-4">Switch System Ability</div>
-                                    <div className="text-sm text-gray-600">Connecting 1TM nodes with 3 hops</div>
+                                    <div className="text-sm text-gray-600">Aggregated bidirectional tHroughput of 51.2 Tbit/s with 64 400Gb/s ports</div>
                                 </div>
                             </SlideUp>
                         </div>
@@ -115,7 +112,7 @@ export default function NetworkingServices() {
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-[#8BC34A] mb-2">6.5x</div>
                                     <div className="font-semibold text-gray-800 mb-4">Higher Scalability</div>
-                                    <div className="text-sm text-gray-600">NVIDIA SHARP In-Network Computing technology</div>
+                                    <div className="text-sm text-gray-600">Connecting&gt;1M nodes with 3 hops</div>
                                 </div>
                             </SlideUp>
                         </div>
@@ -124,7 +121,8 @@ export default function NetworkingServices() {
                             <SlideUp>
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-[#8BC34A] mb-2">32x</div>
-                                    <div className="font-semibold text-gray-800 mb-2">More AI Acceleration</div>
+                                    <div className="font-semibold text-gray-800 mb-4">More AI Acceleration</div>
+                                    <div className="text-sm text-gray-600">NVIDIA SHARP In-Networking Computing technology</div>
                                 </div>
                             </SlideUp>
                         </div>
