@@ -333,13 +333,11 @@ export default function RoCEv2NetworkingPage() {
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">RoCE v2 vs InfiniBand</h2>
                     </SlideUp>
-
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-12 text-l">
                             Both RoCE v2 and InfiniBand are high-performance networking technologies. RoCE v2 is based on Ethernet, making deployment simpler, cost lower, and compatibility stronger—ideal for AI, big data, and cloud computing scenarios. InfiniBand offers excellent performance but requires dedicated equipment,is focused on delivering perfect performance, and has limited scalability. RoCE v2 is the preferred choice for enterprises and cloud environments
                         </p>
                     </SlideUp>
-
                     <div className="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Left side - Comparison Table */}
                         <div className="bg-white rounded-lg shadow-lg p-6">
@@ -434,9 +432,9 @@ export default function RoCEv2NetworkingPage() {
                                                             },
                                                             {
                                                                 label: 'InfiniBand',
-                                                                data: [3, 120],
-                                                                backgroundColor: 'rgba(32, 218, 100, 0.8)',
-                                                                borderColor: 'rgba(34, 197, 94, 1)',
+                                                                data: [2, 120],
+                                                                backgroundColor: '#A0d063',
+                                                                borderColor: '#A0d063',
                                                                 borderWidth: 1,
                                                                 borderRadius: 4,
                                                                 borderSkipped: false,
@@ -516,9 +514,49 @@ export default function RoCEv2NetworkingPage() {
                                                                     label: function (context: any) {
                                                                         const label = context.dataset.label || '';
                                                                         const value = context.parsed.y;
-                                                                        const metric = context.label === 'Latency' ? 'μs' : 'Gbps';
-                                                                        return `${label}: ${value} ${metric}`;
+                                                                        // const metric = context.label === 'Latency' ? 'μs' : 'Gbps';
+                                                                        // return `${label}: ${value} ${metric}`;
+                                                                        return `${label}: ${value}`;
                                                                     }
+                                                                }
+                                                            }
+                                                        },
+                                                        scales: {
+                                                            y: {
+                                                                beginAtZero: true,
+                                                                max: 140,
+                                                                title: {
+                                                                    display: true,
+                                                                    text: 'Performance(arbitrary units)',
+                                                                    font: {
+                                                                        size: 12,
+                                                                        // weight: '500'
+                                                                    },
+                                                                    color: '#374151',
+                                                                    padding: {
+                                                                        bottom: 20
+                                                                    }
+                                                                },
+                                                                ticks: {
+                                                                    color: '#6B7280',
+                                                                    font: {
+                                                                        size: 12
+                                                                    }
+                                                                },
+                                                                grid: {
+                                                                    color: 'rgba(0, 0, 0, 0.1)',
+                                                                    lineWidth: 1
+                                                                }
+                                                            },
+                                                            x: {
+                                                                ticks: {
+                                                                    color: '#6B7280',
+                                                                    font: {
+                                                                        size: 12
+                                                                    }
+                                                                },
+                                                                grid: {
+                                                                    display: false
                                                                 }
                                                             }
                                                         },
