@@ -368,7 +368,7 @@ export default function Index() {
                   </svg>
                 </IwsLink>
               </div>
-              
+
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
                 {/* 添加背景装饰 */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
@@ -400,7 +400,7 @@ export default function Index() {
                   </svg>
                 </IwsLink>
               </div>
-             
+
 
               {/* <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
                 <div className="flex items-center mb-6">
@@ -416,7 +416,7 @@ export default function Index() {
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-[#F9F9F9] py-12 sm:py-16">
+        <div className="bg-[#F9F9F9] sm:pt-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
@@ -443,6 +443,33 @@ export default function Index() {
             </div>
           </div>
         </div>
+
+
+        {/* <div className='bg-[#F9F9F9]'>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-20 py-16">
+            <SlideUp>
+              <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">Powered By Our Global Network</h2>
+            </SlideUp>
+            <SlideUp>
+              <div className="flex justify-center pb-8">
+                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] text-white" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                Get started →
+                </Button>
+              </div>
+            </SlideUp>
+            <SlideUp>
+              <p className="text-gray-600 text-center max-w-4xl mx-auto mb-16 text-l">
+              Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+              </p>
+            </SlideUp>
+            
+            
+            <SlideUp>
+                  <EuropeMap />
+                </SlideUp>
+            
+          </div>
+        </div> */}
 
         {/* News Section */}
         <div className="bg-[#F9F9F9] py-16 sm:py-20">

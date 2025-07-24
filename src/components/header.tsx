@@ -230,7 +230,7 @@ export default function Header() {
                           <ul className="space-y-2 text-sm">
                             {/* <li><IwsLink href="/networking-services#infiniband-networking" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>InfiniBand Networking</IwsLink></li> */}
                             <li><IwsLink href="/networking-services/infiniBand-networking" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>InfiniBand Networking</IwsLink></li>
-                            <li><IwsLink href="/networking-services#private-cloud" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>RoCEv2 Networking</IwsLink></li>
+                            <li><IwsLink href="/networking-services/RoCEv2-networking" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>RoCEv2 Networking</IwsLink></li>
                           </ul>
                         </div>
                         <div>
