@@ -16,7 +16,7 @@ export default function NetworkingServices() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave - Networking Services That Enhance Performance</title>
+                <title>Canopy Wave | InfiniBand Networking</title>
                 <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
             </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-gradient-to-r from-[#e7f8e2] via-[#eaf1f4] to-[#eaf1f4]">

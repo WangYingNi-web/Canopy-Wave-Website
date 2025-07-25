@@ -56,7 +56,7 @@ export default function HGXB200Page() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave | On-Demand NVIDIA GB200 NVL72</title>
+                <title>Canopy Wave | On-Demand NVIDIA HGX B200</title>
                 {/* <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" /> */}
                 <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
             </Head>
