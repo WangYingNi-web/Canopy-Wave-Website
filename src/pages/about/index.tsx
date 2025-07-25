@@ -21,10 +21,13 @@ export default function AboutPage() {
     { id: 7, width: 120, height: 80 },
     { id: 8, width: 90, height: 70 },
     { id: 9, width: 120, height: 80 },
-    { id: 10, width: 85, height: 70 },
+    // { id: 10, width: 85, height: 70 },
     { id: 11, width: 90, height: 70 },
     { id: 12, width: 100, height: 80 },
     { id: 13, width: 90, height: 70 },
+    { id: 14, width: 80, height: 70 },
+    { id: 15, width: 80, height: 70 },
+    { id: 16, width: 80, height: 70 },
   ];
 
   return (

@@ -162,6 +162,473 @@ export default function BlogDetail() {
           ]
         }
 
+      case 'how-to-choose-the-right-storage-for-your-ai-workflows':
+        return {
+          id: 3,
+          title: 'How to Choose the Right Storage for Your AI Workflows',
+          description: 'Choosing the Right Storage Architecture for AI',
+          sections: [
+            {
+              title: 'I. Choosing the Right Storage Architecture for AI',
+              content: [
+                'In AI model development, compute power is the "engine," but data and storage are the "fuel." Whether you are training large-scale models, building image generation systems, or deploying real-time inference services, selecting the right storage architecture is critical for performance, stability, and cost optimization.',
+                React.createElement('h3', { key: 'storage-comparison-title' }, 'Storage comparison'),
+                React.createElement('table', {
+                  key: 'storage-table',
+                  style: {
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                    border: '1px solid #ddd'
+                  }
+                }, [
+                  React.createElement('thead', { key: 'thead' },
+                    React.createElement('tr', { key: 'header-row' }, [
+                      React.createElement('th', {
+                        key: 'th1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Storage Type'),
+                      React.createElement('th', {
+                        key: 'th2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Applicable Scenarios'),
+                      React.createElement('th', {
+                        key: 'th3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Peculiarity'),
+                      React.createElement('th', {
+                        key: 'th4',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Precautions')
+                    ])
+                  ),
+                  React.createElement('tbody', { key: 'tbody' }, [
+                    React.createElement('tr', { key: 'row1' }, [
+                      React.createElement('td', {
+                        key: 'td1-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Local Storage'),
+                      React.createElement('td', {
+                        key: 'td1-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Frequent data access during model training.',
+                        React.createElement('br', { key: 'br1' }),
+                        '• GPU nodes processing large datasets independently.'
+                      ])),
+                      React.createElement('td', {
+                        key: 'td1-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Located directly on the VM/bare-metal node (Canopy Wave uses NVMe).',
+                        React.createElement('br', { key: 'br2' }),
+                        '• Ultra-low latency and high throughput.',
+                        React.createElement('br', { key: 'br3' }),
+                        '• Network-independent, ensuring high stability.'
+                      ])),
+                      React.createElement('td', {
+                        key: 'td1-4',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Limited capacity (e.g., H100: 11.5TB, H200: 13.4TB).',
+                        React.createElement('br', { key: 'br4' }),
+                        '• Lacks data persistence; data may be lost when the instance is terminated.'
+                      ]))
+                    ]),
+                    React.createElement('tr', { key: 'row2' }, [
+                      React.createElement('td', {
+                        key: 'td2-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Shared Storage'),
+                      React.createElement('td', {
+                        key: 'td2-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Multi-GPU or multi-node distributed training.',
+                        React.createElement('br', { key: 'br5' }),
+                        '• Rapid iteration on model parameters or saving intermediate checkpoints.'
+                      ])),
+                      React.createElement('td', {
+                        key: 'td2-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Mountable by multiple instances simultaneously.',
+                        React.createElement('br', { key: 'br6' }),
+                        '• Standard file system interface.',
+                        React.createElement('br', { key: 'br7' }),
+                        '• Ideal for building distributed AI data pipelines.'
+                      ])),
+                      React.createElement('td', {
+                        key: 'td2-4',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Latency and bandwidth are dependent on network performance.',
+                        React.createElement('br', { key: 'br8' }),
+                        '• Requires careful design to avoid I/O bottlenecks during concurrent access.'
+                      ]))
+                    ]),
+                    React.createElement('tr', { key: 'row3' }, [
+                      React.createElement('td', {
+                        key: 'td3-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Object Storage'),
+                      React.createElement('td', {
+                        key: 'td3-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Archiving model data before and after training.',
+                        React.createElement('br', { key: 'br9' }),
+                        '• Managing checkpoints and model versions.',
+                        React.createElement('br', { key: 'br10' }),
+                        '• Storing static assets for inference services.'
+                      ])),
+                      React.createElement('td', {
+                        key: 'td3-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• High availability and massive scalability.',
+                        React.createElement('br', { key: 'br11' }),
+                        '• Accessed via HTTP API (S3 protocol) with a rich ecosystem of compatible tools.',
+                        React.createElement('br', { key: 'br12' }),
+                        '• Supports lifecycle management (hot/cold data tiering).'
+                      ])),
+                      React.createElement('td', {
+                        key: 'td3-4',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, React.createElement('div', {}, [
+                        '• Not suitable for real-time, high-frequency access.',
+                        React.createElement('br', { key: 'br13' }),
+                        '• Best used with caching or asynchronous pre-fetching mechanisms for GPU clusters.'
+                      ]))
+                    ])
+                  ])
+                ]),
+                React.createElement('h3', { key: 'selection-logic-title', style: { marginTop: '30px' } }, 'General Selection Logic:'),
+                React.createElement('ol', { key: 'selection-list', style: { marginTop: '15px', paddingLeft: '20px' } }, [
+                  React.createElement('li', { key: 'li1', style: { marginBottom: '10px' } }, 'Assess Your Workload\'s Needs: If you are only running inference without needing to download data or save results, additional storage may not be required. Model training or fine-tuning typically requires a combination, such as local and object storage. Distributed tasks demand shared storage.'),
+                  React.createElement('li', { key: 'li2', style: { marginBottom: '10px' } }, 'Use Local Storage for High-Frequency, Low-Latency Access: Prioritize local storage for the primary data stream during the training phase to leverage its extremely low latency and high throughput.'),
+                  React.createElement('li', { key: 'li3', style: { marginBottom: '10px' } }, 'Use Shared Storage for Mid-Frequency, Collaborative Access: Choose shared storage to ensure synchronous data access across multiple processes or nodes, ideal for collaborative tasks and shared datasets.'),
+                  React.createElement('li', { key: 'li4', style: { marginBottom: '10px' } }, 'Use Object Storage for Low-Frequency Access and Archiving: Use object or block storage for long-term preservation of model versions, training logs, and other assets. It is cost-effective and suited for "write-once, read-many" scenarios.')
+                ])
+              ]
+            },
+
+            {
+              title: 'II. Shared vs. Object Storage in Distributed Training',
+              content: [
+                React.createElement('h3', { key: 'usage-differences-title' }, '1. Using Scene Differences'),
+                React.createElement('ul', {
+                  key: 'usage-differences-list',
+                  style: { marginBottom: '20px' }
+                }, [
+                  React.createElement('li', { key: 'shared-storage-desc', style: { marginBottom: '10px' } }, [
+                    React.createElement('strong', { key: 'shared-bold' }, 'Shared Storage'),
+                    ' is mounted and accessed as a standard file system (NAS), allowing all GPU nodes to read and write to the same directory concurrently. Canopy Wave\'s shared storage is built on CephFS, a scalable, POSIX-compliant distributed file system designed for high availability and performance. It is ideal for high-frequency access to shared datasets, logs, and intermediate models during distributed training.'
+                  ]),
+                  React.createElement('li', { key: 'object-storage-desc', style: { marginBottom: '10px' } }, [
+                    React.createElement('strong', { key: 'object-bold' }, 'Object Storage'),
+                    ' is accessed programmatically via APIs (like the S3 protocol) and cannot be mounted directly. It is perfect for storing original datasets, archiving final models, and managing data transfers to and from the public cloud.'
+                  ])
+                ]),
+                React.createElement('h3', { key: 'technical-comparison-title' }, '2. Comparison of technical dimensions'),
+                React.createElement('table', {
+                  key: 'technical-comparison-table',
+                  style: {
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                    border: '1px solid #ddd'
+                  }
+                }, [
+                  React.createElement('thead', { key: 'tech-thead' },
+                    React.createElement('tr', { key: 'tech-header-row' }, [
+                      React.createElement('th', {
+                        key: 'tech-th1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Characteristic'),
+                      React.createElement('th', {
+                        key: 'tech-th2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Shared Storage'),
+                      React.createElement('th', {
+                        key: 'tech-th3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          backgroundColor: '#f5f5f5',
+                          fontWeight: 'bold',
+                          textAlign: 'left'
+                        }
+                      }, 'Object Storage')
+                    ])
+                  ),
+                  React.createElement('tbody', { key: 'tech-tbody' }, [
+                    React.createElement('tr', { key: 'tech-row1' }, [
+                      React.createElement('td', {
+                        key: 'tech-td1-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Access Method'),
+                      React.createElement('td', {
+                        key: 'tech-td1-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'File System Mount (e.g., NFS, CephFS)'),
+                      React.createElement('td', {
+                        key: 'tech-td1-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'S3 API Access')
+                    ]),
+                    React.createElement('tr', { key: 'tech-row2' }, [
+                      React.createElement('td', {
+                        key: 'tech-td2-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Concurrency Model'),
+                      React.createElement('td', {
+                        key: 'tech-td2-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Multiple nodes can read and write files simultaneously.'),
+                      React.createElement('td', {
+                        key: 'tech-td2-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Multiple nodes can read, but write operations require consistency management.')
+                    ]),
+                    React.createElement('tr', { key: 'tech-row3' }, [
+                      React.createElement('td', {
+                        key: 'tech-td3-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Performance Profile'),
+                      React.createElement('td', {
+                        key: 'tech-td3-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Low latency, high bandwidth. Ideal for frequent I/O during training.'),
+                      React.createElement('td', {
+                        key: 'tech-td3-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'High latency, high throughput. Unsuitable for real-time access but great for large file transfers.')
+                    ]),
+                    React.createElement('tr', { key: 'tech-row4' }, [
+                      React.createElement('td', {
+                        key: 'tech-td4-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Scalability & Resiliency'),
+                      React.createElement('td', {
+                        key: 'tech-td4-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Scale-out can be complex (constrained by nodes and network).'),
+                      React.createElement('td', {
+                        key: 'tech-td4-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Extremely scalable, supporting petabytes of data with minimal maintenance.')
+                    ]),
+                    React.createElement('tr', { key: 'tech-row5' }, [
+                      React.createElement('td', {
+                        key: 'tech-td5-1',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Cost'),
+                      React.createElement('td', {
+                        key: 'tech-td5-2',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Medium cost (dependent on cluster and network), often billed monthly/annually.'),
+                      React.createElement('td', {
+                        key: 'tech-td5-3',
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'top'
+                        }
+                      }, 'Low cost (pay-as-you-go), ideal for cold and archival data.')
+                    ])
+                  ])
+                ]),
+                React.createElement('h3', { key: 'combined-approach-title' }, 'A Combined Approach for Distributed Training:'),
+                React.createElement('ol', {
+                  key: 'combined-approach-list',
+                  style: { marginBottom: '20px' }
+                }, [
+                  React.createElement('li', { key: 'combined-li1', style: { marginBottom: '10px' } }, 'Before Training: Datasets, pre-trained weights, and configuration files are stored in object storage (S3).'),
+                  React.createElement('li', { key: 'combined-li2', style: { marginBottom: '10px' } }, 'During Training: The processed data is pulled from object storage to high-performance shared storage. All GPU nodes mount this shared directory for real-time, concurrent access. Intermediate checkpoints and logs are also written to shared storage due to its low latency.'),
+                  React.createElement('li', { key: 'combined-li3', style: { marginBottom: '10px' } }, 'After Training: The final model, logs, and metric reports are pushed back from shared storage to object storage for long-term archiving, versioning, and downstream use (e.g., deployment, evaluation).')
+                ]),
+                React.createElement('p', { key: 'best-practice-note' }, 'This combination is a best practice, leveraging the strengths of each system for maximum efficiency.')
+              ]
+            },
+
+            {
+              title: 'Ⅲ. Advantages and disadvantages of local storage in high-performance GPU clusters',
+              content: [
+                React.createElement('p', { key: 'local-storage-intro' }, 'In a GPU cluster, local storage is the directly attached storage (DAS) inside each server. At Canopy Wave, we use high-performance NVMe drives.'),
+                React.createElement('h3', { key: 'advantages-title' }, 'Advantages:'),
+                React.createElement('ol', {
+                  key: 'advantages-list',
+                  style: { marginBottom: '20px' }
+                }, [
+                  React.createElement('li', { key: 'adv-li1', style: { marginBottom: '10px' } }, 'Extreme Performance: Connected via the PCIe bus, local NVMe storage offers ultra-low latency and high throughput (3-7 GB/s), bypassing network bottlenecks entirely. It is ideal for data-intensive tasks like loading large media files or caching frequently accessed training data.'),
+                  React.createElement('li', { key: 'adv-li2', style: { marginBottom: '10px' } }, 'Resource Isolation: Each server\'s local storage is exclusive, eliminating the "noisy neighbor" problem of I/O congestion or lock contention found in shared systems.'),
+                  React.createElement('li', { key: 'adv-li3', style: { marginBottom: '10px' } }, 'Architectural Simplicity: It requires no complex configuration of shared file systems, making it suitable for rapid deployment and agile development scenarios.'),
+                  React.createElement('li', { key: 'adv-li4', style: { marginBottom: '10px' } }, 'Cost-Effectiveness: The cost per gigabyte for NVMe is often significantly lower than that of enterprise-grade shared storage systems.')
+                ]),
+                React.createElement('h3', { key: 'disadvantages-title' }, 'Disadvantages:'),
+                React.createElement('ol', {
+                  key: 'disadvantages-list',
+                  style: { marginBottom: '20px' }
+                }, [
+                  React.createElement('li', { key: 'dis-li1', style: { marginBottom: '10px' } }, 'No Data Sharing: Data on a local drive is isolated to that server, making it unsuitable as a primary data source for distributed training where all nodes need a unified view of the data.'),
+                  React.createElement('li', { key: 'dis-li2', style: { marginBottom: '10px' } }, 'Lack of Data Redundancy: Local storage typically lacks built-in redundancy. A server failure or instance termination can lead to permanent data loss, making it unsuitable for long-term assets.'),
+                  React.createElement('li', { key: 'dis-li3', style: { marginBottom: '10px' } }, 'Limited & Inelastic Capacity: Local disk capacity is fixed and cannot be dynamically expanded like object or shared storage.'),
+                  React.createElement('li', { key: 'dis-li4', style: { marginBottom: '10px' } }, 'Scheduling Complexity: Schedulers must account for data locality, which can lead to inefficient resource utilization and frequent data transfers if not managed properly.')
+                ]),
+                React.createElement('p', { key: 'conclusion-paragraph' }, [
+                  React.createElement('strong', { key: 'conclusion-bold' }, 'Conclusion:'),
+                  ' Local storage excels as a high-speed cache, a temporary working directory for data preprocessing, or for low-latency inference tasks. However, it should not be the sole storage solution. In robust AI pipelines, it is best used as a first-level cache in a tiered architecture, combined with shared and object storage to create a stable and efficient system.'
+                ])
+              ]
+            }
+
+          ]
+        }
+
+
       default:
         return null
     }
@@ -189,6 +656,8 @@ export default function BlogDetail() {
       case 1:
         return <BlogLayout1 blogPost={blogPost} />
       case 2:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 3:
         return <BlogLayout2 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
@@ -201,6 +670,8 @@ export default function BlogDetail() {
       case 1:
         return "min-h-screen bg-[#F9F9F9]"
       case 2:
+        return "min-h-screen bg-[#F9F9F9]"
+      case 3:
         return "min-h-screen bg-[#F9F9F9]"
       default:
         return "min-h-screen bg-[#F9F9F9]"

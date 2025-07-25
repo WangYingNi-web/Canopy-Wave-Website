@@ -56,6 +56,13 @@ export default function Newsroom() {
             date: "July 14, 2025",
             image: "/blog/blog2.png"
         },
+        // {
+        //     id: 3,
+        //     title: "How to Choose the Right Storage for Your AI Workflows",
+        //     description: "Choosing the Right Storage Architecture for AI",
+        //     date: "July 25, 2025",
+        //     image: "/blog/image.png"
+        // },
     ];
     const newsroomPosts: NewsroomPost[] = [
         {

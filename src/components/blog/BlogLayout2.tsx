@@ -3,51 +3,60 @@ import SlideUp from '@/components/slide'
 import Image from 'next/image';
 import { BlogPost } from './index'
 
-// 删除本地的 BlogPost 接口定义
-
 interface BlogLayout2Props {
   blogPost: BlogPost
 }
 
 const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
   return (
-    <div className="max-w-[815px] mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-      <article className="prose max-w-none">
-        <SlideUp>
-          <h1 className="text-3xl sm:text-4xl font-bold text-[#333] mb-4">
-            {blogPost.title}
-          </h1>
-          <div className="text-sm mb-8 italic">
-            {blogPost.description}
-          </div>
-        </SlideUp>
-        <div className="w-full mb-12">
-          <SlideUp>
-            <img
-              src="/blog/blog2.png"
-              alt="Blog"
-              className="w-full h-auto rounded-[20px] shadow-md"
-            />
-          </SlideUp>
-        </div>
-        
-        {blogPost.sections.map((section, index) => (
-          <SlideUp key={index}>
-            {section.title && (
-              <h2 className="text-xl font-semibold text-[#333] mt-8 mb-4">
-                {section.title}
-              </h2>
-            )}
-            <div className="space-y-4">
-              {section.content.map((paragraph, pIndex) => (
-                <p key={pIndex} className="text-gray-700 leading-relaxed">
-                  {paragraph}
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="w-full h-[490px] relative mt-[84px]">
+                <Image
+                    src="/blog/banner2.png"
+                    alt="banner"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
+                    <SlideUp>
+                <h1 className="text-4xl lg:text-5xl font-black text-[#80b224] mb-6 leading-tight">
+                  {/* {blogPost.title} */}
+                  How to Choose the Right <br /> Storage for Your AI Workflows
+                </h1>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {blogPost.description}
                 </p>
-              ))}
+              </SlideUp>
+                    </div>
+                </div>
             </div>
-          </SlideUp>
-        ))}
-      </article>
+
+      {/* Content Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <article className="prose prose-lg max-w-none">
+          {blogPost.sections.map((section, index) => (
+            <SlideUp key={index}>
+              <div className="mb-12">
+                {section.title && (
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-green-500 pl-4">
+                    {section.title}
+                  </h2>
+                )}
+                <div className="space-y-6">
+                  {section.content.map((paragraph, pIndex) => (
+                    <div key={pIndex} className="text-gray-700 leading-relaxed text-base">
+                      {paragraph}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </SlideUp>
+          ))}
+        </article>
+      </div>
     </div>
   )
 }
