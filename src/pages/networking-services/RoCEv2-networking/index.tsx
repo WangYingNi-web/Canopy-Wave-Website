@@ -56,7 +56,7 @@ export default function RoCEv2NetworkingPage() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave | RoCEv2 Networking</title>
+                <title>Canopy Wave | RoCE v2 Networking</title>
                 {/* <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" /> */}
                 <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
             </Head>
@@ -66,7 +66,7 @@ export default function RoCEv2NetworkingPage() {
                     <SlideUp>
                         <div className="flex-1 max-w-2xl text-center lg:text-left">
                             <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg mb-6">
-                                RoCEv2 Networking
+                                RoCE v2 Networking
                             </h1>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 lg:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Get the best RDMA Networking purposely built for AI
@@ -340,7 +340,7 @@ export default function RoCEv2NetworkingPage() {
                     </SlideUp>
                     <div className="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Left side - Comparison Table */}
-                        <div className="bg-white rounded-lg shadow-lg p-6">
+                        <div className="bg-white rounded-lg shadow-lg p-6 h-[529px]">
                             <h3 className="text-xl font-bold text-center mb-6 text-[#80B224]">RoCE v2 vs InfiniBand</h3>
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm">
@@ -383,189 +383,58 @@ export default function RoCEv2NetworkingPage() {
                         </div>
 
                         {/* Right side - Interactive Performance Chart */}
-                        <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center">
-                            <div className="chart-container w-full" style={{
-                                height: '398px',
-                                maxWidth: '100%',
-                                marginTop: '24px'
-                            }}>
-                                <canvas
-                                    id="performanceChart"
-                                    className="w-full h-full block"
-                                    ref={(canvas) => {
-                                        if (canvas && typeof window !== 'undefined') {
-                                            // 动态导入Chart.js
-                                            import('chart.js/auto').then((Chart) => {
-                                                const ctx = canvas.getContext('2d');
+                        <div className="bg-white rounded-lg shadow-lg p-6">
+                            <h3 className="text-xl font-bold text-center mb-8">Performance Comparison</h3>
 
-                                                // 添加空值检查
-                                                if (!ctx) {
-                                                    console.error('Failed to get canvas context');
-                                                    return;
-                                                }
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* 延迟对比卡片 */}
+                                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
+                                    <h4 className="text-lg font-semibold text-center mb-4 text-blue-800">Network Latency</h4>
+                                    <div className="space-y-4">
+                                        <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                                            <span className="font-medium text-gray-700">RoCE v2</span>
+                                            <span className="text-2xl font-bold text-[#80B224]">2-6 μs</span>
+                                        </div>
+                                        <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                                            <span className="font-medium text-gray-700">InfiniBand</span>
+                                            <span className="text-2xl font-bold text-blue-600">~1.6 μs</span>
+                                        </div>
+                                        <div className="text-center text-sm text-gray-600 mt-4">
+                                            <span className="inline-block px-3 py-1 bg-blue-200 rounded-full">
+                                                Optimized for ultra-low latency
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                                // 扩展HTMLCanvasElement类型以包含chart属性
-                                                interface ExtendedCanvas extends HTMLCanvasElement {
-                                                    chart?: any;
-                                                }
+                                {/* 带宽对比卡片 */}
+                                <div className="bg-gradient-to-br from-[#80B224]/10 to-[#80B224]/20 rounded-lg p-6">
+                                    <h4 className="text-lg font-semibold text-center mb-4 text-[#80B224]">Network Bandwidth</h4>
+                                    <div className="space-y-4">
+                                        <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                                            <span className="font-medium text-gray-700">RoCE v2</span>
+                                            <span className="text-2xl font-bold text-[#80B224]">400G</span>
+                                        </div>
+                                        <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                                            <span className="font-medium text-gray-700">InfiniBand</span>
+                                            <span className="text-2xl font-bold text-[#80B224]">400G</span>
+                                        </div>
+                                        <div className="text-center text-sm text-gray-600 mt-4">
+                                            <span className="inline-block px-3 py-1 bg-[#80B224]/20 rounded-full">
+                                                Equal high-speed performance
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                                const extendedCanvas = canvas as ExtendedCanvas;
-
-                                                // 销毁已存在的图表
-                                                if (extendedCanvas.chart) {
-                                                    extendedCanvas.chart.destroy();
-                                                }
-
-                                                extendedCanvas.chart = new Chart.default(ctx, {
-                                                    type: 'bar',
-                                                    data: {
-                                                        labels: ['Latency', 'Bandwidth'],
-                                                        datasets: [
-                                                            {
-                                                                label: 'RoCE v2',
-                                                                data: [5, 100],
-                                                                backgroundColor: 'rgba(74, 222, 128, 0.8)',
-                                                                borderColor: 'rgba(74, 222, 128, 1)',
-                                                                borderWidth: 1,
-                                                                borderRadius: 4,
-                                                                borderSkipped: false,
-                                                            },
-                                                            {
-                                                                label: 'InfiniBand',
-                                                                data: [2, 120],
-                                                                backgroundColor: '#A0d063',
-                                                                borderColor: '#A0d063',
-                                                                borderWidth: 1,
-                                                                borderRadius: 4,
-                                                                borderSkipped: false,
-                                                            }
-                                                        ]
-                                                    },
-                                                    options: {
-                                                        responsive: true,
-                                                        maintainAspectRatio: false,
-                                                        interaction: {
-                                                            intersect: false,
-                                                            mode: 'index'
-                                                        },
-                                                        plugins: {
-                                                            legend: {
-                                                                display: true, // 启用可交互图例
-                                                                position: 'top',
-                                                                align: 'center',
-                                                                labels: {
-                                                                    usePointStyle: true,
-                                                                    pointStyle: 'rect',
-                                                                    padding: 20,
-                                                                    font: {
-                                                                        size: 14,
-                                                                        // weight: '500'
-                                                                    },
-                                                                    color: '#374151',
-                                                                    generateLabels: function (chart: any) {
-                                                                        const datasets = chart.data.datasets;
-                                                                        return datasets.map((dataset: any, index: number) => {
-                                                                            return {
-                                                                                text: dataset.label,
-                                                                                fillStyle: dataset.backgroundColor,
-                                                                                strokeStyle: dataset.borderColor,
-                                                                                lineWidth: dataset.borderWidth,
-                                                                                hidden: !chart.isDatasetVisible(index),
-                                                                                datasetIndex: index
-                                                                            };
-                                                                        });
-                                                                    }
-                                                                },
-                                                                onClick: function (event: any, legendItem: any) {
-                                                                    const chart = this.chart;
-                                                                    const index = legendItem.datasetIndex;
-                                                                    const meta = chart.getDatasetMeta(index);
-
-                                                                    // 修正：正确切换数据集的可见性
-                                                                    if (meta.hidden === null || meta.hidden === undefined) {
-                                                                        meta.hidden = true;
-                                                                    } else {
-                                                                        meta.hidden = !meta.hidden;
-                                                                    }
-
-                                                                    // 更新图表
-                                                                    chart.update();
-                                                                },
-                                                                onHover: function (event: any, legendItem: any) {
-                                                                    if (event?.native?.target) {
-                                                                        event.native.target.style.cursor = 'pointer';
-                                                                    }
-                                                                },
-                                                                onLeave: function (event: any, legendItem: any) {
-                                                                    if (event?.native?.target) {
-                                                                        event.native.target.style.cursor = 'default';
-                                                                    }
-                                                                }
-                                                            },
-                                                            tooltip: {
-                                                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                                                                titleColor: 'white',
-                                                                bodyColor: 'white',
-                                                                borderColor: 'rgba(255, 255, 255, 0.1)',
-                                                                borderWidth: 1,
-                                                                cornerRadius: 8,
-                                                                displayColors: true,
-                                                                callbacks: {
-                                                                    label: function (context: any) {
-                                                                        const label = context.dataset.label || '';
-                                                                        const value = context.parsed.y;
-                                                                        // const metric = context.label === 'Latency' ? 'μs' : 'Gbps';
-                                                                        // return `${label}: ${value} ${metric}`;
-                                                                        return `${label}: ${value}`;
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        scales: {
-                                                            y: {
-                                                                beginAtZero: true,
-                                                                max: 140,
-                                                                title: {
-                                                                    display: true,
-                                                                    text: 'Performance(arbitrary units)',
-                                                                    font: {
-                                                                        size: 12,
-                                                                        // weight: '500'
-                                                                    },
-                                                                    color: '#374151',
-                                                                    padding: {
-                                                                        bottom: 20
-                                                                    }
-                                                                },
-                                                                ticks: {
-                                                                    color: '#6B7280',
-                                                                    font: {
-                                                                        size: 12
-                                                                    }
-                                                                },
-                                                                grid: {
-                                                                    color: 'rgba(0, 0, 0, 0.1)',
-                                                                    lineWidth: 1
-                                                                }
-                                                            },
-                                                            x: {
-                                                                ticks: {
-                                                                    color: '#6B7280',
-                                                                    font: {
-                                                                        size: 12
-                                                                    }
-                                                                },
-                                                                grid: {
-                                                                    display: false
-                                                                }
-                                                            }
-                                                        },
-                                                    }
-                                                });
-                                            });
-                                        }
-                                    }}
-                                />
+                            {/* 总结 */}
+                            <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+                                <p className="text-center text-gray-700">
+                                    {/* <strong>Key Insight:</strong>  */}
+                                    InfiniBand excels in ultra-low latency scenarios (~1.6 μs),
+                                    while RoCE v2 offers competitive latency (2-4 μs with optimization) and equal bandwidth (400G)
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -581,7 +450,7 @@ export default function RoCEv2NetworkingPage() {
 
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-12 text-lg">
-                            RoCE v2 offers significant cost savings compared to InfiniBand, especially for large-scale 
+                            RoCE v2 offers significant cost savings compared to InfiniBand, especially for large-scale
                             deployments. Below are the average market prices for each solution (per port, 400Gbps):
                         </p>
                     </SlideUp>
@@ -665,7 +534,7 @@ export default function RoCEv2NetworkingPage() {
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 text-l mb-4 sm:pr-10">
-                                Canopy Wave’s supply chain control and vendor relationships mean less waiting and more doing. Whether you're sourcing GPUs, networking gear, or storage systems, we take the hassle out of procurement and help you access the hardware you need—faster and at scale
+                                    Canopy Wave’s supply chain control and vendor relationships mean less waiting and more doing. Whether you're sourcing GPUs, networking gear, or storage systems, we take the hassle out of procurement and help you access the hardware you need—faster and at scale
                                 </p>
                             </SlideUp>
                         </div>
@@ -695,7 +564,7 @@ export default function RoCEv2NetworkingPage() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px] text-l">
-                                    Your AI workloads need to run around the clock, and so do we. With 99.9% uptime, enterprise-grade reliability, and 24/7 support, you can trust your infrastructure to stay online—and your team to stay productive
+                                        Your AI workloads need to run around the clock, and so do we. With 99.9% uptime, enterprise-grade reliability, and 24/7 support, you can trust your infrastructure to stay online—and your team to stay productive
                                     </p>
                                 </FadeIn>
                             </div>
@@ -717,7 +586,7 @@ export default function RoCEv2NetworkingPage() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px] text-l">
-                                    Get complete transparency with our Data Center Infrastructure Management (DCIM) tools. From power and cooling to GPU utilization and system health, our intuitive dashboards give you real-time insights and control over every layer of your infrastructure
+                                        Get complete transparency with our Data Center Infrastructure Management (DCIM) tools. From power and cooling to GPU utilization and system health, our intuitive dashboards give you real-time insights and control over every layer of your infrastructure
                                     </p>
                                 </FadeIn>
                             </div>
@@ -739,7 +608,7 @@ export default function RoCEv2NetworkingPage() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white space-y-1 pl-[68px] text-l">
-                                    Canopy Wave’s private cloud solution gives you the power of hyperscale infrastructure, the speed of startup execution, and the peace of mind of enterprise support—all delivered with precision and purpose
+                                        Canopy Wave’s private cloud solution gives you the power of hyperscale infrastructure, the speed of startup execution, and the peace of mind of enterprise support—all delivered with precision and purpose
                                     </p>
                                 </FadeIn>
                             </div>
