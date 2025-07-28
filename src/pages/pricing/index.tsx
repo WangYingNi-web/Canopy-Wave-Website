@@ -98,8 +98,8 @@ export default function PricingPage() {
                                     <tr className="border-b">
                                         <td className="py-4 text-center">Bare-metal Rack Cluster</td>
                                         <td className="py-4 text-center">4</td>
-                                        <td className="py-4 text-center">960GB</td>
-                                        <td className="py-4 text-center">30.72TB</td>
+                                        <td className="py-4 text-center">960 GB</td>
+                                        <td className="py-4 text-center">30.72 TB</td>
                                         <td className="py-4 text-center">1</td>
                                         <td className="py-4 text-center font-semibold">
                                         $9.00
