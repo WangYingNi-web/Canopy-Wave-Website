@@ -400,7 +400,7 @@ export default function BlogDetail() {
                   ]),
                   React.createElement('li', { key: 'object-storage-desc', style: { marginBottom: '10px' } }, [
                     React.createElement('strong', { key: 'object-bold' }, 'Object Storage'),
-                    ' is accessed programmatically via APIs (like the S3 protocol) and cannot be mounted directly. It is perfect for storing original datasets, archiving final models, and managing data transfers to and from the public cloud.'
+                    ': Network transmission through the S3 protocol does not occupy GPU resources, and is suitable for efficient processing and transmission of large-scale data. It is commonly used to store raw datasets, model archiving, and upload training data from the public network or locally, and can also be used for model deployment, archiving, and migration after training is completed. In distributed training, object storage is often used in conjunction with other types of storage to balance performance and flexibility.'
                   ])
                 ]),
                 React.createElement('h3', { key: 'technical-comparison-title' ,style: { fontWeight: 'bold' }}, '2. Comparison of technical dimensions'),
