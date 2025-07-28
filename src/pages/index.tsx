@@ -113,7 +113,7 @@ export default function Index() {
     },
     {
       id: 2,
-      background: '/workflows.jpg',
+      background: '/banner2.jpg',
       title: 'On-Demand',
       subtitle: 'NVIDIA GB200 NVL72',
       highlight: 'Aiming to Next-Generation AI and Computing Technologies',
