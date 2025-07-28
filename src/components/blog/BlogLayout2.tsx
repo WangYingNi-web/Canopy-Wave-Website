@@ -11,7 +11,7 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="w-full h-[490px] relative mt-[84px]">
+      <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/blog/banner2.png"
                     alt="banner"
@@ -22,7 +22,7 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
                     <SlideUp>
-                <h1 className="text-4xl lg:text-5xl font-black text-[#80b224] mb-6 leading-tight">
+                <h1 className="text-4xl lg:text-5xl font-black text-[#80b224] mb-6 leading-tight leading-relaxed">
                   {/* {blogPost.title} */}
                   How to Choose the Right <br /> Storage for Your AI Workflows
                 </h1>

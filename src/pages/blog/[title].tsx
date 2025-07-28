@@ -376,12 +376,12 @@ export default function BlogDetail() {
                     ])
                   ])
                 ]),
-                React.createElement('h3', { key: 'selection-logic-title', style: { marginTop: '30px' } }, 'General Selection Logic:'),
+                React.createElement('h3', { key: 'selection-logic-title', style: { marginTop: '30px',fontWeight: 'bold' } }, 'General Selection Logic:'),
                 React.createElement('ol', { key: 'selection-list', style: { marginTop: '15px', paddingLeft: '20px' } }, [
-                  React.createElement('li', { key: 'li1', style: { marginBottom: '10px' } }, 'Assess Your Workload\'s Needs: If you are only running inference without needing to download data or save results, additional storage may not be required. Model training or fine-tuning typically requires a combination, such as local and object storage. Distributed tasks demand shared storage.'),
-                  React.createElement('li', { key: 'li2', style: { marginBottom: '10px' } }, 'Use Local Storage for High-Frequency, Low-Latency Access: Prioritize local storage for the primary data stream during the training phase to leverage its extremely low latency and high throughput.'),
-                  React.createElement('li', { key: 'li3', style: { marginBottom: '10px' } }, 'Use Shared Storage for Mid-Frequency, Collaborative Access: Choose shared storage to ensure synchronous data access across multiple processes or nodes, ideal for collaborative tasks and shared datasets.'),
-                  React.createElement('li', { key: 'li4', style: { marginBottom: '10px' } }, 'Use Object Storage for Low-Frequency Access and Archiving: Use object or block storage for long-term preservation of model versions, training logs, and other assets. It is cost-effective and suited for "write-once, read-many" scenarios.')
+                  React.createElement('li', { key: 'li1', style: { marginBottom: '10px' } }, '1. Assess Your Workload\'s Needs: If you are only running inference without needing to download data or save results, additional storage may not be required. Model training or fine-tuning typically requires a combination, such as local and object storage. Distributed tasks demand shared storage.'),
+                  React.createElement('li', { key: 'li2', style: { marginBottom: '10px' } }, '2. Use Local Storage for High-Frequency, Low-Latency Access: Prioritize local storage for the primary data stream during the training phase to leverage its extremely low latency and high throughput.'),
+                  React.createElement('li', { key: 'li3', style: { marginBottom: '10px' } }, '3. Use Shared Storage for Mid-Frequency, Collaborative Access: Choose shared storage to ensure synchronous data access across multiple processes or nodes, ideal for collaborative tasks and shared datasets.'),
+                  React.createElement('li', { key: 'li4', style: { marginBottom: '10px' } }, '4. Use Object Storage for Low-Frequency Access and Archiving: Use object or block storage for long-term preservation of model versions, training logs, and other assets. It is cost-effective and suited for "write-once, read-many" scenarios.')
                 ])
               ]
             },
@@ -389,7 +389,7 @@ export default function BlogDetail() {
             {
               title: 'II. Shared vs. Object Storage in Distributed Training',
               content: [
-                React.createElement('h3', { key: 'usage-differences-title' }, '1. Using Scene Differences'),
+                React.createElement('h3', { key: 'usage-differences-title',style: { fontWeight: 'bold' }}, '1. Using Scene Differences'),
                 React.createElement('ul', {
                   key: 'usage-differences-list',
                   style: { marginBottom: '20px' }
@@ -403,7 +403,7 @@ export default function BlogDetail() {
                     ' is accessed programmatically via APIs (like the S3 protocol) and cannot be mounted directly. It is perfect for storing original datasets, archiving final models, and managing data transfers to and from the public cloud.'
                   ])
                 ]),
-                React.createElement('h3', { key: 'technical-comparison-title' }, '2. Comparison of technical dimensions'),
+                React.createElement('h3', { key: 'technical-comparison-title' ,style: { fontWeight: 'bold' }}, '2. Comparison of technical dimensions'),
                 React.createElement('table', {
                   key: 'technical-comparison-table',
                   style: {
@@ -581,14 +581,14 @@ export default function BlogDetail() {
                     ])
                   ])
                 ]),
-                React.createElement('h3', { key: 'combined-approach-title' }, 'A Combined Approach for Distributed Training:'),
+                React.createElement('h3', { key: 'combined-approach-title',style: { fontWeight: 'bold' } }, 'A Combined Approach for Distributed Training:'),
                 React.createElement('ol', {
                   key: 'combined-approach-list',
                   style: { marginBottom: '20px' }
                 }, [
-                  React.createElement('li', { key: 'combined-li1', style: { marginBottom: '10px' } }, 'Before Training: Datasets, pre-trained weights, and configuration files are stored in object storage (S3).'),
-                  React.createElement('li', { key: 'combined-li2', style: { marginBottom: '10px' } }, 'During Training: The processed data is pulled from object storage to high-performance shared storage. All GPU nodes mount this shared directory for real-time, concurrent access. Intermediate checkpoints and logs are also written to shared storage due to its low latency.'),
-                  React.createElement('li', { key: 'combined-li3', style: { marginBottom: '10px' } }, 'After Training: The final model, logs, and metric reports are pushed back from shared storage to object storage for long-term archiving, versioning, and downstream use (e.g., deployment, evaluation).')
+                  React.createElement('li', { key: 'combined-li1', style: { marginBottom: '10px' } }, '1. Before Training: Datasets, pre-trained weights, and configuration files are stored in object storage (S3).'),
+                  React.createElement('li', { key: 'combined-li2', style: { marginBottom: '10px' } }, '2. During Training: The processed data is pulled from object storage to high-performance shared storage. All GPU nodes mount this shared directory for real-time, concurrent access. Intermediate checkpoints and logs are also written to shared storage due to its low latency.'),
+                  React.createElement('li', { key: 'combined-li3', style: { marginBottom: '10px' } }, '3. After Training: The final model, logs, and metric reports are pushed back from shared storage to object storage for long-term archiving, versioning, and downstream use (e.g., deployment, evaluation).')
                 ]),
                 React.createElement('p', { key: 'best-practice-note' }, 'This combination is a best practice, leveraging the strengths of each system for maximum efficiency.')
               ]
@@ -598,25 +598,25 @@ export default function BlogDetail() {
               title: 'Ⅲ. Advantages and disadvantages of local storage in high-performance GPU clusters',
               content: [
                 React.createElement('p', { key: 'local-storage-intro' }, 'In a GPU cluster, local storage is the directly attached storage (DAS) inside each server. At Canopy Wave, we use high-performance NVMe drives.'),
-                React.createElement('h3', { key: 'advantages-title' }, 'Advantages:'),
+                React.createElement('h3', { key: 'advantages-title' ,style: { fontWeight: 'bold' }}, 'Advantages:'),
                 React.createElement('ol', {
                   key: 'advantages-list',
                   style: { marginBottom: '20px' }
                 }, [
-                  React.createElement('li', { key: 'adv-li1', style: { marginBottom: '10px' } }, 'Extreme Performance: Connected via the PCIe bus, local NVMe storage offers ultra-low latency and high throughput (3-7 GB/s), bypassing network bottlenecks entirely. It is ideal for data-intensive tasks like loading large media files or caching frequently accessed training data.'),
-                  React.createElement('li', { key: 'adv-li2', style: { marginBottom: '10px' } }, 'Resource Isolation: Each server\'s local storage is exclusive, eliminating the "noisy neighbor" problem of I/O congestion or lock contention found in shared systems.'),
-                  React.createElement('li', { key: 'adv-li3', style: { marginBottom: '10px' } }, 'Architectural Simplicity: It requires no complex configuration of shared file systems, making it suitable for rapid deployment and agile development scenarios.'),
-                  React.createElement('li', { key: 'adv-li4', style: { marginBottom: '10px' } }, 'Cost-Effectiveness: The cost per gigabyte for NVMe is often significantly lower than that of enterprise-grade shared storage systems.')
+                  React.createElement('li', { key: 'adv-li1', style: { marginBottom: '10px' } }, '1. Extreme Performance: Connected via the PCIe bus, local NVMe storage offers ultra-low latency and high throughput (3-7 GB/s), bypassing network bottlenecks entirely. It is ideal for data-intensive tasks like loading large media files or caching frequently accessed training data.'),
+                  React.createElement('li', { key: 'adv-li2', style: { marginBottom: '10px' } }, '2. Resource Isolation: Each server\'s local storage is exclusive, eliminating the "noisy neighbor" problem of I/O congestion or lock contention found in shared systems.'),
+                  React.createElement('li', { key: 'adv-li3', style: { marginBottom: '10px' } }, '3. Architectural Simplicity: It requires no complex configuration of shared file systems, making it suitable for rapid deployment and agile development scenarios.'),
+                  React.createElement('li', { key: 'adv-li4', style: { marginBottom: '10px' } }, '4. Cost-Effectiveness: The cost per gigabyte for NVMe is often significantly lower than that of enterprise-grade shared storage systems.')
                 ]),
-                React.createElement('h3', { key: 'disadvantages-title' }, 'Disadvantages:'),
+                React.createElement('h3', { key: 'disadvantages-title' ,style: { fontWeight: 'bold' }}, 'Disadvantages:'),
                 React.createElement('ol', {
                   key: 'disadvantages-list',
                   style: { marginBottom: '20px' }
                 }, [
-                  React.createElement('li', { key: 'dis-li1', style: { marginBottom: '10px' } }, 'No Data Sharing: Data on a local drive is isolated to that server, making it unsuitable as a primary data source for distributed training where all nodes need a unified view of the data.'),
-                  React.createElement('li', { key: 'dis-li2', style: { marginBottom: '10px' } }, 'Lack of Data Redundancy: Local storage typically lacks built-in redundancy. A server failure or instance termination can lead to permanent data loss, making it unsuitable for long-term assets.'),
-                  React.createElement('li', { key: 'dis-li3', style: { marginBottom: '10px' } }, 'Limited & Inelastic Capacity: Local disk capacity is fixed and cannot be dynamically expanded like object or shared storage.'),
-                  React.createElement('li', { key: 'dis-li4', style: { marginBottom: '10px' } }, 'Scheduling Complexity: Schedulers must account for data locality, which can lead to inefficient resource utilization and frequent data transfers if not managed properly.')
+                  React.createElement('li', { key: 'dis-li1', style: { marginBottom: '10px' } }, '1. No Data Sharing: Data on a local drive is isolated to that server, making it unsuitable as a primary data source for distributed training where all nodes need a unified view of the data.'),
+                  React.createElement('li', { key: 'dis-li2', style: { marginBottom: '10px' } }, '2. Lack of Data Redundancy: Local storage typically lacks built-in redundancy. A server failure or instance termination can lead to permanent data loss, making it unsuitable for long-term assets.'),
+                  React.createElement('li', { key: 'dis-li3', style: { marginBottom: '10px' } }, '3. Limited & Inelastic Capacity: Local disk capacity is fixed and cannot be dynamically expanded like object or shared storage.'),
+                  React.createElement('li', { key: 'dis-li4', style: { marginBottom: '10px' } }, '4. Scheduling Complexity: Schedulers must account for data locality, which can lead to inefficient resource utilization and frequent data transfers if not managed properly.')
                 ]),
                 React.createElement('p', { key: 'conclusion-paragraph' }, [
                   React.createElement('strong', { key: 'conclusion-bold' }, 'Conclusion:'),
