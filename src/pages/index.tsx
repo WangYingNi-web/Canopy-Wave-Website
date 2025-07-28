@@ -28,6 +28,14 @@ export default function Index() {
   const newsCards = [
     {
       id: 1,
+      href: "/blog/how-to-choose-the-right-storage-for-your-ai-workflows",
+      image: "/blog/image.png",
+      title: "How to Choose the Right Storage for Your AI Workflows",
+      description: "Choosing the Right Storage Architecture for AI",
+      date: "July 25, 2025"
+    },
+    {
+      id: 2,
       href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",
       image: "/blog/blog2.png",
       title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
@@ -35,7 +43,7 @@ export default function Index() {
       date: "July 14, 2025"
     },
     {
-      id: 2,
+      id: 3,
       href: "/events/ai-agent-summit-keynote",
       image: "/blog2.svg",
       title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
@@ -43,7 +51,7 @@ export default function Index() {
       date: "May 15, 2025"
     },
     {
-      id: 3,
+      id: 4,
       href: "/blog/joint-blog-accelerate-enterprise-ai",
       image: "/blog1.webp",
       title: "Joint Blog - Accelerate Enterprise AI",
@@ -51,13 +59,14 @@ export default function Index() {
       date: "April 16, 2025"
     },
     {
-      id: 4,
+      id: 5,
       href: "/events/canopy-confidentialmind-partnership",
       image: "/confidentialmind-logo.png",
       title: "Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption",
       description: "by James Liao @Canopy Wave",
       date: "April 1, 2025"
-    }
+    },
+    
   ];
 
   // 创建扩展的卡片数组以支持无缝循环
