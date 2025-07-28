@@ -343,11 +343,19 @@ export default function Header() {
                               </svg> */}
                             </IwsLink>
                             <ul className="pl-4 mt-2 space-y-2">
-                              <li><IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink></li>
-                              <li><IwsLink href="/pricing#H200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink></li>
-                              <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink></li>
-                              <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Object Storage</IwsLink></li>
-                              <li><IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Additional Public IP Address</IwsLink></li>
+                              <li className="flex flex-wrap gap-x-20 gap-y-2">
+                                <div className="flex flex-col space-y-2">
+                                  <IwsLink href="/pricing#GB200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA GB200 NVL72</IwsLink>
+                                  <IwsLink href="/pricing#B200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX B200</IwsLink>
+                                  <IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink>
+                                  <IwsLink href="/pricing#H200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink>
+                                  <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink>
+                                </div>
+                                <div className="flex flex-col space-y-2">
+                                  <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Object Storage</IwsLink>
+                                  <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Additional Public IP Address</IwsLink>
+                                </div>
+                              </li>
                             </ul>
 
                           </div>

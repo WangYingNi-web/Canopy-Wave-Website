@@ -68,6 +68,111 @@ export default function PricingPage() {
 
             {/* Pricing Tables Container */}
             <div className="max-w-7xl mx-auto px-4 space-y-12 mb-16">
+                {/* NVIDIA GB200 NVL72 */}
+                <div id='GB200' className="mb-16">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
+                        <div className="flex items-center gap-2">
+                            <Image
+                                src="/pricing/NvidiaH200s.svg"
+                                alt="H200"
+                                width={24}
+                                height={24}
+                            />
+                            <h3 className="text-sm font-semibold">NVIDIA GB200 NVL72</h3>
+                        </div>
+                    </div>
+                    <div className="overflow-x-auto">
+                        <div className="min-w-[600px] lg:w-full text-sm">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="border-b">
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">Instance Type</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">vCPUs</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">NVMe Storage</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">Public IP</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour/GPU</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="border-b">
+                                        <td className="py-4 text-center">Bare-metal Rack Cluster</td>
+                                        <td className="py-4 text-center">——</td>
+                                        <td className="py-4 text-center">——</td>
+                                        <td className="py-4 text-center">——</td>
+                                        <td className="py-4 text-center">——</td>
+                                        <td className="py-4 text-center font-semibold">
+                                        <button 
+                                                className="text-[#8CC63F] hover:text-[#7ab32f] hover:underline cursor-pointer transition-colors duration-200"
+                                                onClick={() => window.location.href = '/contact'}
+                                            >
+                                                Contact Us
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                {/* NVIDIA HGX B200 */}
+                <div id='B200' className="mb-16">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
+                        <div className="flex items-center gap-2">
+                            <Image
+                                src="/pricing/NvidiaH200s.svg"
+                                alt="H200"
+                                width={24}
+                                height={24}
+                            />
+                            <h3 className="text-sm font-semibold">NVIDIA HGX B200</h3>
+                        </div>
+                    </div>
+                    <div className="overflow-x-auto">
+                        <div className="min-w-[600px] lg:w-full text-sm">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="border-b">
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">Instance Type</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">vCPUs</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">RAM</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">NVMe Storage</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[12%]">Public IP</th>
+                                        <th className="py-3 text-center whitespace-nowrap w-[15%]">Price/Hour/GPU</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="border-b">
+                                        <td className="py-4 text-center">2x NVIDIA SXM5 B200</td>
+                                        <td className="py-4 text-center">60</td>
+                                        <td className="py-4 text-center">400 GB</td>
+                                        <td className="py-4 text-center">2 TB</td>
+                                        <td className="py-4 text-center">1</td>
+                                        <td className="py-4 text-center font-semibold">$4.50</td>
+                                    </tr>
+                                    <tr className="border-b">
+                                        <td className="py-4 text-center">4x NVIDIA SXM5 B200</td>
+                                        <td className="py-4 text-center">120</td>
+                                        <td className="py-4 text-center">800 GB</td>
+                                        <td className="py-4 text-center">4 TB</td>
+                                        <td className="py-4 text-center">1</td>
+                                        <td className="py-4 text-center font-semibold">$4.50</td>
+                                    </tr>
+                                    <tr className="border-b">
+                                        <td className="py-4 text-center">8x NVIDIA SXM5 B200</td>
+                                        <td className="py-4 text-center">240</td>
+                                        <td className="py-4 text-center">1.5 TB</td>
+                                        <td className="py-4 text-center">8 TB</td>
+                                        <td className="py-4 text-center">1</td>
+                                        <td className="py-4 text-center font-semibold">$4.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
                 {/* NVIDIA HGX H100 */}
                 <div id='H100' className="mb-16">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">

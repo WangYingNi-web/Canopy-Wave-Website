@@ -14,7 +14,7 @@ export const useScrollToHash = () => {
           if (element) {
             let headerOffset = 50; // 默认头部导航的高度
 
-            if (hash === '#H100' || hash === '#H200') {
+            if (hash === '#H100' || hash === '#H200' || hash === '#GB200' || hash === '#B200') {
               headerOffset = 100;
             }
             const elementPosition = element.getBoundingClientRect().top;
