@@ -324,23 +324,10 @@ export default function Header() {
                   <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li>
+                        <li className='flex flex-wrap gap-x-32 gap-y-2'>
                           <div>
                             <IwsLink href="/pricing" className="text-sm text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
                               GPU Cloud Pricing
-                              {/* <svg
-                                className="w-4 h-4 ml-1"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M19 9l-7 7-7-7"
-                                />
-                              </svg> */}
                             </IwsLink>
                             <ul className="pl-4 mt-2 space-y-2">
                               <li className="flex flex-wrap gap-x-20 gap-y-2">
@@ -349,15 +336,23 @@ export default function Header() {
                                   <IwsLink href="/pricing#B200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX B200</IwsLink>
                                   <IwsLink href="/pricing#H100" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H100</IwsLink>
                                   <IwsLink href="/pricing#H200" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>NVIDIA HGX H200</IwsLink>
-                                  <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink>
                                 </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <IwsLink href="/pricing#other" className="text-sm text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => setShowProducts(false)}>
+                              Storage Pricing
+                            </IwsLink>
+                            <ul className="pl-4 mt-2 space-y-2">
+                              <li className="flex flex-wrap gap-x-20 gap-y-2">
                                 <div className="flex flex-col space-y-2">
+                                  <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Network Shared Storage</IwsLink>
                                   <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Object Storage</IwsLink>
                                   <IwsLink href="/pricing#other" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowPricing(false) }}>Additional Public IP Address</IwsLink>
                                 </div>
                               </li>
                             </ul>
-
                           </div>
                         </li>
 

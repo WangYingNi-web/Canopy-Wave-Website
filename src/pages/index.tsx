@@ -408,7 +408,7 @@ export default function Index() {
         </div>
 
         {/* Global Network Section */}
-        <div className="bg-[#F9F9F9] py-12 sm:py-16">
+        <div className="bg-[#F9F9F9] py-12 sm:pt-16 pb-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
               <div className="w-full md:w-1/2">
@@ -464,7 +464,7 @@ export default function Index() {
         </div> */}
 
         {/* News Section */}
-        <div className="bg-[#F9F9F9] py-16 sm:py-20">
+        <div className="bg-[#F9F9F9] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <div className='flex items-center justify-between mb-12'>

@@ -102,7 +102,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">——</td>
                                         <td className="py-4 text-center">——</td>
                                         <td className="py-4 text-center font-semibold">
-                                        <button 
+                                            <button
                                                 className="text-[#8CC63F] hover:text-[#7ab32f] hover:underline cursor-pointer transition-colors duration-200"
                                                 onClick={() => window.location.href = '/contact'}
                                             >
@@ -178,8 +178,8 @@ export default function PricingPage() {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
-                                src="/pricing/NvidiaH100s.svg"
-                                alt="H100"
+                                src="/pricing/NvidiaH200s.svg"
+                                alt="H200"
                                 width={24}
                                 height={24}
                             />
@@ -403,7 +403,7 @@ export default function PricingPage() {
                     </div>
                 </div>
             </div>
-            
+
             <Footer />
         </main>
     );
