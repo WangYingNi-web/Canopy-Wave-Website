@@ -13,7 +13,7 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
       {/* Hero Section */}
       <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
-                    src="/blog/banner2.png"
+                    src="/blog/workflows.png"
                     alt="banner"
                     fill
                     className="object-cover"

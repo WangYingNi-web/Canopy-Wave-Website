@@ -61,7 +61,7 @@ export default function Newsroom() {
             title: "How to Choose the Right Storage for Your AI Workflows",
             description: "Choosing the Right Storage Architecture for AI",
             date: "July 25, 2025",
-            image: "/blog/image.png"
+            image: "/blog/workflows2.png"
         },
     ];
     const newsroomPosts: NewsroomPost[] = [

@@ -29,7 +29,7 @@ export default function Index() {
     {
       id: 1,
       href: "/blog/how-to-choose-the-right-storage-for-your-ai-workflows",
-      image: "/blog/image.png",
+      image: "/blog/workflows2.png",
       title: "How to Choose the Right Storage for Your AI Workflows",
       description: "Choosing the Right Storage Architecture for AI",
       date: "July 25, 2025"
@@ -113,7 +113,7 @@ export default function Index() {
     },
     {
       id: 2,
-      background: '/banner2.jpg',
+      background: '/workflows.jpg',
       title: 'On-Demand',
       subtitle: 'NVIDIA GB200 NVL72',
       highlight: 'Aiming to Next-Generation AI and Computing Technologies',
