@@ -97,17 +97,12 @@ export default function PricingPage() {
                                 <tbody>
                                     <tr className="border-b">
                                         <td className="py-4 text-center">Bare-metal Rack Cluster</td>
-                                        <td className="py-4 text-center">——</td>
-                                        <td className="py-4 text-center">——</td>
-                                        <td className="py-4 text-center">——</td>
-                                        <td className="py-4 text-center">——</td>
+                                        <td className="py-4 text-center">4</td>
+                                        <td className="py-4 text-center">960GB</td>
+                                        <td className="py-4 text-center">30.72TB</td>
+                                        <td className="py-4 text-center">1</td>
                                         <td className="py-4 text-center font-semibold">
-                                            <button
-                                                className="text-[#8CC63F] hover:text-[#7ab32f] hover:underline cursor-pointer transition-colors duration-200"
-                                                onClick={() => window.location.href = '/contact'}
-                                            >
-                                                Contact Us
-                                            </button>
+                                        $9.00
                                         </td>
                                     </tr>
                                 </tbody>
