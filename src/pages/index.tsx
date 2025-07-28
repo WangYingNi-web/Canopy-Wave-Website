@@ -341,7 +341,6 @@ export default function Index() {
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA H100</h3>
@@ -356,7 +355,6 @@ export default function Index() {
               </div>
 
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA H200</h3>
@@ -371,7 +369,6 @@ export default function Index() {
               </div>
 
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA HGX B200</h3>
@@ -386,7 +383,6 @@ export default function Index() {
               </div>
 
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA GB200 NVL72</h3>
