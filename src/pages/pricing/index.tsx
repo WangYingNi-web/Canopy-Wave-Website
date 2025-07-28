@@ -173,7 +173,7 @@ export default function PricingPage() {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
-                                src="/pricing/NvidiaH200s.svg"
+                                src="/pricing/NvidiaH100s.svg"
                                 alt="H200"
                                 width={24}
                                 height={24}
@@ -230,7 +230,7 @@ export default function PricingPage() {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-4 sm:space-y-0">
                         <div className="flex items-center gap-2">
                             <Image
-                                src="/pricing/NvidiaH200s.svg"
+                                src="/pricing/NvidiaH100s.svg"
                                 alt="H200"
                                 width={24}
                                 height={24}
