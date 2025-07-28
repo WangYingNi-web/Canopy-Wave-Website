@@ -10,6 +10,7 @@ module.exports = {
 		screens: {
 			'max-1207': {'max': '1207px'},
 			'custom': '975px',
+			'custom-500': '500px'
 		},
 		maxWidth: {
 			'7xl': '1320px',

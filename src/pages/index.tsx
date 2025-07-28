@@ -341,8 +341,7 @@ export default function Index() {
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                {/* 添加背景装饰 */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA H100</h3>
@@ -357,8 +356,7 @@ export default function Index() {
               </div>
 
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                {/* 添加背景装饰 */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA H200</h3>
@@ -373,8 +371,7 @@ export default function Index() {
               </div>
 
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                {/* 添加背景装饰 */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA HGX B200</h3>
@@ -389,8 +386,7 @@ export default function Index() {
               </div>
 
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                {/* 添加背景装饰 */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8CC63F]/10 to-transparent rounded-full transform -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA GB200 NVL72</h3>
@@ -403,17 +399,6 @@ export default function Index() {
                   </svg>
                 </IwsLink>
               </div>
-
-
-              {/* <div className="border border-gray-200 p-8 rounded-lg hover:shadow-lg transition-all duration-300 p-8 sm:p-10">
-                <div className="flex items-center mb-6">
-                  <Image src="/icon/NvidiaH100.svg" alt="GB200" width={34} height={34} className='svg-gray' />
-                  <h3 className="text-l font-bold ml-6">NVIDIA GB200 NVL72</h3>
-                </div>
-                <p className="text-gray-600 text-l mb-6">
-                  GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
-                <IwsLink href="/gb200-nvl72" className="text-[#8CC63F] hover:text-[#7ab32f] text-l font-medium">Learn More →</IwsLink>
-              </div> */}
             </div>
           </div>
         </div>
@@ -495,7 +480,7 @@ export default function Index() {
             </SlideUp>
 
             {/* News Cards Carousel */}
-            <div className="relative -mx-3">
+            <div className="relative sm:-mx-3">
               <div className="overflow-hidden">
                 <div
                   className="flex transition-transform duration-300 ease-in-out"
@@ -505,7 +490,7 @@ export default function Index() {
                   }}
                 >
                   {getExtendedCards().map((card, index) => (
-                    <div key={`${card.id}-${Math.floor(index / newsCards.length)}-${index}`} className="w-1/3 flex-shrink-0 px-3">
+                    <div key={`${card.id}-${Math.floor(index / newsCards.length)}-${index}`} className="w-1/3 flex-shrink-0 custom-500:px-3 md:px-3 sm:px-3 lg:px-3">
                       <Link href={card.href}>
                         <div className="h-[420px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
                           <div className="relative h-[220px] w-full overflow-hidden">
