@@ -66,7 +66,7 @@ export default function Index() {
       description: "by James Liao @Canopy Wave",
       date: "April 1, 2025"
     },
-    
+
   ];
 
   // 创建扩展的卡片数组以支持无缝循环
@@ -203,19 +203,18 @@ export default function Index() {
               )}
               {slide.id === 3 ? (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src={slide.background}
-                    alt={`Banner ${slide.id}`}
-                    width={850}
-                    height={550}
-                    className="object-cover"
-                    style={slide.id === 3 ? {
-                      transform: 'scale(0.8)',
-                      transformOrigin: 'center center'
-                    } : {}}
-                    priority={index === 0}
-                  />
-                </div>
+                <Image
+                  src={slide.background}
+                  alt={`Banner ${slide.id}`}
+                  width={850}
+                  height={550}
+                  className="object-cover"
+                  style={{
+                    width: 'auto'
+                  }}
+                  priority={index === 0}
+                />
+              </div>
               ) : (
                 <Image
                   src={slide.background}
