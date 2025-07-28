@@ -96,7 +96,7 @@ export default function PricingPage() {
                                 </thead>
                                 <tbody>
                                     <tr className="border-b">
-                                        <td className="py-4 text-center">Bare-metal Rack Cluster</td>
+                                        <td className="py-4 text-center">NVIDIA GB200 NVL72</td>
                                         <td className="py-4 text-center">4</td>
                                         <td className="py-4 text-center">960 GB</td>
                                         <td className="py-4 text-center">30.72 TB</td>
