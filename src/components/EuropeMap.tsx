@@ -162,9 +162,9 @@ export default function InteractiveMap() {
                                 width: currentConfig.canadaPosition.width,
                                 height: currentConfig.canadaPosition.height
                             }}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            // initial={{ opacity: 0, scale: 0.8 }}
+                            // animate={{ opacity: 1, scale: 1 }}
+                            // transition={{ duration: 0.6, delay: 0.3 }}
                         >
                             <Image
                                 src="/map/CanadaMap.svg"
