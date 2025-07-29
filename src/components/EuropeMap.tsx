@@ -50,8 +50,8 @@ const mapConfigs: Record<MapType, MapConfig> = {
             },
             {
                 default: { x: 80, y: 16, r: 8, label: '多伦多' },
-                xs: { x: 80, y: 6 }, // 小屏幕时的坐标
-                xss: { x: 80, y: 13 }, // 小屏幕时的坐标
+                xs: { x: 80, y: 8 }, // 小屏幕时的坐标
+                xss: { x: 80, y: 14 }, // 小屏幕时的坐标
                 sm: { x: 80, y: 13 }, // 小屏幕时的坐标
                 md: { x: 80, y: 16 }, // 中等屏幕时的坐标
                 lg: { x: 80, y: 16 }  // 大屏幕时的坐标
