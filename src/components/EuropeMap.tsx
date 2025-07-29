@@ -1,19 +1,29 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// type MapType = 'NorthAmerica' | 'Europe' | 'Canada' | 'NorthAmericaWithCanada';
 type MapType = 'NorthAmericaWithCanada' | 'Europe';
 
+interface GlowPoint {
+    x: number;
+    y: number;
+    r?: number;
+    label: string;
+}
+
+interface ResponsiveGlowPoint {
+    default: GlowPoint;
+    xss?: Partial<GlowPoint>;
+    xs?: Partial<GlowPoint>;
+    sm?: Partial<GlowPoint>;
+    md?: Partial<GlowPoint>;
+    lg?: Partial<GlowPoint>;
+}
 
 interface MapConfig {
     src: string;
     alt: string;
-    glowPoints: Array<{
-        cx: string;
-        cy: string;
-        label: string;
-    }>;
+    glowPoints: ResponsiveGlowPoint[];
     isComposite?: boolean;
     canadaPosition?: {
         top: string;
@@ -35,46 +45,78 @@ const mapConfigs: Record<MapType, MapConfig> = {
             height: '35%'
         },
         glowPoints: [
-            { cx: '70', cy: '220', label: '硅谷' }, // 硅谷位置
-            { cx: '460', cy: '120', label: '多伦多' } // 调整后的多伦多位置（在Canada小地图上）
+            {
+                default: { x: 7, y: 43, r: 8, label: '硅谷' }
+            },
+            {
+                default: { x: 80, y: 16, r: 8, label: '多伦多' },
+                xs: { x: 80, y: 6 }, // 小屏幕时的坐标
+                xss: { x: 80, y: 13 }, // 小屏幕时的坐标
+                sm: { x: 80, y: 13 }, // 小屏幕时的坐标
+                md: { x: 80, y: 16 }, // 中等屏幕时的坐标
+                lg: { x: 80, y: 16 }  // 大屏幕时的坐标
+            }
         ]
     },
-    //   NorthAmerica: {
-    //     src: '/map/NorthAmerica_Map.svg',
-    //     alt: 'North America Map',
-    //     glowPoints: [
-    //       { cx: '45', cy: '200', label: '硅谷' } // 硅谷位置
-    //     ]
-    //   },
     Europe: {
         src: '/map/EuropeMap.svg',
         alt: 'Europe Map',
         glowPoints: [
-            { cx: '135', cy: '120', label: 'Europe' }, // 冰岛位置1
-            { cx: '150', cy: '123', label: 'Europe' }  // 冰岛位置2
+            { default: { x: 20, y: 23, r: 6, label: 'Europe' } },
+            { default: { x: 23, y: 24, r: 6, label: 'Europe' } }
         ]
     },
-    //   Canada: {
-    //     src: '/map/CanadaMap.svg',
-    //     alt: 'Canada Map',
-    //     glowPoints: [
-    //       { cx: '400', cy: '338', label: '多伦多' } // 多伦多位置
-    //     ]
-    //   },
-
 };
 
-export default function EuropeMap() {
-    const ref = useRef(null);
+// 获取当前屏幕尺寸
+const useScreenSize = () => {
+    const [screenSize, setScreenSize] = useState<'xss' | 'xs' | 'sm' | 'md' | 'lg'>('lg');
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            const width = window.innerWidth;
+            if (width < 640) {
+                setScreenSize('sm');
+            } else if (width >= 768 && width <= 860) {
+                setScreenSize('xs');
+            } else if (width >= 860 && width <= 1100) {
+                setScreenSize('xss');
+            }
+            else if (width < 1100) {
+                setScreenSize('md');
+            } else {
+                setScreenSize('lg');
+            }
+        };
+
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
+    return screenSize;
+};
+
+// 获取响应式光点坐标
+const getResponsiveGlowPoint = (point: ResponsiveGlowPoint, screenSize: 'xss' | 'xs' | 'sm' | 'md' | 'lg'): GlowPoint => {
+    const responsive = point[screenSize] || {};
+    return {
+        ...point.default,
+        ...responsive
+    };
+};
+
+export default function InteractiveMap() {
+    const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { amount: 0.5 });
     const [currentMap, setCurrentMap] = useState<MapType>('NorthAmericaWithCanada');
-
+    const screenSize = useScreenSize();
     const currentConfig = mapConfigs[currentMap];
 
     return (
-        <div ref={ref} className="w-full h-[425px] relative">
-            {/* 切换按钮 - 右上角 */}
-            <div className="absolute top-0 right-4 z-10 flex gap-2 -mt-10">
+        <div ref={ref} className="w-full relative">
+            {/* 切换按钮 */}
+            <div className={`absolute top-0 right-4 z-20 flex gap-2 ${currentMap === 'Europe' ? '-mt-[70px]' : '-mt-[110px]'}`}>
                 {(Object.keys(mapConfigs) as MapType[]).map((mapType) => (
                     <button
                         key={mapType}
@@ -90,24 +132,27 @@ export default function EuropeMap() {
             </div>
 
             {/* 地图容器 */}
-            <div className="relative w-full h-full" style={{ aspectRatio: '580/400' }}>
-                {/* 背景地图 - 使用绝对定位 */}
-                <motion.div
-                     className={`absolute inset-0 ${currentMap === 'Europe' ? 'mt-10' : 'mt-20'}`}
-                    key={currentMap}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                >
+            <div
+                className={`relative w-full mx-auto ${currentMap === 'Europe' ? 'mt-10' : 'mt-20'
+                    }`}
+                style={{
+                    aspectRatio: '580/400',
+                    maxWidth: '580px',
+                    height: 'auto'
+                }}
+            >
+                {/* 主地图 */}
+                <div className="relative w-full h-full">
                     <Image
                         src={currentConfig.src}
                         alt={currentConfig.alt}
                         fill
-                        className='object-contain'
+                        className="object-contain"
                         priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 580px"
                     />
 
-                    {/* 如果是合并地图，在右上角显示Canada地图 */}
+                    {/* 加拿大小地图叠加层 */}
                     {currentConfig.isComposite && currentConfig.canadaPosition && (
                         <motion.div
                             className="absolute"
@@ -119,66 +164,106 @@ export default function EuropeMap() {
                             }}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
                         >
                             <Image
                                 src="/map/CanadaMap.svg"
                                 alt="Canada Map Overlay"
                                 fill
-                                className='object-contain'
+                                className="object-contain"
+                                sizes="200px"
                             />
                         </motion.div>
                     )}
-                </motion.div>
+                </div>
 
-                {/* 发光点效果层 - 与地图相同尺寸 */}
-                <div className="absolute inset-0">
-                    <svg
-                        className="w-full h-full"
-                        viewBox="0 0 580 400"
-                        preserveAspectRatio="xMidYMid meet"
-                    >
-                        {/* 动态渲染发光点 */}
-                        {currentConfig.glowPoints.map((point, index) => (
-                            <motion.circle
+                {/* 光点层 - 使用响应式坐标 */}
+                <div className="absolute inset-0 pointer-events-none z-10">
+                    {currentConfig.glowPoints.map((responsivePoint, index) => {
+                        const point = getResponsiveGlowPoint(responsivePoint, screenSize);
+                        return (
+                            <div
                                 key={`${currentMap}-${index}`}
-                                cx={point.cx}
-                                cy={point.cy}
-                                r={point.label === 'Europe' ? "4" : "5"}
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{
-                                    opacity: isInView ? [0.6, 1, 0.6] : 0,
-                                    scale: isInView ? [1, 1.5, 1] : 0
+                                className="absolute"
+                                style={{
+                                    left: `${point.x}%`,
+                                    top: `${point.y}%`,
+                                    width: '0px',
+                                    height: '0px'
                                 }}
-                                transition={{
-                                    duration: 2,
-                                    ease: "easeInOut",
-                                    repeat: Infinity,
-                                    repeatType: "reverse",
-                                    delay: index * 0.2 // 多个点时错开动画
-                                }}
-                                fill="#8CC63F"
-                                filter="url(#glow)"
-                            />
-                        ))}
-
-                        {/* 发光效果滤镜 */}
-                        <defs>
-                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-                                <feComposite
-                                    in="coloredBlur"
-                                    in2="SourceGraphic"
-                                    operator="over"
-                                    result="compositedGlow"
+                            >
+                                {/* 外层光晕 */}
+                                <motion.div
+                                    className="absolute rounded-full bg-[#8CC63F]/30"
+                                    style={{
+                                        width: `${(point.r || 10) * 3}px`,
+                                        height: `${(point.r || 10) * 3}px`,
+                                        left: '50%',
+                                        top: '50%',
+                                        transform: 'translate(-50%, -50%)'
+                                    }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        opacity: isInView ? [0.3, 0.6, 0.3] : 0
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        ease: "easeInOut",
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        delay: index * 0.3
+                                    }}
                                 />
-                                <feMerge>
-                                    <feMergeNode in="compositedGlow" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
-                        </defs>
-                    </svg>
+
+                                {/* 中层光晕 */}
+                                <motion.div
+                                    className="absolute rounded-full bg-[#8CC63F]/50"
+                                    style={{
+                                        width: `${(point.r || 10) * 2}px`,
+                                        height: `${(point.r || 10) * 2}px`,
+                                        left: '50%',
+                                        top: '50%',
+                                        transform: 'translate(-50%, -50%)'
+                                    }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        opacity: isInView ? [0.5, 0.8, 0.5] : 0
+                                    }}
+                                    transition={{
+                                        duration: 2.5,
+                                        ease: "easeInOut",
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        delay: index * 0.3 + 0.1
+                                    }}
+                                />
+
+                                {/* 核心光点 */}
+                                <motion.div
+                                    className="absolute rounded-full bg-[#8CC63F]"
+                                    style={{
+                                        width: `${point.r || 10}px`,
+                                        height: `${point.r || 10}px`,
+                                        left: '50%',
+                                        top: '50%',
+                                        transform: 'translate(-50%, -50%)',
+                                        boxShadow: '0 0 15px 3px rgba(140, 198, 63, 0.8)'
+                                    }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        opacity: isInView ? [0.8, 1, 0.8] : 0
+                                    }}
+                                    transition={{
+                                        duration: 2,
+                                        ease: "easeInOut",
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        delay: index * 0.3 + 0.2
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
