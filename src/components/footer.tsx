@@ -73,6 +73,8 @@ export default function Footer() {
                                 <div>
                                     <h3 className="font-semibold mb-2 text-sm">Pricing</h3>
                                     <ul className="space-y-2 text-xs">
+                                        <li><IwsLink href="/pricing#GB200" className="text-gray-500 hover:text-gray-700">NVIDIA GB200 NVL72</IwsLink></li>
+                                        <li><IwsLink href="/pricing#B200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX B200</IwsLink></li>
                                         <li><IwsLink href="/pricing#H100" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H100</IwsLink></li>
                                         <li><IwsLink href="/pricing#H200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H200</IwsLink></li>
                                         <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Network Shared Storage</IwsLink></li>
