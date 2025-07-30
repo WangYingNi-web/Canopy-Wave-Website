@@ -43,7 +43,8 @@ export default function Contact() {
             purpose: validateField('purpose', formData.purpose),
             expectedGPUs: validateField('expectedGPUs', formData.expectedGPUs),
             projectStartTime: validateField('projectStartTime', formData.projectStartTime),
-            interests: validateField('interests', formData.interests),
+            // interests: validateField('interests', formData.interests),
+            interests:'',
             message: validateField('message', formData.message),
         };
 
@@ -73,6 +74,7 @@ export default function Contact() {
                 {
                     subject: 'New Contact Form Submission',
                     recipients: ['andrew.li@canopywave.com', 'yachal@canopywave.com','sales@canopywave.com'],
+                    // recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 },
                 {
@@ -156,7 +158,8 @@ export default function Contact() {
             // 更新错误状态
             setErrors(prev => ({
                 ...prev,
-                interests: newInterests.length === 0 ? 'Please complete this required field.' : ''
+                // interests: newInterests.length === 0 ? 'Please complete this required field.' : ''
+                interests: ''
             }));
         }
     };
@@ -165,11 +168,11 @@ export default function Contact() {
         let error = '';
 
         // 对于 interests 数组的特殊处理
-        if (name === 'interests' && Array.isArray(value) && value.length === 0) {
-            error = 'Please complete this required field.';
-        }
+        // if (name === 'interests' && Array.isArray(value) && value.length === 0) {
+        //     error = 'Please complete this required field.';
+        // }
         // 对于普通字符串字段的处理
-        else if (typeof value === 'string') {
+        if (typeof value === 'string') {
             if (!value.trim()) {
                 error = 'Please complete this required field.';
             } else if (name === 'email' && !validateEmail(value)) {
@@ -323,7 +326,7 @@ export default function Contact() {
                                     )}
                                 </div>
                                 <div className="flex flex-col mb-4">
-                                    <h3 className="text-base font-bold mb-2">Select Your interests <span className="text-red-500">*</span></h3>
+                                    <h3 className="text-base font-bold mb-2">Select Your interests</h3>
                                     <div className="flex flex-col">
                                         <label className="flex items-center mb-2 text-sm">
                                             <input

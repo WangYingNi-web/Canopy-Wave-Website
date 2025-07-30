@@ -787,8 +787,37 @@ export default function Header() {
                     </button>
 
                     <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
+                      <li><IwsLink href="/pricing#GB200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA GB200 NVL72</IwsLink></li>
+                      <li><IwsLink href="/pricing#B200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX B200</IwsLink></li>
                       <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
                       <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
+                    </ul>
+
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <button
+                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
+                      onClick={() => window.location.href="/pricing#other"}
+                    >
+                      <span>Storage Pricing</span>
+                      <svg
+                        className={`w-4 h-4 transform transition-transform duration-200`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+
+                    <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
                       <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
                       <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
                       <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
