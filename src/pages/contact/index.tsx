@@ -287,7 +287,7 @@ export default function Contact() {
                                         )}
                                     </div>
                                 </div>
-                                <div className="flex flex-col mb-4">
+                                {/* <div className="flex flex-col mb-4">
                                     <label className="mb-1 text-gray-700 text-sm">I plan to use Canopy Wave for<span className="text-red-500">*</span></label>
                                     <select
                                         name="purpose"
@@ -324,7 +324,7 @@ export default function Contact() {
                                     {errors.expectedGPUs && (
                                         <span className="text-red-500 text-xs mt-1">{errors.expectedGPUs}</span>
                                     )}
-                                </div>
+                                </div> */}
                                 <div className="flex flex-col mb-4">
                                     <h3 className="text-base font-bold mb-2">Select Your interests</h3>
                                     <div className="flex flex-col">
@@ -400,7 +400,7 @@ export default function Contact() {
                                         {errors.interests && (
                                             <span className="text-red-500 text-xs -mt-1 mb-2">{errors.interests}</span>
                                         )}
-                                        <div className="flex flex-col mb-4">
+                                        {/* <div className="flex flex-col mb-4">
                                             <label className="mb-1 text-gray-700 text-sm">When are you looking to start your project? <span className="text-red-500">*</span></label>
                                             <select
                                                 name="projectStartTime"
@@ -417,8 +417,8 @@ export default function Contact() {
                                             {errors.projectStartTime && (
                                                 <span className="text-red-500 text-xs mt-1">{errors.projectStartTime}</span>
                                             )}
-                                        </div>
-                                        <div className="flex flex-col mb-4">
+                                        </div> */}
+                                        {/* <div className="flex flex-col mb-4">
                                             <label className="mb-1 text-gray-700 text-sm">Tell us about your need for high-performance compute, and how you plan to use it to advance your business?<span className="text-red-500">*</span></label>
                                             <textarea
                                                 name="message"
@@ -430,7 +430,7 @@ export default function Contact() {
                                             {errors.message && (
                                                 <span className="text-red-500 text-xs mt-1">{errors.message}</span>
                                             )}
-                                        </div>
+                                        </div> */}
                                         <div className="flex items-center mb-4 text-sm">
                                             <input
                                                 type="checkbox"
