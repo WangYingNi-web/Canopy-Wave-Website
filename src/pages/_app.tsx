@@ -4,6 +4,7 @@ import '../styles/global.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'react-hot-toast';
 import { Inter } from 'next/font/google'; // 导入 next/font
+import FloatingButtons from '../components/FloatingButtons';
 
 // 关键修改：显式声明需要的所有字重（包括900）
 const inter = Inter({
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div id="root" className={inter.className}> {/* 应用字体类名 */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Component {...pageProps} />
+          <FloatingButtons />
           <Toaster />
         </ThemeProvider>
       </div>

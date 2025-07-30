@@ -83,3 +83,23 @@
 }
 
 }
+
+/* 将 Zendesk 聊天按钮向上移动 */
+#launcher {
+  bottom: 180px !important; /* 向上移动到距离底部180px */
+}
+
+/* 如果上面的选择器不生效，尝试这个更具体的选择器 */
+/* iframe[title*="zendesk"] {
+  bottom: 180px !important;
+} */
+
+/* 或者使用这个通用选择器 */
+/* [data-testid="launcher"] {
+  bottom: 180px !important;
+} */
+
+/* 针对 Zendesk Widget 容器的样式 */
+/* .zEWidget-launcher {
+  bottom: 180px !important;
+} */
