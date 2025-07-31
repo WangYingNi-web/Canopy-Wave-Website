@@ -21,7 +21,7 @@ const Tutotrials: React.FC = () => {
           </SlideUp>
           <SlideUp>
             <div className="mb-8 mt-10">
-              <h1 className="text-4xl text-center max-w-4xl mx-auto font-bold text-gray-900 leading-relaxed">
+              <h1 className="text-4xl text-center max-w-4xl mx-auto font-bold text-gray-900 leading-tight">
                 How to run the DeepSeek-R1 large language model on a CanopyWave platform virtual machine?
               </h1>
             </div>
