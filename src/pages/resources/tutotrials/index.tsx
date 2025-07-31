@@ -27,12 +27,9 @@ const Tutotrials: React.FC = () => {
           <div className="absolute inset-0 z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
               <SlideUp>
-                <h1 className="text-5xl sm:text-6xl font-black text-[#80b224] mb-6 leading-tight leading-relaxed">
-                  Tutotrials
+                <h1 className="text-4xl sm:text-5xl font-black text-[#80b224] mb-6 leading-tight">
+                How to Run DeepSeek-R1 <br /> Locally in a Canopy Wave VM?
                 </h1>
-                <p className="text-gray-600 text-l mt-8">
-                How to Run DeepSeek-R1 Locally in a Canopy Wave VM?
-                </p>
               </SlideUp>
             </div>
           </div>
