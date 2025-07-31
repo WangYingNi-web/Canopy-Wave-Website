@@ -351,11 +351,11 @@ export default function Contact() {
                                         <label className="flex items-center mb-3">
                                             <input
                                                 type="checkbox"
-                                                name="nvdia-gb200-blackwell-superchip"
+                                                name="NVIDIA GB200 NVL72"
                                                 checked={formData.interests.includes('nvdia-gb200-blackwell-superchip')}
                                                 onChange={handleCheckboxChange}
                                                 className="mr-2" />
-                                            <span className="text-gray-600">Nvdia GB200 Blackwell Superchip</span>
+                                            <span className="text-gray-600">NVIDIA GB200 NVL72</span>
                                         </label>
                                         <label className="flex items-center mb-3">
                                             <input
