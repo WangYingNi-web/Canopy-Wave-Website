@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../../../components/header';
 import Footer from '../../../components/footer';
 import SlideUp from '@/components/slide';
+import Image from 'next/image';
 
 const Tutotrials: React.FC = () => {
   return (
@@ -15,23 +16,32 @@ const Tutotrials: React.FC = () => {
       <Header />
 
       <main className="min-h-screen bg-[#f9f9f9] mt-[84px]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <SlideUp>
-            <img src="/tutotrials/banner.png" alt="Banner" className="w-full mx-auto rounded-lg shadow-sm" />
-          </SlideUp>
-          <SlideUp>
-            <div className="mb-8 mt-10">
-              <h1 className="text-4xl text-center max-w-4xl mx-auto font-bold text-gray-900 leading-tight">
-              DeepSeek-R1 Deployment on the <br /> Canopy Wave Platform
-              </h1>
+        <div className="w-full h-[520px] relative mt-[84px]">
+          <Image
+            src="/tutotrials/banner.png"
+            alt="banner"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
+              <SlideUp>
+                <h1 className="text-5xl sm:text-6xl font-black text-[#80b224] mb-6 leading-tight leading-relaxed">
+                  Tutotrials
+                </h1>
+                <p className="text-gray-600 text-l mt-8">
+                How to Run DeepSeek-R1 Locally in a Canopy Wave VM?
+                </p>
+              </SlideUp>
             </div>
-          </SlideUp>
-          
-
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="prose prose-lg max-w-none">
             <section className="mb-12">
               <SlideUp>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-gray-700 mb-6">
                   Ⅰ. Why Deploy and Run a Large Language Model Locally?
                 </h2>
               </SlideUp>
@@ -80,7 +90,7 @@ const Tutotrials: React.FC = () => {
 
             <section className="mb-12">
               <SlideUp>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-gray-700 mb-6">
                   Ⅱ. Deploying DeepSeek-R1 Locally
                 </h2>
               </SlideUp>
