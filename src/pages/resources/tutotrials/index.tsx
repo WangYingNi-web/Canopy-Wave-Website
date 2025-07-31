@@ -16,7 +16,7 @@ const Tutotrials: React.FC = () => {
       <Header />
 
       <main className="min-h-screen bg-[#f9f9f9] mt-[84px]">
-        <div className="w-full h-[520px] relative mt-[84px]">
+        <div className="w-full h-[520px] relative">
           <Image
             src="/tutotrials/banner.png"
             alt="banner"
@@ -25,9 +25,9 @@ const Tutotrials: React.FC = () => {
             priority
           />
           <div className="absolute inset-0 z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[165px]">
               <SlideUp>
-                <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224] leading-tight">
+                <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
                   How to Run DeepSeek-R1 <br /> Locally in a Canopy Wave VM?
                 </h1>
               </SlideUp>
