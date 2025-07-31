@@ -16,8 +16,8 @@ const FloatingButtons = () => {
     return (
         <div style={{
             position: 'fixed',
-            bottom: '18px',
-            right: '14px',
+            bottom: '100px',
+            right: '16px',
             zIndex: 9999,
             display: 'flex',
             flexDirection: 'column',
@@ -29,8 +29,8 @@ const FloatingButtons = () => {
                 alt="Contact us"
                 onClick={goToContact}
                 style={{
-                    width: '70px',
-                    height: '70px',
+                    width: '73px',
+                    height: '73px',
                     borderRadius: '50%',
                     objectFit: 'cover',
                     filter: 'drop-shadow(0 4px 8px rgba(122, 122, 122, 0.2))',
@@ -44,8 +44,8 @@ const FloatingButtons = () => {
                 alt="Back to top"
                 onClick={scrollToTop}
                 style={{
-                    width: '70px',
-                    height: '70px',
+                    width: '73px',
+                    height: '73px',
                     borderRadius: '50%',
                     objectFit: 'cover',
                     filter: 'drop-shadow(0 4px 8px rgba(122, 122, 122, 0.2))',
