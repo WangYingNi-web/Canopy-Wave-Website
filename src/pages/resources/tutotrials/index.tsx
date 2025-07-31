@@ -35,7 +35,7 @@ const Tutotrials: React.FC = () => {
                   Ⅰ. Why Deploy and Run a Large Language Model Locally?
                 </h2>
               </SlideUp>
-              <div className="space-y-8 ml-2">
+              <div className="space-y-8 sm:ml-8">
                 <div>
                   <SlideUp>
                     <h3 className="text-xl font-medium text-gray-800 mb-3">1. Data Privacy & Security</h3>
@@ -43,9 +43,7 @@ const Tutotrials: React.FC = () => {
                       When running an LLM locally, no user data is collected and no user actions are tracked. All your chat data stay on your own computer and are never shared with any AI or machine-learning servers.
                     </p>
                   </SlideUp>
-
                 </div>
-
                 <div>
                   <SlideUp>
                     <h3 className="text-xl font-medium text-gray-800 mb-3">2. Deep Customization of Models & Business Logic</h3>
@@ -86,7 +84,7 @@ const Tutotrials: React.FC = () => {
                   Ⅱ. Deploying DeepSeek-R1 Locally
                 </h2>
               </SlideUp>
-              <div className="space-y-8 ml-2">
+              <div className="space-y-8 sm:ml-8">
                 <div>
                   <SlideUp>
                     <h3 className="text-xl font-medium text-gray-800 mb-4">1. Check your hardware and pick the right model size</h3>
