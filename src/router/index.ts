@@ -21,7 +21,7 @@ export const router = [
   },
   {
     name: 'resources',
-    path: '/cloud-api',
+    path: '/resources/cloud-api',
   },
   {
     name: 'about',
