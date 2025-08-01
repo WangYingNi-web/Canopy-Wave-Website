@@ -87,9 +87,10 @@ export default function RoCEv2NetworkingPage() {
                                 <Image
                                     src="/networking/rocev2-networking/nvidia-bluefield-dpu-3.png"
                                     alt="NVIDIA GB200 NVL72 Cluster"
-                                    width={500}
-                                    height={300}
-                                    className="object-contain"
+                                    width={0}    // 忽略属性值
+                                    height={0}   // 忽略属性值
+                                    className="object-contain w-[500px] h-auto" // 完全用CSS控制
+                                    priority={true}
                                 />
                             </div>
                         </SlideUp>

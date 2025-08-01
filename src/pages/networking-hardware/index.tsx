@@ -14,7 +14,7 @@ export default function NetworkingHardwarePage() {
         <main className="min-h-screen relative text-gray-600">
             <Head>
                 <title>Networking Hardware Solution</title>
-                <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
+                {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <Header />
 

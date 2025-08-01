@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
         <link rel="preload" href="/storage/banner.svg" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/platform/banner.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
+      {/* <link rel="preload" href="/.svg" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/networking/banner.svg" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/blog/banner.svg" as="image" type="image/svg+xml" /> */}

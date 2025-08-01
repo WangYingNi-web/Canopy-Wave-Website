@@ -17,7 +17,7 @@ export default function NetworkingServices() {
             <Header />
             <Head>
                 <title>Canopy Wave | InfiniBand Networking</title>
-                <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
+                {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-gradient-to-r from-[#e7f8e2] via-[#eaf1f4] to-[#eaf1f4]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0 h-full">
@@ -205,9 +205,9 @@ export default function NetworkingServices() {
                                         <Image
                                             src="/networking/infiniBand-networking/adapter.jpg"
                                             alt="InfiniBand Adapter"
-                                            width={500}
-                                            height={300}
-                                            className="object-contain"
+                                            width={500}  // 仅设置目标宽度
+                                            height={0}   // 高度设为0（或任意值，由CSS覆盖）
+                                            className="object-contain w-full h-auto" // 关键：高度自适应
                                         />
                                     </div>
                                 </div>
@@ -237,9 +237,9 @@ export default function NetworkingServices() {
                                         <Image
                                             src="/networking/infiniBand-networking/800G OSFP.jpg"
                                             alt="Optical Transceiver"
-                                            width={500}
-                                            height={300}
-                                            className="object-contain"
+                                            width={500}  // 仅设置目标宽度
+                                            height={0}   // 高度设为0（或任意值，由CSS覆盖）
+                                            className="object-contain w-full h-auto" // 关键：高度自适应
                                         />
                                     </div>
                                 </div>

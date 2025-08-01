@@ -447,7 +447,6 @@ export default function Header() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/resources/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li>
-                        <li><IwsLink href="/resources/tutotrials" className="text-gray-600 hover:text-gray-900 text-sm">Tutotrials</IwsLink></li>
                       </ul>
                     </div>
                   </div>
@@ -501,6 +500,7 @@ export default function Header() {
                           <ul className="pl-4 mt-2 space-y-2">
                             <li><IwsLink href="/about/newsroom#blog" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Blog</IwsLink></li>
                             <li><IwsLink href="/about/newsroom#events" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Events</IwsLink></li>
+                            <li><IwsLink href="/about/newsroom/tutorials" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Tutorials</IwsLink></li>
                           </ul>
                         </div>
                       </ul>
@@ -969,6 +969,7 @@ export default function Header() {
                   <ul className={`pl-4 mt-2 space-y-2`}>
                     <li><IwsLink href="/about/newsroom#blog" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Blog</IwsLink></li>
                     <li><IwsLink href="/about/newsroom#events" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Events</IwsLink></li>
+                    <li><IwsLink href="/about/newsroom/tutorials" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Tutorials</IwsLink></li>
                   </ul>
 
                 </div>

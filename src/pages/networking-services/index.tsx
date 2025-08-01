@@ -17,7 +17,7 @@ export default function NetworkingServices() {
             <Header />
             <Head>
                 <title>Canopy Wave - Networking Services That Enhance Performance</title>
-                <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" />
+                {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image

@@ -84,7 +84,13 @@ export default function Chat() {
                     }
                 }}
             >
-                <Image src="/chat.svg" alt="Chat" width={65} height={65} />
+                <Image 
+                    src="/chat.svg" 
+                    alt="Chat" 
+                    width={65} 
+                    height={65} 
+                    priority={true}
+                />
             </button>
         </div>
     );

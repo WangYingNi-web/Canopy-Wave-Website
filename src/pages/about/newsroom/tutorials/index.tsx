@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '../../../components/header';
-import Footer from '../../../components/footer';
+import Header from '../../../../components/header';
+import Footer from '../../../../components/footer';
 import SlideUp from '@/components/slide';
 import Image from 'next/image';
 
-const Tutotrials: React.FC = () => {
+const Tutorials: React.FC = () => {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ const Tutotrials: React.FC = () => {
       <main className="min-h-screen bg-[#f9f9f9] mt-[84px]">
         <div className="w-full h-[520px] relative">
           <Image
-            src="/tutotrials/banner.png"
+            src="/tutorials/banner.png"
             alt="banner"
             fill
             className="object-cover"
@@ -102,7 +102,7 @@ const Tutotrials: React.FC = () => {
                         <code className="bg-gray-200 px-2 py-1 rounded">df -Th</code>
                         <span className="ml-4 text-gray-600">Check how much free disk space you have.</span>
                       </div>
-                      <img src="/tutotrials/df-Th.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                      <img src="/tutorials/df-Th.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
                     </SlideUp>
                     <br />
                     <SlideUp>
@@ -110,7 +110,7 @@ const Tutotrials: React.FC = () => {
                         <code className="bg-gray-200 px-2 py-1 rounded">nvidia-smi</code>
                         <span className="ml-4 text-gray-600">Check GPU model, quantity, driver version and other information</span>
                       </div>
-                      <img src="/tutotrials/nvidia-smi.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                      <img src="/tutorials/nvidia-smi.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
                     </SlideUp>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ const Tutotrials: React.FC = () => {
                       <div className="font-mono text-sm">
                         <code className="bg-gray-200 px-2 py-1 rounded">curl -fsSL https://ollama.com/install.sh | sh</code>
                       </div>
-                      <img src="/tutotrials/curl-fsSL.png" alt="curl-fsSL" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                      <img src="/tutorials/curl-fsSL.png" alt="curl-fsSL" className="w-full max-w-2xl rounded-lg shadow-sm" />
                     </SlideUp>
                     <br />
                     <SlideUp>
@@ -132,7 +132,7 @@ const Tutotrials: React.FC = () => {
                         <code className="bg-gray-200 px-2 py-1 rounded">ollama list</code>
                         <span className="ml-4 text-gray-600">List the models you've already downloaded.</span>
                       </div>
-                      <img src="/tutotrials/ollama-list.png" alt="ollama-list" className="w-full max-w-sm rounded-lg shadow-sm" />
+                      <img src="/tutorials/ollama-list.png" alt="ollama-list" className="w-full max-w-sm rounded-lg shadow-sm" />
                     </SlideUp>
                     <br />
                     <SlideUp>
@@ -140,7 +140,7 @@ const Tutotrials: React.FC = () => {
                         <code className="bg-gray-200 px-2 py-1 rounded">ollama --help</code>
                         <span className="ml-4 text-gray-600">Display the Ollama command-line help.</span>
                       </div>
-                      <img src="/tutotrials/ollama-help.png" alt="ollama-help" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                      <img src="/tutorials/ollama-help.png" alt="ollama-help" className="w-full max-w-2xl rounded-lg shadow-sm" />
                     </SlideUp>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ const Tutotrials: React.FC = () => {
                         <span className="ml-4 text-gray-600">Download and start DeepSeek-R1 <br />
                           (Choose the exact model size that matches your hardware.)</span>
                       </div>
-                      <img src="/tutotrials/ollama-run.png" alt="ollama-run" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                      <img src="/tutorials/ollama-run.png" alt="ollama-run" className="w-full max-w-2xl rounded-lg shadow-sm" />
 
                       <p className="text-gray-600 text-sm mt-4">
                         You can now interact with your local large language model. To exit, press <code className="bg-gray-200 px-1 rounded">Ctrl + D</code> or type <code className="bg-gray-200 px-1 rounded">/bye</code> in the chat window.
@@ -176,4 +176,4 @@ const Tutotrials: React.FC = () => {
   );
 };
 
-export default Tutotrials;
+export default Tutorials;
