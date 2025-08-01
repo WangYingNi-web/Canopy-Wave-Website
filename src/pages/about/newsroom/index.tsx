@@ -106,7 +106,7 @@ export default function Newsroom() {
         },
         {
             id: 2,
-            title: "How to run the Llama Locally in a Canopy Wave VM",
+            title: "How to Run the Llama Locally in a Canopy Wave VM",
             description: "Best practices for configuring your AI training and inference workloads",
             date: "August 1, 2025",
             image: "/tutorials/Llama.png"

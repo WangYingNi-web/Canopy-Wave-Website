@@ -59,7 +59,7 @@ export default function TutorialDetail() {
       case 'how-to-run-the-llama-locally-in-a-canopy-wave-vm':
         return {
           id: 2,
-          title: 'How to run the Llama Locally in a Canopy Wave VM? ',
+          title: 'How to Run the Llama Locally in a Canopy Wave VM? ',
           description: 'Advanced techniques for accelerating and optimizing AI model training workflows',
           sections: [
             {

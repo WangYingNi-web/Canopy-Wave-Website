@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import { TutorialPost } from './index'
@@ -7,7 +7,74 @@ interface TutorialLayout2Props {
     tutorialPost: TutorialPost
 }
 
+// 图片预加载组件
+const PreloadedImage: React.FC<{
+    src: string;
+    alt: string;
+    className?: string;
+}> = ({ src, alt, className }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [hasError, setHasError] = useState(false);
+
+    return (
+        <div className={`relative ${className}`}>
+            {/* 加载占位符 */}
+            {!isLoaded && !hasError && (
+                <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
+                    <div className="text-gray-500 text-sm">图片加载中...</div>
+                </div>
+            )}
+            
+            {/* 错误占位符 */}
+            {hasError && (
+                <div className="absolute inset-0 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
+                    <div className="text-gray-400 text-sm">图片加载失败</div>
+                </div>
+            )}
+            
+            {/* 实际图片 */}
+            <img
+                src={src}
+                alt={alt}
+                className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+                onLoad={() => setIsLoaded(true)}
+                onError={() => setHasError(true)}
+                loading="lazy"
+            />
+        </div>
+    );
+};
+
 const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
+    // 预加载所有图片
+    useEffect(() => {
+        const imagesToPreload = [
+            '/tutorials/banner2.png',
+            '/tutorials/Click-1.png',
+            '/tutorials/Click-2.png',
+            '/tutorials/Enter-1.png',
+            '/tutorials/conntact-1.png',
+            '/tutorials/conntact-2.png',
+            '/tutorials/run-1.png',
+            '/tutorials/run-2.png',
+            '/tutorials/run-3.png'
+        ];
+
+        const preloadImages = (imageUrls: string[]) => {
+            imageUrls.forEach(url => {
+                const img = new window.Image();
+                img.src = url;
+            });
+        };
+
+        // 延迟预加载，避免阻塞初始渲染
+        const timer = setTimeout(() => {
+            preloadImages(imagesToPreload);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <main className="min-h-screen bg-[#f9f9f9] mt-[84px]">
             {/* Banner Section */}
@@ -23,7 +90,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[165px]">
                         <SlideUp>
                             <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
-                                How to run the Llama Locally <br /> in a Canopy Wave VM?
+                                How to Run the Llama Locally <br /> in a Canopy Wave VM?
                             </h1>
                         </SlideUp>
                     </div>
@@ -95,7 +162,11 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                     </p>
                                 </SlideUp>
                                 <SlideUp>
-                                    <img src="/tutorials/Click-1.png" alt="Click-1" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                    <PreloadedImage 
+                                        src="/tutorials/Click-1.png" 
+                                        alt="Click-1" 
+                                        className="w-full max-w-2xl rounded-lg shadow-sm" 
+                                    />
                                 </SlideUp>
                             </div>
                             <div>
@@ -105,9 +176,12 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                     </p>
                                 </SlideUp>
                                 <SlideUp>
-                                    <img src="/tutorials/Click-2.png" alt="Click-2" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                    <PreloadedImage 
+                                        src="/tutorials/Click-2.png" 
+                                        alt="Click-2" 
+                                        className="w-full max-w-2xl rounded-lg shadow-sm" 
+                                    />
                                 </SlideUp>
-
                             </div>
                             <div>
                                 <SlideUp>
@@ -116,7 +190,11 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                     </p>
                                 </SlideUp>
                                 <SlideUp>
-                                    <img src="/tutorials/Enter-1.png" alt="Enter-2" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                    <PreloadedImage 
+                                        src="/tutorials/Enter-1.png" 
+                                        alt="Enter-2" 
+                                        className="w-full max-w-2xl rounded-lg shadow-sm" 
+                                    />
                                 </SlideUp>
                             </div>
                         </div>
@@ -136,10 +214,18 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                     </p>
                                 </SlideUp>
                                 <SlideUp>
-                                    <img src="/tutorials/conntact-1.png" alt="Enter-2" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                    <PreloadedImage 
+                                        src="/tutorials/conntact-1.png" 
+                                        alt="conntact-1" 
+                                        className="w-full max-w-2xl rounded-lg shadow-sm" 
+                                    />
                                 </SlideUp>
                                 <SlideUp>
-                                    <img src="/tutorials/conntact-2.png" alt="Enter-2" className="w-full max-w-2xl rounded-lg shadow-sm mt-8" />
+                                    <PreloadedImage 
+                                        src="/tutorials/conntact-2.png" 
+                                        alt="conntact-2" 
+                                        className="w-full max-w-2xl rounded-lg shadow-sm mt-8" 
+                                    />
                                 </SlideUp>
                             </div>
 
@@ -156,7 +242,11 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                     </SlideUp>
                                 </div>
                                 <SlideUp>
-                                    <img src="/tutorials/conntact-1.png" alt="Enter-2" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                    <PreloadedImage 
+                                        src="/tutorials/conntact-1.png" 
+                                        alt="conntact-1" 
+                                        className="w-full max-w-2xl rounded-lg shadow-sm" 
+                                    />
                                 </SlideUp>
                             </div>
 
@@ -169,25 +259,34 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                         <p className="text-gray-600 mb-4">
                                             Copy the llama model and run it.
                                         </p>
-                                    </SlideUp>
-                                    <SlideUp>
-                                        <img src="/tutorials/run-1.png" alt="run-1" className="w-full max-w-2xl rounded-lg shadow-sm" />
-                                        <img src="/tutorials/run-2.png" alt="run-2" className="w-full max-w-2xl rounded-lg shadow-sm mt-8" />
-                                        <img src="/tutorials/run-3.png" alt="run-3" className="w-full max-w-2xl rounded-lg shadow-sm mt-8" />
+                                        <PreloadedImage 
+                                            src="/tutorials/run-1.png" 
+                                            alt="run-1" 
+                                            className="w-full max-w-2xl rounded-lg shadow-sm" 
+                                        />
+                                        <PreloadedImage 
+                                            src="/tutorials/run-2.png" 
+                                            alt="run-2" 
+                                            className="w-full max-w-2xl rounded-lg shadow-sm mt-8" 
+                                        />
+                                        <PreloadedImage 
+                                            src="/tutorials/run-3.png" 
+                                            alt="run-3" 
+                                            className="w-full max-w-2xl rounded-lg shadow-sm mt-8" 
+                                        />
                                     </SlideUp>
                                     <SlideUp>
                                         <p className="text-gray-600 text-sm mt-4">
                                             You can now interact with your local large language model.
                                         </p>
                                     </SlideUp>
-
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
-        </main >
+        </main>
     )
 }
 
