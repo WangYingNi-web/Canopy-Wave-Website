@@ -28,6 +28,14 @@ interface NewsroomPost {
     image?: string;
     link?: string;
 }
+interface TutorialPost {
+    id: number;
+    title: string;
+    description: string;
+    date: string;
+    image: string;
+}
+
 export default function Newsroom() {
     useScrollToHash();
     const router = useRouter();
@@ -41,6 +49,11 @@ export default function Newsroom() {
             router.push(post.link);
         }
     };
+    const handleTutorialClick = (title: string) => {
+        const tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        router.push(`/about/newsroom/tutorials/${tutorialTitle}`);
+    };
+
     const blogPosts: BlogPost[] = [
         {
             id: 1,
@@ -83,6 +96,24 @@ export default function Newsroom() {
         },
     ];
 
+    const tutorialPosts: TutorialPost[] = [
+        {
+            id: 1,
+            title: "How to Run DeepSeek-R1 Locally in a Canopy Wave VM",
+            description: "A comprehensive guide to setting up and managing your first GPU cluster",
+            date: "July 31, 2025",
+            image: "/tutorials/deepseek.png"
+        },
+        {
+            id: 2,
+            title: "How to run the Llama Locally in a Canopy Wave VM",
+            description: "Best practices for configuring your AI training and inference workloads",
+            date: "August 1, 2025",
+            image: "/tutorials/Llama.png"
+        },
+    ];
+
+    
     return (
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
             <Head>
@@ -210,6 +241,49 @@ export default function Newsroom() {
                                     </svg>
                                 </IwsLink>
                                 {/* <span>{post.date}</span> */}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Divider */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <hr className="border-t border-gray-200" />
+            </div>
+
+            {/* Tutorials Section */}
+            <div id='tutorials' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="flex justify-between items-center mb-8">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Tutorials</h2>
+                    </SlideUp>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {tutorialPosts.map((post) => (
+                        <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleTutorialClick(post.title)}>
+                            <div className="relative mb-4 overflow-hidden rounded-lg shadow-xl">
+                                <div className="relative aspect-[16/9] w-full overflow-hidden">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.title}
+                                        fill
+                                        className="object-cover transition-all duration-300 group-hover:scale-105"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-sm font-semibold text-gray-600 mb-2 flex-grow">{post.title}</h3>
+                            <div className="flex items-center space-x-4 text-sm text-gray-500 mt-auto">
+                                <IwsLink
+                                    href={`/about/newsroom/tutorials/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
+                                    className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    Tutorial
+                                </IwsLink>
+                                <span>{post.date}</span>
                             </div>
                         </div>
                     ))}

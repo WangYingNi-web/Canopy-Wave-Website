@@ -628,7 +628,6 @@ export default function BlogDetail() {
           ]
         }
 
-
       default:
         return null
     }
