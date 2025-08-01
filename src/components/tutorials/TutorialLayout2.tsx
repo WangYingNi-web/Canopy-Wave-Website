@@ -21,14 +21,14 @@ const PreloadedImage: React.FC<{
             {/* 加载占位符 */}
             {!isLoaded && !hasError && (
                 <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
-                    <div className="text-gray-500 text-sm">图片加载中...</div>
+                    <div className="text-gray-500 text-sm">Image loading in progress...</div>
                 </div>
             )}
             
             {/* 错误占位符 */}
             {hasError && (
                 <div className="absolute inset-0 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
-                    <div className="text-gray-400 text-sm">图片加载失败</div>
+                    {/* <div className="text-gray-400 text-sm">图片加载失败</div> */}
                 </div>
             )}
             
