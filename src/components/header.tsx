@@ -447,6 +447,8 @@ export default function Header() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/resources/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li>
+                        <li><IwsLink href="/resources/case-study" className="text-gray-600 hover:text-gray-900 text-sm">FoundryBioSciences Case 
+                        Study</IwsLink></li>
                       </ul>
                     </div>
                   </div>
