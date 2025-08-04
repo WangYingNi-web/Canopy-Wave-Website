@@ -11,6 +11,7 @@ import { useScrollToHash } from '@/hooks/useScrollToHash';
 export default function CaseStudyPage() {
     useScrollToHash();
     const [activeSection, setActiveSection] = useState('introduction');
+    const [canScrollContent, setCanScrollContent] = useState(false); 
     const [sections, setSections] = useState<Record<string, boolean>>({
         'api-key': true,
         'api-call': false,
@@ -55,29 +56,52 @@ export default function CaseStudyPage() {
         }
     };
     // 添加滚动监听，实现自动高亮当前章节
-    useEffect(() => {
+    // 添加滚动监听，实现自动高亮当前章节
+useEffect(() => {
+    // 页面滚动处理函数 - 控制右侧内容是否可滚动
+    const handlePageScroll = () => {
+        const scrollY = window.scrollY;
+        console.log('当前页面滚动高度:', scrollY);
+        setCanScrollContent(scrollY >=490 && scrollY <= 600);
+    };
+
+    // 右侧容器滚动处理函数 - 控制章节高亮
+    const handleContentScroll = () => {
         const contentContainer = document.getElementById('content-container');
         if (!contentContainer) return;
 
-        const handleScroll = () => {
-            const sections = navigationItems.map(item => document.getElementById(item.id)).filter(Boolean);
-            const containerRect = contentContainer.getBoundingClientRect();
-            
-            for (let i = sections.length - 1; i >= 0; i--) {
-                const section = sections[i];
-                if (section) {
-                    const sectionRect = section.getBoundingClientRect();
-                    if (sectionRect.top - containerRect.top <= 100) {
-                        setActiveSection(navigationItems[i].id);
-                        break;
-                    }
+        const sections = navigationItems.map(item => document.getElementById(item.id)).filter(Boolean);
+        const containerRect = contentContainer.getBoundingClientRect();
+        
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            if (section) {
+                const sectionRect = section.getBoundingClientRect();
+                // 检查章节是否在容器顶部附近
+                if (sectionRect.top - containerRect.top <= 100) {
+                    setActiveSection(navigationItems[i].id);
+                    break;
                 }
             }
-        };
+        }
+    };
 
-        contentContainer.addEventListener('scroll', handleScroll);
-        return () => contentContainer.removeEventListener('scroll', handleScroll);
-    }, []);
+    // 监听页面滚动
+    window.addEventListener('scroll', handlePageScroll);
+    
+    // 监听右侧容器滚动
+    const contentContainer = document.getElementById('content-container');
+    if (contentContainer) {
+        contentContainer.addEventListener('scroll', handleContentScroll);
+    }
+
+    return () => {
+        window.removeEventListener('scroll', handlePageScroll);
+        if (contentContainer) {
+            contentContainer.removeEventListener('scroll', handleContentScroll);
+        }
+    };
+}, []);
 
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
@@ -145,7 +169,11 @@ export default function CaseStudyPage() {
                     <div className="flex-1 min-w-0">
                         <div 
                             id="content-container"
-                            className="bg-white rounded-lg shadow-sm p-10 sm:p-8 max-h-[calc(100vh-70px)] overflow-y-auto scroll-smooth"
+                            className={`bg-white rounded-lg shadow-sm p-4 sm:p-8 transition-all duration-300 ${
+                                canScrollContent 
+                                    ? 'max-h-[calc(100vh-70px)] overflow-y-auto' 
+                                    : 'max-h-[calc(100vh-70px)] overflow-hidden'
+                            }`}
                             style={{
                                 scrollbarWidth: 'none', /* Firefox */
                                 msOverflowStyle: 'none'  /* IE and Edge */
