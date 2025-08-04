@@ -177,7 +177,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                 </SlideUp>
                                 <SlideUp>
                                     <PreloadedImage 
-                                        src="/tutorials/Click-2.we b p" 
+                                        src="/tutorials/Click-2.webp" 
                                         alt="Click-2" 
                                         className="w-full max-w-2xl rounded-lg shadow-sm" 
                                     />
@@ -191,7 +191,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                 </SlideUp>
                                 <SlideUp>
                                     <PreloadedImage 
-                                        src="/tutorials/Enter-1.we b p" 
+                                        src="/tutorials/Enter-1.webp" 
                                         alt="Enter-2" 
                                         className="w-full max-w-2xl rounded-lg shadow-sm" 
                                     />
