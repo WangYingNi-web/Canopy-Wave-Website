@@ -51,8 +51,8 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
         const imagesToPreload = [
             '/tutorials/banner2.png',
             '/tutorials/Click-1.png',
-            '/tutorials/Click-2.png',
-            '/tutorials/Enter-1.png',
+            '/tutorials/Click-2.webp',
+            '/tutorials/Enter-1.webp',
             '/tutorials/conntact-1.png',
             '/tutorials/conntact-2.png',
             '/tutorials/run-1.png',
@@ -177,7 +177,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                 </SlideUp>
                                 <SlideUp>
                                     <PreloadedImage 
-                                        src="/tutorials/Click-2.png" 
+                                        src="/tutorials/Click-2.we b p" 
                                         alt="Click-2" 
                                         className="w-full max-w-2xl rounded-lg shadow-sm" 
                                     />
@@ -191,7 +191,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                                 </SlideUp>
                                 <SlideUp>
                                     <PreloadedImage 
-                                        src="/tutorials/Enter-1.png" 
+                                        src="/tutorials/Enter-1.we b p" 
                                         alt="Enter-2" 
                                         className="w-full max-w-2xl rounded-lg shadow-sm" 
                                     />
