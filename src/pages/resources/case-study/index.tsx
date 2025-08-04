@@ -72,7 +72,7 @@ export default function CaseStudyPage() {
                 const distanceToBottom = mainContentBottom - windowBottom;
 
                 // 当接近主内容区域底部时（距离小于300px）
-                if (distanceToBottom < 300 && scrollY >= 3490) {
+                if (distanceToBottom < 300 && scrollY >= 3520) {
                     // 使用固定定位但调整位置
                     setSidebarPosition('fixed-bottom');
                 }
@@ -182,10 +182,10 @@ export default function CaseStudyPage() {
                         <div className={`lg:w-72 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300 ${sidebarPosition === 'fixed'
                             ? 'lg:fixed lg:top-24'
                             : sidebarPosition === 'fixed-bottom'
-                                ? 'lg:fixed lg:top-[calc(100vh-825px)]' // 动态计算顶部位置
+                                ? 'lg:fixed lg:top-[calc(100vh-826px)]' // 动态计算顶部位置
                                 : 'lg:sticky lg:top-24'
                             }`}>
-                            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-100">Table of Contents</h3>
                                 <nav className="space-y-1">
                                     {navigationItems.map((item, index) => (
