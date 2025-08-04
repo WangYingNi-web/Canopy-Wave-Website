@@ -203,18 +203,18 @@ export default function Index() {
               )}
               {slide.id === 3 ? (
                 <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src={slide.background}
-                  alt={`Banner ${slide.id}`}
-                  width={850}
-                  height={550}
-                  className="object-cover"
-                  style={{
-                    width: 'auto'
-                  }}
-                  priority={index === 0}
-                />
-              </div>
+                  <Image
+                    src={slide.background}
+                    alt={`Banner ${slide.id}`}
+                    width={850}
+                    height={550}
+                    className="object-cover"
+                    style={{
+                      width: 'auto'
+                    }}
+                    priority={index === 0}
+                  />
+                </div>
               ) : (
                 <Image
                   src={slide.background}
@@ -344,11 +344,11 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-                NVIDIA H100, H200, B200 & GB200 GPUs <br /> now available
+                NVIDIA GB200 & B200, H100, H200 <br /> now available
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
-            <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
                   <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA GB200 NVL72</h3>
@@ -402,9 +402,9 @@ export default function Index() {
                 </IwsLink>
               </div>
 
-             
 
-              
+
+
             </div>
           </div>
         </div>
