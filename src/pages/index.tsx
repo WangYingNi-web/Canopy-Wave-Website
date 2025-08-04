@@ -344,7 +344,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-                NVIDIA GB200 & B200, H100, H200 <br /> now available
+              NVIDIA GB200 & B200, H100, H200 GPUs<br /> now available
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
