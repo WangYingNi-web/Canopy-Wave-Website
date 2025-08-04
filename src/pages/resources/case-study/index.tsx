@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState ,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import SlideUp from '@/components/slide';
@@ -11,7 +11,8 @@ import { useScrollToHash } from '@/hooks/useScrollToHash';
 export default function CaseStudyPage() {
     useScrollToHash();
     const [activeSection, setActiveSection] = useState('introduction');
-    const [canScrollContent, setCanScrollContent] = useState(false); 
+    const [canScrollContent, setCanScrollContent] = useState(false);
+    const [sidebarPosition, setSidebarPosition] = useState('sticky'); // 新增状态
     const [sections, setSections] = useState<Record<string, boolean>>({
         'api-key': true,
         'api-call': false,
@@ -38,70 +39,112 @@ export default function CaseStudyPage() {
         setActiveSection(sectionId);
         const element = document.getElementById(sectionId);
         if (element) {
-            // 获取右侧内容容器
-            const contentContainer = document.getElementById('content-container');
-            if (contentContainer) {
-                // 计算元素在容器内的位置
-                const containerRect = contentContainer.getBoundingClientRect();
-                const elementRect = element.getBoundingClientRect();
-                const scrollTop = contentContainer.scrollTop;
-                const targetScrollTop = scrollTop + (elementRect.top - containerRect.top) - 20;
-                
-                // 在容器内平滑滚动
-                contentContainer.scrollTo({
-                    top: targetScrollTop,
-                    behavior: 'smooth'
-                });
-            }
+            // 获取元素相对于页面顶部的位置
+            const elementRect = element.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // 计算目标滚动位置，减去一些偏移量以确保章节标题可见
+            const targetScrollTop = scrollTop + elementRect.top - 100; // 100px 偏移量
+            
+            // 平滑滚动到目标位置
+            window.scrollTo({
+                top: targetScrollTop,
+                behavior: 'smooth'
+            });
         }
     };
     // 添加滚动监听，实现自动高亮当前章节
-    // 添加滚动监听，实现自动高亮当前章节
-useEffect(() => {
-    // 页面滚动处理函数 - 控制右侧内容是否可滚动
-    const handlePageScroll = () => {
-        const scrollY = window.scrollY;
-        console.log('当前页面滚动高度:', scrollY);
-        setCanScrollContent(scrollY >=490 && scrollY <= 650);
-    };
+    useEffect(() => {
+        // 页面滚动处理函数 - 控制右侧内容是否可滚动
+        const handlePageScroll = () => {
+            const scrollY = window.scrollY;
+            // console.log('当前页面滚动高度:', scrollY);
+            setCanScrollContent(scrollY >= 490 && scrollY <= 650);
 
-    // 右侧容器滚动处理函数 - 控制章节高亮
-    const handleContentScroll = () => {
-        const contentContainer = document.getElementById('content-container');
-        if (!contentContainer) return;
+            // 获取主内容区域底部位置
+            const mainContent = document.querySelector('.max-w-7xl.mx-auto') as HTMLElement;
+            if (mainContent) {
+                const mainContentRect = mainContent.getBoundingClientRect();
+                const mainContentBottom = mainContentRect.bottom + scrollY;
+                const windowBottom = scrollY + window.innerHeight;
 
-        const sections = navigationItems.map(item => document.getElementById(item.id)).filter(Boolean);
-        const containerRect = contentContainer.getBoundingClientRect();
-        
-        for (let i = sections.length - 1; i >= 0; i--) {
-            const section = sections[i];
-            if (section) {
-                const sectionRect = section.getBoundingClientRect();
-                // 检查章节是否在容器顶部附近
-                if (sectionRect.top - containerRect.top <= 100) {
-                    setActiveSection(navigationItems[i].id);
+                // 计算距离主内容区域底部的距离
+                const distanceToBottom = mainContentBottom - windowBottom;
+
+                // 当接近主内容区域底部时（距离小于300px）
+                if (distanceToBottom < 300 && scrollY >= 3490) {
+                    // 使用固定定位但调整位置
+                    setSidebarPosition('fixed-bottom');
+                }
+                // 当在页面中间区域时
+                else if (scrollY >= 560) {
+                    setSidebarPosition('fixed');
+                }
+                // 在页面顶部时
+                else {
+                    setSidebarPosition('sticky');
+                }
+            }
+        };
+
+        // 右侧容器滚动处理函数 - 控制章节高亮（修改后的版本）
+        // 右侧容器滚动处理函数 - 控制章节高亮（修复类型错误）
+        const handleContentScroll = () => {
+            // 不再依赖 content-container，直接基于页面滚动计算章节位置
+            const sections = navigationItems.map(item => {
+                const element = document.getElementById(item.id);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    return {
+                        id: item.id,
+                        top: rect.top,
+                        element
+                    };
+                }
+                return null;
+            }).filter((section): section is { id: string; top: number; element: HTMLElement } => section !== null);
+
+            // 找到当前在视口中最靠近顶部的章节
+            let currentSection: string | null = null;
+            const viewportTop = 120; // 考虑导航栏高度的偏移
+
+            for (const section of sections) {
+                if (section.top <= viewportTop) {
+                    currentSection = section.id;
+                } else {
                     break;
                 }
             }
-        }
-    };
 
-    // 监听页面滚动
-    window.addEventListener('scroll', handlePageScroll);
-    
-    // 监听右侧容器滚动
-    const contentContainer = document.getElementById('content-container');
-    if (contentContainer) {
-        contentContainer.addEventListener('scroll', handleContentScroll);
-    }
+            // 如果找到了章节且与当前不同，则更新
+            if (currentSection && currentSection !== activeSection) {
+                setActiveSection(currentSection);
+            }
+        };
 
-    return () => {
-        window.removeEventListener('scroll', handlePageScroll);
-        if (contentContainer) {
-            contentContainer.removeEventListener('scroll', handleContentScroll);
-        }
-    };
-}, []);
+        // 设置事件监听器的函数（修改后的版本）
+        const setupContentScrollListener = () => {
+            // 直接在 window 上监听滚动，不再寻找 content-container
+            window.addEventListener('scroll', handleContentScroll, { passive: true });
+            // 初始化时调用一次，设置初始高亮状态
+            setTimeout(() => {
+                handleContentScroll();
+            }, 100);
+            return true;
+        };
+
+        // 监听页面滚动
+        window.addEventListener('scroll', handlePageScroll);
+
+        // 设置章节高亮监听器
+        setupContentScrollListener();
+
+        return () => {
+            window.removeEventListener('scroll', handlePageScroll);
+            // 移除章节高亮的滚动监听器
+            window.removeEventListener('scroll', handleContentScroll);
+        };
+    }, [navigationItems, activeSection]);
 
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
@@ -123,20 +166,25 @@ useEffect(() => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
                             <h1 className="text-4xl sm:text-5xl font-black text-gray-600 text-center">
-                            Accelerating Protein Engineering with Canopy Wave's GPUaaS
+                                Accelerating Protein Engineering with Canopy Wave's GPUaaS
                             </h1>
-                            <p className="text-gray-600 text-l mt-8 text-center">FoundryBioSciences Case Study</p>
+                            <p className="text-gray-600 text-xl mt-8 text-center">FoundryBioSciences Case Study</p>
                         </SlideUp>
                     </div>
                 </div>
             </div>
 
             {/* Main Content Area */}
-           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-16 mb-24">
-                <div className="flex flex-col lg:flex-row gap-8">
-                    {/* Left Sidebar Navigation - 固定不滚动，参考DigitalOcean样式 */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-16 mb-12">
+                <div className="flex flex-col lg:flex-row gap-8 relative">
+                    {/* Left Sidebar Navigation - 相对于父元素定位 */}
                     <div className="lg:w-72 lg:flex-shrink-0 mb-8 lg:mb-0">
-                        <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-120px)]">
+                        <div className={`lg:w-72 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300 ${sidebarPosition === 'fixed'
+                            ? 'lg:fixed lg:top-24'
+                            : sidebarPosition === 'fixed-bottom'
+                                ? 'lg:fixed lg:top-[calc(100vh-825px)]' // 动态计算顶部位置
+                                : 'lg:sticky lg:top-24'
+                            }`}>
                             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-100">Table of Contents</h3>
                                 <nav className="space-y-1">
@@ -144,19 +192,17 @@ useEffect(() => {
                                         <button
                                             key={item.id}
                                             onClick={() => scrollToSection(item.id)}
-                                            className={`w-full text-left px-3 py-2.5 rounded-md text-sm transition-all duration-200 flex items-center group ${
-                                                activeSection === item.id
-                                                    ? 'bg-green-50 text-[#80B224] font-medium border-l-3 border-[#80B224] pl-4'
-                                                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:pl-4'
-                                            }`}
+                                            className={`w-full text-left px-3 py-2.5 rounded-md text-sm transition-all duration-200 flex items-center group ${activeSection === item.id
+                                                ? 'bg-green-50 text-[#80B224] font-medium border-l-3 border-[#80B224] pl-4'
+                                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:pl-4'
+                                                }`}
                                         >
-                                            <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center mr-3 text-xs transition-all ${
-                                                activeSection === item.id 
-                                                    ? 'border-[#80B224] bg-[#80B224] text-white' 
-                                                    : 'border-gray-300 text-gray-400 group-hover:border-gray-400'
-                                            }`}>
+                                            {/* <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center mr-3 text-xs transition-all ${activeSection === item.id
+                                                ? 'border-[#80B224] bg-[#80B224] text-white'
+                                                : 'border-gray-300 text-gray-400 group-hover:border-gray-400'
+                                                }`}>
                                                 {index + 1}
-                                            </span>
+                                            </span> */}
                                             <span className="flex-1">{item.label}</span>
                                         </button>
                                     ))}
@@ -167,19 +213,8 @@ useEffect(() => {
 
                     {/* Right Content Area */}
                     <div className="flex-1 min-w-0">
-                        <div 
-                            id="content-container"
-                            className={`bg-white rounded-lg shadow-sm p-4 sm:p-8 transition-all duration-300 ${
-                                canScrollContent 
-                                    ? 'max-h-[calc(100vh-70px)] overflow-y-auto' 
-                                    : 'max-h-[calc(100vh-70px)] overflow-hidden'
-                            }`}
-                            style={{
-                                scrollbarWidth: 'none', /* Firefox */
-                                msOverflowStyle: 'none'  /* IE and Edge */
-                            }}
-                        >
-                            <h1 className="text-2xl sm:text-3xl font-black mb-8">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h1>
+                        <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8">
+                            <h1 className="text-3xl sm:text-4xl font-black mb-8">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h1>
 
                             {/* Executive Summary Section */}
                             <section id="executive-summary" className="mb-12">
@@ -378,7 +413,7 @@ useEffect(() => {
                             </section>
 
                             {/* Future Outlook Section */}
-                            <section id="future" className="mb-12">
+                            <section id="future" className="mb-28">
                                 <h2 className="text-xl font-bold mb-6">Future Outlook</h2>
                                 <div className="prose max-w-none">
                                     <p className="text-gray-600 mb-6">
