@@ -348,6 +348,32 @@ export default function Index() {
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
+            <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+                <div className="flex items-center mb-6 relative z-10">
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
+                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA GB200 NVL72</h3>
+                </div>
+                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
+                <IwsLink href="/gb200-nvl72" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </IwsLink>
+              </div>
+              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
+                <div className="flex items-center mb-6 relative z-10">
+                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
+                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA HGX B200</h3>
+                </div>
+                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">The NVIDIA HGX B200 GPU is based on the latest Blackwell architecture with 180GB of HBM3e memory at 8TB/s. As a premier accelerated scale-up x86 platform with up to 15X faster real-time inference performance, 12X lower cost, and 12X less energy use, HGX B200 is designed for the most demanding AI, data analytics, and high-performance computing (HPC) workloads</p>
+                <IwsLink href="/hgx-b200" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </IwsLink>
+              </div>
               <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
                 <div className="flex items-center mb-6 relative z-10">
                   <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
@@ -376,33 +402,9 @@ export default function Index() {
                 </IwsLink>
               </div>
 
-              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                <div className="flex items-center mb-6 relative z-10">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
-                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA HGX B200</h3>
-                </div>
-                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">The NVIDIA HGX B200 GPU is based on the latest Blackwell architecture with 180GB of HBM3e memory at 8TB/s. As a premier accelerated scale-up x86 platform with up to 15X faster real-time inference performance, 12X lower cost, and 12X less energy use, HGX B200 is designed for the most demanding AI, data analytics, and high-performance computing (HPC) workloads</p>
-                <IwsLink href="/hgx-b200" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
-                  Learn More
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </IwsLink>
-              </div>
+             
 
-              <div className="group border border-gray-200 p-8 rounded-xl hover:shadow-2xl">
-                <div className="flex items-center mb-6 relative z-10">
-                  <Image src="/icon/NvidiaH100.svg" alt="H100" width={34} height={34} className='svg-gray' />
-                  <h3 className="text-lg font-bold ml-6 group-hover:text-[#8CC63F] transition-colors duration-300">NVIDIA GB200 NVL72</h3>
-                </div>
-                <p className="text-gray-600 text-l mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">GB200 NVL72 connects 36 Grace CPUs and 72 Blackwell GPUs in a rack-scale, liquid-cooled design. It boasts a 72-GPU NVLink domain that acts as a single, massive GPU and delivers 30X faster real-time trillion-parameter large language model (LLM) inference</p>
-                <IwsLink href="/gb200-nvl72" className="inline-flex items-center text-[#8CC63F] hover:text-[#7ab32f] text-l group-hover:text-lg font-medium group-hover:translate-x-2 transition-all duration-300">
-                  Learn More
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </IwsLink>
-              </div>
+              
             </div>
           </div>
         </div>
