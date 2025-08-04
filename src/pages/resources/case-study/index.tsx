@@ -62,7 +62,7 @@ useEffect(() => {
     const handlePageScroll = () => {
         const scrollY = window.scrollY;
         console.log('当前页面滚动高度:', scrollY);
-        setCanScrollContent(scrollY >=490 && scrollY <= 600);
+        setCanScrollContent(scrollY >=490 && scrollY <= 650);
     };
 
     // 右侧容器滚动处理函数 - 控制章节高亮
