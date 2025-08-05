@@ -90,7 +90,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[165px]">
                         <SlideUp>
                             <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
-                                How to Run the Llama Locally <br /> in a Canopy Wave VM?
+                                How to Run the Llama Locally <br /> on a Canopy Wave VM?
                             </h1>
                         </SlideUp>
                     </div>
