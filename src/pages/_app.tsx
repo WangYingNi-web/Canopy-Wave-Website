@@ -27,7 +27,26 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/networking/banner.svg" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/blog/banner.svg" as="image" type="image/svg+xml" /> */}
-
+      <Head>
+        {/* 基础Open Graph标签 */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Canopy Wave" />
+        <meta property="og:title" content="Canopy Wave - High-Performance Computing Solutions" />
+        <meta property="og:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
+        <meta property="og:image" content="https://canopywave.com/canopy.png" />
+        <meta property="og:url" content="https://canopywave.com" />
+        
+        {/* Twitter Card标签 */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@canopywave_cw" />
+        <meta name="twitter:title" content="Canopy Wave - High-Performance Computing Solutions" />
+        <meta name="twitter:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions." />
+        <meta name="twitter:image" content="https://canopywave.com/canopy.png" />
+        
+        {/* LinkedIn特定标签 */}
+        <meta property="article:author" content="Canopy Wave" />
+        <meta property="article:publisher" content="https://www.linkedin.com/company/canopywave/" />
+      </Head>
       <div id="root" className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Component {...pageProps} />

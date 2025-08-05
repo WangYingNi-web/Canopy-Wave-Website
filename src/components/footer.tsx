@@ -3,9 +3,25 @@
 import Image from 'next/image';
 import IwsLink from './IwsLink'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 
 export default function Footer() {
     const router = useRouter()
+
+    const handleLinkedInShare = (e: React.MouseEvent) => {
+        e.preventDefault()
+
+        // 确保在点击时获取最新的URL
+        const currentUrl = window.location.href
+        const encodedUrl = encodeURIComponent(currentUrl)
+        const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&shareUrl=${encodedUrl}`
+        console.log(shareUrl, "shareUrl");
+
+        // 打开新窗口
+        window.open(shareUrl, '_blank', 'noopener,noreferrer')
+    }
+
+
 
     return (
         <footer className="border-t bg-[#F9F9F9]">
@@ -25,14 +41,18 @@ export default function Footer() {
                             </IwsLink>
                         </div>
                         <div className="flex items-center space-x-4 pl-1">
-                            <IwsLink href="https://www.linkedin.com/company/canopywave/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                            <button
+                                onClick={handleLinkedInShare}
+                                className="hover:opacity-80"
+                                aria-label="Share on LinkedIn"
+                            >
                                 <Image
                                     src="/footer/linkedin.svg"
                                     alt="LinkedIn"
                                     width={36}
                                     height={36}
                                 />
-                            </IwsLink>
+                            </button>
                             <IwsLink href="https://x.com/canopywave_cw?s=21" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src="/footer/twitter.svg"

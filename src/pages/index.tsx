@@ -13,11 +13,15 @@ import { useInView } from 'react-intersection-observer';
 import EuropeMap from '@/components/EuropeMap'
 import BackgroundTransition from '@/components/BackgroundTransition';
 import { Button } from "@/components/ui/button";
+import { useRouter } from 'next/router'
 import Spline from '@splinetool/react-spline';
 
 
 
 export default function Index() {
+  const router = useRouter()
+  const currentUrl = `https://canopywave.com${router.asPath}`
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   // 修改新闻轮播的状态管理 - 从中间位置开始，确保左右都能滑动
@@ -182,6 +186,16 @@ export default function Index() {
     <main>
       <Head>
         <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
+        <meta name="description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
+        
+        {/* 页面特定的Open Graph标签 */}
+        <meta property="og:title" content="Canopy Wave - High-Performance Computing Solutions" />
+        <meta property="og:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:image" content="https://canopywave.com/home_banner.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Canopy Wave Homepage" />
         <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" />
         {/* <link rel="preload" href="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode" as="fetch" crossOrigin="anonymous"></link> */}
       </Head>
