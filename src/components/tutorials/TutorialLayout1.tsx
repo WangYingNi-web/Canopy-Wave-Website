@@ -8,6 +8,18 @@ interface TutorialLayout1Props {
 }
 
 const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
+    const handleLinkedInShare = (e: React.MouseEvent) => {
+        e.preventDefault()
+
+        // 确保在点击时获取最新的URL
+        const currentUrl = window.location.href
+        const encodedUrl = encodeURIComponent(currentUrl)
+        const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&shareUrl=${encodedUrl}`
+        console.log(shareUrl, "shareUrl");
+
+        // 打开新窗口
+        window.open(shareUrl, '_blank', 'noopener,noreferrer')
+    }
     return (
         <>
             <main className="min-h-screen bg-[#f9f9f9] mt-[84px]">
@@ -165,6 +177,19 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                         </section>
                     </div>
                 </div>
+                
+                <button
+                    onClick={handleLinkedInShare}
+                    className="hover:opacity-80"
+                    aria-label="Share on LinkedIn"
+                >
+                    <Image
+                        src="/footer/linkedin.svg"
+                        alt="LinkedIn"
+                        width={36}
+                        height={36}
+                    />
+                </button>
             </main >
 
         </>
