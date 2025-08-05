@@ -178,7 +178,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </div>
 
-                <button
+                {/* <button
                     onClick={handleLinkedInShare}
                     className="hover:opacity-80"
                     aria-label="Share on LinkedIn"
@@ -189,7 +189,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                         width={36}
                         height={36}
                     />
-                </button>
+                </button> */}
             </main >
 
         </>
