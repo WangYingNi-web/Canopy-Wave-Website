@@ -681,8 +681,12 @@ export default function BlogDetail() {
     <main className={getBackgroundClass()}>
       <Head>
         <title>Canopy Wave - Blog</title>
+        <meta property="og:title" content="Canopy Wave - Blog" />
         {title === 'joint-blog-accelerate-enterprise-ai' && (
-          <meta property="og:image" content="https://canopywave.com/blog1.webp" />
+          <>
+            <meta property="og:title" content="Joint Blog - Accelerate Enterprise AI" />
+            <meta property="og:image" content="https://canopywave.com/blog1.webp" />
+          </>
         )}
       </Head>
       <Header />
