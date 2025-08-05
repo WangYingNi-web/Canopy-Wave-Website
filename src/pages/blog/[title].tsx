@@ -376,7 +376,7 @@ export default function BlogDetail() {
                     ])
                   ])
                 ]),
-                React.createElement('h3', { key: 'selection-logic-title', style: { marginTop: '30px',fontWeight: 'bold' } }, 'General Selection Logic:'),
+                React.createElement('h3', { key: 'selection-logic-title', style: { marginTop: '30px', fontWeight: 'bold' } }, 'General Selection Logic:'),
                 React.createElement('ol', { key: 'selection-list', style: { marginTop: '15px', paddingLeft: '20px' } }, [
                   React.createElement('li', { key: 'li1', style: { marginBottom: '10px' } }, '1. Assess Your Workload\'s Needs: If you are only running inference without needing to download data or save results, additional storage may not be required. Model training or fine-tuning typically requires a combination, such as local and object storage. Distributed tasks demand shared storage.'),
                   React.createElement('li', { key: 'li2', style: { marginBottom: '10px' } }, '2. Use Local Storage for High-Frequency, Low-Latency Access: Prioritize local storage for the primary data stream during the training phase to leverage its extremely low latency and high throughput.'),
@@ -389,7 +389,7 @@ export default function BlogDetail() {
             {
               title: 'II. Shared vs. Object Storage in Distributed Training',
               content: [
-                React.createElement('h3', { key: 'usage-differences-title',style: { fontWeight: 'bold' }}, '1. Using Scene Differences'),
+                React.createElement('h3', { key: 'usage-differences-title', style: { fontWeight: 'bold' } }, '1. Using Scene Differences'),
                 React.createElement('ul', {
                   key: 'usage-differences-list',
                   style: { marginBottom: '20px' }
@@ -403,7 +403,7 @@ export default function BlogDetail() {
                     ': Network transmission through the S3 protocol does not occupy GPU resources, and is suitable for efficient processing and transmission of large-scale data. It is commonly used to store raw datasets, model archiving, and upload training data from the public network or locally, and can also be used for model deployment, archiving, and migration after training is completed. In distributed training, object storage is often used in conjunction with other types of storage to balance performance and flexibility.'
                   ])
                 ]),
-                React.createElement('h3', { key: 'technical-comparison-title' ,style: { fontWeight: 'bold' }}, '2. Comparison of technical dimensions'),
+                React.createElement('h3', { key: 'technical-comparison-title', style: { fontWeight: 'bold' } }, '2. Comparison of technical dimensions'),
                 React.createElement('table', {
                   key: 'technical-comparison-table',
                   style: {
@@ -581,7 +581,7 @@ export default function BlogDetail() {
                     ])
                   ])
                 ]),
-                React.createElement('h3', { key: 'combined-approach-title',style: { fontWeight: 'bold' } }, 'A Combined Approach for Distributed Training:'),
+                React.createElement('h3', { key: 'combined-approach-title', style: { fontWeight: 'bold' } }, 'A Combined Approach for Distributed Training:'),
                 React.createElement('ol', {
                   key: 'combined-approach-list',
                   style: { marginBottom: '20px' }
@@ -598,7 +598,7 @@ export default function BlogDetail() {
               title: 'Ⅲ. Advantages and disadvantages of local storage in high-performance GPU clusters',
               content: [
                 React.createElement('p', { key: 'local-storage-intro' }, 'In a GPU cluster, local storage is the directly attached storage (DAS) inside each server. At Canopy Wave, we use high-performance NVMe drives.'),
-                React.createElement('h3', { key: 'advantages-title' ,style: { fontWeight: 'bold' }}, 'Advantages:'),
+                React.createElement('h3', { key: 'advantages-title', style: { fontWeight: 'bold' } }, 'Advantages:'),
                 React.createElement('ol', {
                   key: 'advantages-list',
                   style: { marginBottom: '20px' }
@@ -608,7 +608,7 @@ export default function BlogDetail() {
                   React.createElement('li', { key: 'adv-li3', style: { marginBottom: '10px' } }, '3. Architectural Simplicity: It requires no complex configuration of shared file systems, making it suitable for rapid deployment and agile development scenarios.'),
                   React.createElement('li', { key: 'adv-li4', style: { marginBottom: '10px' } }, '4. Cost-Effectiveness: The cost per gigabyte for NVMe is often significantly lower than that of enterprise-grade shared storage systems.')
                 ]),
-                React.createElement('h3', { key: 'disadvantages-title' ,style: { fontWeight: 'bold' }}, 'Disadvantages:'),
+                React.createElement('h3', { key: 'disadvantages-title', style: { fontWeight: 'bold' } }, 'Disadvantages:'),
                 React.createElement('ol', {
                   key: 'disadvantages-list',
                   style: { marginBottom: '20px' }
@@ -681,12 +681,14 @@ export default function BlogDetail() {
     <main className={getBackgroundClass()}>
       <Head>
         <title>Canopy Wave - Blog</title>
-        <meta property="og:title" content="Canopy Wave - Blog" />
-        {title === 'joint-blog-accelerate-enterprise-ai' && (
+        {title === 'joint-blog-accelerate-enterprise-ai' ? (
           <>
             <meta property="og:title" content="Joint Blog - Accelerate Enterprise AI" />
             <meta property="og:image" content="https://canopywave.com/blog1.webp" />
+            <meta property="og:description" content="Learn how enterprises can accelerate their AI journey with private, secure infrastructure solutions." />
           </>
+        ) : (
+          <meta property="og:title" content="Canopy Wave - Blog" />
         )}
       </Head>
       <Header />
