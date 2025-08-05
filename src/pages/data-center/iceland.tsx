@@ -16,6 +16,8 @@ export default function IcelandDataCenter() {
             <Head>
                 <title>Canopy Wave - Sustainable and Efficient Data Center Solutions</title>
                 <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
+                <meta property="og:title" content="Canopy Wave - Sustainable and Efficient Data Center Solutions" />
+                <meta property="og:image" content="https://canopywave.com/data-center/deploy.png" />
             </Head>
             <Header />
 
