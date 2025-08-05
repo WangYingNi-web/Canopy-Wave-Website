@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions." />
         <meta name="twitter:image" content="https://canopywave.com/canopy.png" />
         
-        /* LinkedIn特定标签 */
+        {/* /* LinkedIn特定标签 */}
         {/* <meta property="article:author" content="Canopy Wave" />
         <meta property="article:publisher" content="https://www.linkedin.com/company/canopywave/" /> */}
       </Head>
