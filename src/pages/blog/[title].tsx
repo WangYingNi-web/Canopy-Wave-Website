@@ -687,7 +687,7 @@ export default function BlogDetail() {
         {/* 所有页面都有的基础元数据 */}
         <meta key="og-title" property="og:title" content="Canopy Wave - Blog" />
         <meta key="og-description" property="og:description" content="Discover the latest insights and updates from Canopy Wave" />
-        <meta key="og-image" property="og:image" content="https://canopy-wave-website.vercel.app//blog-cover.webp" />
+        <meta key="og-image" property="og:image" content="https://canopy-wave-website.vercel.app/blog-cover.webp" />
         <meta key="og-url" property="og:url" content={fullUrl} />
         <meta key="og-type" property="og:type" content="website" />
         <meta key="og-site_name" property="og:site_name" content="Canopy Wave" />
@@ -696,14 +696,14 @@ export default function BlogDetail() {
         {title === 'joint-blog-accelerate-enterprise-ai' && (
           <>
             <meta key="special-og-title" property="og:title" content="Joint Blog - Accelerate Enterprise AI" />
-            <meta key="special-og-image" property="og:image" content="https://canopy-wave-website.vercel.app//blog1.webp" />
+            <meta key="special-og-image" property="og:image" content="https://canopy-wave-website.vercel.app/blog1.webp" />
             <meta key="special-og-description" property="og:description" content="Learn how enterprises can accelerate their AI journey with private, secure infrastructure solutions." />
           </>
         )}
 
         {/* LinkedIn 专用标签 */}
         <meta name="author" content="Canopy Wave Team" />
-        <meta name="image" content="https://canopy-wave-website.vercel.app//blog-cover.webp" />
+        <meta name="image" content="https://canopy-wave-website.vercel.app/blog-cover.webp" />
       </Head>
       <Header />
       {renderBlogLayout()}
