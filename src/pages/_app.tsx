@@ -16,38 +16,57 @@ const inter = Inter({
   weight: ['400', '600', '700', '800', '900'], // 确保包含900字重
   display: 'swap',
 });
-
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js' | 'set',
+      targetId: string | Date,
+      config?: Record<string, any>
+    ) => void;
+    dataLayer: Record<string, any>[];
+  }
+}
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+  // / 备用分析函数
+  const sendToFallbackAnalytics = async (page: string) => {
+    try {
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          page,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent
+        })
+      })
+    } catch (error) {
+      // 静默处理
+    }
+  }
   useEffect(() => {
     try {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('初始化 Google Analytics')
-      }
       ReactGA.initialize('G-5T0R0TPE9P')
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('发送页面浏览事件:', router.pathname)
-      }
       ReactGA.send({ hitType: 'pageview', page: router.pathname })
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('Google Analytics 初始化失败:', error)
-      }
+      // GA 失败时使用备用方案
+      sendToFallbackAnalytics(router.pathname)
     }
+    
+    // 检查 GA 是否真正加载成功
+    setTimeout(() => {
+      if (typeof window !== 'undefined' && !window.gtag) {
+        sendToFallbackAnalytics(router.pathname)
+      }
+    }, 3000)
   }, [])
   
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       try {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('路由变化:', url)
-        }
         ReactGA.send({ hitType: 'pageview', page: url })
       } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Google Analytics 事件发送失败:', error)
-        }
+        sendToFallbackAnalytics(url)
       }
     }
   
