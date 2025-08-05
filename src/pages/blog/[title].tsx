@@ -681,6 +681,9 @@ export default function BlogDetail() {
     <main className={getBackgroundClass()}>
       <Head>
         <title>Canopy Wave - Blog</title>
+        {title === 'joint-blog-accelerate-enterprise-ai' && (
+          <meta property="og:image" content="https://canopywave.com/blog1.webp" />
+        )}
       </Head>
       <Header />
       {renderBlogLayout()}

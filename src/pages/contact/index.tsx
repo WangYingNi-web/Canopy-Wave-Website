@@ -44,7 +44,7 @@ export default function Contact() {
             expectedGPUs: validateField('expectedGPUs', formData.expectedGPUs),
             projectStartTime: validateField('projectStartTime', formData.projectStartTime),
             // interests: validateField('interests', formData.interests),
-            interests:'',
+            interests: '',
             message: validateField('message', formData.message),
         };
 
@@ -73,7 +73,7 @@ export default function Contact() {
                 'https://sequoia-paas.canopywave.io/api/v1/send_email',
                 {
                     subject: 'New Contact Form Submission',
-                    recipients: ['andrew.li@canopywave.com', 'yachal@canopywave.com','sales@canopywave.com'],
+                    recipients: ['andrew.li@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
                     // recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 },
@@ -193,10 +193,10 @@ export default function Contact() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-8">
                     <div className="flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-1/2">
-                        <SlideUp>
-                        <h1 className="text-5xl sm:text-6xl font-black text-[#8CC63F] mb-6">Contact Us</h1>
+                            <SlideUp>
+                                <h1 className="text-5xl sm:text-6xl font-black text-[#8CC63F] mb-6">Contact Us</h1>
 
-                        </SlideUp>
+                            </SlideUp>
                             <p className="text-base text-gray-700 mb-4 max-w-md">
                                 We'd love to better understand your capacity needs and learn how our platform can take your AI-powered innovation to the next level
                             </p>
@@ -211,7 +211,7 @@ export default function Contact() {
                             <div className="mt-4">
                                 <h2 className="text-sm font-bold mb-2">OFFICE ADDRESS</h2>
                                 <p className="text-gray-600 mb-2 max-w-md">
-                                    2350 Mission College Boulevard 350<br/>
+                                    2350 Mission College Boulevard 350<br />
                                     Santa Clara, CA 95054
                                 </p>
                             </div>
@@ -327,7 +327,7 @@ export default function Contact() {
                                 </div> */}
                                 <div className="flex flex-col mb-4">
                                     <h3 className="text-base font-bold mb-2">Select Your interests</h3>
-                                    <div className="flex flex-col">
+                                    <div className="flex flex-col bg-gray-50 p-4 rounded-lg">
                                         <label className="flex items-center mb-2 text-sm">
                                             <input
                                                 type="checkbox"
@@ -387,7 +387,7 @@ export default function Contact() {
                                             />
                                             <span className="text-gray-600">Nvidia H100 SXM</span>
                                         </label>
-                                        <label className="flex items-center mb-3">
+                                        <label className="flex items-center mb-1">
                                             <input
                                                 type="checkbox"
                                                 name="other"
@@ -431,6 +431,8 @@ export default function Contact() {
                                                 <span className="text-red-500 text-xs mt-1">{errors.message}</span>
                                             )}
                                         </div> */}
+                                    </div>
+                                    <div className="mt-6">
                                         <div className="flex items-center mb-4 text-sm">
                                             <input
                                                 type="checkbox"
