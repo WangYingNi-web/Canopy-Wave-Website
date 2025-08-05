@@ -680,17 +680,20 @@ export default function BlogDetail() {
   return (
     <main className={getBackgroundClass()}>
       <Head>
-        <title>Canopy Wave - Blog</title>
-        {title === 'joint-blog-accelerate-enterprise-ai' ? (
-          <>
-            <meta property="og:title" content="Joint Blog - Accelerate Enterprise AI" />
-            <meta property="og:image" content="https://canopywave.com/blog1.webp" />
-            <meta property="og:description" content="Learn how enterprises can accelerate their AI journey with private, secure infrastructure solutions." />
-          </>
-        ) : (
-          <meta property="og:title" content="Canopy Wave - Blog" />
-        )}
-      </Head>
+  <title>Canopy Wave - Blog</title>
+  {title === 'joint-blog-accelerate-enterprise-ai' ? (
+    <>
+      <meta key="og-title" property="og:title" content="Joint Blog - Accelerate Enterprise AI" />
+      <meta key="og-image" property="og:image" content="https://canopywave.com/blog1.webp" />
+      <meta key="og-description" property="og:description" content="Learn how enterprises can accelerate their AI journey with private, secure infrastructure solutions." />
+    </>
+  ) : (
+    <>
+      <meta key="og-title" property="og:title" content="Canopy Wave - Blog" />
+      <meta key="og-image" property="og:image" content="https://canopywave.com/blog2.svg" />
+    </>
+  )}
+</Head>
       <Header />
       {renderBlogLayout()}
       <Footer />
