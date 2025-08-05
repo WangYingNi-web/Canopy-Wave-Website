@@ -50,7 +50,18 @@ export default function Newsroom() {
         }
     };
     const handleTutorialClick = (title: string) => {
-        const tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        // 根据具体标题映射到正确的 URL
+        let tutorialTitle: string;
+        
+        if (title.includes('DeepSeek-R1')) {
+            tutorialTitle = 'how-to-run-deepseek-r1-locally-in-a-canopy-wave-vm';
+        } else if (title.includes('Llama')) {
+            tutorialTitle = 'how-to-run-the-llama-locally-in-a-canopy-wave-vm';
+        } else {
+            // 默认的 URL 转换逻辑
+            tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        }
+        
         router.push(`/about/newsroom/tutorials/${tutorialTitle}`);
     };
 
