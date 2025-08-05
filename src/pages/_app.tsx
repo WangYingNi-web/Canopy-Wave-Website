@@ -6,6 +6,9 @@ import { Toaster } from 'react-hot-toast';
 import { Inter } from 'next/font/google'; // 导入 next/font
 import FloatingButtons from '../components/FloatingButtons';
 import Chat from '@/components/Chart'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import ReactGA from 'react-ga4'
 
 // 关键修改：显式声明需要的所有字重（包括900）
 const inter = Inter({
@@ -15,38 +18,41 @@ const inter = Inter({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+  useEffect(() => {
+    try {
+      // console.log('初始化 Google Analytics')
+      ReactGA.initialize('G-5T0R0TPE9P')
+      
+      // console.log('发送页面浏览事件:', router.pathname)
+      ReactGA.send({ hitType: 'pageview', page: router.pathname })
+    } catch (error) {
+      // console.warn('Google Analytics 初始化失败:', error)
+    }
+  }, [])
+  
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      try {
+        // console.log('路由变化:', url)
+        ReactGA.send({ hitType: 'pageview', page: url })
+      } catch (error) {
+        // console.warn('Google Analytics 事件发送失败:', error)
+      }
+    }
+  
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
   return (
     <>
       {/* 预加载关键图片资源 */}
       {/* <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" /> */}
       {/* <link rel="preload" href="/home_banner.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/storage/banner.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/platform/banner.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/networking/banner.svg" as="image" type="image/svg+xml" /> */}
-      {/* <link rel="preload" href="/blog/banner.svg" as="image" type="image/svg+xml" /> */}
- <Head>
-        {/* 基础Open Graph标签 */}
-        {/* <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Canopy Wave" />
-        <meta property="og:title" content="Canopy Wave - High-Performance Computing Solutions" />
-        <meta property="og:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
-        <meta property="og:image" content="https://canopywave.com/canopy.png" />
-        <meta property="og:url" content="https://canopywave.com" /> */}
-        
-        {/* Twitter Card标签 */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@canopywave_cw" />
-        <meta name="twitter:title" content="Canopy Wave - High-Performance Computing Solutions" />
-        <meta name="twitter:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions." />
-        <meta name="twitter:image" content="https://canopywave.com/canopy.png" />
-        
-        {/* /* LinkedIn特定标签 */}
-        {/* <meta property="article:author" content="Canopy Wave" />
-        <meta property="article:publisher" content="https://www.linkedin.com/company/canopywave/" /> */}
-      </Head>
+
+
       <div id="root" className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Component {...pageProps} />
