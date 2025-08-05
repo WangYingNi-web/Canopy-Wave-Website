@@ -21,23 +21,33 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useEffect(() => {
     try {
-      // console.log('初始化 Google Analytics')
+      if (process.env.NODE_ENV === 'development') {
+        console.log('初始化 Google Analytics')
+      }
       ReactGA.initialize('G-5T0R0TPE9P')
       
-      // console.log('发送页面浏览事件:', router.pathname)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('发送页面浏览事件:', router.pathname)
+      }
       ReactGA.send({ hitType: 'pageview', page: router.pathname })
     } catch (error) {
-      // console.warn('Google Analytics 初始化失败:', error)
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Google Analytics 初始化失败:', error)
+      }
     }
   }, [])
   
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       try {
-        // console.log('路由变化:', url)
+        if (process.env.NODE_ENV === 'development') {
+          console.log('路由变化:', url)
+        }
         ReactGA.send({ hitType: 'pageview', page: url })
       } catch (error) {
-        // console.warn('Google Analytics 事件发送失败:', error)
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Google Analytics 事件发送失败:', error)
+        }
       }
     }
   
@@ -46,6 +56,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
+
   return (
     <>
       {/* 预加载关键图片资源 */}

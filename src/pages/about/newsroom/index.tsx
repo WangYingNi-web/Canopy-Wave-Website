@@ -99,14 +99,14 @@ export default function Newsroom() {
     const tutorialPosts: TutorialPost[] = [
         {
             id: 1,
-            title: "How to Run DeepSeek-R1 Locally in a Canopy Wave VM",
+            title: "How to Run DeepSeek-R1 Locally on a Canopy Wave VM",
             description: "A comprehensive guide to setting up and managing your first GPU cluster",
             date: "July 31, 2025",
             image: "/tutorials/deepseek.png"
         },
         {
             id: 2,
-            title: "How to Run the Llama Locally in a Canopy Wave VM",
+            title: "How to Run the Llama Locally on a Canopy Wave VM",
             description: "Best practices for configuring your AI training and inference workloads",
             date: "August 1, 2025",
             image: "/tutorials/Llama.png"

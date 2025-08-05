@@ -15,7 +15,7 @@ export default function TutorialDetail() {
       case 'how-to-run-deepseek-r1-locally-in-a-canopy-wave-vm':
         return {
           id: 1,
-          title: 'How to Run DeepSeek-R1 Locally in a Canopy Wave VM?',
+          title: 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
           description: 'A comprehensive guide to understanding and utilizing GPU computing for AI workloads',
           sections: [
             {
@@ -59,7 +59,7 @@ export default function TutorialDetail() {
       case 'how-to-run-the-llama-locally-in-a-canopy-wave-vm':
         return {
           id: 2,
-          title: 'How to Run the Llama Locally in a Canopy Wave VM? ',
+          title: 'How to Run the Llama Locally on a Canopy Wave VM? ',
           description: 'Advanced techniques for accelerating and optimizing AI model training workflows',
           sections: [
             {
