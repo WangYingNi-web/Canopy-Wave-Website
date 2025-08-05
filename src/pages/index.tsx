@@ -189,7 +189,7 @@ export default function Index() {
         <meta name="description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
         
         {/* 页面特定的Open Graph标签 */}
-        <meta property="og:title" content="Canopy Wave - High-Performance Computing Solutions" />
+        <meta property="og:title" content="Canopy Wave - Instant GPU Cluster for Enterprise AI" />
         <meta property="og:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:image" content="https://canopywave.com/home_banner.svg" />
