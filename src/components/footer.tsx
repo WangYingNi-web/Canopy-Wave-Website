@@ -3,11 +3,9 @@
 import Image from 'next/image';
 import IwsLink from './IwsLink'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
 
 export default function Footer() {
     const router = useRouter()
-
     const handleLinkedInShare = (e: React.MouseEvent) => {
         e.preventDefault()
 
@@ -20,9 +18,6 @@ export default function Footer() {
         // 打开新窗口
         window.open(shareUrl, '_blank', 'noopener,noreferrer')
     }
-
-
-
     return (
         <footer className="border-t bg-[#F9F9F9]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -41,7 +36,7 @@ export default function Footer() {
                             </IwsLink>
                         </div>
                         <div className="flex items-center space-x-4 pl-1">
-                            <button
+                            {/* <button
                                 onClick={handleLinkedInShare}
                                 className="hover:opacity-80"
                                 aria-label="Share on LinkedIn"
@@ -52,7 +47,15 @@ export default function Footer() {
                                     width={36}
                                     height={36}
                                 />
-                            </button>
+                            </button> */}
+                            <IwsLink href="https://www.linkedin.com/company/canopywave/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                                <Image
+                                    src="/footer/linkedin.svg"
+                                    alt="LinkedIn"
+                                    width={36}
+                                    height={36}
+                                />
+                            </IwsLink>
                             <IwsLink href="https://x.com/canopywave_cw?s=21" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src="/footer/twitter.svg"

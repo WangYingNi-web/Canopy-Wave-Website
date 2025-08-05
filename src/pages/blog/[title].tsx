@@ -13,6 +13,8 @@ export default function BlogDetail() {
   const { title } = router.query
 
   const fullUrl = `https://canopy-wave-website.vercel.app/${router.asPath}`;
+  console.log(fullUrl,"fullUrl");
+  
 
   const getBlogPost = (title: string): BlogPost | null => {
     switch (title) {
@@ -701,9 +703,6 @@ export default function BlogDetail() {
           </>
         )}
 
-        {/* LinkedIn 专用标签 */}
-        <meta name="author" content="Canopy Wave Team" />
-        <meta name="image" content="https://canopy-wave-website.vercel.app/blog-cover.webp" />
       </Head>
       <Header />
       {renderBlogLayout()}
