@@ -54,9 +54,9 @@ export default function Newsroom() {
         let tutorialTitle: string;
         
         if (title.includes('DeepSeek-R1')) {
-            tutorialTitle = 'how-to-run-deepseek-r1-locally-in-a-canopy-wave-vm';
+            tutorialTitle = 'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm';
         } else if (title.includes('Llama')) {
-            tutorialTitle = 'how-to-run-the-llama-locally-in-a-canopy-wave-vm';
+            tutorialTitle = 'how-to-run-the-llama-locally-on-a-canopy-wave-vm';
         } else {
             // 默认的 URL 转换逻辑
             tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Header from '../../../components/header';
 import Footer from '../../../components/footer';
@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import IwsLink from '@/components/IwsLink'
 import { useRouter } from 'next/router';
+
 interface TutorialPost {
   id: number;
   title: string;
@@ -14,58 +15,185 @@ interface TutorialPost {
   date: string;
   image: string;
 }
+
+interface Card {
+  id: string;
+  category: string;
+  title: string;
+  image: string;
+  date: string;
+  tag?: string;
+  onClick: () => void;
+}
+
 const Tutorials: React.FC = () => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('All');
-  const tutorialPosts: TutorialPost[] = [
-    {
-      id: 1,
-      title: "How to Run DeepSeek-R1 Locally on a Canopy Wave VM",
-      description: "A comprehensive guide to setting up and managing your first GPU cluster",
-      date: "July 31, 2025",
-      image: "/tutorials/deepseek.png"
-    },
-    {
-      id: 2,
-      title: "How to Run the Llama Locally on a Canopy Wave VM",
-      description: "Best practices for configuring your AI training and inference workloads",
-      date: "August 1, 2025",
-      image: "/tutorials/Llama.png"
-    },
-  ];
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 6; // 修改为每页显示8个卡片
+  // 处理教程点击事件
   const handleTutorialClick = (title: string) => {
     const tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
     router.push(`/resources/tutorials/${tutorialTitle}`);
   };
-  const router = useRouter();
-  // 教程数据
-  const tutorials = [
+
+  // 定义卡片数据（扩展更多数据）
+  const allCards: Card[] = [
     {
-      id: 1,
-      title: "How to Run DeepSeek-R1 Locally on a Canopy Wave VM",
-      description: "A comprehensive guide to setting up and managing your first GPU cluster",
-      image: "/tutorials/deepseek.png",
-      category: "本地部署",
-      link: "/resources/tutorials/how-to-run-deepseek-r1-locally-in-a-canopy-wave-vm",
-      tags: ["DeepSeek", "本地部署", "LLM"]
+      id: 'deepseek',
+      category: 'AI models',
+      title: 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
+      image: '/tutorials/result-banner/DeepSeek-R1.png',
+      date: 'July 31, 2025',
+      onClick: () => handleTutorialClick('How to Run DeepSeek-R1 Locally on a Canopy Wave VM')
     },
     {
-      id: 2,
-      title: "How to Run the Llama Locally on a Canopy Wave VM",
-      description: "Best practices for configuring your AI training and inference workloads",
-      image: "/tutorials/Llama.png",
-      category: "本地部署",
-      link: "/resources/tutorials/how-to-run-the-llama-locally-in-a-canopy-wave-vm",
-      tags: ["Llama", "本地部署", "Meta"]
-    }
+      id: 'llama',
+      category: 'AI models',
+      title: 'How to Run the Llama Locally on a Canopy Wave VM?',
+      image: '/tutorials/result-banner/Llama-Locally.png',
+      date: 'July 31, 2025',
+      onClick: () => handleTutorialClick('How to Run the Llama Locally on a Canopy Wave VM')
+    },
+    {
+      id: 'api',
+      category: 'API',
+      title: 'Canopy Wave supports a set of REST API to enable servers to develop management clients or to integrate VMS functionality into users\' own custom management infrastructure.',
+      image: '/tutorials/result-banner/API-Management.png',
+      date: 'July 31, 2025',
+      tag: 'API',
+      onClick: () => router.push('/resources/cloud-api')
+    },
   ];
 
-  // 分类选项
-  const categories = ['All', '本地部署'];
+  useEffect(() => {
+    const { category } = router.query;
+    if (category) {
+      // 解码URL参数，处理空格等特殊字符
+      const decodedCategory = decodeURIComponent(category as string);
+      setActiveCategory(decodedCategory);
+    } else {
+      setActiveCategory('All');
+    }
+    // 切换分类时重置到第一页
+    setCurrentPage(1);
+  }, [router.query]);
 
-  // 过滤教程
-  const filteredTutorials = activeCategory === 'All'
-    ? tutorials
-    : tutorials.filter(tutorial => tutorial.category === activeCategory);
+  // 处理分类按钮点击
+  const handleCategoryClick = (category: string) => {
+    if (category === 'All') {
+      router.push('/resources/tutorials');
+    } else {
+      // 对包含空格的分类进行URL编码
+      const encodedCategory = encodeURIComponent(category);
+      router.push(`/resources/tutorials?category=${encodedCategory}`);
+    }
+  };
+
+  // 获取要显示的卡片
+  const getDisplayCards = () => {
+    if (activeCategory === 'All') {
+      return allCards;
+    }
+    return allCards.filter(card => card.category === activeCategory);
+  };
+
+  const filteredCards = getDisplayCards();
+
+  // 获取Featured Content区域要显示的卡片（只显示AI models类别的前两个）
+  const getFeaturedCards = () => {
+    if (activeCategory === 'All') {
+      return allCards.filter(card => card.category === 'AI models').slice(0, 2);
+    }
+    return [];
+  };
+
+  const featuredCards = getFeaturedCards();
+
+  // 分页逻辑
+  const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  const currentCards = filteredCards.slice(startIndex, endIndex);
+
+  // 处理分页
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // 滚动到Results区域
+    const resultsSection = document.getElementById('results-section');
+    if (resultsSection) {
+      resultsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+    // 生成分页按钮
+    const renderPagination = () => {
+      // if (totalPages <= 1) return null;
+  
+      const pages = [];
+      const maxVisiblePages = 5;
+      let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+  
+      // 调整起始页，确保显示足够的页码
+      if (endPage - startPage + 1 < maxVisiblePages) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+      }
+  
+      return (
+        <div className="flex justify-center mt-12">
+          <nav className="flex items-center space-x-1" aria-label="Pagination">
+            {/* 左箭头 - 上一页 */}
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`flex items-center justify-center w-10 h-10 rounded-lg border transition-all duration-200 ${
+                currentPage === 1
+                  ? 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
+                  : 'border-gray-300 text-gray-600 hover:bg-[#80B224] hover:text-white hover:border-[#80B224] bg-white'
+              }`}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+  
+            {/* 页码按钮 */}
+            {Array.from({ length: endPage - startPage + 1 }, (_, index) => {
+              const pageNumber = startPage + index;
+              return (
+                <button
+                  key={pageNumber}
+                  onClick={() => handlePageChange(pageNumber)}
+                  className={`flex items-center justify-center w-10 h-10 rounded-lg border font-medium transition-all duration-200 ${
+                    currentPage === pageNumber
+                      ? 'bg-[#80B224] text-white border-[#80B224] shadow-md'
+                      : 'bg-white text-gray-600 border-gray-300 hover:bg-[#80B224] hover:text-white hover:border-[#80B224]'
+                  }`}
+                >
+                  {pageNumber}
+                </button>
+              );
+            })}
+  
+            {/* 右箭头 - 下一页 */}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`flex items-center justify-center w-10 h-10 rounded-lg border transition-all duration-200 ${
+                currentPage === totalPages
+                  ? 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
+                  : 'border-gray-300 text-gray-600 hover:bg-[#80B224] hover:text-white hover:border-[#80B224] bg-white'
+              }`}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </nav>
+        </div>
+      );
+    };
 
   return (
     <>
@@ -79,54 +207,26 @@ const Tutorials: React.FC = () => {
       <Header />
 
       <main className="min-h-screen bg-[#f9f9f9]">
-        {/* Hero Banner Section */}
-        <div className="w-full h-[520px] relative mt-[84px] bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] overflow-hidden">
-          {/* 科技风背景元素 */}
-          <div className="absolute inset-0">
-            {/* 网格背景 */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="w-full h-full" style={{
-                backgroundImage: `
-                  linear-gradient(rgba(128, 178, 36, 0.3) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(128, 178, 36, 0.3) 1px, transparent 1px)
-                `,
-                backgroundSize: '50px 50px'
-              }}></div>
-            </div>
-
-            {/* 动态光效 */}
-            <div className="absolute top-20 left-20 w-96 h-96 bg-[#80B224] rounded-full opacity-20 blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500 rounded-full opacity-15 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-            {/* 几何装饰 */}
-            <div className="absolute top-40 right-40 w-4 h-4 bg-[#80B224] rotate-45 opacity-60"></div>
-            <div className="absolute bottom-40 left-40 w-6 h-6 border-2 border-[#80B224] rotate-45 opacity-40"></div>
-            <div className="absolute top-60 left-1/3 w-2 h-2 bg-blue-400 rounded-full opacity-70"></div>
-          </div>
-
-          {/* 内容区域 */}
+        {/* Hero Section */}
+        <div className="w-full h-[490px] relative mt-[84px]">
+          <Image
+            src="/tutorials/main-banner.webp"
+            alt="banner"
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
               <SlideUp>
-                <h1 className="text-5xl sm:text-6xl font-black text-white mb-6">
-                  <span className="text-[#80B224]">Tutorials</span>
+                <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-center">
+                  Tutorials
                 </h1>
               </SlideUp>
               <SlideUp>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl">
+                <p className="text-gray-600 text-l mt-8 text-center">
                   Explore Comprehensive Product Usage Guides
                 </p>
-              </SlideUp>
-              <SlideUp>
-                <Button
-                  className="bg-[#80B224] hover:bg-[#6fa01e] text-white px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                  onClick={() => {
-                    const tutorialsSection = document.getElementById('tutorials-section');
-                    tutorialsSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  Launch Now
-                </Button>
               </SlideUp>
             </div>
           </div>
@@ -137,15 +237,16 @@ const Tutorials: React.FC = () => {
           {/* 分类导航 */}
           <div className="mb-12">
             <SlideUp>
-              <div className="flex flex-wrap gap-4 justify-center">
-                {categories.map((category) => (
+              <div className="flex flex-wrap gap-4 justify-start">
+                {['All', 'AI models', 'API'].map((category) => (
                   <button
                     key={category}
-                    onClick={() => setActiveCategory(category)}
-                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeCategory === category
-                        ? 'bg-[#80B224] text-white shadow-lg transform scale-105'
+                    onClick={() => handleCategoryClick(category)}
+                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                      activeCategory === category
+                        ? 'bg-[#80B224] text-white shadow-lg'
                         : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-[#80B224]'
-                      }`}
+                    }`}
                   >
                     {category}
                   </button>
@@ -154,127 +255,114 @@ const Tutorials: React.FC = () => {
             </SlideUp>
           </div>
 
-          {/* 教程卡片网格 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredTutorials.map((tutorial, index) => (
-              <SlideUp key={tutorial.id} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group">
-                  {/* 教程图片 */}
-                  <div className="relative h-48 bg-gradient-to-br from-[#80B224] to-[#6fa01e] overflow-hidden">
-                    {/* 如果图片存在则显示，否则显示占位符 */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center text-white">
-                        <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                          {tutorial.category === '本地部署' && tutorial.title.includes('DeepSeek') && (
-                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                            </svg>
-                          )}
-                          {tutorial.category === '本地部署' && tutorial.title.includes('Llama') && (
-                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                            </svg>
-                          )}
+          {/* Featured Content 区域 */}
+          {featuredCards.length > 0 && (
+            <div className="mb-16">
+              <SlideUp>
+                <h2 className="text-3xl font-bold text-gray-800 mb-8">Featured Content</h2>
+              </SlideUp>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                {featuredCards.map((card) => (
+                  <SlideUp key={card.id}>
+                    <div
+                      className="relative bg-white rounded-xl overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300 border border-gray-200"
+                      onClick={card.onClick}
+                    >
+                      {/* 图片区域 */}
+                      <div className="relative w-full h-65 overflow-hidden">
+                        <Image
+                          src={card.image}
+                          alt="banner"
+                          width={400}
+                          height={192}
+                          className="object-cover w-full h-full"
+                          priority
+                        />
+                      </div>
+
+                      {/* 内容区域 */}
+                      <div className="p-6">
+                        {/* AI models标签和日期 */}
+                        <div className="flex items-center justify-between text-sm mb-3">
+                          <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
+                            {card.tag || card.category}
+                          </span>
+                          <span className="text-gray-500">{card.date}</span>
                         </div>
-                        <div className="text-sm font-semibold opacity-90">
-                          {tutorial.title.includes('DeepSeek') ? 'DeepSeek-R1' : 'Llama'}
-                        </div>
+
+                        {/* 标题 */}
+                        <h3 className="text-lg font-bold text-gray-900 line-clamp-2">
+                          {card.title}
+                        </h3>
                       </div>
                     </div>
-
-                    {/* 悬浮效果 */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                  </div>
-
-                  {/* 教程内容 */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#80B224] transition-colors duration-300">
-                      {tutorial.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2">
-                      {tutorial.description}
-                    </p>
-
-                    {/* 标签 */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tutorial.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* 操作按钮 */}
-                    <Button
-                      className="w-full bg-[#80B224] hover:bg-[#6fa01e] text-white font-semibold py-2 transition-all duration-300"
-                      onClick={() => window.location.href = tutorial.link}
-                    >
-                      开始学习
-                    </Button>
-                  </div>
-                </div>
-              </SlideUp>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tutorialPosts.map((post) => (
-              <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleTutorialClick(post.title)}>
-                <div className="relative mb-4 overflow-hidden rounded-lg shadow-xl">
-                  <div className="relative aspect-[16/9] w-full overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-all duration-300 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                </div>
-                <h3 className="text-sm font-semibold text-gray-600 mb-2 flex-grow">{post.title}</h3>
-                <div className="flex items-center space-x-4 text-sm text-gray-500 mt-auto">
-                  <IwsLink
-                    href={`/about/newsroom/tutorials/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
-                    className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Tutorial
-                  </IwsLink>
-                  <span>{post.date}</span>
-                </div>
+                  </SlideUp>
+                ))}
               </div>
-            ))}
-          </div>
-          {/* 空状态 */}
-          {filteredTutorials.length === 0 && (
-            <div className="text-center py-16">
-              <SlideUp>
-                <div className="text-gray-400 text-lg">
-                  该分类下暂无教程，敬请期待更多内容
-                </div>
-              </SlideUp>
             </div>
           )}
 
-          {/* 即将推出提示 */}
-          <div className="mt-16 text-center">
+          {/* Results 区域 */}
+          <div id="results-section">
             <SlideUp>
-              <div className="bg-gradient-to-r from-[#80B224] to-[#6fa01e] rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">更多教程即将推出</h3>
-                <p className="text-lg opacity-90 mb-6">
-                  我们正在准备更多类别的教程内容，包括云端部署、模型优化、性能调优等
-                </p>
-                <Button
-                  className="bg-white text-[#80B224] hover:bg-gray-100 font-semibold px-8 py-3"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  联系我们获取定制教程
-                </Button>
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-800">Results</h2>
+                {/* <div className="text-sm text-gray-500">
+                  Showing {startIndex + 1}-{Math.min(endIndex, filteredCards.length)} of {filteredCards.length} results
+                </div> */}
               </div>
             </SlideUp>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {currentCards.map((card) => (
+                <SlideUp key={card.id}>
+                  <div
+                    className="relative bg-white rounded-xl overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300 border border-gray-200"
+                    onClick={card.onClick}
+                  >
+                    {/* 图片区域 */}
+                    <div className="relative w-full aspect-[2/1] overflow-hidden bg-gray-100">
+                      <Image
+                        src={card.image}
+                        alt="banner"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority
+                      />
+                    </div>
+
+                    {/* 内容区域 */}
+                    <div className="p-6">
+                      {/* 标签和日期 */}
+                      <div className="flex items-center justify-between text-xs mb-3">
+                        <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
+                          {card.tag || card.category}
+                        </span>
+                        <span className="text-gray-500">{card.date}</span>
+                      </div>
+
+                      {/* 标题 */}
+                      <h3 className="text-l font-bold text-gray-900 line-clamp-2">
+                        {card.title}
+                      </h3>
+                    </div>
+                  </div>
+                </SlideUp>
+              ))}
+            </div>
+
+            {/* 分页控件 */}
+            {renderPagination()}
           </div>
+
+          {/* 空状态提示 */}
+          {filteredCards.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">Currently, there is no relevant content available</p>
+            </div>
+          )}
         </div>
       </main>
 

@@ -87,7 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div id="root" className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Component {...pageProps} />
-          {/* <FloatingButtons /> */}
+          <FloatingButtons />
           <div className="fixed flex bottom-5 right-5 z-[999]">
             <Chat />
           </div>

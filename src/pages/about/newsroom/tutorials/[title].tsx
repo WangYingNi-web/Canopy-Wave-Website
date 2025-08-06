@@ -12,10 +12,10 @@ export default function TutorialDetail() {
 
   const getTutorialPost = (title: string): TutorialPost | null => {
     switch (title) {
-      case 'how-to-run-deepseek-r1-locally-in-a-canopy-wave-vm':
+      case 'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm':
         return {
           id: 1,
-          title: 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
+          title: 'How to Run DeepSeek-R1 Locally in a Canopy Wave VM?',
           description: 'A comprehensive guide to understanding and utilizing GPU computing for AI workloads',
           sections: [
             {
@@ -56,10 +56,10 @@ export default function TutorialDetail() {
           ],
         }
 
-      case 'how-to-run-the-llama-locally-in-a-canopy-wave-vm':
+      case 'how-to-run-the-llama-locally-on-a-canopy-wave-vm':
         return {
           id: 2,
-          title: 'How to Run the Llama Locally on a Canopy Wave VM? ',
+          title: 'How to run the Llama Locally in a Canopy Wave VM? ',
           description: 'Advanced techniques for accelerating and optimizing AI model training workflows',
           sections: [
             {
@@ -112,12 +112,12 @@ export default function TutorialDetail() {
       <main className="min-h-screen bg-[#F9F9F9]">
         <Header />
         <div className="flex items-center justify-center min-h-[60vh]">
-          {/* <div className="text-center">
+          <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-600 mb-4">Tutorial not found</h1>
             <Link href="/about/newsroom" className="text-blue-600 hover:text-blue-800 underline">
               Back to Newsroom
             </Link>
-          </div> */}
+          </div>
         </div>
         <Footer />
       </main>

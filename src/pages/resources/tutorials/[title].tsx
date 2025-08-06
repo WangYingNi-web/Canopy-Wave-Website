@@ -28,7 +28,7 @@ export default function TutorialDetail() {
 
   const getTutorialPost = (title: string): TutorialPost | null => {
     switch (title) {
-      case 'how-to-run-deepseek-r1-locally-in-a-canopy-wave-vm':
+      case 'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm':
         return {
           id: 1,
           title: 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
@@ -72,7 +72,7 @@ export default function TutorialDetail() {
           ],
         }
 
-      case 'how-to-run-the-llama-locally-in-a-canopy-wave-vm':
+      case 'how-to-run-the-llama-locally-on-a-canopy-wave-vm':
         return {
           id: 2,
           title: 'How to Run the Llama Locally on a Canopy Wave VM? ',
