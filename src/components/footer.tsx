@@ -117,7 +117,8 @@ export default function Footer() {
                                 <div>
                                     <h3 className="font-semibold mb-2 text-sm">Resources</h3>
                                     <ul className="space-y-2 text-xs">
-                                        <li><IwsLink href="/resources/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li>
+                                        {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li> */}
+                                        <li><IwsLink href="/resources/tutorials" className="text-gray-500 hover:text-gray-700">Tutorials</IwsLink></li>
                                         <li><IwsLink href="/resources/case-study" className="text-gray-500 hover:text-gray-700">Case Studies</IwsLink></li>
                                     </ul>
                                 </div>
