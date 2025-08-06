@@ -42,7 +42,7 @@ export default function NetworkingServices() {
                             <div
                                 className="w-full h-[490px] bg-cover bg-left bg-no-repeat"
                                 style={{
-                                    backgroundImage: "url('/networking/infiniBand-networking/Data-Centers-Solution-02.jpg')",
+                                    backgroundImage: "url('/networking/infiniband-networkings/Data-Centers-Solution-02.jpg')",
                                     maskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 8%, rgba(0,0,0,1) 18%)",
                                     WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 8%, rgba(0,0,0,1) 18%)"
                                 }}
@@ -203,7 +203,7 @@ export default function NetworkingServices() {
                                 <div className="flex justify-center">
                                     <div className="rounded-lg">
                                         <Image
-                                            src="/networking/infiniBand-networking/adapter.jpg"
+                                            src="/networking/infiniband-networkings/adapter.jpg"
                                             alt="InfiniBand Adapter"
                                             width={500}  // 仅设置目标宽度
                                             height={0}   // 高度设为0（或任意值，由CSS覆盖）
@@ -235,7 +235,7 @@ export default function NetworkingServices() {
                                 <div className="flex justify-center">
                                     <div className="rounded-lg">
                                         <Image
-                                            src="/networking/infiniBand-networking/800G OSFP.jpg"
+                                            src="/networking/infiniband-networkings/800G OSFP.jpg"
                                             alt="Optical Transceiver"
                                             width={500}  // 仅设置目标宽度
                                             height={0}   // 高度设为0（或任意值，由CSS覆盖）
@@ -258,7 +258,7 @@ export default function NetworkingServices() {
                             <SlideUp>
                                 <div className="rounded-lg shadow-lg">
                                     <Image
-                                        src="/networking/infiniBand-networking/9700S.jpg"
+                                        src="/networking/infiniband-networkings/9700S.jpg"
                                         alt="Optical Transceiver"
                                         width={550}
                                         height={450}
@@ -410,7 +410,7 @@ export default function NetworkingServices() {
                             </p>
                             <div className="mt-4">
                                 <Image
-                                    src="/networking/infiniBand-networking/hpc-climate.jpeg"
+                                    src="/networking/infiniband-networkings/hpc-climate.jpeg"
                                     alt="HPC Climate Simulation"
                                     width={300}
                                     height={200}
@@ -435,7 +435,7 @@ export default function NetworkingServices() {
                             </p>
                             <div className="mt-4">
                                 <Image
-                                    src="/networking/infiniBand-networking/AI traning.jpg"
+                                    src="/networking/infiniband-networkings/AI traning.jpg"
                                     alt="HPC Climate Simulation"
                                     width={300}
                                     height={200}
@@ -460,7 +460,7 @@ export default function NetworkingServices() {
                             </p>
                             <div className="mt-4">
                                 <Image
-                                    src="/networking/infiniBand-networking/AI Finance.webp"
+                                    src="/networking/infiniband-networkings/AI Finance.webp"
                                     alt="HPC Climate Simulation"
                                     width={300}
                                     height={200}
@@ -486,7 +486,7 @@ export default function NetworkingServices() {
                             </p>
                             <div className="mt-4">
                                 <Image
-                                    src="/networking/infiniBand-networking/Storage.jpg"
+                                    src="/networking/infiniband-networkings/Storage.jpg"
                                     alt="HPC Climate Simulation"
                                     width={300}
                                     height={200}
