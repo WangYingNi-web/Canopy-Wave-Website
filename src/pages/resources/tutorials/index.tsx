@@ -62,7 +62,8 @@ const Tutorials: React.FC = () => {
       image: '/tutorials/result-banner/API-Management.png',
       date: 'June 11, 2025',
       tag: 'API',
-      onClick: () => router.push('/resources/cloud-api')
+      // onClick: () => handleTutorialClick('API Management Guide')
+      onClick: () => router.push('/resources/tutorials/manage-cloud-via-api')
     },
   ];
 
