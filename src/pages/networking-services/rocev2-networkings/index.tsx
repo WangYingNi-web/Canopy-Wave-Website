@@ -85,7 +85,7 @@ export default function RoCEv2NetworkingPage() {
                         <SlideUp>
                             <div className="relative w-full max-w-md lg:max-w-none">
                                 <Image
-                                    src="/networking/rocev2-networking/nvidia-bluefield-dpu-3.png"
+                                    src="/networking/rocev2-networkings/nvidia-bluefield-dpu-3.png"
                                     alt="NVIDIA GB200 NVL72 Cluster"
                                     width={0}    // 忽略属性值
                                     height={0}   // 忽略属性值
@@ -247,7 +247,7 @@ export default function RoCEv2NetworkingPage() {
                         <div className="w-full md:w-1/2">
                             <SlideUp>
                                 <Image
-                                    src="/networking/rocev2-networking/bluefield-connectx-7-2c50-d-2x.png"
+                                    src="/networking/rocev2-networkings/bluefield-connectx-7-2c50-d-2x.png"
                                     alt="NVIDIA H200 GPU"
                                     width={400}
                                     height={200}
@@ -302,7 +302,7 @@ export default function RoCEv2NetworkingPage() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2 sm:pr-10">
                             <SlideUp>
-                                <Image src="/networking/rocev2-networking/how.png" alt="Processing Power" width={500} height={400} style={{ width: '560px', height: 'auto' }} />
+                                <Image src="/networking/rocev2-networkings/how.png" alt="Processing Power" width={500} height={400} style={{ width: '560px', height: 'auto' }} />
                             </SlideUp>
                         </div>
                         <div className="w-full md:w-1/2">
