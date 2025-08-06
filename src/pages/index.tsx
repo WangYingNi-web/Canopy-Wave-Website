@@ -203,7 +203,7 @@ export default function Index() {
       <div className="w-full text-gray-600">
 
         {/* 轮播图Banner */}
-        <div className="w-full h-[550px] relative mt-[84px] overflow-hidden">
+        <div className="w-full h-[535px] relative mt-[84px] overflow-hidden">
           {slides.map((slide, index) => (
             <div
               key={slide.id}

@@ -446,7 +446,7 @@ export default function Header() {
                   <div className="bg-[#F9F9F9] fixed left-0 right-0 py-6 px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
-                        <li><IwsLink href="/resources/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li>
+                        {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li> */}
                         <li><IwsLink href="/resources/tutorials" className="text-gray-600 hover:text-gray-900 text-sm">Tutorials</IwsLink></li>
                         <li><IwsLink href="/resources/case-study" className="text-gray-600 hover:text-gray-900 text-sm">Case Studies</IwsLink></li>
                       </ul>
@@ -502,7 +502,7 @@ export default function Header() {
                           <ul className="pl-4 mt-2 space-y-2">
                             <li><IwsLink href="/about/newsroom#blog" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Blog</IwsLink></li>
                             <li><IwsLink href="/about/newsroom#events" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Events</IwsLink></li>
-                            <li><IwsLink href="/about/newsroom#tutorials" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Tutorials</IwsLink></li>
+                            {/* <li><IwsLink href="/about/newsroom#tutorials" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowAbout(false)}>Tutorials</IwsLink></li> */}
                           </ul>
                         </div>
                       </ul>

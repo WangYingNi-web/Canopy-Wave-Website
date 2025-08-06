@@ -264,7 +264,7 @@ export default function Newsroom() {
             </div>
 
             {/* Tutorials Section */}
-            <div id='tutorials' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            {/* <div id='tutorials' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="flex justify-between items-center mb-8">
                     <SlideUp>
                         <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Tutorials</h2>
@@ -299,7 +299,7 @@ export default function Newsroom() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">

@@ -40,27 +40,27 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     {
+      id: 'llama',
+      category: 'AI Models',
+      title: 'How to Run the Llama Locally on a Canopy Wave VM?',
+      image: '/tutorials/result-banner/Llama-Locally.png',
+      date: 'August 1, 2025',
+      onClick: () => handleTutorialClick('How to Run the Llama Locally on a Canopy Wave VM')
+    },
+    {
       id: 'deepseek',
-      category: 'AI models',
+      category: 'AI Models',
       title: 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
       image: '/tutorials/result-banner/DeepSeek-R1.png',
       date: 'July 31, 2025',
       onClick: () => handleTutorialClick('How to Run DeepSeek-R1 Locally on a Canopy Wave VM')
     },
     {
-      id: 'llama',
-      category: 'AI models',
-      title: 'How to Run the Llama Locally on a Canopy Wave VM?',
-      image: '/tutorials/result-banner/Llama-Locally.png',
-      date: 'July 31, 2025',
-      onClick: () => handleTutorialClick('How to Run the Llama Locally on a Canopy Wave VM')
-    },
-    {
       id: 'api',
       category: 'API',
       title: 'Canopy Wave supports a set of REST API to enable servers to develop management clients or to integrate VMS functionality into users\' own custom management infrastructure.',
       image: '/tutorials/result-banner/API-Management.png',
-      date: 'July 31, 2025',
+      date: 'June 11, 2025',
       tag: 'API',
       onClick: () => router.push('/resources/cloud-api')
     },
@@ -90,24 +90,41 @@ const Tutorials: React.FC = () => {
     }
   };
 
-  // 获取要显示的卡片
-  const getDisplayCards = () => {
-    if (activeCategory === 'All') {
-      return allCards;
-    }
-    return allCards.filter(card => card.category === activeCategory);
-  };
-
-  const filteredCards = getDisplayCards();
-
-  // 获取Featured Content区域要显示的卡片（只显示AI models类别的前两个）
-  const getFeaturedCards = () => {
-    if (activeCategory === 'All') {
-      return allCards.filter(card => card.category === 'AI models').slice(0, 2);
-    }
-    return [];
-  };
-
+    // 获取要显示的卡片 - Results区域按最新日期排序
+    const getDisplayCards = () => {
+      let cards;
+      if (activeCategory === 'All') {
+        cards = allCards;
+      } else {
+        cards = allCards.filter(card => card.category === activeCategory);
+      }
+      
+      // 按日期排序（最新的在前面）
+      return cards.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB.getTime() - dateA.getTime(); // 降序排列，最新的在前
+      });
+    };
+  
+    const filteredCards = getDisplayCards();
+  
+    // 获取Featured Content区域要显示的卡片 - deepseek排在前面
+    const getFeaturedCards = () => {
+      if (activeCategory === 'All') {
+        const aiModelsCards = allCards.filter(card => card.category === 'AI Models');
+        
+        // 将deepseek卡片排在前面
+        const sortedCards = aiModelsCards.sort((a, b) => {
+          if (a.id === 'deepseek') return -1; // deepseek排在前面
+          if (b.id === 'deepseek') return 1;
+          return 0; // 其他卡片保持原有顺序
+        });
+        
+        return sortedCards.slice(0, 2);
+      }
+      return [];
+    };
   const featuredCards = getFeaturedCards();
 
   // 分页逻辑
@@ -238,7 +255,7 @@ const Tutorials: React.FC = () => {
           <div className="mb-12">
             <SlideUp>
               <div className="flex flex-wrap gap-4 justify-start">
-                {['All', 'AI models', 'API'].map((category) => (
+                {['All', 'AI Models', 'API'].map((category) => (
                   <button
                     key={category}
                     onClick={() => handleCategoryClick(category)}
@@ -283,7 +300,7 @@ const Tutorials: React.FC = () => {
 
                       {/* 内容区域 */}
                       <div className="p-6">
-                        {/* AI models标签和日期 */}
+                        {/* AI Models标签和日期 */}
                         <div className="flex items-center justify-between text-sm mb-3">
                           <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
                             {card.tag || card.category}
