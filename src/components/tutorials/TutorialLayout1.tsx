@@ -23,6 +23,19 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
         window.open(shareUrl, '_blank', 'noopener,noreferrer')
     }
 
+    const rightSidebar = (
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
+            <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4>
+            <SocialMediaLinks 
+                title="CanopyWave - tutorials"
+                description="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
+                imageUrl="/tutorials/banner.png"
+                vertical={true}
+                className="items-center"
+            />
+        </div>
+    )
+
     // 定义导航项
     const navigationItems = [
         { id: 'why', label: 'Why' },
@@ -56,6 +69,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                 <SidebarLayout
                     navigationItems={navigationItems}
                     title="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
+                    rightSidebar={rightSidebar}
                 >
                     <div className="prose prose-lg max-w-none">
                         <section id="why" className="mb-12">
@@ -190,10 +204,13 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </SidebarLayout>
 
-                {/* 在页面底部添加社交媒体链接 */}
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="flex justify-center">
-                        <SocialMediaLinks />
+                        <SocialMediaLinks 
+                            title="CanopyWave - tutorials"
+                            description="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
+                            imageUrl="/tutorials/banner.png"
+                        />
                     </div>
                 </div>
             </main >

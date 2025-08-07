@@ -4,7 +4,7 @@ import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import SidebarLayout from '@/components/SidebarLayout'
 import { TutorialPost } from './index'
-
+import SocialMediaLinks from '@/components/SocialMediaLinks'
 interface TutorialLayout2Props {
     tutorialPost: TutorialPost
 }
@@ -83,6 +83,18 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
         { id: 'create-vm', label: 'Create a VM' },
         { id: 'deploying-llama', label: 'Deploying Llama Locally' }
     ];
+    const rightSidebar = (
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
+            <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4>
+            <SocialMediaLinks 
+                title="CanopyWave - tutorials"
+                description="How to Run the Llama Locally on a Canopy Wave VM?"
+                imageUrl="/tutorials/banner2.png"
+                vertical={true}
+                className="items-center"
+            />
+        </div>
+    )
 
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
@@ -110,6 +122,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="How to Run the Llama Locally on a Canopy Wave VM?"
+                rightSidebar={rightSidebar}
             >
                 <div className="prose prose-lg max-w-none">
                     <section id="why" className="mb-12">
@@ -298,6 +311,17 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                     </section>
                 </div>
             </SidebarLayout>
+
+            {/* 在页面底部添加社交媒体链接 */}
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="flex justify-center">
+                    <SocialMediaLinks 
+                        title="CanopyWave - tutorials"
+                        description="How to Run the Llama Locally on a Canopy Wave VM?"
+                        imageUrl="/tutorials/banner2.png"
+                    />
+                </div>
+            </div>
         </main>
     )
 }

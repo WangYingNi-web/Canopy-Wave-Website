@@ -10,18 +10,21 @@ interface SidebarLayoutProps {
   children: ReactNode;
   title: string;
   subtitle?: string;
+  rightSidebar?: ReactNode; // 新增右侧边栏内容
 }
 
-const SidebarLayout: React.FC<SidebarLayoutProps> = ({ 
-  navigationItems, 
-  children, 
-  title, 
-  subtitle 
+const SidebarLayout: React.FC<SidebarLayoutProps> = ({
+  navigationItems,
+  children,
+  title,
+  subtitle,
+  rightSidebar
 }) => {
   const [activeSection, setActiveSection] = useState(navigationItems[0]?.id || '');
   const [sidebarPosition, setSidebarPosition] = useState('sticky');
   const contentRef = useRef<HTMLDivElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const rightSidebarRef = useRef<HTMLDivElement>(null); // 新增右侧边栏ref
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -48,14 +51,14 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
     // 页面滚动处理函数 - 控制Sidebar位置
     const handlePageScroll = () => {
       const scrollY = window.scrollY;
-      
+
       // 获取关键元素的位置信息
-      const heroSection = document.querySelector('.w-full.h-\\[490px\\]') || 
-                         document.querySelector('.w-full.h-\\[500px\\]') ||
-                         document.querySelector('[class*="h-["]');
+      const heroSection = document.querySelector('.w-full.h-\\[490px\\]') ||
+        document.querySelector('.w-full.h-\\[500px\\]') ||
+        document.querySelector('[class*="h-["]');
       const mainContentContainer = contentRef.current;
       const sidebar = sidebarRef.current;
-      
+
       if (!mainContentContainer || !sidebar) return;
 
       // 动态计算关键位置点
@@ -66,17 +69,17 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       const sidebarHeight = sidebar.getBoundingClientRect().height;
       const windowHeight = window.innerHeight;
       const windowBottom = scrollY + windowHeight;
-      
+
       // 计算距离主内容区域底部的距离
       const distanceToBottom = mainContentBottom - windowBottom;
-      
+
       // 动态阈值计算
       const startFixedThreshold = heroHeight - 100; // hero区域结束前100px开始固定
       const bottomThreshold = 300; // 距离底部300px时调整位置
-      
+
       // 判断sidebar是否会超出内容区域底部
       const wouldExceedBottom = scrollY + sidebarHeight + 96 > mainContentBottom; // 96是top-24的像素值
-      
+
       if (wouldExceedBottom && distanceToBottom < bottomThreshold) {
         // 当sidebar会超出内容底部且接近底部时，使用绝对定位
         setSidebarPosition('absolute-bottom');
@@ -127,7 +130,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
     // 监听页面滚动
     window.addEventListener('scroll', handlePageScroll);
     window.addEventListener('scroll', handleContentScroll, { passive: true });
-    
+
     // 监听窗口大小变化，重新计算位置
     window.addEventListener('resize', handlePageScroll);
 
@@ -147,10 +150,24 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
   // 动态计算sidebar的样式
   const getSidebarStyles = () => {
     const baseClasses = 'lg:w-72 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300';
-    
+
     switch (sidebarPosition) {
       case 'fixed':
         return `${baseClasses} lg:fixed lg:top-24 lg:z-10`;
+      case 'absolute-bottom':
+        return `${baseClasses} lg:absolute lg:bottom-0 lg:z-10`;
+      case 'sticky':
+      default:
+        return `${baseClasses} lg:sticky lg:top-24`;
+    }
+  };
+  // 新增：动态计算右侧边栏的样式
+  const getRightSidebarStyles = () => {
+    const baseClasses = 'lg:w-20 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300';
+
+    switch (sidebarPosition) {
+      case 'fixed':
+        return `${baseClasses} lg:fixed lg:top-24 lg:z-10 lg:right-[calc((100vw-1280px)/2)]`;
       case 'absolute-bottom':
         return `${baseClasses} lg:absolute lg:bottom-0 lg:z-10`;
       case 'sticky':
@@ -174,11 +191,10 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`w-full text-left px-3 py-2.5 rounded-md text-sm transition-all duration-200 flex items-center group ${
-                      activeSection === item.id
+                    className={`w-full text-left px-3 py-2.5 rounded-md text-sm transition-all duration-200 flex items-center group ${activeSection === item.id
                         ? 'bg-green-50 text-[#80B224] font-medium border-l-3 border-[#80B224] pl-4'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:pl-4'
-                    }`}
+                      }`}
                   >
                     <span className="flex-1">{item.label}</span>
                   </button>
@@ -188,8 +204,8 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
           </div>
         </div>
 
-        {/* Right Content Area */}
-        <div className="flex-1 min-w-0">
+        {/* Center Content Area - 变窄 */}
+        <div className="flex-1 min-w-0 max-w-4xl">
           <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8">
             <h1 className="text-3xl sm:text-4xl font-black mb-8">{title}</h1>
             {subtitle && (
@@ -198,6 +214,15 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
             {children}
           </div>
         </div>
+
+        {/* Right Sidebar - 修改为动态样式 */}
+        {rightSidebar && (
+          <div className="lg:w-20 lg:flex-shrink-0 hidden lg:block">
+            <div className={getRightSidebarStyles()} ref={rightSidebarRef}>
+              {rightSidebar}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
