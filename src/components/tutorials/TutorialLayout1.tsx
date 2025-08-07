@@ -25,7 +25,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
 
     const rightSidebar = (
         <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-            <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4>
+            {/* <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4> */}
             <SocialMediaLinks 
                 title="CanopyWave - tutorials"
                 description="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
