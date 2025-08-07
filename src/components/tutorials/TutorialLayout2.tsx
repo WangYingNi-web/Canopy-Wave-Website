@@ -312,16 +312,6 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                 </div>
             </SidebarLayout>
 
-            {/* 在页面底部添加社交媒体链接 */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="flex justify-center">
-                    <SocialMediaLinks 
-                        title="CanopyWave - tutorials"
-                        description="How to Run the Llama Locally on a Canopy Wave VM?"
-                        imageUrl="/tutorials/banner2.png"
-                    />
-                </div>
-            </div>
         </main>
     )
 }

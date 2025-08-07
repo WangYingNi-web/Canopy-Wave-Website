@@ -204,7 +204,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </SidebarLayout>
 
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                {/* <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="flex justify-center">
                         <SocialMediaLinks 
                             title="CanopyWave - tutorials"
@@ -212,7 +212,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                             imageUrl="/tutorials/banner.png"
                         />
                     </div>
-                </div>
+                </div> */}
             </main >
 
         </>
