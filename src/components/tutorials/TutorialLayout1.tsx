@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import SlideUp from '@/components/slide'
 import Image from 'next/image'
+import SidebarLayout from '@/components/SidebarLayout'
 import { TutorialPost } from './index'
 
 interface TutorialLayout1Props {
@@ -20,11 +22,19 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
         // 打开新窗口
         window.open(shareUrl, '_blank', 'noopener,noreferrer')
     }
+
+    // 定义导航项
+    const navigationItems = [
+        { id: 'why', label: 'Why' },
+        { id: 'deploying-deepseek', label: 'Deploying DeepSeek-R1 Locally' },
+        // { id: 'deploying-deepseek', label: 'Deploying DeepSeek-R1 Locally' }
+    ];
+
     return (
         <>
-            <main className="min-h-screen bg-[#f9f9f9] mt-[84px]">
+            <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
                 {/* Banner Section */}
-                <div className="w-full h-[520px] relative">
+                <div className="w-full h-[490px] relative mt-[84px]">
                     <Image
                         src="/tutorials/banner.png"
                         alt="banner"
@@ -33,7 +43,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                         priority
                     />
                     <div className="absolute inset-0 z-10">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[165px]">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                             <SlideUp>
                                 <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
                                     How to Run DeepSeek-R1 <br /> Locally on a Canopy Wave VM?
@@ -43,19 +53,22 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </div>
 
-                {/* Content Section */}
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                {/* Content Section with SidebarLayout */}
+                <SidebarLayout
+                    navigationItems={navigationItems}
+                    title="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
+                >
                     <div className="prose prose-lg max-w-none">
-                        <section className="mb-12">
+                        <section id="why" className="mb-12">
                             <SlideUp>
-                                <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+                                <h2 className="text-xl font-bold mb-6">
                                     Ⅰ. Why Deploy and Run a Large Language Model Locally?
                                 </h2>
                             </SlideUp>
                             <div className="space-y-8 sm:ml-8">
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-3">1. Data Privacy & Security</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-3">1. Data Privacy & Security</h3>
                                         <p className="text-gray-600 leading-relaxed ml-[20px]">
                                             When running an LLM locally, no user data is collected and no user actions are tracked. All your chat data stay on your own computer and are never shared with any AI or machine-learning servers.
                                         </p>
@@ -63,7 +76,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                 </div>
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-3">2. Deep Customization of Models & Business Logic</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-3">2. Deep Customization of Models & Business Logic</h3>
                                         <ul className="text-gray-600 space-y-2 ml-6">
                                             <li><strong>Domain Adaptation:</strong> Fine-tune a general-purpose model with industry-specific knowledge (e.g., medical terminology, legal clauses) to generate more accurate domain content.</li>
                                             <li><strong>Feature Extensions:</strong> Integrate with local databases, knowledge bases, or business systems (CRM, ERP, etc.) to deliver private intelligent Q&A, document analysis, and other bespoke functions.</li>
@@ -74,7 +87,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
 
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-3">3. Technical Autonomy & Controllability</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-3">3. Technical Autonomy & Controllability</h3>
                                         <ul className="text-gray-600 space-y-2 ml-6">
                                             <li><strong>Version Pinning:</strong> Prevent unexpected business-logic failures caused by cloud-side model updates.</li>
                                             <li><strong>Audit Transparency:</strong> Gain complete visibility into the model's input/output stream to satisfy security-audit requirements.</li>
@@ -84,7 +97,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                 </div>
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-3">4. Development & Research Needs</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-3">4. Development & Research Needs</h3>
                                         <ul className="text-gray-600 space-y-2 ml-6">
                                             <li><strong>Model Experimentation:</strong> Researchers can freely tweak model structures and training strategies without cloud-imposed quota limits.</li>
                                             <li><strong>Edge Deployment:</strong> Explore lightweight model variants for deployment on mobile phones and IoT devices.</li>
@@ -94,16 +107,16 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                             </div>
                         </section>
 
-                        <section className="mb-12">
+                        <section id="deploying-deepseek" className="mb-6">
                             <SlideUp>
                                 <h2 className="text-2xl font-semibold text-gray-700 mb-6">
                                     Ⅱ. Deploying DeepSeek-R1 Locally
                                 </h2>
                             </SlideUp>
-                            <div className="space-y-8 sm:ml-8">
+                            <div className="space-y-8 sm:ml-8 mb-4">
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-4">1. Check your hardware and pick the right model size</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-4">1. Check your hardware and pick the right model size</h3>
                                     </SlideUp>
                                     <div className="bg-gray-50 p-4 rounded-lg space-y-2">
                                         <SlideUp>
@@ -123,10 +136,9 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                         </SlideUp>
                                     </div>
                                 </div>
-
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-4">2. Download the Ollama platform to run the large language model</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-4">2. Download the Ollama platform to run the large language model</h3>
                                     </SlideUp>
                                     <div className="bg-gray-50 p-4 rounded-lg space-y-2">
                                         <SlideUp>
@@ -156,7 +168,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
 
                                 <div>
                                     <SlideUp>
-                                        <h3 className="text-xl font-medium text-gray-800 mb-4">3. Download and run DeepSeek-R1</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-4">3. Download and run DeepSeek-R1</h3>
                                     </SlideUp>
                                     <div className="bg-gray-50 p-4 rounded-lg">
                                         <SlideUp>
@@ -174,9 +186,10 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                     </div>
                                 </div>
                             </div>
+                            
                         </section>
                     </div>
-                </div>
+                </SidebarLayout>
 
                 {/* <button
                     onClick={handleLinkedInShare}
