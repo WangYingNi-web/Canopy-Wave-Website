@@ -6,6 +6,7 @@ import Footer from '@/components/footer';
 import SlideUp from '@/components/slide';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import SidebarLayout from '@/components/SidebarLayout';
+import SocialMediaLinks from '@/components/SocialMediaLinks';
 
 interface ApiEndpointProps {
     title: string;
@@ -868,6 +869,17 @@ export default function PlatformPage() {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="API Documentation"
+                rightSidebar={
+                    <div className="rounded-lg shadow-sm border-gray-100 p-4">
+                        <SocialMediaLinks 
+                            title="CanopyWave - API Documentation"
+                            description="Learn how to manage Canopy Wave Cloud via REST API. Complete guide with endpoints, authentication, and examples."
+                            imageUrl="/cloud/banner.png"
+                            vertical={true}
+                            className="items-center"
+                        />
+                    </div>
+                }
             >
                 {/* Introduction Section */}
                 <section id="introduction" className="mb-12">
