@@ -36,7 +36,7 @@ export default function Footer() {
                             </IwsLink>
                         </div>
                         <div className="flex items-center space-x-4 pl-1">
-                            <button
+                            {/* <button
                                 onClick={handleLinkedInShare}
                                 className="hover:opacity-80"
                                 aria-label="Share on LinkedIn"
@@ -47,7 +47,7 @@ export default function Footer() {
                                     width={36}
                                     height={36}
                                 />
-                            </button>
+                            </button> */}
                             <IwsLink href="https://www.linkedin.com/company/canopywave/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src="/footer/linkedin.svg"
