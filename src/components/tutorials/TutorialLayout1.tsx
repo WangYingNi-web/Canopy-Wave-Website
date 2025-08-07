@@ -3,8 +3,8 @@ import React from 'react'
 import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import SidebarLayout from '@/components/SidebarLayout'
+import SocialMediaLinks from '@/components/SocialMediaLinks'
 import { TutorialPost } from './index'
-
 interface TutorialLayout1Props {
     tutorialPost: TutorialPost
 }
@@ -27,7 +27,6 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
     const navigationItems = [
         { id: 'why', label: 'Why' },
         { id: 'deploying-deepseek', label: 'Deploying DeepSeek-R1 Locally' },
-        // { id: 'deploying-deepseek', label: 'Deploying DeepSeek-R1 Locally' }
     ];
 
     return (
@@ -109,7 +108,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
 
                         <section id="deploying-deepseek" className="mb-6">
                             <SlideUp>
-                                <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+                                <h2 className="text-xl font-bold mb-6">
                                     Ⅱ. Deploying DeepSeek-R1 Locally
                                 </h2>
                             </SlideUp>
@@ -120,17 +119,17 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                     </SlideUp>
                                     <div className="bg-gray-50 p-4 rounded-lg space-y-2">
                                         <SlideUp>
-                                            <div className="font-mono text-sm">
+                                            <div className="font-mono text-sm mb-4">
+                                                <div className="text-gray-600 mb-2">Check how much free disk space you have.</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">df -Th</code>
-                                                <span className="ml-4 text-gray-600">Check how much free disk space you have.</span>
                                             </div>
                                             <img src="/tutorials/df-Th.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
                                         <br />
                                         <SlideUp>
-                                            <div className="font-mono text-sm">
+                                            <div className="font-mono text-sm mb-4">
+                                                <div className="text-gray-600 mb-2">Check GPU model, quantity, driver version and other information</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">nvidia-smi</code>
-                                                <span className="ml-4 text-gray-600">Check GPU model, quantity, driver version and other information</span>
                                             </div>
                                             <img src="/tutorials/nvidia-smi.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
@@ -142,24 +141,24 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                     </SlideUp>
                                     <div className="bg-gray-50 p-4 rounded-lg space-y-2">
                                         <SlideUp>
-                                            <div className="font-mono text-sm">
+                                            <div className="font-mono text-sm mb-4">
                                                 <code className="bg-gray-200 px-2 py-1 rounded">curl -fsSL https://ollama.com/install.sh | sh</code>
                                             </div>
                                             <img src="/tutorials/curl-fsSL.png" alt="curl-fsSL" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
                                         <br />
                                         <SlideUp>
-                                            <div className="font-mono text-sm">
+                                            <div className="font-mono text-sm mb-4">
+                                                <div className='text-gray-600 mb-2'>List the models you've already downloaded.</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama list</code>
-                                                <span className="ml-4 text-gray-600">List the models you've already downloaded.</span>
                                             </div>
                                             <img src="/tutorials/ollama-list.png" alt="ollama-list" className="w-full max-w-sm rounded-lg shadow-sm" />
                                         </SlideUp>
                                         <br />
                                         <SlideUp>
-                                            <div className="font-mono text-sm">
+                                            <div className="font-mono text-sm mb-4">
+                                                <div className='text-gray-600 mb-2'>Display the Ollama command-line help.</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama --help</code>
-                                                <span className="ml-4 text-gray-600">Display the Ollama command-line help.</span>
                                             </div>
                                             <img src="/tutorials/ollama-help.png" alt="ollama-help" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
@@ -172,10 +171,10 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                     </SlideUp>
                                     <div className="bg-gray-50 p-4 rounded-lg">
                                         <SlideUp>
-                                            <div className="font-mono text-sm mb-2">
+                                            <div className="font-mono text-sm mb-4">
+                                                <div className="text-gray-600 mb-2">Download and start DeepSeek-R1
+                                                (Choose the exact model size that matches your hardware.)</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama run deepseek-r1</code>
-                                                <span className="ml-4 text-gray-600">Download and start DeepSeek-R1 <br />
-                                                    (Choose the exact model size that matches your hardware.)</span>
                                             </div>
                                             <img src="/tutorials/ollama-run.png" alt="ollama-run" className="w-full max-w-2xl rounded-lg shadow-sm" />
 
@@ -191,18 +190,12 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </SidebarLayout>
 
-                {/* <button
-                    onClick={handleLinkedInShare}
-                    className="hover:opacity-80"
-                    aria-label="Share on LinkedIn"
-                >
-                    <Image
-                        src="/footer/linkedin.svg"
-                        alt="LinkedIn"
-                        width={36}
-                        height={36}
-                    />
-                </button> */}
+                {/* 在页面底部添加社交媒体链接 */}
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div className="flex justify-center">
+                        <SocialMediaLinks />
+                    </div>
+                </div>
             </main >
 
         </>
