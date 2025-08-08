@@ -22,10 +22,10 @@ export default function CaseStudyPage() {
     ];
     const rightSidebar = (
         <div className="rounded-lg mt-6">
-            <h4 className="text-l font-semibold text-center text-gray-700">Share</h4>
-            <SocialMediaLinks 
+            <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
+            <SocialMediaLinks
                 vertical={false}
-                className="items-center pt-2 pl-8"
+                className="items-center pt-2 pl-4"
             />
         </div>
     )
@@ -63,6 +63,7 @@ export default function CaseStudyPage() {
                 navigationItems={navigationItems}
                 title="Accelerating Protein Engineering with Canopy Wave's GPUaaS"
                 rightSidebar={rightSidebar}
+                showRecommendedTutorials={false}
             >
                 {/* Executive Summary Section */}
                 <section id="executive-summary" className="mb-12">

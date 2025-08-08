@@ -85,10 +85,10 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
     ];
     const rightSidebar = (
         <div className="rounded-lg mt-6">
-            <h4 className="text-l font-semibold text-center text-gray-700">Share</h4>
+            <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
             <SocialMediaLinks
                 vertical={false}
-                className="items-center pt-2 pl-8"
+                className="items-center pt-2 pl-4"
             />
         </div>
     )
@@ -142,7 +142,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
 
                     <section id="why" className="mb-12">
                         <SlideUp>
-                            <h2 className="text-l font-bold mb-6">
+                            <h2 className="text-lg font-bold mb-6">
                                 Ⅰ. Why Deploy and Run a Large Language Model Locally?
                             </h2>
                         </SlideUp>
