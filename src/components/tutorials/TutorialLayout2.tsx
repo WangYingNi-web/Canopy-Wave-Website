@@ -87,9 +87,6 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
         <div className="rounded-lg shadow-sm p-4">
             {/* <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4> */}
             <SocialMediaLinks 
-                title="CanopyWave - tutorials"
-                description="How to Run the Llama Locally on a Canopy Wave VM?"
-                imageUrl="/tutorials/banner2.png"
                 vertical={true}
                 className="items-center"
             />

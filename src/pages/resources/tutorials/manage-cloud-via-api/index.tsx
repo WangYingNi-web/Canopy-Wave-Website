@@ -872,9 +872,6 @@ export default function PlatformPage() {
                 rightSidebar={
                     <div className="rounded-lg shadow-sm border-gray-100 p-4">
                         <SocialMediaLinks 
-                            title="CanopyWave - API Documentation"
-                            description="Learn how to manage Canopy Wave Cloud via REST API. Complete guide with endpoints, authentication, and examples."
-                            imageUrl="/cloud/banner.png"
                             vertical={true}
                             className="items-center"
                         />

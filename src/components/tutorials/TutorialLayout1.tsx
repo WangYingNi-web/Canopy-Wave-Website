@@ -27,9 +27,6 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
         <div className="rounded-lg shadow-sm p-4">
             {/* <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4> */}
             <SocialMediaLinks 
-                title="CanopyWave - tutorials"
-                description="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
-                imageUrl="/tutorials/banner.png"
                 vertical={true}
                 className="items-center"
             />
