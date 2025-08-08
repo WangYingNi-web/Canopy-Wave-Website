@@ -149,7 +149,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
 
   // 动态计算sidebar的样式
   const getSidebarStyles = () => {
-    const baseClasses = 'lg:w-72 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300';
+    const baseClasses = 'lg:w-56 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300';
 
     switch (sidebarPosition) {
       case 'fixed':
@@ -178,11 +178,11 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-16 mb-12" ref={contentRef}>
-      <div className="flex flex-col lg:flex-row gap-8 relative">
+      <div className="flex flex-col lg:flex-row gap-6 relative">
         {/* Left Sidebar Navigation */}
-        <div className="lg:w-72 lg:flex-shrink-0 mb-8 lg:mb-0">
+        <div className="lg:w-56 lg:flex-shrink-0 mb-8 lg:mb-0">
           <div className={getSidebarStyles()} ref={sidebarRef}>
-            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+            <div className="bg-white rounded-lg border border-gray-100 p-5">
               <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-100">
                 Table of Contents
               </h3>
@@ -192,8 +192,8 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     className={`w-full text-left px-3 py-2.5 rounded-md text-sm transition-all duration-200 flex items-center group ${activeSection === item.id
-                        ? 'bg-green-50 text-[#80B224] font-medium border-l-3 border-[#80B224] pl-4'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:pl-4'
+                      ? 'bg-green-50 text-[#80B224] font-medium border-l-3 border-[#80B224] pl-4'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:pl-4'
                       }`}
                   >
                     <span className="flex-1">{item.label}</span>
@@ -201,28 +201,72 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                 ))}
               </nav>
             </div>
-          </div>
-        </div>
-
-        {/* Center Content Area - 变窄 */}
-        <div className="flex-1 min-w-0 max-w-4xl">
-          <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8">
-            <h1 className="text-2xl sm:text-3xl font-black mb-8">{title}</h1>
-            {subtitle && (
-              <p className="text-gray-600 text-xl mb-8">{subtitle}</p>
+            {/* Right Sidebar - 移动到左侧sidebar下方 */}
+            {rightSidebar && (
+                <div className="p-2">
+                  {rightSidebar}
+                </div>
             )}
-            {children}
+
           </div>
         </div>
 
-        {/* Right Sidebar - 修改为动态样式 */}
-        {rightSidebar && (
-          <div className="lg:w-20 lg:flex-shrink-0 hidden lg:block">
-            <div className={getRightSidebarStyles()} ref={rightSidebarRef}>
-              {rightSidebar}
+        {/* Center Content Area - 调整为包含主内容和推荐教程的容器 */}
+        <div className="flex-1 min-w-0 max-w-5xl">
+          <div className="flex gap-6">
+            {/* 主要内容区域 */}
+            <div className="flex-1 min-w-0">
+              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
+                <h1 className="text-2xl sm:text-3xl font-black mb-8">{title}</h1>
+                {subtitle && (
+                  <p className="text-gray-600 text-xl mb-8">{subtitle}</p>
+                )}
+                {children}
+              </div>
+            </div>
+
+            {/* Recommended Tutorials 板块 - 保持在右侧 */}
+            <div className="hidden xl:block w-64 flex-shrink-0">
+            <div className={getSidebarStyles()} ref={sidebarRef}>
+                <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-4">
+                  Recommended Tutorials
+                </h3>
+                <div className="space-y-4">
+                  <div className="bg-gray-50 rounded-lg pb-2">
+                    <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
+                      <iframe
+                        src="https://www.youtube.com/embed/sAtw9ugBb0M"
+                        title="How to Connect and Use the Canopywave Platform Virtual Machine"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    <h4 className="font-medium text-gray-900 text-xs mb-2 line-clamp-2">
+                      How to Connect and Use the Canopywave Platform Virtual Machine
+                    </h4>
+                  </div>
+                  <div className="bg-gray-50 rounded-lg pb-2">
+                    <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
+                      <iframe
+                        src="https://www.youtube.com/embed/yLpYTQN-4ZY"
+                        title="How to Build the Virtual Machines on the Cloud Platform"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    <h4 className="font-medium text-gray-900 text-xs mb-2 line-clamp-2">
+                    How to Build the "Virtual Machines" on the Cloud Platform
+                    </h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

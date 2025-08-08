@@ -7,7 +7,7 @@ import SlideUp from '@/components/slide';
 import Link from 'next/link';
 import SidebarLayout from '@/components/SidebarLayout';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
-import SocialMediaLinks from '@/components/SocialMediaLinks'; 
+import SocialMediaLinks from '@/components/SocialMediaLinks';
 
 export default function CaseStudyPage() {
     useScrollToHash();
@@ -20,6 +20,15 @@ export default function CaseStudyPage() {
         { id: 'results', label: 'Results and Benefits' },
         { id: 'future', label: 'Future Outlook' }
     ];
+    const rightSidebar = (
+        <div className="rounded-lg mt-6">
+            <h4 className="text-l font-semibold text-center text-gray-700">Share</h4>
+            <SocialMediaLinks 
+                vertical={false}
+                className="items-center pt-2 pl-8"
+            />
+        </div>
+    )
 
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
@@ -53,14 +62,7 @@ export default function CaseStudyPage() {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="Accelerating Protein Engineering with Canopy Wave's GPUaaS"
-                rightSidebar={
-                    <div className="rounded-lg shadow-sm p-4">
-                        <SocialMediaLinks 
-                            vertical={true}
-                            className="items-center"
-                        />
-                    </div>
-                }
+                rightSidebar={rightSidebar}
             >
                 {/* Executive Summary Section */}
                 <section id="executive-summary" className="mb-12">

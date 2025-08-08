@@ -817,27 +817,15 @@ export default function PlatformPage() {
         }
     ];
 
-    const scrollToSection = (sectionId: string) => {
-        setActiveSection(sectionId);
-        const element = document.getElementById(sectionId);
-        if (element) {
-            // 计算Header高度和额外偏移量
-            const headerHeight = 84; // Header的高度
-            const extraOffset = 25; // 额外的偏移量
-            const totalOffset = headerHeight + extraOffset;
-
-            // 获取元素位置
-            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - totalOffset;
-
-            // 平滑滚动到计算后的位置
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
-
+    const rightSidebar = (
+        <div className="rounded-lg mt-6">
+            <h4 className="text-l font-semibold text-center text-gray-700">Share</h4>
+            <SocialMediaLinks 
+                vertical={false}
+                className="items-center pt-2 pl-8"
+            />
+        </div>
+    )
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
             <Head>
@@ -869,14 +857,7 @@ export default function PlatformPage() {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="API Documentation"
-                rightSidebar={
-                    <div className="rounded-lg shadow-sm border-gray-100 p-4">
-                        <SocialMediaLinks 
-                            vertical={true}
-                            className="items-center"
-                        />
-                    </div>
-                }
+                rightSidebar={rightSidebar}
             >
                 {/* Introduction Section */}
                 <section id="introduction" className="mb-12">

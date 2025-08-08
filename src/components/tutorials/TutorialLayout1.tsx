@@ -24,11 +24,11 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
     }
 
     const rightSidebar = (
-        <div className="rounded-lg shadow-sm p-4">
-            {/* <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">Share</h4> */}
+        <div className="rounded-lg mt-6">
+            <h4 className="text-l font-semibold text-center text-gray-700">Share</h4>
             <SocialMediaLinks 
-                vertical={true}
-                className="items-center"
+                vertical={false}
+                className="items-center pt-2 pl-8"
             />
         </div>
     )
