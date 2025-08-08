@@ -25,24 +25,24 @@ const SocialMediaLinks: React.FC<SocialMediaLinksProps> = ({
                 <Image
                     src="/footer/linkedin.svg"
                     alt="LinkedIn"
-                    width={36}
-                    height={36}
+                    width={32}
+                    height={32}
                 />
             </IwsLink>
             <IwsLink href="https://x.com/canopywave_cw?s=21" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                 <Image
                     src="/footer/twitter.svg"
                     alt="Twitter"
-                    width={36}
-                    height={36}
+                    width={32}
+                    height={32}
                 />
             </IwsLink>
             <IwsLink href="https://www.youtube.com/@CanopyWave-CW" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                 <Image
                     src="/footer/youtube.svg"
                     alt="Youtube"
-                    width={36}
-                    height={36}
+                    width={32}
+                    height={32}
                 />
             </IwsLink>
         </div>
