@@ -861,8 +861,8 @@ export default function PlatformPage() {
             >
                 {/* Introduction Section */}
                 <section id="introduction" className="mb-12">
-                    <h2 className="text-2xl font-bold mb-4">Introduction</h2>
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    <h2 className="text-xl font-bold mb-4">Introduction</h2>
+                    <p className="text-gray-600 text-l leading-relaxed">
                         Canopy Wave supports a set of REST API to enable servers to develop management clients or to
                         integrate VMS functionality into users' own custom management infrastructure.
                     </p>
@@ -870,7 +870,7 @@ export default function PlatformPage() {
 
                 {/* Obtaining an API Key Section */}
                 <section id="api-key" className="mb-12">
-                    <h2 className="text-2xl font-bold mb-4">Obtaining an API Key</h2>
+                    <h2 className="text-xl font-bold mb-4">Obtaining an API Key</h2>
                     <div className="prose max-w-none">
                         <p className="text-gray-600 mb-4">
                             To manage Canopy Wave Cloud via the API, users must first register for an account at{' '}
@@ -894,7 +894,7 @@ export default function PlatformPage() {
 
                 {/* Making an API Call Section */}
                 <section id="api-call" className="mb-12">
-                    <h2 className="text-2xl font-bold mb-4">Making an API Call</h2>
+                    <h2 className="text-xl font-bold mb-4">Making an API Call</h2>
                     <div className="prose max-w-none">
                         <p className="text-gray-600 mb-4">To make a request to the API, include an HTTP Bearer header with your API key:</p>
                         <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
