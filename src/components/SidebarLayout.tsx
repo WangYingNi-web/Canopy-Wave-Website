@@ -25,6 +25,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
   const contentRef = useRef<HTMLDivElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const rightSidebarRef = useRef<HTMLDivElement>(null); // 新增右侧边栏ref
+  const [showVideo, setShowVideo] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -203,9 +204,9 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
             </div>
             {/* Right Sidebar - 移动到左侧sidebar下方 */}
             {rightSidebar && (
-                <div className="p-2">
-                  {rightSidebar}
-                </div>
+              <div className="p-2">
+                {rightSidebar}
+              </div>
             )}
 
           </div>
@@ -227,7 +228,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
 
             {/* Recommended Tutorials 板块 - 保持在右侧 */}
             <div className="hidden xl:block w-64 flex-shrink-0">
-            <div className={getSidebarStyles()} ref={sidebarRef}>
+              <div className={getSidebarStyles()} ref={sidebarRef}>
                 <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-4">
                   Recommended Tutorials
                 </h3>
@@ -235,7 +236,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                   <div className="bg-gray-50 rounded-lg pb-2">
                     <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
                       <iframe
-                        src="https://www.youtube.com/embed/sAtw9ugBb0M"
+                        src="https://www.youtube.com/embed/sAtw9ugBb0M?modestbranding=1&showinfo=0&rel=0&controls=1"
                         title="How to Connect and Use the Canopywave Platform Virtual Machine"
                         className="w-full h-full"
                         frameBorder="0"
@@ -247,20 +248,46 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                       How to Connect and Use the Canopywave Platform Virtual Machine
                     </h4>
                   </div>
+                  
                   <div className="bg-gray-50 rounded-lg pb-2">
                     <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                      <iframe
-                        src="https://www.youtube.com/embed/yLpYTQN-4ZY"
-                        title="How to Build the Virtual Machines on the Cloud Platform"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+                      {!showVideo ? (
+                        <div
+                          className="w-full h-full cursor-pointer"
+                          onClick={() => setShowVideo(true)}
+                        >
+                          <img
+                            src="https://img.youtube.com/vi/yLpYTQN-4ZY/maxresdefault.jpg"
+                            alt="Video thumbnail"
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <img
+                              src="/tutorials/youtube.svg"
+                              alt="Play video"
+                              className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <iframe
+                          src="https://www.youtube.com/embed/yLpYTQN-4ZY?modestbranding=1&rel=0&controls=1&autoplay=1"
+                          title="How to Build the Virtual Machines on the Cloud Platform"
+                          className="w-full h-full"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      )}
                     </div>
-                    <h4 className="font-medium text-gray-900 text-xs mb-2 line-clamp-2">
-                    How to Build the "Virtual Machines" on the Cloud Platform
-                    </h4>
+                    <a
+                      href="https://www.youtube.com/watch?v=yLpYTQN-4ZY"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                    >
+                      How to Build the "Virtual Machines" on the Cloud Platform
+                    </a>
                   </div>
                 </div>
               </div>
