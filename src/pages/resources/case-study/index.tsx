@@ -7,7 +7,7 @@ import SlideUp from '@/components/slide';
 import Link from 'next/link';
 import SidebarLayout from '@/components/SidebarLayout';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
-
+import SocialMediaLinks from '@/components/SocialMediaLinks'; 
 
 export default function CaseStudyPage() {
     useScrollToHash();
@@ -53,6 +53,14 @@ export default function CaseStudyPage() {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="Accelerating Protein Engineering with Canopy Wave's GPUaaS"
+                rightSidebar={
+                    <div className="rounded-lg shadow-sm p-4">
+                        <SocialMediaLinks 
+                            vertical={true}
+                            className="items-center"
+                        />
+                    </div>
+                }
             >
                 {/* Executive Summary Section */}
                 <section id="executive-summary" className="mb-12">
