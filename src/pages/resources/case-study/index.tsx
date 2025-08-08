@@ -52,7 +52,7 @@ export default function CaseStudyPage() {
                             <h1 className="text-4xl sm:text-5xl font-black text-[#80B224] text-center">
                                 Accelerating Protein Engineering with Canopy Wave's GPUaaS
                             </h1>
-                            <p className="text-gray-600 text-l mt-8 text-center">FoundryBioSciences Case Study</p>
+                            <p className="text-gray-600 text-l mt-8 text-center">Foundry BioSciences Case Study</p>
                         </SlideUp>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function CaseStudyPage() {
                     <h2 className="text-xl font-bold mb-4">Company Background</h2>
                     <div className="prose max-w-none">
                         <p className="text-gray-600 mb-4">
-                            FoundryBioSciences is at the forefront of using AI to accelerate research in protein
+                            Foundry BioSciences is at the forefront of using AI to accelerate research in protein
                             engineering, training PLMs to work with protein sequences, which is effectively a
                             "special language." With access to approximately 10 million known protein
                             sequences from public databases like the Protein Data Bank (PDB), the company
@@ -228,7 +228,7 @@ export default function CaseStudyPage() {
                                 <h3 className="text-lg font-semibold mb-3">• Cost Savings:</h3>
                                 <p className="text-gray-600">
                                     Reduced idle time and optimized data transfers lowered overall expenses, aligning
-                                    with FoundryBioSciences' focus on affordable per-hour GPU and storage pricing.
+                                    with Foundry BioSciences' focus on affordable per-hour GPU and storage pricing.
                                 </p>
                             </div>
                             <div>
@@ -261,7 +261,7 @@ export default function CaseStudyPage() {
                     <h2 className="text-xl font-bold mb-6">Future Outlook</h2>
                     <div className="prose max-w-none">
                         <p className="text-gray-600 mb-6">
-                            Looking ahead, FoundryBioSciences plans to expand GPU usage for more complex
+                            Looking ahead, Foundry BioSciences plans to expand GPU usage for more complex
                             models, potentially integrating with emerging BioAI tools. Canopy Wave is
                             committed to evolving its SaaS platform with features like AI-driven autoscaling,
                             advanced analytics dashboards for training performance, and deeper integrations
