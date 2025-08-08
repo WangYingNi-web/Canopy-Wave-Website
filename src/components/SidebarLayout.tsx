@@ -184,7 +184,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
         <div className="lg:w-56 lg:flex-shrink-0 mb-8 lg:mb-0">
           <div className={getSidebarStyles()} ref={sidebarRef}>
             <div className="bg-white rounded-lg border border-gray-100 p-5">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-100">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200">
                 Table of Contents
               </h3>
               <nav className="space-y-1">
@@ -218,7 +218,8 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
             {/* 主要内容区域 */}
             <div className="flex-1 min-w-0">
               <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
-                <h1 className="text-2xl sm:text-3xl font-black mb-8">{title}</h1>
+
+                <h1 className="text-2xl sm:text-2xl font-black mb-8">{title}</h1>
                 {subtitle && (
                   <p className="text-gray-600 text-xl mb-8">{subtitle}</p>
                 )}
@@ -229,9 +230,9 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
             {/* Recommended Tutorials 板块 - 保持在右侧 */}
             <div className="hidden xl:block w-64 flex-shrink-0">
               <div className={getSidebarStyles()} ref={sidebarRef}>
-                <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-4">
-                  Recommended Tutorials
-                </h3>
+              <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-6 pb-3 border-b border-gray-200">
+              Recommended Tutorials
+              </h3>
                 <div className="space-y-4">
                   <div className="bg-gray-50 rounded-lg pb-2">
                     <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">

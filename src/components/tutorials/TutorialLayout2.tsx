@@ -86,7 +86,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
     const rightSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold text-center text-gray-700">Share</h4>
-            <SocialMediaLinks 
+            <SocialMediaLinks
                 vertical={false}
                 className="items-center pt-2 pl-8"
             />
@@ -122,6 +122,24 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                 rightSidebar={rightSidebar}
             >
                 <div className="prose prose-lg max-w-none">
+                    {/* Video Section */}
+                    <div>
+                        <SlideUp>
+                            <div className="mb-6">
+                                <div className="aspect-video bg-gray-200 rounded-lg relative overflow-hidden">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/JHft2RgUoOY?modestbranding=1&rel=0&controls=1"
+                                        title="How to Run Llama Locally on a Canopy Wave VM"
+                                        className="w-full h-full"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </SlideUp>
+                    </div>
+
                     <section id="why" className="mb-12">
                         <SlideUp>
                             <h2 className="text-l font-bold mb-6">

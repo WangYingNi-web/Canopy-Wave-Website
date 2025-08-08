@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import SidebarLayout from '@/components/SidebarLayout'
@@ -10,6 +10,7 @@ interface TutorialLayout1Props {
 }
 
 const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
+    const [showVideo, setShowVideo] = useState(false)
     const handleLinkedInShare = (e: React.MouseEvent) => {
         e.preventDefault()
 
@@ -26,7 +27,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
     const rightSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
-            <SocialMediaLinks 
+            <SocialMediaLinks
                 vertical={false}
                 className="items-center pt-2 pl-4"
             />
@@ -62,6 +63,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </div>
 
+
                 {/* Content Section with SidebarLayout */}
                 <SidebarLayout
                     navigationItems={navigationItems}
@@ -69,6 +71,23 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     rightSidebar={rightSidebar}
                 >
                     <div className="prose prose-lg max-w-none">
+                        {/* Video Section */}
+                        <div>
+                            <SlideUp>
+                                <div className="mb-6">
+                                    <div className="aspect-video bg-gray-200 rounded-lg relative overflow-hidden">
+                                        <iframe
+                                            src="https://www.youtube.com/embed/PD_UHUQM7nM?modestbranding=1&rel=0&controls=1"
+                                            title="How to Run DeepSeek-R1 Locally on a Canopy Wave VM"
+                                            className="w-full h-full"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </SlideUp>
+                        </div>
                         <section id="why" className="mb-12">
                             <SlideUp>
                                 <h2 className="text-xl font-bold mb-6">
@@ -184,7 +203,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                         <SlideUp>
                                             <div className="font-mono text-sm mb-4">
                                                 <div className="text-gray-600 mb-2">Download and start DeepSeek-R1
-                                                (Choose the exact model size that matches your hardware.)</div>
+                                                    (Choose the exact model size that matches your hardware.)</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama run deepseek-r1</code>
                                             </div>
                                             <img src="/tutorials/ollama-run.png" alt="ollama-run" className="w-full max-w-2xl rounded-lg shadow-sm" />
@@ -196,20 +215,11 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </section>
                     </div>
                 </SidebarLayout>
 
-                {/* <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <div className="flex justify-center">
-                        <SocialMediaLinks 
-                            title="CanopyWave - tutorials"
-                            description="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
-                            imageUrl="/tutorials/banner.png"
-                        />
-                    </div>
-                </div> */}
             </main >
 
         </>
