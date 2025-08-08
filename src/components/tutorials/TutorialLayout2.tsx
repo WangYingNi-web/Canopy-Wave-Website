@@ -124,7 +124,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                 <div className="prose prose-lg max-w-none">
                     <section id="why" className="mb-12">
                         <SlideUp>
-                            <h2 className="text-xl font-bold mb-6">
+                            <h2 className="text-l font-bold mb-6">
                                 Ⅰ. Why Deploy and Run a Large Language Model Locally?
                             </h2>
                         </SlideUp>

@@ -7,9 +7,25 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			// fontSize: {
+			// 	// 'xs': ['0.625rem', { lineHeight: '1rem' }],      // 10px (原15px)
+			// 	'sm': ['0.75rem', { lineHeight: '1.25rem' }],    // 12px (原14px)
+			// 	'base': ['0.875rem', { lineHeight: '1.5rem' }],  // 14px (原16px)
+			// 	'l':['0.875rem', { lineHeight: '1.5rem' }],      // 14px (原16px)
+			// 	'md': ['1rem', { lineHeight: '1.5rem' }],        // 16px (原18px)
+			// 	'lg': ['1rem', { lineHeight: '1.75rem' }],       // 16px (原18px)
+			// 	'xl': ['1.125rem', { lineHeight: '1.75rem' }],   // 18px (原20px)
+			// 	'2xl': ['1.25rem', { lineHeight: '2rem' }],      // 20px (原24px)
+			// 	'3xl': ['1.625rem', { lineHeight: '2.25rem' }],  // 26px (原30px)
+			// 	'4xl': ['2rem', { lineHeight: '2.5rem' }],       // 32px (原36px)
+			// 	'5xl': ['2.8125rem', { lineHeight: '1' }],       // 45px (原48px)
+			// 	'6xl': ['3.25rem', { lineHeight: '1' }],         // 52px (原60px)
+			// 	'7xl': ['4rem', { lineHeight: '1' }],            // 64px (原72px)
+			// 	'8xl': ['5.5rem', { lineHeight: '1' }],          // 88px (原96px)
+			// 	'9xl': ['7.5rem', { lineHeight: '1' }],          // 120px (原128px)
+			// },
 			animation: {
 				'fade-in': 'fadeIn 0.5s ease-in-out',
-				// ... existing animations ...
 			},
 			keyframes: {
 				fadeIn: {

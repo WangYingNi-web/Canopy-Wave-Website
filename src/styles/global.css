@@ -53,7 +53,6 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
     /* 添加这行来强制使用亮色模式 */

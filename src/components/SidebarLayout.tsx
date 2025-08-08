@@ -207,7 +207,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
         {/* Center Content Area - 变窄 */}
         <div className="flex-1 min-w-0 max-w-4xl">
           <div className="bg-white rounded-lg shadow-sm p-4 sm:p-8">
-            <h1 className="text-3xl sm:text-4xl font-black mb-8">{title}</h1>
+            <h1 className="text-2xl sm:text-3xl font-black mb-8">{title}</h1>
             {subtitle && (
               <p className="text-gray-600 text-xl mb-8">{subtitle}</p>
             )}
