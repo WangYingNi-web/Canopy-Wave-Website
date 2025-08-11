@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 interface BreadcrumbItem {
   label: string
   href: string
+  icon?: string
 }
 
 // 教程标题映射
@@ -11,7 +12,8 @@ const tutorialTitleMap: Record<string, string> = {
   'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm': 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
   'how-to-run-the-llama-locally-on-a-canopy-wave-vm': 'How to Run the Llama Locally on a Canopy Wave VM?',
   'how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm': 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',
-  'manage-cloud-via-api': 'Manage Cloud via API'
+  'manage-cloud-via-api': 'Manage Cloud via API',
+  'case-study': 'Case Studies'
 }
 
 export const useTutorialBreadcrumb = () => {
@@ -22,11 +24,8 @@ export const useTutorialBreadcrumb = () => {
     const items: BreadcrumbItem[] = [
       {
         label: 'Home',
-        href: '/'
-      },
-      {
-        label: 'Resources',
-        href: '/resources'
+        href: '/',
+        icon: '/tutorials/home.svg'
       },
       {
         label: 'Tutorials',
@@ -34,17 +33,41 @@ export const useTutorialBreadcrumb = () => {
       }
     ]
 
+    // 优先从查询参数获取title
+    let tutorialSlug = title as string
+    
+    // 如果查询参数中没有title，尝试从路由路径中提取
+    if (!tutorialSlug && router.asPath) {
+      // 先匹配 tutorials 路径
+      const tutorialsMatch = router.asPath.match(/\/resources\/tutorials\/([^/?]+)/)
+      if (tutorialsMatch) {
+        tutorialSlug = tutorialsMatch[1]
+      } else {
+        // 再匹配其他 resources 子路径（如 case-study）
+        const resourcesMatch = router.asPath.match(/\/resources\/([^/?]+)/)
+        if (resourcesMatch) {
+          tutorialSlug = resourcesMatch[1]
+        }
+      }
+    }
+
     // 如果有具体的教程标题，添加到面包屑中
-    if (title && typeof title === 'string') {
-      const tutorialTitle = tutorialTitleMap[title] || title.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    if (tutorialSlug) {
+      const tutorialTitle = tutorialTitleMap[tutorialSlug] || tutorialSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+      
+      // 根据路径类型设置正确的 href
+      const href = tutorialSlug === 'case-study' 
+        ? `/resources/case-study` 
+        : `/resources/tutorials/${tutorialSlug}`
+      
       items.push({
         label: tutorialTitle,
-        href: `/resources/tutorials/${title}`
+        href: href
       })
     }
 
     return items
-  }, [title])
+  }, [title, router.asPath])
 
   return breadcrumbItems
 }

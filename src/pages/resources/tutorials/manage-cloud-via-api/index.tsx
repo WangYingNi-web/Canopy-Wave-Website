@@ -7,6 +7,8 @@ import SlideUp from '@/components/slide';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import SidebarLayout from '@/components/SidebarLayout';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
+import Breadcrumb from '@/components/Breadcrumb'
+import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 
 interface ApiEndpointProps {
     title: string;
@@ -140,7 +142,7 @@ const ApiEndpoint: React.FC<ApiEndpointProps> = ({
 export default function PlatformPage() {
     useScrollToHash();
     const [activeSection, setActiveSection] = useState('introduction');
-
+    const breadcrumbItems = useTutorialBreadcrumb()
     const navigationItems = [
         { id: 'introduction', label: 'Introduction' },
         { id: 'api-key', label: 'Obtaining an API Key' },
@@ -851,6 +853,12 @@ export default function PlatformPage() {
                         </SlideUp>
                     </div>
                 </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+                <SlideUp>
+                    <Breadcrumb items={breadcrumbItems} />
+                </SlideUp>
             </div>
 
             {/* Main Content Area with Sidebar */}

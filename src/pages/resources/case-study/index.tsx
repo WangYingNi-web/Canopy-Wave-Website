@@ -8,10 +8,12 @@ import Link from 'next/link';
 import SidebarLayout from '@/components/SidebarLayout';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
+import Breadcrumb from '@/components/Breadcrumb'
+import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 
 export default function CaseStudyPage() {
     useScrollToHash();
-
+    const breadcrumbItems = useTutorialBreadcrumb()
     const navigationItems = [
         { id: 'executive-summary', label: 'Executive Summary' },
         { id: 'company-background', label: 'Company Background' },
@@ -118,6 +120,11 @@ export default function CaseStudyPage() {
                 </div>
             </div>
 
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+                <SlideUp>
+                    <Breadcrumb items={breadcrumbItems} />
+                </SlideUp>
+            </div>
             {/* Main Content Area with Sidebar */}
             <SidebarLayout
                 navigationItems={navigationItems}

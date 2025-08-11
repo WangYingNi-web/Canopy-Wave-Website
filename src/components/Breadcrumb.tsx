@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 interface BreadcrumbItem {
   label: string
   href: string
+  icon?: string
 }
 
 interface BreadcrumbProps {
@@ -19,20 +21,38 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
         <React.Fragment key={index}>
           {index === items.length - 1 ? (
             // 最后一项不可点击，显示为当前页面
-            <span className="text-gray-900 font-medium">
+            <span className="text-gray-600 font-medium">
               {item.label}
             </span>
           ) : (
             // 其他项可点击
             <Link 
               href={item.href}
-              className="hover:text-[#80B224] transition-colors duration-200"
+              className="hover:text-[#80B224] transition-colors duration-200 flex items-center group"
             >
-              {item.label}
+              {item.icon ? (
+                <div className="relative mr-1">
+                  <Image 
+                    src={item.icon} 
+                    alt={item.label} 
+                    width={16} 
+                    height={16} 
+                    className="transition-opacity duration-200 group-hover:opacity-0" 
+                  />
+                  <Image 
+                    src={item.icon.replace('home.svg', 'home-bright.svg')} 
+                    alt={item.label} 
+                    width={16} 
+                    height={16} 
+                    className="absolute top-0 left-0 transition-opacity duration-200 opacity-0 group-hover:opacity-100" 
+                  />
+                </div>
+              ) : null}
+              {item.label==='Home'?'':item.label}
             </Link>
           )}
           {index < items.length - 1 && (
-            <span className="text-gray-400 select-none">`{'>'}`</span>
+            <span className="text-gray-400 select-none">{'>'}</span>
           )}
         </React.Fragment>
       ))}
