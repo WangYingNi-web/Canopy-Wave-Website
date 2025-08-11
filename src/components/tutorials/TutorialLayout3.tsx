@@ -11,7 +11,7 @@ const TutorialLayout3: React.FC = () => {
         sections: [
             {
                 title: 'What is KIMI-K2?',
-                navLabel:'What is KIMI-K2?',
+                navLabel:'What is KIMI-K2',
                 content: [
                     'KIMI-K2 is an open-source, trillion-parameter large language model released by Moonshot AI in July 2025. Although it boasts a total of 1 trillion parameters, it uses a Mixture-of-Experts (MoE) architecture with 384 experts, activating only 32 billion parameters per inference to balance performance and efficiency.',
                     'It performs exceptionally well in scenarios such as code generation, long-text processing, and intelligent agent tasks. It supports an ultra-long context length of up to 128K tokens, making it ideal for tasks like analyzing research papers, legal documents, or large codebases.',
@@ -98,7 +98,7 @@ const TutorialLayout3: React.FC = () => {
     }))
     
 
-    const rightSidebar = (
+    const meidaSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
             <SocialMediaLinks
@@ -226,7 +226,7 @@ const TutorialLayout3: React.FC = () => {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title={tutorialData.title}
-                rightSidebar={rightSidebar}
+                meidaSidebar={meidaSidebar}
                 showCustomTutorials={true}
             >
                 <div className="prose prose-lg max-w-none">

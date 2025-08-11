@@ -10,7 +10,7 @@ interface TutorialLayout1Props {
 }
 
 const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
-    const rightSidebar = (
+    const meidaSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
             <SocialMediaLinks
@@ -53,7 +53,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                 <SidebarLayout
                     navigationItems={navigationItems}
                     title="How to Run DeepSeek-R1 Locally on a Canopy Wave VM?"
-                    rightSidebar={rightSidebar}
+                    meidaSidebar={meidaSidebar}
                 >
                     <div className="prose prose-lg max-w-none">
                         {/* Video Section */}

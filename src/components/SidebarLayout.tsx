@@ -10,9 +10,10 @@ interface SidebarLayoutProps {
   children: ReactNode;
   title: string;
   subtitle?: string;
-  rightSidebar?: ReactNode; // 新增右侧边栏内容
+  meidaSidebar?: ReactNode; // 新增右侧边栏内容
   showRecommendedTutorials?: boolean; // 新增props
   showCustomTutorials?: boolean; // 新增 prop
+  rightSidebar?: ReactNode;
 }
 
 const SidebarLayout: React.FC<SidebarLayoutProps> = ({
@@ -20,6 +21,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
   children,
   title,
   subtitle,
+  meidaSidebar,
   rightSidebar,
   showRecommendedTutorials = true,
   showCustomTutorials = false // 默认为 false
@@ -207,9 +209,9 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
               </nav>
             </div>
             {/* Right Sidebar - 移动到左侧sidebar下方 */}
-            {rightSidebar && (
+            {meidaSidebar && (
               <div className="p-2">
-                {rightSidebar}
+                {meidaSidebar}
               </div>
             )}
 
@@ -244,13 +246,18 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                       <>
                         {/* DeepSeek-R1 文章 */}
                         <div className="bg-gray-50 rounded-lg pb-2">
-                          <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                            <img
-                              src="/tutorials/result-banner/DeepSeek-R1.png"
-                              alt="DeepSeek-R1 Tutorial"
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
+                          <a
+                            href="/resources/tutorials/how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm"
+                            className="block"
+                          >
+                            <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
+                              <img
+                                src="/tutorials/result-banner/DeepSeek-R1.png"
+                                alt="DeepSeek-R1 Tutorial"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </a>
                           <a
                             href="/resources/tutorials/how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm"
                             className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
@@ -261,13 +268,18 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
 
                         {/* Llama 文章 */}
                         <div className="bg-gray-50 rounded-lg pb-2">
-                          <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                            <img
-                              src="/tutorials/result-banner/Llama-Locally.png"
-                              alt="Llama Tutorial"
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
+                          <a
+                            href="/resources/tutorials/how-to-run-the-llama-locally-on-a-canopy-wave-vm"
+                            className="block"
+                          >
+                            <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
+                              <img
+                                src="/tutorials/result-banner/Llama-Locally.png"
+                                alt="Llama Tutorial"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </a>
                           <a
                             href="/resources/tutorials/how-to-run-the-llama-locally-on-a-canopy-wave-vm"
                             className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
@@ -371,6 +383,15 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
             )}
           </div>
         </div>
+
+        {/* 右侧边栏 - 完全由页面控制 */}
+        {rightSidebar && (
+          <div className="hidden xl:block w-64 flex-shrink-0">
+            <div className={getSidebarStyles()} ref={sidebarRef}>
+              {rightSidebar}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

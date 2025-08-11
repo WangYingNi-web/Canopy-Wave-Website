@@ -20,13 +20,73 @@ export default function CaseStudyPage() {
         { id: 'results', label: 'Results and Benefits' },
         { id: 'future', label: 'Future Outlook' }
     ];
-    const rightSidebar = (
+    const meidaSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
             <SocialMediaLinks
                 vertical={false}
                 className="items-center pt-2 pl-4"
             />
+        </div>
+    )
+
+    const rightSidebar = (
+        <div className="space-y-6">
+            {/* Recommended GPU Services Section */}
+            <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200">
+                    Recommended Tutorials
+                </h3>
+                <div className="space-y-4">
+                    {/* NVIDIA HGX H200 */}
+                    <div className="bg-gray-50 rounded-lg pb-2">
+                        <a
+                            href="/compute-services#hgx-h200"
+                            rel="noopener noreferrer"
+                            className="block"
+                        >
+                            <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
+                                <img
+                                    src="/cloud/h200.png"
+                                    alt="NVIDIA HGX H200"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </a>
+                        <a
+                            href="/compute-services#hgx-h200"
+                            rel="noopener noreferrer"
+                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                        >
+                            NVIDIA HGX H200 - Unmatched Memory Bandwidth for Large AI Models
+                        </a>
+                    </div>
+    
+                    {/* NVIDIA HGX H100 */}
+                    <div className="bg-gray-50 rounded-lg pb-2">
+                        <a
+                            href="/compute-services#hgx-h100"
+                            rel="noopener noreferrer"
+                            className="block"
+                        >
+                            <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
+                                <img
+                                    src="/cloud/h100.png"
+                                    alt="NVIDIA HGX H100"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </a>
+                        <a
+                            href="/compute-services#hgx-h100"
+                            rel="noopener noreferrer"
+                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                        >
+                            NVIDIA HGX H100 - Purpose-Built for Training Large AI Models
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 
@@ -62,6 +122,7 @@ export default function CaseStudyPage() {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="Accelerating Protein Engineering with Canopy Wave's GPUaaS"
+                meidaSidebar={meidaSidebar}
                 rightSidebar={rightSidebar}
                 showRecommendedTutorials={false}
             >

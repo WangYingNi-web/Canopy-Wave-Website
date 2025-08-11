@@ -817,7 +817,7 @@ export default function PlatformPage() {
         }
     ];
 
-    const rightSidebar = (
+    const meidaSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
             <SocialMediaLinks
@@ -857,7 +857,7 @@ export default function PlatformPage() {
             <SidebarLayout
                 navigationItems={navigationItems}
                 title="API Documentation"
-                rightSidebar={rightSidebar}
+                meidaSidebar={meidaSidebar}
             >
                 {/* Introduction Section */}
                 <section id="introduction" className="mb-12">
