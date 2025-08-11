@@ -9,9 +9,9 @@ interface BreadcrumbItem {
 
 // 教程标题映射
 const tutorialTitleMap: Record<string, string> = {
-  'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm': 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
-  'how-to-run-the-llama-locally-on-a-canopy-wave-vm': 'How to Run the Llama Locally on a Canopy Wave VM?',
-  'how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm': 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',
+  'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm': 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM',
+  'how-to-run-the-llama-locally-on-a-canopy-wave-vm': 'How to Run the Llama Locally on a Canopy Wave VM',
+  'how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm': 'How to Run the KIMI-K2 Locally on a Canopy Wave VM',
   'manage-cloud-via-api': 'Manage Cloud via API',
   'case-study': 'Case Studies'
 }
