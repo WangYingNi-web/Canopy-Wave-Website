@@ -4,12 +4,15 @@ import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import SidebarLayout from '@/components/SidebarLayout'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
+import Breadcrumb from '@/components/Breadcrumb'
+import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 import { TutorialPost } from './index'
 interface TutorialLayout1Props {
     tutorialPost: TutorialPost
 }
 
 const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
+    const breadcrumbItems = useTutorialBreadcrumb()
     const meidaSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
@@ -49,6 +52,12 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                     </div>
                 </div>
 
+                {/* Breadcrumb Section */}
+                {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <SlideUp>
+                        <Breadcrumb items={breadcrumbItems} />
+                    </SlideUp>
+                </div> */}
                 {/* Content Section with SidebarLayout */}
                 <SidebarLayout
                     navigationItems={navigationItems}

@@ -4,6 +4,8 @@ import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import SidebarLayout from '@/components/SidebarLayout'
 import { TutorialPost } from './index'
+import Breadcrumb from '@/components/Breadcrumb'
+import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
 interface TutorialLayout2Props {
     tutorialPost: TutorialPost
@@ -76,7 +78,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
 
         return () => clearTimeout(timer);
     }, []);
-
+    const breadcrumbItems = useTutorialBreadcrumb()
     // 定义导航项
     const navigationItems = [
         { id: 'why', label: 'Why' },
@@ -114,6 +116,13 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                     </div>
                 </div>
             </div>
+
+            {/* Breadcrumb Section */}
+            {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <SlideUp>
+                    <Breadcrumb items={breadcrumbItems} />
+                </SlideUp>
+            </div> */}
 
             {/* Content Section with SidebarLayout */}
             <SidebarLayout

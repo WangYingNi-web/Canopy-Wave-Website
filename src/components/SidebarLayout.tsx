@@ -81,7 +81,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       const distanceToBottom = mainContentBottom - windowBottom;
 
       // 动态阈值计算
-      const startFixedThreshold = heroHeight - 100; // hero区域结束前100px开始固定
+      const startFixedThreshold = heroHeight - 0; // hero区域结束前0px开始固定
       const bottomThreshold = 300; // 距离底部300px时调整位置
 
       // 判断sidebar是否会超出内容区域底部

@@ -3,15 +3,18 @@ import SlideUp from '@/components/slide'
 import Image from 'next/image'
 import SidebarLayout from '@/components/SidebarLayout'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
+import Breadcrumb from '@/components/Breadcrumb'
+import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 
 const TutorialLayout3: React.FC = () => {
+    const breadcrumbItems = useTutorialBreadcrumb()
     // KIMI-K2教程的静态内容
     const tutorialData = {
         title: 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',
         sections: [
             {
                 title: 'What is KIMI-K2?',
-                navLabel:'What is KIMI-K2',
+                navLabel: 'What is KIMI-K2',
                 content: [
                     'KIMI-K2 is an open-source, trillion-parameter large language model released by Moonshot AI in July 2025. Although it boasts a total of 1 trillion parameters, it uses a Mixture-of-Experts (MoE) architecture with 384 experts, activating only 32 billion parameters per inference to balance performance and efficiency.',
                     'It performs exceptionally well in scenarios such as code generation, long-text processing, and intelligent agent tasks. It supports an ultra-long context length of up to 128K tokens, making it ideal for tasks like analyzing research papers, legal documents, or large codebases.',
@@ -36,14 +39,14 @@ const TutorialLayout3: React.FC = () => {
                 title: 'How to Deploy the KIMI-K2 Large Language Model Locally',
                 navLabel: 'How to Deploy',
                 content: [
-                    '**A. Check System Resources to Choose the Appropriate Model Version**',
+                    '**1. Check System Resources to Choose the Appropriate Model Version**',
                     'View system information:',
                     '```bash\nlsb_release -a\n```',
                     '<img src="/tutorials/kimi-k2/lsb-release-output.webp" alt="lsb_release -a command output" />',
                     'Check storage space size:',
                     '```bash\ndf -Th\n```',
                     '<img src="/tutorials/df-Th.png" alt="df -Th command output" />',
-                    '**B. Download and Update Software**',
+                    '**2. Download and Update Software**',
                     'Update software package:',
                     '```bash\nsudo apt update\n```',
                     '<img src="/tutorials/kimi-k2/sudo-apt-update.webp" alt="sudo apt update command output" />',
@@ -56,25 +59,25 @@ const TutorialLayout3: React.FC = () => {
                     'Download llama.cpp source code and switch directory:',
                     '```bash\ngit clone https://github.com/ggerganov/llama.cpp\ncd llama.cpp\n```',
                     '<img src="/tutorials/kimi-k2/clone.webp" alt="sudo apt update command output" />',
-                    '**C. Compile the GPU version**',
+                    '**3. Compile the GPU version**',
                     '```bash\ncmake -B build -DGGML_CUDA=ON\ncmake --build build --config Release -j$(nproc)\n```',
                     '<img src="/tutorials/kimi-k2/cmake.webp" alt="sudo apt update command output" />',
-                    '**D. Verify that the installation was successful**',
+                    '**4. Verify that the installation was successful**',
                     '```bash\n./build/bin/llama-cli --version\n```',
                     '<img src="/tutorials/kimi-k2/build.webp" alt="sudo apt update command output" />',
-                    '**E. Add environment variables**',
+                    '**5. Add environment variables**',
                     '```bash\necho "export PATH=\"$PATH:$HOME/.local/bin\"" >> ~/.bashrc\nsource ~/.bashrc\n```',
                     '<img src="/tutorials/kimi-k2/echo.webp" alt="sudo apt update command output" />',
-                    '**F. Download the model file**',
+                    '**6. Download the model file**',
                     'To download the model file, please select a model that suits your storage space and graphics card on Hugging Face:',
                     '```bash\nhf download unsloth/Kimi-K2-Instruct-GGUF --include "*Q4_0*" --local-dir ./models\n```',
                     '<img src="/tutorials/kimi-k2/download.webp" alt="sudo apt update command output" />',
-                    '**G. Run the Model**',
+                    '**7. Run the Model**',
                     '```bash\n./build/bin/llama-cli -m ./models/Q4_0/Kimi-K2-Instruct-Q2_K_L-00001-of-00013.gguf --n-gpu-layers 99   --ctx-size 8192   --temp 0.6\n```',
                     '<img src="/tutorials/kimi-k2/run1.webp" alt="sudo apt update command output" />',
                     '<img src="/tutorials/kimi-k2/run2.webp" alt="sudo apt update command output" />',
                     'Next, you can interact with your local large language model on your own. If you need to exit, please press **Ctrl + C**.',
-                    '**H. Code generation**',
+                    '**8. Code generation**',
                     'Ask AI to use Python to generate a simple horizontal game.',
                     '<img src="/tutorials/kimi-k2/code.webp" alt="sudo apt update command output" />',
                     'Use PyCharm to run the code and view the code generation results.',
@@ -96,7 +99,7 @@ const TutorialLayout3: React.FC = () => {
         id: `section-${index}`,
         label: section.navLabel || section.title || `Section ${index + 1}`
     }))
-    
+
 
     const meidaSidebar = (
         <div className="rounded-lg mt-6">
@@ -204,23 +207,30 @@ const TutorialLayout3: React.FC = () => {
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800">
             {/* Banner Section */}
             <div className="w-full h-[490px] relative mt-[84px]">
-                    <Image
-                        src="/tutorials/kimi-k2/banner.png"
-                        alt="banner"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                    <div className="absolute inset-0 z-10">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
-                            <SlideUp>
-                                <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
+                <Image
+                    src="/tutorials/kimi-k2/banner.png"
+                    alt="banner"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
+                        <SlideUp>
+                            <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
                                 How to Run the KIMI-K2 Locally <br /> on a Canopy Wave VM?
-                                </h1>
-                            </SlideUp>
-                        </div>
+                            </h1>
+                        </SlideUp>
                     </div>
                 </div>
+            </div>
+
+            {/* Breadcrumb Section */}
+            {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <SlideUp>
+                    <Breadcrumb items={breadcrumbItems} />
+                </SlideUp>
+            </div> */}
 
             {/* Content Section */}
             <SidebarLayout

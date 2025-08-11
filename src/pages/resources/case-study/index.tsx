@@ -35,7 +35,7 @@ export default function CaseStudyPage() {
             {/* Recommended GPU Services Section */}
             <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200">
-                    Recommended Tutorials
+                Related Products
                 </h3>
                 <div className="space-y-4">
                     {/* NVIDIA HGX H200 */}
@@ -56,9 +56,9 @@ export default function CaseStudyPage() {
                         <a
                             href="/compute-services#hgx-h200"
                             rel="noopener noreferrer"
-                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                            className="font-bold text-gray-900 text-center text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
                         >
-                            NVIDIA HGX H200 - Unmatched Memory Bandwidth for Large AI Models
+                            NVIDIA HGX H200
                         </a>
                     </div>
     
@@ -71,18 +71,18 @@ export default function CaseStudyPage() {
                         >
                             <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
                                 <img
-                                    src="/cloud/h100.png"
+                                    src="/compute/h100.png"
                                     alt="NVIDIA HGX H100"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full"
                                 />
                             </div>
                         </a>
                         <a
                             href="/compute-services#hgx-h100"
                             rel="noopener noreferrer"
-                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                            className="font-bold text-gray-900 text-center text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
                         >
-                            NVIDIA HGX H100 - Purpose-Built for Training Large AI Models
+                            NVIDIA HGX H100
                         </a>
                     </div>
                 </div>
