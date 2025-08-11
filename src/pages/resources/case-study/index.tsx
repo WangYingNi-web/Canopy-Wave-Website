@@ -120,11 +120,11 @@ export default function CaseStudyPage() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+            {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
                 <SlideUp>
                     <Breadcrumb items={breadcrumbItems} />
                 </SlideUp>
-            </div>
+            </div> */}
             {/* Main Content Area with Sidebar */}
             <SidebarLayout
                 navigationItems={navigationItems}
