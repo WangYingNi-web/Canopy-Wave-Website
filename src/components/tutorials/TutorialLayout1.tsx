@@ -10,20 +10,6 @@ interface TutorialLayout1Props {
 }
 
 const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
-    const [showVideo, setShowVideo] = useState(false)
-    const handleLinkedInShare = (e: React.MouseEvent) => {
-        e.preventDefault()
-
-        // 确保在点击时获取最新的URL
-        const currentUrl = window.location.href
-        const encodedUrl = encodeURIComponent(currentUrl)
-        const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&shareUrl=${encodedUrl}`
-        console.log(shareUrl, "shareUrl");
-
-        // 打开新窗口
-        window.open(shareUrl, '_blank', 'noopener,noreferrer')
-    }
-
     const rightSidebar = (
         <div className="rounded-lg mt-6">
             <h4 className="text-l font-semibold ml-4 text-gray-700">Share</h4>
@@ -62,7 +48,6 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                         </div>
                     </div>
                 </div>
-
 
                 {/* Content Section with SidebarLayout */}
                 <SidebarLayout
@@ -219,7 +204,6 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                         </section>
                     </div>
                 </SidebarLayout>
-
             </main >
 
         </>

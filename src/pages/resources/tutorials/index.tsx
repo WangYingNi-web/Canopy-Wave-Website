@@ -40,6 +40,14 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     {
+      id: 'KIMI-K2',
+      category: 'AI Models',
+      title: 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',
+      image: '/tutorials/kimi-k2/kimi.png',
+      date: 'August 11, 2025',
+      onClick: () => handleTutorialClick('How to Run the KIMI-K2 Locally on a Canopy Wave VM')
+    },
+    {
       id: 'llama',
       category: 'AI Models',
       title: 'How to Run the Llama Locally on a Canopy Wave VM?',
@@ -113,16 +121,17 @@ const Tutorials: React.FC = () => {
     // 获取Featured Content区域要显示的卡片 - deepseek排在前面
     const getFeaturedCards = () => {
       if (activeCategory === 'All') {
-        const aiModelsCards = allCards.filter(card => card.category === 'AI Models');
+        // 直接筛选deepseek和llama
+        const featuredCards = allCards.filter(card => 
+          card.id === 'deepseek' || card.id === 'llama'
+        );
         
-        // 将deepseek卡片排在前面
-        const sortedCards = aiModelsCards.sort((a, b) => {
-          if (a.id === 'deepseek') return -1; // deepseek排在前面
+        // 确保deepseek排在前面
+        return featuredCards.sort((a, b) => {
+          if (a.id === 'deepseek') return -1;
           if (b.id === 'deepseek') return 1;
-          return 0; // 其他卡片保持原有顺序
+          return 0;
         });
-        
-        return sortedCards.slice(0, 2);
       }
       return [];
     };

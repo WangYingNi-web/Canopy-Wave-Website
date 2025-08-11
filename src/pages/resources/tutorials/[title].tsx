@@ -6,24 +6,11 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { TutorialLayout1, TutorialLayout2, TutorialPost } from '@/components/tutorials'
+import { TutorialLayout1, TutorialLayout2,TutorialLayout3,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
   const { title } = router.query
-
-  const handleLinkedInShare = (e: React.MouseEvent) => {
-    e.preventDefault()
-
-    // 确保在点击时获取最新的URL
-    const currentUrl = window.location.href
-    const encodedUrl = encodeURIComponent(currentUrl)
-    const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&shareUrl=${encodedUrl}`
-    console.log(shareUrl, "shareUrl");
-
-    // 打开新窗口
-    window.open(shareUrl, '_blank', 'noopener,noreferrer')
-  }
 
 
   const getTutorialPost = (title: string): TutorialPost | null => {
@@ -116,6 +103,26 @@ export default function TutorialDetail() {
           ],
         }
 
+      case 'how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm':
+        return {
+          id: 3,
+          title: 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',
+          description: 'KIMI-K2 is an open-source, trillion-parameter large language model released by Moonshot AI in July 2025. Learn how to deploy and run it locally using llama.cpp.',
+          sections: [
+            {
+              title: 'What is KIMI-K2?',
+              content: [
+                'KIMI-K2 is an open-source, trillion-parameter large language model released by Moonshot AI in July 2025. Although it boasts a total of 1 trillion parameters, it uses a Mixture-of-Experts (MoE) architecture with 384 experts, activating only 32 billion parameters per inference to balance performance and efficiency.',
+                'It performs exceptionally well in scenarios such as code generation, long-text processing, and intelligent agent tasks. It supports an ultra-long context length of up to 128K tokens, making it ideal for tasks like analyzing research papers, legal documents, or large codebases.',
+                'Moonshot AI provides two open-source versions:',
+                '• **Kimi-K2-Base**: The raw pre-trained weights, ideal for research and deep customization.',
+                '• **Kimi-K2-Instruct**: A fine-tuned version based on the base model, optimized for general instruction-following tasks and ready to use out of the box.',
+                'Kimi-K2 is a highly efficient, trillion-parameter expert in code generation and agentic tasks. It is capable of running on standard laptops or being deployed at scale in the cloud, aiming to advance AI from conversational ability to practical, real-world problem-solving.'
+              ],
+            },
+          ],
+        }
+
       default:
         return null
     }
@@ -127,7 +134,7 @@ export default function TutorialDetail() {
     return (
       <main className="min-h-screen bg-[#F9F9F9]">
         <Header />
-        
+
         <div className="flex items-center justify-center min-h-[60vh]">
           {/* <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-600 mb-4">Tutorial not found</h1>
@@ -136,7 +143,7 @@ export default function TutorialDetail() {
             </Link>
           </div> */}
         </div>
-        
+
         <Footer />
       </main>
     )
@@ -149,6 +156,8 @@ export default function TutorialDetail() {
         return <TutorialLayout1 tutorialPost={tutorialPost} />
       case 2:
         return <TutorialLayout2 tutorialPost={tutorialPost} />
+      case 3:
+        return <TutorialLayout3/>
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }
@@ -161,6 +170,8 @@ export default function TutorialDetail() {
         return "min-h-screen bg-[#F9F9F9]"
       case 2:
         return "min-h-screen bg-[#F9F9F9]"
+      case 3:
+        return "min-h-screen bg-[#F9F9F9]"
       default:
         return "min-h-screen bg-[#F9F9F9]"
     }
@@ -171,7 +182,7 @@ export default function TutorialDetail() {
       <Head>
         <title>Canopy Wave - {tutorialPost.title}</title>
         <meta name="description" content={tutorialPost.description} />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://canopywave.com/resources/tutorials/${title}`} />
@@ -181,14 +192,14 @@ export default function TutorialDetail() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Canopy Wave" />
-        
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://canopywave.com/resources/tutorials/${title}`} />
         <meta property="twitter:title" content={tutorialPost.title} />
         <meta property="twitter:description" content={tutorialPost.description} />
         <meta property="twitter:image" content="https://canopywave.com/tutorials/banner.png" />
-        
+
         {/* LinkedIn */}
         <meta property="linkedin:owner" content="Canopy Wave" />
       </Head>

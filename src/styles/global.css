@@ -82,7 +82,12 @@
 }
 
 }
-
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 /* 将 Zendesk 聊天按钮向上移动 */
 #launcher {
   bottom: 180px !important; /* 向上移动到距离底部180px */

@@ -12,6 +12,7 @@ interface SidebarLayoutProps {
   subtitle?: string;
   rightSidebar?: ReactNode; // 新增右侧边栏内容
   showRecommendedTutorials?: boolean; // 新增props
+  showCustomTutorials?: boolean; // 新增 prop
 }
 
 const SidebarLayout: React.FC<SidebarLayoutProps> = ({
@@ -20,7 +21,8 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
   title,
   subtitle,
   rightSidebar,
-  showRecommendedTutorials = true
+  showRecommendedTutorials = true,
+  showCustomTutorials = false // 默认为 false
 }) => {
   const [activeSection, setActiveSection] = useState(navigationItems[0]?.id || '');
   const [sidebarPosition, setSidebarPosition] = useState('sticky');
@@ -237,91 +239,132 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                     Recommended Tutorials
                   </h3>
                   <div className="space-y-4">
-                    <div className="bg-gray-50 rounded-lg pb-2">
-                      <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                        {!showVideo2 ? (
-                          <div
-                            className="w-full h-full cursor-pointer"
-                            onClick={() => {
-                              console.log('Video clicked, setting showVideo2 to true');
-                              setShowVideo2(true);
-                            }}
-                          >
+                    {showCustomTutorials ? (
+                      // 显示 deepseek 和 llama 文章
+                      <>
+                        {/* DeepSeek-R1 文章 */}
+                        <div className="bg-gray-50 rounded-lg pb-2">
+                          <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
                             <img
-                              src="https://img.youtube.com/vi/sAtw9ugBb0M/maxresdefault.jpg"
-                              alt="Video thumbnail"
+                              src="/tutorials/result-banner/DeepSeek-R1.png"
+                              alt="DeepSeek-R1 Tutorial"
                               className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                              <img
-                                src="/tutorials/youtube.svg"
-                                alt="Play video"
-                                className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
-                              />
-                            </div>
-
                           </div>
-                        ) : (
-                          <iframe
-                            src="https://www.youtube.com/embed/sAtw9ugBb0M?modestbranding=1&rel=0&controls=1&autoplay=1"
-                            title="How to Connect and Use the Canopywave Platform Virtual Machine"
-                            className="w-full h-full"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        )}
-                      </div>
-                      <a
-                        href="https://www.youtube.com/watch?v=sAtw9ugBb0M"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
-                      >
-                        How to Connect and Use the Canopywave Platform Virtual Machine
-                      </a>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-lg pb-2">
-                      <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                        {!showVideo ? (
-                          <div
-                            className="w-full h-full cursor-pointer"
-                            onClick={() => setShowVideo(true)}
+                          <a
+                            href="/resources/tutorials/how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm"
+                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
                           >
+                            How to Run DeepSeek-R1 Locally on a Canopy Wave VM?
+                          </a>
+                        </div>
+
+                        {/* Llama 文章 */}
+                        <div className="bg-gray-50 rounded-lg pb-2">
+                          <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
                             <img
-                              src="https://img.youtube.com/vi/yLpYTQN-4ZY/maxresdefault.jpg"
-                              alt="Video thumbnail"
+                              src="/tutorials/result-banner/Llama-Locally.png"
+                              alt="Llama Tutorial"
                               className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                              <img
-                                src="/tutorials/youtube.svg"
-                                alt="Play video"
-                                className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
-                              />
-                            </div>
                           </div>
-                        ) : (
-                          <iframe
-                            src="https://www.youtube.com/embed/yLpYTQN-4ZY?modestbranding=1&rel=0&controls=1&autoplay=1"
-                            title="How to Build the Virtual Machines on the Cloud Platform"
-                            className="w-full h-full"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        )}
-                      </div>
-                      <a
-                        href="https://www.youtube.com/watch?v=yLpYTQN-4ZY"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
-                      >
-                        How to Build the "Virtual Machines" on the Cloud Platform
-                      </a>
-                    </div>
+                          <a
+                            href="/resources/tutorials/how-to-run-the-llama-locally-on-a-canopy-wave-vm"
+                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                          >
+                            How to Run the Llama Locally on a Canopy Wave VM?
+                          </a>
+                        </div>
+                      </>
+                    ) : (
+                      // 显示原来的 YouTube 视频
+                      <>
+                        <div className="bg-gray-50 rounded-lg pb-2">
+                          <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
+                            {!showVideo2 ? (
+                              <div
+                                className="w-full h-full cursor-pointer"
+                                onClick={() => {
+                                  console.log('Video clicked, setting showVideo2 to true');
+                                  setShowVideo2(true);
+                                }}
+                              >
+                                <img
+                                  src="https://img.youtube.com/vi/sAtw9ugBb0M/maxresdefault.jpg"
+                                  alt="Video thumbnail"
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                  <img
+                                    src="/tutorials/youtube.svg"
+                                    alt="Play video"
+                                    className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                                  />
+                                </div>
+                              </div>
+                            ) : (
+                              <iframe
+                                src="https://www.youtube.com/embed/sAtw9ugBb0M?modestbranding=1&rel=0&controls=1&autoplay=1"
+                                title="How to Connect and Use the Canopywave Platform Virtual Machine"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              ></iframe>
+                            )}
+                          </div>
+                          <a
+                            href="https://www.youtube.com/watch?v=sAtw9ugBb0M"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                          >
+                            How to Connect and Use the Canopywave Platform Virtual Machine
+                          </a>
+                        </div>
+
+                        <div className="bg-gray-50 rounded-lg pb-2">
+                          <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
+                            {!showVideo ? (
+                              <div
+                                className="w-full h-full cursor-pointer"
+                                onClick={() => setShowVideo(true)}
+                              >
+                                <img
+                                  src="https://img.youtube.com/vi/yLpYTQN-4ZY/maxresdefault.jpg"
+                                  alt="Video thumbnail"
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                  <img
+                                    src="/tutorials/youtube.svg"
+                                    alt="Play video"
+                                    className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                                  />
+                                </div>
+                              </div>
+                            ) : (
+                              <iframe
+                                src="https://www.youtube.com/embed/yLpYTQN-4ZY?modestbranding=1&rel=0&controls=1&autoplay=1"
+                                title="How to Build the Virtual Machines on the Cloud Platform"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              ></iframe>
+                            )}
+                          </div>
+                          <a
+                            href="https://www.youtube.com/watch?v=yLpYTQN-4ZY"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                          >
+                            How to Build the "Virtual Machines" on the Cloud Platform
+                          </a>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
