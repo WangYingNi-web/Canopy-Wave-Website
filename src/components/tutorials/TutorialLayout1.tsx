@@ -211,7 +211,6 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                     </div>
                                 </div>
                             </div>
-
                         </section>
                     </div>
                 </SidebarLayout>

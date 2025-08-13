@@ -113,19 +113,26 @@ const TutorialLayout3: React.FC = () => {
 
     // 渲染内容的辅助函数
     const renderContent = (content: string): React.ReactNode => {
-        // 处理图片标签
         if (content.startsWith('<img')) {
             // 解析img标签的属性
             const srcMatch = content.match(/src="([^"]*)"/)
             const altMatch = content.match(/alt="([^"]*)"/)
 
             if (srcMatch) {
+                const imageSrc = srcMatch[1]
+                // 检查是否为特定的图片（比如第一张图片）
+                const isSpecialImage = imageSrc.includes('lsb-release-output.webp')
+                
+                const imageClass = isSpecialImage 
+                    ? "w-full max-w-md h-auto rounded-lg shadow-md border object-contain" 
+                    : "w-full max-w-full h-auto rounded-lg shadow-md border object-contain"
+                
                 return (
                     <div className="my-4">
                         <img
-                            src={srcMatch[1]}
+                            src={imageSrc}
                             alt={altMatch ? altMatch[1] : ''}
-                            className="max-w-2xl rounded-lg shadow-md border"
+                            className={imageClass}
                         />
                     </div>
                 )

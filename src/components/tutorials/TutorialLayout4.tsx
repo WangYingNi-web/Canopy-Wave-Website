@@ -180,7 +180,7 @@ const TutorialLayout4: React.FC = () => {
                         <img
                             src={srcMatch[1]}
                             alt={altMatch ? altMatch[1] : ''}
-                            className="max-w-2xl rounded-lg shadow-md border"
+                            className="w-full max-w-full h-auto rounded-lg shadow-md border object-contain"
                         />
                     </div>
                 )
