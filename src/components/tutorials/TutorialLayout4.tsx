@@ -84,6 +84,7 @@ const TutorialLayout4: React.FC = () => {
                     'Enter any large model you want to deploy here, e.g. GPT-OSS.',
                     '<img src="/tutorials/gpt-oss/search.png" alt="search" />',
                     'Copy the corresponding command.',
+                    '```bash\nollama run gpt-oss\n```',
                     '<img src="/tutorials/gpt-oss/run.png" alt="run" />',
                     'Enter the command.',
                     '<img src="/tutorials/gpt-oss/enter.webp" alt="enter" />',
