@@ -40,6 +40,14 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     {
+      id: 'GPT-OSS',
+      category: 'AI Models',
+      title: 'How to Run the GPT-OSS Locally on a Canopy Wave VM?',
+      image: '/tutorials/gpt-oss/gpt-oss.png',
+      date: 'August 12, 2025',
+      onClick: () => handleTutorialClick('How to Run the GPT-OSS Locally on a Canopy Wave VM')
+    },
+    {
       id: 'KIMI-K2',
       category: 'AI Models',
       title: 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',

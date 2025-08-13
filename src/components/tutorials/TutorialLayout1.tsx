@@ -6,6 +6,7 @@ import SidebarLayout from '@/components/SidebarLayout'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
 import Breadcrumb from '@/components/Breadcrumb'
 import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
+import ClickableImage from '@/components/ui/ClickableImage'
 import { TutorialPost } from './index'
 interface TutorialLayout1Props {
     tutorialPost: TutorialPost
