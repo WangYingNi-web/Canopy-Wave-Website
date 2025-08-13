@@ -241,7 +241,7 @@ const TutorialLayout3: React.FC = () => {
             >
                 <div className="prose prose-lg max-w-none">
                     {/* YouTube Video Section */}
-                    {/* <div className="mb-8">
+                    <div className="mb-8">
                         <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
@@ -252,12 +252,12 @@ const TutorialLayout3: React.FC = () => {
                                 allowFullScreen
                             ></iframe>
                         </div>
-                    </div> */}
+                    </div>
                     {tutorialData.sections.map((section, sectionIndex) => (
                         <section key={sectionIndex} id={`section-${sectionIndex}`} className="mb-12">
                             {section.title && (
                                 <SlideUp>
-                                    <h2 className="text-xl font-bold mb-6">{section.title}</h2>
+                                    <h2 className="text-xl font-bold mb-4">{section.title}</h2>
                                 </SlideUp>
                             )}
                             <div className="space-y-4">
