@@ -240,6 +240,19 @@ const TutorialLayout3: React.FC = () => {
                 showCustomTutorials={true}
             >
                 <div className="prose prose-lg max-w-none">
+                    {/* YouTube Video Section */}
+                    {/* <div className="mb-8">
+                        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                            <iframe
+                                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                                src="https://www.youtube.com/embed/rkhgwotw0gs?"
+                                title="Run KIMI-K2 Locally on a Canopy Wave Virtual Machine"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </div> */}
                     {tutorialData.sections.map((section, sectionIndex) => (
                         <section key={sectionIndex} id={`section-${sectionIndex}`} className="mb-12">
                             {section.title && (

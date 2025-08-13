@@ -44,7 +44,7 @@ const Tutorials: React.FC = () => {
       category: 'AI Models',
       title: 'How to Run the GPT-OSS Locally on a Canopy Wave VM?',
       image: '/tutorials/gpt-oss/gpt-oss.png',
-      date: 'August 12, 2025',
+      date: 'August 13, 2025',
       onClick: () => handleTutorialClick('How to Run the GPT-OSS Locally on a Canopy Wave VM')
     },
     {
