@@ -368,7 +368,7 @@ export default function AboutPage() {
                 </SlideUp>
               </div>
             </div>
-            <div className="w-full md:w-1/2 pt-6">
+            <div className="w-full md:w-1/2 p-4">
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6 text-gray-600">
                   What we do
@@ -585,7 +585,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Professional Team */}
             <FadeIn>
-              <div className="text-center bg-white rounded-lg p-8 h-[370px]">
+              <div className="text-center bg-white rounded-lg p-8 hover:shadow-lg transition-all duration-300 h-[370px]">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center">
                   <Image
                     src="/about/team.svg"
@@ -606,7 +606,7 @@ export default function AboutPage() {
 
             {/* Advanced Architecture */}
             <FadeIn>
-              <div className="text-center bg-white rounded-lg p-8 h-[370px]">
+              <div className="text-center bg-white rounded-lg p-8 hover:shadow-lg transition-all duration-300 h-[370px]">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center">
                   <Image
                     src="/about/architecture.svg"
@@ -626,7 +626,7 @@ export default function AboutPage() {
 
             {/* Intelligent System */}
             <FadeIn>
-              <div className="text-center bg-white rounded-lg p-8 h-[370px]">
+              <div className="text-center bg-white rounded-lg p-8 hover:shadow-lg transition-all duration-300 h-[370px]">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center">
                   <Image
                     src="/about/system.svg"
@@ -647,7 +647,7 @@ export default function AboutPage() {
 
             {/* Technical Support */}
             <FadeIn>
-              <div className="text-center bg-white rounded-lg p-8 h-[370px]">
+              <div className="text-center bg-white rounded-lg p-8 hover:shadow-lg transition-all duration-300 h-[370px]">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center">
                   <Image
                     src="/about/support.svg"
