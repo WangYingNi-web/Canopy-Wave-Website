@@ -118,14 +118,14 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="w-full h-[570px] relative mt-[84px] bg-[#F9F9F9]">
         <Image
-          src="/about/banner.png"
+          src="/about/banner.svg"
           alt="banner"
           fill
           className="object-cover -mt-12"
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 text-center">
             <SlideUp>
               <h1 className="text-4xl sm:text-[54px] font-black text-[#80B224] text-shadow-lg">
                 Powering the Next Wave of AI
@@ -187,7 +187,7 @@ export default function AboutPage() {
               className="transform"
               style={{
                 width: hoveredCard === 'card1' ? '54%' : '25%',
-                transition: 'width 0.3s ease-in-out'
+                transition: 'width 0.1s ease-in-out'
               }}
               onMouseEnter={() => setHoveredCard('card1')}
             >
@@ -255,7 +255,7 @@ export default function AboutPage() {
               className="transform"
               style={{
                 width: hoveredCard === 'card2' ? '54%' : '25%',
-                transition: 'width 0.3s ease-in-out'
+                transition: 'width 0.1s ease-in-out'
               }}
               onMouseEnter={() => setHoveredCard('card2')}
             >
@@ -322,7 +322,7 @@ export default function AboutPage() {
               className="transform"
               style={{
                 width: hoveredCard === 'card3' ? '54%' : '25%',
-                transition: 'width 0.3s ease-in-out'
+                transition: 'width 0.1s ease-in-out'
               }}
               onMouseEnter={() => setHoveredCard('card3')}
             >
@@ -809,11 +809,11 @@ export default function AboutPage() {
 
       {/* Contact Section */}
       <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
-        <BackgroundTransition
+        {/* <BackgroundTransition
           defaultImage="/contact-section1.webp"
           activeImage="/contact-section2.webp"
           className="w-full h-full"
-        />
+        /> */}
         <div className="relative z-30 container mx-auto px-4">
           <div className="relative max-w-7xl mx-auto">
             <SlideUp>
