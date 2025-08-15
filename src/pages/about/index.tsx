@@ -18,10 +18,65 @@ export default function AboutPage() {
   const [isExpanded3, setIsExpanded3] = useState(false);
   const [activeService, setActiveService] = useState('compute');
   const [isMobile, setIsMobile] = useState(false);
+  const [showCardContent, setShowCardContent] = useState<string | null>('card1');
+  const [contentTimer, setContentTimer] = useState<NodeJS.Timeout | null>(null);
+  const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
+  const [leaveTimer, setLeaveTimer] = useState<NodeJS.Timeout | null>(null);
+  const [lastHoveredCard, setLastHoveredCard] = useState<string>('card1');
 
 
-  // const [currentSlide, setCurrentSlide] = useState(0);
-  // const [autoPlay, setAutoPlay] = useState(true);
+
+  // 处理悬停进入的函数
+  const handleCardHover = (cardId: string) => {
+    setHoveredCard(cardId);
+    console.log(cardId, "cardId进入的");
+
+    // 如果进入的是不同的卡片，立即隐藏之前的内容
+    if (showCardContent && showCardContent !== cardId) {
+      setShowCardContent(null);
+    }
+
+    // 清除之前的进入定时器
+    if (enterTimer) {
+      clearTimeout(enterTimer);
+    }
+
+    // 设置新的进入定时器，延迟500ms显示内容
+    const timer = setTimeout(() => {
+      setShowCardContent(cardId);
+      setLastHoveredCard(cardId);
+    }, 490);
+
+    setEnterTimer(timer);
+  };
+
+  // 处理悬停离开的函数
+  const handleCardLeave = (cardId: string) => {
+    console.log(cardId, "cardId离开的");
+
+    // 离开时只清除进入定时器，不隐藏内容
+    // if (enterTimer) {
+    //   clearTimeout(enterTimer);
+    //   setEnterTimer(null);
+    // }
+
+    // 不设置任何隐藏定时器，内容保持显示
+  };
+
+  // 清理定时器的useEffect
+  useEffect(() => {
+    return () => {
+      if (enterTimer) {
+        clearTimeout(enterTimer);
+      }
+    };
+  }, [enterTimer]);
+
+
+
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState('card1');
   const partnerLogos = [
@@ -118,14 +173,14 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="w-full h-[570px] relative mt-[84px] bg-[#F9F9F9]">
         <Image
-          src="/about/banner.svg"
+          src="/about/banner.png"
           alt="banner"
           fill
           className="object-cover -mt-12"
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
             <SlideUp>
               <h1 className="text-4xl sm:text-[54px] font-black text-[#80B224] text-shadow-lg">
                 Powering the Next Wave of AI
@@ -152,9 +207,9 @@ export default function AboutPage() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-10 max-w-4xl mx-auto">
-              Canopy Wave Inc., founded in 2024, headquartered in Santa Calra, California, is a technology company specializing in building, managing, and operating high-performance Nvidia GPU clusters. 
-              
-             <br /> We provide a stable, efficient, and scalable computing infrastructure essential for the AI era
+              Canopy Wave Inc., founded in 2024, headquartered in Santa Calra, California, is a technology company specializing in building, managing, and operating high-performance Nvidia GPU clusters.
+
+              <br /> We provide a stable, efficient, and scalable computing infrastructure essential for the AI era
             </p>
           </SlideUp>
           <SlideUp>
@@ -187,9 +242,11 @@ export default function AboutPage() {
               className="transform"
               style={{
                 width: hoveredCard === 'card1' ? '54%' : '25%',
-                transition: 'width 0.1s ease-in-out'
+                transition: 'width 0.6s ease-in-out'
               }}
-              onMouseEnter={() => setHoveredCard('card1')}
+              onMouseEnter={() => handleCardHover('card1')}
+              onMouseLeave={() => handleCardLeave('card1')}
+
             >
               <SlideUp>
                 <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
@@ -206,15 +263,21 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                    <h3 className="text-xl font-bold mb-3 leading-tight">
-                      Pursue Efficiency Through Open and Clear Communication
-                    </h3>
-
-                    {/* 只有悬停的卡片才显示详细内容 */}
-                    {hoveredCard === 'card1' && (
+                    {hoveredCard !== 'card1' && (
                       <>
+                        <h3 className="text-xl font-bold mb-3 leading-tight">
+                          Pursue Efficiency Through Open and Clear Communication
+                        </h3>
+                      </>
+                    )}
+                    {/* 只有当showCardContent === 'card1'时才显示内容 */}
+                    {showCardContent === 'card1' && (
+                      <>
+                        <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
+                          Pursue Efficiency Through Open and Clear Communication
+                        </h3>
                         <div className="flex items-center justify-between">
-                          <p className="text-sm opacity-90 mb-2 flex-1">
+                          <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
                             We encourage candid expression, quick alignment, and transparent collaboration to ensure every conversation drives progress
                             <button
                               onClick={(e) => {
@@ -255,9 +318,11 @@ export default function AboutPage() {
               className="transform"
               style={{
                 width: hoveredCard === 'card2' ? '54%' : '25%',
-                transition: 'width 0.1s ease-in-out'
+                transition: 'width 0.6s ease-in-out'
               }}
-              onMouseEnter={() => setHoveredCard('card2')}
+              onMouseEnter={() => handleCardHover('card2')}
+              onMouseLeave={() => handleCardLeave('card2')}
+
             >
               <SlideUp>
                 <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
@@ -274,13 +339,22 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                    <h3 className="text-xl font-bold mb-3 leading-tight">
-                      Earn Respect with an Ownership Mindset
-                    </h3>
-                    {hoveredCard === 'card2' && (
+                    {hoveredCard !== 'card2' && (
                       <>
+                        <h3 className="text-xl font-bold mb-3 leading-tight">
+                          Earn Respect with an Ownership Mindset
+                        </h3>
+                      </>
+                    )}
+
+
+                    {showCardContent === 'card2' && (
+                      <>
+                        <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
+                          Earn Respect with an Ownership Mindset
+                        </h3>
                         <div className="flex items-center justify-between">
-                          <p className="text-sm opacity-90 mb-2 flex-1">
+                          <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
                             We value respect, and we expect every employee to earn it through proactive action
                             <button
                               onClick={(e) => {
@@ -301,8 +375,7 @@ export default function AboutPage() {
                             </button>
                           </p>
                         </div>
-                        <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded2 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'
-                          }`}>
+                        <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded2 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'}`}>
                           <p className="mb-2">
                             Here, respect is not granted by title—it's earned through action. We have the highest regard for those who roll up their sleeves, dare to experiment, and are willing to be accountable.
                           </p>
@@ -322,9 +395,10 @@ export default function AboutPage() {
               className="transform"
               style={{
                 width: hoveredCard === 'card3' ? '54%' : '25%',
-                transition: 'width 0.1s ease-in-out'
+                transition: 'width 0.3s ease-in-out'
               }}
-              onMouseEnter={() => setHoveredCard('card3')}
+              onMouseEnter={() => handleCardHover('card3')}
+              onMouseLeave={() => handleCardLeave('card3')}
             >
               <SlideUp>
                 <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
@@ -341,13 +415,21 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                    <h3 className="text-xl font-bold mb-3 leading-tight">
-                      Demonstrate Contribution with Measurable Results
-                    </h3>
-                    {hoveredCard === 'card3' && (
+
+                    {hoveredCard !== 'card3' && (
                       <>
+                        <h3 className="text-xl font-bold mb-3 leading-tight">
+                          Earn Respect with an Ownership Mindset
+                        </h3>
+                      </>
+                    )}
+                    {showCardContent === 'card3' && (
+                      <>
+                        <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
+                          Demonstrate Contribution with Measurable Results
+                        </h3>
                         <div className="flex items-center justify-between">
-                          <p className="text-sm opacity-90 mb-2 flex-1">
+                          <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
                             We value employees' contributions—their actual output and impact on the company
                             <button
                               onClick={(e) => {
@@ -809,11 +891,11 @@ export default function AboutPage() {
 
       {/* Contact Section */}
       <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
-        {/* <BackgroundTransition
+        <BackgroundTransition
           defaultImage="/contact-section1.webp"
           activeImage="/contact-section2.webp"
           className="w-full h-full"
-        /> */}
+        />
         <div className="relative z-30 container mx-auto px-4">
           <div className="relative max-w-7xl mx-auto">
             <SlideUp>
