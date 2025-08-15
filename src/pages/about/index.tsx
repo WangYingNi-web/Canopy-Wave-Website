@@ -117,7 +117,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="w-full h-[570px] relative mt-[84px] bg-[#F9F9F9]">
         <Image
-          src="/about/banner.png"
+          src="/about/banner.webp"
           alt="banner"
           fill
           className="object-cover -mt-12"
