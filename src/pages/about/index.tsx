@@ -23,6 +23,7 @@ export default function AboutPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState('card1');
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
     { id: 2, width: 80, height: 80 },
@@ -117,7 +118,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="w-full h-[570px] relative mt-[84px] bg-[#F9F9F9]">
         <Image
-          src="/about/banner.webp"
+          src="/about/banner.png"
           alt="banner"
           fill
           className="object-cover -mt-12"
@@ -147,11 +148,13 @@ export default function AboutPage() {
       <div className="bg-[#F9F9F9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <SlideUp>
-            <h2 className="text-3xl sm:text-4xl text-gray-600 font-black text-center mb-6">Who we are</h2>
+            <h2 className="text-3xl sm:text-4xl text-gray-600 font-black text-center mb-6">Who We Are</h2>
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-10 max-w-4xl mx-auto">
-              Canopy Wave Inc., founded in 2024, headquartered in Santa Calra, California, is a technology company specializing in building, managing, and operating high-performance Nvidia GPU clusters. We provide a stable, efficient, and scalable computing infrastructure essential for the AI era
+              Canopy Wave Inc., founded in 2024, headquartered in Santa Calra, California, is a technology company specializing in building, managing, and operating high-performance Nvidia GPU clusters. 
+              
+             <br /> We provide a stable, efficient, and scalable computing infrastructure essential for the AI era
             </p>
           </SlideUp>
           <SlideUp>
@@ -178,11 +181,18 @@ export default function AboutPage() {
             </h2>
           </SlideUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            {/* Card 1 - Pursue Efficiency - 占6份 */}
-            <div className="md:col-span-6">
+          <div className="flex gap-6">
+            {/* Card 1 - Pursue Efficiency */}
+            <div
+              className="transform"
+              style={{
+                width: hoveredCard === 'card1' ? '54%' : '25%',
+                transition: 'width 0.3s ease-in-out'
+              }}
+              onMouseEnter={() => setHoveredCard('card1')}
+            >
               <SlideUp>
-                <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer"
+                <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
                   onClick={(e) => {
                     e.stopPropagation();
                     setIsExpanded(!isExpanded);
@@ -194,51 +204,63 @@ export default function AboutPage() {
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
                     <h3 className="text-xl font-bold mb-3 leading-tight">
                       Pursue Efficiency Through Open and Clear Communication
                     </h3>
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm opacity-90 mb-2 flex-1">
-                        We encourage candid expression, quick alignment, and transparent collaboration to ensure every conversation drives progress
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsExpanded(!isExpanded);
-                          }}
-                          style={{ verticalAlign: 'middle' }}
-                          className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                        >
-                          <svg
-                            className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : 'rotate-0'}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                      </p>
-                    </div>
-                    <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'
-                      }`}>
-                      <p className="mb-2">
-                        We value all qualities that enhance efficiency, with open and clear communication being the most important. For example, we want those who can not only propose ideas but also articulate them clearly and drive them to implementation.
-                      </p>
-                      <p>
-                        Focus, excellence, experimentation, and rapid execution all rely on effective communication.
-                      </p>
-                    </div>
+
+                    {/* 只有悬停的卡片才显示详细内容 */}
+                    {hoveredCard === 'card1' && (
+                      <>
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm opacity-90 mb-2 flex-1">
+                            We encourage candid expression, quick alignment, and transparent collaboration to ensure every conversation drives progress
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setIsExpanded(!isExpanded);
+                              }}
+                              style={{ verticalAlign: 'middle' }}
+                              className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
+                            >
+                              <svg
+                                className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : 'rotate-0'}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </button>
+                          </p>
+                        </div>
+                        <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'}`}>
+                          <p className="mb-2">
+                            We value all qualities that enhance efficiency, with open and clear communication being the most important. For example, we want those who can not only propose ideas but also articulate them clearly and drive them to implementation.
+                          </p>
+                          <p>
+                            Focus, excellence, experimentation, and rapid execution all rely on effective communication.
+                          </p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </SlideUp>
             </div>
 
-            {/* Card 2 - Earn Respect - 占3份 */}
-            <div className="md:col-span-3">
+            {/* Card 2 - Earn Respect */}
+            <div
+              className="transform"
+              style={{
+                width: hoveredCard === 'card2' ? '54%' : '25%',
+                transition: 'width 0.3s ease-in-out'
+              }}
+              onMouseEnter={() => setHoveredCard('card2')}
+            >
               <SlideUp>
-                <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer"
+                <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
                   onClick={(e) => {
                     e.stopPropagation();
                     setIsExpanded2(!isExpanded2);
@@ -250,52 +272,62 @@ export default function AboutPage() {
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
                     <h3 className="text-xl font-bold mb-3 leading-tight">
                       Earn Respect with an Ownership Mindset
                     </h3>
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm opacity-90 mb-2 flex-1">
-                        We value respect, and we expect every employee to earn it through proactive action
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsExpanded2(!isExpanded2);
-                          }}
-                          style={{ verticalAlign: 'middle' }}
-                          className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                        >
-                          <svg
-                            className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded2 ? 'rotate-180' : 'rotate-0'}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                      </p>
-
-                    </div>
-                    <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded2 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'
-                      }`}>
-                      <p className="mb-2">
-                        Here, respect is not granted by title—it's earned through action. We have the highest regard for those who roll up their sleeves, dare to experiment, and are willing to be accountable.
-                      </p>
-                      <p>
-                        Taking on a task also means guiding the team to assess risks, make decisions, and solve problems. Even failure is more respectable than inaction.
-                      </p>
-                    </div>
+                    {hoveredCard === 'card2' && (
+                      <>
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm opacity-90 mb-2 flex-1">
+                            We value respect, and we expect every employee to earn it through proactive action
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setIsExpanded2(!isExpanded2);
+                              }}
+                              style={{ verticalAlign: 'middle' }}
+                              className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
+                            >
+                              <svg
+                                className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded2 ? 'rotate-180' : 'rotate-0'}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </button>
+                          </p>
+                        </div>
+                        <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded2 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'
+                          }`}>
+                          <p className="mb-2">
+                            Here, respect is not granted by title—it's earned through action. We have the highest regard for those who roll up their sleeves, dare to experiment, and are willing to be accountable.
+                          </p>
+                          <p>
+                            Taking on a task also means guiding the team to assess risks, make decisions, and solve problems. Even failure is more respectable than inaction.
+                          </p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </SlideUp>
             </div>
 
-            {/* Card 3 - Demonstrate Contribution - 占3份 */}
-            <div className="md:col-span-3">
+            {/* Card 3 - Demonstrate Contribution */}
+            <div
+              className="transform"
+              style={{
+                width: hoveredCard === 'card3' ? '54%' : '25%',
+                transition: 'width 0.3s ease-in-out'
+              }}
+              onMouseEnter={() => setHoveredCard('card3')}
+            >
               <SlideUp>
-                <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer"
+                <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
                   onClick={(e) => {
                     e.stopPropagation();
                     setIsExpanded3(!isExpanded3);
@@ -307,42 +339,46 @@ export default function AboutPage() {
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
                     <h3 className="text-xl font-bold mb-3 leading-tight">
                       Demonstrate Contribution with Measurable Results
                     </h3>
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm opacity-90 mb-2 flex-1">
-                        We value employees' contributions—their actual output and impact on the company
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsExpanded3(!isExpanded3);
-                          }}
-                          style={{ verticalAlign: 'middle' }}
-                          className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                        >
-                          <svg
-                            className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded3 ? 'rotate-180' : 'rotate-0'}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                      </p>
-                    </div>
-                    <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded3 ? 'max-h-[200px] opacity-75' : 'max-h-0 opacity-0'
-                      }`}>
-                      <p className="mb-2">
-                        While we understand the importance of "inputs" like learning, thinking, meetings, and brainstorming, these processes only generate real value when they are translated into "outputs"—concrete actions like documents, proposals, and execution plans.
-                      </p>
-                      <p>
-                        We want all hard work to be channeled into recognizable achievements. Taking accountability, whether for a success or a failure, is in itself a measurable result and a valued contribution.
-                      </p>
-                    </div>
+                    {hoveredCard === 'card3' && (
+                      <>
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm opacity-90 mb-2 flex-1">
+                            We value employees' contributions—their actual output and impact on the company
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setIsExpanded3(!isExpanded3);
+                              }}
+                              style={{ verticalAlign: 'middle' }}
+                              className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
+                            >
+                              <svg
+                                className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded3 ? 'rotate-180' : 'rotate-0'}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </button>
+                          </p>
+                        </div>
+                        <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded3 ? 'max-h-[200px] opacity-75' : 'max-h-0 opacity-0'
+                          }`}>
+                          <p className="mb-2">
+                            While we understand the importance of "inputs" like learning, thinking, meetings, and brainstorming, these processes only generate real value when they are translated into "outputs"—concrete actions like documents, proposals, and execution plans.
+                          </p>
+                          <p>
+                            We want all hard work to be channeled into recognizable achievements. Taking accountability, whether for a success or a failure, is in itself a measurable result and a valued contribution.
+                          </p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </SlideUp>
@@ -371,7 +407,7 @@ export default function AboutPage() {
             <div className="w-full md:w-1/2 p-4">
               <SlideUp>
                 <h2 className="text-3xl sm:text-4xl font-black mb-6 text-gray-600">
-                  What we do
+                  What We Do
                 </h2>
               </SlideUp>
               <SlideUp>
@@ -693,25 +729,25 @@ export default function AboutPage() {
           <div className="relative sm:-mx-3">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {/* News Card 1 */}
-              <Link href={`/events/canopy-confidentialmind-partnership`}>
+              <Link href={`/blog/how-to-choose-the-right-storage-for-your-ai-workflows`}>
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <div className="relative h-48 sm:h-56">
                     <Image
-                      src="/confidentialmind-logo.png"
-                      alt="Canopy Wave and ConfidentialMind Joint Event"
+                      src="/blog/workflows2.png"
+                      alt="How to Choose the Right Storage for Your AI Workflows"
                       fill
-                      className="object-cover"
+                      className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6">
                     <h3 className="text-l font-bold mb-3 text-gray-700">
-                      Canopy Wave and ConfidentialMind Joint Event
+                      How to Choose the Right Storage for Your AI Workflows
                     </h3>
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span className="px-3 py-1 bg-[#8CC63F] hover:bg-[#80B224] text-white text-xs rounded-full">
-                        Events
+                        Article
                       </span>
-                      <span>April 16, 2025</span>
+                      <span>July 25, 2025</span>
                     </div>
                   </div>
                 </div>
@@ -743,25 +779,25 @@ export default function AboutPage() {
               </Link>
 
               {/* News Card 3 */}
-              <Link href={`/blog/how-to-choose-the-right-storage-for-your-ai-workflows`}>
+              <Link href={`/events/canopy-confidentialmind-partnership`}>
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <div className="relative h-48 sm:h-56">
                     <Image
-                      src="/blog/workflows2.png"
-                      alt="How to Choose the Right Storage for Your AI Workflows"
+                      src="/confidentialmind-logo.png"
+                      alt="Canopy Wave and ConfidentialMind Joint Event"
                       fill
-                      className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover"
                     />
                   </div>
                   <div className="p-6">
                     <h3 className="text-l font-bold mb-3 text-gray-700">
-                      How to Choose the Right Storage for Your AI Workflows
+                      Canopy Wave and ConfidentialMind Joint Event
                     </h3>
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span className="px-3 py-1 bg-[#8CC63F] hover:bg-[#80B224] text-white text-xs rounded-full">
-                        Article
+                        Events
                       </span>
-                      <span>July 25, 2025</span>
+                      <span>April 16, 2025</span>
                     </div>
                   </div>
                 </div>
