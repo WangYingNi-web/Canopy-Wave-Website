@@ -98,7 +98,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
             {/* Banner Section */}
-            <div className="w-full h-[490px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/tutorials/banner2.png"
                     alt="banner"

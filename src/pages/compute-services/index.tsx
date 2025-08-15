@@ -20,7 +20,7 @@ export default function ComputeServicesPage() {
                 <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             {/* Hero Section */}
-            <div className="w-full h-[490px] relative mt-[84px] bg-[#F5F7F4]">
+            <div className="w-full h-[520px] relative mt-[84px] bg-[#F5F7F4]">
                 <Image
                     src="/compute/banner.svg"
                     alt="banner"

@@ -415,10 +415,6 @@ export default function Index() {
                   </svg>
                 </IwsLink>
               </div>
-
-
-
-
             </div>
           </div>
         </div>
@@ -562,6 +558,7 @@ export default function Index() {
             </div>
           </div>
         </div>
+
         {/* Contact Section */}
         <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-32 overflow-hidden">
           {/* 背景图片容器 - 绝对定位覆盖整个区域 */}

@@ -243,7 +243,7 @@ const Tutorials: React.FC = () => {
 
       <main className="min-h-screen bg-[#f9f9f9]">
         {/* Hero Section */}
-        <div className="w-full h-[490px] relative mt-[84px]">
+        <div className="w-full h-[520px] relative mt-[84px]">
           <Image
             src="/tutorials/main-banner.webp"
             alt="banner"

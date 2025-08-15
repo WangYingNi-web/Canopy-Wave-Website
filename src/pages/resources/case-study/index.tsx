@@ -100,7 +100,7 @@ export default function CaseStudyPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[500px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/cloud/banner.png"
                     alt="banner"

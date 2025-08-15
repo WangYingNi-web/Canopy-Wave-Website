@@ -19,7 +19,7 @@ export default function NetworkingServices() {
                 <title>Canopy Wave | InfiniBand Networking</title>
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
-            <div className="w-full h-[490px] relative mt-[84px] bg-[#e7f8e2]">
+            <div className="w-full h-[520px] relative mt-[84px] bg-[#e7f8e2]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0 h-full">
                     <div className="w-full lg:w-1/2 text-center lg:text-left z-10">
                         <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg mb-6">
@@ -40,7 +40,7 @@ export default function NetworkingServices() {
                     <div className="absolute right-0 top-0 w-1/2 h-full lg:block hidden z-10">
                     <SlideUp>
                             <div
-                                className="w-full h-[490px] bg-cover bg-left bg-no-repeat"
+                                className="w-full h-[520px] bg-cover bg-left bg-no-repeat"
                                 style={{
                                     backgroundImage: "url('/networking/infiniband-networking/Data-Centers-Solution-02.png')",
                                     maskImage: "linear-gradient(to right, transparent 0%, rgba(0,128,0,0.6) 8%, rgba(0,128,0,1) 18%)",

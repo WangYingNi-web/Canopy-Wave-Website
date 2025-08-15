@@ -73,7 +73,7 @@ const TutorialLayout4: React.FC = () => {
                     'Press the Win+R shortcut keys to open the Run dialog.',
                     'In the Run dialog, Enter:',
                     '```bash\nSSH username@IP\n```',
-                    'Then enter your SSH password to access the virtual machine. Note that the password wont be displayed as you type it.',
+                    'Then enter your SSH password to access the virtual machine. Note that the password won‘t be displayed as you type it.',
                     '<img src="/tutorials/gpt-oss/ssh.webp" alt="lsb_release -a command output" />',
                     '**2. Download the Ollama platform to run the large language model**',
                     '```bash\ncurl -fsSL https://ollama.com/install.sh | sh\n```',
@@ -116,52 +116,52 @@ const TutorialLayout4: React.FC = () => {
             {/* Recommended GPU Services Section */}
             <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200">
-                Recommended Tutorials
+                    Recommended Tutorials
                 </h3>
                 <div className="space-y-4">
-                     {/* DeepSeek-R1 文章 */}
-                        <div className="bg-gray-50 rounded-lg pb-2">
-                          <a
+                    {/* DeepSeek-R1 文章 */}
+                    <div className="bg-gray-50 rounded-lg pb-2">
+                        <a
                             href="/resources/tutorials/how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm"
                             className="block"
-                          >
+                        >
                             <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
-                              <img
-                                src="/tutorials/result-banner/DeepSeek-R1.png"
-                                alt="DeepSeek-R1 Tutorial"
-                                className="w-full h-full object-cover"
-                              />
+                                <img
+                                    src="/tutorials/result-banner/DeepSeek-R1.png"
+                                    alt="DeepSeek-R1 Tutorial"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
-                          </a>
-                          <a
+                        </a>
+                        <a
                             href="/resources/tutorials/how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm"
                             className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
-                          >
+                        >
                             How to Run DeepSeek-R1 Locally on a Canopy Wave VM?
-                          </a>
-                        </div>
+                        </a>
+                    </div>
 
-                        {/* KIMI-K2 文章 */}
-                        <div className="bg-gray-50 rounded-lg pb-2">
-                          <a
+                    {/* KIMI-K2 文章 */}
+                    <div className="bg-gray-50 rounded-lg pb-2">
+                        <a
                             href="/resources/tutorials/how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm"
                             className="block"
-                          >
+                        >
                             <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden hover:opacity-90 transition-opacity duration-200">
-                              <img
-                                src="/tutorials/kimi-k2/kimi.png"
-                                alt="gpt-oss Tutorial"
-                                className="w-full h-full object-cover"
-                              />
+                                <img
+                                    src="/tutorials/kimi-k2/kimi.png"
+                                    alt="gpt-oss Tutorial"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
-                          </a>
-                          <a
+                        </a>
+                        <a
                             href="/resources/tutorials/how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm"
                             className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
-                          >
+                        >
                             How to Run the KIMI-K2 Locally on a Canopy Wave VM?
-                          </a>
-                        </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -261,7 +261,7 @@ const TutorialLayout4: React.FC = () => {
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800">
             {/* Banner Section */}
-            <div className="w-full h-[490px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/tutorials/gpt-oss/banner.png"
                     alt="banner"
@@ -297,6 +297,23 @@ const TutorialLayout4: React.FC = () => {
                 showRecommendedTutorials={false}
             >
                 <div className="prose prose-lg max-w-none">
+                    {/* Video Section */}
+                    <div>
+                        <SlideUp>
+                            <div className="mb-6">
+                                <div className="aspect-video bg-gray-200 rounded-lg relative overflow-hidden">
+                                    <iframe
+                                        className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                                        src="https://www.youtube.com/embed/oF6QT8TEfMo"
+                                        title="Run the GPT-OSS Locally: Full Guide on Canopy Wave VM (8×HGX H200 GPUs)"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </SlideUp>
+                    </div>
                     {tutorialData.sections.map((section, sectionIndex) => (
                         <section key={sectionIndex} id={`section-${sectionIndex}`} className="mb-12">
                             {section.title && (

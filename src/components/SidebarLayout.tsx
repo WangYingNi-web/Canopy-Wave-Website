@@ -60,7 +60,8 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       const scrollY = window.scrollY;
 
       // 获取关键元素的位置信息
-      const heroSection = document.querySelector('.w-full.h-\\[490px\\]') ||
+      const heroSection = document.querySelector('.w-full.h-\\[520px\\]') ||
+        document.querySelector('.w-full.h-\\[490px\\]') ||
         document.querySelector('.w-full.h-\\[500px\\]') ||
         document.querySelector('[class*="h-["]');
       const mainContentContainer = contentRef.current;
@@ -69,7 +70,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       if (!mainContentContainer || !sidebar) return;
 
       // 动态计算关键位置点
-      const heroHeight = heroSection ? heroSection.getBoundingClientRect().height + 84 : 574; // 84是header高度
+      const heroHeight = heroSection ? heroSection.getBoundingClientRect().height + 84 : 604; // 84是header高度，604 = 520 + 84
       const mainContentRect = mainContentContainer.getBoundingClientRect();
       const mainContentTop = mainContentRect.top + scrollY;
       const mainContentBottom = mainContentRect.bottom + scrollY;

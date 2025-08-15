@@ -213,7 +213,7 @@ const TutorialLayout3: React.FC = () => {
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-800">
             {/* Banner Section */}
-            <div className="w-full h-[490px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/tutorials/kimi-k2/banner.png"
                     alt="banner"

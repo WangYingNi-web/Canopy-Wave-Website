@@ -61,7 +61,7 @@ export default function RoCEv2NetworkingPage() {
                 <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
             </Head>
             {/* Hero Section */}
-            <div className="w-full h-[550px] lg:h-[490px] mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">
+            <div className="w-full h-[550px] lg:h-[520px] mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0 min-h-[400px] lg:min-h-[500px]">
                     <SlideUp>
                         <div className="flex-1 max-w-2xl text-center lg:text-left">

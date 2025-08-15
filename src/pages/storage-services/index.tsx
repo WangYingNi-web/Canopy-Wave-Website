@@ -21,7 +21,7 @@ export default function StorageServices() {
         <link rel="preload" href="/storage/banner.svg" as="image" type="image/svg+xml" />
       </Head>
       {/* Hero Section */}
-      <div className="w-full h-[490px] relative mt-[84px] bg-[#EDF2E4]">
+      <div className="w-full h-[520px] relative mt-[84px] bg-[#EDF2E4]">
         <Image
           src="/storage/banner.svg"
           alt="banner"

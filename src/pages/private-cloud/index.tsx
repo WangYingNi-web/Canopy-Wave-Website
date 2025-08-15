@@ -18,7 +18,7 @@ export default function SolutionsPage() {
             </Head>
             <Header />
 
-            <div className="w-full h-[490px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/solutions-banner.svg"
                     alt="Solutions"

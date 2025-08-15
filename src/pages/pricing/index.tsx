@@ -20,7 +20,7 @@ export default function PricingPage() {
             <Header />
 
             {/* Hero Section */}
-            <div className="w-full h-[490px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"

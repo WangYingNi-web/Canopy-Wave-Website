@@ -135,7 +135,7 @@ export default function Newsroom() {
             </Head>
             <Header />
             {/* Hero Section */}
-            <div className="w-full h-[490px] relative mt-[84px]">
+            <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
                     src="/about/banner.svg"
                     alt="banner"
@@ -194,7 +194,7 @@ export default function Newsroom() {
                             <div className="flex items-center space-x-4 text-sm text-gray-500 mt-auto">
                                 <IwsLink
                                     href={`/blog/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
-                                    className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
+                                    className="px-3 py-1 bg-[#8CC63F] text-white text-sm hover:bg-[#7ab32f] transition-colors"
                                     onClick={(e) => e.stopPropagation()}
                                 >
                                     Article
@@ -262,44 +262,6 @@ export default function Newsroom() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <hr className="border-t border-gray-200" />
             </div>
-
-            {/* Tutorials Section */}
-            {/* <div id='tutorials' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="flex justify-between items-center mb-8">
-                    <SlideUp>
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Tutorials</h2>
-                    </SlideUp>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {tutorialPosts.map((post) => (
-                        <div key={post.id} className="group cursor-pointer flex flex-col" onClick={() => handleTutorialClick(post.title)}>
-                            <div className="relative mb-4 overflow-hidden rounded-lg shadow-xl">
-                                <div className="relative aspect-[16/9] w-full overflow-hidden">
-                                    <Image
-                                        src={post.image}
-                                        alt={post.title}
-                                        fill
-                                        className="object-cover transition-all duration-300 group-hover:scale-105"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    />
-                                </div>
-                            </div>
-                            <h3 className="text-sm font-semibold text-gray-600 mb-2 flex-grow">{post.title}</h3>
-                            <div className="flex items-center space-x-4 text-sm text-gray-500 mt-auto">
-                                <IwsLink
-                                    href={`/about/newsroom/tutorials/${post.title.toLowerCase().replace(/[\s-]+/g, '-')}`}
-                                    className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full hover:bg-[#7ab32f] transition-colors"
-                                    onClick={(e) => e.stopPropagation()}
-                                >
-                                    Tutorial
-                                </IwsLink>
-                                <span>{post.date}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div> */}
 
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
