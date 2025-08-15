@@ -20,8 +20,8 @@ export default function AboutPage() {
   const [isMobile, setIsMobile] = useState(false);
 
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const [autoPlay, setAutoPlay] = useState(true);
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState('card1');
   const partnerLogos = [
