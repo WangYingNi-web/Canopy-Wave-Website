@@ -873,7 +873,7 @@ export default function AboutPage() {
                 {getExtendedCards().map((card, index) => (
                   <div key={`${card.id}-${Math.floor(index / newsCards.length)}-${index}`} className="w-1/3 flex-shrink-0 custom-500:px-3 md:px-3 sm:px-3 lg:px-3">
                     <Link href={card.href}>
-                      <div className="h-[370px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                      <div className="h-[350px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
                         <div className="relative h-[220px] w-full overflow-hidden">
                           <Image
                             src={card.image}
@@ -884,8 +884,8 @@ export default function AboutPage() {
                             unoptimized={card.image.includes('.webp')}
                           />
                         </div>
-                        <div className="h-[150px] p-6 flex flex-col flex-grow">
-                          <h4 className="text-l font-semibold mb-3 line-clamp-2">
+                        <div className="h-[130px] p-6 flex flex-col flex-grow">
+                          <h4 className="text-sm font-semibold mb-3 line-clamp-2">
                             {card.title}
                           </h4>
                           {/* <p className="text-gray-600 text-sm mb-6 line-clamp-2">{card.description}</p> */}
