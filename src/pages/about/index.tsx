@@ -926,11 +926,11 @@ export default function AboutPage() {
 
       {/* Contact Section */}
       <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
-        <BackgroundTransition
+        {/* <BackgroundTransition
           defaultImage="/contact-section1.webp"
           activeImage="/contact-section2.webp"
           className="w-full h-full"
-        />
+        /> */}
         <div className="relative z-30 container mx-auto px-4">
           <div className="relative max-w-7xl mx-auto">
             <SlideUp>
