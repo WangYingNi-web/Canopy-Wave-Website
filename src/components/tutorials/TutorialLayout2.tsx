@@ -43,6 +43,9 @@ const PreloadedImage: React.FC<{
                 alt={alt}
                 className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
                 showZoomIcon={true}
+                onLoad={() => setIsLoaded(true)}
+                onError={() => setHasError(true)}
+                loading="lazy"
             />
         </div>
     );

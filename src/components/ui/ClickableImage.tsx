@@ -7,13 +7,19 @@ interface ClickableImageProps {
     alt: string
     className?: string
     showZoomIcon?: boolean
+    onLoad?: () => void
+    onError?: () => void
+    loading?: 'lazy' | 'eager'
 }
 
 const ClickableImage: React.FC<ClickableImageProps> = ({
     src,
     alt,
     className = '',
-    showZoomIcon = true
+    showZoomIcon = true,
+    onLoad,
+    onError,
+    loading = 'lazy'
 }) => {
     const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -38,6 +44,9 @@ const ClickableImage: React.FC<ClickableImageProps> = ({
                     src={src}
                     alt={alt}
                     className={`transition-all duration-200 hover:opacity-90 ${className}`}
+                    onLoad={onLoad}
+                    onError={onError}
+                    loading={loading}
                 />
                 {/* 悬停时显示放大图标 */}
                 {showZoomIcon && (
