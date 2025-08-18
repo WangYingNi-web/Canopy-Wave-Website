@@ -7,6 +7,7 @@ import { TutorialPost } from './index'
 import Breadcrumb from '@/components/Breadcrumb'
 import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
+import ClickableImage from '@/components/ui/ClickableImage'
 interface TutorialLayout2Props {
     tutorialPost: TutorialPost
 }
@@ -37,13 +38,11 @@ const PreloadedImage: React.FC<{
             )}
 
             {/* 实际图片 */}
-            <img
+            <ClickableImage
                 src={src}
                 alt={alt}
                 className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
-                onLoad={() => setIsLoaded(true)}
-                onError={() => setHasError(true)}
-                loading="lazy"
+                showZoomIcon={true}
             />
         </div>
     );

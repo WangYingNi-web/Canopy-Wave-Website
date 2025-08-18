@@ -5,6 +5,7 @@ import SidebarLayout from '@/components/SidebarLayout'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
 import Breadcrumb from '@/components/Breadcrumb'
 import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
+import ClickableImage from '@/components/ui/ClickableImage'
 
 const TutorialLayout4: React.FC = () => {
     const breadcrumbItems = useTutorialBreadcrumb()
@@ -177,7 +178,7 @@ const TutorialLayout4: React.FC = () => {
             if (srcMatch) {
                 return (
                     <div className="my-4">
-                        <img
+                        <ClickableImage
                             src={srcMatch[1]}
                             alt={altMatch ? altMatch[1] : ''}
                             className="w-full max-w-full h-auto rounded-lg shadow-md border object-contain"

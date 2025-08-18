@@ -9,6 +9,7 @@ import SidebarLayout from '@/components/SidebarLayout';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
 import Breadcrumb from '@/components/Breadcrumb'
 import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
+import ClickableImage from '@/components/ui/ClickableImage'
 
 interface ApiEndpointProps {
     title: string;
@@ -895,7 +896,7 @@ export default function PlatformPage() {
                             <li>Copy the generated API key for use in future API calls.</li>
                         </ol>
                         <div className="mt-6">
-                            <img src="/cloud/image2.png" alt="API Key Generation" className="w-full h-auto rounded-lg border" />
+                            <ClickableImage src="/cloud/image2.png" alt="API Key Generation" className="w-full h-auto rounded-lg border" />
                         </div>
                     </div>
                 </section>

@@ -149,7 +149,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                                 <div className="text-gray-600 mb-2">Check how much free disk space you have.</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">df -Th</code>
                                             </div>
-                                            <img src="/tutorials/df-Th.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                            <ClickableImage src="/tutorials/df-Th.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
                                         <br />
                                         <SlideUp>
@@ -157,7 +157,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                                 <div className="text-gray-600 mb-2">Check GPU model, quantity, driver version and other information</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">nvidia-smi</code>
                                             </div>
-                                            <img src="/tutorials/nvidia-smi.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                            <ClickableImage src="/tutorials/nvidia-smi.png" alt="df -Th command output" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                             <div className="font-mono text-sm mb-4">
                                                 <code className="bg-gray-200 px-2 py-1 rounded">curl -fsSL https://ollama.com/install.sh | sh</code>
                                             </div>
-                                            <img src="/tutorials/curl-fsSL.png" alt="curl-fsSL" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                            <ClickableImage src="/tutorials/curl-fsSL.png" alt="curl-fsSL" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
                                         <br />
                                         <SlideUp>
@@ -178,7 +178,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                                 <div className='text-gray-600 mb-2'>List the models you've already downloaded.</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama list</code>
                                             </div>
-                                            <img src="/tutorials/ollama-list.png" alt="ollama-list" className="w-full max-w-sm rounded-lg shadow-sm" />
+                                            <ClickableImage src="/tutorials/ollama-list.png" alt="ollama-list" className="w-full max-w-sm rounded-lg shadow-sm" />
                                         </SlideUp>
                                         <br />
                                         <SlideUp>
@@ -186,7 +186,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                                 <div className='text-gray-600 mb-2'>Display the Ollama command-line help.</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama --help</code>
                                             </div>
-                                            <img src="/tutorials/ollama-help.png" alt="ollama-help" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                            <ClickableImage src="/tutorials/ollama-help.png" alt="ollama-help" className="w-full max-w-2xl rounded-lg shadow-sm" />
                                         </SlideUp>
                                     </div>
                                 </div>
@@ -202,7 +202,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
                                                     (Choose the exact model size that matches your hardware.)</div>
                                                 <code className="bg-gray-200 px-2 py-1 rounded">ollama run deepseek-r1</code>
                                             </div>
-                                            <img src="/tutorials/ollama-run.png" alt="ollama-run" className="w-full max-w-2xl rounded-lg shadow-sm" />
+                                            <ClickableImage src="/tutorials/ollama-run.png" alt="ollama-run" className="w-full max-w-2xl rounded-lg shadow-sm" />
 
                                             <p className="text-gray-600 text-sm mt-4">
                                                 You can now interact with your local large language model. To exit, press <code className="bg-gray-200 px-1 rounded">Ctrl + D</code> or type <code className="bg-gray-200 px-1 rounded">/bye</code> in the chat window.

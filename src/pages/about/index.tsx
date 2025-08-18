@@ -19,9 +19,7 @@ export default function AboutPage() {
   const [activeService, setActiveService] = useState('compute');
   const [isMobile, setIsMobile] = useState(false);
   const [showCardContent, setShowCardContent] = useState<string | null>('card1');
-  const [contentTimer, setContentTimer] = useState<NodeJS.Timeout | null>(null);
   const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
-  const [leaveTimer, setLeaveTimer] = useState<NodeJS.Timeout | null>(null);
   const [lastHoveredCard, setLastHoveredCard] = useState<string>('card1');
 
   // 新闻卡片数据
@@ -114,8 +112,6 @@ export default function AboutPage() {
   }, [enterTimer]);
 
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState('card1');
   const partnerLogos = [
