@@ -245,7 +245,7 @@ const Tutorials: React.FC = () => {
         {/* Hero Section */}
         <div className="w-full h-[520px] relative mt-[84px]">
           <Image
-            src="/tutorials/main-banner.webp"
+            src="/about/banner.svg"
             alt="banner"
             fill
             className="object-cover"

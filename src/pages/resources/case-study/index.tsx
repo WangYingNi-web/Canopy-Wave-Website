@@ -102,7 +102,7 @@ export default function CaseStudyPage() {
             {/* Hero Section */}
             <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
-                    src="/cloud/banner.png"
+                    src="/about/banner.svg"
                     alt="banner"
                     fill
                     className="object-cover"
@@ -112,7 +112,7 @@ export default function CaseStudyPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
                             <h1 className="text-4xl sm:text-5xl font-black text-[#80B224] text-center">
-                                Accelerating Protein Engineering with Canopy Wave's GPUaaS
+                                Accelerating Protein Engineering with <br /> Canopy Wave's GPUaaS
                             </h1>
                             <p className="text-gray-600 text-l mt-8 text-center">Foundry BioSciences Case Study</p>
                         </SlideUp>

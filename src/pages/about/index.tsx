@@ -24,6 +24,47 @@ export default function AboutPage() {
   const [leaveTimer, setLeaveTimer] = useState<NodeJS.Timeout | null>(null);
   const [lastHoveredCard, setLastHoveredCard] = useState<string>('card1');
 
+  // 新闻卡片数据
+  const newsCards = [
+    {
+      id: 1,
+      href: "/blog/how-to-choose-the-right-storage-for-your-ai-workflows",
+      image: "/blog/workflows2.png",
+      title: "How to Choose the Right Storage for Your AI Workflows",
+      description: "Choosing the Right Storage Architecture for AI",
+      tag: 'Article',
+      date: "July 25, 2025"
+    },
+    {
+      id: 2,
+      href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",
+      image: "/blog/blog2.png",
+      title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
+      description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
+      tag: 'Article',
+      date: "July 14, 2025"
+    },
+    {
+      id: 3,
+      href: "/events/canopy-confidentialmind-partnership",
+      image: "/confidentialmind-logo.png",
+      title: "Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption",
+      description: "by James Liao @Canopy Wave",
+      tag: 'Events',
+      date: "April 1, 2025"
+    },
+  ];
+
+  // 创建扩展的卡片数组以支持无缝循环
+  const getExtendedCards = () => {
+    // 创建足够多的重复卡片以支持无限滑动
+    const repeats = 20; // 增加重复次数
+    const extended = [];
+    for (let i = 0; i < repeats; i++) {
+      extended.push(...newsCards);
+    }
+    return extended;
+  };
 
 
   // 处理悬停进入的函数
@@ -73,8 +114,6 @@ export default function AboutPage() {
   }, [enterTimer]);
 
 
-
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
@@ -97,13 +136,37 @@ export default function AboutPage() {
     { id: 15, width: 80, height: 70 },
     { id: 16, width: 80, height: 70 },
   ];
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(30); // 设置为扩展数组的中间位置
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const services = [
     { id: 'compute', image: '/about/Link-1.png', title: 'Compute Services', description: 'Canopy Wave uses Virtualization technology to provide world-leading performance GPU for AI training & inference', link: '/compute-services' },
     { id: 'storage', image: '/about/Link-2.png', title: 'Storage Services', description: 'High-performance storage solutions designed for demanding workloads and data-intensive applications', link: '/storage-services' },
     { id: 'networking', image: '/about/Link-3.png', title: 'Networking Services', description: 'Advanced networking infrastructure to connect and optimize your distributed computing resources', link: '/networking-services' },
-    { id: 'platform', image: '/about/Link-4.png', title: 'Platform', description: 'Comprehensive platform solutions for managing and orchestrating your entire infrastructure', link: '/platform' }
+    { id: 'platform', image: '/about/Link-4.png', title: 'Cloud Platform', description: 'Comprehensive platform solutions for managing and orchestrating your entire infrastructure', link: '/platform' }
   ];
+  // 修改自动轮播的useEffect（约第175-201行）
+  useEffect(() => {
+    if (!isCarouselVisible) return; // 如果轮播图不可见，不启动自动轮播
+
+    const services = [
+      { id: 'compute', image: '/about/Link-1.png', title: 'Compute Services', description: 'Canopy Wave uses Virtualization technology to provide world-leading performance GPU for AI training & inference', link: '/compute-services' },
+      { id: 'storage', image: '/about/Link-2.png', title: 'Storage Services', description: 'Flexible storage architecture for any AI or enterprise workload', link: '/storage-services' },
+      { id: 'networking', image: '/about/Link-3.png', title: 'Networking Services', description: 'Get the best RDMA Networking purposely built for AI', link: '/networking-services' },
+      { id: 'platform', image: '/about/Link-4.png', title: 'Platform', description: 'Unlock higher performance and usage out of your clusters for faster time to market', link: '/platform' }
+    ];
+
+    const interval = setInterval(() => {
+      setActiveService(prevService => {
+        const currentIndex = services.findIndex(s => s.id === prevService);
+        const nextIndex = (currentIndex + 1) % services.length;
+        return services[nextIndex].id;
+      });
+    }, 5000); // 5秒间隔
+
+    return () => clearInterval(interval);
+  }, [isCarouselVisible, activeService]); // 添加activeService作为依赖项
+
   useEffect(() => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -139,29 +202,19 @@ export default function AboutPage() {
     };
   }, []);
 
-  // 修改后的自动轮播功能 - 只在轮播图可见时启动
-  useEffect(() => {
-    if (!isCarouselVisible) return; // 如果轮播图不可见，不启动自动轮播
+  const handleNextNews = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentNewsIndex(prev => prev + 1);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
 
-    const services = [
-      { id: 'compute', image: '/about/Link-1.png', title: 'Compute Services', description: 'Canopy Wave uses Virtualization technology to provide world-leading performance GPU for AI training & inference', link: '/compute-services' },
-      { id: 'storage', image: '/about/Link-2.png', title: 'Storage Services', description: 'High-performance storage solutions designed for demanding workloads and data-intensive applications', link: '/storage-services' },
-      { id: 'networking', image: '/about/Link-3.png', title: 'Networking Services', description: 'Advanced networking infrastructure to connect and optimize your distributed computing resources', link: '/networking-services' },
-      { id: 'platform', image: '/about/Link-4.png', title: 'Platform', description: 'Comprehensive platform solutions for managing and orchestrating your entire infrastructure', link: '/platform' }
-    ];
-
-    const interval = setInterval(() => {
-      setActiveService(prevService => {
-        const currentIndex = services.findIndex(s => s.id === prevService);
-        const nextIndex = (currentIndex + 1) % services.length;
-        return services[nextIndex].id;
-      });
-    }, 5000); // 5秒间隔
-
-    return () => clearInterval(interval);
-  }, [isCarouselVisible]); // 依赖于isCarouselVisible
-
-
+  const handlePrevNews = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentNewsIndex(prev => prev - 1);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
   return (
     <main className="min-h-screen relative text-gray-600">
       <Head>
@@ -173,7 +226,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="w-full h-[570px] relative mt-[84px] bg-[#F9F9F9]">
         <Image
-          src="/about/banner.png"
+          src="/about/banner.svg"
           alt="banner"
           fill
           className="object-cover -mt-12"
@@ -182,15 +235,15 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
             <SlideUp>
-              <h1 className="text-4xl sm:text-[54px] font-black text-[#80B224] text-shadow-lg">
+              <h1 className="text-4xl text-center sm:text-[54px] font-black text-[#80B224] text-shadow-lg">
                 Powering the Next Wave of AI
               </h1>
             </SlideUp>
             <SlideUp>
-              <p className="text-gray-600 text-l mt-8 block sm:hidden">
+              <p className="text-gray-600 text-center text-l mt-8 block sm:hidden">
                 Instant On-demand GPU Cluster for Enterprise AI
               </p>
-              <p className="text-gray-600 text-l mt-8 hidden sm:block">
+              <p className="text-gray-600 text-center text-l mt-8 hidden sm:block">
                 Instant On-demand GPU Cluster for Enterprise AI
               </p>
             </SlideUp>
@@ -529,7 +582,7 @@ export default function AboutPage() {
                   { id: 'compute', label: 'Compute Services' },
                   { id: 'storage', label: 'Storage Services' },
                   { id: 'networking', label: 'Networking Services' },
-                  { id: 'platform', label: 'Platform' }
+                  { id: 'platform', label: 'Cloud Platform' }
                 ].map((service) => (
                   <button
                     key={service.id}
@@ -674,7 +727,7 @@ export default function AboutPage() {
                   { id: 'compute', image: '/about/Link-1.png', title: 'Compute Services', description: 'Canopy Wave uses Virtualization technology to provide world-leading performance GPU for AI training & inferenc' },
                   { id: 'storage', image: '/about/Link-2.png', title: 'Storage Services', description: 'Flexible storage architecture for any AI or enterprise workload' },
                   { id: 'networking', image: '/about/Link-3.png', title: 'Networking Services', description: 'Get the best RDMA Networking purposely built for AI' },
-                  { id: 'platform', image: '/about/Link-4.png', title: 'Platform', description: 'Unlock higher performance and usage out of your clusters for faster time to market' }
+                  { id: 'platform', image: '/about/Link-4.png', title: 'Clou d', description: 'Unlock higher performance and usage out of your clusters for faster time to market' }
                 ].map((service) => (
                   <button
                     key={service.id}
@@ -809,82 +862,64 @@ export default function AboutPage() {
 
           {/* News Cards Carousel */}
           <div className="relative sm:-mx-3">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {/* News Card 1 */}
-              <Link href={`/blog/how-to-choose-the-right-storage-for-your-ai-workflows`}>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-48 sm:h-56">
-                    <Image
-                      src="/blog/workflows2.png"
-                      alt="How to Choose the Right Storage for Your AI Workflows"
-                      fill
-                      className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentNewsIndex * (100 / 3)}%)`,
+                  minWidth: '1250px'
+                }}
+              >
+                {getExtendedCards().map((card, index) => (
+                  <div key={`${card.id}-${Math.floor(index / newsCards.length)}-${index}`} className="w-1/3 flex-shrink-0 custom-500:px-3 md:px-3 sm:px-3 lg:px-3">
+                    <Link href={card.href}>
+                      <div className="h-[370px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+                        <div className="relative h-[220px] w-full overflow-hidden">
+                          <Image
+                            src={card.image}
+                            alt={`${card.title} Image`}
+                            fill
+                            sizes="(max-width: 640px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            unoptimized={card.image.includes('.webp')}
+                          />
+                        </div>
+                        <div className="h-[150px] p-6 flex flex-col flex-grow">
+                          <h4 className="text-l font-semibold mb-3 line-clamp-2">
+                            {card.title}
+                          </h4>
+                          {/* <p className="text-gray-600 text-sm mb-6 line-clamp-2">{card.description}</p> */}
+                          <div className="flex flex-wrap items-center gap-4 mt-auto">
+                            <span className="px-3 py-1 bg-[#8CC63F] text-white text-sm rounded-full">{card.tag}</span>
+                            <span className="text-gray-500 text-sm">{card.date}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-l font-bold mb-3 text-gray-700">
-                      How to Choose the Right Storage for Your AI Workflows
-                    </h3>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span className="px-3 py-1 bg-[#8CC63F] hover:bg-[#80B224] text-white text-xs rounded-full">
-                        Article
-                      </span>
-                      <span>July 25, 2025</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* News Card 2 */}
-              <Link href={`/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72`}>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-48 sm:h-56">
-                    <Image
-                      src="/blog/blog2.png"
-                      alt="Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-l font-bold mb-3 text-gray-700">
-                      Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72
-                    </h3>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span className="px-3 py-1 bg-[#8CC63F] hover:bg-[#80B224] text-white text-xs rounded-full">
-                        Article
-                      </span>
-                      <span>July 14, 2025</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* News Card 3 */}
-              <Link href={`/events/canopy-confidentialmind-partnership`}>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-48 sm:h-56">
-                    <Image
-                      src="/confidentialmind-logo.png"
-                      alt="Canopy Wave and ConfidentialMind Joint Event"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-l font-bold mb-3 text-gray-700">
-                      Canopy Wave and ConfidentialMind Joint Event
-                    </h3>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span className="px-3 py-1 bg-[#8CC63F] hover:bg-[#80B224] text-white text-xs rounded-full">
-                        Events
-                      </span>
-                      <span>April 16, 2025</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+                ))}
+              </div>
             </div>
+            {/* Navigation Buttons - Always visible */}
+            <button
+              onClick={handlePrevNews}
+              disabled={isTransitioning}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10 disabled:opacity-50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              onClick={handleNextNews}
+              disabled={isTransitioning}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 z-10 disabled:opacity-50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
