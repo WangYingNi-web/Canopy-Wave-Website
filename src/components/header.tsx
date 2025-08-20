@@ -391,7 +391,7 @@ export default function Header() {
                         <li>
                           <div>
                             <IwsLink href="/data-center/iceland" className="text-gray-600 hover:text-[#8CC63F] flex items-center" onClick={() => { setShowDataCenter(false) }}>
-                              Our Datacenter
+                              Our Data Center
                               {/* <svg
                                 className="w-4 h-4 ml-1"
                                 fill="none"
@@ -862,7 +862,7 @@ export default function Header() {
                       className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
                       onClick={() => window.location.href = '/data-center/iceland'}
                     >
-                      <span>Our Datacenter</span>
+                      <span>Our Data Center</span>
                       <svg
                         className={`w-4 h-4 transform transition-transform duration-200`}
                         fill="none"
