@@ -25,16 +25,13 @@ const ClickableImage: React.FC<ClickableImageProps> = ({
 
     const handleImageClick = (e: React.MouseEvent) => {
         setIsModalOpen(true);
-        console.log('isModalOpen状态:', isModalOpen);
     };
 
     const handleCloseModal = () => {
         setIsModalOpen(false)
-        console.log('Modal state22222:', isModalOpen);
     }
 
     useEffect(() => {
-        console.log('Modal state changed:', isModalOpen);
     }, [isModalOpen]);
 
     return (

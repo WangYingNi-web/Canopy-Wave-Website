@@ -23,7 +23,6 @@ const ImageModal: React.FC<ImageModalProps> = ({ src, alt, isOpen, onClose }) =>
     const handleZoomIn = () => setScale(prev => Math.min(prev + 0.1, 3));
     const handleZoomOut = () => setScale(prev => Math.max(prev - 0.1, 0.5));
     useEffect(() => {
-        console.log('ImageModal isOpen:', isOpen);
     }, [isOpen]);
     useEffect(() => {
         setMounted(true)

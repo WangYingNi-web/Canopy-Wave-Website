@@ -68,7 +68,6 @@ export default function AboutPage() {
   // 处理悬停进入的函数
   const handleCardHover = (cardId: string) => {
     setHoveredCard(cardId);
-    console.log(cardId, "cardId进入的");
 
     // 如果进入的是不同的卡片，立即隐藏之前的内容
     if (showCardContent && showCardContent !== cardId) {
@@ -91,7 +90,6 @@ export default function AboutPage() {
 
   // 处理悬停离开的函数
   const handleCardLeave = (cardId: string) => {
-    console.log(cardId, "cardId离开的");
 
     // 离开时只清除进入定时器，不隐藏内容
     // if (enterTimer) {
@@ -173,6 +171,9 @@ export default function AboutPage() {
 
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
+
+  console.log(isMobile,"isMobile");
+  
 
   // 新增：监听Services Carousel是否进入视口
   useEffect(() => {
@@ -285,12 +286,12 @@ export default function AboutPage() {
             </h2>
           </SlideUp>
 
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-col md:flex-row">
             {/* Card 1 - Pursue Efficiency */}
             <div
               className="transform"
               style={{
-                width: hoveredCard === 'card1' ? '54%' : '25%',
+                width: isMobile ? '100%' : (hoveredCard === 'card1' ? '54%' : '25%'),
                 transition: 'width 0.6s ease-in-out'
               }}
               onMouseEnter={() => handleCardHover('card1')}
@@ -366,7 +367,7 @@ export default function AboutPage() {
             <div
               className="transform"
               style={{
-                width: hoveredCard === 'card2' ? '54%' : '25%',
+                width: isMobile ? '100%' : (hoveredCard === 'card2' ? '54%' : '25%'),
                 transition: 'width 0.6s ease-in-out'
               }}
               onMouseEnter={() => handleCardHover('card2')}
@@ -443,8 +444,8 @@ export default function AboutPage() {
             <div
               className="transform"
               style={{
-                width: hoveredCard === 'card3' ? '54%' : '25%',
-                transition: 'width 0.3s ease-in-out'
+                width: isMobile ? '100%' : (hoveredCard === 'card3' ? '54%' : '25%'),
+                transition: 'width 0.6s ease-in-out'
               }}
               onMouseEnter={() => handleCardHover('card3')}
               onMouseLeave={() => handleCardLeave('card3')}
