@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { log } from 'console';
 
 export const useScrollToHash = () => {
   const router = useRouter();

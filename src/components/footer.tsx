@@ -13,7 +13,6 @@ export default function Footer() {
         const currentUrl = window.location.href
         const encodedUrl = encodeURIComponent(currentUrl)
         const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&shareUrl=${encodedUrl}`
-        console.log(shareUrl, "shareUrl");
 
         // 打开新窗口
         window.open(shareUrl, '_blank', 'noopener,noreferrer')

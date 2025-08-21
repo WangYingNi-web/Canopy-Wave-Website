@@ -13,7 +13,6 @@ export default function BlogDetail() {
   const { title } = router.query
 
   const fullUrl = `https://canopy-wave-website.vercel.app/${router.asPath}`;
-  console.log(fullUrl,"fullUrl");
   
 
   const getBlogPost = (title: string): BlogPost | null => {
@@ -184,7 +183,6 @@ export default function BlogDetail() {
                     borderCollapse: 'collapse',
                     marginTop: '20px',
                     marginBottom: '20px',
-                    border: '1px solid #ddd'
                   }
                 }, [
                   React.createElement('thead', { key: 'thead' },
@@ -415,7 +413,7 @@ export default function BlogDetail() {
                     borderCollapse: 'collapse',
                     marginTop: '20px',
                     marginBottom: '20px',
-                    border: '1px solid #ddd'
+                    // border: '1px solid #ddd'
                   }
                 }, [
                   React.createElement('thead', { key: 'tech-thead' },

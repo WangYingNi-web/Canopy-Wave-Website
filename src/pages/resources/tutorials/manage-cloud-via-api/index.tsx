@@ -830,7 +830,7 @@ export default function PlatformPage() {
         </div>
     )
     return (
-        <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
+        <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative">
             <Head>
                 <title>Canopy Wave - API Documentation</title>
             </Head>

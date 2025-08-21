@@ -172,7 +172,6 @@ export default function AboutPage() {
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
-  console.log(isMobile,"isMobile");
   
 
   // 新增：监听Services Carousel是否进入视口

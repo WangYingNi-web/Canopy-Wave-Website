@@ -49,7 +49,6 @@ export default function BackgroundTransition({
     };
     
     activeImg.onerror = () => {
-      console.error(`Failed to load active image: ${activeImage}`);
       if (isMounted) {
         setIsLoaded(true);
         setActiveImageLoaded(false);

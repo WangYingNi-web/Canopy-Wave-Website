@@ -58,7 +58,13 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
     // 页面滚动处理函数 - 控制Sidebar位置
     const handlePageScroll = () => {
       const scrollY = window.scrollY;
+      const screenWidth = window.innerWidth;
 
+      // 在小屏幕下（小于1280px），使用简单的sticky定位，避免复杂计算
+      if (screenWidth < 1280) {
+        setSidebarPosition('sticky');
+        return;
+      }
       // 获取关键元素的位置信息
       const heroSection = document.querySelector('.w-full.h-\\[520px\\]') ||
         document.querySelector('.w-full.h-\\[490px\\]') ||
@@ -70,7 +76,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       if (!mainContentContainer || !sidebar) return;
 
       // 动态计算关键位置点
-      const heroHeight = heroSection ? heroSection.getBoundingClientRect().height + 84 : 604; // 84是header高度，604 = 520 + 84
+      const heroHeight = heroSection ? heroSection.getBoundingClientRect().height + 84 : 604;
       const mainContentRect = mainContentContainer.getBoundingClientRect();
       const mainContentTop = mainContentRect.top + scrollY;
       const mainContentBottom = mainContentRect.bottom + scrollY;
@@ -86,7 +92,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       const bottomThreshold = 300; // 距离底部300px时调整位置
 
       // 判断sidebar是否会超出内容区域底部
-      const wouldExceedBottom = scrollY + sidebarHeight + 96 > mainContentBottom; // 96是top-24的像素值
+      const wouldExceedBottom = scrollY + sidebarHeight + 96 > mainContentBottom;
 
       if (wouldExceedBottom && distanceToBottom < bottomThreshold) {
         // 当sidebar会超出内容底部且接近底部时，使用绝对定位
@@ -298,7 +304,6 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
                               <div
                                 className="w-full h-full cursor-pointer"
                                 onClick={() => {
-                                  console.log('Video clicked, setting showVideo2 to true');
                                   setShowVideo2(true);
                                 }}
                               >
