@@ -32,7 +32,7 @@ const TutorialLayout1: React.FC<TutorialLayout1Props> = ({ tutorialPost }) => {
 
     return (
         <>
-            <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative overflow-x-hidden">
+            <main className="min-h-screen bg-[#F9F9F9] text-gray-800 relative">
                 {/* Banner Section */}
                 <div className="w-full h-[520px] relative mt-[84px]">
                     <Image
