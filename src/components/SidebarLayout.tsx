@@ -97,6 +97,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       if (wouldExceedBottom && distanceToBottom < bottomThreshold) {
         // 当sidebar会超出内容底部且接近底部时，使用绝对定位
         setSidebarPosition('absolute-bottom');
+        
       }
       else if (scrollY >= startFixedThreshold) {
         // 当滚动超过hero区域时，使用固定定位
@@ -105,6 +106,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
       else {
         // 在页面顶部时，使用粘性定位
         setSidebarPosition('sticky');
+        
       }
     };
 
@@ -175,20 +177,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
         return `${baseClasses} lg:sticky lg:top-24`;
     }
   };
-  // 新增：动态计算右侧边栏的样式
-  const getRightSidebarStyles = () => {
-    const baseClasses = 'lg:w-20 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto transition-all duration-300';
-
-    switch (sidebarPosition) {
-      case 'fixed':
-        return `${baseClasses} lg:fixed lg:top-24 lg:z-10 lg:right-[calc((100vw-1280px)/2)]`;
-      case 'absolute-bottom':
-        return `${baseClasses} lg:absolute lg:bottom-0 lg:z-10`;
-      case 'sticky':
-      default:
-        return `${baseClasses} lg:sticky lg:top-24`;
-    }
-  };
+  
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-10 mb-12" ref={contentRef}>

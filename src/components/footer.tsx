@@ -17,11 +17,14 @@ export default function Footer() {
         // 打开新窗口
         window.open(shareUrl, '_blank', 'noopener,noreferrer')
     }
+    const getContainerMaxWidth = () => {
+        return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-8xl' : 'max-w-7xl';
+    };
     return (
         <footer className="border-t bg-[#F9F9F9]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div className={`${getContainerMaxWidth()} mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12`}>
                 <div className="flex flex-col lg:flex-row">
-                    <div className="w-full lg:w-1/5 flex flex-col space-y-4 mb-8 lg:mb-0 -mt-[13px]">
+                    <div className="w-full lg:w-1/4 flex flex-col space-y-4 mb-8 lg:mb-0 -mt-[13px]">
                         <div className="flex items-center">
                             <IwsLink href="/" className="flex items-center">
                                 <Image
@@ -74,7 +77,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="w-full lg:w-4/5 lg:flex lg:justify-end">
+                    <div className="w-full lg:w-3/4 lg:flex lg:justify-end">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-end gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-8 lg:gap-x-16 lg:gap-y-0">
                             <div className="space-y-8 min-w-[140px]">
                                 <div>
@@ -127,6 +130,7 @@ export default function Footer() {
                                         {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li> */}
                                         <li><IwsLink href="/resources/tutorials" className="text-gray-500 hover:text-gray-700">Tutorials</IwsLink></li>
                                         <li><IwsLink href="/resources/case-study" className="text-gray-500 hover:text-gray-700">Case Studies</IwsLink></li>
+                                        <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-gray-500 hover:text-gray-700">Docs</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>

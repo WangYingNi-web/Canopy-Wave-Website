@@ -5,6 +5,21 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* Google Analytics */}
+          {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `,
+            }}
+          /> */}
           <meta name="google-site-verification" content="F3XLs-Z8W-Xk9Azc2s3DDj_YYPrSx68ICZic4GKyhoE" />
           {/* 添加 Zendesk Widget 脚本 */}
           {/* <script
@@ -12,7 +27,7 @@ class MyDocument extends Document {
             src="https://static.zdassets.com/ekr/snippet.js?key=5add6091-74b0-4922-b931-e76bf7e10a24"
             async
           ></script> */}
-          
+
           <meta charSet="UTF-8" />
 
           {/* 添加版本号或时间戳来防止缓存 */}

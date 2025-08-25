@@ -42,7 +42,6 @@ export default function Header() {
   const datacenterRef = useRef<HTMLDivElement>(null);
   const resourcesRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-
   const closeMobileMenu = () => {
     setIsOpen(false);
     setShowMobileProducts(false);
@@ -52,6 +51,9 @@ export default function Header() {
     setShowMobileResources(false);
     setShowMobileAbout(false);
     setShowMobileSubMenu(null);
+  };
+  const getContainerMaxWidth = () => {
+    return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-8xl' : 'max-w-7xl';
   };
 
   useEffect(() => {
@@ -84,7 +86,7 @@ export default function Header() {
 
   return (
     <nav className="bg-[#F9F9F9] border-y-2 border-gray-200 fixed top-0 left-0 right-0 z-50 py-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`${getContainerMaxWidth()} mx-auto px-4 sm:px-6 lg:px-8`}>
         <div className="flex items-center justify-between h-16">
           {/* 左侧 logo */}
           <div className="flex-shrink-0 flex items-center w-[140px] md:w-[160px] lg:w-[180px]">
@@ -449,6 +451,7 @@ export default function Header() {
                         {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-600 hover:text-gray-900 text-sm">Manage Cloud Via API</IwsLink></li> */}
                         <li><IwsLink href="/resources/tutorials" className="text-gray-600 hover:text-gray-900 text-sm">Tutorials</IwsLink></li>
                         <li><IwsLink href="/resources/case-study" className="text-gray-600 hover:text-gray-900 text-sm">Case Studies</IwsLink></li>
+                        <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-gray-600 hover:text-gray-900 text-sm">Docs</IwsLink></li>
                       </ul>
                     </div>
                   </div>
@@ -919,6 +922,7 @@ export default function Header() {
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
                 <li><IwsLink href="/resources/tutorials" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Tutorials</IwsLink></li>
                 <li><IwsLink href="/resources/case-study" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Case Studies</IwsLink></li>
+                <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Docs</IwsLink></li>
               </ul>
             )}
           </div>

@@ -8,6 +8,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
 import ClickableImage from '@/components/ui/ClickableImage'
+// import DocumentFeedback from '../DocumentFeedback';
 interface TutorialLayout2Props {
     tutorialPost: TutorialPost
 }
@@ -123,6 +124,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
                 <SlideUp>
                     <Breadcrumb items={breadcrumbItems} />
+                    {/* <DocumentFeedback pageTitle={tutorialPost.title} /> */}
                 </SlideUp>
             </div>
 
