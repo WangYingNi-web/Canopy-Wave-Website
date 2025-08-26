@@ -4,12 +4,14 @@ import Footer from '@/components/footer';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
 import DocumentFeedback from '@/components/DocumentFeedback';
+import { useRouter } from 'next/router';
 
 interface NavigationItem {
     id: string;
     label: string;
     href?: string;
     children?: NavigationItem[];
+    isDivider?: boolean; // 添加分隔线标识
 }
 
 interface JumpToItem {
@@ -38,10 +40,23 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
     children,
     pageTitle
 }) => {
-    const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+    const router = useRouter();
+    const getInitialExpandedItems = () => {
+        const expanded = new Set<string>();
+        const addExpandedItems = (items: NavigationItem[]) => {
+            items.forEach(item => {
+                if (item.children && item.children.length > 0) {
+                    expanded.add(item.id);
+                    // 递归处理嵌套的子项
+                    addExpandedItems(item.children);
+                }
+            });
+        };
+        addExpandedItems(leftNavItems);
+        return expanded;
+    };
+    const [expandedItems, setExpandedItems] = useState<Set<string>>(getInitialExpandedItems());
     const [activeSection, setActiveSection] = useState('');
-    const [leftSidebarPosition, setLeftSidebarPosition] = useState('fixed');
-    //   const [rightSidebarPosition, setRightSidebarPosition] = useState('fixed');
     const contentRef = useRef<HTMLDivElement>(null);
     const leftSidebarRef = useRef<HTMLDivElement>(null);
     const rightSidebarRef = useRef<HTMLDivElement>(null);
@@ -52,9 +67,28 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
         if (element) {
             const headerHeight = 64; // Header高度
             const extraOffset = 20;
-            const totalOffset = headerHeight + extraOffset;
+            const rightSidebar = rightSidebarRef.current;
+
+            // 获取右侧边栏高度
+            const sidebarHeight = rightSidebar ? rightSidebar.getBoundingClientRect().height : 0;
+            const viewportHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            // 计算元素位置
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - totalOffset;
+            let offsetPosition = elementPosition - headerHeight - extraOffset;
+
+            // 如果滚动到这个位置会让右侧边栏超出视线，则调整偏移量
+            const maxScrollPosition = documentHeight - viewportHeight;
+            const sidebarBottomPosition = offsetPosition + sidebarHeight + headerHeight + extraOffset;
+
+            // 如果边栏底部会超出文档底部，调整滚动位置
+            if (sidebarBottomPosition > documentHeight) {
+                offsetPosition = Math.max(0, documentHeight - viewportHeight - 50); // 留50px缓冲
+            }
+
+            // 确保不会滚动超过最大位置
+            offsetPosition = Math.min(offsetPosition, maxScrollPosition);
 
             window.scrollTo({
                 top: offsetPosition,
@@ -80,57 +114,18 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
             // 小屏幕下使用简单定位
             if (screenWidth < 1280) {
-                setLeftSidebarPosition('sticky');
+                setSidebarPosition('sticky');
                 setRightSidebarPosition('sticky');
                 return;
             }
 
-            // 获取关键元素
-            const mainContentContainer = contentRef.current;
-            const leftSidebar = leftSidebarRef.current;
-            const rightSidebar = rightSidebarRef.current;
-            const footerElement = document.querySelector('footer');
-
-            if (!mainContentContainer || !leftSidebar || !rightSidebar || !footerElement) return;
-
-            // 计算关键位置
-            const headerHeight = 64;
-            const mainContentRect = mainContentContainer.getBoundingClientRect();
-            const mainContentTop = mainContentRect.top + scrollY;
-            const mainContentBottom = mainContentRect.bottom + scrollY;
-            const footerTop = footerElement.offsetTop;
-
-            const leftSidebarHeight = leftSidebar.getBoundingClientRect().height;
-            const rightSidebarHeight = rightSidebar.getBoundingClientRect().height;
-            const windowHeight = window.innerHeight;
-            const windowBottom = scrollY + windowHeight;
-
-            // 计算距离屏幕底部的距离
-            const documentHeight = document.documentElement.scrollHeight;
-            const distanceToBottom = documentHeight - windowBottom;
-            const bottomThreshold = 200; // 距离底部200px时切换
-
-            // 判断左侧边栏是否会超出内容区域
-            const leftWouldExceedBottom = scrollY + leftSidebarHeight + headerHeight > footerTop - bottomThreshold;
-            const rightWouldExceedBottom = scrollY + rightSidebarHeight + headerHeight > footerTop - bottomThreshold;
-            // 简化逻辑：只要距离底部小于等于200px就切换为absolute
-            const shouldSwitchToAbsolute = distanceToBottom <= bottomThreshold;
-            // 左侧边栏定位逻辑
-            if (distanceToBottom < 100) {
-                setLeftSidebarPosition('absolute');
-            } else if (scrollY >= headerHeight) {
-                setLeftSidebarPosition('fixed');
-            } else {
-                setLeftSidebarPosition('sticky');
-            }
-
-            // 右侧边栏定位逻辑
-            if (distanceToBottom < 100) {
-                setRightSidebarPosition('absolute');
-            } else if (scrollY >= headerHeight) {
-                setRightSidebarPosition('fixed');
-            } else {
+            // 简化的定位逻辑：滚动150px后从fixed变为sticky
+            if (scrollY > 110) {
+                setSidebarPosition('sticky');
                 setRightSidebarPosition('sticky');
+            } else {
+                setSidebarPosition('fixed');
+                setRightSidebarPosition('fixed');
             }
 
             // 章节高亮逻辑
@@ -160,8 +155,6 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
             if (currentSection && currentSection !== activeSection) {
                 setActiveSection(currentSection);
             }
-
-            console.log('distanceToBottom:', distanceToBottom, 'shouldSwitch:', shouldSwitchToAbsolute);
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -180,48 +173,54 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
     // 动态计算左侧边栏样式
     const getLeftSidebarStyles = () => {
-        const baseClasses = 'lg:w-[340px] lg:max-h-[calc(100vh-150px)] lg:overflow-y-auto transition-all duration-300';
+        const baseClasses = 'lg:w-[280px] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300';
 
         switch (sidebarPosition) {
             case 'fixed':
-                return `${baseClasses} lg:fixed lg:top-24 lg:z-10`;
-            case 'absolute-bottom':
-                return `${baseClasses} lg:absolute lg:bottom-0 lg:z-10`;
+                return `${baseClasses} lg:sticky lg:top-24 lg:left-0 lg:z-10`;
             case 'sticky':
             default:
-                return `${baseClasses} lg:sticky lg:top-24`;
+                return `${baseClasses} lg:sticky lg:top-2`;
         }
     };
 
     // 动态计算右侧边栏样式
     const getRightSidebarStyles = () => {
-        const baseClasses = 'lg:w-[358px] lg:max-h-[calc(100vh-150px)] lg:overflow-y-auto transition-all duration-300';
+        const baseClasses = 'lg:w-[290px] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300';
 
-        switch (sidebarPosition) {
+        switch (rightSidebarPosition) {
             case 'fixed':
-                return `${baseClasses} lg:fixed lg:top-24 lg:z-10`;
-            case 'absolute-bottom':
-                return `${baseClasses} lg:absolute lg:bottom-0 lg:z-10`;
+                return `${baseClasses} lg:sticky lg:top-24 lg:right-0 lg:z-10`;
             case 'sticky':
             default:
-                return `${baseClasses} lg:sticky lg:top-24`;
+                return `${baseClasses} lg:sticky lg:top-2`;
         }
     };
-    console.log(sidebarPosition, "123123");
 
 
     // 渲染导航项的递归函数
     const renderNavItem = (item: NavigationItem, level: number = 0) => {
         const hasChildren = item.children && item.children.length > 0;
         const isExpanded = expandedItems.has(item.id);
-        const paddingLeft = level * 12; // 每级缩进12px
+        const paddingLeft = level * 12;
+        const isCurrentRoute = item.href === router.pathname;
+        if (item.isDivider) {
+            return (
+                <li key={item.id} className="my-3 pl-0">
+                    <hr className="border-gray-300" />
+                </li>
+            );
 
+        }
         return (
             <li key={item.id}>
                 <div className="flex items-center">
                     <a
                         href={item.href || '#'}
-                        className={`flex-1 flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md`}
+                        className={`flex-1 flex items-center px-3 py-2 text-sm rounded-md ${isCurrentRoute
+                                ? 'text-[#80B224]'
+                                : 'text-gray-700 hover:bg-gray-100'
+                            }`}
                         style={{ paddingLeft: `${12 + paddingLeft}px` }}
                     >
                         {item.label}
@@ -264,18 +263,24 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
             <div className="w-full flex" ref={contentRef}>
                 {/* 左侧导航 */}
                 <aside className={getLeftSidebarStyles()} ref={leftSidebarRef}>
-                    <div className="p-2 pl-6">
-                        <nav className="space-y-2">
-                            <div className="mb-6">
-                                {/* <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
-                                    Documentation
-                                </h3> */}
-                                <ul className="space-y-1">
-                                    {leftNavItems.map((item) => renderNavItem(item))}
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+                    <nav className="space-y-2">
+                        <div className="mb-6">
+                            {/* <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                Documentation
+            </h3> */}
+                            <ul className="space-y-1">
+                                {leftNavItems.map((item) =>
+                                    item.isDivider ? (
+                                        renderNavItem(item)
+                                    ) : (
+                                        <div key={`wrapper-${item.id}`} className="p-1 pl-4">
+                                            {renderNavItem(item)}
+                                        </div>
+                                    )
+                                )}
+                            </ul>
+                        </div>
+                    </nav>
                 </aside>
 
                 {/* 中间内容区域 */}
@@ -290,35 +295,22 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             <span>/</span>
                             <span className="text-gray-900">Quick Start</span>
                         </nav>
-                        <div className="w-full h-[280px] relative mb-6">
+                        <div className="w-full relative mb-6 rounded-lg overflow-hidden">
                             <Image
                                 src="/docs/quick-banner.png"
                                 alt="banner"
-                                fill
+                                width={1500}
+                                height={289}
+                                className="object-cover"
                                 priority
                             />
-                            <div className="absolute inset-0 z-10">
-                                <div className="max-w-xl px-4 sm:px-6 lg:px-8 py-20 ">
-                                    <SlideUp>
-                                        <h1 className="text-4xl font-black text-[#222638] text-shadow-lg">
-                                            Document Center
-                                        </h1>
-                                    </SlideUp>
-                                    <SlideUp>
-                                        <p className="text-gray-600 text-l mt-8">
-                                            Recently Updated：Deploy an instance
-                                        </p>
-                                    </SlideUp>
-
-                                </div>
-                            </div>
                         </div>
                         {/* 文章标题 */}
                         <header className="mb-6">
                             <h1 className="text-4xl font-bold text-gray-900 mb-4">
                                 {title}
                             </h1>
-                            <div className="flex items-center justify-between">
+                            <div className="flex items-center justify-between mb-8">
                                 {reviewDate && (
                                     <p className="text-gray-600 text-sm">Reviewed on {reviewDate}</p>
                                 )}
@@ -425,10 +417,8 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             </a>
                         </div>
                     </div>
-
                 </aside>
             </div>
-
             <Footer />
         </main>
     );

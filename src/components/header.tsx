@@ -11,7 +11,7 @@ export default function Header() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState<string>('home');
-
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const [showProducts, setShowProducts] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
@@ -55,7 +55,7 @@ export default function Header() {
   const getContainerMaxWidth = () => {
     return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-8xl' : 'max-w-7xl';
   };
-
+ 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -77,15 +77,28 @@ export default function Header() {
         setShowAbout(false);
       }
     };
+    
+    // 新增滚动监听逻辑
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // 当滚动超过100px时，将header从fixed改为sticky
+      setIsScrolled(scrollY > 100);
+    };
 
     document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <nav className="bg-[#F9F9F9] border-y-2 border-gray-200 fixed top-0 left-0 right-0 z-50 py-2">
+    <nav className={`bg-[#F9F9F9] border-y-2 border-gray-200 z-50 py-2 transition-all duration-300 ${router.pathname === '/resources/docs/cw-cloud-account/quick-start' && isScrolled
+        ? 'sticky -top-[83px]'
+        : 'fixed top-0 left-0 right-0'
+      }`}>
       <div className={`${getContainerMaxWidth()} mx-auto px-4 sm:px-6 lg:px-8`}>
         <div className="flex items-center justify-between h-16">
           {/* 左侧 logo */}
@@ -805,7 +818,7 @@ export default function Header() {
                   <div>
                     <button
                       className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                      onClick={() => window.location.href="/pricing#other"}
+                      onClick={() => window.location.href = "/pricing#other"}
                     >
                       <span>Storage Pricing</span>
                       <svg

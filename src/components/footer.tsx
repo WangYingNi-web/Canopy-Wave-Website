@@ -18,7 +18,7 @@ export default function Footer() {
         window.open(shareUrl, '_blank', 'noopener,noreferrer')
     }
     const getContainerMaxWidth = () => {
-        return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-8xl' : 'max-w-7xl';
+        return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-7xl' : 'max-w-7xl';
     };
     return (
         <footer className="border-t bg-[#F9F9F9]">
