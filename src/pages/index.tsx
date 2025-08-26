@@ -109,9 +109,9 @@ export default function Index() {
     {
       id: 1,
       background: '/home_banner.svg',
-      title: 'Instant GPU',
-      subtitle: 'Cluster for',
-      highlight: 'Enterprise AI',
+      // title: 'Instant GPU',
+      // subtitle: 'Cluster for',
+      // highlight: 'Enterprise AI',
       titleColor: 'text-[#80B224]',
       bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
     },
@@ -187,7 +187,7 @@ export default function Index() {
       <Head>
         <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
         <meta name="description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
-        
+
         {/* 页面特定的Open Graph标签 */}
         <meta property="og:title" content="Canopy Wave - Instant GPU Cluster for Enterprise AI" />
         <meta property="og:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
@@ -215,7 +215,24 @@ export default function Index() {
               {slide.id !== 1 && (
                 <div className="absolute inset-0 bg-black z-0" />
               )}
-              {slide.id === 3 ? (
+
+              {/* 第一张轮播图使用Spline组件 */}
+              {slide.id === 1 ? (
+  <div className="absolute inset-0 z-0">
+    <Spline
+      scene="https://prod.spline.design/Yd0WMoyJ-AyBgshO/scene.splinecode"
+      style={{
+        width: '100% !important',
+        height: '120% !important',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
+      }}
+    />
+  </div>
+              ) : slide.id === 3 ? (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image
                     src={slide.background}
@@ -311,7 +328,7 @@ export default function Index() {
           </div>
           
           <Spline
-            scene="https://prod.spline.design/TjYOaAXtOEc7y-ph/scene.splinecode"
+            scene="https://prod.spline.design/Yd0WMoyJ-AyBgshO/scene.splinecode" 
           />
           <div className="absolute bottom-0 right-0 w-full h-[60px] bg-[#F5F9F4] z-20" />
         </div> */}
@@ -358,7 +375,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <SlideUp>
               <h2 className="text-3xl sm:text-4xl font-black mb-12 sm:mb-16 text-center">
-              NVIDIA GB200 & B200, H100, H200 GPUs<br /> now available
+                NVIDIA GB200 & B200, H100, H200 GPUs<br /> now available
               </h2>
             </SlideUp>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
