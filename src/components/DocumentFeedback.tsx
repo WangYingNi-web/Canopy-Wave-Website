@@ -1,28 +1,48 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js' | 'set',
+      targetId: string | Date,
+      config?: Record<string, any>
+    ) => void;
+    dataLayer: Record<string, any>[];
+  }
+}
 // Google Analytics 事件追踪函数
-const trackFeedbackEvent = (feedback: 'yes' | 'no', pageTitle: string, pagePath: string) => {
+
+const trackFeedbackEvent = (feedbackType: string, pageTitle: string, pagePath: string) => {
+  // 添加调试日志
+  console.log('发送 GA 事件前:', { feedbackType, pageTitle, pagePath });
+  
   // 检查 gtag 是否可用
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'document_feedback', {
-      event_category: 'User Engagement',
+      event_category: 'engagement',
       event_label: pageTitle,
-      feedback_type: feedback,
+      feedback_type: feedbackType,
       page_path: pagePath,
-      value: feedback === 'yes' ? 1 : 0
+      value: feedbackType === 'yes' ? 1 : 0
     });
+    console.log('gtag 事件已发送');
+  } else {
+    console.error('gtag 未定义');
   }
 
-  // 备用方案：发送自定义事件
+  // 检查 dataLayer 是否可用
   if (typeof window !== 'undefined' && window.dataLayer) {
     window.dataLayer.push({
-      event: 'document_feedback',
-      feedback_type: feedback,
-      page_title: pageTitle,
+      event: 'document_feedback_custom',
+      event_category: 'engagement',
+      event_label: pageTitle,
+      feedback_type: feedbackType,
       page_path: pagePath,
-      timestamp: new Date().toISOString()
+      value: feedbackType === 'yes' ? 1 : 0
     });
+    console.log('dataLayer 事件已发送');
+  } else {
+    console.error('dataLayer 未定义');
   }
 };
 

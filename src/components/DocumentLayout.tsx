@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 interface NavigationItem {
     id: string;
-    label: string;
+    label: string | React.ReactNode;
     href?: string;
     children?: NavigationItem[];
     isDivider?: boolean; // 添加分隔线标识
@@ -65,7 +65,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            const headerHeight = 64; // Header高度
+            const headerHeight = 0;
             const extraOffset = 20;
             const rightSidebar = rightSidebarRef.current;
 
@@ -218,8 +218,8 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                     <a
                         href={item.href || '#'}
                         className={`flex-1 flex items-center px-3 py-2 text-sm rounded-md ${isCurrentRoute
-                                ? 'text-[#80B224]'
-                                : 'text-gray-700 hover:bg-gray-100'
+                            ? 'text-[#80B224]'
+                            : 'text-gray-700 hover:bg-gray-100'
                             }`}
                         style={{ paddingLeft: `${12 + paddingLeft}px` }}
                     >
@@ -310,7 +310,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             <h1 className="text-4xl font-bold text-gray-900 mb-4">
                                 {title}
                             </h1>
-                            <div className="flex items-center justify-between mb-8">
+                            <div className="flex items-center justify-between mb-10">
                                 {reviewDate && (
                                     <p className="text-gray-600 text-sm">Reviewed on {reviewDate}</p>
                                 )}
@@ -333,25 +333,28 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                         </article>
 
                         {/* 导航按钮 */}
-                        {/* <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
+                        <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
                             <button className="flex items-center text-gray-600 hover:text-gray-900">
                                 ← Previous
                             </button>
                             <button className="flex items-center text-gray-600 hover:text-gray-900">
                                 Next →
                             </button>
-                        </div> */}
+                        </div>
 
                         {/* 联系信息 */}
-                        {/* <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-                            <p className="text-sm text-gray-600">
-                                If you have questions, please contact our support team at{' '}
-                                <a href="mailto:support@canopywave.com" className="text-[#80B224] hover:text-green-800">
-                                    support@canopywave.com
-                                </a>
-                                , and we will gladly get back to you!
-                            </p>
-                        </div> */}
+                        <div className="bg-[#F0F0F0] p-4 mt-10">
+                            <div className="flex">
+                                <div className="ml-3">
+                                    <p className="text-sm text-gray-700">
+                                      If you encounter any issues, contact our support team at <a href="mailto:support@canopywave.com" className="text-[#80B224] hover:text-[#98c455]">support@canopywave.com</a>. We provide 24/7 assistance.
+                                    </p>
+                                    <p className="text-sm text-gray-700 mt-2">
+                                        Get started now: Launch your H100 and H200 instances by clicking: <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455] underline" target="_blank" rel="noopener noreferrer">https://cloud.canopywave.io/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* Google Analytics */}
-          {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -19,7 +19,7 @@ class MyDocument extends Document {
               });
             `,
             }}
-          /> */}
+          />
           <meta name="google-site-verification" content="F3XLs-Z8W-Xk9Azc2s3DDj_YYPrSx68ICZic4GKyhoE" />
           {/* 添加 Zendesk Widget 脚本 */}
           {/* <script

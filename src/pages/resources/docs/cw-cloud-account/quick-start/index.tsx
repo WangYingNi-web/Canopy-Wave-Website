@@ -1,14 +1,43 @@
 import Head from 'next/head';
 import DocumentLayout from '@/components/DocumentLayout';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
+import Image from 'next/image';
 
 export default function CaseStudyPage() {
     useScrollToHash();
 
+
     const leftNavItems = [
-        { id: 'tutorials', label: '📚 Tutorials', href: '/resources/tutorials' },
-        { id: 'case-studies', label: '📖 Case Studies', href: '/resources/case-study' },
-        { id: 'newsroom', label: '📰 Newsroom', href: '/about/newsroom' },
+        {
+            id: 'tutorials',
+            label: (
+                <span className="flex items-center w-full">
+                    📚 Tutorials
+                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16}  className='ml-2 mt-1'/>
+                </span>
+            ),
+            href: '/resources/tutorials'
+        },
+        {
+            id: 'case-studies',
+            label: (
+                <span className="flex items-center w-full">
+                    📖 Case Studies
+                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16}  className='ml-2 mt-1'/>
+                </span>
+            ),
+            href: '/resources/case-study'
+        },
+        {
+            id: 'newsroom',
+            label: (
+                <span className="flex items-center w-full">
+                    📰 Newsroom
+                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16}  className='ml-2 mt-1'/>
+                </span>
+            ),
+            href: '/about/newsroom'
+        },
         { id: 'divider-1', label: '', isDivider: true }, // 添加分隔线
         {
             id: 'cw-cloud',
@@ -144,7 +173,7 @@ export default function CaseStudyPage() {
                 </ul>
 
                 <h2 id="step5-cost" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    Step 5: Cost monitoring
+                    Step 5: Cost Monitoring
                 </h2>
 
                 <p className="mb-6">
@@ -158,21 +187,16 @@ export default function CaseStudyPage() {
                 <p className="mb-4">
                     If you encounter any issues, contact our support team at <a href="mailto:support@canopywave.com" className="text-[#80B224] hover:text-[#98c455]">support@canopywave.com</a>. <br /> We provide 24/7 assistance.
                 </p> */}
-               
-                <div className="bg-[#F0F0F0] p-4 mt-10">
+
+                {/* <div className="bg-[#F0F0F0] p-4 mt-10">
                     <div className="flex">
-                        {/* <div className="flex-shrink-0">
-                            <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                            </svg>
-                        </div> */}
                         <div className="ml-3">
                             <p className="text-sm text-gray-700">
                                 <strong>Get started now:</strong> Launch your H100 and H200 instances by clicking: <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455] underline" target="_blank" rel="noopener noreferrer">https://cloud.canopywave.io/</a>
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </DocumentLayout>
         </>
     );
