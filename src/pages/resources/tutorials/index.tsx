@@ -42,15 +42,15 @@ const Tutorials: React.FC = () => {
     {
       id: 'ai-workflows',
       category: 'GPU',
-      title: 'H100 vs H200 vs B200: Which GPU for Your Workload',
+      title: 'NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload?',
       image: '/tutorials/workload/workload.png',
       date: 'August 27, 2025',
-      onClick: () => handleTutorialClick('H100 vs H200 vs B200: Which GPU for Your Workload')
+      onClick: () => handleTutorialClick('NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload')
     },
     {
       id: 'storage-guide',
       category: 'Storage',
-      title: 'How to Choose the Right Storage for Your AI Workflows',
+      title: 'How to Choose the Right Storage for Your AI Workflows?',
       image: '/tutorials/workflows/workflows.png',
       date: 'August 27, 2025',
       onClick: () => handleTutorialClick('How to Choose the Right Storage for Your AI Workflows')

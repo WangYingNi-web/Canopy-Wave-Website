@@ -529,7 +529,7 @@ const TutorialLayout6: React.FC = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                         <SlideUp>
                             <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
-                                H100 vs H200 vs B200: <br /> Which GPU for Your Workload?
+                                NVIDIA H100 vs H200 vs B200: <br /> Which GPU for Your Workload?
                             </h1>
                         </SlideUp>
                     </div>

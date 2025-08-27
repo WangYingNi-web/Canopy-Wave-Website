@@ -640,7 +640,7 @@ const TutorialLayout5: React.FC = () => {
             {/* Banner Section */}
             <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
-                    src="/blog/workflows.png"
+                    src="/tutorials/workload/banner.png"
                     alt="AI Storage Tutorial Banner"
                     fill
                     className="object-cover"
