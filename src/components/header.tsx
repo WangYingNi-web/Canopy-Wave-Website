@@ -53,7 +53,7 @@ export default function Header() {
     setShowMobileSubMenu(null);
   };
   const getContainerMaxWidth = () => {
-    return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-8xl' : 'max-w-7xl';
+    return router.pathname.startsWith('/resources/docs/cw-cloud-account') ? 'max-w-8xl' : 'max-w-7xl';
   };
  
   useEffect(() => {
@@ -95,7 +95,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className={`bg-[#F9F9F9] border-y-2 border-gray-200 z-50 py-2 transition-all duration-300 ${router.pathname === '/resources/docs/cw-cloud-account/quick-start' && isScrolled
+    <nav className={`bg-[#F9F9F9] border-y-2 border-gray-200 z-50 py-2 transition-all duration-300 ${router.pathname.startsWith('/resources/docs/cw-cloud-account') && isScrolled
         ? 'sticky -top-[83px]'
         : 'fixed top-0 left-0 right-0'
       }`}>

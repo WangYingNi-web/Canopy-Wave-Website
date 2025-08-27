@@ -21,6 +21,7 @@ interface JumpToItem {
 
 interface DocumentLayoutProps {
     title: string;
+    breadcrumb: string;
     description?: string;
     reviewDate?: string;
     downloadUrl?: string;
@@ -28,17 +29,24 @@ interface DocumentLayoutProps {
     jumpToItems: JumpToItem[];
     children: ReactNode;
     pageTitle?: string;
+    bannerImage?: string;
+    previousPage?: { title: string; href: string }; // 新增
+    nextPage?: { title: string; href: string }; // 新增
 }
 
 const DocumentLayout: React.FC<DocumentLayoutProps> = ({
     title,
+    breadcrumb,
     description,
     reviewDate,
     downloadUrl,
     leftNavItems,
     jumpToItems,
     children,
-    pageTitle
+    pageTitle,
+    bannerImage,
+    previousPage,
+    nextPage,
 }) => {
     const router = useRouter();
     const getInitialExpandedItems = () => {
@@ -171,9 +179,8 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
         };
     }, [jumpToItems, activeSection]);
 
-    // 动态计算左侧边栏样式
     const getLeftSidebarStyles = () => {
-        const baseClasses = 'lg:w-[280px] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300';
+        const baseClasses = 'lg:w-[18%] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300 flex-shrink-0';
 
         switch (sidebarPosition) {
             case 'fixed':
@@ -186,7 +193,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
     // 动态计算右侧边栏样式
     const getRightSidebarStyles = () => {
-        const baseClasses = 'lg:w-[290px] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300';
+        const baseClasses = 'lg:w-[18%] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300 flex-shrink-0';
 
         switch (rightSidebarPosition) {
             case 'fixed':
@@ -218,7 +225,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                     <a
                         href={item.href || '#'}
                         className={`flex-1 flex items-center px-3 py-2 text-sm rounded-md ${isCurrentRoute
-                            ? 'text-[#80B224]'
+                            ? 'text-[#80B224] bg-green-50 hover:bg-green-100'
                             : 'text-gray-700 hover:bg-gray-100'
                             }`}
                         style={{ paddingLeft: `${12 + paddingLeft}px` }}
@@ -284,7 +291,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                 </aside>
 
                 {/* 中间内容区域 */}
-                <div className="flex-1 border-l border-gray-300 py-16">
+                <div className="flex-1 lg:w-[64%] border-l border-gray-300 py-16 min-w-0">
                     <div className="w-full px-8 py-8 pt-12">
                         {/* 面包屑导航 */}
                         <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-6">
@@ -293,18 +300,35 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             <span className="hover:text-gray-700">Docs</span>
                             {/* <a href="/resources/docs/cw-cloud-account/quick-start" className="hover:text-gray-700">Docs</a> */}
                             <span>/</span>
-                            <span className="text-gray-900">Quick Start</span>
+                            <span className="text-gray-900">{breadcrumb}</span>
                         </nav>
-                        <div className="w-full relative mb-6 rounded-lg overflow-hidden">
-                            <Image
-                                src="/docs/quick-banner.png"
-                                alt="banner"
-                                width={1500}
-                                height={289}
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
+                        {bannerImage && (
+                            <div className="w-full relative mb-6 rounded-lg overflow-hidden">
+                                <Image
+                                    src={bannerImage}
+                                    alt="banner"
+                                    width={1400}
+                                    height={459}
+                                    className="w-full h-full object-cover"
+                                    priority
+                                />
+                                <div className="absolute inset-0 z-10 flex items-center justify-start pl-8">
+                                    <div className="text-left ml-4">
+                                        <SlideUp>
+                                            <h1 className="text-3xl sm:text-4xl font-bold text-[#222638] text-shadow-lg">
+                                                Document Center
+                                            </h1>
+                                        </SlideUp>
+                                        <SlideUp>
+                                            <p className="text-gray-600 text-l mt-6">
+                                                Recently Updated: <a href="/resources/docs/cw-cloud-account/deploy-an-instance" className='hover:text-[#80B224]'>Deploy an instance</a>
+                                            </p>
+                                        </SlideUp>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
                         {/* 文章标题 */}
                         <header className="mb-6">
                             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -334,12 +358,27 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
                         {/* 导航按钮 */}
                         <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
-                            <button className="flex items-center text-gray-600 hover:text-gray-900">
-                                ← Previous
-                            </button>
-                            <button className="flex items-center text-gray-600 hover:text-gray-900">
-                                Next →
-                            </button>
+                            {previousPage ? (
+                                <button
+                                    onClick={() => router.push(previousPage.href)}
+                                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                                >
+                                    {'<< Previous'}
+                                </button>
+                            ) : (
+                                <div></div>
+                            )}
+
+                            {nextPage ? (
+                                <button
+                                    onClick={() => router.push(nextPage.href)}
+                                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                                >
+                                    {'Next >>'}
+                                </button>
+                            ) : (
+                                <div></div>
+                            )}
                         </div>
 
                         {/* 联系信息 */}
@@ -347,7 +386,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             <div className="flex">
                                 <div className="ml-3">
                                     <p className="text-sm text-gray-700">
-                                      If you encounter any issues, contact our support team at <a href="mailto:support@canopywave.com" className="text-[#80B224] hover:text-[#98c455]">support@canopywave.com</a>. We provide 24/7 assistance.
+                                        If you encounter any issues, contact our support team at <a href="mailto:support@canopywave.com" className="text-[#80B224] hover:text-[#98c455]">support@canopywave.com</a>. We provide 24/7 assistance.
                                     </p>
                                     <p className="text-sm text-gray-700 mt-2">
                                         Get started now: Launch your H100 and H200 instances by clicking: <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455] underline" target="_blank" rel="noopener noreferrer">https://cloud.canopywave.io/</a>

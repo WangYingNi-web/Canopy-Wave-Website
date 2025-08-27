@@ -8,7 +8,6 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { useTutorialBreadcrumb } from '@/hooks/useTutorialBreadcrumb'
 import SocialMediaLinks from '@/components/SocialMediaLinks'
 import ClickableImage from '@/components/ui/ClickableImage'
-// import DocumentFeedback from '../DocumentFeedback';
 interface TutorialLayout2Props {
     tutorialPost: TutorialPost
 }

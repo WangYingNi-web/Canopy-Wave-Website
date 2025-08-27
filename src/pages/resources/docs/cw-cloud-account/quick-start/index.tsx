@@ -44,7 +44,7 @@ export default function CaseStudyPage() {
             label: '☁️ CW Cloud Account',
             children: [
                 { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
-                // { id: 'set-up-instance', label: 'Set up an Instance', href: '#' },
+                { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
                 // { id: 'manage-instance', label: 'Manage Instance', href: '#' }
             ]
         },
@@ -71,7 +71,7 @@ export default function CaseStudyPage() {
         { id: 'step2-deploy', label: 'Deploy an instance' },
         { id: 'step3-access', label: 'Access your instance' },
         { id: 'step4-manage', label: 'Manage your instance' },
-        { id: 'step5-cost', label: 'Cost Monitoring' },
+        { id: 'step5-cost', label: 'Cost monitoring' },
         // { id: 'step6-help', label: 'Need Help' }
     ];
 
@@ -84,12 +84,16 @@ export default function CaseStudyPage() {
 
             <DocumentLayout
                 title="Quick Start"
+                breadcrumb="Quick Start"
                 description="Welcome to the Quick Start Guide! This guide covers the complete configuration process for NVIDIA H100 GPU and NVIDIA H200 GPU instances on both bare metal and virtual machines (VMs), optimized for AI training, machine learning, and high-performance computing workloads. This guide will help you deploy a production-ready environment in just 5 minutes."
                 reviewDate="August 01, 2025"
                 // downloadUrl="#"
+                nextPage={{ title: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' }}
+                // previousPage={{ title: 'Manage Instance', href: '/resources/docs/cw-cloud-account/manage-instance' }}
                 leftNavItems={leftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Quick Start Guide - NVIDIA H100 & H200 GPU Instances"
+                bannerImage="/docs/quick-banner.png"
             >
                 <div className="bg-[#F0F0F0] p-4 mt-10">
                     <div className="flex">
@@ -173,7 +177,7 @@ export default function CaseStudyPage() {
                 </ul>
 
                 <h2 id="step5-cost" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    Step 5: Cost Monitoring
+                    Step 5: Cost monitoring
                 </h2>
 
                 <p className="mb-6">
