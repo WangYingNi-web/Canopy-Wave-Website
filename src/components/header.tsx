@@ -268,8 +268,8 @@ export default function Header() {
                             </IwsLink>
                           </h3>
                           <ul className="space-y-2 text-sm">
-                            <li><IwsLink href="/platform#dcim-platform" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>Canopy DCIM Platform</IwsLink></li>
-                            <li><IwsLink href="/platform#cloud-platform" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>Wave GPU cloud platform</IwsLink></li>
+                            <li><IwsLink href="/platform#dcim-platform" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>Canopy Wave DCIM Platform</IwsLink></li>
+                            <li><IwsLink href="/platform#cloud-platform" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => setShowProducts(false)}>Canopy Wave Cloud Platform</IwsLink></li>
                           </ul>
                         </div>
                       </div>
@@ -716,8 +716,8 @@ export default function Header() {
                     </svg>
                   </IwsLink>
                   <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/platform#dcim-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Canopy DCIM Platform</IwsLink></li>
-                    <li><IwsLink href="/platform#cloud-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Wave GPU cloud platform</IwsLink></li>
+                    <li><IwsLink href="/platform#dcim-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Canopy Wave DCIM Platform</IwsLink></li>
+                    <li><IwsLink href="/platform#cloud-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Canopy Wave Cloud Platform</IwsLink></li>
                   </ul>
                 </li>
 

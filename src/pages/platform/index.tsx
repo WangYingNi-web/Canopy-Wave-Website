@@ -51,7 +51,7 @@ export default function PlatformPage() {
                         {/* 左侧标题部分 */}
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Canopy DCIM</h2>
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Canopy Wave DCIM Platform</h2>
                                 <p className="text-gray-600 mb-8 text-l leading-relaxed">
                                     Empower world-class AI infrastructure with our DCIM (Data Center Infrastructure Management) platform—unlocking peak performance and complete operational visibility
                                 </p>
@@ -119,7 +119,7 @@ export default function PlatformPage() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Wave GPU Cloud Platform</h2>
+                                <h2 className="text-3xl sm:text-4xl font-black mb-6">Canopy Wave Cloud Platform</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-gray-600 text-l">Using Canopy Wave cloud platform to get access to and manage your MULTI-GPU instances</p>

@@ -203,7 +203,7 @@ const TutorialLayout2: React.FC<TutorialLayout2Props> = ({ tutorialPost }) => {
                     <section id="create-vm" className="mb-12">
                         <SlideUp>
                             <h2 className="text-xl font-bold mb-6">
-                                Ⅱ. Create a virtual machine using the Canopy Wave cloud platform.
+                                Ⅱ. Create a virtual machine using the Canopy Wave Cloud Platform.
                             </h2>
                         </SlideUp>
                         <div className="space-y-8 sm:ml-8">

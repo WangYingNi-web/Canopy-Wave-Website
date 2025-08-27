@@ -109,7 +109,7 @@ export default function ComputeServicesPage() {
                             <Image src="/compute/gpus.svg" alt="NVIDIA GPUs" width={36} height={36} className="mb-4 svg-gray" />
                             <h3 className="text-l font-bold mb-4">NVIDIA GPUs</h3>
                             <p className="text-gray-600 text-l">
-                                Featuring access to NVIDIA HGX H100, HGX H200, with connections of NVLINKS and 400G RoCEV2 or InfiniBand networking
+                                Featuring access to NVIDIA HGX H100, HGX H200, with connections of NVLinks and 400G RoCEv2 or InfiniBand networking
                             </p>
                         </div>
 
@@ -505,7 +505,7 @@ export default function ComputeServicesPage() {
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">Bare metal GPU cluster in private cloud</h2>
                                 <p className="text-gray-600 mb-8 text-l">
-                                    Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEV2 networking
+                                    Private, secure GPU cluster for large AI deployments. Short or long term contracts for 256 to 2000 GPUs in InfiniBand or RoCEv2 networking
                                 </p>
                                 <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/pricing'}>
                                     Get pricing

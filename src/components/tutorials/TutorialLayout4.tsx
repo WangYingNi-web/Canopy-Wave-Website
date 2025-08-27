@@ -55,7 +55,7 @@ const TutorialLayout4: React.FC = () => {
                 ],
             },
             {
-                title: 'Create a virtual machine using the Canopy Wave cloud platform.',
+                title: 'Create a virtual machine using the Canopy Wave Cloud Platform.',
                 navLabel: 'Create a VM',
                 content: [
                     '**Step 1**: Click the button "Launch GPU VM" to create a virtual machine.',

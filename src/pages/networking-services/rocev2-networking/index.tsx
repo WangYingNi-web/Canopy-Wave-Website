@@ -56,7 +56,7 @@ export default function RoCEv2NetworkingPage() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave | RoCE v2 Networking</title>
+                <title>Canopy Wave | RoCEv2 Networking</title>
                 {/* <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" /> */}
                 <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
             </Head>
@@ -66,7 +66,7 @@ export default function RoCEv2NetworkingPage() {
                     <SlideUp>
                         <div className="flex-1 max-w-2xl text-center lg:text-left">
                             <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg mb-6">
-                                RoCE v2 Networking
+                                RoCEv2 Networking
                             </h1>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 lg:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Get the best RDMA Networking purposely built for AI
@@ -105,7 +105,7 @@ export default function RoCEv2NetworkingPage() {
                         <div className="lg:col-span-6">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-4xl font-black mb-6">
-                                    RoCE v2 Networking
+                                    RoCEv2 Networking
                                 </h2>
                             </SlideUp>
                             <SlideUp>
@@ -178,7 +178,7 @@ export default function RoCEv2NetworkingPage() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
-                                        RoCE v2 further improves data transmission efficiency with the help of hardware acceleration technology
+                                        RoCEv2 further improves data transmission efficiency with the help of hardware acceleration technology
                                     </p>
                                 </FadeIn>
                             </div>
@@ -200,7 +200,7 @@ export default function RoCEv2NetworkingPage() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
-                                        We build our RoCE v2 Networking to improves network stability and performance. It can better adapt to high-load, low-latency application scenarios
+                                        We build our RoCEv2 Networking to improves network stability and performance. It can better adapt to high-load, low-latency application scenarios
                                     </p>
                                 </FadeIn>
                             </div>
@@ -222,7 +222,7 @@ export default function RoCEv2NetworkingPage() {
                                 </div>
                                 <FadeIn>
                                     <p className="text-gray-600 group-hover:text-white text-l pl-[70px]">
-                                        RoCE v2 is hardware-independent and can better adapt to different hardware environments
+                                        RoCEv2 is hardware-independent and can better adapt to different hardware environments
                                     </p>
                                 </FadeIn>
                             </div>
@@ -236,7 +236,7 @@ export default function RoCEv2NetworkingPage() {
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="w-full md:w-1/2">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">RoCE v2 Network Cards</h2>
+                                <h2 className="text-3xl sm:text-4xl text-gray-600 font-black mb-6">RoCEv2 Network Cards</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p>
@@ -332,23 +332,23 @@ export default function RoCEv2NetworkingPage() {
             <div className='bg-[#F9F9F9]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">RoCE v2 vs InfiniBand</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">RoCEv2 vs InfiniBand</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-12 text-l">
-                            Both RoCE v2 and InfiniBand are high-performance networking technologies. RoCE v2 is based on Ethernet, making deployment simpler, cost lower, and compatibility stronger—ideal for AI, big data, and cloud computing scenarios. InfiniBand offers excellent performance but requires dedicated equipment,is focused on delivering perfect performance, and has limited scalability. RoCE v2 is the preferred choice for enterprises and cloud environments
+                            Both RoCEv2 and InfiniBand are high-performance networking technologies. RoCEv2 is based on Ethernet, making deployment simpler, cost lower, and compatibility stronger—ideal for AI, big data, and cloud computing scenarios. InfiniBand offers excellent performance but requires dedicated equipment,is focused on delivering perfect performance, and has limited scalability. RoCEv2 is the preferred choice for enterprises and cloud environments
                         </p>
                     </SlideUp>
                     <div className="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Left side - Comparison Table */}
                         <div className="bg-white rounded-lg shadow-lg p-6 h-[529px]">
-                            <h3 className="text-xl font-bold text-center mb-6 text-[#80B224]">RoCE v2 vs InfiniBand</h3>
+                            <h3 className="text-xl font-bold text-center mb-6 text-[#80B224]">RoCEv2 vs InfiniBand</h3>
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm">
                                     <thead>
                                         <tr className="border-b">
                                             <th className="text-left py-3 px-2 font-semibold text-gray-700">Feature</th>
-                                            <th className="text-left py-3 px-2 font-semibold">RoCE v2</th>
+                                            <th className="text-left py-3 px-2 font-semibold">RoCEv2</th>
                                             <th className="text-left py-3 px-2 font-semibold">InfiniBand</th>
                                         </tr>
                                     </thead>
@@ -393,7 +393,7 @@ export default function RoCEv2NetworkingPage() {
                                     <h4 className="text-lg font-semibold text-center mb-4 text-blue-800">Network Latency</h4>
                                     <div className="space-y-4">
                                         <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
-                                            <span className="font-medium text-gray-700">RoCE v2</span>
+                                            <span className="font-medium text-gray-700">RoCEv2</span>
                                             <span className="text-2xl font-bold text-[#80B224]">2-6 μs</span>
                                         </div>
                                         <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
@@ -413,7 +413,7 @@ export default function RoCEv2NetworkingPage() {
                                     <h4 className="text-lg font-semibold text-center mb-4 text-[#80B224]">Network Bandwidth</h4>
                                     <div className="space-y-4">
                                         <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
-                                            <span className="font-medium text-gray-700">RoCE v2</span>
+                                            <span className="font-medium text-gray-700">RoCEv2</span>
                                             <span className="text-2xl font-bold text-[#80B224]">400G</span>
                                         </div>
                                         <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
@@ -434,7 +434,7 @@ export default function RoCEv2NetworkingPage() {
                                 <p className="text-center text-gray-700">
                                     {/* <strong>Key Insight:</strong>  */}
                                     InfiniBand excels in ultra-low latency scenarios (~1.6 μs),
-                                    while RoCE v2 offers competitive latency (2-4 μs with optimization) and equal bandwidth (400G)
+                                    while RoCEv2 offers competitive latency (2-4 μs with optimization) and equal bandwidth (400G)
                                 </p>
                             </div>
                         </div>
@@ -446,21 +446,21 @@ export default function RoCEv2NetworkingPage() {
             <div className='bg-[#F5F7F4]'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-20 py-16">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">How Much Can RoCE v2 Save?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">How Much Can RoCEv2 Save?</h2>
                     </SlideUp>
 
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-12 text-lg">
-                            RoCE v2 offers significant cost savings compared to InfiniBand, especially for large-scale
+                            RoCEv2 offers significant cost savings compared to InfiniBand, especially for large-scale
                             deployments. Below are the average market prices for each solution (per port, 400Gbps):
                         </p>
                     </SlideUp>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                        {/* RoCE v2 Cost Card */}
+                        {/* RoCEv2 Cost Card */}
                         <SlideUp>
                             <div className="bg-[#F5F7F4] rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-all duration-300">
-                                <h3 className="text-2xl font-bold text-center mb-6 text-[#80B224]">RoCE v2 (400Gbps)</h3>
+                                <h3 className="text-2xl font-bold text-center mb-6 text-[#80B224]">RoCEv2 (400Gbps)</h3>
                                 <div className="space-y-4">
                                     <div className="flex justify-between items-center">
                                         <span className="text-gray-700 font-medium">Network Card:</span>
@@ -516,7 +516,7 @@ export default function RoCEv2NetworkingPage() {
                     <SlideUp>
                         <div className="text-center">
                             <div className="inline-block bg-[#80B224] text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg">
-                                RoCE v2 saves up to 30% on networking costs compared to InfiniBand
+                                RoCEv2 saves up to 30% on networking costs compared to InfiniBand
                             </div>
                         </div>
                     </SlideUp>

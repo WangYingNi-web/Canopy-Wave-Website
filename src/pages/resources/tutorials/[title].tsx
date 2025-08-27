@@ -6,7 +6,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { TutorialLayout1, TutorialLayout2, TutorialLayout3, TutorialLayout4 , TutorialPost } from '@/components/tutorials'
+import { TutorialLayout1, TutorialLayout2, TutorialLayout3, TutorialLayout4, TutorialLayout5, TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -170,7 +170,7 @@ export default function TutorialDetail() {
             {
               title: 'Creating a Virtual Machine',
               content: [
-                'Create a virtual machine using the Canopy Wave cloud platform.',
+                'Create a virtual machine using the Canopy Wave Cloud Platform.',
                 '',
                 '**Step 1**: Click the button "Launch GPU VM" to create a virtual machine.',
                 '**Step 2**: Click the button "Continue".',
@@ -206,7 +206,20 @@ export default function TutorialDetail() {
             },
           ],
         }
-
+      case 'how-to-choose-the-right-storage-for-your-ai-workflows':
+        return {
+          id: 5,
+          title: 'How to Choose the Right Storage for Your AI Workflows',
+          description: 'A comprehensive guide to selecting optimal storage solutions for AI and machine learning workloads, covering performance, scalability, and cost considerations.',
+          sections: [
+            {
+              title: 'Understanding AI Storage Requirements',
+              content: [
+                'AI workflows have unique storage demands that differ significantly from traditional computing applications...',
+              ],
+            },
+          ],
+        }
 
       default:
         return null
@@ -245,6 +258,8 @@ export default function TutorialDetail() {
         return <TutorialLayout3 />
       case 4:
         return <TutorialLayout4 />
+      case 5:
+        return <TutorialLayout5/>
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }

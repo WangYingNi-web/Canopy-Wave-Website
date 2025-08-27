@@ -40,6 +40,14 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     {
+      id: 'storage-guide',
+      category: 'Storage',
+      title: 'How to Choose the Right Storage for Your AI Workflows',
+      image: '/tutorials/workflows/workflows.png',
+      date: 'August 27, 2025',
+      onClick: () => handleTutorialClick('How to Choose the Right Storage for Your AI Workflows')
+    },
+    {
       id: 'GPT-OSS',
       category: 'AI Models',
       title: 'How to Run the GPT-OSS Locally on a Canopy Wave VM?',

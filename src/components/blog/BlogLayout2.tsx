@@ -73,7 +73,7 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
               </SlideUp>
             ))}
             </div>
-          </div>
+        </div>
       </div>
     </div>
   )
