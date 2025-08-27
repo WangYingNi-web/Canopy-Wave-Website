@@ -336,7 +336,9 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             </h1>
                             <div className="flex items-center justify-between mb-10">
                                 {reviewDate && (
-                                    <p className="text-gray-600 text-sm">Reviewed on {reviewDate}</p>
+                                   <p className="text-gray-600 text-sm">
+                                        {router.pathname.includes('quick-start') ? 'Updated on' : 'Reviewed on'} {reviewDate}
+                                    </p>
                                 )}
                                 {downloadUrl && (
                                     <a href={downloadUrl} className="text-blue-600 hover:text-blue-800 text-sm flex items-center">

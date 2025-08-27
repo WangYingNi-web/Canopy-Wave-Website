@@ -30,7 +30,7 @@ const Tutorials: React.FC = () => {
   const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 6; // 修改为每页显示8个卡片
+  const cardsPerPage = 6; // 修改为每页显示6个卡片
   // 处理教程点击事件
   const handleTutorialClick = (title: string) => {
     const tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
@@ -39,6 +39,14 @@ const Tutorials: React.FC = () => {
 
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
+    {
+      id: 'ai-workflows',
+      category: 'GPU',
+      title: 'H100 vs H200 vs B200: Which GPU for Your Workload',
+      image: '/tutorials/workload/workload.png',
+      date: 'August 27, 2025',
+      onClick: () => handleTutorialClick('H100 vs H200 vs B200: Which GPU for Your Workload')
+    },
     {
       id: 'storage-guide',
       category: 'Storage',
@@ -137,15 +145,15 @@ const Tutorials: React.FC = () => {
     // 获取Featured Content区域要显示的卡片 - deepseek排在前面
     const getFeaturedCards = () => {
       if (activeCategory === 'All') {
-        // 直接筛选deepseek和llama
+        // 直接筛选指定的两篇文章
         const featuredCards = allCards.filter(card => 
-          card.id === 'deepseek' || card.id === 'llama'
+          card.id === 'GPT-OSS' || card.id === 'ai-workflows'
         );
         
-        // 确保deepseek排在前面
+        // 确保GPT-OSS排在前面
         return featuredCards.sort((a, b) => {
-          if (a.id === 'deepseek') return -1;
-          if (b.id === 'deepseek') return 1;
+          if (a.id === 'GPT-OSS') return -1;
+          if (b.id === 'GPT-OSS') return 1;
           return 0;
         });
       }
@@ -281,7 +289,7 @@ const Tutorials: React.FC = () => {
           <div className="mb-12">
             <SlideUp>
               <div className="flex flex-wrap gap-4 justify-start">
-                {['All', 'AI Models', 'API'].map((category) => (
+                {['All', 'AI Models', 'API', 'Storage' ,'GPU'].map((category) => (
                   <button
                     key={category}
                     onClick={() => handleCategoryClick(category)}

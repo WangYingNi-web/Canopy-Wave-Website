@@ -491,89 +491,94 @@ const TutorialLayout5: React.FC = () => {
     )
 
     const rightSidebar = (
-        <div className="space-y-4">
-            <div className="bg-gray-50 rounded-lg pb-2">
-                <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                    {!showVideo ? (
-                        <div
-                            className="w-full h-full cursor-pointer"
-                            onClick={() => setShowVideo(true)}
-                        >
-                            <img
-                                src="https://img.youtube.com/vi/CFv-CzlcXn4/maxresdefault.jpg"
-                                alt="Video thumbnail"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+        <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200 mt-7">
+                Recommended Tutorials
+            </h3>
+            <div className="space-y-4">
+                <div className="bg-gray-50 rounded-lg pb-2">
+                    <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
+                        {!showVideo ? (
+                            <div
+                                className="w-full h-full cursor-pointer"
+                                onClick={() => setShowVideo(true)}
+                            >
                                 <img
-                                    src="/tutorials/youtube.svg"
-                                    alt="Play video"
-                                    className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                                    src="https://img.youtube.com/vi/CFv-CzlcXn4/maxresdefault.jpg"
+                                    alt="Video thumbnail"
+                                    className="w-full h-full object-cover"
                                 />
+                                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                    <img
+                                        src="/tutorials/youtube.svg"
+                                        alt="Play video"
+                                        className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    ) : (
-                        <iframe
-                            src="https://www.youtube.com/embed/CFv-CzlcXn4?modestbranding=1&rel=0&controls=1&autoplay=1"
-                            title="AI Agent for Animal Health Monitoring | Multi-Step Analysis on Canopy Wave Cloud Platform"
-                            className="w-full h-full"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    )}
+                        ) : (
+                            <iframe
+                                src="https://www.youtube.com/embed/CFv-CzlcXn4?modestbranding=1&rel=0&controls=1&autoplay=1"
+                                title="AI Agent for Animal Health Monitoring | Multi-Step Analysis on Canopy Wave Cloud Platform"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        )}
+                    </div>
+                    <a
+                        href="https://www.youtube.com/watch?v=CFv-CzlcXn4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                    >
+                        AI Agent for Animal Health Monitoring | Multi-Step Analysis on Canopy Wave Cloud Platform
+                    </a>
                 </div>
-                <a
-                    href="https://www.youtube.com/watch?v=CFv-CzlcXn4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
-                >
-                    AI Agent for Animal Health Monitoring | Multi-Step Analysis on Canopy Wave Cloud Platform
-                </a>
-            </div>
 
-            <div className="bg-gray-50 rounded-lg pb-2">
-                <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
-                    {!showVideo2 ? (
-                        <div
-                            className="w-full h-full cursor-pointer"
-                            onClick={() => {
-                                setShowVideo2(true);
-                            }}
-                        >
-                            <img
-                                src="https://img.youtube.com/vi/5-YSNDUZOew/maxresdefault.jpg"
-                                alt="Video thumbnail"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                <div className="bg-gray-50 rounded-lg pb-2">
+                    <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
+                        {!showVideo2 ? (
+                            <div
+                                className="w-full h-full cursor-pointer"
+                                onClick={() => {
+                                    setShowVideo2(true);
+                                }}
+                            >
                                 <img
-                                    src="/tutorials/youtube.svg"
-                                    alt="Play video"
-                                    className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                                    src="https://img.youtube.com/vi/5-YSNDUZOew/maxresdefault.jpg"
+                                    alt="Video thumbnail"
+                                    className="w-full h-full object-cover"
                                 />
+                                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                    <img
+                                        src="/tutorials/youtube.svg"
+                                        alt="Play video"
+                                        className="w-16 h-16 cursor-pointer hover:scale-110 transition-transform duration-200"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    ) : (
-                        <iframe
-                            src="https://www.youtube.com/embed/5-YSNDUZOew?modestbranding=1&rel=0&controls=1&autoplay=1"
-                            title="AI Agent + Monitoring Systems: Fast Data Collection & Processing"
-                            className="w-full h-full"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    )}
+                        ) : (
+                            <iframe
+                                src="https://www.youtube.com/embed/5-YSNDUZOew?modestbranding=1&rel=0&controls=1&autoplay=1"
+                                title="AI Agent + Monitoring Systems: Fast Data Collection & Processing"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        )}
+                    </div>
+                    <a
+                        href="https://www.youtube.com/watch?v=5-YSNDUZOew"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
+                    >
+                        AI Agent + Monitoring Systems: Fast Data Collection & Processing
+                    </a>
                 </div>
-                <a
-                    href="https://www.youtube.com/watch?v=5-YSNDUZOew"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
-                >
-                    AI Agent + Monitoring Systems: Fast Data Collection & Processing
-                </a>
             </div>
         </div>
     )

@@ -220,7 +220,6 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
             {/* 主要内容区域 */}
             <div className="flex-1 min-w-0">
               <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
-
                 <h1 className="text-2xl sm:text-2xl font-black mb-8">{title}</h1>
                 {subtitle && (
                   <p className="text-gray-600 text-xl mb-8">{subtitle}</p>

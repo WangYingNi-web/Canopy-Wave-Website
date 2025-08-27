@@ -6,7 +6,8 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { TutorialLayout1, TutorialLayout2, TutorialLayout3, TutorialLayout4, TutorialLayout5, TutorialPost } from '@/components/tutorials'
+import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -220,6 +221,20 @@ export default function TutorialDetail() {
             },
           ],
         }
+      case 'h100-vs-h200-vs-b200:-which-gpu-for-your-workload':
+        return {
+          id: 6,
+          title: 'H100 vs H200 vs B200: Which GPU for Your Workload',
+          description: 'A comprehensive comparison of NVIDIA H100, H200, and B200 GPUs to help you choose the right GPU for your AI and machine learning workloads.',
+          sections: [
+            {
+              title: 'GPU Comparison Guide',
+              content: [
+                'Detailed comparison of NVIDIA\'s latest GPU offerings...',
+              ],
+            },
+          ],
+        }
 
       default:
         return null
@@ -259,7 +274,9 @@ export default function TutorialDetail() {
       case 4:
         return <TutorialLayout4 />
       case 5:
-        return <TutorialLayout5/>
+        return <TutorialLayout5 />
+      case 6:
+        return <TutorialLayout6 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }

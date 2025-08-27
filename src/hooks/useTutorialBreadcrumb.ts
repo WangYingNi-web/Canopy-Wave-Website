@@ -14,7 +14,8 @@ const tutorialTitleMap: Record<string, string> = {
   'how-to-run-the-kimi-k2-locally-on-a-canopy-wave-vm': 'How to Run the KIMI-K2 Locally on a Canopy Wave VM',
   'how-to-run-the-gpt-oss-locally-on-a-canopy-wave-vm': 'How to Run the GPT-OSS Locally on a Canopy Wave VM',
   'manage-cloud-via-api': 'Manage Cloud via API',
-  'case-study': 'Case Studies'
+  'case-study': 'Case Studies',
+  'h100-vs-h200-vs-b200:-which-gpu-for-your-workload': 'H100 vs H200 vs B200: Which GPU for Your Workload'
 }
 
 export const useTutorialBreadcrumb = () => {
