@@ -492,7 +492,7 @@ const TutorialLayout5: React.FC = () => {
 
     const rightSidebar = (
         <div className="space-y-4">
-                        <div className="bg-gray-50 rounded-lg pb-2">
+            <div className="bg-gray-50 rounded-lg pb-2">
                 <div className="aspect-video bg-gray-200 rounded-lg mb-3 relative overflow-hidden">
                     {!showVideo ? (
                         <div
@@ -631,7 +631,7 @@ const TutorialLayout5: React.FC = () => {
     }
 
     return (
-    <>
+        <>
             {/* Banner Section */}
             <div className="w-full h-[520px] relative mt-[84px]">
                 <Image
@@ -704,7 +704,7 @@ const TutorialLayout5: React.FC = () => {
                     ))}
                 </div>
             </SidebarLayout>
-      </>
+        </>
     )
 }
 

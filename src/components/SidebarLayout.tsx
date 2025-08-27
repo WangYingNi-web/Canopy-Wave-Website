@@ -180,7 +180,7 @@ const SidebarLayout: React.FC<SidebarLayoutProps> = ({
   
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-10 mb-12" ref={contentRef}>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-10 pb-12 bg-[#F9F9F9]" ref={contentRef}>
       <div className="flex flex-col lg:flex-row gap-6 relative">
         {/* Left Sidebar Navigation */}
         <div className="lg:w-56 lg:flex-shrink-0 mb-8 lg:mb-0">
