@@ -331,7 +331,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
                         {/* 文章标题 */}
                         <header className="mb-6">
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                            <h1 className="text-3xl sm:text-[30px] font-bold text-gray-900 mb-4">
                                 {title}
                             </h1>
                             <div className="flex items-center justify-between mb-10">

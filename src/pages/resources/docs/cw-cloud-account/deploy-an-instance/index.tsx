@@ -126,7 +126,7 @@ const PreloadedImage: React.FC<{
                     1. Sign In or Sign Up
                 </h2>
                 <p className="mb-4">
-                    Click the Canopy Wave link to register or sign in.
+                    Click the <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455]" target="_blank" rel="noopener noreferrer">Canopy Wave</a> link to register or sign in.
                 </p>
 
                 <h3 className="text-lg font-medium text-gray-900 mb-3 mt-6">

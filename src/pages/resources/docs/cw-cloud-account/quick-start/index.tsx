@@ -86,7 +86,7 @@ export default function CaseStudyPage() {
                 title="Quick Start"
                 breadcrumb="Quick Start"
                 description="Welcome to the Quick Start Guide! This guide covers the complete configuration process for NVIDIA H100 GPU and NVIDIA H200 GPU instances on both bare metal and virtual machines (VMs), optimized for AI training, machine learning, and high-performance computing workloads. This guide will help you deploy a production-ready environment in just 5 minutes."
-                reviewDate="August 01, 2025"
+                reviewDate="August 25, 2025"
                 // downloadUrl="#"
                 nextPage={{ title: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' }}
                 // previousPage={{ title: 'Manage Instance', href: '/resources/docs/cw-cloud-account/manage-instance' }}
