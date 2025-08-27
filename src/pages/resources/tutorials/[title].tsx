@@ -221,10 +221,10 @@ export default function TutorialDetail() {
             },
           ],
         }
-      case 'h100-vs-h200-vs-b200:-which-gpu-for-your-workload':
+      case 'nvidia-h100-vs-h200-vs-b200:-which-gpu-for-your-workload': // 添加这行支持带冒
         return {
           id: 6,
-          title: 'H100 vs H200 vs B200: Which GPU for Your Workload',
+          title: 'NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload',
           description: 'A comprehensive comparison of NVIDIA H100, H200, and B200 GPUs to help you choose the right GPU for your AI and machine learning workloads.',
           sections: [
             {
