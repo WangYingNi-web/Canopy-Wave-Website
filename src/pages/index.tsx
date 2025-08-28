@@ -221,7 +221,7 @@ export default function Index() {
               {slide.id === 1 ? (
   <div className="absolute inset-0 z-0">
     <Spline
-      scene="https://prod.spline.design/Yd0WMoyJ-AyBgshO/scene.splinecode"
+      scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
       style={{
         width: '100% !important',
         height: '120% !important',
