@@ -153,6 +153,15 @@ export default function Index() {
       titleColor: 'text-[#80B224]',
       bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
     },
+    {
+      id: 6,
+      background: '/home_banner.svg',
+      // title: 'Instant GPU',
+      // subtitle: 'Cluster for',
+      // highlight: 'Enterprise AI',
+      titleColor: 'text-[#80B224]',
+      bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+    },
   ];
 
   //  自动轮播
@@ -272,6 +281,22 @@ export default function Index() {
                 <div className="absolute inset-0 z-0">
                   <Spline
                     scene="https://prod.spline.design/mxRFE6t9RTNvLWI1/scene.splinecode"
+                    style={{
+                      width: '100% !important',
+                      height: '120% !important',
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0
+                    }}
+                  />
+                </div>
+              )}
+              {slide.id === 6 && (
+                <div className="absolute inset-0 z-0">
+                  <Spline
+                    scene="https://prod.spline.design/Yd0WMoyJ-AyBgshO/scene.splinecode"
                     style={{
                       width: '100% !important',
                       height: '120% !important',
