@@ -48,6 +48,7 @@ export default function DeployInstancePage() {
             children: [
                 { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
                 { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
+                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
             ]
         },
     ];
