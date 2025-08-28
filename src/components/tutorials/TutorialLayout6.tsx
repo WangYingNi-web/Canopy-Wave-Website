@@ -368,7 +368,7 @@ const TutorialLayout6: React.FC = () => {
                     React.createElement('h4', { key: 'memory-bandwidth' }, React.createElement('strong', {}, 'Memory and Bandwidth')),
                     '• H100\'s 80 GB of HBM3 memory suits a wide variety of workloads.',
                     '• H200\'s 141 GB HBM3e memory and 4.8 TB/s bandwidth address bottlenecks in large model training and memory-intensive HPC jobs.',
-                    '• B200 offers the largest memory at 192 GB HBM3e and an industry-leading 8.0 TB/s bandwidth, best suited for data-intensive and massive scale AI.',
+                    '• B200 offers the largest memory at 180 GB HBM3e and an industry-leading 8.0 TB/s bandwidth, best suited for data-intensive and massive scale AI.',
                     React.createElement('h4', { key: 'interconnect' }, React.createElement('strong', {}, 'Interconnect (NVLink)')),
                     '• H100 and H200 utilize NVLink 4th Gen with up to 900 GB/s bandwidth for multi-GPU communication.',
                     '• B200 upgrades to NVLink 5th Gen, doubling bandwidth to 1.8 TB/s to accelerate data transfer in dense multi-GPU clusters.',
