@@ -2,19 +2,12 @@ import React from 'react'
 import SlideUp from '@/components/slide'
 import Image from 'next/image';
 import { BlogPost } from './index'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 
 interface BlogLayout2Props {
   blogPost: BlogPost
 }
 
 const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
-  const router = useRouter()
-  
-  useEffect(() => {
-    router.replace('/resources/tutorials/how-to-choose-the-right-storage-for-your-ai-workflows')
-  }, [])
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -85,6 +78,5 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
     </div>
   )
 }
-
 
 export default BlogLayout2
