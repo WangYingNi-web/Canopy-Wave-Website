@@ -109,9 +109,9 @@ export default function Index() {
     {
       id: 1,
       background: '/home_banner.svg',
-      title: 'Instant GPU',
-      subtitle: 'Cluster for',
-      highlight: 'Enterprise AI',
+      // title: 'Instant GPU',
+      // subtitle: 'Cluster for',
+      // highlight: 'Enterprise AI',
       titleColor: 'text-[#80B224]',
       bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
     },
@@ -212,12 +212,28 @@ export default function Index() {
                 }`}
             >
               {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
+              
+
+              {/* 第一张轮播图使用Spline组件 */}
               {slide.id !== 1 && (
                 <div className="absolute inset-0 bg-black z-0" />
               )}
-
-              {/* 第一张轮播图使用Spline组件 */}
-              {slide.id === 3 ? (
+              {slide.id === 1 ? (
+  <div className="absolute inset-0 z-0">
+    <Spline
+      scene="https://prod.spline.design/Yd0WMoyJ-AyBgshO/scene.splinecode"
+      style={{
+        width: '100% !important',
+        height: '120% !important',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
+      }}
+    />
+  </div>
+              ) : slide.id === 3 ? (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image
                     src={slide.background}
