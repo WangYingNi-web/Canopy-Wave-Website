@@ -77,7 +77,7 @@ export default function GPUPerformanceMetricsPage() {
                     title: "Deploy an Instance",
                     href: "/resources/docs/cw-cloud-account/deploy-an-instance"
                 }}
-                reviewDate="January 15, 2025"
+                reviewDate="August 28, 2025"
                 leftNavItems={leftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Key Metrics of GPU Performance - Technical Analysis"
@@ -103,18 +103,12 @@ export default function GPUPerformanceMetricsPage() {
                     2. Core Architecture & Parallel Processing
                 </h2>
                 <div className="mb-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                        Core Count
-                    </h3>
                     <p className="mb-4">
-                        Directly determines parallel task throughput. Modern GPUs contain thousands of processing cores (e.g., NVIDIA CUDA cores, AMD stream processors).
+                        <strong>Core Count:</strong> Directly determines parallel task throughput. Modern GPUs contain thousands of processing cores (e.g., NVIDIA CUDA cores, AMD stream processors).
                     </p>
-                    
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                        Microarchitecture
-                    </h3>
+
                     <p className="mb-4">
-                        Defines core efficiency through innovations like:
+                        <strong>Microarchitecture:</strong> Defines core efficiency through innovations like:
                     </p>
                     <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
                         <li>Simultaneous multithreading (NVIDIA Hyper-Q)</li>
@@ -133,22 +127,22 @@ export default function GPUPerformanceMetricsPage() {
                     Two critical constraints in data-intensive computing:
                 </p>
                 <div className="mb-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                        Memory Bandwidth (GB/s)
+                    <h3 className="text-l font-medium text-gray-900 mb-3">
+                        <strong>Memory Bandwidth (GB/s):</strong>
                     </h3>
                     <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
                         <li>Dictates data transfer rates between GPU and VRAM</li>
                         <li>High bandwidth (&gt;1 TB/s in H100) prevents computational starvation</li>
                     </ul>
-                    
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                        VRAM Capacity (GB)
+
+                    <h3 className="text-l font-medium text-gray-900 mb-3">
+                        <strong>VRAM Capacity (GB):</strong>
                     </h3>
                     <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
                         <li>Determines dataset/model size residency (e.g., 80GB HBM3 in H200)</li>
                         <li>Critical for large-batch training and high-resolution rendering</li>
                     </ul>
-                    
+
                     <p className="mb-4">
                         <strong>Advanced technologies:</strong> HBM (High Bandwidth Memory), NVLink interconnect
                     </p>
@@ -158,18 +152,17 @@ export default function GPUPerformanceMetricsPage() {
                     4. Clock Frequency
                 </h2>
                 <div className="mb-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                        Base/Boost Clocks (MHz/GHz)
+                    <h3 className="text-l font-medium text-gray-900 mb-3">
+                        <strong>Base/Boost Clocks (MHz/GHz):</strong>
                     </h3>
-                    <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                    <ul className="text-l list-disc list-inside mb-4 space-y-2 ml-4">
                         <li>Governs per-core operation speed</li>
                         <li>Higher frequencies accelerate serial operations</li>
                     </ul>
-                    
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                        Thermal Design Constraints
+                    <h3 className="text-l font-medium text-gray-900 mb-3">
+                        <strong> Thermal Design Constraints:</strong>
                     </h3>
-                    <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                    <ul className="text-l list-disc list-inside mb-4 space-y-2 ml-4">
                         <li>Frequency scaling is limited by power envelope (TDP) and cooling solutions</li>
                         <li>Modern GPUs employ dynamic frequency scaling (e.g., NVIDIA GPU Boost)</li>
                     </ul>
@@ -203,14 +196,11 @@ export default function GPUPerformanceMetricsPage() {
                     <li>Workload alignment dictates practical effectiveness</li>
                 </ul>
 
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                    <div className="flex">
-                        <div className="ml-3">
-                            <p className="text-sm text-blue-700">
-                                <strong>Technical Insight:</strong> Modern performance analysis requires cross-metric evaluation. For instance, NVIDIA's H200 achieves 1979 TFLOPS FP8 performance not solely through 16896 CUDA cores, but via architectural synergies between Tensor Cores, 4.8TB/s memory bandwidth, and structured sparsity acceleration.
-                            </p>
-                        </div>
-                    </div>
+                <div className="ml-3">
+                    <p className="text-l">
+                        <strong>Technical Insight:</strong> Modern performance analysis requires cross-metric evaluation. For instance, NVIDIA's H200 achieves 
+                        <strong> 1979 TFLOPS FP8 performance</strong> not solely through <strong> 16896 CUDA cores</strong>, but via architectural synergies between Tensor Cores, <strong>4.8TB/s memory bandwidth</strong>, and structured sparsity acceleration.
+                    </p>
                 </div>
 
             </DocumentLayout>

@@ -113,10 +113,10 @@ const PreloadedImage: React.FC<{
                     title: "Quick Start",
                     href: "/resources/docs/cw-cloud-account/quick-start"
                 }}
-                // nextPage={{
-                //     title: "Manage Instance",
-                //     href: "/resources/docs/cw-cloud-account/manage-instance"
-                // }}
+                nextPage={{
+                    title: "Key Metrics of GPU Performance",
+                    href: "/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance"
+                }}
                 reviewDate="August 26, 2025"
                 leftNavItems={leftNavItems}
                 jumpToItems={jumpToItems}
