@@ -100,7 +100,7 @@ export default function CaseStudyPage() {
                     <div className="flex">
                         <div className="ml-3">
                             <p className="text-sm text-gray-700">
-                                <strong>Tip2:</strong> If you already have a Canopy Wave account, simply log in with your credentials. If not, you can register for an account by clicking: <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455] underline" target="_blank" rel="noopener noreferrer">https://cloud.canopywave.io/</a>
+                                <strong>Tip:</strong> If you already have a Canopy Wave account, simply log in with your credentials. If not, you can register for an account by clicking: <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455] underline" target="_blank" rel="noopener noreferrer">https://cloud.canopywave.io/</a>
                             </p>
                         </div>
                     </div>
