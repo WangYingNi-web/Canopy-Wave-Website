@@ -10,12 +10,38 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import ReactGA from 'react-ga4'
 
-// 关键修改：显式声明需要的所有字重（包括900）
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800', '900'], // 确保包含900字重
-  display: 'swap',
-});
+import localFont from 'next/font/local'
+
+const inter = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Inter/static/Inter_18pt-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Inter/static/Inter_18pt-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Inter/static/Inter_18pt-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Inter/static/Inter_18pt-ExtraBold.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Inter/static/Inter_18pt-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-inter'
+})
 declare global {
   interface Window {
     gtag: (

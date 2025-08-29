@@ -80,14 +80,6 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
     // 处理反馈提交
     const handleFeedbackSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // 这里可以添加提交反馈的API调用
-        console.log('Feedback submitted:', {
-            type: feedbackType,
-            description: feedbackDescription,
-            name: feedbackName,
-            email: feedbackEmail,
-            page: pageTitle || title
-        });
 
         // 重置表单并关闭弹窗
         setFeedbackType('');
@@ -522,7 +514,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                         <form onSubmit={handleFeedbackSubmit}>
                             <div className="mb-4">
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    What would you like to provide feedback on?*
+                                    What would you like to provide feedback on?
                                 </label>
                                 <div className="space-y-2">
                                     {['Incorrect Information', 'Product-related Issue', 'Webpage-related Issue', 'Other'].map((type) => (
@@ -541,21 +533,29 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                                     ))}
                                 </div>
                             </div>
-                            
                             <div className="mb-4">
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Description*
-                                </label>
+                                <div className="flex justify-between items-center mb-2">
+                                    <label className="block text-sm font-medium text-gray-700">
+                                        Description*
+                                    </label>
+                                    <span className="text-xs text-gray-500 mr-2">
+                                        {feedbackDescription.length}/800
+                                    </span>
+                                </div>
                                 <textarea
                                     value={feedbackDescription}
-                                    onChange={(e) => setFeedbackDescription(e.target.value)}
+                                    onChange={(e) => {
+                                        if (e.target.value.length <= 800) {
+                                            setFeedbackDescription(e.target.value);
+                                        }
+                                    }}
                                     placeholder="Please describe the issue in detail to help us better understand and resolve it."
                                     className="text-sm w-full p-3 border border-gray-300 rounded-md"
                                     rows={5}
                                     required
+                                    maxLength={800}
                                 />
                             </div>
-                            
                             <div className="mb-4">
                                 <p className="text-sm text-gray-700 mb-3">
                                     Please provide your email so we can respond to your feedback.
