@@ -35,7 +35,7 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
 
       {/* Content Section - 修改这里的容器设置 */}
       <div className="w-full px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[820px] mx-auto">
           <div className="prose prose-lg max-w-none
               /* 强制所有文本换行 */
               [&_*]:break-words [&_*]:overflow-wrap-anywhere
