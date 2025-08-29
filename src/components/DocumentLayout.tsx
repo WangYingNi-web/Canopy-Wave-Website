@@ -77,20 +77,123 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
     const [feedbackDescription, setFeedbackDescription] = useState('');
     const [feedbackName, setFeedbackName] = useState('');
     const [feedbackEmail, setFeedbackEmail] = useState('');
+
+    const [showToast, setShowToast] = useState(false);
+    const [toastMessage, setToastMessage] = useState('');
+    const [toastType, setToastType] = useState<'success' | 'error'>('success');
+    const [loading, setLoading] = useState(false);
     // 处理反馈提交
     const handleFeedbackSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // 重置表单并关闭弹窗
-        setFeedbackType('');
-        setFeedbackDescription('');
-        setFeedbackName('');
-        setFeedbackEmail('');
-        setShowFeedbackModal(false);
+        // 表单验证 - 检查每个字段并给出具体提示
+        if (!feedbackType) {
+            setToastMessage('Please complete this required field.');
+            setToastType('error');
+            setShowToast(true);
+            return;
+        }
+        
+        // if (!feedbackName) {
+        //     setToastMessage('Please complete this required field.');
+        //     setToastType('error');
+        //     setShowToast(true);
+        //     return;
+        // }
+        
+        if (!feedbackEmail) {
+            setToastMessage('Please complete this required field.');
+            setToastType('error');
+            setShowToast(true);
+            return;
+        }
+        
+        if (!feedbackDescription) {
+            setToastMessage('Please complete this required field.');
+            setToastType('error');
+            setShowToast(true);
+            return;
+        }
 
-        // 可以添加成功提示
-        alert('Thank you for your feedback!');
+        // 邮箱格式验证
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(feedbackEmail)) {
+            setToastMessage('Please enter a valid email address.');
+            setToastType('error');
+            setShowToast(true);
+            return;
+        }
+        setLoading(true);
+        try {
+            // 准备发送的数据
+            const emailData = {
+                // recipients: ['Lumi.Xiao@canopywave.com','sales@canopywave.com'],
+                recipients: ['wangyingni@canopywave.com'],
+                subject: `Documentation Feedback: ${feedbackType}`,
+                body: `
+                    Documentation Feedback
+                    Feedback Type: ${feedbackType}
+                    Name: ${feedbackName}
+                    Email: ${feedbackEmail}
+                    Description:
+                    ${feedbackDescription.replace(/\n/g, '<br>')}
+                    This feedback was submitted from the documentation page: ${window.location.href}
+                `,
+                from: feedbackEmail
+            };
+
+            // 发送API请求
+            const response = await fetch('https://sequoia-paas.canopywave.io/api/v1/send_email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer alsfkjalsdkfjldksjfalksdjfljk13123'
+                },
+                body: JSON.stringify(emailData)
+            });
+
+            if (response.ok) {
+                // 成功提交
+                setToastMessage('Thank you for your feedback! We have received your message and will review it shortly.');
+                setToastType('success');
+                setShowToast(true);
+
+                // 重置表单并关闭弹窗
+                setFeedbackType('');
+                setFeedbackDescription('');
+                setFeedbackName('');
+                setFeedbackEmail('');
+                setShowFeedbackModal(false);
+            } else {
+                // API返回错误
+                const errorData = await response.text();
+                console.error('API Error:', errorData);
+                setToastMessage('Sorry, there was an error sending your feedback. Please try again later or contact us directly.');
+                setToastType('error');
+                setShowToast(true);
+            }
+        } catch (error) {
+            // 网络错误或其他异常
+            console.error('Network Error:', error);
+            setToastMessage('Sorry, there was a network error. Please check your connection and try again.');
+            setToastType('error');
+            setShowToast(true);
+        } finally {
+            // 无论成功还是失败，都要重置loading状态
+            setLoading(false);
+        }
     };
+
+    // Toast自动隐藏
+    useEffect(() => {
+        if (showToast) {
+            const timer = setTimeout(() => {
+                setShowToast(false);
+            }, 5000); // 5秒后自动隐藏
+            return () => clearTimeout(timer);
+        }
+    }, [showToast]);
+
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
@@ -479,10 +582,11 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
                         {/* Feedback 链接 */}
                         <div className="flex flex-col gap-3 py-6">
-                            <div className="flex flex-col gap-3 py-6">
+                            <div className="flex flex-col gap-3">
                                 <button
                                     onClick={() => setShowFeedbackModal(true)}
                                     className="flex items-center gap-2 text-sm text-[#80B224] hover:text-[#98c455] font-medium cursor-pointer"
+
                                 >
                                     <Image src="/docs/feedback.svg" alt="Feedback" width={24} height={24} />
                                     Feedback
@@ -503,18 +607,18 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                     <div className="bg-white rounded-lg p-6 w-full max-w-3xl mx-4 max-h-[90vh] overflow-y-auto">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-xl font-semibold text-gray-900">Documentation Feedback</h2>
-                            <button 
+                            <button
                                 onClick={handleCloseModal}
                                 className="text-gray-400 hover:text-gray-600 text-2xl"
                             >
                                 ×
                             </button>
                         </div>
-                        
+
                         <form onSubmit={handleFeedbackSubmit}>
                             <div className="mb-4">
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    What would you like to provide feedback on?
+                                    What would you like to provide feedback on?<span className="ml-2 text-red-500">*</span>
                                 </label>
                                 <div className="space-y-2">
                                     {['Incorrect Information', 'Product-related Issue', 'Webpage-related Issue', 'Other'].map((type) => (
@@ -526,7 +630,6 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                                                 checked={feedbackType === type}
                                                 onChange={(e) => setFeedbackType(e.target.value)}
                                                 className="mr-2"
-                                                required
                                             />
                                             <span className="text-sm text-gray-700">{type}</span>
                                         </label>
@@ -536,7 +639,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             <div className="mb-4">
                                 <div className="flex justify-between items-center mb-2">
                                     <label className="block text-sm font-medium text-gray-700">
-                                        Description*
+                                        Description<span className="ml-2 text-red-500">*</span>
                                     </label>
                                     <span className="text-xs text-gray-500 mr-2">
                                         {feedbackDescription.length}/800
@@ -552,7 +655,6 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                                     placeholder="Please describe the issue in detail to help us better understand and resolve it."
                                     className="text-sm w-full p-3 border border-gray-300 rounded-md"
                                     rows={5}
-                                    required
                                     maxLength={800}
                                 />
                             </div>
@@ -568,22 +670,22 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                                             onChange={(e) => setFeedbackName(e.target.value)}
                                             placeholder="Name"
                                             className="text-sm w-full p-2 border border-gray-300 rounded-md"
-                                            // focus:ring-2 focus:ring-[#80B224] focus:border-transparent
+                                        // focus:ring-2 focus:ring-[#80B224] focus:border-transparent
                                         />
                                     </div>
-                                    <div>
+                                    <div className="flex items-center">
                                         <input
                                             type="email"
                                             value={feedbackEmail}
                                             onChange={(e) => setFeedbackEmail(e.target.value)}
                                             placeholder="Email address"
                                             className="text-sm w-full p-2 border border-gray-300 rounded-md"
-                                            required
                                         />
+                                        <span className="ml-2 text-red-500">*</span>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="flex justify-end gap-3">
                                 <button
                                     type="button"
@@ -594,12 +696,43 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                                 </button>
                                 <button
                                     type="submit"
-                                    className="text-sm px-4 py-2 bg-[#80B224] text-white rounded-md hover:bg-[#98c455] transition-colors"
+                                    className={`text-sm px-4 py-2 bg-[#80B224] text-white rounded-md hover:bg-[#98c455] transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    disabled={loading}
                                 >
-                                    Submit
+                                    {loading ? 'Submitting...' : 'Submit'}
                                 </button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            )}
+            {/* Toast 通知 */}
+            {showToast && (
+                <div className={`fixed top-4 right-4 z-50 max-w-md p-4 rounded-lg shadow-lg transition-all duration-300 ${toastType === 'success'
+                        ? 'bg-[#80B224] text-white'
+                        : 'bg-red-500 text-white'
+                    }`}>
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                            {toastType === 'success' ? (
+                                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                            ) : (
+                                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                                </svg>
+                            )}
+                            <span className="text-sm font-medium">{toastMessage}</span>
+                        </div>
+                        <button
+                            onClick={() => setShowToast(false)}
+                            className="ml-4 text-white hover:text-gray-200"
+                        >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             )}
