@@ -134,25 +134,7 @@ export default function Index() {
       titleColor: 'text-white',
       subtitleColor: 'text-[#80B224]',
       bgColor: 'bg-black'
-    },
-    {
-      id: 4,
-      background: '/home_banner.svg',
-      // title: 'Instant GPU',
-      // subtitle: 'Cluster for',
-      // highlight: 'Enterprise AI',
-      titleColor: 'text-[#80B224]',
-      bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
-    },
-    {
-      id: 5,
-      background: '/home_banner.svg',
-      // title: 'Instant GPU',
-      // subtitle: 'Cluster for',
-      // highlight: 'Enterprise AI',
-      titleColor: 'text-[#80B224]',
-      bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
-    },
+    }
   ];
 
   //  自动轮播
@@ -230,7 +212,7 @@ export default function Index() {
                 }`}
             >
               {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
-
+              
 
               {/* 第一张轮播图使用Spline组件 */}
               {slide.id !== 1 && (
@@ -263,43 +245,11 @@ export default function Index() {
                   priority={index === 0}
                 />
               )}
-              {slide.id === 4 && (
-                <div className="absolute inset-0 z-0">
-                  <Spline
-                    scene="https://prod.spline.design/TjYOaAXtOEc7y-ph/scene.splinecode"
-                    style={{
-                      width: '100% !important',
-                      height: '120% !important',
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0
-                    }}
-                  />
-                </div>
-              )}
-              {slide.id === 5 && (
-                <div className="absolute inset-0 z-0">
-                  <Spline
-                    scene="https://prod.spline.design/HFLmWuosfo84hPz9/scene.splinecode"
-                    style={{
-                      width: '100% !important',
-                      height: '120% !important',
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0
-                    }}
-                  />
-                </div>
-              )}
 
               {/* 黑色遮罩层 - 仅对第二张图片 */}
-              {/* {slide.id !== 1 && (
+              {slide.id !== 1 && (
                 <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
-              )} */}
+              )}
 
 
               <div className="absolute inset-0 z-10">
@@ -320,7 +270,7 @@ export default function Index() {
                         <p className={`text-lg sm:text-xl ${slide.titleColor} mb-8 max-w-3xl mx-auto`}>
                           {slide.highlight}
                         </p>
-                        {/* <div className="flex gap-4 justify-center">
+                        <div className="flex gap-4 justify-center">
                           <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3"
                             onClick={() => window.location.href = slide.id === 2 ? '/gb200-nvl72' : '/hgx-b200'}>
                             Learn More
@@ -328,7 +278,7 @@ export default function Index() {
                           <Button className="bg-[#80B224] hover:bg-[#6a9a1e] text-white px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                             Launch Now
                           </Button>
-                        </div> */}
+                        </div>
                       </div>
                     )}
                   </SlideUp>

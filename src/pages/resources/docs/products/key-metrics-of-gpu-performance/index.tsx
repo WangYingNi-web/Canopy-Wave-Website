@@ -66,7 +66,7 @@ export default function GPUPerformanceMetricsPage() {
                 </span>
             ),
             children: [
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
+                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
             ],
         },
     ];

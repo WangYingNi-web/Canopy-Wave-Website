@@ -49,7 +49,21 @@ export default function Newsroom() {
             router.push(post.link);
         }
     };
-    
+    const handleTutorialClick = (title: string) => {
+        // 根据具体标题映射到正确的 URL
+        let tutorialTitle: string;
+        
+        if (title.includes('DeepSeek-R1')) {
+            tutorialTitle = 'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm';
+        } else if (title.includes('Llama')) {
+            tutorialTitle = 'how-to-run-the-llama-locally-on-a-canopy-wave-vm';
+        } else {
+            // 默认的 URL 转换逻辑
+            tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        }
+        
+        router.push(`/about/newsroom/tutorials/${tutorialTitle}`);
+    };
 
     const blogPosts: BlogPost[] = [
         {
@@ -65,6 +79,13 @@ export default function Newsroom() {
             description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
             date: "July 14, 2025",
             image: "/blog/blog2.png"
+        },
+        {
+            id: 3,
+            title: "AI: Revolutionizing Animal Health Monitoring",
+            description: "A New Chapter in Revolutionizing Animal Health Monitoring ",
+            date: "August 29, 2025",
+            image: "/blog/workflows2.png"
         },
     ];
     const newsroomPosts: NewsroomPost[] = [
@@ -83,6 +104,23 @@ export default function Newsroom() {
             date: "May 15, 2025",
             image: "/blog2.svg",
             link: "/events/ai-agent-summit-keynote" // 更新为events链接
+        },
+    ];
+
+    const tutorialPosts: TutorialPost[] = [
+        {
+            id: 1,
+            title: "How to Run DeepSeek-R1 Locally on a Canopy Wave VM",
+            description: "A comprehensive guide to setting up and managing your first GPU cluster",
+            date: "July 31, 2025",
+            image: "/tutorials/deepseek.png"
+        },
+        {
+            id: 2,
+            title: "How to Run the Llama Locally on a Canopy Wave VM",
+            description: "Best practices for configuring your AI training and inference workloads",
+            date: "August 1, 2025",
+            image: "/tutorials/Llama.png"
         },
     ];
 

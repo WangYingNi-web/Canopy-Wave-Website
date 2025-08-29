@@ -70,6 +70,35 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
     const rightSidebarRef = useRef<HTMLDivElement>(null);
     const [sidebarPosition, setSidebarPosition] = useState('sticky');
     const [rightSidebarPosition, setRightSidebarPosition] = useState('sticky');
+
+    // 添加反馈弹窗状态管理
+    const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+    const [feedbackType, setFeedbackType] = useState('');
+    const [feedbackDescription, setFeedbackDescription] = useState('');
+    const [feedbackName, setFeedbackName] = useState('');
+    const [feedbackEmail, setFeedbackEmail] = useState('');
+    // 处理反馈提交
+    const handleFeedbackSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        // 这里可以添加提交反馈的API调用
+        console.log('Feedback submitted:', {
+            type: feedbackType,
+            description: feedbackDescription,
+            name: feedbackName,
+            email: feedbackEmail,
+            page: pageTitle || title
+        });
+
+        // 重置表单并关闭弹窗
+        setFeedbackType('');
+        setFeedbackDescription('');
+        setFeedbackName('');
+        setFeedbackEmail('');
+        setShowFeedbackModal(false);
+
+        // 可以添加成功提示
+        alert('Thank you for your feedback!');
+    };
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
@@ -112,6 +141,14 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
             newExpanded.add(itemId);
         }
         setExpandedItems(newExpanded);
+    };
+    // 关闭弹窗时重置表单
+    const handleCloseModal = () => {
+        setShowFeedbackModal(false);
+        setFeedbackType('');
+        setFeedbackDescription('');
+        setFeedbackName('');
+        setFeedbackEmail('');
     };
 
 
@@ -336,7 +373,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             </h1>
                             <div className="flex items-center justify-between mb-10">
                                 {reviewDate && (
-                                   <p className="text-gray-600 text-sm">
+                                    <p className="text-gray-600 text-sm">
                                         {router.pathname.includes('quick-start') ? 'Updated on' : 'Reviewed on'} {reviewDate}
                                     </p>
                                 )}
@@ -450,19 +487,122 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
 
                         {/* Feedback 链接 */}
                         <div className="flex flex-col gap-3 py-6">
-                            {/* <a href="#" className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium">
-                                <span className="w-5 h-5 border-2 border-green-600 rounded flex items-center justify-center text-xs">✏️</span>
-                                Feedback
-                            </a> */}
+                            <div className="flex flex-col gap-3 py-6">
+                                <button
+                                    onClick={() => setShowFeedbackModal(true)}
+                                    className="flex items-center gap-2 text-sm text-[#80B224] hover:text-[#98c455] font-medium cursor-pointer"
+                                >
+                                    <Image src="/docs/feedback.svg" alt="Feedback" width={24} height={24} />
+                                    Feedback
+                                </button>
 
-                            <a href="/contact" className="flex items-center gap-2 text-sm text-[#80B224] hover:text-[#98c455] font-medium">
-                                <Image src="/docs/contact.svg" alt="Security" width={24} height={24} />
-                                Contact Us
-                            </a>
+                                <a href="/contact" className="flex items-center gap-2 text-sm text-[#80B224] hover:text-[#98c455] font-medium">
+                                    <Image src="/docs/contact.svg" alt="Contact" width={24} height={24} />
+                                    Contact Us
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </aside>
             </div>
+            {/* 反馈弹窗 */}
+            {showFeedbackModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-6 w-full max-w-3xl mx-4 max-h-[90vh] overflow-y-auto">
+                        <div className="flex justify-between items-center mb-4">
+                            <h2 className="text-xl font-semibold text-gray-900">Documentation Feedback</h2>
+                            <button 
+                                onClick={handleCloseModal}
+                                className="text-gray-400 hover:text-gray-600 text-2xl"
+                            >
+                                ×
+                            </button>
+                        </div>
+                        
+                        <form onSubmit={handleFeedbackSubmit}>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                    What would you like to provide feedback on?*
+                                </label>
+                                <div className="space-y-2">
+                                    {['Incorrect Information', 'Product-related Issue', 'Webpage-related Issue', 'Other'].map((type) => (
+                                        <label key={type} className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="feedbackType"
+                                                value={type}
+                                                checked={feedbackType === type}
+                                                onChange={(e) => setFeedbackType(e.target.value)}
+                                                className="mr-2"
+                                                required
+                                            />
+                                            <span className="text-sm text-gray-700">{type}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                    Description*
+                                </label>
+                                <textarea
+                                    value={feedbackDescription}
+                                    onChange={(e) => setFeedbackDescription(e.target.value)}
+                                    placeholder="Please describe the issue in detail to help us better understand and resolve it."
+                                    className="text-sm w-full p-3 border border-gray-300 rounded-md"
+                                    rows={5}
+                                    required
+                                />
+                            </div>
+                            
+                            <div className="mb-4">
+                                <p className="text-sm text-gray-700 mb-3">
+                                    Please provide your email so we can respond to your feedback.
+                                </p>
+                                <div className="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <input
+                                            type="text"
+                                            value={feedbackName}
+                                            onChange={(e) => setFeedbackName(e.target.value)}
+                                            placeholder="Name"
+                                            className="text-sm w-full p-2 border border-gray-300 rounded-md"
+                                            // focus:ring-2 focus:ring-[#80B224] focus:border-transparent
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="email"
+                                            value={feedbackEmail}
+                                            onChange={(e) => setFeedbackEmail(e.target.value)}
+                                            placeholder="Email address"
+                                            className="text-sm w-full p-2 border border-gray-300 rounded-md"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="flex justify-end gap-3">
+                                <button
+                                    type="button"
+                                    onClick={handleCloseModal}
+                                    className="text-sm px-4 py-2 text-gray-600 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="text-sm px-4 py-2 bg-[#80B224] text-white rounded-md hover:bg-[#98c455] transition-colors"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
             <Footer />
         </main>
     );

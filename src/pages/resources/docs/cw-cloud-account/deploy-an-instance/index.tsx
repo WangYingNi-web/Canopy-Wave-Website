@@ -67,7 +67,7 @@ export default function DeployInstancePage() {
                 </span>
             ),
             children: [
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
+                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
             ],
         },
     ];
@@ -134,7 +134,7 @@ const PreloadedImage: React.FC<{
                 }}
                 nextPage={{
                     title: "Key Metrics of GPU Performance",
-                    href: "/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance"
+                    href: "/resources/docs/products/key-metrics-of-gpu-performance"
                 }}
                 reviewDate="August 26, 2025"
                 leftNavItems={leftNavItems}

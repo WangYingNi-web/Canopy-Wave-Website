@@ -13,21 +13,21 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
       {/* Hero Section */}
       <div className="w-full h-[520px] relative mt-[84px]">
         <Image
-          src="/blog/workflows.png"
+          src="/blog/banner.png"
           alt="banner"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[160px]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[170px]">
             <SlideUp>
-              <h1 className="text-4xl lg:text-5xl font-black text-[#80b224] mb-6 leading-tight">
-                How to Choose the Right <br className="hidden sm:block" /> Storage for Your AI Workflows
+              <h1 className="text-4xl lg:text-[56px] font-black text-[#80b224] mb-6 leading-tight">
+                AI: Revolutionizing Animal <br /> Health Monitoring
               </h1>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              {/* <p className="text-lg text-gray-700 leading-relaxed">
                 {blogPost.description}
-              </p>
+              </p> */}
             </SlideUp>
           </div>
         </div>
@@ -56,13 +56,13 @@ const BlogLayout2: React.FC<BlogLayout2Props> = ({ blogPost }) => {
             ">
             {blogPost.sections.map((section, index) => (
               <SlideUp key={index}>
-                <div className="mb-12 w-full">
+                <div className="mb-6 w-full">
                   {section.title && (
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-green-500 pl-4">
+                    <h2 className={`${section.title === 'A New Chapter in Revolutionizing Animal Health Monitoring' ? 'text-2xl' : 'text-xl'} font-bold text-gray-900 mb-4 border-l-4 border-green-500 pl-4`}>
                       {section.title}
                     </h2>
                   )}
-                  <div className="space-y-6 w-full">
+                  <div className="space-y-4 w-full">
                     {section.content.map((paragraph, pIndex) => (
                       <div key={pIndex} className="text-gray-700 leading-relaxed text-base w-full break-words">
                         {paragraph}
