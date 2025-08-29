@@ -119,7 +119,7 @@ export default function GPUPerformanceMetricsPage() {
                 </ul>
 
                 <h2 id="cores-architecture" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    2. Core Architecture & Parallel Processing
+                    2. Core architecture & Parallel processing
                 </h2>
                 <div className="mb-6">
                     <p className="mb-4">
@@ -140,7 +140,7 @@ export default function GPUPerformanceMetricsPage() {
                 </div>
 
                 <h2 id="memory-subsystem" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    3. Memory Subsystem
+                    3. Memory subsystem
                 </h2>
                 <p className="mb-4">
                     Two critical constraints in data-intensive computing:
@@ -168,7 +168,7 @@ export default function GPUPerformanceMetricsPage() {
                 </div>
 
                 <h2 id="clock-frequency" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    4. Clock Frequency
+                    4. Clock frequency
                 </h2>
                 <div className="mb-6">
                     <h3 className="text-l font-medium text-gray-900 mb-3">
@@ -188,7 +188,7 @@ export default function GPUPerformanceMetricsPage() {
                 </div>
 
                 <h2 id="application-specific-performance" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    5. Application-Specific Performance
+                    5. Application-specific performance
                 </h2>
                 <p className="mb-4">
                     Real-world effectiveness varies by workload profile:
@@ -202,7 +202,7 @@ export default function GPUPerformanceMetricsPage() {
                 </ul>
 
                 <h2 id="synthesis-of-metrics" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    6. Synthesis of Metrics
+                    6. Synthesis of metrics
                 </h2>
                 <p className="mb-4">
                     GPU computational capability emerges from the interplay of these factors:
