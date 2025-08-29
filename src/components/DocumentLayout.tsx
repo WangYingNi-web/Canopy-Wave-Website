@@ -469,7 +469,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                             <div className="flex items-center justify-between mb-10">
                                 {reviewDate && (
                                     <p className="text-gray-600 text-sm">
-                                        {router.pathname.includes('quick-start') ? 'Updated on' : 'Reviewed on'} {reviewDate}
+                                        Updated on {reviewDate}
                                     </p>
                                 )}
                                 {downloadUrl && (
