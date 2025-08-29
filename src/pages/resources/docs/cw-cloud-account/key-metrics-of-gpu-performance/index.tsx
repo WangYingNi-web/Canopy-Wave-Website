@@ -14,7 +14,8 @@ export default function GPUPerformanceMetricsPage() {
             id: 'tutorials',
             label: (
                 <span className="flex items-center w-full">
-                    📚 Tutorials
+                    <Image src="/docs/icon/tutorials.svg" alt="Tutorials" width={16} height={16} className="mr-2" />
+                    Tutorials
                     <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
                 </span>
             ),
@@ -24,7 +25,8 @@ export default function GPUPerformanceMetricsPage() {
             id: 'case-studies',
             label: (
                 <span className="flex items-center w-full">
-                    📖 Case Studies
+                    <Image src="/docs/icon/case-studies.svg" alt="Case Studies" width={16} height={16} className="mr-2" />
+                    Case Studies
                     <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
                 </span>
             ),
@@ -34,7 +36,8 @@ export default function GPUPerformanceMetricsPage() {
             id: 'newsroom',
             label: (
                 <span className="flex items-center w-full">
-                    📰 Newsroom
+                    <Image src="/docs/icon/newsroom.svg" alt="Newsroom" width={16} height={16} className="mr-2" />
+                    Newsroom
                     <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
                 </span>
             ),
@@ -43,23 +46,39 @@ export default function GPUPerformanceMetricsPage() {
         { id: 'divider-1', label: '', isDivider: true },
         {
             id: 'cw-cloud',
-            label: '☁️ CW Cloud Account',
+            label: (
+                <span className="flex items-center w-full">
+                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Accoun" width={16} height={16} className="mr-2" />
+                    CW Cloud Accoun
+                </span>
+            ),
             children: [
                 { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
                 { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
             ]
+        },
+        {
+            id: 'products',
+            label: (
+                <span className="flex items-center w-full">
+                    <Image src="/docs/icon/products.svg" alt="Products" width={16} height={16} className="mr-2" />
+                    Products
+                </span>
+            ),
+            children: [
+                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
+            ],
         },
     ];
 
     // 右侧Jump to导航项（基于你提供的左侧目录）
     const jumpToItems = [
-        { id: 'floating-point-performance', label: 'Floating-Point Performance' },
-        { id: 'cores-architecture', label: 'Cores & Architecture' },
-        { id: 'memory-subsystem', label: 'Memory Subsystem' },
-        { id: 'clock-frequency', label: 'Clock Frequency' },
-        { id: 'application-specific-performance', label: 'Application-Specific Performance' },
-        { id: 'synthesis-of-metrics', label: 'Synthesis of Metrics' }
+        { id: 'floating-point-performance', label: 'Floating-point performance' },
+        { id: 'cores-architecture', label: 'Core architecture' },
+        { id: 'memory-subsystem', label: 'Memory subsystem' },
+        { id: 'clock-frequency', label: 'Clock frequency' },
+        { id: 'application-specific-performance', label: 'Application-specific performance' },
+        { id: 'synthesis-of-metrics', label: 'Synthesis of metrics' }
     ];
 
     return (
@@ -77,7 +96,7 @@ export default function GPUPerformanceMetricsPage() {
                     title: "Deploy an Instance",
                     href: "/resources/docs/cw-cloud-account/deploy-an-instance"
                 }}
-                reviewDate="August 28, 2025"
+                reviewDate="August 29, 2025"
                 leftNavItems={leftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Key Metrics of GPU Performance - Technical Analysis"
@@ -87,7 +106,7 @@ export default function GPUPerformanceMetricsPage() {
                 </p>
 
                 <h2 id="floating-point-performance" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    1. Floating-Point Performance
+                    1. Floating-point performance
                 </h2>
                 <p className="mb-4">
                     The cornerstone of GPU capability assessment is <strong>Floating-Point Operations Per Second (FLOPS)</strong>, representing the processor's throughput in handling real-number calculations. This metric is indispensable for scientific simulations, data analytics, and AI workloads. Key precision tiers include:
@@ -198,7 +217,7 @@ export default function GPUPerformanceMetricsPage() {
 
                 <div className="ml-3">
                     <p className="text-l">
-                        <strong>Technical Insight:</strong> Modern performance analysis requires cross-metric evaluation. For instance, NVIDIA's H200 achieves 
+                        <strong>Technical Insight:</strong> Modern performance analysis requires cross-metric evaluation. For instance, NVIDIA's H200 achieves
                         <strong> 1979 TFLOPS FP8 performance</strong> not solely through <strong> 16896 CUDA cores</strong>, but via architectural synergies between Tensor Cores, <strong>4.8TB/s memory bandwidth</strong>, and structured sparsity acceleration.
                     </p>
                 </div>

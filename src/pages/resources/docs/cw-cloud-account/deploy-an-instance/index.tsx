@@ -15,7 +15,8 @@ export default function DeployInstancePage() {
             id: 'tutorials',
             label: (
                 <span className="flex items-center w-full">
-                    📚 Tutorials
+                    <Image src="/docs/icon/tutorials.svg" alt="Tutorials" width={16} height={16} className="mr-2" />
+                    Tutorials
                     <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
                 </span>
             ),
@@ -25,7 +26,8 @@ export default function DeployInstancePage() {
             id: 'case-studies',
             label: (
                 <span className="flex items-center w-full">
-                    📖 Case Studies
+                    <Image src="/docs/icon/case-studies.svg" alt="Case Studies" width={16} height={16} className="mr-2" />
+                    Case Studies
                     <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
                 </span>
             ),
@@ -35,7 +37,8 @@ export default function DeployInstancePage() {
             id: 'newsroom',
             label: (
                 <span className="flex items-center w-full">
-                    📰 Newsroom
+                    <Image src="/docs/icon/newsroom.svg" alt="Newsroom" width={16} height={16} className="mr-2" />
+                    Newsroom
                     <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
                 </span>
             ),
@@ -44,12 +47,28 @@ export default function DeployInstancePage() {
         { id: 'divider-1', label: '', isDivider: true },
         {
             id: 'cw-cloud',
-            label: '☁️ CW Cloud Account',
+            label: (
+                <span className="flex items-center w-full">
+                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Accoun" width={16} height={16} className="mr-2" />
+                    CW Cloud Accoun
+                </span>
+            ),
             children: [
                 { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
                 { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
             ]
+        },
+        {
+            id: 'products',
+            label: (
+                <span className="flex items-center w-full">
+                    <Image src="/docs/icon/products.svg" alt="Products" width={16} height={16} className="mr-2" />
+                    Products
+                </span>
+            ),
+            children: [
+                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/cw-cloud-account/key-metrics-of-gpu-performance' },
+            ],
         },
     ];
 
