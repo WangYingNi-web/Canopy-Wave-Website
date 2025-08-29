@@ -127,8 +127,8 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
         try {
             // 准备发送的数据
             const emailData = {
-                // recipients: ['Lumi.Xiao@canopywave.com','sales@canopywave.com'],
-                recipients: ['wangyingni@canopywave.com'],
+                recipients: ['Lumi.Xiao@canopywave.com','sales@canopywave.com'],
+                // recipients: ['wangyingni@canopywave.com'],
                 subject: `Documentation Feedback: ${feedbackType}`,
                 body: `
                     Documentation Feedback
