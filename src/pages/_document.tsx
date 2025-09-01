@@ -20,6 +20,18 @@ class MyDocument extends Document {
             `,
             }}
           />
+          {/* Microsoft Clarity */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "t3u1d4rwkf");
+              `,
+            }}
+          />
           <meta name="google-site-verification" content="F3XLs-Z8W-Xk9Azc2s3DDj_YYPrSx68ICZic4GKyhoE" />
           {/* 添加 Zendesk Widget 脚本 */}
           {/* <script
