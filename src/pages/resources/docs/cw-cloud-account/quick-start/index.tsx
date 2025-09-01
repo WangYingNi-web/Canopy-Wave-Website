@@ -1,79 +1,9 @@
 import Head from 'next/head';
 import DocumentLayout from '@/components/DocumentLayout';
 import Image from 'next/image';
+import { docsLeftNavItems } from '@/components/docs/docsNavigation';
 
 export default function CaseStudyPage() {
-
-    const leftNavItems = [
-        {
-            id: 'tutorials',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/tutorials.svg" alt="Tutorials" width={16} height={16} className="mr-2" />
-                    Tutorials
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/tutorials'
-        },
-        {
-            id: 'case-studies',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/case-studies.svg" alt="Case Studies" width={16} height={16} className="mr-2" />
-                    Case Studies
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/case-study'
-        },
-        {
-            id: 'newsroom',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/newsroom.svg" alt="Newsroom" width={16} height={16} className="mr-2" />
-                    Newsroom
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/about/newsroom'
-        },
-        { id: 'divider-1', label: '', isDivider: true }, // 添加分隔线
-        {
-            id: 'cw-cloud',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Account" width={16} height={16} className="mr-2" />
-                    CW Cloud Account
-                </span>
-            ),
-            children: [
-                { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
-                { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-            ]
-        },
-        {
-            id: 'products',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/products.svg" alt="Products" width={16} height={16} className="mr-2" />
-                    Products
-                </span>
-            ),
-            children: [
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
-            { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
-            ],
-        },
-        // {
-        //     id: 'technical-docs',
-        //     label: '📋 Technical Documents',
-        //     children: [
-        //         { id: 'data-sheet', label: 'Data Sheet', href: '#' }
-        //     ]
-        // },
-        // { id: 'faqs', label: '❓ FAQs', href: '#' }
-    ];
 
     const jumpToItems = [
         { id: 'overview', label: 'Overview' },
@@ -100,7 +30,7 @@ export default function CaseStudyPage() {
                 // downloadUrl="#"
                 nextPage={{ title: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' }}
                 // previousPage={{ title: 'Manage Instance', href: '/resources/docs/cw-cloud-account/manage-instance' }}
-                leftNavItems={leftNavItems}
+                leftNavItems={docsLeftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Quick Start Guide - NVIDIA H100 & H200 GPU Instances"
                 bannerImage="/docs/quick-banner.png"

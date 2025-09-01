@@ -4,72 +4,11 @@ import DocumentLayout from '@/components/DocumentLayout';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
 import ClickableImage from '@/components/ui/ClickableImage'
+import { docsLeftNavItems } from '@/components/docs/docsNavigation';
 
 export default function DeployInstancePage() {
 
-    // 复用相同的左侧导航结构
-    const leftNavItems = [
-        {
-            id: 'tutorials',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/tutorials.svg" alt="Tutorials" width={16} height={16} className="mr-2" />
-                    Tutorials
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/tutorials'
-        },
-        {
-            id: 'case-studies',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/case-studies.svg" alt="Case Studies" width={16} height={16} className="mr-2" />
-                    Case Studies
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/case-study'
-        },
-        {
-            id: 'newsroom',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/newsroom.svg" alt="Newsroom" width={16} height={16} className="mr-2" />
-                    Newsroom
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/about/newsroom'
-        },
-        { id: 'divider-1', label: '', isDivider: true },
-        {
-            id: 'cw-cloud',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Account" width={16} height={16} className="mr-2" />
-                    CW Cloud Account
-                </span>
-            ),
-            children: [
-                { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
-                { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-            ]
-        },
-        {
-            id: 'products',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/products.svg" alt="Products" width={16} height={16} className="mr-2" />
-                    Products
-                </span>
-            ),
-            children: [
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
-                { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
-            ],
-        },
-    ];
+
 
     // Deploy an instance 专用的Jump to内容
     const jumpToItems = [
@@ -136,7 +75,7 @@ export default function DeployInstancePage() {
                     href: "/resources/docs/products/key-metrics-of-gpu-performance"
                 }}
                 reviewDate="August 26, 2025"
-                leftNavItems={leftNavItems}
+                leftNavItems={docsLeftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Deploy an Instance - GPU Configuration Guide"
             >

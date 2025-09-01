@@ -4,72 +4,9 @@ import DocumentLayout from '@/components/DocumentLayout';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
 import ClickableImage from '@/components/ui/ClickableImage'
+import { docsLeftNavItems } from '@/components/docs/docsNavigation';
 
 export default function InfiniBandComponentsPage() {
-
-    // 左侧导航结构
-    const leftNavItems = [
-        {
-            id: 'tutorials',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/tutorials.svg" alt="Tutorials" width={16} height={16} className="mr-2" />
-                    Tutorials
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/tutorials'
-        },
-        {
-            id: 'case-studies',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/case-studies.svg" alt="Case Studies" width={16} height={16} className="mr-2" />
-                    Case Studies
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/case-study'
-        },
-        {
-            id: 'newsroom',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/newsroom.svg" alt="Newsroom" width={16} height={16} className="mr-2" />
-                    Newsroom
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/about/newsroom'
-        },
-        { id: 'divider-1', label: '', isDivider: true },
-        {
-            id: 'cw-cloud',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Account" width={16} height={16} className="mr-2" />
-                    CW Cloud Account
-                </span>
-            ),
-            children: [
-                { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
-                { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-            ]
-        },
-        {
-            id: 'products',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/products.svg" alt="Products" width={16} height={16} className="mr-2" />
-                    Products
-                </span>
-            ),
-            children: [
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
-                { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
-            ],
-        },
-    ];
 
     // 右侧Jump to导航项
     const jumpToItems = [
@@ -80,7 +17,7 @@ export default function InfiniBandComponentsPage() {
         { id: 'key-advantages', label: 'Key advantages' },
         { id: 'application-scenarios', label: 'Application scenarios' },
         { id: 'canopy-wave-solution', label: 'Canopy Wave\'s solution' },
-        { id: 'conclusion-contact', label: 'Conclusion & Contact' }
+        { id: 'conclusion', label: 'Conclusion' }
     ];
     // 图片预加载组件
     const PreloadedImage: React.FC<{
@@ -136,7 +73,7 @@ export default function InfiniBandComponentsPage() {
                     href: "/resources/docs/products/key-metrics-of-gpu-performance"
                 }}
                 reviewDate="September 1, 2025"
-                leftNavItems={leftNavItems}
+                leftNavItems={docsLeftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="InfiniBand: Components and Advantages - Technical Analysis"
             >
@@ -273,20 +210,12 @@ export default function InfiniBandComponentsPage() {
                     Canopy Wave delivers end-to-end InfiniBand solutions, covering hardware sourcing, network design, configuration, and integration. Our global supply chain and proven expertise help clients in HPC and AI achieve faster deployment, enhanced reliability, and optimized costs.
                 </p>
 
-                <h2 id="conclusion-contact" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
-                    8. Conclusion & Contact
+                <h2 id="conclusion" className="text-xl font-semibold text-gray-900 mb-4 mt-8">
+                    8. Conclusion
                 </h2>
                 <p className="mb-4 text-gray-700">
-                    InfiniBand offers unmatched performance, scalability, and efficiency for HPC, AI, and other demanding workloads. To learn more or explore a tailored solution, contact Canopy Wave:
+                    InfiniBand offers unmatched performance, scalability, and efficiency for HPC, AI, and other demanding workloads.
                 </p>
-                <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                    <p className="text-gray-700">
-                        <strong>Contact:</strong> 
-                        <a href="mailto:sales@canopywave.com" className="text-[#80B224] hover:text-[#98c455]">sales@canopywave.com </a>
-                         | <a href="https://www.canopywave.com" className="text-[#80B224] hover:text-[#98c455]">www.canopywave.com </a>
-                         | +1 (408) 883-5665
-                    </p>
-                </div>
 
             </DocumentLayout>
         </>

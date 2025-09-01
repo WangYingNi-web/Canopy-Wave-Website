@@ -4,74 +4,12 @@ import DocumentLayout from '@/components/DocumentLayout';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
+import { docsLeftNavItems } from '@/components/docs/docsNavigation';
 
 export default function GPUPerformanceMetricsPage() {
     useScrollToHash();
 
-    // 左侧导航结构
-    const leftNavItems = [
-        {
-            id: 'tutorials',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/tutorials.svg" alt="Tutorials" width={16} height={16} className="mr-2" />
-                    Tutorials
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/tutorials'
-        },
-        {
-            id: 'case-studies',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/case-studies.svg" alt="Case Studies" width={16} height={16} className="mr-2" />
-                    Case Studies
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/resources/case-study'
-        },
-        {
-            id: 'newsroom',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/newsroom.svg" alt="Newsroom" width={16} height={16} className="mr-2" />
-                    Newsroom
-                    <Image src="/docs/arrow.svg" alt="arrow" width={16} height={16} className='ml-2 mt-1' />
-                </span>
-            ),
-            href: '/about/newsroom'
-        },
-        { id: 'divider-1', label: '', isDivider: true },
-        {
-            id: 'cw-cloud',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Account" width={16} height={16} className="mr-2" />
-                    CW Cloud Account
-                </span>
-            ),
-            children: [
-                { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
-                { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-            ]
-        },
-        {
-            id: 'products',
-            label: (
-                <span className="flex items-center w-full">
-                    <Image src="/docs/icon/products.svg" alt="Products" width={16} height={16} className="mr-2" />
-                    Products
-                </span>
-            ),
-            children: [
-                { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
-                { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
-            ],
-        },
-    ];
-
+    
     // 右侧Jump to导航项（基于你提供的左侧目录）
     const jumpToItems = [
         { id: 'floating-point-performance', label: 'Floating-point performance' },
@@ -102,7 +40,7 @@ export default function GPUPerformanceMetricsPage() {
                     href: "/resources/docs/products/components-advantages"
                 }}
                 reviewDate="August 29, 2025"
-                leftNavItems={leftNavItems}
+                leftNavItems={docsLeftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Key Metrics of GPU Performance - Technical Analysis"
             >
