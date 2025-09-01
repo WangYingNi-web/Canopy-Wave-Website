@@ -109,10 +109,10 @@ export default function Index() {
     {
       id: 1,
       background: '/home_banner.svg',
-      // title: 'Instant GPU',
-      // subtitle: 'Cluster for',
+      title: 'Instant GPU Cluster',
+      subtitle: 'Enterprise AI',
       // highlight: 'Enterprise AI',
-      // titleColor: 'text-[#80B224]',
+      titleColor: 'text-[#80B224]',
       bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
     },
     {
@@ -271,7 +271,7 @@ export default function Index() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
                   <SlideUp>
                     {slide.id === 1 ? (
-                      <h1 className={`text-5xl sm:text-6xl font-black ${slide.titleColor} text-center text-shadow-lg`}>
+                      <h1 className={`text-5xl sm:text-7xl font-black ${slide.titleColor} text-center text-shadow-lg mt-6`}>
                         {slide.title} <br /> {slide.subtitle} <br /> {slide.highlight}
                       </h1>
                     ) : (
