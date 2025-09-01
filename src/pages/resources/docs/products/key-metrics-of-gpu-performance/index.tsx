@@ -48,8 +48,8 @@ export default function GPUPerformanceMetricsPage() {
             id: 'cw-cloud',
             label: (
                 <span className="flex items-center w-full">
-                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Accoun" width={16} height={16} className="mr-2" />
-                    CW Cloud Accoun
+                    <Image src="/docs/icon/cloud.svg" alt="CW Cloud Account" width={16} height={16} className="mr-2" />
+                    CW Cloud Account
                 </span>
             ),
             children: [
