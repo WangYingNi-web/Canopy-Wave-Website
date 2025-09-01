@@ -97,6 +97,10 @@ export default function GPUPerformanceMetricsPage() {
                     title: "Deploy an Instance",
                     href: "/resources/docs/cw-cloud-account/deploy-an-instance"
                 }}
+                nextPage={{
+                    title: "Components Advantages",
+                    href: "/resources/docs/products/components-advantages"
+                }}
                 reviewDate="August 29, 2025"
                 leftNavItems={leftNavItems}
                 jumpToItems={jumpToItems}
