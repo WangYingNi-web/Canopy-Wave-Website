@@ -25,13 +25,21 @@ export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   // 修改新闻轮播的状态管理 - 从中间位置开始，确保左右都能滑动
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(40); // 设置为扩展数组的中间位置
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(42); // 设置为扩展数组的中间位置
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // 新闻卡片数据
   const newsCards = [
     {
       id: 1,
+      href: "/blog/ai-generates-personalized-content",
+      image: "/blog/ai-content-generation.png",
+      title: "AI Generates Personalized Content",
+      description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
+      date: "September 1, 2025"
+    },
+    {
+      id: 2,
       href: "/blog/ai:-revolutionizing-animal-health-monitoring",
       image: "/blog/workflows2.png",
       title: "AI: Revolutionizing Animal Health Monitoring",
@@ -39,7 +47,7 @@ export default function Index() {
       date: "August 29, 2025"
     },
     {
-      id: 2,
+      id: 3,
       href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",
       image: "/blog/blog2.png",
       title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
@@ -47,7 +55,7 @@ export default function Index() {
       date: "July 14, 2025"
     },
     {
-      id: 3,
+      id: 4,
       href: "/events/ai-agent-summit-keynote",
       image: "/blog2.svg",
       title: "The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning",
@@ -55,7 +63,7 @@ export default function Index() {
       date: "May 15, 2025"
     },
     {
-      id: 4,
+      id: 5,
       href: "/blog/joint-blog-accelerate-enterprise-ai",
       image: "/blog1.webp",
       title: "Joint Blog - Accelerate Enterprise AI",
@@ -63,7 +71,7 @@ export default function Index() {
       date: "April 16, 2025"
     },
     {
-      id: 5,
+      id: 6,
       href: "/events/canopy-confidentialmind-partnership",
       image: "/confidentialmind-logo.png",
       title: "Canopy Wave and ConfidentialMind Join Forces to Accelerate Enterprise AI Adoption",
@@ -224,7 +232,7 @@ export default function Index() {
                     scene="https://prod.spline.design/HFLmWuosfo84hPz9/scene.splinecode"
                     style={{
                       width: '100% !important',
-                      height: '120% !important',
+                      height: '595px !important',
                       position: 'absolute',
                       top: 0,
                       left: 0,
@@ -265,7 +273,6 @@ export default function Index() {
               {slide.id !== 1 && (
                 <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
               )}
-
 
               <div className="absolute inset-0 z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">

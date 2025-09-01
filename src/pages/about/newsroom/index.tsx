@@ -52,7 +52,7 @@ export default function Newsroom() {
     const handleTutorialClick = (title: string) => {
         // 根据具体标题映射到正确的 URL
         let tutorialTitle: string;
-        
+
         if (title.includes('DeepSeek-R1')) {
             tutorialTitle = 'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm';
         } else if (title.includes('Llama')) {
@@ -61,7 +61,7 @@ export default function Newsroom() {
             // 默认的 URL 转换逻辑
             tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
         }
-        
+
         router.push(`/about/newsroom/tutorials/${tutorialTitle}`);
     };
 
@@ -86,6 +86,13 @@ export default function Newsroom() {
             description: "A New Chapter in Revolutionizing Animal Health Monitoring ",
             date: "August 29, 2025",
             image: "/blog/workflows2.png"
+        },
+        {
+            id: 4,
+            title: "AI Generates Personalized Content",
+            description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
+            date: "September 1, 2025",
+            image: "/blog/ai-content-generation.png"
         },
     ];
     const newsroomPosts: NewsroomPost[] = [
@@ -124,7 +131,7 @@ export default function Newsroom() {
         },
     ];
 
-    
+
     return (
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
             <Head>

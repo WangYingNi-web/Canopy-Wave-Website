@@ -24,7 +24,13 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
         <div className="w-full mb-12">
           <SlideUp>
             <img
-              src={blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72" ? "/blog/blog2.png" : "/blog1.webp"}
+              src={
+                blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72" 
+                  ? "/blog/blog2.png" 
+                  : blogPost.title === "AI Generates Personalized Content"
+                  ? "/blog/ai-content-generation.png"
+                  : "/blog1.webp"
+              }
               alt="Blog"
               className="w-full h-auto rounded-[20px] shadow-md"
             />

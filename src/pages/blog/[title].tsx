@@ -13,7 +13,7 @@ export default function BlogDetail() {
   const { title } = router.query
 
   const fullUrl = `https://canopy-wave-website.vercel.app/${router.asPath}`;
-  
+
 
   const getBlogPost = (title: string): BlogPost | null => {
     switch (title) {
@@ -209,7 +209,54 @@ export default function BlogDetail() {
             }
           ]
         }
-
+      case 'ai-generates-personalized-content':
+        return {
+          id: 4,
+          title: 'AI Generates Personalized Content',
+          description: 'Dynamic Content Generation: AI creates uniquely personalized content for each consumer',
+          sections: [
+            {
+              title: '',
+              content: [
+                'The rapid advancement of artificial intelligence has swept through the advertising industry. Today, AI\'s "dynamic content generation" acts like a magic pen—calculating, writing, and refining in real time. Creativity is no longer a one-time draft but an ever-evolving process. It transforms advertising from a "one-size-fits-all poster" into a "personalized stream of content": systems instantly capture user interests, instantly assemble copy, images, and videos, and generate the most appealing variations within copyright boundaries. This liberates human creators from repetitive production tasks, freeing them to focus on more ambitious and groundbreaking ideas.'
+              ]
+            },
+            {
+              title: 'What is AI Dynamic Content Generation?',
+              content: [
+                'AI Dynamic Content Generation refers to the process of automatically creating, adjusting, and optimizing advertising content using advanced technologies such as machine learning, natural language processing, and computer vision—based on predefined rules or real-time data. The system operates like a seasoned creative director, instantly reading user profiles, contextual signals, and interaction feedback to select or assemble text, images, short videos, and other assets. Within milliseconds, it delivers personalized ad creative tailored to each individual. Its core strength lies in algorithms that analyze multi-dimensional data—including user behavior, preferences, and geographic location—to generate content that precisely matches the target audience\'s interests.'
+              ]
+            },
+            {
+              title: '',
+              content: [
+                <img key="ai-image" src="/blog/ai.png" alt="AI Content Generation" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+           
+            {
+              title: 'What Can AI Dynamic Content Generation Achieve?',
+              content: [
+                '(From an Advertiser\'s Perspective)',
+                'Real-Time Market Response: AI constantly scans industry trends, competitor actions, and shifts in public sentiment. Upon detecting trending topics or emotional shifts, it instantly refreshes ad creatives and deployment strategies, ensuring brands stay perfectly in sync with the market\'s pulse.',
+                'Personalized Content Delivery: AI translates vast user data into granular profiles, automatically assembling "custom-tailored" ads for each audience member. This ensures content aligns perfectly with individual interests, naturally boosting click-through rates and conversions.',
+                'Automated Performance Optimization: Algorithms continuously learn during campaigns, autonomously fine-tuning critical variables like visuals, copy, and timing. Acting as tireless optimizers, they minimize trial-and-error time and budget while steadily boosting performance.',
+                '(User Perspective)',
+                'Real-Time Interactive Theater: AI treats every user click, swipe, and pause as "audience feedback," dynamically rewriting the storyline in real time—visuals, pacing, and narrative shift instantly with user actions, creating a more immersive and interactive advertising experience that naturally boosts memorability.',
+                'Emotional Resonator: Deep-learning AI models first decipher the subtle nuances of human emotions—joy, anger, sorrow, and delight—then generate creative content that strikes emotional chords or triggers laughter. This transforms cold, impersonal exposure into warm, heartfelt conversations, sparking emotional resonance with the target audience and building lasting brand loyalty.',
+                'Noise Filter: Through precise targeting and personalized content, it drastically filters out irrelevant digital clutter. Every ad users see feels like a thoughtful recommendation, reducing rejection while increasing perceived value.'
+              ]
+            },
+            {
+              title: 'Challenges and Future Outlook for AI Dynamic Content Generation',
+              content: [
+                'AI demonstrates immense potential in generating dynamic content for advertising creativity, yet it still faces significant challenges such as data privacy protection, maintaining creative diversity, and algorithmic transparency. The industry must strike a new balance between technological advancement and ethical safeguards—employing more secure privacy-preserving technologies and transparent, explainable models while encouraging creative talent to work alongside AI. This ensures advertising creativity retains a human touch.',
+                'Looking ahead, AI will evolve into an "omnipresent creative engine": seamlessly bridging devices, media, and time zones, permeating every user touchpoint like water. Human-AI collaborative creation will become routine: humans set strategy, AI amplifies inspiration, content iterates in real time, and content to iterate in real time based on data-driven feedback. Advertising will no longer be an "intrusion," but rather a timely companion that "just happens to be there."',
+                'Ultimately, AI-driven dynamic content generation is not merely a technological upgrade but a proactive evolution of the advertising industry adapting to the digital tide. As algorithms mature and standards become more robust, AI will unlock a whole new realm of creativity. Each unlocked door reveals unprecedented narratives, visuals, and experiences, granting advertisements the magic of being truly "made just for you in this moment."'
+              ]
+            }
+          ]
+        }
       default:
         return null
     }
@@ -240,6 +287,8 @@ export default function BlogDetail() {
         return <BlogLayout1 blogPost={blogPost} />
       case 3:
         return <BlogLayout2 blogPost={blogPost} />
+      case 4:
+        return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
     }
