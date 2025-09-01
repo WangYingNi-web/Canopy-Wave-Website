@@ -1,11 +1,8 @@
 import Head from 'next/head';
 import DocumentLayout from '@/components/DocumentLayout';
-import { useScrollToHash } from '@/hooks/useScrollToHash';
 import Image from 'next/image';
 
 export default function CaseStudyPage() {
-    useScrollToHash();
-
 
     const leftNavItems = [
         {
@@ -65,6 +62,7 @@ export default function CaseStudyPage() {
             ),
             children: [
                 { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
+            { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
             ],
         },
         // {

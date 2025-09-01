@@ -271,7 +271,7 @@ export default function Index() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
                   <SlideUp>
                     {slide.id === 1 ? (
-                      <h1 className={`text-6xl sm:text-7xl font-black ${slide.titleColor} text-center text-shadow-lg mt-6`}>
+                      <h1 className={`text-6xl sm:text-[65px] font-black ${slide.titleColor} text-center text-shadow-lg mt-8`}>
                         <span className="hidden sm:block">{slide.title}</span>
                         <span className="hidden sm:block">{slide.subtitle}</span>
                         <span className="block sm:hidden">{slide.title} {slide.subtitle}</span>

@@ -93,21 +93,21 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
             setShowToast(true);
             return;
         }
-        
+
         // if (!feedbackName) {
         //     setToastMessage('Please complete this required field.');
         //     setToastType('error');
         //     setShowToast(true);
         //     return;
         // }
-        
+
         if (!feedbackEmail) {
             setToastMessage('Please complete this required field.');
             setToastType('error');
             setShowToast(true);
             return;
         }
-        
+
         if (!feedbackDescription) {
             setToastMessage('Please complete this required field.');
             setToastType('error');
@@ -127,7 +127,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
         try {
             // 准备发送的数据
             const emailData = {
-                recipients: ['Lumi.Xiao@canopywave.com','sales@canopywave.com'],
+                recipients: ['Lumi.Xiao@canopywave.com', 'sales@canopywave.com'],
                 // recipients: ['wangyingni@canopywave.com'],
                 subject: `Documentation Feedback: ${feedbackType}`,
                 body: `
@@ -194,40 +194,24 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
         }
     }, [showToast]);
 
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            const headerHeight = 0;
-            const extraOffset = 20;
-            const rightSidebar = rightSidebarRef.current;
+// ... existing code ...
+const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+        // 修正header高度计算
+        const headerHeight = 84; // 正确的header高度：64px + 16px + 4px
+        const extraOffset = 20;  // 额外偏移量
 
-            // 获取右侧边栏高度
-            const sidebarHeight = rightSidebar ? rightSidebar.getBoundingClientRect().height : 0;
-            const viewportHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight - extraOffset;
 
-            // 计算元素位置
-            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-            let offsetPosition = elementPosition - headerHeight - extraOffset;
-
-            // 如果滚动到这个位置会让右侧边栏超出视线，则调整偏移量
-            const maxScrollPosition = documentHeight - viewportHeight;
-            const sidebarBottomPosition = offsetPosition + sidebarHeight + headerHeight + extraOffset;
-
-            // 如果边栏底部会超出文档底部，调整滚动位置
-            if (sidebarBottomPosition > documentHeight) {
-                offsetPosition = Math.max(0, documentHeight - viewportHeight - 50); // 留50px缓冲
-            }
-
-            // 确保不会滚动超过最大位置
-            offsetPosition = Math.min(offsetPosition, maxScrollPosition);
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
+        window.scrollTo({
+            top: Math.max(0, offsetPosition), // 确保不会滚动到负数位置
+            behavior: 'smooth'
+        });
+    }
+};
+// ... existing code ...
     const toggleExpanded = (itemId: string) => {
         const newExpanded = new Set(expandedItems);
         if (newExpanded.has(itemId)) {
@@ -319,7 +303,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                 return `${baseClasses} lg:sticky lg:top-24 lg:left-0 lg:z-10`;
             case 'sticky':
             default:
-                return `${baseClasses} lg:sticky lg:top-2`;
+                return `${baseClasses} lg:sticky lg:top-24`;
         }
     };
 
@@ -332,7 +316,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                 return `${baseClasses} lg:sticky lg:top-24 lg:right-0 lg:z-10`;
             case 'sticky':
             default:
-                return `${baseClasses} lg:sticky lg:top-2`;
+                return `${baseClasses} lg:sticky lg:top-24`;
         }
     };
 
@@ -709,8 +693,8 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
             {/* Toast 通知 */}
             {showToast && (
                 <div className={`fixed top-4 right-4 z-50 max-w-md p-4 rounded-lg shadow-lg transition-all duration-300 ${toastType === 'success'
-                        ? 'bg-[#80B224] text-white'
-                        : 'bg-red-500 text-white'
+                    ? 'bg-[#80B224] text-white'
+                    : 'bg-red-500 text-white'
                     }`}>
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">

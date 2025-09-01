@@ -67,6 +67,7 @@ export default function GPUPerformanceMetricsPage() {
             ),
             children: [
                 { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
+                { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
             ],
         },
     ];

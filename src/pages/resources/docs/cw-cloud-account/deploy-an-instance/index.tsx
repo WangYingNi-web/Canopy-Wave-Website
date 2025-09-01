@@ -1,13 +1,11 @@
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react'
 import DocumentLayout from '@/components/DocumentLayout';
-import { useScrollToHash } from '@/hooks/useScrollToHash';
 import Image from 'next/image';
 import SlideUp from '@/components/slide';
 import ClickableImage from '@/components/ui/ClickableImage'
 
 export default function DeployInstancePage() {
-    useScrollToHash();
 
     // 复用相同的左侧导航结构
     const leftNavItems = [
@@ -68,6 +66,7 @@ export default function DeployInstancePage() {
             ),
             children: [
                 { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
+                { id: 'components-advantages', label: 'Components Advantages', href: '/resources/docs/products/components-advantages' },
             ],
         },
     ];
@@ -79,43 +78,43 @@ export default function DeployInstancePage() {
         { id: 'deploy-instance', label: 'Deploy an Instance' }
     ];
     // 图片预加载组件
-const PreloadedImage: React.FC<{
-    src: string;
-    alt: string;
-    className?: string;
-}> = ({ src, alt, className }) => {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [hasError, setHasError] = useState(false);
+    const PreloadedImage: React.FC<{
+        src: string;
+        alt: string;
+        className?: string;
+    }> = ({ src, alt, className }) => {
+        const [isLoaded, setIsLoaded] = useState(false);
+        const [hasError, setHasError] = useState(false);
 
-    return (
-        <div className={`relative ${className}`}>
-            {/* 加载占位符 */}
-            {!isLoaded && !hasError && (
-                <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
-                    <div className="text-gray-500 text-sm">Image loading in progress...</div>
-                </div>
-            )}
+        return (
+            <div className={`relative ${className}`}>
+                {/* 加载占位符 */}
+                {!isLoaded && !hasError && (
+                    <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
+                        <div className="text-gray-500 text-sm">Image loading in progress...</div>
+                    </div>
+                )}
 
-            {/* 错误占位符 */}
-            {hasError && (
-                <div className="absolute inset-0 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
-                    {/* <div className="text-gray-400 text-sm">图片加载失败</div> */}
-                </div>
-            )}
+                {/* 错误占位符 */}
+                {hasError && (
+                    <div className="absolute inset-0 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
+                        {/* <div className="text-gray-400 text-sm">图片加载失败</div> */}
+                    </div>
+                )}
 
-            {/* 实际图片 */}
-            <ClickableImage
-                src={src}
-                alt={alt}
-                className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
-                showZoomIcon={true}
-                onLoad={() => setIsLoaded(true)}
-                onError={() => setHasError(true)}
-                loading="lazy"
-            />
-        </div>
-    );
-};
+                {/* 实际图片 */}
+                <ClickableImage
+                    src={src}
+                    alt={alt}
+                    className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+                    showZoomIcon={true}
+                    onLoad={() => setIsLoaded(true)}
+                    onError={() => setHasError(true)}
+                    loading="lazy"
+                />
+            </div>
+        );
+    };
 
     return (
         <>
@@ -217,7 +216,7 @@ const PreloadedImage: React.FC<{
                 </p>
                 <SlideUp>
                     <PreloadedImage
-                        src="/docs/cw-cloud-account/Select.webp"  
+                        src="/docs/cw-cloud-account/Select.webp"
                         alt="Select"
                         className="w-full max-w-3xl rounded-lg shadow-sm"
                     />
@@ -236,7 +235,7 @@ const PreloadedImage: React.FC<{
                 </div>
                 <SlideUp>
                     <PreloadedImage
-                        src="/docs/cw-cloud-account/Enter.webp"  
+                        src="/docs/cw-cloud-account/Enter.webp"
                         alt="Enter"
                         className="w-full max-w-3xl rounded-lg shadow-sm"
                     />
@@ -313,7 +312,7 @@ const PreloadedImage: React.FC<{
                 <p className="mb-4">
                     Click the highlighted text to assign the Public IP to your instance.
                 </p>
-                 <SlideUp>
+                <SlideUp>
                     <PreloadedImage
                         src="/docs/cw-cloud-account/last 1.webp"
                         alt="last 1"

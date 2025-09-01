@@ -53,9 +53,9 @@ export default function Header() {
     setShowMobileSubMenu(null);
   };
   const getContainerMaxWidth = () => {
-    return router.pathname.startsWith('/resources/docs/cw-cloud-account') ? 'max-w-8xl' : 'max-w-7xl';
+    return router.pathname.startsWith('/resources/docs') ? 'max-w-8xl' : 'max-w-7xl';
   };
- 
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -77,7 +77,7 @@ export default function Header() {
         setShowAbout(false);
       }
     };
-    
+
     // 新增滚动监听逻辑
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -95,10 +95,11 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className={`bg-[#F9F9F9] border-y-2 border-gray-200 z-50 py-2 transition-all duration-300 ${router.pathname.startsWith('/resources/docs/cw-cloud-account') && isScrolled
-        ? 'sticky -top-[83px]'
-        : 'fixed top-0 left-0 right-0'
-      }`}>
+    // <nav className={`bg-[#F9F9F9] border-y-2 border-gray-200 z-50 py-2 transition-all duration-300 ${router.pathname.startsWith('/resources/docs/cw-cloud-account') && isScrolled
+    //     ? 'sticky -top-[83px]'
+    //     : 'fixed top-0 left-0 right-0'
+    //   }`}>
+    <nav className="bg-[#F9F9F9] border-y-2 border-gray-200 py-2 z-50 fixed top-0 left-0 right-0">
       <div className={`${getContainerMaxWidth()} mx-auto px-4 sm:px-6 lg:px-8`}>
         <div className="flex items-center justify-between h-16">
           {/* 左侧 logo */}
