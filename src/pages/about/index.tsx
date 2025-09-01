@@ -256,7 +256,7 @@ export default function AboutPage() {
           </SlideUp>
           <SlideUp>
             <p className="text-gray-600 text-center mb-10 max-w-4xl mx-auto">
-              Canopy Wave Inc., founded in 2024, headquartered in Santa Calra, California, is a technology company specializing in building, managing, and operating high-performance Nvidia GPU clusters.
+              Canopy Wave Inc., founded in 2024, headquartered in Santa Clara, California, is a technology company specializing in building, managing, and operating high-performance Nvidia GPU clusters.
 
               <br /> We provide a stable, efficient, and scalable computing infrastructure essential for the AI era
             </p>
