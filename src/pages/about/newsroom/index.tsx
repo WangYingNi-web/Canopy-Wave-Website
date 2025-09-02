@@ -67,18 +67,11 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
-            id: 1,
-            title: "Joint Blog - Accelerate Enterprise AI",
-            description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
-            date: "April 16, 2025",
-            image: "/blog1.webp"
-        },
-        {
-            id: 2,
-            title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
-            description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
-            date: "July 14, 2025",
-            image: "/blog/blog2.png"
+            id: 4,
+            title: "AI Generates Personalized Content",
+            description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
+            date: "September 1, 2025",
+            image: "/blog/ai-content-generation.png"
         },
         {
             id: 3,
@@ -88,12 +81,21 @@ export default function Newsroom() {
             image: "/blog/workflows2.png"
         },
         {
-            id: 4,
-            title: "AI Generates Personalized Content",
-            description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
-            date: "September 1, 2025",
-            image: "/blog/ai-content-generation.png"
+            id: 2,
+            title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
+            description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
+            date: "July 14, 2025",
+            image: "/blog/blog2.png"
         },
+        {
+            id: 1,
+            title: "Joint Blog - Accelerate Enterprise AI",
+            description: "by James Liao, CTO of Canopy Wave, and Severi Tikkala, CTO of ConfidentialMind",
+            date: "April 16, 2025",
+            image: "/blog1.webp"
+        },
+        
+        
     ];
     const newsroomPosts: NewsroomPost[] = [
         {

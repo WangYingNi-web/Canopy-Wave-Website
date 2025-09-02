@@ -71,8 +71,8 @@ export default function DeployInstancePage() {
                     href: "/resources/docs/cw-cloud-account/quick-start"
                 }}
                 nextPage={{
-                    title: "Key Metrics of GPU Performance",
-                    href: "/resources/docs/products/key-metrics-of-gpu-performance"
+                    title: "Canopy Wave GPU",
+                    href: "/resources/docs/products/canopy-wave-gpu"
                 }}
                 reviewDate="August 26, 2025"
                 leftNavItems={docsLeftNavItems}
