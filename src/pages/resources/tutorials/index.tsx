@@ -40,6 +40,14 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     {
+      id: 'prompt-engineering-guide',
+      category: 'LLMs',
+      title: 'Prompt Engineering Guide',
+      image: '/tutorials/prompt-engineering-guide/group.png',
+      date: 'September 3, 2025',
+      onClick: () => handleTutorialClick('Prompt Engineering Guide')
+    },
+    {
       id: 'ai-workflows',
       category: 'GPU',
       title: 'NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload?',
@@ -289,7 +297,7 @@ const Tutorials: React.FC = () => {
           <div className="mb-12">
             <SlideUp>
               <div className="flex flex-wrap gap-4 justify-start">
-                {['All', 'AI Models', 'API', 'Storage' ,'GPU'].map((category) => (
+                {['All', 'AI Models', 'API', 'Storage' ,'GPU','LLMs'].map((category) => (
                   <button
                     key={category}
                     onClick={() => handleCategoryClick(category)}
@@ -369,7 +377,7 @@ const Tutorials: React.FC = () => {
               {currentCards.map((card) => (
                 <SlideUp key={card.id}>
                   <div
-                    className="relative bg-white rounded-xl overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300 border border-gray-200"
+                    className="relative bg-white min-h-[335px] rounded-xl overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300 border border-gray-200"
                     onClick={card.onClick}
                   >
                     {/* 图片区域 */}

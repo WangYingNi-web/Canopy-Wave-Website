@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
-  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialPost } from '@/components/tutorials'
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -235,6 +235,20 @@ export default function TutorialDetail() {
             },
           ],
         }
+        case 'prompt-engineering-guide': // 添加这行支持带冒
+        return {
+          id: 7,
+          title: 'Prompt Engineering Guide',
+          description: 'A comprehensive guide to prompt engineering, including best practices, techniques, and tools for creating effective prompts for large language models.',
+          sections: [
+            {
+              title: 'Prompt Engineering Guide',
+              content: [
+                'Prompt engineering is the process of creating effective prompts for large language models (LLMs) to generate desired outputs. This guide covers best practices, techniques, and tools for prompt engineering.',
+              ],
+            },
+          ],
+        }
 
       default:
         return null
@@ -277,6 +291,8 @@ export default function TutorialDetail() {
         return <TutorialLayout5 />
       case 6:
         return <TutorialLayout6 />
+      case 7:
+        return <TutorialLayout7 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }
