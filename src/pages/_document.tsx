@@ -32,7 +32,7 @@ class MyDocument extends Document {
               `,
             }}
           />
-          <meta name="google-site-verification" content="F3XLs-Z8W-Xk9Azc2s3DDj_YYPrSx68ICZic4GKyhoE" />
+          <meta name="google-site-verification" content="cUFGfkavl_Bfg3cmAwbXK4Fw8cByEkXXtUTbg1Bsr7Y" />
           {/* 添加 Zendesk Widget 脚本 */}
           {/* <script
             id="ze-snippet"
