@@ -128,7 +128,7 @@ export default function Careers() {
                                     style={{ width: '36px', height: '36px' }}
                                 />
                             </div>
-                            <h4 className="font-bold mb-4 group-hover:text-white">Innovative & Global Environment</h4>
+                            <h4 className="font-bold mb-4 group-hover:text-white">Environment</h4>
                             <p className="text-gray-600 group-hover:text-white text-l">
                                 Join a high-growth, innovative, and international team that offers boundless opportunities for professional development
                             </p>

@@ -19,12 +19,14 @@ export default function JobApplication() {
         phone: string;
         message: string;
         resume: File | null;
+        selectedPosition: string;
     }>({
         name: '',
         email: '',
         phone: '',
         message: '',
-        resume: null
+        resume: null,
+        selectedPosition: ''
     });
 
     const [errors, setErrors] = useState<{
@@ -32,7 +34,37 @@ export default function JobApplication() {
         email?: string;
         phone?: string;
         resume?: string;
+        selectedPosition?: string;
     }>({});
+
+    // 职位选项
+    const positions = [
+        'Product Manager',
+        'Hardware Account Manager', 
+        'Lead Account Manager',
+        'Account Manager',
+        'Monitoring Development Engineer'
+    ];
+
+    // 根据URL参数设置默认选中的职位
+    useEffect(() => {
+        if (position) {
+            const positionMap: { [key: string]: string } = {
+                'product-manager': 'Product Manager',
+                'hardware-account-manager': 'Hardware Account Manager',
+                'lead-account-manager': 'Lead Account Manager', 
+                'account-manager': 'Account Manager',
+                'monitoring-development-engineer': 'Monitoring Development Engineer'
+            };
+            const mappedPosition = positionMap[position as string];
+            if (mappedPosition) {
+                setFormData(prev => ({
+                    ...prev,
+                    selectedPosition: mappedPosition
+                }));
+            }
+        }
+    }, [position]);
 
     const validateField = (name: string, value: string | File | null) => {
         switch (name) {
@@ -47,12 +79,12 @@ export default function JobApplication() {
                 return '';
             case 'phone':
                 if (!value) return 'Please complete this required field.';
-                // if (!/^[0-9+\-\s()]{8,}$/.test(value as string)) {
-                //     return 'Phone number must be formatted correctly.';
-                // }
                 return '';
             case 'resume':
                 if (!value) return 'Please upload your resume';
+                return '';
+            case 'selectedPosition':
+                if (!value) return 'Please select a position';
                 return '';
             default:
                 return '';
@@ -64,6 +96,18 @@ export default function JobApplication() {
         setFormData(prev => ({
             ...prev,
             [name]: value
+        }));
+    };
+
+    const handlePositionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            selectedPosition: value
+        }));
+        setErrors(prev => ({
+            ...prev,
+            selectedPosition: ''
         }));
     };
 
@@ -100,7 +144,8 @@ export default function JobApplication() {
             name: validateField('name', formData.name),
             email: validateField('email', formData.email),
             phone: validateField('phone', formData.phone),
-            resume: validateField('resume', formData.resume)
+            resume: validateField('resume', formData.resume),
+            selectedPosition: validateField('selectedPosition', formData.selectedPosition)
         };
         setErrors(newErrors);
         return !Object.values(newErrors).some(error => error !== '');
@@ -123,13 +168,16 @@ export default function JobApplication() {
 
         try {
             const formDataToSend = new FormData();
-            formDataToSend.append('subject', `New Job Application from ${formData.name}`);
-            formDataToSend.append('recipients', 'andrew.li@canopywave.com, yachal@canopywave.com');
+            formDataToSend.append('subject', `New Job Application from ${formData.name} - ${formData.selectedPosition}`);
+            formDataToSend.append('recipients', 'hr@canopywave.com')
+            // formDataToSend.append('recipients', 'wangyingni@canopywave.com');
+
 
             // 构建邮件正文
             const emailBody = `
 New Job Application Details:
 
+Applying for Position: ${formData.selectedPosition}
 Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
@@ -171,7 +219,7 @@ Message: ${formData.message}
         } catch (error: any) {
             const errorMessage = error.response?.data?.error || "Failed to submit application. Please try again later";
             toast.error(errorMessage);
-        }   finally {
+        } finally {
             setIsLoading(false);
         }
     };
@@ -189,6 +237,29 @@ Message: ${formData.message}
                     </SlideUp>
                     <div className="bg-white p-8 rounded-lg shadow-sm">
                         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                            {/* 职位选择 */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-3">
+                                    Position Applying For <span className="text-red-500">*</span>
+                                </label>
+                                <div className="space-y-3">
+                                    {positions.map((position) => (
+                                        <label key={position} className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="selectedPosition"
+                                                value={position}
+                                                checked={formData.selectedPosition === position}
+                                                onChange={handlePositionChange}
+                                                className="h-4 w-4 text-[#8CC63F] focus:ring-[#8CC63F] border-gray-300"
+                                            />
+                                            <span className="ml-2 text-sm text-gray-700">{position}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                                {errors.selectedPosition && <p className="mt-1 text-sm text-red-500">{errors.selectedPosition}</p>}
+                            </div>
+
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                     Name<span className="text-red-500">*</span>
