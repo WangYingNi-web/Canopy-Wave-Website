@@ -112,7 +112,7 @@ export default function CanopyWaveGPUPage() {
                                 alt="GB200 NVL72 GPU Server"
                                 className="w-full max-w-[100px]"
                             />
-                            <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
+                            <h4 className="text-sm mt-1 font-medium" style={{color: '#80B224'}}>
                                 GB200 NVL72
                             </h4>
                         </div>
@@ -190,7 +190,7 @@ export default function CanopyWaveGPUPage() {
                                 alt="HGX H100 GPU Module"
                                 className="w-full max-w-[190px]"
                             />
-                             <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
+                             <h4 className="text-sm mt-2 font-medium" style={{color: '#80B224'}}>
                                 HGX H100
                             </h4>
                         </div>
@@ -299,7 +299,7 @@ export default function CanopyWaveGPUPage() {
                                 alt="Samsung PM9D3A NVMe SSD"
                                 className="w-full max-w-[190px]"
                             />
-                             <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
+                             <h4 className="text-sm mt-1 font-medium" style={{color: '#80B224'}}>
                                 Samsung PM9D3A(NVMe SSD)
                             </h4>
                         </div>
@@ -362,7 +362,7 @@ export default function CanopyWaveGPUPage() {
                                 alt="Supermicro Ultra SuperServer 1029U-TN10RT"
                                 className="w-full max-w-[190px]"
                             />
-                             <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
+                             <h4 className="text-sm mt-1 font-medium" style={{color: '#80B224'}}>
                                 Supermicro Ultra SuperServer 1029U-TN10RT
                             </h4>
                         </div>
@@ -730,7 +730,7 @@ export default function CanopyWaveGPUPage() {
                                 alt="MTP Jumpers"
                                 className="w-full max-w-[190px]"
                             />
-                            <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
+                            <h4 className="text-sm mt-1 font-medium" style={{color: '#80B224'}}>
                                 MTP Jumpers
                             </h4>
                         </div>
@@ -953,11 +953,11 @@ export default function CanopyWaveGPUPage() {
                                 alt="APC Rack PDU (AP8959)"
                                 className="w-full max-w-[100px]"
                             />
-                            <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
+                            <h4 className="text-sm mt-2 ml-[10px] font-medium" style={{color: '#80B224'}}>
                                 APC Rack PDU (AP8959)
                             </h4>
                         </div>
-                        <div className="flex-1 ml-[10px]">
+                        <div className="flex-1">
                             <ul className="space-y-2 text-gray-700">
                                 <li>• 208V/415V, Single-phase or Three-phase configurations</li>
                                 <li>• Output: 24 outlets, IEC 60320 C13/C19</li>
