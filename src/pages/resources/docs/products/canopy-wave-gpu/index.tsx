@@ -65,8 +65,8 @@ export default function CanopyWaveGPUPage() {
             </Head>
 
             <DocumentLayout
-                title="Canopy Wave GPU Cluster Hardware Product Portfolio "
-                breadcrumb='Canopy Wave GPU'
+                title="Canopy Wave GPU Cluster Hardware Product Portfolio"
+                breadcrumb='GPU Cluster Hardware Product Portfolio'
                 previousPage={{
                     title: "Deploy an Instance",
                     href: "/resources/docs/cw-cloud-account/deploy-an-instance"
@@ -75,7 +75,7 @@ export default function CanopyWaveGPUPage() {
                     title: "Key Metrics of GPU Performance",
                     href: "/resources/docs/products/key-metrics-of-gpu-performance"
                 }}
-                reviewDate="September 2, 2025"
+                reviewDate="September 3, 2025"
                 leftNavItems={docsLeftNavItems}
                 jumpToItems={jumpToItems}
                 pageTitle="Canopy Wave GPU Cluster Hardware Product Portfolio  - Technical Overview"

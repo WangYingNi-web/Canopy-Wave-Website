@@ -32,7 +32,7 @@ export default function GPUPerformanceMetricsPage() {
                 breadcrumb='Key Metrics of GPU Performance'
                 description="GPU computing power quantifies a graphics processing unit's performance in executing computational tasks, typically measured by the number of operations performed per second. This metric serves as a critical benchmark for evaluating GPU capabilities across graphics rendering, machine learning, scientific computing, and parallel processing workloads."
                 previousPage={{
-                    title: "Canopy Wave GPU",
+                    title: "GPU Cluster Hardware Product Portfolio",
                     href: "/resources/docs/products/canopy-wave-gpu"
                 }}
                 nextPage={{

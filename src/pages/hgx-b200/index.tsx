@@ -160,7 +160,7 @@ export default function HGXB200Page() {
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black text-center mb-4" style={{ lineHeight: '1.3' }}>
-                            Why NVIDIA HGX B200 on <br /> Canopy Wave GPU Clusters?
+                            Why NVIDIA HGX B200 on <br /> GPU Cluster Hardware Product Portfolio Clusters?
                         </h2>
                     </SlideUp>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">

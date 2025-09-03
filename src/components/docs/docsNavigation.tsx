@@ -57,7 +57,7 @@ export const docsLeftNavItems = [
             </span>
         ),
         children: [
-            { id: 'canopy-wave-gpu', label: 'Canopy Wave GPU', href: '/resources/docs/products/canopy-wave-gpu' },
+            { id: 'canopy-wave-gpu', label: 'GPU Cluster Hardware Product Portfolio', href: '/resources/docs/products/canopy-wave-gpu' },
             { id: 'key-metrics-of-gpu-performance', label: 'Key Metrics of GPU Performance', href: '/resources/docs/products/key-metrics-of-gpu-performance' },
             { id: 'components-advantages', label: 'InfiniBand: Components and Advantages', href: '/resources/docs/products/components-advantages' },
         ],

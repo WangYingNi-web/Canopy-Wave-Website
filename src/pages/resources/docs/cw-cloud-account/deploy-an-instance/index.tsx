@@ -71,7 +71,7 @@ export default function DeployInstancePage() {
                     href: "/resources/docs/cw-cloud-account/quick-start"
                 }}
                 nextPage={{
-                    title: "Canopy Wave GPU",
+                    title: "GPU Cluster Hardware Product Portfolio",
                     href: "/resources/docs/products/canopy-wave-gpu"
                 }}
                 reviewDate="August 26, 2025"
