@@ -188,7 +188,7 @@ export default function Careers() {
                                             <h4 className="font-semibold text-gray-700 mb-2">Job Requirements</h4>
                                             <ul className="space-y-2 text-sm text-gray-600">
                                                 <li>1. Bachelor's degree or above.</li>
-                                                <li>2. English as working language: Excellent English reading and writing skills (CET-6 or above; verbal communication skills are a plus).</li>
+                                                <li>2. English as working language: Excellent English reading and writing skills (verbal communication skills are a plus).</li>
                                                 <li>3. Exceptional fresh graduates are welcome to apply. Familiarity with AI, large models, GPU cloud services, servers and other related basic knowledge is preferred; 2 years or more of experience in software and hardware sales, technical support or product operation is preferred.</li>
                                                 <li>4. Excellent communication and coordination skills, resilience under pressure, and strong execution skills, and the ability to learn independently and produce content.</li>
                                             </ul>
@@ -260,7 +260,7 @@ export default function Careers() {
                                         <div>
                                             <h4 className="font-semibold text-gray-700 mb-2">Job Requirements</h4>
                                             <ul className="space-y-2 text-sm text-gray-600">
-                                                <li>1. Education and Language: Bachelor's degree or above, with excellent English reading and writing skills (CET-6), capable of understanding product English materials and conducting simple email communication.</li>
+                                                <li>1. Education and Language: Bachelor's degree or above, with excellent English reading and writing skills , capable of understanding product English materials and conducting simple email communication.</li>
                                                 <li>2. Industry Experience: Recent graduates are also encouraged to apply. Direct sales experience in computer software or hardware (such as servers, storage, network devices or GPU cards, etc.) to enterprise customers is preferred.</li>
                                                 <li>3. Possess outstanding customer communication skills, negotiation abilities and relationship-building capabilities.</li>
                                                 <li>4. Proactive self-starter with a strong learning ability, and be able to quickly grasp the technical highlights and application scenarios of complex hardware products.</li>
@@ -337,7 +337,7 @@ export default function Careers() {
                                             <ul className="space-y-2 text-sm text-gray-600">
                                                 <li>1. Educational Background: Bachelor's degree or above, majoring in Computer Science, Information Technology or related fields is preferred.</li>
                                                 <li>2. Language Skills: Excellent English communication skills, capable of using it as the working language, and able to effectively manage long-term relationships with overseas clients.</li>
-                                                <li>3. Industry Experience: More than 5 years of experience in managing or expanding overseas B2B clients, a proven track record of client success is highly preferred.</li>
+                                                <li>3. Industry Experience: More than 5 years of experience in managing or expanding international B2B clients, a proven track record of client success is highly preferred.</li>
                                                 <li>4. Management Skills: Experience in managing a team of more than 10 account managers, skilled in setting and cascading goals, managing performance, developing talent, and empowering the organization.</li>
                                             </ul>
                                         </div>
