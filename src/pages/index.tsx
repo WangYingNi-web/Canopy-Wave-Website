@@ -25,27 +25,27 @@ export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   // 修改新闻轮播的状态管理 - 从中间位置开始，确保左右都能滑动
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(42); // 设置为扩展数组的中间位置
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(40); // 设置为扩展数组的中间位置
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // 新闻卡片数据
   const newsCards = [
-    {
-      id: 1,
-      href: "/blog/ai-generates-personalized-content",
-      image: "/blog/ai-content-generation.png",
-      title: "AI Generates Personalized Content",
-      description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
-      date: "September 1, 2025"
-    },
-    {
-      id: 2,
-      href: "/blog/ai:-revolutionizing-animal-health-monitoring",
-      image: "/blog/workflows2.png",
-      title: "AI: Revolutionizing Animal Health Monitoring",
-      description: "A New Chapter in Revolutionizing Animal Health Monitoring",
-      date: "August 29, 2025"
-    },
+    // {
+    //   id: 1,
+    //   href: "/blog/ai-generates-personalized-content",
+    //   image: "/blog/ai-content-generation.png",
+    //   title: "AI Generates Personalized Content",
+    //   description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
+    //   date: "September 1, 2025"
+    // },
+    // {
+    //   id: 2,
+    //   href: "/blog/ai:-revolutionizing-animal-health-monitoring",
+    //   image: "/blog/workflows2.png",
+    //   title: "AI: Revolutionizing Animal Health Monitoring",
+    //   description: "A New Chapter in Revolutionizing Animal Health Monitoring",
+    //   date: "August 29, 2025"
+    // },
     {
       id: 3,
       href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",

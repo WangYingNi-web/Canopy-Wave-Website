@@ -100,10 +100,10 @@ const TutorialLayout7: React.FC = () => {
                             React.createElement('br'),
                             'Example: Tool returns: "Beijing May 1, 2024: Rain probability 60%." Assistant says: "Beijing\'s rain chance is 60%. We suggest carrying an umbrella."'
                         ]),
-                        React.createElement('li', { key: 'assistant-5' }, [
-                            React.createElement('strong', {}, 'Ask clarifying questions'),
-                            ': If user input is vague, probe for details before responding.'
-                        ])
+                        // React.createElement('li', { key: 'assistant-5' }, [
+                        //     React.createElement('strong', {}, 'Ask clarifying questions'),
+                        //     ': If user input is vague, probe for details before responding.'
+                        // ])
                     ]),
                     React.createElement('h3', { key: 'tool-role', className: 'text-lg font-semibold mt-6 mb-3' }, '4. Extended Role: Tool/Function – Assistant\'s Power Extension'),
                     'Tools and Functions handle tasks that the assistant cannot perform on its own. They are essentially callable programs, APIs, or services, e.g., weather APIs, calculators, document parsers, or map services.',
@@ -133,7 +133,7 @@ const TutorialLayout7: React.FC = () => {
                     ]),
                     React.createElement('ol', { key: 'workflow-steps', className: 'space-y-2 list-decimal list-inside' }, [
                         React.createElement('li', { key: 'step-1' }, React.createElement('strong', {}, 'System preset rule'), ': "Must call Air Quality API; report must include index value + grade + health advice, and provide a download link."'),
-                        React.createElement('li', { key: 'step-2' }, React.createElement('strong', {}, 'User initiates'), ' the query and later receives the result.'),
+                        React.createElement('li', { key: 'step-2' }, React.createElement('strong', {}, 'User initiates'), ': the query and later receives the result.'),
                         React.createElement('li', { key: 'step-3' }, React.createElement('strong', {}, 'Assistant acts as decision-maker'), ': decides to call both the Air Quality API and a PDF report generator.'),
                         React.createElement('li', { key: 'step-4' }, React.createElement('strong', {}, 'Tool executes'), ': returns live data and generates the report.')
                     ])
@@ -254,7 +254,17 @@ const TutorialLayout7: React.FC = () => {
                             React.createElement('tbody', { key: 'tbody-4' }, [
                                 React.createElement('tr', { key: 'tr-4-1' }, [
                                     React.createElement('td', { key: 'td-4-1', className: 'border border-gray-300 px-4 py-2' }, 'Encourage step-by-step reasoning'),
-                                    React.createElement('td', { key: 'td-4-2', className: 'border border-gray-300 px-4 py-2' }, 'Solve step by step: Xiao Qiang has 5 apples and eats 2. Step 1: He starts with 5. Step 2: Eats 2, so subtract. Step 3: 5 – 2 = 3. Answer: 3 apples left.')
+                                    React.createElement('td', { key: 'td-4-2', className: 'border border-gray-300 px-4 py-2' }, 
+                                        React.createElement('div', {}, [
+                                            'Solve step by step: Xiao Qiang has 5 apples and eats 2.',
+                                            React.createElement('br', { key: 'br1' }),
+                                            'Step 1: He starts with 5.',
+                                            React.createElement('br', { key: 'br2' }),
+                                            'Step 2: Eats 2, so subtract.',
+                                            React.createElement('br', { key: 'br3' }),
+                                            'Step 3: 5 – 2 = 3. Answer: 3 apples left.'
+                                        ])
+                                    )
                                 ]),
                                 React.createElement('tr', { key: 'tr-4-2' }, [
                                     React.createElement('td', { key: 'td-4-3', className: 'border border-gray-300 px-4 py-2' }, 'Ask model to explain reasoning'),
@@ -262,7 +272,17 @@ const TutorialLayout7: React.FC = () => {
                                 ]),
                                 React.createElement('tr', { key: 'tr-4-3' }, [
                                     React.createElement('td', { key: 'td-4-5', className: 'border border-gray-300 px-4 py-2' }, 'Guide logical flow'),
-                                    React.createElement('td', { key: 'td-4-6', className: 'border border-gray-300 px-4 py-2' }, 'To classify an email as spam, consider: (1) Is the sender known? (2) Does subject line contain suspicious keywords? (3) Is content too good to be true?')
+                                    React.createElement('td', { key: 'td-4-6', className: 'border border-gray-300 px-4 py-2' },
+                                        React.createElement('div', {}, [
+                                            'To classify an email as spam, consider :',
+                                            React.createElement('br', { key: 'br1' }),
+                                            '(1) Is the sender known?',
+                                            React.createElement('br', { key: 'br2' }),
+                                            '(2) Does subject line contain suspicious keywords?',
+                                            React.createElement('br', { key: 'br3' }),
+                                            '(3) Is content too good to be true?'
+                                        ])
+                                    )
                                 ])
                             ])
                         ])

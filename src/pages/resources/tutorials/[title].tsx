@@ -235,7 +235,7 @@ export default function TutorialDetail() {
             },
           ],
         }
-        case 'prompt-engineering-guide': // 添加这行支持带冒
+      case 'prompt-engineering-guide': // 添加这行支持带冒
         return {
           id: 7,
           title: 'Prompt Engineering Guide',
