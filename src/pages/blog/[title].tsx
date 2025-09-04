@@ -300,7 +300,7 @@ export default function BlogDetail() {
                 '• Enterprise-Grade Security',
                 '\u00A0\u00A0 Deployable in secure environments (e.g., VPC)',
                 '\u00A0\u00A0 Data, prompts, and outputs remain under enterprise control',
-                '\u00A0\u00A0 Helps meet / Enables compliance with key industry standards (HIPAA, GDPR, etc.)',
+                '\u00A0\u00A0 Helps meet compliance with key industry standards (HIPAA, GDPR, etc.)',
                 '',
                 '• Full Customization & Flexibility',
                 '\u00A0\u00A0 Run proprietary or fine-tuned LLMs',
