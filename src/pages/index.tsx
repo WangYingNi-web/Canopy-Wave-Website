@@ -237,9 +237,10 @@ export default function Index() {
                       top: 0,
                       left: 0,
                       right: 0,
-                      bottom: 0
+                      bottom: -56
                     }}
                   />
+                  {/* <div className="absolute bottom-0 right-0 w-32 h-16 bg-black z-10"></div> */}
                 </div>
               ) : slide.id === 3 ? (
                 <div className="absolute inset-0 flex items-center justify-center">
