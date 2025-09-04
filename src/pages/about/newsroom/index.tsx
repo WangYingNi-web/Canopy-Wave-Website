@@ -67,6 +67,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 5,
+            title: "Why Enterprises Choose Dedicated LLM Endpoints?",
+            description: "Unlocking Performance, Security, and Control for Mission-Critical AI",
+            date: "September 4, 2025",
+            image: "/blog/dedicated-endpoints.png"
+        },
+        {
             id: 4,
             title: "AI Generates Personalized Content",
             description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
