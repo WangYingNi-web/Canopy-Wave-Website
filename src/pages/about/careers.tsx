@@ -55,7 +55,7 @@ export default function Careers() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-10">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black mb-6">
-                            Even if you don’t meet every <br /> requirement, we’d love to hear from you
+                            Why Choose Us
                         </h2>
                     </SlideUp>
                     <SlideUp>
