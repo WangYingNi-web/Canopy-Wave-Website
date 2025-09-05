@@ -234,7 +234,7 @@ export default function BlogDetail() {
                 <img key="ai-image" src="/blog/ai.png" alt="AI Content Generation" className="w-full h-auto my-8 rounded-lg" />
               ]
             },
-           
+
             {
               title: 'What Can AI Dynamic Content Generation Achieve?',
               content: [
@@ -311,11 +311,203 @@ export default function BlogDetail() {
                 '\u00A0\u00A0 SLAs guarantee uptime and availability',
                 '\u00A0\u00A0 Single-tenant architecture ensures independence from provider policy shifts',
                 '\u00A0\u00A0 Greater operational control over infrastructure and deployments',
-              'In short:',
+                'In short:',
                 '• Shared endpoints → Best for prototyping & low-volume workloads',
                 '• Dedicated endpoints → Essential for enterprises operating at scale, in regulated industries, or with mission-critical AI needs',
                 '',
                 'By choosing dedicated endpoints, enterprises establish a foundation for robust, secure, and defensible AI solutions that deliver long-term value.'
+              ]
+            },
+          ]
+        }
+
+      case 'gpu:-the-core-engine-of-a-new-era-in-computing':
+        return {
+          id: 6,
+          title: 'GPU: The Core Engine of a New Era in Computing',
+          description: 'Powering the Next Wave of AI: Your Guide to GPU Selection',
+          sections: [
+            {
+              title: '1.How GPU Servers Became the Foundation of Modern Progress',
+              content: [
+                'Originally designed for rendering video game graphics, Graphics Processing Units (GPUs) have evolved into the engine powering today\'s most transformative technologies. Unlike CPUs, which excel at sequential tasks, GPUs are built for massive parallelism, allowing thousands of cores to process data simultaneously. This architecture makes them ideal for workloads such as AI model training, scientific simulations, real-time analytics, and high-resolution rendering, where speed and scale are critical.',
+                'Modern GPU servers combine this parallel hardware with high-bandwidth memory, fast interconnects, and specialized software ecosystems like NVIDIA CUDA, creating a powerful platform that accelerates innovation across industries. From academic research and enterprise AI to cloud services, GPUs have evolved from niche accelerators into the indispensable computing infrastructure that drives progress, economic competitiveness, and technological leadership.'
+              ]
+            },
+            {
+              title: '2.Which industries need GPUs the most?',
+              content: [
+                React.createElement('strong', { key: 'overview-title' }, '2.1 Overview'),
+                'In AI projects, models are often categorized by domain and size. Here are three common types:',
+                '',
+                React.createElement('table', {
+                  key: 'gpu-requirements-table',
+                  style: {
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                    border: '1px solid #ddd'
+                  }
+                }, [
+                  React.createElement('thead', { key: 'thead' },
+                    React.createElement('tr', { key: 'header-row', style: { backgroundColor: '#f5f5f5' } }, [
+                      React.createElement('th', { key: 'type-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'Type'),
+                      React.createElement('th', { key: 'scenario-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'Scenario Example'),
+                      React.createElement('th', { key: 'model-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'Typical Model Representatives'),
+                      React.createElement('th', { key: 'gpu-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'GPU Requirement Level')
+                    ])
+                  ),
+                  React.createElement('tbody', { key: 'tbody' }, [
+                    React.createElement('tr', { key: 'cv-row' }, [
+                      React.createElement('td', { key: 'cv-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'CV (Computer Vision)'),
+                      React.createElement('td', { key: 'cv-scenario', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Defect detection, face recognition, license plate recognition'),
+                      React.createElement('td', { key: 'cv-model', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'ResNet, YOLO, SAM'),
+                      React.createElement('td', { key: 'cv-gpu', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'High demand during the training phase')
+                    ]),
+                    React.createElement('tr', { key: 'nlp-row', style: { backgroundColor: '#f9f9f9' } }, [
+                      React.createElement('td', { key: 'nlp-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'NLP (Natural Language Processing)'),
+                      React.createElement('td', { key: 'nlp-scenario', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Customer service robots, text summarization, question-answering systems'),
+                      React.createElement('td', { key: 'nlp-model', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'BERT, ChatGLM, LLaMA'),
+                      React.createElement('td', { key: 'nlp-gpu', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Both training and inference are required')
+                    ]),
+                    React.createElement('tr', { key: 'multimodal-row' }, [
+                      React.createElement('td', { key: 'multimodal-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Multimodality'),
+                      React.createElement('td', { key: 'multimodal-scenario', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Image and text understanding, video analysis, AI generation'),
+                      React.createElement('td', { key: 'multimodal-model', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'CLIP, BLIP, Gemini'),
+                      React.createElement('td', { key: 'multimodal-gpu', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Extremely demanding resources')
+                    ])
+                  ])
+                ]),
+                '',
+                'Small models (such as simple CNNs or small Transformers, with millions to tens of millions of parameters) are typically sufficient on a single high-performance GPU (such as the NVIDIA A100).',
+                'Conversely, large models like LLMs (e.g., LLaMA or the GPT series) with billions of parameters require multi-GPU setups and distributed training. For instance, training a 7-billion-parameter model could demand 8-16 high-end GPUs, such as the NVIDIA A100 (80GB).',
+                React.createElement('strong', { key: 'cv-title' }, '2.2 Computer Vision (CV) Scenario'),
+                'CV models typically process image/video data, emphasizing high resolution and convolution operations. The actual requirements are relatively low unless generative tasks or large-scale datasets are involved.',
+                '',
+                '(1) ResNet-50 (image classification task): This is a classic residual network model with approximately 25 million parameters. Training can be completed using a single NVIDIA H100 (32GB VRAM) at FP32 precision, making it suitable for entry-level research or small datasets (such as ImageNet).',
+                'Real-world example: In medical image classification, a single A100 GPU can complete fine-tuning in a few hours.',
+                '',
+                '(2) YOLO v8 training recommends the latest Ada Lovelace series (such as RTX 4090 24GB)',
+                'Real-world example: In autonomous driving projects, a single RTX 4090 GPU can be used to train custom datasets in a few days.',
+                '',
+                '(3) Diffusion models such as Stable Diffusion (image generation tasks): Hundreds of millions of parameters. Training a custom version requires 4-8 A100 40GB GPUs, while inference can be completed on a single RTX 4090.',
+                'Real-world example: In art generation applications, cloud services such as AWS use multiple GPUs to accelerate iteration.',
+                '',
+                'In summary, CV scenarios need to match GPU memory according to the task type (classification/detection/generation) to avoid over-configuration and cost waste.',
+                React.createElement('strong', { key: 'nlp-title' }, '2.3 Natural Language Processing (NLP) Scenarios'),
+                'NLP models often rely on the Transformer architecture, which has a large number of parameters and the sequence length impacts VRAM consumption. Training large models has demanding resource requirements and often necessitates a distributed setup.',
+                '',
+                '(1) BERT-Base (text classification/sentiment analysis tasks): 110 million parameters. Training requires at least 12GB of VRAM, 24GB is recommended; system RAM starts at 32GB. Real-world example: In a customer service chat system, a single A100 GPU can fine-tune the GLUE dataset in one day, and pre-training requires 4-8 GPUs.',
+                '',
+                '(2) GPT-J (6 billion parameters) can run inference on a single 16GB NVIDIA A100; training requires 24GB or more of video memory (such as H100 32GB), or splitting it across multiple 16GB GPUs through Model Parallelism.',
+                '',
+                '(3) LLaMA 70B inference requires approximately 140GB of video memory at FP16 precision (requiring two A100 GPUs with 80GB each). If 4-bit quantization is used, a single A100 GPU with 80GB each can support it, significantly lowering the hardware barrier.',
+                'Real-world example: In open-source research, Meta uses a cluster of hundreds of GPUs to train LLaMA. A single team can rent cloud GPUs (such as AWS) to complete fine-tuning in a few days.',
+                <img key="ai-image" src="/blog/ai-LLaMA.png" alt="AI LLaMA" className="w-full h-auto my-8 rounded-lg" />,
+                React.createElement('strong', { key: 'multimodal-title' }, '2.4 Multimodal model scenario'),
+                'Multimodal models integrate CV and NLP to process multiple types of data (such as images + text). They are the most complex and often require large-scale clusters.',
+                '',
+                '(1) CLIP (image-text alignment task): Hundreds of millions of parameters. As an encoder, it is used in Flamingo/LLaVa. Training requires 8-16 A100 GPUs.',
+                'Real-world example: OpenAI uses CLIP to re-rank images in its search systems. Training on a massive dataset like LAION-5B can take weeks with a large GPU cluster.',
+                '',
+                '(2) DALL-E (text image generation task): Based on CLIP + diffusion model. Training takes several weeks on A100 clusters (32-128 GPUs), and batch size is adjusted to optimize video memory.',
+                'Actual example: In art generation, OpenAI uses hundreds of GPUs to process massive image-text pairs.',
+                '',
+                '(3) Flamingo (visual-language understanding task): 80 billion parameters. Training requires 64-256 A100/H100 GPUs and supports few-shot learning.',
+                'Actual case: DeepMind uses supercomputer clusters in video understanding, and the training time is several weeks.'
+              ]
+            },
+            {
+              title: '3. How to Choose the Right GPU for Software Development Startups',
+              content: [
+                'In the AI startup boom, computing power is a core competitive advantage for startups, enabling them to iterate quickly, reduce costs, and successfully run product prototypes. For software development teams, GPUs are more than just hardware; they are the engine that propels them through computing bottlenecks.',
+                'Canopy Wave offers a variety of NVIDIA high-performance GPU instances, including the GB200 NVL72, HGX B200, HGX H200, and HGX H100. These GPUs each have their own unique characteristics, making them suitable for AI development tasks at different stages and scales. This article will help you understand the differences between these GPUs and provide selection recommendations based on the needs of startups.',
+                React.createElement('strong', { key: 'startup-challenges-title' }, '3.1 Why Should Startups Care About GPU Selection?'),
+                'Early-stage teams often face three key challenges when adopting GPUs:',
+                'Limited budgets—purchasing large-scale hardware all at once isn\'t feasible, requiring a flexible pay-as-you-go model;',
+                'The rapid pace of development—from prototype verification to MVP (minimum viable product), each iteration requires rapid scaling of computing resources;',
+                'Technical complexity—Developers prefer to focus on algorithm iteration and product development, responding promptly to market needs, rather than getting bogged down in the complexities of environment configuration and hardware tuning.',
+                'Canopy Wave\'s cloud-based GPU solution precisely addresses these pain points: high-performance instances, fast deployment, strong scalability, and user-friendly design.',
+                React.createElement('strong', { key: 'gpu-comparison-title' }, '3.2 Quick Comparison of NVIDIA GPU Products'),
+                React.createElement('table', {
+                  key: 'gpu-comparison-table',
+                  style: {
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                    border: '1px solid #ddd'
+                  }
+                }, [
+                  React.createElement('thead', { key: 'thead' },
+                    React.createElement('tr', { key: 'header-row', style: { backgroundColor: '#f5f5f5' } }, [
+                      React.createElement('th', { key: 'gpu-type-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'GPU Type'),
+                      React.createElement('th', { key: 'architecture-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'Architecture Highlights'),
+                      React.createElement('th', { key: 'scenarios-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'Applicable Scenarios'),
+                      React.createElement('th', { key: 'performance-header', style: { border: '1px solid #ddd', padding: '12px', textAlign: 'left', fontWeight: 'bold' } }, 'Performance advantages')
+                    ])
+                  ),
+                  React.createElement('tbody', { key: 'tbody' }, [
+                    React.createElement('tr', { key: 'gb200-row' }, [
+                      React.createElement('td', { key: 'gb200-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'GB200 NVL72'),
+                      React.createElement('td', { key: 'gb200-arch', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, '36× Grace CPUs + 72× Blackwell GPUs, liquid cooling design, ultra-large-scale NVLink interconnection'),
+                      React.createElement('td', { key: 'gb200-scenarios', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'LLM large model training and inference, scientific research tasks that require ultra-high computing power'),
+                      React.createElement('td', { key: 'gb200-performance', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'A single machine can simulate a large cluster, accelerating training and inference by up to 30x')
+                    ]),
+                    React.createElement('tr', { key: 'hgx-b200-row', style: { backgroundColor: '#f9f9f9' } }, [
+                      React.createElement('td', { key: 'hgx-b200-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'HGX B200'),
+                      React.createElement('td', { key: 'hgx-b200-arch', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Blackwell architecture, 180 GB HBM3e, 8 TB/s bandwidth'),
+                      React.createElement('td', { key: 'hgx-b200-scenarios', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'AI inference, HPC, and data-intensive analytics'),
+                      React.createElement('td', { key: 'hgx-b200-performance', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Reasoning performance is improved by 15×, and energy efficiency is improved by 12×, making it suitable for cost-sensitive teams')
+                    ]),
+                    React.createElement('tr', { key: 'hgx-h200-row' }, [
+                      React.createElement('td', { key: 'hgx-h200-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'HGX H200'),
+                      React.createElement('td', { key: 'hgx-h200-arch', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'High-bandwidth memory + enhanced computing power for generative AI and HPC'),
+                      React.createElement('td', { key: 'hgx-h200-scenarios', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Large model training, text generation, and reasoning mixed scenarios'),
+                      React.createElement('td', { key: 'hgx-h200-performance', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Larger memory capacity, suitable for teams that need to handle long context or multimodal models')
+                    ]),
+                    React.createElement('tr', { key: 'hgx-h100-row', style: { backgroundColor: '#f9f9f9' } }, [
+                      React.createElement('td', { key: 'hgx-h100-type', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'HGX H100'),
+                      React.createElement('td', { key: 'hgx-h100-arch', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Hopper architecture, industry-proven mainstream GPU'),
+                      React.createElement('td', { key: 'hgx-h100-scenarios', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'General reasoning tasks, small model training'),
+                      React.createElement('td', { key: 'hgx-h100-performance', style: { border: '1px solid #ddd', padding: '12px', verticalAlign: 'top' } }, 'Inference acceleration can reach up to 30×, making it a cost-effective choice for entry-level GPUs')
+                    ]),
+                  ])
+                ]),
+                React.createElement('strong', { key: 'selection-recommendations-title' }, '3.3 GPU Selection Recommendations for Startups'),
+                'Based on practical experience, companies can make decisions based on the following three dimensions:',
+                React.createElement('strong', { key: 'team-goals-title' }, '3.3.1 Team Goals'),
+                '• If your company is primarily focused on inference services (such as API products or intelligent assistants), the HGX H100 or HGX B200 is recommended.',
+                '• If your company needs to train medium-to-large models, such as LLMs or multimodal models, the HGX H200 is recommended.',
+                '• If you need to process models with more than 10 billion parameters or complex scientific research tasks, we recommend GB200 NVL72.',
+                React.createElement('strong', { key: 'cost-energy-title' }, '3.3.2. Cost and Energy Consumption'),
+                '• For budget-conscious teams, the HGX B200 offers the best performance/cost ratio.',
+                '• If you are only conducting early-stage experiments, the HGX H100 is a more practical and economical choice.',
+                React.createElement('strong', { key: 'scalability-title' }, '3.3.3. Scalability'),
+                '• Canopy Wave provides a snapshot feature, allowing developers to package and reuse environments and dependencies, significantly reducing the operational costs of multi-GPU experiments.',
+                '• When expansion is needed, switching to a more powerful GPU instance is a simple matter of one click, without having to redeploy the environment.',
+                React.createElement('strong', { key: 'case-study-title' }, '3.4 Case Study: A Startup Team\'s GPU Selection Practice'),
+                'A startup needed to verify the fine-tuning and inference performance of a large language model within three months.',
+                '• Initial phase: The team used the HGX H100 to fine-tune a small model and quickly run through the process.',
+                '• Mid-phase: When processing larger contexts, they switched to the HGX H200 for greater graphics memory support.',
+                '• Launch phase: Inference services were migrated to the HGX B200, significantly reducing inference costs while maintaining performance.',
+                'This flexible, on-demand GPU switching model is key to rapid iteration and risk mitigation for startups.',
+                <img key="ai-image" src="/blog/ai-gpu.png" alt="AI GPU" className="w-full h-auto my-8 rounded-lg" />  
+              ]
+            },
+            {
+              title: '4.Conclusion',
+              content: [
+                React.createElement('div', { key: 'conclusion-content' }, [
+                  'GPUs are no longer just "gaming graphics cards"; they\'re the core computing units that drive AI, scientific research, industrial innovation, and even national competitiveness.For the software development industry, choosing the right GPU means faster product iteration, lower costs, and greater market competitiveness.',
+                  React.createElement('br', { key: 'br1' }),
+                  'In the future, access to powerful and efficient GPU computing will be the key to defining the next frontier of technology and industry.',
+                  React.createElement('br', { key: 'br3' }),
+                  'Canopy Wave offers flexible GPU instances, snapshot reuse, and a scalable computing environment, helping startups achieve maximum R&D efficiency at the lowest cost.',
+                  React.createElement('br', { key: 'br5' }),
+                  'Log in to Canopy Wave today, choose the GPU that\'s right for you, and start your AI R&D journey.'
+                ])
               ]
             },
           ]
@@ -353,6 +545,8 @@ export default function BlogDetail() {
       case 4:
         return <BlogLayout1 blogPost={blogPost} />
       case 5:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 6:
         return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />

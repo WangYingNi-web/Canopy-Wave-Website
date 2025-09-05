@@ -31,6 +31,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-content-generation.png"
                   : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
                   ? "/blog/dedicated-endpoints.png"
+                  : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
+                  ? "/blog/gpu-computing.png"
                   : "/blog1.webp"
               }
               alt="Blog"

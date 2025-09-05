@@ -67,6 +67,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 6,
+            title: "GPU: The Core Engine of a New Era in Computing",
+            description: "Powering the Next Wave of AI: Your Guide to GPU Selection",
+            date: "September 5, 2025",
+            image: "/blog/gpu-computing.png"
+        },
+        {
             id: 5,
             title: "Why Enterprises Choose Dedicated LLM Endpoints",
             description: "Unlocking Performance, Security, and Control for Mission-Critical AI",
