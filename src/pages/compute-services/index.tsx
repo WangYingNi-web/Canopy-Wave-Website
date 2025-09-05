@@ -9,9 +9,37 @@ import { useScrollToHash } from '@/hooks/useScrollToHash';
 import SlideUp from '@/components/slide';
 import FadeIn from '@/components/FadeIn';
 import BackgroundTransition from '@/components/BackgroundTransition';
-
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 export default function ComputeServicesPage() {
+    const router = useRouter();
     useScrollToHash();
+    // 在目标页面中
+    // useEffect(() => {
+    //     const { section } = router.query;
+    //     const hash = window.location.hash.substring(1);
+
+    //     const targetId = section || hash;
+
+    //     if (targetId && typeof targetId === 'string') {
+    //         setTimeout(() => {
+    //             const element = document.getElementById(targetId);
+    //             if (element) {
+    //                 element.scrollIntoView({
+    //                     behavior: 'smooth',
+    //                     block: 'start'
+    //                 });
+
+    //                 // 如果是hash，转换为查询参数
+    //                 if (hash && !section) {
+    //                     const newUrl = `${router.asPath.split('#')[0]}?section=${hash}`;
+    //                     window.history.replaceState(null, '', newUrl);
+    //                 }
+    //             }
+    //         }, 100);
+    //     }
+    // }, [router.query, router.asPath]);
+
     return (
         <main className="min-h-screen text-gray-600">
             <Header />
