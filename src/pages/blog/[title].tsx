@@ -672,6 +672,7 @@ export default function BlogDetail() {
                   'Leveraging machine learning and optimization algorithms, AI-planned paths not only avoid congestion and obstacles but also significantly enhance ride comfort and energy efficiency. For instance, by predicting the acceleration and deceleration of preceding vehicles, it enables smooth following, reducing abrupt braking and acceleration. This lowers energy consumption (particularly important for electric vehicles) and improves passenger experience.'
                 ]),
                 '',
+                <img key="ai-image" src="/blog/application-enhancement.png" alt="Application Enhancement" className="w-full h-auto my-8 rounded-lg" /> ,
                 React.createElement('div', { key: 'app-enhance-4' }, [
                   React.createElement('strong', { key: 'app-enhance-bold-4' }, 'Application and Enhancement 2: More Proactive Prediction and Decision-Making Capabilities'),
                 ]),

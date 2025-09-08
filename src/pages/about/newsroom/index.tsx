@@ -75,7 +75,7 @@ export default function Newsroom() {
             title: "AI's Role in Autonomous Driving",
             description: "The Key Role of AI in Autonomous Driving: From Environmental Perception to Intelligent Decision-Making",
             date: "September 8, 2025",
-            image: "/blog/gpu-computing.png"
+            image: "/blog/ai-car.png"
         },
         {
             id: 7,

@@ -15,6 +15,7 @@ export default function GB200WithRoCEv2() {
     useScrollToHash();
     // 添加tab状态管理
     const [activeTab, setActiveTab] = React.useState('rocev2');
+    const [activeTab2, setActiveTab2] = React.useState('platform');
 
     return (
         <main className="min-h-screen text-gray-600 relative">
@@ -129,6 +130,33 @@ export default function GB200WithRoCEv2() {
             <div className='bg-[#F5F7F4]'>
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <SlideUp>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">GB200 Cluster with RoCEv2 High- <br /> performance Network Solution</h2>
+                    </SlideUp>
+                    <SlideUp>
+                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-8 text-l">
+                            A turnkey GB200 supercluster engineered for 24/7 production, featuring self-managing and self-monitoring capabilities
+                        </p>
+                    </SlideUp>
+
+                    <SlideUp>
+                        <div className="mb-16 group">
+                            <Image
+                                src="/solutions/networking-hardware/gb200-with-rocev2/gb200-table.png"
+                                alt="NVIDIA GB200 NVL72 Cluster"
+                                width={1300}
+                                height={400}
+                                className="rounded-lg object-contain transition-transform duration-500 group-hover:scale-105"
+                                priority
+                            />
+                        </div>
+                    </SlideUp>
+                </div>
+            </div>
+
+            {/* On-Demand High-Performance GPU Section */}
+            <div className='bg-[#F5F7F4]'>
+                <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">On-Demand High-Performance GPU <br /> Clusters to Shorten R&D Cycles</h2>
                     </SlideUp>
                     <SlideUp>
@@ -140,7 +168,7 @@ export default function GB200WithRoCEv2() {
                     </SlideUp>
                     <SlideUp>
                         <div className="flex justify-center pb-8">
-                            <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-l" onClick={() => window.location.href = '/contact'}>
+                            <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-l" onClick={() => window.location.href = '/gb200-nvl72'}>
                                 Learn more
                             </button>
                         </div>
@@ -179,8 +207,8 @@ export default function GB200WithRoCEv2() {
                                 <button
                                     onClick={() => setActiveTab('rocev2')}
                                     className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab === 'rocev2'
-                                            ? 'border-[#8CC63F] text-[#8CC63F]'
-                                            : 'border-transparent text-gray-500 hover:text-gray-700'
+                                        ? 'border-[#8CC63F] text-[#8CC63F]'
+                                        : 'border-transparent text-gray-500 hover:text-gray-700'
                                         }`}
                                 >
                                     Ultra-Low Latency RoCEv2 Fabric
@@ -188,8 +216,8 @@ export default function GB200WithRoCEv2() {
                                 <button
                                     onClick={() => setActiveTab('nvlink')}
                                     className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab === 'nvlink'
-                                            ? 'border-[#8CC63F] text-[#8CC63F]'
-                                            : 'border-transparent text-gray-500 hover:text-gray-700'
+                                        ? 'border-[#8CC63F] text-[#8CC63F]'
+                                        : 'border-transparent text-gray-500 hover:text-gray-700'
                                         }`}
                                 >
                                     Unified High-Bandwidth GPU Domain
@@ -197,19 +225,19 @@ export default function GB200WithRoCEv2() {
                             </div>
 
                             {/* Tab Content */}
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                 {/* Left Content */}
                                 <div className="space-y-4">
                                     {activeTab === 'rocev2' && (
-                                        <div className="space-y-2">
-                                            <h3 className="text-[18px] font-semibold text-gray-900">
+                                        <div className="space-y-2 pl-8">
+                                            <h3 className="font-semibold text-gray-700">
                                                 Ultra-Low Latency RoCEv2 Fabric
                                             </h3>
                                             <p className="text-gray-600 leading-relaxed">
                                                 Utilizes RDMA for direct, kernel-bypass data transfer, minimizing latency and CPU load.
                                             </p>
                                             <div>
-                                                <p className="font-medium text-gray-900">Result:</p>
+                                                <p className="font-semibold text-gray-700">Result:</p>
                                                 <p className="text-gray-600">
                                                     Ensures efficient, non-blocking communication between any two GPUs across the cluster.
                                                 </p>
@@ -218,15 +246,15 @@ export default function GB200WithRoCEv2() {
                                     )}
 
                                     {activeTab === 'nvlink' && (
-                                        <div className="space-y-4">
-                                            <h3 className="text-[18px] font-semibold text-gray-900">
+                                        <div className="space-y-2 pl-8">
+                                            <h3 className="font-semibold text-gray-700">
                                                 Unified High-Bandwidth GPU Domain
                                             </h3>
                                             <p className="text-gray-600 leading-relaxed">
                                                 Each NVL72 rack operates as a single, massive GPU with 1.8 TB/s of all-to-all NVLink bandwidth.
                                             </p>
-                                            <div className="border-l-4 border-[#8CC63F] pl-4">
-                                                <p className="font-medium text-gray-900">Result:</p>
+                                            <div>
+                                                <p className="font-semibold text-gray-700">Result:</p>
                                                 <p className="text-gray-600">
                                                     Eliminates all communication bottlenecks within the rack.
                                                 </p>
@@ -239,7 +267,7 @@ export default function GB200WithRoCEv2() {
                                 <div className="flex justify-center">
                                     <div className="relative w-full max-w-6xl">
                                         <Image
-                                            src="/blog/Slice 41.png"
+                                            src="/solutions/networking-hardware/gb200-with-rocev2/performance-architecture.png"
                                             alt="RoCEv2 + NVLink Performance Architecture"
                                             width={1600}
                                             height={600}
@@ -253,9 +281,183 @@ export default function GB200WithRoCEv2() {
                 </div>
             </div>
 
+            {/* Intelligent platform + 24/7 expert team simplifies operation Section */}
+            <div className="bg-[#F9F9F9] py-16 sm:py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <SlideUp>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+                                Intelligent platform + 24/7 expert team <br />simplifies operation
+                            </h2>
+                        </div>
+                    </SlideUp>
 
+                    <SlideUp>
+                        <div className="mb-8">
+                            {/* Tab Navigation */}
+                            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 mb-8">
+                                <button
+                                    onClick={() => setActiveTab2('platform')}
+                                    className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab === 'platform'
+                                        ? 'border-[#8CC63F] text-[#8CC63F]'
+                                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                                        }`}
+                                >
+                                    Intelligent, End-to-End Monitoring
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab2('team')}
+                                    className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab === 'team'
+                                        ? 'border-[#8CC63F] text-[#8CC63F]'
+                                        : 'border-transparent text-gray-500 hover:text-gray-700'
+                                        }`}
+                                >
+                                    Unified High-Bandwidth GPU Domain
+                                </button>
+                            </div>
 
+                            {/* Tab Content */}
+                            <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                                {/* Left Content */}
+                                <div className="space-y-4">
+                                    {activeTab2 === 'platform' && (
+                                        <div className="space-y-2 pl-8">
+                                            <h3 className="font-semibold text-gray-700">
+                                                How:
+                                            </h3>
+                                            <p className="text-gray-600 leading-relaxed">
+                                                A unified platform integrates deep telemetry from all components (GPU, NVLink, Network).
+                                            </p>
+                                            <div>
+                                                <p className="font-semibold text-gray-700">Benefit:</p>
+                                                <p className="text-gray-600">
+                                                    AI-driven analytics proactively detect anomalies and bottlenecks before they impact training jobs.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )}
 
+                                    {activeTab2 === 'team' && (
+                                        <div className="space-y-2 pl-8">
+                                            <h3 className="font-semibold text-gray-700">
+                                                How:
+                                            </h3>
+                                            <p className="text-gray-600 leading-relaxed">
+                                                Engineers with deep experience with NVIDIA GPUs and software provide constant, around-the-clock
+                                                system monitoring.
+                                            </p>
+                                            <div>
+                                                <p className="font-semibold text-gray-700">Benefit:</p>
+                                                <p className="text-gray-600">
+                                                    Immediate remote intervention ensures maximum uptime and uninterrupted training.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Right Image */}
+                                <div className="flex justify-center">
+                                    <div className="relative w-full max-w-6xl">
+                                        <Image
+                                            src="/solutions/networking-hardware/gb200-with-rocev2/iaas.png"
+                                            alt="RoCEv2 + NVLink Performance Architecture"
+                                            width={1600}
+                                            height={600}
+                                            className="object-cover w-full h-auto"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </SlideUp>
+                </div>
+            </div>
+
+            {/* Deployment Process Section */}
+            <div className="bg-white py-16 sm:py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <SlideUp>
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl sm:text-4xl font-black mb-4 text-gray-900">
+                                Deployment Process
+                            </h2>
+                        </div>
+                    </SlideUp>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+                        {/* Step 01 */}
+                        <SlideUp>
+                            <div className='flex flex-col lg:flex-row items-start justify-center h-[300px]'>
+                                <div className="text-left max-w-[200px]">
+                                    <div className="mb-2">
+                                        <div className="text-4xl font-black text-gray-300 mb-2">01</div>
+                                        <h3 className="text-lg font-semibold text-gray-900">Planning & Design</h3>
+                                    </div>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Create comprehensive documentation based on the client's data center topology, including detailed cabling plans and an IP addressing scheme.
+                                    </p>
+                                </div>
+                                <div className="hidden lg:flex items-start justify-end h-full pt-8 pr-4">
+                                    <img src="/solutions/networking-hardware/gb200-with-rocev2/arrow.svg" alt="arrow" className="w-8 h-8" />
+                                </div>
+                            </div>
+
+                        </SlideUp>
+
+                        {/* Step 02 */}
+                        <SlideUp>
+                            <div className='flex flex-col lg:flex-row items-start justify-center h-[300px]'>
+                                <div className="text-left max-w-[200px]">
+                                    <div className="mb-2">
+                                        <div className="text-4xl font-black text-gray-300 mb-2">02</div>
+                                        <h3 className="text-lg font-semibold text-gray-900">Deployment</h3>
+                                    </div>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Rack switches, connect all physical cabling, and install GB200 NICs.
+                                    </p>
+                                </div>
+                                <div className="hidden lg:flex items-start justify-end h-full pt-8 pr-4">
+                                    <img src="/solutions/networking-hardware/gb200-with-rocev2/arrow.svg" alt="arrow" className="w-8 h-8" />
+                                </div>
+                            </div>
+                        </SlideUp>
+
+                        {/* Step 03 */}
+                        <SlideUp>
+                            <div className='flex flex-col lg:flex-row items-start justify-center h-[300px]'>
+                                <div className="text-left max-w-[200px]">
+                                    <div className="mb-2">
+                                        <div className="text-4xl font-black text-gray-300 mb-2">03</div>
+                                        <h3 className="text-lg font-semibold text-gray-900">Configuration & Validation</h3>
+                                    </div>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Set up software, configure network and conduct performance stress tests, followed by a final test report.
+                                    </p>
+                                </div>
+                                <div className="hidden lg:flex items-start justify-end h-full pt-8 pr-4">
+                                    <img src="/solutions/networking-hardware/gb200-with-rocev2/arrow.svg" alt="arrow" className="w-8 h-8" />
+                                </div>
+                            </div>
+                        </SlideUp>
+
+                        {/* Step 04 */}
+                        <SlideUp>
+                            <div className='flex flex-col lg:flex-row items-start justify-center h-[300px]'>
+                                <div className="text-left max-w-[200px]">
+                                    <div className="mb-2">
+                                        <div className="text-4xl font-black text-gray-300 mb-2">04</div>
+                                        <h3 className="text-lg font-semibold text-gray-900">Acceptance & Handover</h3>
+                                    </div>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Provide complete acceptance criteria and deliver upon meeting the standards.
+                                    </p>
+                                </div>
+                            </div>
+                        </SlideUp>
+                    </div>
+                </div>
+            </div>
 
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
