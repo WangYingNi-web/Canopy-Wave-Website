@@ -33,7 +33,10 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/dedicated-endpoints.png"
                   : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
                   ? "/blog/gpu-computing.png"
+                  : blogPost.title === "AI-Powered E-commerce"
+                  ? "/blog/ai-shopping.png"
                   : "/blog1.webp"
+                  
               }
               alt="Blog"
               className="w-full h-auto rounded-[20px] shadow-md"

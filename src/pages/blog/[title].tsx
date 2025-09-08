@@ -165,7 +165,7 @@ export default function BlogDetail() {
           ]
         }
 
-      case 'ai:-revolutionizing-animal-health-monitoring':
+      case 'ai-revolutionizing-animal-health-monitoring':
         return {
           id: 3,
           title: 'AI: Revolutionizing Animal Health Monitoring',
@@ -321,7 +321,7 @@ export default function BlogDetail() {
           ]
         }
 
-      case 'gpu:-the-core-engine-of-a-new-era-in-computing':
+      case 'gpu-the-core-engine-of-a-new-era-in-computing':
         return {
           id: 6,
           title: 'GPU: The Core Engine of a New Era in Computing',
@@ -512,6 +512,205 @@ export default function BlogDetail() {
             },
           ]
         }
+
+      case 'ai-powered-e-commerce':
+        return {
+          id: 7,
+          title: 'AI-Powered E-commerce',
+          description: 'Application of AI in E-commerce: Driving Efficiency and Revolutionizing Experience',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Canopy Wave provides high-performance GPU computing power, giving you access to low-latency, high-speed AI. AI is reshaping the e-commerce landscape on an unprecedented scale. From precisely targeting users to optimizing backend operations, its capabilities have become the core engine of industry growth. With high-performance computing, e-commerce enterprises can deploy more complex, real-time AI solutions, to boost operational efficiency and fundamentally upgrade the user experience. Here, we explore the core applications and value of AI technology in key areas of e-commerce.'
+              ]
+            },
+            {
+              title: '1. Intelligent Recommendations: Algorithm-Driven Precision Targeting',
+              content: [
+                React.createElement('div', { key: 'tech-core-1' }, [
+                  React.createElement('strong', { key: 'tech-core-bold-1' }, '• Technical Core: '),
+                  'Leverages massive user behavior data (browsing, search, purchase history, page dwell time, etc.) to build detailed user profiles using collaborative filtering, content-based recommendations, and deep learning models (e.g., Deep Neural Networks - DNN, Graph Neural Networks - GNN). Real-time computing engines process dynamic data streams to predict users\' immediate interests and potential needs.'
+                ]),
+                '',
+                React.createElement('div', { key: 'value-prop-1' }, [
+                  React.createElement('strong', { key: 'value-prop-bold-1' }, '• Value Proposition: '),
+                  'Achieves a paradigm shift from "people searching for products" to \'products finding people\' significantly boosting user conversion rates, average order value, and overall platform revenue. AI recommendations become the core driver for traffic conversion and user retention.'
+                ]),
+                <img key="ai-image" src="/blog/intelligent-recommendations.png" alt="Intelligent Recommendations" className="w-full h-auto my-8 rounded-lg" />  
+              ]
+            },
+            {
+              title: '2. Intelligent Customer Service: 24/7 "Digital Agents"',
+              content: [
+                React.createElement('div', { key: 'tech-core-2' }, [
+                  React.createElement('strong', { key: 'tech-core-bold-2' }, '• Technical Core: '),
+                  'Relies on Natural Language Processing (NLP) technology stacks, including intent recognition, entity extraction, multi-turn dialogue management, sentiment analysis, and knowledge graph construction. The application of Large Language Models (LLMs) enhances semantic understanding depth and human-like responses.'
+                ]),
+                '',
+                React.createElement('div', { key: 'value-prop-2' }, [
+                  React.createElement('strong', { key: 'value-prop-bold-2' }, '• Value Proposition: '),
+                  'Provides 24/7 instant response, automating the handling of vast volumes of routine inquiries. By accurately understanding user queries and providing differentiated solutions (based on context like order status, user history), it significantly improves response efficiency and issue resolution rates, effectively reducing human agent workload and operational costs while boosting user satisfaction.'
+                ])
+              ]
+            },
+            {
+              title: '3. Dynamic Pricing: Real-Time Decision-Making for Profit Optimization',
+              content: [
+                React.createElement('div', { key: 'tech-core-3' }, [
+                  React.createElement('strong', { key: 'tech-core-bold-3' }, '• Technical Core: '),
+                  'Employs real-time machine learning models (e.g., Reinforcement Learning - RL, online learning algorithms), integrating multi-dimensional data sources: competitor price monitoring, market supply/demand fluctuations, user behavior analysis (cart abandonment rate, price sensitivity), inventory levels, logistics costs, promotional campaign impact, etc. Models continuously perform price elasticity prediction and calculate optimal pricing points.'
+                ]),
+                '',
+                React.createElement('div', { key: 'value-prop-3' }, [
+                  React.createElement('strong', { key: 'value-prop-bold-3' }, '• Value Proposition: '),
+                  'Enables real-time price adjustments in response to market changes, maximizing price competitiveness and market share. Through refined pricing strategies, it effectively optimizes profit margins for high-demand goods and accelerates inventory turnover for clearance items, comprehensively enhancing revenue management capabilities.'
+                ])
+              ]
+            },
+            {
+              title: '4. Supply Chain Optimization: Predictive-Driven Intelligent Operations',
+              content: [
+                React.createElement('div', { key: 'tech-core-4' }, [
+                  React.createElement('strong', { key: 'tech-core-bold-4' }, '• Technical Core: '),
+                  'Utilizes predictive analytics models (e.g., time series forecasting, regression models) and optimization algorithms (e.g., linear programming, integer programming). Integrates historical sales data, real-time inventory information, store/warehouse locations, logistics network status, external factors (weather, holidays, social media trends), etc., for demand forecasting, intelligent replenishment, warehouse optimization, and delivery route planning.'
+                ]),
+                '',
+                React.createElement('div', { key: 'value-prop-4' }, [
+                  React.createElement('strong', { key: 'value-prop-bold-4' }, '• Value Proposition: '),
+                  'Achieves demand-driven precise inventory management, significantly improving inventory turnover rates and effectively reducing the risk of dead stock and warehousing costs. Builds a more agile and flexible supply chain system, ensuring product availability and optimizing overall operational efficiency.'
+                ])
+              ]
+            },
+            {
+              title: '5. Image Recognition & Virtual Experience: The Innovation Frontier of Visual Interaction',
+              content: [
+                React.createElement('div', { key: 'tech-core-5' }, [
+                  React.createElement('strong', { key: 'tech-core-bold-5' }, '• Technical Core: '),
+                  'Computer Vision (CV) technologies (e.g., image classification, object detection, image segmentation) enable automatic product tagging, visual search, and counterfeit detection. Three-dimensional body modeling combined with AI size recommendation algorithms (based on user-input body measurements or image analysis) enables Virtual Try-On. Augmented Reality (AR) technology provides immersive scenario experiences.'
+                ]),
+                '',
+                React.createElement('div', { key: 'value-prop-5' }, [
+                  React.createElement('strong', { key: 'value-prop-bold-5' }, '• Value Proposition: '),
+                  'Significantly reduces return rates for high-return categories like apparel, boosting user confidence and streamlining the purchase decision. Creates novel, immersive shopping experiences, enhancing user engagement and satisfaction.'
+                ])
+              ]
+            },
+            {
+              title: 'Conclusion: The AI-Driven Future of Intelligent E-commerce',
+              content: [
+                'Artificial Intelligence has deeply permeated every link of the e-commerce value chain, becoming critical infrastructure for enhancing operational efficiency, optimizing business decisions, and reshaping user experiences. From deep learning-based personalized recommendations and NLP-powered intelligent customer service, to real-time dynamic pricing, predictive supply chain management, and innovative visual interaction technologies, AI is systematically propelling the e-commerce industry towards greater efficiency, intelligence, and personalization.',
+                '',
+                'Looking ahead, as Generative AI (Generative AI) finds deeper applications in areas like product description generation, marketing content creation, and more natural conversational interactions, and as multimodal AI deepens the understanding of user intent, the boundaries of e-commerce intelligence will continue to expand, ushering in a new chapter of human-machine collaboration and experience-centricity.'
+              ]
+            }
+          ]
+        }
+
+      case 'ais-role-in-autonomous-driving':
+        return {
+          id: 8,
+          title: 'AI\'s Role in Autonomous Driving',
+          description: 'The Key Role of AI in Autonomous Driving: From Environmental Perception to Intelligent Decision-Making',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Every leap in autonomous driving technology has been driven by significant breakthroughs in artificial intelligence (AI) algorithms. AI is not just a "component" of autonomous driving; it is the core driving force behind its continuous evolution. This article delves into the two key roles AI plays in autonomous driving—environmental perception and intelligent decision-making—and highlights the specific enhancements and revolutionary applications it brings.'
+              ]
+            },
+            {
+              title: '(I) The Eyes of Perception: How AI Enhances a Vehicle\'s "Vision"',
+              content: [
+                'The first step in autonomous driving is perceiving the environment, and the application of AI has led to transformative improvements in this field.',
+                '',
+                React.createElement('div', { key: 'app-enhance-1' }, [
+                  React.createElement('strong', { key: 'app-enhance-bold-1' }, 'Application and Enhancement 1: More Accurate Computer Vision'),
+                ]),
+                '',
+                React.createElement('div', { key: 'application-1' }, [
+                  React.createElement('strong', { key: 'application-bold-1' }, 'Application: '),
+                  'This is one of the most widely used applications of AI in autonomous driving. Through deep learning models, the system analyzes camera feed in real time.'
+                ]),
+                '',
+                React.createElement('div', { key: 'enhancement-1' }, [
+                  React.createElement('strong', { key: 'enhancement-bold-1' }, 'Enhancement: '),
+                  'Compared to traditional image processing, AI algorithms significantly improve the accuracy of target recognition and classification. They can more precisely distinguish between vehicles, pedestrians, and cyclists in complex scenarios, and even recognize the posture and intentions of pedestrians. This greatly reduces false positives and missed detections, fundamentally enhancing safety.'
+                ]),
+                '',
+                React.createElement('div', { key: 'app-enhance-2' }, [
+                  React.createElement('strong', { key: 'app-enhance-bold-2' }, 'Application and Enhancement 2: More Reliable Multi-Sensor Fusion'),
+                ]),
+                '',
+                React.createElement('div', { key: 'application-2' }, [
+                  React.createElement('strong', { key: 'application-bold-2' }, 'Application: '),
+                  'Autonomous vehicles integrate data from cameras, LiDAR, and millimeter-wave radar.'
+                ]),
+                '',
+                React.createElement('div', { key: 'enhancement-2' }, [
+                  React.createElement('strong', { key: 'enhancement-bold-2' }, 'Enhancement: '),
+                  'As an "information integrator," AI effectively compensates for the limitations of individual sensors. For example, in backlight or nighttime conditions, camera performance declines, but LiDAR still provides accurate distance information. In fog or rain, LiDAR signals attenuate, while millimeter-wave radar remains stable. AI fusion algorithms ensure the continuity and reliability of perception capabilities under various weather and lighting conditions, which is key to achieving all-weather autonomous driving.'
+                ])
+              ]
+            },
+            {
+              title: '(II) The Brain of Decision-Making: How AI Drives Smarter and More Efficient "Thinking"',
+              content: [
+                'After perceiving the environment, the vehicle needs to predict and make decisions. This is another area where AI delivers transformative results.',
+                '',
+                React.createElement('div', { key: 'app-enhance-3' }, [
+                  React.createElement('strong', { key: 'app-enhance-bold-3' }, 'Application and Enhancement 1: Optimized Path and Behavior Planning'),
+                ]),
+                '',
+                React.createElement('div', { key: 'application-3' }, [
+                  React.createElement('strong', { key: 'application-bold-3' }, 'Application: '),
+                  'AI plans safe and efficient optimal paths based on real-time perception data and high-definition maps.'
+                ]),
+                '',
+                React.createElement('div', { key: 'enhancement-3' }, [
+                  React.createElement('strong', { key: 'enhancement-bold-3' }, 'Enhancement: '),
+                  'Leveraging machine learning and optimization algorithms, AI-planned paths not only avoid congestion and obstacles but also significantly enhance ride comfort and energy efficiency. For instance, by predicting the acceleration and deceleration of preceding vehicles, it enables smooth following, reducing abrupt braking and acceleration. This lowers energy consumption (particularly important for electric vehicles) and improves passenger experience.'
+                ]),
+                '',
+                React.createElement('div', { key: 'app-enhance-4' }, [
+                  React.createElement('strong', { key: 'app-enhance-bold-4' }, 'Application and Enhancement 2: More Proactive Prediction and Decision-Making Capabilities'),
+                ]),
+                '',
+                React.createElement('div', { key: 'application-4' }, [
+                  React.createElement('strong', { key: 'application-bold-4' }, 'Application: '),
+                  'This is the aspect of autonomous driving AI technology that best demonstrates its intelligence. The vehicle needs to predict the behavior of other traffic participants.'
+                ]),
+                '',
+                React.createElement('div', { key: 'enhancement-4' }, [
+                  React.createElement('strong', { key: 'enhancement-bold-4' }, 'Enhancement: '),
+                  'Through training on massive amounts of driving scenario data, AI has acquired scene understanding and predictive capabilities approaching human levels, even surpassing them in certain aspects. For instance, it can simultaneously track dozens of objects, predict their movement trajectories for the next few seconds, and consequently make safer and more decisive decisions. An example would be proactively slowing down on highways upon predicting a possible lane incursion by a vehicle in the adjacent lane, thereby preventing potential collisions.'
+                ])
+              ]
+            },
+            {
+              title: 'Future Challenges and Directions for Continuous Improvement',
+              content: [
+                'Although AI has brought significant enhancements, challenges remain. The "long-tail problem" requires AI algorithms to handle more rare scenarios. Future improvements will focus on:',
+                '',
+                React.createElement('div', { key: 'algorithm-efficiency' }, [
+                  React.createElement('strong', { key: 'algorithm-efficiency-bold' }, 'Algorithm Efficiency: '),
+                  'Reducing computational demands through model lightweighting, thereby lowering costs and improving response times.'
+                ]),
+                '',
+                React.createElement('div', { key: 'end-to-end' }, [
+                  React.createElement('strong', { key: 'end-to-end-bold' }, 'End-to-End Learning: '),
+                  'Exploring end-to-end AI models that map sensor inputs directly to control outputs, further enhancing the system\'s overall performance and responsiveness.'
+                ])
+              ]
+            },
+            {
+              title: 'Conclusion',
+              content: [
+                'Through its deep integration into environmental perception and intelligent decision-making, artificial intelligence is fundamentally enhancing the safety, reliability, comfort, and efficiency of autonomous driving systems. From high-precision recognition to reliable sensor fusion, and from optimal path planning to proactive decision-making, every iteration of AI is steadily advancing autonomous driving technology toward full maturity. It is not only the "brain" and "eyes" of autonomous driving but also the "engine" of its continuous evolution.'
+              ]
+            }
+          ]
+        }
       default:
         return null
     }
@@ -547,6 +746,10 @@ export default function BlogDetail() {
       case 5:
         return <BlogLayout1 blogPost={blogPost} />
       case 6:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 7:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 8:
         return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />

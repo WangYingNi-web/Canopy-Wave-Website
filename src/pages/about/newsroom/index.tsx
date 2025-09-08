@@ -38,10 +38,14 @@ interface TutorialPost {
 
 export default function Newsroom() {
     useScrollToHash();
+    
     const router = useRouter();
     const handleBlogClick = (title: string) => {
-        // 将标题转换为URL友好的格式，处理空格和连字符
-        const blogTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
+        // 将标题转换为URL友好的格式，去除特殊字符（冒号、撇号等）并处理空格和连字符
+        const blogTitle = title.toLowerCase()
+            .replace(/[:'"]/g, '')  // 去除冒号、撇号、引号
+            .replace(/[\s-]+/g, '-')  // 将空格和连字符转换为单个连字符
+            .replace(/^-+|-+$/g, ''); // 去除开头和结尾的连字符
         router.push(`/blog/${blogTitle}`);
     };
     const handleWatchClick = (post: NewsroomPost) => {
@@ -66,6 +70,20 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        {
+            id: 8,
+            title: "AI's Role in Autonomous Driving",
+            description: "The Key Role of AI in Autonomous Driving: From Environmental Perception to Intelligent Decision-Making",
+            date: "September 8, 2025",
+            image: "/blog/gpu-computing.png"
+        },
+        {
+            id: 7,
+            title: "AI-Powered E-commerce",
+            description: "Application of AI in E-commerce: Driving Efficiency and Revolutionizing Experience",
+            date: "September 8, 2025",
+            image: "/blog/ai-shopping.png"
+        },
         {
             id: 6,
             title: "GPU: The Core Engine of a New Era in Computing",
@@ -285,6 +303,8 @@ export default function Newsroom() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <hr className="border-t border-gray-200" />
             </div>
+            
+            
 
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
