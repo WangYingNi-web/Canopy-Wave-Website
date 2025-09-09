@@ -72,23 +72,23 @@ export default function Newsroom() {
     const blogPosts: BlogPost[] = [
         {
             id: 11,
-            title: "ai-transforms-pet-care",
-            description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
+            title: "Accelerated AI for Business",
+            description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
             date: "September 9, 2025",
-            image: "/blog/workflows2.png"
+            image: "/blog/ai-business.png"
         },
         {
             id: 10,
-            title: "Accelerated AI for Business",
-            description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-            date: "December 20, 2024",
-            image: "/blog/ai-business.png"
+            title: "ai-transforms-pet-care",
+            description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
+            date: "September 9, 2025",
+            image: "/blog/ai-pet.png"
         },
         {
             id: 9,
             title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
             description: "Cost Analysis for Building a GPU Cluster: A Case Study of 32 GB200 Units",
-            date: "December 15, 2024",
+            date: "September 9, 2025",
             image: "/blog/gpu-cluster-cost.png"
         },
         {
