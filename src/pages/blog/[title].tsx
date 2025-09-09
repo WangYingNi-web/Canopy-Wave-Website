@@ -712,6 +712,278 @@ export default function BlogDetail() {
             }
           ]
         }
+      case 'cost-breakdown-32-unit-gb200-gpu-cluster':
+        return {
+          id: 9,
+          title: 'Cost Breakdown: 32-Unit GB200 GPU Cluster',
+          description: 'Cost Analysis for Building a GPU Cluster: A Case Study of 32 GB200 Units',
+          sections: [
+            {
+              title: '1. Introduction',
+              content: [
+                ['The demand for large-scale GPU clusters has surged with the rise of AI training, quantitative finance, high-performance computing (HPC), and large-scale simulation. NVIDIA\'s ', React.createElement('strong', { key: 'gb200-1' }, 'GB200 NVL72'), ' platform represents one of the most advanced GPU server solutions, designed for maximum computational power and scalability.'],
+                ['This analysis provides a structured cost breakdown for deploying a ', React.createElement('strong', { key: 'gb200-2' }, '32×GB200 NVL72 GPU cluster'), ', highlighting the key cost drivers and the critical role of professional installation services.']
+              ]
+            },
+            {
+              title: '2. Cost Structure Overview',
+              content: [
+                'The TCO for a GPU cluster extends beyond hardware acquisition. It typically includes:',
+                React.createElement('span', { key: 'cost-1' }, ['• ', React.createElement('strong', { key: 'cost-1-bold' }, 'Hardware costs' )],['(servers, GPUs, networking equipment)']),
+                React.createElement('span', { key: 'cost-2' }, ['• ', React.createElement('strong', { key: 'cost-2-bold' }, 'Infrastructure costs ')],['(racks, power, cooling)']),
+                React.createElement('span', { key: 'cost-3' }, ['• ', React.createElement('strong', { key: 'cost-3-bold' }, 'Software and licensing costs ')],['(OS, cluster management, monitoring)']),
+                React.createElement('span', { key: 'cost-4' }, ['• ', React.createElement('strong', { key: 'cost-4-bold' }, 'Labor and professional services')],[' (installation, configuration, testing)']),
+                'A well-planned deployment minimizes operational risks and ensures peak cluster performance.'
+              ]
+            },
+            {
+              title: '2.1. Hardware Costs',
+              content: [
+                React.createElement('strong', { key: 'servers-gpus' }, 'Servers and GPUs:'),
+                '32 × NVIDIA GB200 NVL72 servers (Each system integrates GPUs, CPUs, high-bandwidth memory, and storage subsystems)',
+                '',
+                React.createElement('strong', { key: 'networking' }, 'Networking and Interconnect:'),
+                '• High-speed InfiniBand or Ethernet switches',
+                '• Optical transceivers and cabling for inter-node communication',
+                '',
+                React.createElement('strong', { key: 'supporting-hw' }, 'Supporting Hardware:'),
+                '• PDUs (Power Distribution Units)',
+                '• KVM and management consoles'
+              ]
+            },
+            {
+              title: '2.2. Infrastructure Costs',
+              content: [
+                React.createElement('strong', { key: 'rack-space' }, 'Rack Space and Cabinets:'),
+                'Rack space and cabinets required to house 32 GB200 NVL72 units and associated hardware',
+                '',
+                React.createElement('strong', { key: 'power-supply' }, 'Power Supply:'),
+                '• Estimated power draw per NVL72 × 32 = total cluster load',
+                '• UPS and redundant power systems',
+                '',
+                React.createElement('strong', { key: 'cooling-systems' }, 'Cooling Systems:'),
+                '• Precision air-conditioning or liquid-cooling solutions',
+                '• Energy efficiency optimization'
+              ]
+            },
+            {
+              title: '2.3. Software and Licensing Costs',
+              content: [
+                '• Operating system (Linux distributions or Windows Server)',
+                '• NVIDIA drivers, NVSwitch/NVLink management tools',
+                '• Cluster schedulers (Slurm, Kubernetes)',
+                '• Monitoring, logging, and security solutions'
+              ]
+            },
+            {
+              title: '2.4. Labor and Professional Services',
+              content: [
+                React.createElement('strong', { key: 'deployment' }, 'Deployment and Installation:'),
+                '• Rack integration, cabling, and power configuration',
+                '• Network topology setup and connectivity testing',
+                '• GPU driver installation and OS tuning',
+                '',
+                React.createElement('strong', { key: 'cluster-config' }, 'Cluster Configuration:'),
+                '• Interconnect optimization (low-latency communication)',
+                '• User environment setup for AI/HPC workloads',
+                '• Benchmarking and stress testing',
+                '',
+                React.createElement('strong', { key: 'remediation' }, 'On-Site Remediation:'),
+                '• Issue resolution during stress tests (e.g., faulty nodes, overheating, network bottlenecks)',
+                '• Hardware replacement or reconfiguration',
+                '',
+                React.createElement('strong', { key: 'training' }, 'Training and Handover:'),
+                '• Documentation and knowledge transfer to client teams',
+                '• Long-term support agreements'
+              ]
+            },
+            {
+              title: '3. Example Cost Breakdown (32 Nodes)',
+              content: [
+                'While exact figures vary depending on vendor pricing and infrastructure readiness, a typical distribution is:',
+                React.createElement('div', { key: 'cost-table-container', style: { margin: '20px 0', overflowX: 'auto' } },
+                  React.createElement('table', {
+                    key: 'cost-breakdown-table',
+                    style: {
+                      width: '100%',
+                      borderCollapse: 'collapse',
+                      backgroundColor: '#f8f9fa',
+                      border: '1px solid #dee2e6'
+                    }
+                  }, [
+                    React.createElement('thead', { key: 'thead' },
+                      React.createElement('tr', { key: 'header-row'}, [
+                        React.createElement('th', {
+                          key: 'header-category',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'left',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Cost Category'),
+                        React.createElement('th', {
+                          key: 'header-share',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Estimated Share of Total'),
+                        React.createElement('th', {
+                          key: 'header-budget',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'right',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Budget (USD)')
+                      ])
+                    ),
+                    React.createElement('tbody', { key: 'tbody' }, [
+                      React.createElement('tr', { key: 'row-hardware' }, [
+                        React.createElement('td', {
+                          key: 'hardware-category',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Hardware (servers, GPUs)'),
+                        React.createElement('td', {
+                          key: 'hardware-share',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '80-85%'),
+                        React.createElement('td', {
+                          key: 'hardware-budget',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'right',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, '$105M-$126M')
+                      ]),
+                      React.createElement('tr', { key: 'row-infrastructure', style: { backgroundColor: '#f8f9fa' } }, [
+                        React.createElement('td', {
+                          key: 'infrastructure-category',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Infrastructure (rack, power, cooling)'),
+                        React.createElement('td', {
+                          key: 'infrastructure-share',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '5-10%'),
+                        React.createElement('td', {
+                          key: 'infrastructure-budget',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'right',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '$5.5M-$8.8M')
+                      ]),
+                      React.createElement('tr', { key: 'row-software' }, [
+                        React.createElement('td', {
+                          key: 'software-category',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Software & Licenses'),
+                        React.createElement('td', {
+                          key: 'software-share',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '1-3%'),
+                        React.createElement('td', {
+                          key: 'software-budget',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'right',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '$1.5M-$2.5M')
+                      ]),
+                      React.createElement('tr', { key: 'row-labor', style: { backgroundColor: '#f8f9fa' } }, [
+                        React.createElement('td', {
+                          key: 'labor-category',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Labor & Services'),
+                        React.createElement('td', {
+                          key: 'labor-share',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '5-10%'),
+                        React.createElement('td', {
+                          key: 'labor-budget',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'right',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '$3M-$4.5M')
+                      ]),
+                      React.createElement('tr', { key: 'row-total'}, [
+                        React.createElement('td', {
+                          key: 'total-category',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                          }
+                        }, 'Total'),
+                        React.createElement('td', {
+                          key: 'total-share',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6',
+                          }
+                        }, '100%'),
+                        React.createElement('td', {
+                          key: 'total-budget',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'right',
+                            border: '1px solid #dee2e6',
+                          }
+                        }, '$115M-$141.8M')
+                      ])
+                    ])
+                  ])
+                )
+              ]
+            },
+            {
+              title: '4. Conclusion and Recommendations',
+              content: [
+                ['Deploying a ', React.createElement('strong', { key: '32-node-gb200' },'32-node GB200 NVL72 cluster'), ' is a large-scale engineering project with complex cost components. Hardware is the largest expense, but ',React.createElement('strong', { key: 'installation' },'installation, optimization, and ongoing maintenance are equally critical'),' to ensure the investment delivers maximum computational performance.'],
+                'Organizations considering such investments should allocate sufficient budget not only for hardware procurement but also for expert services that ensure seamless deployment and efficient operations. As a specialized partner, Canopy Wave provides end-to-end solutions for GPU cluster projects, covering planning, design, installation, deployment, and ongoing operations and maintenance. This comprehensive approach helps clients build resilient, scalable, and future-ready AI/HPC infrastructures.'
+              ]
+            }
+          ]
+        }
       default:
         return null
     }
@@ -751,6 +1023,8 @@ export default function BlogDetail() {
       case 7:
         return <BlogLayout1 blogPost={blogPost} />
       case 8:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 9:
         return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />

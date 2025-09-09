@@ -71,6 +71,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 9,
+            title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
+            description: "Cost Analysis for Building a GPU Cluster: A Case Study of 32 GB200 Units",
+            date: "September 9, 2025",
+            image: "/blog/gpu-cluster-cost.png"
+        },
+        {
             id: 8,
             title: "AI's Role in Autonomous Driving",
             description: "The Key Role of AI in Autonomous Driving: From Environmental Perception to Intelligent Decision-Making",
