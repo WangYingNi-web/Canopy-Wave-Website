@@ -70,13 +70,20 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        // {
-        //     id: 10,
-        //     title: "Accelerated AI for Business",
-        //     description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-        //     date: "December 20, 2024",
-        //     image: "/blog/ai-business.png"
-        // },
+        {
+            id: 11,
+            title: "ai-transforms-pet-care",
+            description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
+            date: "September 9, 2025",
+            image: "/blog/workflows2.png"
+        },
+        {
+            id: 10,
+            title: "Accelerated AI for Business",
+            description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
+            date: "December 20, 2024",
+            image: "/blog/ai-business.png"
+        },
         {
             id: 9,
             title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
