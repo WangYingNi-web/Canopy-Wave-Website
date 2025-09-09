@@ -70,11 +70,18 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 10,
+        //     title: "Accelerated AI for Business",
+        //     description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
+        //     date: "December 20, 2024",
+        //     image: "/blog/ai-business.png"
+        // },
         {
             id: 9,
             title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
             description: "Cost Analysis for Building a GPU Cluster: A Case Study of 32 GB200 Units",
-            date: "September 9, 2025",
+            date: "December 15, 2024",
             image: "/blog/gpu-cluster-cost.png"
         },
         {

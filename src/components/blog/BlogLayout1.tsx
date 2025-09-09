@@ -25,7 +25,9 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
           <SlideUp>
             <img
               src={
-                blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72" 
+                blogPost.title === "Accelerated AI for Business"
+                  ? "/blog/ai-business.png"
+                  : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72" 
                   ? "/blog/blog2.png" 
                   : blogPost.title === "AI Generates Personalized Content"
                   ? "/blog/ai-content-generation.png"
