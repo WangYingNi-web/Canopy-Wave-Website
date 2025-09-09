@@ -71,6 +71,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 10,
+            title: "ai-transforms-pet-care",
+            description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
+            date: "September 9, 2025",
+            image: "/blog/workflows2.png"
+        },
+        {
             id: 9,
             title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
             description: "Cost Analysis for Building a GPU Cluster: A Case Study of 32 GB200 Units",

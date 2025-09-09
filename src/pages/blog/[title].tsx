@@ -61,14 +61,14 @@ export default function BlogDetail() {
             {
               title: 'Scaling Innovation',
               content: [
-                'AI isn’t just about optimization. It’s a catalyst for innovation. With generative AI, computer vision, and natural language processing, enterprises can explore ideas that were unimaginable just a few years ago.',
+                'AI isn\'t just about optimization. It\'s a catalyst for innovation. With generative AI, computer vision, and natural language processing, enterprises can explore ideas that were unimaginable just a few years ago.',
                 'From content generation to rapid prototyping, AI empowers teams to iterate, experiment, and scale innovation like never before.',
               ],
             },
             {
               title: 'But Wait, Can I Just Use ChatGPT or Deepseek?',
               content: [
-                'That’s the tempting path: drop a report into ChatGPT and ask for a summary. But here’s the problem, data privacy and control.',
+                'That\'s the tempting path: drop a report into ChatGPT and ask for a summary. But here\'s the problem, data privacy and control.',
                 'Uploading internal documents to public AI models can inadvertently expose sensitive information. Once shared, your data may be used to train future models, potentially benefitting competitors.',
                 "You want your AI to learn from your business. But you don't want it to share your business.",
               ],
@@ -95,8 +95,8 @@ export default function BlogDetail() {
             {
               title: "AI That's Ready to Go",
               content: [
-                'That’s why Canopy Wave and ConfidentialMind have joined forces, to help enterprises kickstart their AI journey, quickly and securely.',
-                'We’re offering a pre-configured Kubernetes environment loaded with pre-qualified LLMs such as Llama-4 and DeepSeek, optimized for private deployments. Connecting your enterprise data with LLMs is quick and easy with premade data connectors, data ingestion, and RAG-pipelines.',
+                'That\'s why Canopy Wave and ConfidentialMind have joined forces, to help enterprises kickstart their AI journey, quickly and securely.',
+                'We\'re offering a pre-configured Kubernetes environment loaded with pre-qualified LLMs such as Llama-4 and DeepSeek, optimized for private deployments. Connecting your enterprise data with LLMs is quick and easy with premade data connectors, data ingestion, and RAG-pipelines.',
                 'You no longer need to worry about setting up infrastructure, managing drivers, or debugging environments. Just plug in and build.',
                 "With Canopy Wave's Instant GPU Private Cloud, you can spin up anywhere from 2 to thousands of H100/H200 GPUs instantly, with no long procurement cycles, no supply chain delays, and no wasted engineering hours.",
                 "Whether you're training new models or deploying inference pipelines at scale, we deliver the performance and flexibility you need, out of the box.",
@@ -980,6 +980,86 @@ export default function BlogDetail() {
               content: [
                 ['Deploying a ', React.createElement('strong', { key: '32-node-gb200' },'32-node GB200 NVL72 cluster'), ' is a large-scale engineering project with complex cost components. Hardware is the largest expense, but ',React.createElement('strong', { key: 'installation' },'installation, optimization, and ongoing maintenance are equally critical'),' to ensure the investment delivers maximum computational performance.'],
                 'Organizations considering such investments should allocate sufficient budget not only for hardware procurement but also for expert services that ensure seamless deployment and efficient operations. As a specialized partner, Canopy Wave provides end-to-end solutions for GPU cluster projects, covering planning, design, installation, deployment, and ongoing operations and maintenance. This comprehensive approach helps clients build resilient, scalable, and future-ready AI/HPC infrastructures.'
+              ]
+            }
+          ]
+        }
+
+
+        case 'ai-transforms-pet-care':
+        return {
+          id: 10,
+          title: 'How Artificial Intelligence is Transforming Pet Care',
+          description: 'AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Artificial Intelligence (AI) has quietly woven its way into our lives, and even our furry friends are getting in on the action, too. From monitoring health to analyzing behavior and creating tailored diet and training plans, AI is revolutionizing how we care for our pets in smarter, more thoughtful ways. Let\'s dive into the magic of AI in pet care, its benefits, and a few things to keep in mind.'
+              ]
+            },
+            {
+              title: 'The Magic of AI in Pet Care',
+              content: [
+                '1. Health Assistant, Always on Duty',
+                'Picture your dog or cat wearing a smart collar that tracks their heart rate, activity levels, and even sleep patterns. AI-powered wearable devices like FitBark or Whistle analyze this data to spot anything unusual, like a sudden drop in activity that might signal a health issue, prompting you to visit the vet sooner. Even cooler? AI can assist vets with diagnostics. Tools like Vetology quickly analyze X-rays or ultrasound images, helping detect tumors or fractures with precision, saving time and letting vets focus on treatment.',
+                '2. Healthy Eating, Powered by AI',
+                'Every pet has unique dietary needs based on breed, age, weight, and health. AI crunches this info to whip up personalized “menus.” Smart feeders like the Petnet SmartFeeder not only automate feeding but also adjust portions based on your pet\'s activity levels, ensuring they get balanced nutrition.',
+                '3. Decoding Your Pet\'s Thoughts',
+                'Ever wonder why your dog won\'t stop barking? AI\'s got your back! Apps like DoggZam analyze barks to tell you if your pet is excited, anxious, or sounding an alarm. Devices like CleverPet use AI to observe your pet\'s reactions and adjust the difficulty of interactive games, keeping their brains sharp and spirits high.',
+                '4. Smart Homes, Safer Pets',
+                'Smart home cameras like Furbo let you check in on your pet remotely and use AI to flag odd behaviors, like your cat frantically scratching the sofa, which might mean they\'re stressed. Smart pet doors can also ensure only your pet gets in and out, reducing the risk of them wandering off.',
+                '5. Virtual Vets, Ready 24/7',
+                'Worried about your pet in the middle of the night but unsure if it\'s vet-worthy? AI platforms like PetCoach offer round-the-clock advice, analyzing symptoms and letting you know if a trip to the clinic is urgent. It\'s a lifesaver for busy pet parents.'
+              ]
+            },
+            {
+              title: '',
+              content: [
+                <img key="ai-pet-care-image" src="/blog/ai-pet-care.png" alt="AI in Pet Care" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: 'AI\'s Superpowers in Pet Care',
+              content: [
+                '1. Fast and Accurate',
+                'AI processes mountains of data in seconds, catching health issues with pro-level precision. This saves vets time, letting them tackle trickier cases.',
+                '2. Tailored to Your Pet',
+                'From diet plans to training routines, AI crafts solutions that fit your pet\'s unique needs, like having a personal assistant for your furry friend.',
+                '3. Convenience at Your Fingertips',
+                'Whether you\'re at work or on vacation, a quick glance at your phone lets you check on your pet and even interact remotely—peace of mind, guaranteed.',
+                '4. Prevention Beats Cure',
+                'AI\'s predictive powers analyze long-term data to spot potential health risks early, helping you stay one step ahead.'
+              ]
+            },
+            {
+              title: 'AI\'s Not Perfect—Here\'s What to Watch For',
+              content: [
+                'As amazing as AI sounds, there are a few things to keep in mind:',
+                '1. Data Privacy Matters',
+                'Smart devices collect heaps of pet data, and leaks could be a concern. Stick with trusted brands and ensure their data security is solid.',
+                '2. Pricey Gadgets',
+                'Many AI-powered pet devices come with a hefty price tag, and maintenance or updates can add up, which might strain some budgets.',
+                '3. Don\'t Over-Rely on Tech',
+                'AI is smart, but it can\'t replace a vet\'s expertise or the bond you share with your pet. Leaning too much on tech might mean missing your pet\'s true needs.',
+                '4. Tech Has Limits',
+                'AI\'s accuracy depends on data quality and algorithm strength. In complex cases, it might still need a vet to step in.'
+              ]
+            },
+            {
+              title: 'What\'s Next for AI in Pet Care?',
+              content: [
+                'AI\'s potential in pet care is just getting started. Here\'s what the future might hold:',
+                'l Smarter Devices: Think gadgets that monitor complex health markers like blood sugar or stress levels.',
+                'l Emotion Detection: AI could analyze facial expressions or movements to better understand your pet\'s mood.',
+                'l Vet Integration: AI platforms might sync directly with vet systems for seamless health management.',
+                'l More Affordable Options: As tech becomes mainstream, AI devices could get cheaper, making them accessible to more pet owners.'
+              ]
+            },
+            {
+              title: 'Wrapping Up',
+              content: [
+                'AI is making pet care simpler and smarter. From health tracking to behavior insights, it\'s like having a trusty sidekick to help us look after our furry pals. But as awesome as tech is, it\'s all about balance—nothing beats the love and connection between you and your pet. With AI\'s continued growth, our pets are set for healthier, happier lives, and we get to be even better “pet parents” with a little less stress!'
               ]
             }
           ]
