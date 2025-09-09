@@ -986,7 +986,7 @@ export default function BlogDetail() {
             }
           ]
         }
-      case 'ai-transforms-pet-care':
+      case 'smarter-pet-care-with-ai':
         return {
           id: 10,
           title: 'How Artificial Intelligence is Transforming Pet Care',
