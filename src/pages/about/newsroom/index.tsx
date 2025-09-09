@@ -74,14 +74,14 @@ export default function Newsroom() {
             id: 11,
             title: "Accelerated AI for Business",
             description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-            date: "September 9, 2025",
+            date: "September 10, 2025",
             image: "/blog/ai-business.png"
         },
         {
             id: 10,
             title: "Smarter Pet Care with AI",
             description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
-            date: "September 9, 2025",
+            date: "September 10, 2025",
             image: "/blog/ai-pet.png"
         },
         {

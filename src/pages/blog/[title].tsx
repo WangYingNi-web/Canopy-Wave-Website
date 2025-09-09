@@ -723,7 +723,7 @@ export default function BlogDetail() {
             {
               title: '1. Introduction',
               content: [
-                ['The demand for large-scale GPU clusters has surged with the rise of AI training, quantitative finance, high-performance computing (HPC), and large-scale simulation. NVIDIA\'s ', React.createElement('strong', { key: 'gb200-1' }, 'GB200 NVL72'), ' platform represents one of the most advanced GPU server solutions, designed for maximum computational power and scalability.'],
+                ['The demand for large-scale GPU clusters has surged with the rise of AI training, quantitative finance, high-performance computing (HPC), and large-scale simulation. NVIDIA\'s ', React.createElement('strong', { key: 'gb200-1' }, 'GB200 NVL72'), ' represents one of the most advanced GPU server solutions, designed for maximum computational power and scalability.'],
                 ['This analysis provides a structured cost breakdown for deploying a ', React.createElement('strong', { key: 'gb200-2' }, '32×GB200 NVL72 GPU cluster'), ', highlighting the key cost drivers and the critical role of professional installation services.']
               ]
             },
@@ -974,7 +974,8 @@ export default function BlogDetail() {
                       ])
                     ])
                   ])
-                )
+                ),
+                <img key="ai-cost-illustration" src="/blog/cost-illustration.png" alt="AI Cost Illustration" className="w-full h-auto my-8 rounded-lg" />
               ]
             },
             {
