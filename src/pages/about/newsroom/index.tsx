@@ -53,37 +53,29 @@ export default function Newsroom() {
             router.push(post.link);
         }
     };
-    const handleTutorialClick = (title: string) => {
-        // 根据具体标题映射到正确的 URL
-        let tutorialTitle: string;
-
-        if (title.includes('DeepSeek-R1')) {
-            tutorialTitle = 'how-to-run-deepseek-r1-locally-on-a-canopy-wave-vm';
-        } else if (title.includes('Llama')) {
-            tutorialTitle = 'how-to-run-the-llama-locally-on-a-canopy-wave-vm';
-        } else {
-            // 默认的 URL 转换逻辑
-            tutorialTitle = title.toLowerCase().replace(/[\s-]+/g, '-');
-        }
-
-        router.push(`/about/newsroom/tutorials/${tutorialTitle}`);
-    };
 
     const blogPosts: BlogPost[] = [
-        {
-            id: 11,
-            title: "Accelerated AI for Business",
-            description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-            date: "September 10, 2025",
-            image: "/blog/ai-business.png"
-        },
-        {
-            id: 10,
-            title: "Smarter Pet Care with AI",
-            description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
-            date: "September 10, 2025",
-            image: "/blog/ai-pet.png"
-        },
+        // {
+        //     id: 12,
+        //     title: "Humanity's Next Partner: The AI Agent",
+        //     description: "A New Era of Human-Machine Symbiosis: The Characteristics, Challenges, and World-Transforming Potential of AI Agents",
+        //     date: "September 11, 2025",
+        //     image: "/blog/ai-agent.png"
+        // },
+        // {
+        //     id: 11,
+        //     title: "Accelerated AI for Business",
+        //     description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
+        //     date: "September 10, 2025",
+        //     image: "/blog/ai-business.png"
+        // },
+        // {
+        //     id: 10,
+        //     title: "Smarter Pet Care with AI",
+        //     description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
+        //     date: "September 10, 2025",
+        //     image: "/blog/ai-pet.png"
+        // },
         {
             id: 9,
             title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
@@ -166,23 +158,6 @@ export default function Newsroom() {
             date: "May 15, 2025",
             image: "/blog2.svg",
             link: "/events/ai-agent-summit-keynote" // 更新为events链接
-        },
-    ];
-
-    const tutorialPosts: TutorialPost[] = [
-        {
-            id: 1,
-            title: "How to Run DeepSeek-R1 Locally on a Canopy Wave VM",
-            description: "A comprehensive guide to setting up and managing your first GPU cluster",
-            date: "July 31, 2025",
-            image: "/tutorials/deepseek.png"
-        },
-        {
-            id: 2,
-            title: "How to Run the Llama Locally on a Canopy Wave VM",
-            description: "Best practices for configuring your AI training and inference workloads",
-            date: "August 1, 2025",
-            image: "/tutorials/Llama.png"
         },
     ];
 
