@@ -27,7 +27,7 @@ export default function AboutPage() {
     {
       id: 1,
       href: "/blog/how-to-choose-the-right-storage-for-your-ai-workflows",
-      image: "/blog/workflows2.png",
+      image: "/blog/workflows2.webp",
       title: "How to Choose the Right Storage for Your AI Workflows",
       description: "Choosing the Right Storage Architecture for AI",
       tag: 'Article',
@@ -36,7 +36,7 @@ export default function AboutPage() {
     {
       id: 2,
       href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",
-      image: "/blog/blog2.png",
+      image: "/blog/blog2.webp",
       title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
       description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
       tag: 'Article',

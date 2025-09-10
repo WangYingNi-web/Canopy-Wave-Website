@@ -55,82 +55,82 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        // {
-        //     id: 12,
-        //     title: "Humanity's Next Partner: The AI Agent",
-        //     description: "A New Era of Human-Machine Symbiosis: The Characteristics, Challenges, and World-Transforming Potential of AI Agents",
-        //     date: "September 11, 2025",
-        //     image: "/blog/ai-agent.png"
-        // },
-        // {
-        //     id: 11,
-        //     title: "Accelerated AI for Business",
-        //     description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-        //     date: "September 10, 2025",
-        //     image: "/blog/ai-business.png"
-        // },
-        // {
-        //     id: 10,
-        //     title: "Smarter Pet Care with AI",
-        //     description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
-        //     date: "September 10, 2025",
-        //     image: "/blog/ai-pet.png"
-        // },
+        {
+            id: 12,
+            title: "Humanity's Next Partner: The AI Agent",
+            description: "A New Era of Human-Machine Symbiosis: The Characteristics, Challenges, and World-Transforming Potential of AI Agents",
+            date: "September 11, 2025",
+            image: "/blog/ai-agent.webp"
+        },
+        {
+            id: 11,
+            title: "Accelerated AI for Business",
+            description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
+            date: "September 10, 2025",
+            image: "/blog/ai-business.webp"
+        },
+        {
+            id: 10,
+            title: "Smarter Pet Care with AI",
+            description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
+            date: "September 10, 2025",
+            image: "/blog/ai-pet.webp"
+        },
         {
             id: 9,
             title: "Cost Breakdown: 32-Unit GB200 GPU Cluster",
             description: "Cost Analysis for Building a GPU Cluster: A Case Study of 32 GB200 Units",
             date: "September 9, 2025",
-            image: "/blog/gpu-cluster-cost.png"
+            image: "/blog/gpu-cluster-cost.webp"
         },
         {
             id: 8,
             title: "AI's Role in Autonomous Driving",
             description: "The Key Role of AI in Autonomous Driving: From Environmental Perception to Intelligent Decision-Making",
             date: "September 8, 2025",
-            image: "/blog/ai-car.png"
+            image: "/blog/ai-car.webp"
         },
         {
             id: 7,
             title: "AI-Powered E-commerce",
             description: "Application of AI in E-commerce: Driving Efficiency and Revolutionizing Experience",
             date: "September 8, 2025",
-            image: "/blog/ai-shopping.png"
+            image: "/blog/ai-shopping.webp"
         },
         {
             id: 6,
             title: "GPU: The Core Engine of a New Era in Computing",
             description: "Powering the Next Wave of AI: Your Guide to GPU Selection",
             date: "September 5, 2025",
-            image: "/blog/gpu-computing.png"
+            image: "/blog/gpu-computing.webp"
         },
         {
             id: 5,
             title: "Why Enterprises Choose Dedicated LLM Endpoints",
             description: "Unlocking Performance, Security, and Control for Mission-Critical AI",
             date: "September 4, 2025",
-            image: "/blog/dedicated-endpoints.png"
+            image: "/blog/dedicated-endpoints.webp"
         },
         {
             id: 4,
             title: "AI Generates Personalized Content",
             description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
             date: "September 1, 2025",
-            image: "/blog/ai-content-generation.png"
+            image: "/blog/ai-content-generation.webp"
         },
         {
             id: 3,
             title: "AI: Revolutionizing Animal Health Monitoring",
             description: "A New Chapter in Revolutionizing Animal Health Monitoring ",
             date: "August 29, 2025",
-            image: "/blog/workflows2.png"
+            image: "/blog/workflows2.webp"
         },
         {
             id: 2,
             title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
             description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
             date: "July 14, 2025",
-            image: "/blog/blog2.png"
+            image: "/blog/blog2.webp"
         },
         {
             id: 1,

@@ -33,7 +33,7 @@ export default function Index() {
     // {
     //   id: 1,
     //   href: "/blog/ai-generates-personalized-content",
-    //   image: "/blog/ai-content-generation.png",
+    //   image: "/blog/ai-content-generation.webp",
     //   title: "AI Generates Personalized Content",
     //   description: "Dynamic Content Generation: AI creates uniquely personalized content for each consumer",
     //   date: "September 1, 2025"
@@ -41,7 +41,7 @@ export default function Index() {
     // {
     //   id: 2,
     //   href: "/blog/ai:-revolutionizing-animal-health-monitoring",
-    //   image: "/blog/workflows2.png",
+    //   image: "/blog/workflows2.webp",
     //   title: "AI: Revolutionizing Animal Health Monitoring",
     //   description: "A New Chapter in Revolutionizing Animal Health Monitoring",
     //   date: "August 29, 2025"
@@ -49,7 +49,7 @@ export default function Index() {
     {
       id: 3,
       href: "/blog/canopy-wave-launches-next-gen-gpu-cluster-with-nvidia-gb200-nvl72",
-      image: "/blog/blog2.png",
+      image: "/blog/blog2.webp",
       title: "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72",
       description: "Revolutionizing AI Infrastructure with Cutting-Edge Technology",
       date: "July 14, 2025"
