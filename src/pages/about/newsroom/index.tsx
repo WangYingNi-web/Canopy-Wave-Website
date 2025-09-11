@@ -66,7 +66,7 @@ export default function Newsroom() {
             id: 11,
             title: "Accelerated AI for Business",
             description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-            date: "September 10, 2025",
+            date: "September 11, 2025",
             image: "/blog/ai-business.webp"
         },
         {

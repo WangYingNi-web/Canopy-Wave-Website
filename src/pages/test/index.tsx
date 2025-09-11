@@ -48,6 +48,59 @@ export default function TestIndex() {
         // { id: 15, width: 80, height: 70 },
         // { id: 16, width: 80, height: 70 },
     ];
+    const [autoPlay, setAutoPlay] = useState(true);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slides = [
+        {
+            id: 1,
+            background: '/test/02.png',
+            //   title: 'Instant GPU Cluster',
+            //   subtitle: 'for Enterprise AI',
+            // highlight: 'Enterprise AI',
+            titleColor: 'text-[#80B224]',
+            bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+        },
+        {
+            id: 2,
+            background: '/test/03.png',
+            //   title: 'On-Demand',
+            //   subtitle: 'NVIDIA GB200 NVL72',
+            //   highlight: 'Aiming to Next-Generation AI and Computing Technologies',
+            titleColor: 'text-white',
+            subtitleColor: 'text-[#80B224]',
+            bgColor: 'bg-black'
+        },
+        {
+            id: 3,
+            background: '/test/04.png',
+            //   title: 'On-Demand',
+            //   subtitle: 'NVIDIA HGX B200',
+            //   highlight: 'The Foundation of Your AI Workloads and Computing Technologies',
+            titleColor: 'text-white',
+            subtitleColor: 'text-[#80B224]',
+            bgColor: 'bg-black'
+        }
+    ];
+    useEffect(() => {
+        if (!autoPlay) return;
+
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 6000); // 6秒切换一次
+
+        return () => clearInterval(timer);
+    }, [slides.length, autoPlay]);
+
+    // 手动切换处理函数
+    const handleManualSlideChange = (index: number) => {
+        setCurrentSlide(index);
+        setAutoPlay(false); // 暂停自动播放
+
+        // 3秒后恢复自动播放
+        setTimeout(() => {
+            setAutoPlay(true);
+        }, 1000);
+    };
     // 处理悬停进入的函数
     const handleCardHover = (cardId: string) => {
         setHoveredCard(cardId);
@@ -109,32 +162,76 @@ export default function TestIndex() {
             <Header />
 
             <div className="w-full bg-[#FFFFFF]">
-                {/* Hero Section */}
-                <div className="w-full h-[520px] relative mt-[84px] bg-[#F5F7F4]">
-                    <Image
-                        src="/compute/banner.svg"
-                        alt="banner"
-                        fill
-                        className="object-cover"
-                        priority
+                {/* 轮播图Banner */}
+                <div className="w-full h-[545px] relative mt-[84px] overflow-hidden">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={slide.id}
+                            className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${index === currentSlide ? 'translate-x-0' :
+                                index < currentSlide ? '-translate-x-full' : 'translate-x-full'
+                                }`}
+                        >
+                            {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
 
-                    />
-                    <div className="absolute inset-0 z-10">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
-                            <SlideUp>
-                                <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
-                                    Compute Services
-                                </h1>
-                            </SlideUp>
-                            <SlideUp>
-                                <p className="text-gray-600 text-l mt-8 block sm:hidden">
-                                    Canopy Wave uses Virtualization technology to provide world-leading performance GPU for AI training & inference
-                                </p>
-                                <p className="text-gray-600 text-l mt-8 hidden sm:block">
-                                    Canopy Wave uses Virtualization technology to provide world-leading <br /> performance GPU for AI training & inference
-                                </p>
-                            </SlideUp>
 
+                            {/* 第一张轮播图使用Spline组件 */}
+                            {slide.id !== 1 && (
+                                <div className="absolute inset-0 bg-black z-0" />
+                            )}
+                            {slide.id === 3 ? (
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <Image
+                                        src={slide.background}
+                                        alt={`Banner ${slide.id}`}
+                                        width={850}
+                                        height={550}
+                                        className="object-cover"
+                                        style={{
+                                            width: 'auto'
+                                        }}
+                                        priority={index === 0}
+                                    />
+                                </div>
+                            ) : (
+                                <Image
+                                    src={slide.background}
+                                    alt={`Banner ${slide.id}`}
+                                    fill
+                                    className="object-cover"
+                                    style={slide.id === 2 ? {
+                                        transform: 'scale(1.1) translateX(5%)',
+                                        transformOrigin: 'center center'
+                                    } : {}}
+                                    priority={index === 0}
+                                />
+                            )
+                            }
+                            {/* 黑色遮罩层 - 仅对第二张图片 */}
+                            {/* {slide.id !== 1 && (
+                                <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
+                            )} */}
+
+                            <div className="absolute inset-0 z-10">
+                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+
+                    {/* 轮播指示器 */}
+                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+                        <div className="flex space-x-2">
+                            {slides.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleManualSlideChange(index)}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                                        ? 'bg-[#80B224] scale-125'
+                                        : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                                        }`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -384,7 +481,110 @@ export default function TestIndex() {
                     </div>
                 </div>
 
-                
+                {/* Explore Canopy Wave Section */}
+                <section className="bg-gray-50 py-16">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-left mb-12">
+                            <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Canopy Wave</h2>
+                        </div>
+
+                        {/* First Row - 2/3 and 1/3 layout */}
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6 min-h-[320px]">
+                            {/* Events Card - 2/3 width */}
+                            <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Events.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Events</span>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
+                                <p className="text-sm text-gray-600 mb-12">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
+                                <button
+                                    onClick={() => window.location.href = '/events/ai-agent-summit-keynote'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#313131] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Blog Card - 1/3 width */}
+                            <div className="lg:col-span-1 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Blog.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Blog</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Joint Blog - Accelerate Enterprise AI</h3>
+                                <p className="text-sm text-gray-600 mb-12">by James Liao, CTO of Canopy Wave, and Severi Tikkas, CTO of ConfidentialMind</p>
+                                <button
+                                    onClick={() => window.location.href = '/blog/joint-blog-accelerate-enterprise-ai'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Second Row - Three equal cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[320px]">
+                            {/* Case Studies Card */}
+                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/case-studies.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Case Studies</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
+                                <p className="text-sm text-gray-600 mb-12">Foundry BioSciences Case Study</p>
+                                <button
+                                    onClick={() => window.location.href = '/resources/case-study'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Tutorials Card */}
+                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Tutorials.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Tutorials</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
+                                <p className="text-sm text-gray-600 mb-12">Step-by-step guide for local deployment</p>
+                                <button
+                                    onClick={() => window.location.href = '/resources/tutorials/how-to-run-the-gpt-oss-locally-on-a-canopy-wave-vm'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Docs Card */}
+                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Docs.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Docs</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
+                                <p className="text-sm text-gray-600 mb-12">This portfolio outlines modular hardware components and recommended configurations</p>
+                                <button
+                                    onClick={() => window.location.href = '/resources/docs/products/canopy-wave-gpu'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Providing secure and efficient solutions for different use cases */}
                 <div className="bg-[#F9F9F9] py-12 sm:pt-10 pb-16">
