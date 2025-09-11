@@ -1017,7 +1017,7 @@ export default function BlogDetail() {
             {
               title: '',
               content: [
-                <img key="ai-pet-care-image" src="/blog/ai-pet-care.png" alt="AI in Pet Care" className="w-full h-auto my-8 rounded-lg" />
+                <img key="ai-pet-care-image" src="/blog/ai-pet-illustration.webp" alt="AI in Pet Care" className="w-full h-auto my-8 rounded-lg" />
               ]
             },
             {

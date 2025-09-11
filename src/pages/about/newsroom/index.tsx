@@ -73,7 +73,7 @@ export default function Newsroom() {
             id: 10,
             title: "Smarter Pet Care with AI",
             description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
-            date: "September 10, 2025",
+            date: "September 11, 2025",
             image: "/blog/ai-pet.webp"
         },
         {

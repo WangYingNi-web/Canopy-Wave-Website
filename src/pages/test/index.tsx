@@ -29,6 +29,7 @@ export default function TestIndex() {
     const [showCardContent, setShowCardContent] = useState<string | null>('card1');
     const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
     const [hoveredCard, setHoveredCard] = useState('card1');
+    const [activeTab, setActiveTab] = useState(1);
     const partnerLogos = [
         { id: 1, width: 130, height: 100 },
         { id: 2, width: 80, height: 80 },
@@ -140,51 +141,91 @@ export default function TestIndex() {
 
                 {/* Partners Section */}
                 <PartnerCarousel logos={partnerLogos} />
+
                 {/* Chat Section - 灰色背景聊天区域 */}
                 <div className="bg-gray-100 py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-4xl font-bold text-left mb-8">
+                            Canopy Wave Chat
+                        </h2>
                         <div className="flex flex-col lg:flex-row gap-12">
-                            {/* 左侧聊天界面 */}
-                            <div className="lg:w-1/2">
+                            {/* 左侧动图区域 - 2/3宽度 */}
+                            <div className="lg:w-2/3">
                                 <div className="bg-white rounded-lg shadow-lg p-6">
-                                    <div className="border-b pb-4 mb-4">
-                                        <h3 className="text-lg font-semibold">Chat</h3>
-                                    </div>
                                     <div className="space-y-4">
-                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                            <p className="text-sm text-gray-600 mb-2">Professional services with industry-leading SLAs</p>
-                                            <p className="text-sm">We'll help you get started with our professional services team and industry-leading SLAs to ensure your success.</p>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] text-sm px-4 py-2">
-                                                Chat Now
-                                            </Button>
+                                        <div className="mb-4">
+                                            <Image
+                                                src={`/test/chat${activeTab}.webp`}
+                                                alt={`Chat ${activeTab} Demo`}
+                                                width={500}
+                                                height={300}
+                                                className="w-full h-auto rounded-lg"
+                                            />
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* 右侧内容 */}
-                            <div className="lg:w-1/2">
-                                <h2 className="text-3xl font-bold mb-6">
-                                    Instantly allocated GPU resource and<br />
-                                    ready-to-go AI resource
-                                </h2>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div className="text-center">
-                                        <div className="w-16 h-16 bg-[#76B900] rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <Image src="/icon/optimized.svg" alt="Optimized" width={32} height={32} className="filter brightness-0 invert" />
+                            {/* 右侧标题区域 - 1/3宽度 */}
+                            <div className="lg:w-1/3">
+                                <div className="space-y-4">
+                                    <div
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
+                                            ? 'bg-gray-50 text-gray-700 border-r-[#80B224] shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            }`}
+                                        onClick={() => setActiveTab(1)}
+                                    >
+                                        <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Step-by-Step Collaboration</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                            }`}>
+                                            <p className="text-sm text-gray-600">
+                                                Each model builds on the last to deliver sharper logic and greater precision.
+                                            </p>
                                         </div>
-                                        <h3 className="font-semibold mb-2">Optimized stack</h3>
-                                        <p className="text-sm text-gray-600">Pre-qualified and optimized GPU and AI drivers</p>
                                     </div>
-                                    <div className="text-center">
-                                        <div className="w-16 h-16 bg-[#76B900] rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <Image src="/icon/resource.svg" alt="Resource" width={32} height={32} className="filter brightness-0 invert" />
+
+                                    <div
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
+                                            ? 'bg-gray-50 text-gray-700 border-r-[#80B224] shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            }`}
+                                        onClick={() => setActiveTab(2)}
+                                    >
+                                        <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Parallel Intelligence</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                            }`}>
+                                            <p className="text-sm text-gray-600">
+                                                Unlock simultaneous responses from different AI models-gain fresh perspectives, compare solutions, and choose the best answer.
+                                            </p>
                                         </div>
-                                        <h3 className="font-semibold mb-2">Pay only used</h3>
-                                        <p className="text-sm text-gray-600">Only pay for the GPU you use at the wholesale price</p>
                                     </div>
+
+                                    <div
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 3
+                                            ? 'bg-gray-50 text-gray-700 border-r-[#80B224] shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            }`}
+                                        onClick={() => setActiveTab(3)}
+                                    >
+                                        <h3 className={`text-lg font-semibold ${activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Chat Controls</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 3 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                            }`}>
+                                            <p className="text-sm text-gray-600">
+                                                Adjust the output result through the chat controls.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                {/* Free to use 按钮 */}
+                                <div className="mt-10">
+                                    <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg">
+                                        Free to use
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -250,30 +291,33 @@ export default function TestIndex() {
                 {/* GPU Products Section - NVIDIA GB200 NVL72 */}
                 <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-3xl font-bold text-center mb-12">
+                        <h2 className="text-4xl font-bold text-left mb-8">
                             On-demand High-Performance GPUs<br />
                             now available
                         </h2>
 
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
                             {/* 左侧产品介绍 */}
-                            <div className="lg:col-span-2 space-y-6">
-                                <div className="flex items-center space-x-4">
+                            <div className="lg:col-span-2 lg:-mt-16">
+                                <div className="flex items-center space-x-4 mb-6">
                                     <h3 className="text-2xl font-bold">NVIDIA GB200 NVL72</h3>
                                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                                         $9/GPU/hr
                                     </span>
                                 </div>
 
-                                <p className="text-gray-600 leading-relaxed text-l">
-                                    The GB200 NVL72 is a rack-scale, liquid-cooled system integrating 36 Grace CPUs and 72 Blackwell GPUs. Its unified 72-GPU NVLink domain delivers 30x faster trillion-parameter LLM inference.
-                                </p>
+                                <ul className="text-gray-600 leading-relaxed text-l mb-12">
+                                    <li>• 18x compute trays in a rack</li>
+                                    <li>• 36x Grace CPUs, 72x Blackwell GPUs</li>
+                                    <li>• Up to 13.4 TB HBM3e | 576 TB/s</li>
+                                    <li>• 2,592 Arm® Neoverse V2 cores</li>
+                                    <li>• Up to 17 TB LPDDR5X | Up to 18.4 TB/s</li>
+                                </ul>
 
-                                <Link href="/gb200-nvl72">
-                                    <Button className="bg-[#8CC63F] text-white px-6 py-2 rounded hover:bg-[#7AB530] transition-colors">
-                                        Learn More
-                                    </Button>
-                                </Link>
+                                <Button className="bg-[#8CC63F] text-white px-4 py-2 rounded hover:bg-[#7AB530] transition-colors" onClick={() => window.location.href = '/gb200-nvl72'}>
+                                    Learn More
+                                </Button>
+
                             </div>
 
                             {/* 右侧图片展示和切换按钮 */}
@@ -317,38 +361,6 @@ export default function TestIndex() {
                     </div>
                 </div>
 
-                {/* Solutions Section - 解决方案卡片 */}
-                <div className="bg-gray-50 py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-3xl font-bold text-center mb-12">
-                            Providing secure and efficient solutions<br />
-                            for different use cases
-                        </h2>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                            <div className="bg-gradient-to-br from-green-400 to-green-600 text-white p-6 rounded-lg">
-                                <h3 className="font-bold mb-2">Machine Learning</h3>
-                                <p className="text-sm opacity-90">Advanced ML algorithms and model training</p>
-                            </div>
-                            <div className="bg-gradient-to-br from-teal-400 to-teal-600 text-white p-6 rounded-lg">
-                                <h3 className="font-bold mb-2">Data Analytics</h3>
-                                <p className="text-sm opacity-90">Real-time data processing and analysis</p>
-                            </div>
-                            <div className="bg-gradient-to-br from-cyan-400 to-cyan-600 text-white p-6 rounded-lg">
-                                <h3 className="font-bold mb-2">AI Training</h3>
-                                <p className="text-sm opacity-90">Large-scale AI model training infrastructure</p>
-                            </div>
-                            <div className="bg-gradient-to-br from-blue-400 to-blue-600 text-white p-6 rounded-lg">
-                                <h3 className="font-bold mb-2">Deep Learning</h3>
-                                <p className="text-sm opacity-90">Neural network training and inference</p>
-                            </div>
-                            <div className="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white p-6 rounded-lg">
-                                <h3 className="font-bold mb-2">HPC</h3>
-                                <p className="text-sm opacity-90">High-performance computing solutions</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 {/* Global Network Section */}
                 <div className="bg-white py-16">
@@ -361,7 +373,7 @@ export default function TestIndex() {
                                 <p className="text-gray-600 mb-8 leading-relaxed">
                                     Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                                 </p>
-                                <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] px-6 py-3">
+                                <Button className="bg-[#F5F9F4] text-white hover:bg-[#6ba000] px-6 py-3">
                                     Get started →
                                 </Button>
                             </div>
@@ -372,189 +384,62 @@ export default function TestIndex() {
                     </div>
                 </div>
 
-                {/* Explore Canopy Wave Section */}
-                <section className="bg-gray-50 py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-left mb-12">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Explore Canopy Wave</h2>
-                        </div>
+                
 
-                        {/* First Row - 2/3 and 1/3 layout */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-                            {/* Events Card - 2/3 width */}
-                            <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                                <div className="mb-4">
-                                    <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium">Events</span>
-                                </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
-                                <p className="text-sm text-gray-600 mb-6">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
-                                <button className="flex items-center text-green-600 hover:text-green-700 transition-colors group">
-                                    Learn More
-                                    <span className="text-sm font-medium mr-2"></span>
-                                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-
-                            {/* Blog Card - 1/3 width */}
-                            <div className="lg:col-span-1 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                                <div className="mb-4">
-                                    <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium">Blog</span>
-                                </div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Joint Blog - Accelerate Enterprise AI</h3>
-                                <p className="text-sm text-gray-600 mb-6">by James Liao, CTO of Canopy Wave, and Severi Tikkas, CTO of ConfidentialMind</p>
-                                <button className="flex items-center text-green-600 hover:text-green-700 transition-colors group">
-                                    Learn More
-                                    <span className="text-sm font-medium mr-2"></span>
-                                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* Second Row - Three equal cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {/* Case Studies Card */}
-                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                                <div className="mb-4">
-                                    <span className="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full font-medium">Case Studies</span>
-                                </div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
-                                <p className="text-sm text-gray-600 mb-6">Foundry BioSciences Case Study</p>
-                                <button className="flex items-center text-green-600 hover:text-green-700 transition-colors group">
-                                    Learn More
-                                    <span className="text-sm font-medium mr-2"></span>
-                                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-
-                            {/* Tutorials Card */}
-                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                                <div className="mb-4">
-                                    <span className="inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">Tutorials</span>
-                                </div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
-                                <p className="text-sm text-gray-600 mb-6">Step-by-step guide for local deployment</p>
-                                <button className="flex items-center text-green-600 hover:text-green-700 transition-colors group">
-                                    Learn More
-                                    <span className="text-sm font-medium mr-2"></span>
-                                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-
-                            {/* Docs Card */}
-                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                                <div className="mb-4">
-                                    <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full font-medium">Docs</span>
-                                </div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
-                                <p className="text-sm text-gray-600 mb-6">This portfolio outlines modular hardware components and recommended configurations</p>
-                                <button className="flex items-center text-green-600 hover:text-green-700 transition-colors group">
-                                    Learn More
-                                    <span className="text-sm font-medium mr-2"></span>
-                                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-100 transition-colors">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* Providing secure and efficient solutions for different use cases */}
                 <div className="bg-[#F9F9F9] py-12 sm:pt-10 pb-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <SlideUp>
-                            <h2 className="text-3xl sm:text-4xl font-black text-left mb-12 text-gray-600">
-                                Providing secure and efficient solutions for <br /> different use cases
-                            </h2>
+                            <div className="text-left mb-12">
+                                <h2 className="text-4xl font-bold text-gray-900 mb-4">Providing secure and efficient solutions for <br /> different use cases</h2>
+                            </div>
                         </SlideUp>
 
                         <div className="flex gap-4 flex-col md:flex-row">
-                             {/* Card 1 - Pursue Efficiency */}
-                             <div
-                                 className="transform"
-                                 style={{
-                                     width: isMobile ? '100%' : (hoveredCard === 'card1' ? '40%' : '18%'),
-                                     transition: 'width 0.6s ease-in-out'
-                                 }}
-                                 onMouseEnter={() => handleCardHover('card1')}
-                                 onMouseLeave={() => handleCardLeave('card1')}
+                            {/* Card 1 - Pursue Efficiency */}
+                            <div
+                                className="transform"
+                                style={{
+                                    width: isMobile ? '100%' : (hoveredCard === 'card1' ? '40%' : '18%'),
+                                    transition: 'width 0.6s ease-in-out'
+                                }}
+                                onMouseEnter={() => handleCardHover('card1')}
+                                onMouseLeave={() => handleCardLeave('card1')}
 
                             >
                                 <SlideUp>
                                     <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setIsExpanded(!isExpanded);
-                                        }}
                                     >
                                         <Image
-                                            src="/about/values1.png"
-                                            alt="Pursue Efficiency Through Open and Clear Communication"
+                                            src="/test/ai-model-training.webp"
+                                            alt="AI Model Training"
                                             fill
                                             className="object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                                        <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                        <div className="absolute inset-0 p-6 flex flex-col justify-start text-white">
                                             {hoveredCard !== 'card1' && (
-                                                 <>
-                                                     <h3 className="text-xl font-bold mb-3 leading-tight">
-                                                         AI Model Training
-                                                     </h3>
-                                                 </>
-                                             )}
+                                                <>
+                                                    <h3 className="text-xl font-bold mb-3 leading-tight">
+                                                        AI Model Training
+                                                    </h3>
+                                                </>
+                                            )}
                                             {/* 只有当showCardContent === 'card1'时才显示内容 */}
                                             {showCardContent === 'card1' && (
                                                 <>
-                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                         AI Model Training
-                                                     </h3>
-                                                     <div className="flex items-center justify-between">
-                                                         <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                             Accelerate AI training with powerful computing power and low-latency networks
-                                                            <button
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    setIsExpanded(!isExpanded);
-                                                                }}
-                                                                style={{ verticalAlign: 'middle' }}
-                                                                className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                                                            >
-                                                                <svg
-                                                                    className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : 'rotate-0'}`}
-                                                                    fill="none"
-                                                                    stroke="currentColor"
-                                                                    viewBox="0 0 24 24"
-                                                                >
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                                </svg>
-                                                            </button>
+                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                        AI Model Training
+                                                    </h3>
+                                                    <div className="flex items-center justify-between">
+                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                            Accelerate AI training with powerful computing power and low-latency networks. Applied in NLP, computer vision, recommendations, and autonomous driving.
                                                         </p>
+
                                                     </div>
-                                                    <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'}`}>
-                                                         <p className="mb-2">
-                                                             Applied in NLP, computer vision, recommendations, and autonomous driving.
-                                                         </p>
-                                                         <p>
-                                                             Learn More&gt;
-                                                         </p>
-                                                     </div>
+                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/model-training'}>
+                                                        Learn More&gt;
+                                                    </p>
                                                 </>
                                             )}
                                         </div>
@@ -563,14 +448,14 @@ export default function TestIndex() {
                             </div>
 
                             {/* Card 2 - Earn Respect */}
-                             <div
-                                 className="transform"
-                                 style={{
-                                     width: isMobile ? '100%' : (hoveredCard === 'card2' ? '40%' : '18%'),
-                                     transition: 'width 0.6s ease-in-out'
-                                 }}
-                                 onMouseEnter={() => handleCardHover('card2')}
-                                 onMouseLeave={() => handleCardLeave('card2')}
+                            <div
+                                className="transform"
+                                style={{
+                                    width: isMobile ? '100%' : (hoveredCard === 'card2' ? '40%' : '18%'),
+                                    transition: 'width 0.6s ease-in-out'
+                                }}
+                                onMouseEnter={() => handleCardHover('card2')}
+                                onMouseLeave={() => handleCardLeave('card2')}
 
                             >
                                 <SlideUp>
@@ -581,13 +466,13 @@ export default function TestIndex() {
                                         }}
                                     >
                                         <Image
-                                            src="/about/values2.png"
-                                            alt="Earn Respect with an Ownership Mindset"
+                                            src="/test/inference.webp"
+                                            alt="Inference"
                                             fill
                                             className="object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                                        <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                        <div className="absolute inset-0 p-6 flex flex-col justify-start text-white">
                                             {hoveredCard !== 'card2' && (
                                                 <>
                                                     <h3 className="text-xl font-bold mb-3 leading-tight">
@@ -599,39 +484,17 @@ export default function TestIndex() {
 
                                             {showCardContent === 'card2' && (
                                                 <>
-                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
+                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
                                                         Inference
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
+                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
                                                             Scalable and secure AI inference powered by high-performance virtual machines
-                                                            <button
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    setIsExpanded2(!isExpanded2);
-                                                                }}
-                                                                style={{ verticalAlign: 'middle' }}
-                                                                className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                                                            >
-                                                                <svg
-                                                                    className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded2 ? 'rotate-180' : 'rotate-0'}`}
-                                                                    fill="none"
-                                                                    stroke="currentColor"
-                                                                    viewBox="0 0 24 24"
-                                                                >
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                                </svg>
-                                                            </button>
                                                         </p>
                                                     </div>
-                                                    <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded2 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'}`}>
-                                                        <p className="mb-2">
-                                                            Applied in real-time search, recommendations, speech, and vision applications.
-                                                        </p>
-                                                        <p>
-                                                            Learn More&gt;
-                                                        </p>
-                                                    </div>
+                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/inference'}>
+                                                        Learn More&gt;
+                                                    </p>
                                                 </>
                                             )}
                                         </div>
@@ -640,14 +503,14 @@ export default function TestIndex() {
                             </div>
 
                             {/* Card 3 - Demonstrate Contribution */}
-                             <div
-                                 className="transform"
-                                 style={{
-                                     width: isMobile ? '100%' : (hoveredCard === 'card3' ? '40%' : '18%'),
-                                     transition: 'width 0.6s ease-in-out'
-                                 }}
-                                 onMouseEnter={() => handleCardHover('card3')}
-                                 onMouseLeave={() => handleCardLeave('card3')}
+                            <div
+                                className="transform"
+                                style={{
+                                    width: isMobile ? '100%' : (hoveredCard === 'card3' ? '40%' : '18%'),
+                                    transition: 'width 0.6s ease-in-out'
+                                }}
+                                onMouseEnter={() => handleCardHover('card3')}
+                                onMouseLeave={() => handleCardLeave('card3')}
                             >
                                 <SlideUp>
                                     <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
@@ -657,13 +520,13 @@ export default function TestIndex() {
                                         }}
                                     >
                                         <Image
-                                            src="/about/values3.png"
-                                            alt="Demonstrate Contribution with Measurable Results"
+                                            src="/test/rendering.webp"
+                                            alt="Rendering"
                                             fill
                                             className="object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                                        <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                        <div className="absolute inset-0 p-6 flex flex-col justify-start text-white">
 
                                             {hoveredCard !== 'card3' && (
                                                 <>
@@ -674,197 +537,134 @@ export default function TestIndex() {
                                             )}
                                             {showCardContent === 'card3' && (
                                                 <>
-                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
+                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
                                                         Rendering
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                            High-frame throughput and ultra-low latency with GPU and CPU-based rendering engines
-                                                            <button
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    setIsExpanded3(!isExpanded3);
-                                                                }}
-                                                                style={{ verticalAlign: 'middle' }}
-                                                                className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                                                            >
-                                                                <svg
-                                                                    className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded3 ? 'rotate-180' : 'rotate-0'}`}
-                                                                    fill="none"
-                                                                    stroke="currentColor"
-                                                                    viewBox="0 0 24 24"
-                                                                >
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                                </svg>
-                                                            </button>
-                                                        </p>
-                                                    </div>
-                                                    <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded3 ? 'max-h-[200px] opacity-75' : 'max-h-0 opacity-0'
-                                                        }`}>
-                                                        <p className="mb-2">
+                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                            High-frame throughput and ultra-low latency with GPU and CPU-based rendering engines.
                                                             Applied in gaming, simulation, virtual production, and design visualization.
                                                         </p>
-                                                        <p>
-                                                            Learn More&gt;
-                                                        </p>
                                                     </div>
+                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/rendering'}>
+                                                        Learn More&gt;
+                                                    </p>
                                                 </>
                                             )}
                                         </div>
                                     </div>
                                 </SlideUp>
-                             </div>
+                            </div>
 
-                             {/* Card 4 - Innovation Excellence */}
-                             <div
-                                 className="transform"
-                                 style={{
-                                     width: isMobile ? '100%' : (hoveredCard === 'card4' ? '40%' : '18%'),
-                                     transition: 'width 0.6s ease-in-out'
-                                 }}
-                                 onMouseEnter={() => handleCardHover('card4')}
-                                 onMouseLeave={() => handleCardLeave('card4')}
-                             >
-                                 <SlideUp>
-                                     <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
-                                         onClick={(e) => {
-                                             e.stopPropagation();
-                                             setIsExpanded4(!isExpanded4);
-                                         }}
-                                     >
-                                         <Image
-                                             src="/about/values1.png"
-                                             alt="Innovation Excellence"
-                                             fill
-                                             className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                         />
-                                         <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                                         <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                                             {hoveredCard !== 'card4' && (
-                                                 <>
-                                                     <h3 className="text-xl font-bold mb-3 leading-tight">
-                                                         Private Cloud and GPUs Deployment
-                                                     </h3>
-                                                 </>
-                                             )}
-                                             {showCardContent === 'card4' && (
-                                                 <>
-                                                     <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                         Private Cloud and GPUs Deployment
-                                                     </h3>
-                                                     <div className="flex items-center justify-between">
-                                                         <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                             Extensive deployment experience with fast delivery and full-stack software support
-                                                             <button
-                                                                 onClick={(e) => {
-                                                                     e.stopPropagation();
-                                                                     setIsExpanded4(!isExpanded4);
-                                                                 }}
-                                                                 style={{ verticalAlign: 'middle' }}
-                                                                 className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                                                             >
-                                                                 <svg
-                                                                     className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded4 ? 'rotate-180' : 'rotate-0'}`}
-                                                                     fill="none"
-                                                                     stroke="currentColor"
-                                                                     viewBox="0 0 24 24"
-                                                                 >
-                                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                                 </svg>
-                                                             </button>
-                                                         </p>
-                                                     </div>
-                                                     <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded4 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'}`}>
-                                                         <p className="mb-2">
-                                                             Applied in AI training, inference, rendering, and high-performance computing.
-                                                         </p>
-                                                         <p>
-                                                             Learn More&gt;
-                                                         </p>
-                                                     </div>
-                                                 </>
-                                             )}
-                                         </div>
-                                     </div>
-                                 </SlideUp>
-                             </div>
+                            {/* Card 4 - Innovation Excellence */}
+                            <div
+                                className="transform"
+                                style={{
+                                    width: isMobile ? '100%' : (hoveredCard === 'card4' ? '40%' : '18%'),
+                                    transition: 'width 0.6s ease-in-out'
+                                }}
+                                onMouseEnter={() => handleCardHover('card4')}
+                                onMouseLeave={() => handleCardLeave('card4')}
+                            >
+                                <SlideUp>
+                                    <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setIsExpanded4(!isExpanded4);
+                                        }}
+                                    >
+                                        <Image
+                                            src="/test/private-cloud-and-gpus-deployment.webp"
+                                            alt="Private Cloud and GPUs Deployment"
+                                            fill
+                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                                        <div className="absolute inset-0 p-6 flex flex-col justify-start text-white">
+                                            {hoveredCard !== 'card4' && (
+                                                <>
+                                                    <h3 className="text-xl font-bold mb-3 leading-tight">
+                                                        Private Cloud and GPUs Deployment
+                                                    </h3>
+                                                </>
+                                            )}
+                                            {showCardContent === 'card4' && (
+                                                <>
+                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                        Private Cloud and GPUs Deployment
+                                                    </h3>
+                                                    <div className="flex items-center justify-between">
+                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                            Extensive deployment experience with fast delivery and full-stack software support.
+                                                            Applied in AI training, inference, rendering, and high-performance computing.
+                                                        </p>
+                                                    </div>
+                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/private-cloud'}>
+                                                        Learn More&gt;
+                                                    </p>
+                                                </>
+                                            )}
+                                        </div>
+                                    </div>
+                                </SlideUp>
+                            </div>
 
-                             {/* Card 5 - Customer Focus */}
-                             <div
-                                 className="transform"
-                                 style={{
-                                     width: isMobile ? '100%' : (hoveredCard === 'card5' ? '40%' : '18%'),
-                                     transition: 'width 0.6s ease-in-out'
-                                 }}
-                                 onMouseEnter={() => handleCardHover('card5')}
-                                 onMouseLeave={() => handleCardLeave('card5')}
-                             >
-                                 <SlideUp>
-                                     <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
-                                         onClick={(e) => {
-                                             e.stopPropagation();
-                                             setIsExpanded5(!isExpanded5);
-                                         }}
-                                     >
-                                         <Image
-                                             src="/about/values2.png"
-                                             alt="Customer Focus"
-                                             fill
-                                             className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                         />
-                                         <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                                         <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                                             {hoveredCard !== 'card5' && (
-                                                 <>
-                                                     <h3 className="text-xl font-bold mb-3 leading-tight">
-                                                         Networking Hardware Solution
-                                                     </h3>
-                                                 </>
-                                             )}
-                                             {showCardContent === 'card5' && (
-                                                 <>
-                                                     <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                         Networking Hardware Solution
-                                                     </h3>
-                                                     <div className="flex items-center justify-between">
-                                                         <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-bottom-2">
-                                                             Provide comprehensive network hardware solutions, including Switches, NICs, Transceivers, etc
-                                                             <button
-                                                                 onClick={(e) => {
-                                                                     e.stopPropagation();
-                                                                     setIsExpanded5(!isExpanded5);
-                                                                 }}
-                                                                 style={{ verticalAlign: 'middle' }}
-                                                                 className="ml-3 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300"
-                                                             >
-                                                                 <svg
-                                                                     className={`w-4 h-4 transform transition-transform duration-300 ${isExpanded5 ? 'rotate-180' : 'rotate-0'}`}
-                                                                     fill="none"
-                                                                     stroke="currentColor"
-                                                                     viewBox="0 0 24 24"
-                                                                 >
-                                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                                 </svg>
-                                                             </button>
-                                                         </p>
-                                                     </div>
-                                                     <div className={`text-xs opacity-75 transition-all duration-300 overflow-hidden ${isExpanded5 ? 'max-h-40 opacity-75' : 'max-h-0 opacity-0'}`}>
-                                                         <p className="mb-2">
-                                                             Serving enterprise, data center, and edge computing with reliable, scalable infrastructure.
-                                                         </p>
-                                                         <p>
-                                                             Learn More&gt;
-                                                         </p>
-                                                     </div>
-                                                 </>
-                                             )}
-                                         </div>
-                                     </div>
-                                 </SlideUp>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
+                            {/* Card 5 - Customer Focus */}
+                            <div
+                                className="transform"
+                                style={{
+                                    width: isMobile ? '100%' : (hoveredCard === 'card5' ? '40%' : '18%'),
+                                    transition: 'width 0.6s ease-in-out'
+                                }}
+                                onMouseEnter={() => handleCardHover('card5')}
+                                onMouseLeave={() => handleCardLeave('card5')}
+                            >
+                                <SlideUp>
+                                    <div className="relative h-[410px] rounded-lg overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out transform hover:scale-[1.02]"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setIsExpanded5(!isExpanded5);
+                                        }}
+                                    >
+                                        <Image
+                                            src="/test/networking-hardware-solution.webp"
+                                            alt="Customer Focus"
+                                            fill
+                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                                        <div className="absolute inset-0 p-6 flex flex-col justify-start text-white">
+                                            {hoveredCard !== 'card5' && (
+                                                <>
+                                                    <h3 className="text-xl font-bold mb-3 leading-tight">
+                                                        Networking Hardware Solution
+                                                    </h3>
+                                                </>
+                                            )}
+                                            {showCardContent === 'card5' && (
+                                                <>
+                                                    <h3 className="text-xl text-white font-bold mb-3 leading-tight transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                        Networking Hardware Solution
+                                                    </h3>
+                                                    <div className="flex items-center justify-between">
+                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
+                                                            Provide comprehensive network hardware solutions, including Switches, NICs, Transceivers, etc.
+                                                            <br />
+                                                            Serving enterprise, data center, and edge computing with reliable, scalable infrastructure.
+                                                        </p>
+                                                    </div>
+                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/networking-hardware'}>
+                                                        Learn More&gt;
+                                                    </p>
+                                                </>
+                                            )}
+                                        </div>
+                                    </div>
+                                </SlideUp>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 {/* CTA Section */}
                 <div className="bg-gray-800 py-20">
@@ -873,11 +673,11 @@ export default function TestIndex() {
                             Accelerate Your AI Journey today
                         </h2>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3">
-                                Contact Us
+                            <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                                Launch Now
                             </Button>
-                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3">
-                                Get Pricing
+                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.location.href = '/contact'}>
+                                Contact Us
                             </Button>
                         </div>
                     </div>
