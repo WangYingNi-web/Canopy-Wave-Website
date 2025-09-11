@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import {
   Carousel,
   CarouselContent,
@@ -19,6 +20,10 @@ interface PartnerCarouselProps {
 }
 
 export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
+  const router = useRouter();
+  const isTestRoute = router.pathname === '/test';
+  const brandFolder = isTestRoute ? 'brand2' : 'brand';
+  
   return (
     <div className="bg-gray-50 py-4 sm:py-16">
       <div className="max-w-7xl mx-auto">
@@ -45,7 +50,7 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
               <CarouselItem key={`${logo.id}-${index}`} className="pl-12 basis-1/2 sm:basis-1/3 md:basis-1/6 flex-shrink-0">
                 <div className="flex justify-center items-center w-full h-full px-4">
                   <Image
-                    src={`/brand/${logo.id}.svg`}
+                    src={`/${brandFolder}/${logo.id}.svg`}
                     alt={`Partner ${logo.id}`}
                     width={logo.width}
                     height={logo.height}

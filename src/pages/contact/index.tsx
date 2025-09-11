@@ -40,12 +40,11 @@ export default function Contact() {
             lastName: validateField('lastName', formData.lastName),
             company: validateField('company', formData.company),
             email: validateField('email', formData.email),
-            purpose: validateField('purpose', formData.purpose),
-            expectedGPUs: validateField('expectedGPUs', formData.expectedGPUs),
-            projectStartTime: validateField('projectStartTime', formData.projectStartTime),
-            // interests: validateField('interests', formData.interests),
+            purpose: '', // 这个字段被注释掉了，不需要验证
+            expectedGPUs: '', // 这个字段被注释掉了，不需要验证
+            projectStartTime: '', // 这个字段被注释掉了，不需要验证
             interests: '',
-            message: validateField('message', formData.message),
+            message: '', // 这个字段被注释掉了，不需要验证
         };
 
         setErrors(newErrors);
@@ -61,11 +60,7 @@ export default function Contact() {
                 name: ${formData.firstName} ${formData.lastName}
                 company: ${formData.company}
                 email: ${formData.email}
-                purpose: ${formData.purpose}
-                expectedGPUs: ${formData.expectedGPUs}
                 interests: ${formData.interests.join(', ')}
-                project start time: ${formData.projectStartTime}
-                message: ${formData.message}
                 Do you agree with marketing: ${formData.marketing ? 'yes' : 'no'}
             `;
 
@@ -73,7 +68,7 @@ export default function Contact() {
                 'https://sequoia-paas.canopywave.io/api/v1/send_email',
                 {
                     subject: 'New Contact Form Submission',
-                    recipients: ['andrew.li@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
                     // recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 },
@@ -457,6 +452,9 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            
+            
+            
             <Footer />
         </main>
     );
