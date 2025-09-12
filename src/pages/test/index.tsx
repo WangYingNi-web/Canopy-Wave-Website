@@ -29,7 +29,14 @@ export default function TestIndex() {
     const [showCardContent, setShowCardContent] = useState<string | null>('card1');
     const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
     const [hoveredCard, setHoveredCard] = useState('card1');
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState(3); // 从下至上开始，初始为Chat Controls
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [autoPlayTimer, setAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
+    const [isProductAutoPlaying, setIsProductAutoPlaying] = useState(true);
+    const [productAutoPlayTimer, setProductAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
+    const [currentMapIndex, setCurrentMapIndex] = useState(0);
+    const [isMapAutoPlaying, setIsMapAutoPlaying] = useState(true);
+    const [mapAutoPlayTimer, setMapAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
     const partnerLogos = [
         { id: 1, width: 130, height: 100 },
         { id: 2, width: 80, height: 80 },
@@ -53,6 +60,12 @@ export default function TestIndex() {
     const slides = [
         {
             id: 1,
+            background: '/test/01.webp',
+            titleColor: 'text-[#80B224]',
+            bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+        },
+        {
+            id: 2,
             background: '/test/02.png',
             //   title: 'Instant GPU Cluster',
             //   subtitle: 'for Enterprise AI',
@@ -61,7 +74,7 @@ export default function TestIndex() {
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
         {
-            id: 2,
+            id: 3,
             background: '/test/03.png',
             //   title: 'On-Demand',
             //   subtitle: 'NVIDIA GB200 NVL72',
@@ -71,7 +84,7 @@ export default function TestIndex() {
             bgColor: 'bg-black'
         },
         {
-            id: 3,
+            id: 4,
             background: '/test/04.png',
             //   title: 'On-Demand',
             //   subtitle: 'NVIDIA HGX B200',
@@ -136,22 +149,115 @@ export default function TestIndex() {
         // 不设置任何隐藏定时器，内容保持显示
     };
 
+    // 地图轮播事件处理函数
+    const handleMapMouseEnter = () => {
+        setIsMapAutoPlaying(false);
+        if (mapAutoPlayTimer) {
+            clearTimeout(mapAutoPlayTimer);
+        }
+    };
+
+    const handleMapMouseLeave = () => {
+        setIsMapAutoPlaying(true);
+    };
+
+    const handleMapIndicatorClick = (index: number) => {
+        setCurrentMapIndex(index);
+        setIsMapAutoPlaying(false);
+        if (mapAutoPlayTimer) {
+            clearTimeout(mapAutoPlayTimer);
+        }
+        // 点击后3秒恢复自动播放
+        setTimeout(() => setIsMapAutoPlaying(true), 3000);
+    };
+
+    // Chat自动播放逻辑 - 根据动图时长动态切换
+    useEffect(() => {
+        if (!isAutoPlaying) return;
+
+        // 每个动图的播放时长（毫秒）
+        const chatDurations: { [key: number]: number } = {
+            1: 2000, // chat3.webp 播放6秒
+            2: 9000, // chat2.webp 播放5秒
+            3: 12000  // chat1.webp 播放7秒
+        };
+
+        const currentDuration = chatDurations[activeTab] || 6000;
+
+        const timer = setTimeout(() => {
+            setActiveTab((prev) => {
+                // 从下至上循环：3 -> 2 -> 1 -> 3
+                if (prev === 3) return 2;
+                if (prev === 2) return 1;
+                return 3;
+            });
+        }, currentDuration);
+
+        setAutoPlayTimer(timer);
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [isAutoPlaying, activeTab]);
+
+    // 产品自动播放逻辑
+    useEffect(() => {
+        if (!isProductAutoPlaying) return;
+
+        const timer = setTimeout(() => {
+            setCurrentImageIndex((prev) => {
+                // 从上至下循环：0 -> 1 -> 2 -> 3 -> 0
+                return (prev + 1) % 4;
+            });
+        }, 5000); // 每5秒切换一次
+
+        setProductAutoPlayTimer(timer);
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [isProductAutoPlaying, currentImageIndex]);
+
+    // 地图自动播放逻辑
+    useEffect(() => {
+        if (!isMapAutoPlaying) return;
+
+        const timer = setTimeout(() => {
+            setCurrentMapIndex((prev) => {
+                // 两张地图循环：0 -> 1 -> 0
+                return (prev + 1) % 2;
+            });
+        }, 5000); // 每5秒切换一次
+
+        setMapAutoPlayTimer(timer);
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [isMapAutoPlaying, currentMapIndex]);
+
     // 清理定时器的useEffect
     useEffect(() => {
         return () => {
             if (enterTimer) {
                 clearTimeout(enterTimer);
             }
+            if (autoPlayTimer) {
+                clearTimeout(autoPlayTimer);
+            }
+            if (productAutoPlayTimer) {
+                clearTimeout(productAutoPlayTimer);
+            }
+            if (mapAutoPlayTimer) {
+                clearTimeout(mapAutoPlayTimer);
+            }
         };
-    }, [enterTimer]);
+    }, [enterTimer, autoPlayTimer, productAutoPlayTimer, mapAutoPlayTimer]);
 
     return (
         <main>
             <Head>
-                <title>Canopy Wave - On-Demand NVIDIA GB200 NVL72</title>
-                <meta name="description" content="On-Demand NVIDIA GB200 NVL72 - Instantly allocated GPU resource and ready-to-go AI resource" />
-                <meta property="og:title" content="Canopy Wave - On-Demand NVIDIA GB200 NVL72" />
-                <meta property="og:description" content="On-Demand NVIDIA GB200 NVL72 - Instantly allocated GPU resource and ready-to-go AI resource" />
+                <title>Leading GPU Cloud Provider AI Infrastructure Company for Enterprise AI Solutions & Machine Learning | Canopy Wave</title>
+                <meta name="description" content="As a trusted GPU Cloud Provider and AI infrastructure company.we offer high-performance cost-effective solutions tailored to your machine learning, data science, and AI needs." />
+                <meta property="og:title" content="Leading GPU Cloud Provider AI Infrastructure Company for Enterprise AI Solutions & Machine Learning | Canopy Wave" />
+                <meta property="og:description" content="As a trusted GPU Cloud Provider and AI infrastructure company.we offer high-performance cost-effective solutions tailored to your machine learning, data science, and AI needs." />
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:image" content="https://canopywave.com/home_banner.svg" />
                 <meta property="og:image:width" content="1200" />
@@ -161,9 +267,9 @@ export default function TestIndex() {
 
             <Header />
 
-            <div className="w-full bg-[#FFFFFF]">
+            <div className="w-full bg-white">
                 {/* 轮播图Banner */}
-                <div className="w-full h-[545px] relative mt-[84px] overflow-hidden">
+                <div className="w-full h-[70vh] relative mt-[84px] overflow-hidden">
                     {slides.map((slide, index) => (
                         <div
                             key={slide.id}
@@ -178,7 +284,7 @@ export default function TestIndex() {
                             {slide.id !== 1 && (
                                 <div className="absolute inset-0 bg-black z-0" />
                             )}
-                            {slide.id === 3 ? (
+                            {slide.id === 4 ? (
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <Image
                                         src={slide.background}
@@ -198,7 +304,7 @@ export default function TestIndex() {
                                     alt={`Banner ${slide.id}`}
                                     fill
                                     className="object-cover"
-                                    style={slide.id === 2 ? {
+                                    style={slide.id === 3 ? {
                                         transform: 'scale(1.1) translateX(5%)',
                                         transformOrigin: 'center center'
                                     } : {}}
@@ -240,7 +346,7 @@ export default function TestIndex() {
                 <PartnerCarousel logos={partnerLogos} />
 
                 {/* Chat Section - 灰色背景聊天区域 */}
-                <div className="bg-gray-100 py-16">
+                <div className="py-2 pb-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left mb-8">
                             Canopy Wave Chat
@@ -266,46 +372,18 @@ export default function TestIndex() {
                             {/* 右侧标题区域 - 1/3宽度 */}
                             <div className="lg:w-1/3">
                                 <div className="space-y-4">
-                                    <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
-                                            ? 'bg-gray-50 text-gray-700 border-r-[#80B224] shadow-lg'
-                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
-                                            }`}
-                                        onClick={() => setActiveTab(1)}
-                                    >
-                                        <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Step-by-Step Collaboration</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
-                                            }`}>
-                                            <p className="text-sm text-gray-600">
-                                                Each model builds on the last to deliver sharper logic and greater precision.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
-                                            ? 'bg-gray-50 text-gray-700 border-r-[#80B224] shadow-lg'
-                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
-                                            }`}
-                                        onClick={() => setActiveTab(2)}
-                                    >
-                                        <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Parallel Intelligence</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
-                                            }`}>
-                                            <p className="text-sm text-gray-600">
-                                                Unlock simultaneous responses from different AI models-gain fresh perspectives, compare solutions, and choose the best answer.
-                                            </p>
-                                        </div>
-                                    </div>
-
+                                    {/* 从下至上排列：Chat Controls (3) */}
                                     <div
                                         className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 3
-                                            ? 'bg-gray-50 text-gray-700 border-r-[#80B224] shadow-lg'
-                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                                ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
+                                                : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onClick={() => setActiveTab(3)}
+                                        onMouseEnter={() => {
+                                            setActiveTab(3);
+                                            setIsAutoPlaying(false);
+                                        }}
+                                        onMouseLeave={() => setIsAutoPlaying(true)}
                                     >
                                         <h3 className={`text-lg font-semibold ${activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Chat Controls</h3>
@@ -317,6 +395,51 @@ export default function TestIndex() {
                                         </div>
                                     </div>
 
+                                    {/* Parallel Intelligence (2) */}
+                                    <div
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
+                                                ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
+                                                : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            }`}
+                                        onClick={() => setActiveTab(2)}
+                                        onMouseEnter={() => {
+                                            setActiveTab(2);
+                                            setIsAutoPlaying(false);
+                                        }}
+                                        onMouseLeave={() => setIsAutoPlaying(true)}
+                                    >
+                                        <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Parallel Intelligence</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                            }`}>
+                                            <p className="text-sm text-gray-600">
+                                                Unlock simultaneous responses from different AI models-gain fresh perspectives, compare solutions, and choose the best answer.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Step-by-Step Collaboration (1) */}
+                                    <div
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
+                                                ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
+                                                : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            }`}
+                                        onClick={() => setActiveTab(1)}
+                                        onMouseEnter={() => {
+                                            setActiveTab(1);
+                                            setIsAutoPlaying(false);
+                                        }}
+                                        onMouseLeave={() => setIsAutoPlaying(true)}
+                                    >
+                                        <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Step-by-Step Collaboration</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                            }`}>
+                                            <p className="text-sm text-gray-600">
+                                                Each model builds on the last to deliver sharper logic and greater precision.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                                 {/* Free to use 按钮 */}
                                 <div className="mt-10">
@@ -330,9 +453,9 @@ export default function TestIndex() {
                 </div>
 
                 {/* Features Section - 特性介绍 */}
-                <div className="bg-gray-50 py-16">
+                <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-4xl font-bold text-left mb-16">
+                        <h2 className="text-4xl font-bold text-left mb-12">
                             Instantly allocated GPU resource and<br />
                             ready-to-go AI resource
                         </h2>
@@ -388,54 +511,120 @@ export default function TestIndex() {
                 {/* GPU Products Section - NVIDIA GB200 NVL72 */}
                 <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-4xl font-bold text-left mb-8">
+                        <h2 className="text-4xl font-bold text-left">
                             On-demand High-Performance GPUs<br />
                             now available
                         </h2>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 items-center">
                             {/* 左侧产品介绍 */}
                             <div className="lg:col-span-2 lg:-mt-16">
-                                <div className="flex items-center space-x-4 mb-6">
-                                    <h3 className="text-2xl font-bold">NVIDIA GB200 NVL72</h3>
-                                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                                        $9/GPU/hr
-                                    </span>
-                                </div>
+                                {(() => {
+                                    const productInfo = [
+                                        {
+                                            name: "NVIDIA GB200 NVL72",
+                                            price: "$9/GPU/hr",
+                                            features: [
+                                                "• 18x compute trays in a rack",
+                                                "• 36x Grace CPUs, 72x Blackwell GPUs",
+                                                "• Up to 13.4 TB HBM3e | 576 TB/s",
+                                                "• 2,592 Arm® Neoverse V2 cores",
+                                                "• Up to 17 TB LPDDR5X | Up to 18.4 TB/s"
+                                            ]
+                                        },
+                                        {
+                                            name: "NVIDIA HGX B200",
+                                            price: "$4.5/GPU/hr",
+                                            features: [
+                                                "• 8x NVIDIA Blackwell SXM",
+                                                "• 1.8 TB/s NVSwitch GPU-to-GPU Bandwidth",
+                                                "• NVLink 5 Switch",
+                                                "• 14.4 TB/s Total NVLink Bandwidth",
+                                                "• 1.4 TB Total Memory"
+                                            ]
+                                        },
+                                        {
+                                            name: "NVIDIA H200",
+                                            price: "$3/GPU/hr",
+                                            features: [
+                                                "• 141 GB of HBM3e memory",
+                                                "• 4.8 TB/s memory bandwidth",
+                                                "• Up to 7 MIGs @16.5GB each",
+                                                "• 72 billion transistors",
+                                                "• 64 vCPUs per instance"
+                                            ]
+                                        },
+                                        {
+                                            name: "NVIDIA H100",
+                                            price: "$2.25/GPU/hr",
+                                            features: [
+                                                "• GPU Memory 94 GB",
+                                                "• GPU Memory Bandwidth 3.9 TB/s",
+                                                "• 7 NVDEC, 7 JPEG",
+                                                "• Up to 7 MIGs @ 12 GB each",
+                                                "• Max TDP 350-400W (configurable)"
+                                            ]
+                                        }
+                                    ];
 
-                                <ul className="text-gray-600 leading-relaxed text-l mb-12">
-                                    <li>• 18x compute trays in a rack</li>
-                                    <li>• 36x Grace CPUs, 72x Blackwell GPUs</li>
-                                    <li>• Up to 13.4 TB HBM3e | 576 TB/s</li>
-                                    <li>• 2,592 Arm® Neoverse V2 cores</li>
-                                    <li>• Up to 17 TB LPDDR5X | Up to 18.4 TB/s</li>
-                                </ul>
+                                    const currentProduct = productInfo[currentImageIndex];
 
-                                <Button className="bg-[#8CC63F] text-white px-4 py-2 rounded hover:bg-[#7AB530] transition-colors" onClick={() => window.location.href = '/gb200-nvl72'}>
-                                    Learn More
-                                </Button>
+                                    return (
+                                        <>
+                                            <div className="flex items-center space-x-4 mb-6">
+                                                <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
+                                                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                                    {currentProduct.price}
+                                                </span>
+                                            </div>
 
+                                            <ul className="text-gray-600 leading-relaxed text-l mb-12">
+                                                {currentProduct.features.map((feature, index) => (
+                                                    <li key={index}>{feature}</li>
+                                                ))}
+                                            </ul>
+
+                                            <Button className="bg-[#8CC63F] text-white px-4 py-2 rounded hover:bg-[#7AB530] transition-colors" onClick={() => window.location.href = '/pricing'}>
+                                                Learn More
+                                            </Button>
+                                        </>
+                                    );
+                                })()}
                             </div>
 
                             {/* 右侧图片展示和切换按钮 */}
-                            <div className="lg:col-span-3 relative">
-                                <div className="rounded-lg p-8 flex items-center justify-center">
+                            <div
+                                className="lg:col-span-4 relative"
+                                onMouseEnter={() => setIsProductAutoPlaying(false)}
+                                onMouseLeave={() => setIsProductAutoPlaying(true)}
+                            >
+                                <div className="p-6 flex items-center justify-center h-[450px]">
                                     <Image
-                                        src={`/test/products-${currentImageIndex + 1}.png`}
-                                        alt="NVIDIA GB200 NVL72"
-                                        width={580}
+                                        src={`/test/products-${currentImageIndex + 1}.webp`}
+                                        alt="NVIDIA GPUs"
+                                        width={600}
                                         height={400}
                                         className="object-contain"
                                     />
                                 </div>
 
                                 {/* 图片切换按钮 */}
-                                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
+                                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3">
                                     {[1, 2, 3, 4].map((index) => (
                                         <button
                                             key={index}
-                                            onClick={() => setCurrentImageIndex(index - 1)}
-                                            className={`w-12 h-12 rounded-lg transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
+                                            onClick={() => {
+                                                setCurrentImageIndex(index - 1);
+                                                setIsProductAutoPlaying(false);
+                                                // 点击后3秒恢复自动播放
+                                                setTimeout(() => setIsProductAutoPlaying(true), 3000);
+                                            }}
+                                            onMouseEnter={() => {
+                                                setCurrentImageIndex(index - 1);
+                                                setIsProductAutoPlaying(false);
+                                            }}
+                                            onMouseLeave={() => setIsProductAutoPlaying(true)}
+                                            className={`w-16 h-16 rounded-2xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
                                                 ? 'border-[#76B900] shadow-lg border-2'
                                                 : 'border-gray-300 hover:border-gray-400'
                                                 }`}
@@ -443,12 +632,12 @@ export default function TestIndex() {
                                             <Image
                                                 src={`/test/button-${index}.png`}
                                                 alt={`View ${index}`}
-                                                width={32}
-                                                height={32}
-                                                className="w-full h-full object-contain rounded"
+                                                width={48}
+                                                height={48}
+                                                className="w-full h-full object-contain rounded-lg"
                                             />
                                             {currentImageIndex !== index - 1 && (
-                                                <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded"></div>
+                                                <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded-lg"></div>
                                             )}
                                         </button>
                                     ))}
@@ -458,33 +647,8 @@ export default function TestIndex() {
                     </div>
                 </div>
 
-
-                {/* Global Network Section */}
-                <div className="bg-white py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex flex-col lg:flex-row items-center gap-12">
-                            <div className="lg:w-1/2">
-                                <h2 className="text-3xl font-bold mb-6">
-                                    Powered By Our Global Network
-                                </h2>
-                                <p className="text-gray-600 mb-8 leading-relaxed">
-                                    Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
-                                </p>
-                                <Button className="bg-[#F5F9F4] text-white hover:bg-[#6ba000] px-6 py-3">
-                                    Get started →
-                                </Button>
-                            </div>
-                            <div className="lg:w-1/2">
-                                <EuropeMap />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-
                 {/* Providing secure and efficient solutions for different use cases */}
-                <div className="bg-[#F9F9F9] py-12 sm:pt-10 pb-16">
+                <div className="py-12 sm:pt-10 pb-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <SlideUp>
                             <div className="text-left mb-12">
@@ -532,12 +696,16 @@ export default function TestIndex() {
                                                         <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
                                                             Accelerate AI training with powerful computing power and low-latency networks. Applied in NLP, computer vision, recommendations, and autonomous driving.
                                                         </p>
-
                                                     </div>
-                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/model-training'}>
+                                                </>
+                                            )}
+                                            {/* Learn More按钮 - 绝对定位到左下角 */}
+                                            {showCardContent === 'card1' && (
+                                                <div className="absolute bottom-6 left-6">
+                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/model-training'}>
                                                         Learn More&gt;
                                                     </p>
-                                                </>
+                                                </div>
                                             )}
                                         </div>
                                     </div>
@@ -589,10 +757,15 @@ export default function TestIndex() {
                                                             Scalable and secure AI inference powered by high-performance virtual machines
                                                         </p>
                                                     </div>
-                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/inference'}>
+                                                </>
+                                            )}
+                                            {/* Learn More按钮 - 绝对定位到左下角 */}
+                                            {showCardContent === 'card2' && (
+                                                <div className="absolute bottom-6 left-6">
+                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/inference'}>
                                                         Learn More&gt;
                                                     </p>
-                                                </>
+                                                </div>
                                             )}
                                         </div>
                                     </div>
@@ -643,10 +816,15 @@ export default function TestIndex() {
                                                             Applied in gaming, simulation, virtual production, and design visualization.
                                                         </p>
                                                     </div>
-                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/rendering'}>
+                                                </>
+                                            )}
+                                            {/* Learn More按钮 - 绝对定位到左下角 */}
+                                            {showCardContent === 'card3' && (
+                                                <div className="absolute bottom-6 left-6">
+                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/rendering'}>
                                                         Learn More&gt;
                                                     </p>
-                                                </>
+                                                </div>
                                             )}
                                         </div>
                                     </div>
@@ -696,10 +874,15 @@ export default function TestIndex() {
                                                             Applied in AI training, inference, rendering, and high-performance computing.
                                                         </p>
                                                     </div>
-                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/private-cloud'}>
+                                                </>
+                                            )}
+                                            {/* Learn More按钮 - 绝对定位到左下角 */}
+                                            {showCardContent === 'card4' && (
+                                                <div className="absolute bottom-6 left-6">
+                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/private-cloud'}>
                                                         Learn More&gt;
                                                     </p>
-                                                </>
+                                                </div>
                                             )}
                                         </div>
                                     </div>
@@ -750,10 +933,15 @@ export default function TestIndex() {
                                                             Serving enterprise, data center, and edge computing with reliable, scalable infrastructure.
                                                         </p>
                                                     </div>
-                                                    <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 cursor-pointer hover:text-[#white] transition-colors duration-300" onClick={() => window.location.href = '/networking-hardware'}>
+                                                </>
+                                            )}
+                                            {/* Learn More按钮 - 绝对定位到左下角 */}
+                                            {showCardContent === 'card5' && (
+                                                <div className="absolute bottom-6 left-6">
+                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/networking-hardware'}>
                                                         Learn More&gt;
                                                     </p>
-                                                </>
+                                                </div>
                                             )}
                                         </div>
                                     </div>
@@ -763,10 +951,180 @@ export default function TestIndex() {
                     </div>
                 </div>
 
+                {/* Global Network Section */}
+                <div className="bg-white py-16">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="mb-12">
+                            <h2 className="text-4xl font-bold mb-6">
+                                Powered By Our Global Network
+                            </h2>
+                            <p className="text-gray-600 mb-8 leading-relaxed max-w-4xl">
+                                Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+                            </p>
+                            <Button className="bg-[#8CC63F] text-white hover:bg-[#6ba000] px-6 py-3" onClick={() => window.location.href = '/data-center/iceland'}>
+                                Explore Our Network
+                            </Button>
+                        </div>
+                        <div className="w-full max-w-7xl relative"
+                            onMouseEnter={handleMapMouseEnter}
+                            onMouseLeave={handleMapMouseLeave}>
+                            {/* 地图轮播容器 */}
+                            <div className="relative overflow-hidden rounded-lg">
+                                <div
+                                    className="flex transition-transform duration-500 ease-in-out"
+                                    style={{ transform: `translateX(-${currentMapIndex * 100}%)` }}
+                                >
+                                    {/* 第一张地图 - Iceland */}
+                                    <div className="w-full flex-shrink-0">
+                                        <Image
+                                            src="/test/iceland.webp"
+                                            alt="Iceland Network Map"
+                                            width={800}
+                                            height={600}
+                                            className="w-full h-auto"
+                                            priority
+                                        />
+                                    </div>
+                                    {/* 第二张地图 - North America */}
+                                    <div className="w-full flex-shrink-0">
+                                        <Image
+                                            src="/test/North-America.webp"
+                                            alt="North America Network Map"
+                                            width={800}
+                                            height={600}
+                                            className="w-full h-auto"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 轮播指示器 */}
+                            <div className="flex justify-center mt-6 space-x-2">
+                                {[0, 1].map((index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleMapIndicatorClick(index)}
+                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${currentMapIndex === index
+                                            ? 'bg-[#8CC63F] scale-110'
+                                            : 'bg-gray-300 hover:bg-gray-400'
+                                            }`}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Explore Canopy Wave Section */}
+                <section className="py-16 pb-24">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-left mb-10">
+                            <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Canopy Wave</h2>
+                        </div>
+
+                        {/* First Row - 2/3 and 1/3 layout */}
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6 min-h-[320px]">
+                            {/* Events Card - 2/3 width */}
+                            <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Events.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Events</span>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
+                                <p className="text-sm text-gray-600 mb-12">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
+                                <button
+                                    onClick={() => window.location.href = '/events/ai-agent-summit-keynote'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Blog Card - 1/3 width */}
+                            <div className="lg:col-span-1 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Blog.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Blog</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Joint Blog - Accelerate Enterprise AI</h3>
+                                <p className="text-sm text-gray-600 mb-12">by James Liao, CTO of Canopy Wave, and Severi Tikkas, CTO of ConfidentialMind</p>
+                                <button
+                                    onClick={() => window.location.href = '/blog/joint-blog-accelerate-enterprise-ai'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Second Row - Three equal cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[320px]">
+                            {/* Case Studies Card */}
+                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/case-studies.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Case Studies</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
+                                <p className="text-sm text-gray-600 mb-12">Foundry BioSciences Case Study</p>
+                                <button
+                                    onClick={() => window.location.href = '/resources/case-study'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Tutorials Card */}
+                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Tutorials.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Tutorials</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
+                                <p className="text-sm text-gray-600 mb-12">Step-by-step guide for local deployment</p>
+                                <button
+                                    onClick={() => window.location.href = '/resources/tutorials/how-to-run-the-gpt-oss-locally-on-a-canopy-wave-vm'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Docs Card */}
+                            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative overflow-hidden" style={{ backgroundImage: 'url(/test/Docs.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="mb-4">
+                                    <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Docs</span>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
+                                <p className="text-sm text-gray-600 mb-12">This portfolio outlines modular hardware components and recommended configurations</p>
+                                <button
+                                    onClick={() => window.location.href = '/resources/docs/products/canopy-wave-gpu'}
+                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                >
+                                    Learn More
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* CTA Section */}
-                <div className="bg-gray-800 py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="text-3xl font-bold text-white mb-8">
+                <div className="py-32 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className="absolute inset-0"></div>
+                    <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+                        <h2 className="text-4xl font-bold text-white mb-10">
                             Accelerate Your AI Journey today
                         </h2>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -33,6 +33,30 @@ const nextConfig = {
             permanent: true,
             statusCode: 301
         },
+        {
+            source: '/blog/gpu%3A-the-core-engine-of-a-new-era-in-computing',
+            destination: '/blog/gpu-the-core-engine-of-a-new-era-in-computing',
+            permanent: true,
+            statusCode: 301
+        },
+        {
+            source: '/blog/ai%3A-revolutionizing-animal-health-monitoring',
+            destination: '/blog/ai-revolutionizing-animal-health-monitoring',
+            permanent: true,
+            statusCode: 301
+        },
+        {
+            source: '/blog/gpu\\:-the-core-engine-of-a-new-era-in-computing',
+            destination: '/blog/gpu-the-core-engine-of-a-new-era-in-computing',
+            permanent: true,
+            statusCode: 301
+        },
+        {
+            source: '/blog/ai\\:-revolutionizing-animal-health-monitoring',
+            destination: '/blog/ai-revolutionizing-animal-health-monitoring',
+            permanent: true,
+            statusCode: 301
+        },
     ]
 }
 }

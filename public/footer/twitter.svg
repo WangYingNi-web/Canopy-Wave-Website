@@ -1,10 +1,33 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="icons8-x 1" clip-path="url(#clip0_814_9386)">
-<path id="Vector" d="M43.9501 43.3337L29.2918 21.9637L29.3168 21.9837L42.5335 6.66699H38.1168L27.3501 19.1337L18.8001 6.66699H7.2168L20.9018 26.6187L20.9001 26.617L6.4668 43.3337H10.8835L22.8535 29.4637L32.3668 43.3337H43.9501ZM17.0501 10.0003L37.6168 40.0003H34.1168L13.5335 10.0003H17.0501Z" fill="#666666"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Link">
+<g id="Twitter" clip-path="url(#clip0_2829_19459)">
+<g id="twitter.svg fill" clip-path="url(#clip1_2829_19459)">
+<g id="twitter.svg" clip-path="url(#clip2_2829_19459)">
+<g id="Clip path group">
+<mask id="mask0_2829_19459" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+<g id="a">
+<path id="Vector" d="M24 0.25H0V24.25H24V0.25Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_2829_19459)">
+<g id="Group">
+<path id="Vector_2" d="M21.0975 21.0492L14.0615 10.7916L14.0735 10.8012L20.4175 3.44922H18.2975L13.1295 9.43324L9.02545 3.44922H3.46547L10.0343 13.026L10.0335 13.0252L3.10547 21.0492H5.22548L10.9711 14.3916L15.5375 21.0492H21.0975ZM8.18545 5.04921L18.0575 19.4492H16.3775L6.49748 5.04921H8.18545Z" fill="#80B224"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
 </g>
 <defs>
-<clipPath id="clip0_814_9386">
-<rect width="50" height="50" fill="white"/>
+<clipPath id="clip0_2829_19459">
+<rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+</clipPath>
+<clipPath id="clip1_2829_19459">
+<rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+</clipPath>
+<clipPath id="clip2_2829_19459">
+<rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
 </clipPath>
 </defs>
 </svg>

@@ -1,10 +1,33 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="icons8-linkedin 1" clip-path="url(#clip0_814_9383)">
-<path id="Vector" d="M41 4H9C6.24 4 4 6.24 4 9V41C4 43.76 6.24 46 9 46H41C43.76 46 46 43.76 46 41V9C46 6.24 43.76 4 41 4ZM17 20V39H11V20H17ZM11 14.47C11 13.07 12.2 12 14 12C15.8 12 16.93 13.07 17 14.47C17 15.87 15.88 17 14 17C12.2 17 11 15.87 11 14.47ZM39 39H33C33 39 33 29.74 33 29C33 27 32 25 29.5 24.96H29.42C27 24.96 26 27.02 26 29C26 29.91 26 39 26 39H20V20H26V22.56C26 22.56 27.93 20 31.81 20C35.78 20 39 22.73 39 28.26V39Z" fill="#666666"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Link">
+<g id="LinkedIn" clip-path="url(#clip0_2829_19450)">
+<g id="linkedin.svg fill" clip-path="url(#clip1_2829_19450)">
+<g id="linkedin.svg" clip-path="url(#clip2_2829_19450)">
+<g id="Clip path group">
+<mask id="mask0_2829_19450" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+<g id="a">
+<path id="Vector" d="M24 0.25H0V24.25H24V0.25Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_2829_19450)">
+<g id="Group">
+<path id="Vector_2" d="M19.2381 2.75H4.7619C3.51333 2.75 2.5 3.76333 2.5 5.0119V19.4881C2.5 20.7367 3.51333 21.75 4.7619 21.75H19.2381C20.4867 21.75 21.5 20.7367 21.5 19.4881V5.0119C21.5 3.76333 20.4867 2.75 19.2381 2.75ZM8.38095 9.9881V18.5833H5.66667V9.9881H8.38095ZM5.66667 7.48643C5.66667 6.8531 6.20952 6.36905 7.02381 6.36905C7.8381 6.36905 8.34929 6.8531 8.38095 7.48643C8.38095 8.11976 7.87429 8.63095 7.02381 8.63095C6.20952 8.63095 5.66667 8.11976 5.66667 7.48643ZM18.3333 18.5833H15.619C15.619 18.5833 15.619 14.3943 15.619 14.0595C15.619 13.1548 15.1667 12.25 14.0357 12.2319H13.9995C12.9048 12.2319 12.4524 13.1638 12.4524 14.0595C12.4524 14.4712 12.4524 18.5833 12.4524 18.5833H9.7381V9.9881H12.4524V11.1462C12.4524 11.1462 13.3255 9.9881 15.0807 9.9881C16.8767 9.9881 18.3333 11.2231 18.3333 13.7248V18.5833Z" fill="#80B224"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
 </g>
 <defs>
-<clipPath id="clip0_814_9383">
-<rect width="50" height="50" fill="white"/>
+<clipPath id="clip0_2829_19450">
+<rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+</clipPath>
+<clipPath id="clip1_2829_19450">
+<rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+</clipPath>
+<clipPath id="clip2_2829_19450">
+<rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
 </clipPath>
 </defs>
 </svg>

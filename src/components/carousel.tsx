@@ -25,7 +25,7 @@ export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
   const brandFolder = isTestRoute ? 'brand2' : 'brand';
   
   return (
-    <div className="bg-gray-50 py-4 sm:py-16">
+    <div className="bg-white py-4 sm:py-16">
       <div className="max-w-7xl mx-auto">
         <Carousel
           opts={{

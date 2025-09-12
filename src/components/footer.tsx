@@ -14,7 +14,28 @@ export default function Footer() {
     const [messageType, setMessageType] = useState<'success' | 'error' | ''>('')
     
     const handleSubscribe = async () => {
-        if (!email.trim()) return
+        // 验证是否填写内容
+        if (!email.trim()) {
+            setMessage('This field is required')
+            setMessageType('error')
+            setTimeout(() => {
+                setMessage('')
+                setMessageType('')
+            }, 3000)
+            return
+        }
+        
+        // 验证邮箱格式
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(email.trim())) {
+            setMessage('Email format error')
+            setMessageType('error')
+            setTimeout(() => {
+                setMessage('')
+                setMessageType('')
+            }, 3000)
+            return
+        }
         
         setIsSubmitting(true)
         try {
@@ -27,17 +48,13 @@ export default function Footer() {
                 },
                 body: JSON.stringify({
                     subject: 'New Newsletter Subscription',
-                    recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
-                    // recipients: ['wangyingni@canopywave.com'],
+                    // recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 })
             })
             console.log('Email sent:', email);
             console.log(emailBody,'12312');
-            
-          
-            
-            
             
             if (response.ok) {
                 setMessage('Successfully subscribed!')
@@ -88,26 +105,26 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row">
                     <div className="w-full lg:w-3/4 lg:flex lg:justify-start">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-start gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-8 lg:gap-x-16 lg:gap-y-0">
-                            <div className="space-y-8 min-w-[140px]">
+                            <div className="space-y-8 min-w-[120px]">
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm">Products</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/compute-services" className="text-gray-500 hover:text-gray-700">Compute Services</IwsLink></li>
-                                        <li><IwsLink href="/storage-services" className="text-gray-500 hover:text-gray-700">Storage Services</IwsLink></li>
-                                        <li><IwsLink href="/networking-services" className="text-gray-500 hover:text-gray-700">Networking Services</IwsLink></li>
-                                        <li><IwsLink href="/platform" className="text-gray-500 hover:text-gray-700">Platform</IwsLink></li>
+                                        <li><IwsLink href="/compute-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Compute Services</IwsLink></li>
+                                        <li><IwsLink href="/storage-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Storage Services</IwsLink></li>
+                                        <li><IwsLink href="/networking-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Networking Services</IwsLink></li>
+                                        <li><IwsLink href="/platform" className="text-gray-500 hover:text-[#36496E] hover:underline">Platform</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="space-y-8 max-w-[140px]">
+                            <div className="space-y-8 max-w-[130px]">
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm">Solutions</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/model-training" className="text-gray-500 hover:text-gray-700">AI Model Training</IwsLink></li>
-                                        <li><IwsLink href="/inference" className="text-gray-500 hover:text-gray-700">Inference</IwsLink></li>
-                                        <li><IwsLink href="/rendering" className="text-gray-500 hover:text-gray-700">Rendering</IwsLink></li>
-                                        <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-gray-700">Private Cloud and GPUs Deployment</IwsLink></li>
-                                        <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-gray-700">Networking Hardware Solution</IwsLink></li>
+                                        <li><IwsLink href="/model-training" className="text-gray-500 hover:text-[#36496E] hover:underline">AI Model Training</IwsLink></li>
+                                        <li><IwsLink href="/inference" className="text-gray-500 hover:text-[#36496E] hover:underline">Inference</IwsLink></li>
+                                        <li><IwsLink href="/rendering" className="text-gray-500 hover:text-[#36496E] hover:underline">Rendering</IwsLink></li>
+                                        <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-[#36496E] hover:underline">Private Cloud and GPUs Deployment</IwsLink></li>
+                                        <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-[#36496E] hover:underline">Networking Hardware Solution</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -115,31 +132,31 @@ export default function Footer() {
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm">Pricing</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/pricing#GB200" className="text-gray-500 hover:text-gray-700">NVIDIA GB200 NVL72</IwsLink></li>
-                                        <li><IwsLink href="/pricing#B200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX B200</IwsLink></li>
-                                        <li><IwsLink href="/pricing#H100" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H100</IwsLink></li>
-                                        <li><IwsLink href="/pricing#H200" className="text-gray-500 hover:text-gray-700">NVIDIA HGX H200</IwsLink></li>
-                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Network Shared Storage</IwsLink></li>
-                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Object Storage</IwsLink></li>
-                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-gray-700">Additional Public IP Address</IwsLink></li>
+                                        <li><IwsLink href="/pricing#GB200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA GB200 NVL72</IwsLink></li>
+                                        <li><IwsLink href="/pricing#B200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX B200</IwsLink></li>
+                                        <li><IwsLink href="/pricing#H100" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX H100</IwsLink></li>
+                                        <li><IwsLink href="/pricing#H200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX H200</IwsLink></li>
+                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-[#36496E] hover:underline">Network Shared Storage</IwsLink></li>
+                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-[#36496E] hover:underline">Object Storage</IwsLink></li>
+                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-[#36496E] hover:underline">Additional Public IP Address</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="space-y-8 min-w-[140px]">
+                            <div className="space-y-8 min-w-[130px]">
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm">Data Center</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/data-center/iceland" className="text-gray-500 hover:text-gray-700">Our Data Center</IwsLink></li>
-                                        <li><IwsLink href="/data-center/iceland#future-locations" className="text-gray-500 hover:text-gray-700">Future locations</IwsLink></li>
+                                        <li><IwsLink href="/data-center/iceland" className="text-gray-500 hover:text-[#36496E] hover:underline">Our Data Center</IwsLink></li>
+                                        <li><IwsLink href="/data-center/iceland#future-locations" className="text-gray-500 hover:text-[#36496E] hover:underline">Future locations</IwsLink></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h3 className="font-semibold mb-2 text-sm">Resources</h3>
                                     <ul className="space-y-2 text-xs">
                                         {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li> */}
-                                        <li><IwsLink href="/resources/tutorials" className="text-gray-500 hover:text-gray-700">Tutorials</IwsLink></li>
-                                        <li><IwsLink href="/resources/case-study" className="text-gray-500 hover:text-gray-700">Case Studies</IwsLink></li>
-                                        <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-gray-500 hover:text-gray-700">Docs</IwsLink></li>
+                                        <li><IwsLink href="/resources/tutorials" className="text-gray-500 hover:text-[#36496E] hover:underline">Tutorials</IwsLink></li>
+                                        <li><IwsLink href="/resources/case-study" className="text-gray-500 hover:text-[#36496E] hover:underline">Case Studies</IwsLink></li>
+                                        <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-gray-500 hover:text-[#36496E] hover:underline">Docs</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -147,15 +164,15 @@ export default function Footer() {
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm">About</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/about" className="text-gray-500 hover:text-gray-700">About Us</IwsLink></li>
-                                        <li><IwsLink href="/about/careers" className="text-gray-500 hover:text-gray-700">Careers</IwsLink></li>
-                                        <li><IwsLink href="/about/newsroom" className="text-gray-500 hover:text-gray-700">Newsroom</IwsLink></li>
+                                        <li><IwsLink href="/about" className="text-gray-500 hover:text-[#36496E] hover:underline">About Us</IwsLink></li>
+                                        <li><IwsLink href="/about/careers" className="text-gray-500 hover:text-[#36496E] hover:underline">Careers</IwsLink></li>
+                                        <li><IwsLink href="/about/newsroom" className="text-gray-500 hover:text-[#36496E] hover:underline">Newsroom</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/4 flex flex-col space-y-4 mb-8 lg:mb-0 mt-0 pl-20">
+                    <div className="w-full lg:w-1/4 flex flex-col mb-8 lg:mb-4 pl-10">
                         <div className="flex items-center">
                             <IwsLink href="/" className="flex items-center">
                                 <Image
@@ -170,22 +187,26 @@ export default function Footer() {
                         </div>
                         
                         {/* Subscribe Section */}
-                        <div className="mt-6">
-                            <h3 className="text-sm font-semibold text-gray-700 mb-4">Subscribe for updates</h3>
-                            <div className="flex items-center space-x-2">
+                        <div className="mt-4">
+                            <h3 className="text-sm font-semibold text-gray-700 mb-2">Subscribe for updates</h3>
+                            <div className="flex items-center">
                                 <input
                                     type="email"
                                     placeholder="Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="flex-1 px-3 py-1 bg-gray-100 border border-gray-200 rounded-md text-sm text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#80B224] focus:border-transparent"
+                                    className="h-[34px] flex-1 px-3 py-1 bg-gray-100 border border-gray-200 text-sm text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-[#80B224] focus:border-transparent"
                                 />
                                 <button 
                                     onClick={handleSubscribe}
-                                    disabled={isSubmitting || !email.trim()}
-                                    className="px-3 py-1 bg-[#80B224] text-white text-xs font-medium rounded-md hover:bg-[#6a9420] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    disabled={isSubmitting}
+                                    className={`h-[34px] px-3 py-2 text-white text-xs font-medium transition-colors duration-200 ${
+                                        isSubmitting 
+                                            ? 'bg-[#5A960F]' 
+                                            : 'bg-[#80B224] hover:bg-[#C3E691]'
+                                    }`}
                                 >
-                                    {isSubmitting ? 'Submitting...' : 'Subscribe'}
+                                    {isSubmitting ? 'Subscribe...' : 'Subscribe'}
                                 </button>
                             </div>
                             {message && (
@@ -199,7 +220,7 @@ export default function Footer() {
                             )}
                         </div>
                         
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-4 mt-6">
                             {/* <button
                                 onClick={handleLinkedInShare}
                                 className="hover:opacity-80"
