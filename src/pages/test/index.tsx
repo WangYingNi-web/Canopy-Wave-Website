@@ -61,6 +61,7 @@ export default function TestIndex() {
   ];
     const [autoPlay, setAutoPlay] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
     const slides = [
         {
             id: 1,
@@ -69,8 +70,14 @@ export default function TestIndex() {
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
         {
+            id: 5,
+            background: '/test/05.webp',
+            titleColor: 'text-[#80B224]',
+            bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+        },
+        {
             id: 2,
-            background: '/test/02.png',
+            background: '/test/02.webp',
             //   title: 'Instant GPU Cluster',
             //   subtitle: 'for Enterprise AI',
             // highlight: 'Enterprise AI',
@@ -79,7 +86,7 @@ export default function TestIndex() {
         },
         {
             id: 3,
-            background: '/test/03.png',
+            background: '/test/03.webp',
             //   title: 'On-Demand',
             //   subtitle: 'NVIDIA GB200 NVL72',
             //   highlight: 'Aiming to Next-Generation AI and Computing Technologies',
@@ -89,7 +96,7 @@ export default function TestIndex() {
         },
         {
             id: 4,
-            background: '/test/04.png',
+            background: '/test/04.webp',
             //   title: 'On-Demand',
             //   subtitle: 'NVIDIA HGX B200',
             //   highlight: 'The Foundation of Your AI Workloads and Computing Technologies',
@@ -110,13 +117,21 @@ export default function TestIndex() {
 
     // 手动切换处理函数
     const handleManualSlideChange = (index: number) => {
+        if (isTransitioning || index === currentSlide) return; // 防止重复点击和过渡期间点击
+        
+        setIsTransitioning(true);
         setCurrentSlide(index);
         setAutoPlay(false); // 暂停自动播放
+
+        // 等待过渡完成后重置状态
+        setTimeout(() => {
+            setIsTransitioning(false);
+        }, 1000); // 与CSS transition时间一致
 
         // 3秒后恢复自动播放
         setTimeout(() => {
             setAutoPlay(true);
-        }, 1000);
+        }, 2000);
     };
     // 处理悬停进入的函数
     const handleCardHover = (cardId: string) => {
@@ -273,61 +288,65 @@ export default function TestIndex() {
 
             <div className="w-full bg-white">
                 {/* 轮播图Banner */}
-                <div className="w-full h-[70vh] relative mt-[84px] overflow-hidden">
-                    {slides.map((slide, index) => (
-                        <div
-                            key={slide.id}
-                            className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${index === currentSlide ? 'translate-x-0' :
-                                index < currentSlide ? '-translate-x-full' : 'translate-x-full'
-                                }`}
-                        >
-                            {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
-
-
-                            {/* 第一张轮播图使用Spline组件 */}
-                            {slide.id !== 1 && (
-                                <div className="absolute inset-0 bg-black z-0" />
-                            )}
-                            {slide.id === 4 ? (
-                                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-full h-[70vh] relative mt-[84px] overflow-hidden will-change-transform">
+                    {slides.map((slide, index) => {
+                        // 只渲染当前图片、前一张和后一张，提高性能
+                        const shouldRender = Math.abs(index - currentSlide) <= 1 || 
+                                            (currentSlide === 0 && index === slides.length - 1) ||
+                                            (currentSlide === slides.length - 1 && index === 0);
+                        
+                        if (!shouldRender) return null;
+                        
+                        return (
+                            <div
+                                 key={slide.id}
+                                 className={`absolute inset-0 will-change-transform backface-hidden`}
+                                 style={{
+                                     transform: index === currentSlide 
+                                         ? 'translate3d(0, 0, 0)' 
+                                         : index < currentSlide 
+                                             ? 'translate3d(-100%, 0, 0)' 
+                                             : 'translate3d(100%, 0, 0)',
+                                     transition: 'transform 1000ms ease-in-out',
+                                     backfaceVisibility: 'hidden'
+                                 }}
+                            >
+                                {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
+                                {slide.id !== 1 && (
+                                    <div className="absolute inset-0 bg-black z-0" />
+                                )}
+                                {slide.id === 4 ? (
+                                    <div className="absolute inset-0 flex items-center justify-center h-[72vh]">
+                                        <Image
+                                            src={slide.background}
+                                            alt={`Banner ${slide.id}`}
+                                            width={860}
+                                            height={560}
+                                            className="object-cover"
+                                            style={{
+                                                width: 'auto'
+                                            }}  
+                                            priority={index === currentSlide}
+                                            loading={index === currentSlide ? 'eager' : 'lazy'}
+                                        />
+                                    </div>
+                                ) : (
                                     <Image
                                         src={slide.background}
                                         alt={`Banner ${slide.id}`}
-                                        width={850}
-                                        height={550}
+                                        fill
                                         className="object-cover"
-                                        style={{
-                                            width: 'auto'
-                                        }}
-                                        priority={index === 0}
+                                        style={slide.id === 3 ? {
+                                            transform: 'scale(1.1) translateX(5%)',
+                                            transformOrigin: 'center center'
+                                        } : {}}
+                                        priority={index === currentSlide}
+                                        loading={index === currentSlide ? 'eager' : 'lazy'}
                                     />
-                                </div>
-                            ) : (
-                                <Image
-                                    src={slide.background}
-                                    alt={`Banner ${slide.id}`}
-                                    fill
-                                    className="object-cover"
-                                    style={slide.id === 3 ? {
-                                        transform: 'scale(1.1) translateX(5%)',
-                                        transformOrigin: 'center center'
-                                    } : {}}
-                                    priority={index === 0}
-                                />
-                            )
-                            }
-                            {/* 黑色遮罩层 - 仅对第二张图片 */}
-                            {/* {slide.id !== 1 && (
-                                <div className="absolute inset-0 bg-black bg-opacity-40 z-5" />
-                            )} */}
-
-                            <div className="absolute inset-0 z-10">
-                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
-
-                                </div>
+                                )}
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
 
                     {/* 轮播指示器 */}
                     <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
@@ -336,10 +355,14 @@ export default function TestIndex() {
                                 <button
                                     key={index}
                                     onClick={() => handleManualSlideChange(index)}
-                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                                        ? 'bg-[#80B224] scale-125'
-                                        : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-                                        }`}
+                                    disabled={isTransitioning}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 transform will-change-transform ${
+                                        index === currentSlide
+                                            ? 'bg-[#80B224] scale-125'
+                                            : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                                    } ${
+                                        isTransitioning ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'
+                                    }`}
                                 />
                             ))}
                         </div>
