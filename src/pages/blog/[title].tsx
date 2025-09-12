@@ -1051,10 +1051,10 @@ export default function BlogDetail() {
               title: 'What\'s Next for AI in Pet Care?',
               content: [
                 'AI\'s potential in pet care is just getting started. Here\'s what the future might hold:',
-                'l Smarter Devices: Think gadgets that monitor complex health markers like blood sugar or stress levels.',
-                'l Emotion Detection: AI could analyze facial expressions or movements to better understand your pet\'s mood.',
-                'l Vet Integration: AI platforms might sync directly with vet systems for seamless health management.',
-                'l More Affordable Options: As tech becomes mainstream, AI devices could get cheaper, making them accessible to more pet owners.'
+                'Smarter Devices: Think gadgets that monitor complex health markers like blood sugar or stress levels.',
+                'Emotion Detection: AI could analyze facial expressions or movements to better understand your pet\'s mood.',
+                'Vet Integration: AI platforms might sync directly with vet systems for seamless health management.',
+                'More Affordable Options: As tech becomes mainstream, AI devices could get cheaper, making them accessible to more pet owners.'
               ]
             },
             {
@@ -1091,9 +1091,12 @@ export default function BlogDetail() {
                 '• Seamless Integration into Operations',
                 'Deploying ML models in production has historically been slow and complex. Accelerated ML streamlines the pipeline, making it easier to embed AI models into core business systems. In healthcare, for instance, accelerated ML enables clinicians to analyze medical images in real time, supporting faster and more accurate diagnoses. In manufacturing, predictive maintenance models can be integrated directly into factory systems, preventing costly downtime and optimizing production efficiency.',
                 '• Accessible GPU Acceleration Through Modern Platforms',
-                'What once required deep programming expertise is now democratized through modern APIs, cloud platforms, and on-premises solutions. This accessibility lowers barriers for businesses of all sizes. Even mid-sized enterprises can now deploy AI-driven solutions without massive upfront investments, enabling them to remain agile and competitive.'
-              ]
+                'What once required deep programming expertise is now democratized through modern APIs, cloud platforms, and on-premises solutions. This accessibility lowers barriers for businesses of all sizes. Even mid-sized enterprises can now deploy AI-driven solutions without massive upfront investments, enabling them to remain agile and competitive.',
+                <img key="industry-illustration" src="/blog/industry-illustration.webp" alt="Industry Illustration" className="w-full h-auto my-8 rounded-lg" />
+              ],
+
             },
+
             {
               title: 'Industry Applications in Action',
               content: [
@@ -1170,25 +1173,25 @@ export default function BlogDetail() {
   const getBlogImage = () => {
     return blogPost.title === "Accelerated AI for Business"
       ? "/blog/ai-business.png"
-      : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72" 
-      ? "/blog/blog2.webp" 
-      : blogPost.title === "AI Generates Personalized Content"
-      ? "/blog/ai-content-generation.webp"
-      : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
-      ? "/blog/dedicated-endpoints.webp"
-      : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
-      ? "/blog/gpu-computing.webp"
-      : blogPost.title === "AI-Powered E-commerce"
-      ? "/blog/ai-shopping.webp"
-      : blogPost.title === "AI's Role in Autonomous Driving"
-      ? "/blog/ai-car.webp"
-      : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
-      ? "/blog/gpu-cluster-cost.webp"
-      : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
-      ? "/blog/workflows2.webp"
-      : blogPost.title === "Humanity's Next Partner: The AI Agent"
-      ? "/blog/ai-agent.png"
-      : "/blog1.webp"
+      : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
+        ? "/blog/blog2.webp"
+        : blogPost.title === "AI Generates Personalized Content"
+          ? "/blog/ai-content-generation.webp"
+          : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
+            ? "/blog/dedicated-endpoints.webp"
+            : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
+              ? "/blog/gpu-computing.webp"
+              : blogPost.title === "AI-Powered E-commerce"
+                ? "/blog/ai-shopping.webp"
+                : blogPost.title === "AI's Role in Autonomous Driving"
+                  ? "/blog/ai-car.webp"
+                  : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
+                    ? "/blog/gpu-cluster-cost.webp"
+                    : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
+                      ? "/blog/workflows2.webp"
+                      : blogPost.title === "Humanity's Next Partner: The AI Agent"
+                        ? "/blog/ai-agent.png"
+                        : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件

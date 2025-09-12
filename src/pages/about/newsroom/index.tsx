@@ -59,21 +59,21 @@ export default function Newsroom() {
             id: 12,
             title: "Humanity's Next Partner: The AI Agent",
             description: "A New Era of Human-Machine Symbiosis: The Characteristics, Challenges, and World-Transforming Potential of AI Agents",
-            date: "September 11, 2025",
+            date: "September 12, 2025",
             image: "/blog/ai-agent.webp"
         },
         {
             id: 11,
             title: "Accelerated AI for Business",
             description: "Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises",
-            date: "September 11, 2025",
+            date: "September 12, 2025",
             image: "/blog/ai-business.webp"
         },
         {
             id: 10,
             title: "Smarter Pet Care with AI",
             description: "AI is revolutionizing pet care with health monitoring, personalized nutrition, behavior analysis, and more.",
-            date: "September 11, 2025",
+            date: "September 12, 2025",
             image: "/blog/ai-pet.webp"
         },
         {
