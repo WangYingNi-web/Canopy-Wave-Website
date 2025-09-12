@@ -71,7 +71,7 @@ export default function TestIndex() {
         },
         {
             id: 5,
-            background: '/test/05.webp',
+            background: '/test/05_compressed.webp',
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
