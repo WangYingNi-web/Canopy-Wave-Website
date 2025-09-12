@@ -71,7 +71,7 @@ export default function TestIndex() {
         },
         {
             id: 5,
-            background: '/test/05_compressed.webp',
+            background: '/test/05.webp',
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
@@ -426,7 +426,7 @@ export default function TestIndex() {
                                                 className="w-full h-auto rounded-lg"
                                             />
                                         </div>
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
 
