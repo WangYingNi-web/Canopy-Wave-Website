@@ -414,7 +414,7 @@ export default function TestIndex() {
                         </h2>
                         <div className="flex flex-col lg:flex-row gap-12">
                             {/* 左侧动图区域 - 2/3宽度 */}
-                            <div className="lg:w-2/3">
+                            <div className="lg:w-2/3 max-h-[490px] overflow-hidden" >
                                 <div className="bg-white rounded-lg shadow-lg p-6">
                                     <div className="space-y-4">
                                         <div className="mb-4">
@@ -431,7 +431,7 @@ export default function TestIndex() {
                             </div>
 
                             {/* 右侧标题区域 - 1/3宽度 */}
-                            <div className="lg:w-1/3">
+                            <div className="lg:w-1/3 relative">
                                 <div className="space-y-4">
                                     {/* Step-by-Step Collaboration (1) */}
                                     <div
@@ -440,7 +440,7 @@ export default function TestIndex() {
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onClick={() => setActiveTab(1)}
+                                        onMouseEnter={() => setActiveTab(1)}
                                     >
                                         <h3 className={`text-lg font-semibold ${
                                             activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
@@ -460,7 +460,7 @@ export default function TestIndex() {
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onClick={() => setActiveTab(2)}
+                                        onMouseEnter={() => setActiveTab(2)}
                                     >
                                         <h3 className={`text-lg font-semibold ${
                                             activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
@@ -481,7 +481,7 @@ export default function TestIndex() {
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onClick={() => setActiveTab(3)}
+                                        onMouseEnter={() => setActiveTab(3)}
                                     >
                                         <h3 className={`text-lg font-semibold ${
                                             activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
@@ -495,9 +495,9 @@ export default function TestIndex() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Free to use 按钮 */}
-                                <div className="mt-10">
-                                    <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = 'https://chat.canopywave.io/c/new'}>
+                                {/* Free to use 按钮 - 使用绝对定位固定在右侧区域底部 */}
+                                <div className="absolute bottom-0 left-0 w-full">
+                                    <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                         Free to use
                                     </button>
                                 </div>
@@ -1188,7 +1188,7 @@ export default function TestIndex() {
                             <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                 Launch Now
                             </Button>
-                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.location.href = 'https://chat.canopywave.io/c/new'}>
+                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                 Chat Now
                             </Button>
                         </div>
