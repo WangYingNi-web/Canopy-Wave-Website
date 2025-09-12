@@ -22,7 +22,7 @@ interface PartnerCarouselProps {
 export default function PartnerCarousel({ logos }: PartnerCarouselProps) {
   const router = useRouter();
   const isTestRoute = router.pathname === '/test';
-  const brandFolder = isTestRoute ? 'brand2' : 'brand';
+  const brandFolder = isTestRoute ? 'brand' : 'brand';
   
   return (
     <div className="bg-white py-4 sm:py-16">

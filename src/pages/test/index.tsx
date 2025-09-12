@@ -29,7 +29,7 @@ export default function TestIndex() {
     const [showCardContent, setShowCardContent] = useState<string | null>('card1');
     const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
     const [hoveredCard, setHoveredCard] = useState('card1');
-    const [activeTab, setActiveTab] = useState(3); // 从下至上开始，初始为Chat Controls
+    const [activeTab, setActiveTab] = useState(1); // 从上至下开始，初始为Step-by-Step Collaboration
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [autoPlayTimer, setAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
     const [isProductAutoPlaying, setIsProductAutoPlaying] = useState(true);
@@ -37,24 +37,28 @@ export default function TestIndex() {
     const [currentMapIndex, setCurrentMapIndex] = useState(0);
     const [isMapAutoPlaying, setIsMapAutoPlaying] = useState(true);
     const [mapAutoPlayTimer, setMapAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
+    const { ref: chatRef, inView: chatInView } = useInView({
+        threshold: 0.3,
+        triggerOnce: false
+    });
     const partnerLogos = [
-        { id: 1, width: 130, height: 100 },
-        { id: 2, width: 80, height: 80 },
-        { id: 3, width: 80, height: 70 },
-        { id: 4, width: 100, height: 80 },
-        { id: 5, width: 120, height: 80 },
-        { id: 6, width: 120, height: 80 },
-        { id: 7, width: 120, height: 80 },
-        { id: 8, width: 90, height: 70 },
-        { id: 9, width: 120, height: 80 },
-        // { id: 10, width: 85, height: 70 },
-        { id: 11, width: 90, height: 70 },
-        { id: 12, width: 100, height: 80 },
-        { id: 13, width: 90, height: 70 },
-        // { id: 14, width: 80, height: 70 },
-        // { id: 15, width: 80, height: 70 },
-        // { id: 16, width: 80, height: 70 },
-    ];
+    { id: 1, width: 130, height: 100 },
+    { id: 2, width: 80, height: 80 },
+    { id: 3, width: 80, height: 70 },
+    { id: 4, width: 100, height: 80 },
+    { id: 5, width: 120, height: 80 },
+    { id: 6, width: 120, height: 80 },
+    { id: 7, width: 120, height: 80 },
+    { id: 8, width: 90, height: 70 },
+    { id: 9, width: 120, height: 80 },
+    // { id: 10, width: 85, height: 70 },
+    { id: 11, width: 90, height: 70 },
+    { id: 12, width: 100, height: 80 },
+    { id: 13, width: 90, height: 70 },
+    { id: 14, width: 80, height: 70 },
+    { id: 15, width: 80, height: 70 },
+    { id: 16, width: 80, height: 70 },
+  ];
     const [autoPlay, setAutoPlay] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
@@ -173,23 +177,23 @@ export default function TestIndex() {
 
     // Chat自动播放逻辑 - 根据动图时长动态切换
     useEffect(() => {
-        if (!isAutoPlaying) return;
+        if (!chatInView) return;
 
         // 每个动图的播放时长（毫秒）
         const chatDurations: { [key: number]: number } = {
-            1: 2000, // chat3.webp 播放6秒
-            2: 9000, // chat2.webp 播放5秒
-            3: 12000  // chat1.webp 播放7秒
+            1: 5000, // chat3.webp 播放6秒
+            2: 5000, // chat2.webp 播放5秒
+            3: 5000  // chat1.webp 播放7秒
         };
 
         const currentDuration = chatDurations[activeTab] || 6000;
 
         const timer = setTimeout(() => {
             setActiveTab((prev) => {
-                // 从下至上循环：3 -> 2 -> 1 -> 3
-                if (prev === 3) return 2;
-                if (prev === 2) return 1;
-                return 3;
+                // 从上至下循环：1 -> 2 -> 3 -> 1
+                if (prev === 1) return 2;
+                if (prev === 2) return 3;
+                return 1;
             });
         }, currentDuration);
 
@@ -197,7 +201,7 @@ export default function TestIndex() {
         return () => {
             clearTimeout(timer);
         };
-    }, [isAutoPlaying, activeTab]);
+    }, [chatInView, activeTab]);
 
     // 产品自动播放逻辑
     useEffect(() => {
@@ -225,7 +229,7 @@ export default function TestIndex() {
                 // 两张地图循环：0 -> 1 -> 0
                 return (prev + 1) % 2;
             });
-        }, 5000); // 每5秒切换一次
+        }, 3000); // 每5秒切换一次
 
         setMapAutoPlayTimer(timer);
         return () => {
@@ -346,7 +350,7 @@ export default function TestIndex() {
                 <PartnerCarousel logos={partnerLogos} />
 
                 {/* Chat Section - 灰色背景聊天区域 */}
-                <div className="py-2 pb-16">
+                <div className="py-2 pb-16" ref={chatRef}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left mb-8">
                             Canopy Wave Chat
@@ -372,45 +376,40 @@ export default function TestIndex() {
                             {/* 右侧标题区域 - 1/3宽度 */}
                             <div className="lg:w-1/3">
                                 <div className="space-y-4">
-                                    {/* 从下至上排列：Chat Controls (3) */}
+                                    {/* Step-by-Step Collaboration (1) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 3
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${
+                                                activeTab === 1
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onClick={() => setActiveTab(3)}
-                                        onMouseEnter={() => {
-                                            setActiveTab(3);
-                                            setIsAutoPlaying(false);
-                                        }}
-                                        onMouseLeave={() => setIsAutoPlaying(true)}
+                                        onClick={() => setActiveTab(1)}
                                     >
-                                        <h3 className={`text-lg font-semibold ${activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Chat Controls</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 3 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                        <h3 className={`text-lg font-semibold ${
+                                            activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Step-by-Step Collaboration</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${
+                                            activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
-                                                Adjust the output result through the chat controls.
+                                                Each model builds on the last to deliver sharper logic and greater precision.
                                             </p>
                                         </div>
                                     </div>
-
                                     {/* Parallel Intelligence (2) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${
+                                                activeTab === 2
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onClick={() => setActiveTab(2)}
-                                        onMouseEnter={() => {
-                                            setActiveTab(2);
-                                            setIsAutoPlaying(false);
-                                        }}
-                                        onMouseLeave={() => setIsAutoPlaying(true)}
                                     >
-                                        <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
+                                        <h3 className={`text-lg font-semibold ${
+                                            activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Parallel Intelligence</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                        <div className={`overflow-hidden transition-all duration-500 ${
+                                            activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
                                                 Unlock simultaneous responses from different AI models-gain fresh perspectives, compare solutions, and choose the best answer.
@@ -418,32 +417,30 @@ export default function TestIndex() {
                                         </div>
                                     </div>
 
-                                    {/* Step-by-Step Collaboration (1) */}
+                                    {/* Chat Controls (3) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${
+                                                activeTab === 3
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onClick={() => setActiveTab(1)}
-                                        onMouseEnter={() => {
-                                            setActiveTab(1);
-                                            setIsAutoPlaying(false);
-                                        }}
-                                        onMouseLeave={() => setIsAutoPlaying(true)}
+                                        onClick={() => setActiveTab(3)}
                                     >
-                                        <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Step-by-Step Collaboration</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                        <h3 className={`text-lg font-semibold ${
+                                            activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
+                                            }`}>Chat Controls</h3>
+                                        <div className={`overflow-hidden transition-all duration-500 ${
+                                            activeTab === 3 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
-                                                Each model builds on the last to deliver sharper logic and greater precision.
+                                                Create customized models through control buttons. Such as Agent Builder, Prompts, Memories, Attach Files, Bookmarks and so on.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 {/* Free to use 按钮 */}
                                 <div className="mt-10">
-                                    <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg">
+                                    <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = 'https://chat.canopywave.io/c/new'}>
                                         Free to use
                                     </button>
                                 </div>
@@ -573,7 +570,10 @@ export default function TestIndex() {
                                         <>
                                             <div className="flex items-center space-x-4 mb-6">
                                                 <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
-                                                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                                <span 
+                                                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium cursor-pointer hover:bg-green-200 transition-colors" 
+                                                    onClick={() => window.location.href = '/pricing'}
+                                                >
                                                     {currentProduct.price}
                                                 </span>
                                             </div>
@@ -584,7 +584,7 @@ export default function TestIndex() {
                                                 ))}
                                             </ul>
 
-                                            <Button className="bg-[#8CC63F] text-white px-4 py-2 rounded hover:bg-[#7AB530] transition-colors" onClick={() => window.location.href = '/pricing'}>
+                                            <Button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
                                                 Learn More
                                             </Button>
                                         </>
@@ -602,8 +602,8 @@ export default function TestIndex() {
                                     <Image
                                         src={`/test/products-${currentImageIndex + 1}.webp`}
                                         alt="NVIDIA GPUs"
-                                        width={600}
-                                        height={400}
+                                        width={610}
+                                        height={410}
                                         className="object-contain"
                                     />
                                 </div>
@@ -624,7 +624,7 @@ export default function TestIndex() {
                                                 setIsProductAutoPlaying(false);
                                             }}
                                             onMouseLeave={() => setIsProductAutoPlaying(true)}
-                                            className={`w-16 h-16 rounded-2xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
+                                            className={`w-20 h-20 rounded-2xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
                                                 ? 'border-[#76B900] shadow-lg border-2'
                                                 : 'border-gray-300 hover:border-gray-400'
                                                 }`}
@@ -961,7 +961,7 @@ export default function TestIndex() {
                             <p className="text-gray-600 mb-8 leading-relaxed max-w-4xl">
                                 Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
                             </p>
-                            <Button className="bg-[#8CC63F] text-white hover:bg-[#6ba000] px-6 py-3" onClick={() => window.location.href = '/data-center/iceland'}>
+                            <Button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/data-center/iceland'}>
                                 Explore Our Network
                             </Button>
                         </div>
@@ -1131,8 +1131,8 @@ export default function TestIndex() {
                             <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                 Launch Now
                             </Button>
-                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.location.href = '/contact'}>
-                                Contact Us
+                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.location.href = 'https://chat.canopywave.io/c/new'}>
+                                Chat Now
                             </Button>
                         </div>
                     </div>
