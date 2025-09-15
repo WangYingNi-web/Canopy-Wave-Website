@@ -1392,8 +1392,8 @@ export default function BlogDetail() {
       case 'ai-fine-tuning-for-beginners':
         return {
           id: 13,
-          title: 'Getting Started: The Simplest Way to Fine-tune Your First AI Model',
-          description: 'A beginner-friendly guide to fine-tuning AI models with prompt engineering and LoRA techniques.',
+          title: 'AI Fine-tuning for Beginners',
+          description: 'Getting Started: The Simplest Way to Fine-tune Your First AI Model',
           sections: [
             {
               title: '',
@@ -1415,7 +1415,7 @@ export default function BlogDetail() {
             {
               title: '',
               content: [
-                <img key="ai-fine-tuning-image" src="/blog/ai-fine-tuning.png" alt="AI Fine-tuning" className="w-full h-auto my-8 rounded-lg" />
+                <img key="ai-fine-tuning-image" src="/blog/ai-Workbench.png" alt="AI WorkBench" className="w-full h-auto my-8 rounded-lg" />
               ]
             },
             {
@@ -1440,8 +1440,8 @@ export default function BlogDetail() {
                   React.createElement('strong', { key: 'lora-principle' }, '3.1 In-depth understanding of LoRA technology principles:'),
                 'LoRA stands for Low-Rank Adaptation. It assumes that the weight changes during the model update process have low-rank characteristics, so the weight update can be approximated by the product of two low-rank matrices.',
                 'The mathematical expression is:',
-                '$$ h = W_0x + \\Delta Wx = W_0x + BAx $$',
-                'Where $B \\in \\mathbb{R}^{d \\times r}$ and $A \\in \\mathbb{R}^{r \\times k}$ are low-rank matrices ($r \\ll \\min(d,k)$), and the number of parameters is much smaller than the original weight matrix $W \\in \\mathbb{R}^{d \\times k}$. In this way, LoRA only needs to train a small number of parameters while achieving good fine-tuning results.',                  'Recommended Rank (r) for LoRA: Llama 7B/13B models recommend r=8-16, GPT-2 1.5B models recommend r=32.',
+                'h = W₀x + ΔWx = W₀x + BAx',
+                'Where B ∈ ℝ^{d×r} and A ∈ ℝ^{r×k} are low-rank matrices (r ≪ min(d,k)), and the number of parameters is much smaller than the original weight matrix W ∈ ℝ^{d×k}. In this way, LoRA only needs to train a small number of parameters while achieving good fine-tuning results.',
                 React.createElement('strong', { key: 'lora-process' }, '3.2 Fine-tuning Process Guide:'),
                   'Key Steps:',
                   '1. 4bit Quantization (Memory optimization)',

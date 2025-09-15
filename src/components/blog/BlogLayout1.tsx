@@ -47,6 +47,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-pet.webp"
                   : blogPost.title === "Accelerated AI for Business"
                   ? "/blog/ai-business.webp"
+                  :blogPost.title === "AI Fine-tuning for Beginners"
+                  ? "/blog/ai-fine-tuning.png"
                   : "/blog1.webp"
                   
               }
