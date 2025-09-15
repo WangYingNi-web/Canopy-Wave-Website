@@ -30,6 +30,7 @@ export default function TestIndex() {
     const [hoveredCard, setHoveredCard] = useState('card1');
     const [activeTab, setActiveTab] = useState(1); // 从上至下开始，初始为Step-by-Step Collaboration
     const [autoPlayTimer, setAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
+    const [isHovering, setIsHovering] = useState(false);
     const [isProductAutoPlaying, setIsProductAutoPlaying] = useState(true);
     const [productAutoPlayTimer, setProductAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
     const [currentMapIndex, setCurrentMapIndex] = useState(0);
@@ -67,12 +68,12 @@ export default function TestIndex() {
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
-        {
-            id: 5,
-            background: '/test/05.webp',
-            titleColor: 'text-[#80B224]',
-            bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
-        },
+        // {
+        //     id: 5,
+        //     background: '/test/05.webp',
+        //     titleColor: 'text-[#80B224]',
+        //     bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+        // },
         {
             id: 2,
             background: '/test/02.webp',
@@ -190,7 +191,7 @@ export default function TestIndex() {
 
     // Chat自动播放逻辑 - 根据动图时长动态切换
     useEffect(() => {
-        if (!chatInView) return;
+        if (!chatInView || isHovering) return;
 
         // 每个动图的播放时长（毫秒）
         const chatDurations: { [key: number]: number } = {
@@ -214,7 +215,7 @@ export default function TestIndex() {
         return () => {
             clearTimeout(timer);
         };
-    }, [chatInView, activeTab]);
+    }, [chatInView, activeTab, isHovering]);
 
     // 产品自动播放逻辑
     useEffect(() => {
@@ -329,6 +330,25 @@ export default function TestIndex() {
                                     />
                                 )}
 
+                                {/* 第一张图片的标题和按钮 */}
+                                {slide.id === 1 && (
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
+                                        <div className="max-w-3xl sm:pl-16">
+                                            <h1 className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
+                                                The Platform that
+                                            </h1>
+                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
+                                                <h2 className="text-4xl sm:text-5xl font-bold text-white">
+                                                    Enables AI
+                                                </h2>
+                                            </div>
+                                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                                                Where Compute Meets Expertise
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* 第二张图片的标题和按钮 */}
                                 {slide.id === 2 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
@@ -414,6 +434,39 @@ export default function TestIndex() {
                                                 Aiming to Next-Generation AI and<br />
                                                 Computing Technologies
                                             </p>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* 第五张图片的标题和按钮 */}
+                                {slide.id === 5 && (
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
+                                        <div className="max-w-3xl sm:pl-16">
+                                            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
+                                                Enterprise-Grade
+                                            </h1>
+                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
+                                                <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                                                    GPU Infrastructure
+                                                </h2>
+                                            </div>
+                                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                                                Scalable, Secure, and Ready for AI Workloads
+                                            </p>
+                                            <div className="flex gap-4">
+                                                <button 
+                                                    onClick={() => window.location.href = '/pricing'} 
+                                                    className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+                                                >
+                                                    View Pricing
+                                                </button>
+                                                <button 
+                                                    onClick={() => window.location.href = '/contact'} 
+                                                    className="border-2 border-[#80B224] text-[#80B224] hover:bg-[#80B224] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                                                >
+                                                    Contact Sales
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 )}
@@ -508,7 +561,11 @@ export default function TestIndex() {
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onMouseEnter={() => setActiveTab(1)}
+                                        onMouseEnter={() => {
+                                            setActiveTab(1);
+                                            setIsHovering(true);
+                                        }}
+                                        onMouseLeave={() => setIsHovering(false)}
                                     >
                                         <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Step-by-Step Collaboration</h3>
@@ -525,7 +582,11 @@ export default function TestIndex() {
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onMouseEnter={() => setActiveTab(2)}
+                                        onMouseEnter={() => {
+                                            setActiveTab(2);
+                                            setIsHovering(true);
+                                        }}
+                                        onMouseLeave={() => setIsHovering(false)}
                                     >
                                         <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Parallel Intelligence</h3>
@@ -543,7 +604,11 @@ export default function TestIndex() {
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
-                                        onMouseEnter={() => setActiveTab(3)}
+                                        onMouseEnter={() => {
+                                            setActiveTab(3);
+                                            setIsHovering(true);
+                                        }}
+                                        onMouseLeave={() => setIsHovering(false)}
                                     >
                                         <h3 className={`text-lg font-semibold ${activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Chat Controls</h3>
