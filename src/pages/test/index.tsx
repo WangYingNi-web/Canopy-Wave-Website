@@ -40,6 +40,18 @@ export default function TestIndex() {
         threshold: 0.3,
         triggerOnce: false
     });
+
+    // 移动端检测
+    useEffect(() => {
+        const checkIsMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+
+        return () => window.removeEventListener('resize', checkIsMobile);
+    }, []);
     const partnerLogos = [
         { id: 1, width: 130, height: 100 },
         { id: 2, width: 80, height: 80 },
@@ -838,10 +850,10 @@ export default function TestIndex() {
                             </div>
                         </SlideUp>
 
-                        <div className="flex gap-4 flex-col md:flex-row">
+                        <div className="flex gap-4 flex-col md:flex-row w-full">
                             {/* Card 1 - Pursue Efficiency */}
                             <div
-                                className="transform"
+                                className="transform w-full md:w-auto"
                                 style={{
                                     width: isMobile ? '100%' : (hoveredCard === 'card1' ? '40%' : '18%'),
                                     transition: 'width 0.6s ease-in-out'
@@ -896,7 +908,7 @@ export default function TestIndex() {
 
                             {/* Card 2 - Earn Respect */}
                             <div
-                                className="transform"
+                                className="transform w-full md:w-auto"
                                 style={{
                                     width: isMobile ? '100%' : (hoveredCard === 'card2' ? '40%' : '18%'),
                                     transition: 'width 0.6s ease-in-out'
@@ -956,7 +968,7 @@ export default function TestIndex() {
 
                             {/* Card 3 - Demonstrate Contribution */}
                             <div
-                                className="transform"
+                                className="transform w-full md:w-auto"
                                 style={{
                                     width: isMobile ? '100%' : (hoveredCard === 'card3' ? '40%' : '18%'),
                                     transition: 'width 0.6s ease-in-out'
@@ -1015,7 +1027,7 @@ export default function TestIndex() {
 
                             {/* Card 4 - Innovation Excellence */}
                             <div
-                                className="transform"
+                                className="transform w-full md:w-auto"
                                 style={{
                                     width: isMobile ? '100%' : (hoveredCard === 'card4' ? '40%' : '18%'),
                                     transition: 'width 0.6s ease-in-out'
@@ -1073,7 +1085,7 @@ export default function TestIndex() {
 
                             {/* Card 5 - Customer Focus */}
                             <div
-                                className="transform"
+                                className="transform w-full md:w-auto"
                                 style={{
                                     width: isMobile ? '100%' : (hoveredCard === 'card5' ? '40%' : '18%'),
                                     transition: 'width 0.6s ease-in-out'

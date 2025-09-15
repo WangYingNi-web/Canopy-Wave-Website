@@ -101,7 +101,7 @@ export default function Footer() {
     };
     return (
         <footer className="border-t bg-[#F9F9F9]">
-            <div className={`${getContainerMaxWidth()} mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12`}>
+            <div className={`${getContainerMaxWidth()} mx-auto px-6 sm:px-6 lg:px-8 py-8 sm:py-12`}>
                 <div className="flex flex-col lg:flex-row">
                     <div className="w-full lg:w-3/4 lg:flex lg:justify-start">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-start gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-8 lg:gap-x-16 lg:gap-y-0">
@@ -172,7 +172,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/4 flex flex-col mb-8 lg:mb-4 pl-10">
+                    <div className="w-full lg:w-1/4 flex flex-col mb-8 lg:mb-4 pt-6 sm:pt-0 sm:pl-10 min-h-[225px]">
                         <div className="flex items-center">
                             <IwsLink href="/" className="flex items-center">
                                 <Image
