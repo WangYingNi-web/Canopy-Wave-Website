@@ -56,6 +56,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 13,
+            title: "AI Fine-tuning for Beginners",
+            description: "Getting Started: The Simplest Way to Fine-tune Your First AI Model",
+            date: "October 15, 2025",
+            image: "/blog/ai-fine-tuning.png"
+        },
+        {
             id: 12,
             title: "Humanity's Next Partner: The AI Agent",
             description: "A New Era of Human-Machine Symbiosis: The Characteristics, Challenges, and World-Transforming Potential of AI Agents",
