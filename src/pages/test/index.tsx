@@ -67,12 +67,12 @@ export default function TestIndex() {
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
-        // {
-        //     id: 5,
-        //     background: '/test/05.webp',
-        //     titleColor: 'text-[#80B224]',
-        //     bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
-        // },
+        {
+            id: 5,
+            background: '/test/05.webp',
+            titleColor: 'text-[#80B224]',
+            bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+        },
         {
             id: 2,
             background: '/test/02.webp',
