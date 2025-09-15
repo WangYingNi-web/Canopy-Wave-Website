@@ -76,7 +76,7 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   // 结束代码块
                   inCodeBlock = false;
                   result.push(
-                    <pre key={`codeblock-${index}-${pIndex}`} className={`rounded-lg bg-gray-100 p-4 overflow-x-auto`}>
+                    <pre key={`codeblock-${index}-${pIndex}`} className={`bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto`}>
                       <code className={codeLang ? `language-${codeLang}` : ''}>
                         {codeLines.join('\n')}
                       </code>
