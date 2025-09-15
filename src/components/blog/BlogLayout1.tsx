@@ -47,6 +47,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-pet.webp"
                   : blogPost.title === "Accelerated AI for Business"
                   ? "/blog/ai-business.webp"
+                  :blogPost.title === "AI Fine-tuning for Beginners"
+                  ? "/blog/ai-fine-tuning.png"
                   : "/blog1.webp"
                   
               }
@@ -56,22 +58,68 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
           </SlideUp>
         </div>
         
-        {blogPost.sections.map((section, index) => (
-          <SlideUp key={index}>
-            {section.title && (
-              <h2 className="text-xl font-semibold text-[#333] mt-8 mb-4">
-                {section.title}
-              </h2>
-            )}
-            <div className="space-y-4">
-              {section.content.map((paragraph, pIndex) => (
-                <p key={pIndex} className="text-gray-700 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </SlideUp>
-        ))}
+        {blogPost.sections.map((section, index) => {
+          // 代码块渲染逻辑
+          const renderContent = (contentArr: any[]) => {
+            const result: React.ReactNode[] = [];
+            let inCodeBlock = false;
+            let codeLang = '';
+            let codeLines: string[] = [];
+            contentArr.forEach((paragraph, pIndex) => {
+              if (typeof paragraph === 'string' && paragraph.startsWith('```')) {
+                if (!inCodeBlock) {
+                  // 进入代码块
+                  inCodeBlock = true;
+                  codeLang = paragraph.replace('```', '').trim();
+                  codeLines = [];
+                } else {
+                  // 结束代码块
+                  inCodeBlock = false;
+                  result.push(
+                    <pre key={`codeblock-${index}-${pIndex}`} className={`bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto`}>
+                      <code className={codeLang ? `language-${codeLang}` : ''}>
+                        {codeLines.join('\n')}
+                      </code>
+                    </pre>
+                  );
+                  codeLang = '';
+                  codeLines = [];
+                }
+              } else if (inCodeBlock) {
+                // 收集代码内容
+                if (typeof paragraph === 'string') {
+                  codeLines.push(paragraph);
+                }
+              } else if (React.isValidElement(paragraph)) {
+                // React 元素直接渲染
+                result.push(
+                  <div key={`element-${index}-${pIndex}`}>{paragraph}</div>
+                );
+              } else {
+                // 普通文本
+                result.push(
+                  <p key={pIndex} className="text-gray-700 leading-relaxed">
+                    {paragraph}
+                  </p>
+                );
+              }
+            });
+            return result;
+          };
+
+          return (
+            <SlideUp key={index}>
+              {section.title && (
+                <h2 className="text-xl font-semibold text-[#333] mt-8 mb-4">
+                  {section.title}
+                </h2>
+              )}
+              <div className="space-y-4">
+                {renderContent(section.content)}
+              </div>
+            </SlideUp>
+          );
+        })}
       </article>
     </div>
   )

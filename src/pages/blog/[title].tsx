@@ -7,6 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import { BlogLayout1, BlogLayout2, BlogPost } from '@/components/blog'
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 
 export default function BlogDetail() {
   const router = useRouter()
@@ -1345,6 +1346,7 @@ export default function BlogDetail() {
             },
           ]
         }
+      
       case 'humanitys-next-partner-the-ai-agent':
         return {
           id: 12,
@@ -1386,6 +1388,302 @@ export default function BlogDetail() {
             }
           ]
         }
+      
+      case 'ai-fine-tuning-for-beginners':
+        return {
+          id: 13,
+          title: 'AI Fine-tuning for Beginners',
+          description: 'Getting Started: The Simplest Way to Fine-tune Your First AI Model',
+          sections: [
+            {
+              title: '',
+              content: [
+                'With the rapid development of artificial intelligence technology, the capabilities of large models are already astonishing. However, general-purpose models often fail to meet the personalized needs of specific scenarios. Traditionally, model fine-tuning requires a deep machine learning background and expensive computing resources. However, technological advances are dramatically lowering the barrier to entry for fine-tuning. This guide will walk you through the simplest ways to start your fine-tuning journey.'
+              ]
+            },
+            {
+              title: '1. Rethinking Fine-tuning: The Evolution from "Universal" to "Specific"',
+              content: [
+                  React.createElement('strong', { key: 'essence' }, '1.1 The Essence of Fine-tuning:'),
+                'Model fine-tuning is essentially a process of knowledge transfer. Pre-trained large models learn general knowledge representations through massive amounts of data, while fine-tuning adapts this general knowledge to specific domains or tasks. This is similar to a generalist becoming a domain expert through short-term specialized training, retaining general capabilities while gaining specialized depth.',
+                'From a technical perspective, fine-tuning involves continuing to train the model on a new, specific dataset. This process adjusts the model\'s parameters to better align its outputs with the target domain. Compared to training from scratch, fine-tuning requires only a small amount of data and computing resources to achieve significant improvements in performance.',
+                  React.createElement('strong', { key: 'evolution' }, '1.2 The Evolution of Fine-tuning Technology:'),
+                'Fine-tuning technology has evolved from full-parameter fine-tuning to parameter-efficient fine-tuning (PEFT). Early full-parameter fine-tuning required updating all model parameters, which was computationally expensive and prone to overfitting.',
+                'Recent PEFT technologies, such as LoRA (Low-Rank Adaptation), Adapter Tuning, and Prefix Tuning, can achieve performance comparable to full fine-tuning by adjusting only a small fraction of the parameters. LoRA technology, in particular, reduces the computing resources required for fine-tuning by over 90%, enabling individual developers to customize models using consumer-grade GPUs.'
+              ]
+            },
+            {
+              title: '',
+              content: [
+                <img key="ai-fine-tuning-image" src="/blog/ai-Workbench.png" alt="AI WorkBench" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: '2. Prompt Engineering: The No-Cost "Soft Fine-Tuning"',
+              content: [
+                  React.createElement('strong', { key: 'prompt-art' }, '2.1 The Art of Prompt Word Design:'),
+                  'Prompt engineering is called "soft fine-tuning" because it can significantly change model behavior without adjusting model parameters. A good prompt should include:',
+                  'Role definition: clearly define the role played by the model, such as "You are a senior nutritionist"',
+                  'Task: The specific task to be completed, such as "designing a daily diet for diabetics"',
+                  'Constraints: Output format and content restrictions, such as "presented in table format, including three meals and two snacks"',
+                  'Examples: Provide input and output examples to help the model understand the expected output format',
+                  React.createElement('strong', { key: 'prompt-advanced' }, '2.2 Advanced Prompting Techniques:'),
+                  'Chain-of-Thought: Guides the model through the "Let\'s think step by step" reasoning process, significantly improving the ability to solve complex problems',
+                  'Self-Consistency: requires the model to generate multiple answers and then select the optimal solution to improve the reliability of the output',
+                  'Knowledge Generation: Let the model generate relevant knowledge first, and then answer questions based on this knowledge to improve the accuracy of the answers',
+                  'Practical Example: You are an experienced cybersecurity expert. Please explain the principles and prevention measures of SQL injection attacks in plain language. First, analyze the attack mechanism, then list three main prevention methods, and finally provide a simple code example. Avoid overly technical terms.',
+              ]
+            },
+            {
+              title: '3. Advanced Practice: Detailed Explanation of LoRA Fine-tuning',
+              content: [
+                  React.createElement('strong', { key: 'lora-principle' }, '3.1 In-depth understanding of LoRA technology principles:'),
+                'LoRA stands for Low-Rank Adaptation. It assumes that the weight changes during the model update process have low-rank characteristics, so the weight update can be approximated by the product of two low-rank matrices.',
+                'The mathematical expression is:',
+                'h = W₀x + ΔWx = W₀x + BAx',
+                'Where B ∈ ℝ^{d×r} and A ∈ ℝ^{r×k} are low-rank matrices (r ≪ min(d,k)), and the number of parameters is much smaller than the original weight matrix W ∈ ℝ^{d×k}. In this way, LoRA only needs to train a small number of parameters while achieving good fine-tuning results.',
+                React.createElement('strong', { key: 'lora-process' }, '3.2 Fine-tuning Process Guide:'),
+                  'Key Steps:',
+                  '1. 4bit Quantization (Memory optimization)',
+                  '2. LoRA Configuration (Core fine-tuning technique)',
+                  '3. Data Preprocessing (Format conversion)',
+                  '4. Training Arguments (Training control)',
+                  '5. Trainer API (Training engine)',
+                  '6. Model Saving (Final output)',
+                  'Required Dependencies Installation:',
+                '```bash',
+                '# Install PyTorch with CUDA support (adjust version based on your GPU)',
+                'pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118',
+                '# Install transformers and related libraries',
+                'pip install transformers==4.36.0 peft==0.6.0 datasets==2.15.0 accelerate==0.24.0 bitsandbytes==0.41.3',
+                '```',
+                'Essential Code for Model Fine-tuning:',
+                '```python',
+                '# 1. Import required libraries',
+                'from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig',
+                'from peft import LoraConfig, get_peft_model',
+                'from transformers import TrainingArguments, Trainer, DataCollatorForSeq2Seq',
+                'from datasets import Dataset',
+                'import torch',
+                '',
+                '# 2. Prepare data',
+                'data = [',
+                '    {',
+                '        "instruction": "Translate the following English to Chinese",',
+                '        "input": "Hello, how are you?",',
+                '        "output": "Hi, how have you been lately?"',
+                '    },',
+                '    {',
+                '        "instruction": "Sentiment analysis",',
+                '        "input": "The product quality is very good, but the price is a bit expensive",',
+                '        "output": "Positive review, but mentions high price"',
+                '    }',
+                ']',
+                'dataset = Dataset.from_list(data)',
+                '',
+                '# 3. Load model and tokenizer (4bit quantization for memory efficiency)',
+                'model_name = "meta-llama/Llama-2-7b-hf"',
+                'tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)',
+                'model = AutoModelForCausalLM.from_pretrained(',
+                '    model_name,',
+                '    quantization_config=BitsAndBytesConfig(',
+                '        load_in_4bit=True,',
+                '        bnb_4bit_use_double_quant=True,',
+                '        bnb_4bit_quant_type="nf4",',
+                '        bnb_4bit_compute_dtype=torch.bfloat16',
+                '    ),',
+                '    device_map="auto",',
+                '    trust_remote_code=True',
+                ')',
+                '',
+                '# 4. LoRA configuration (core fine-tuning technique)',
+                'lora_config = LoraConfig(',
+                '    r=16,                          # Rank',
+                '    lora_alpha=32,                 # Scaling factor',
+                '    target_modules=["q_proj", "v_proj"],  # Adjusted for LLaMA',
+                '    lora_dropout=0.05,             # Dropout rate',
+                '    bias="none",                   # Bias handling',
+                '    task_type="CAUSAL_LM"          # Task type',
+                ')',
+                'model = get_peft_model(model, lora_config)',
+                'model.print_trainable_parameters()  # Check trainable parameters',
+                '',
+                '# 5. Data preprocessing function',
+                'def preprocess_function(examples):',
+                '    # Build prompt template with clear separators',
+                '    prompts = []',
+                '    for i in range(len(examples["instruction"])):',
+                '        prompt = f"### Instruction: {examples[instruction][i]}\\n"',
+                '        prompt += f"### Input: {examples[input][i]}\\n"',
+                '        prompt += f"### Output: {examples[output][i]}"',
+                '        prompts.append(prompt)',
+                '    ',
+                '    # Tokenize',
+                '    tokenized = tokenizer(',
+                '        prompts,',
+                '        truncation=True,',
+                '        max_length=512,',
+                '        padding="max_length",',
+                '        return_tensors="pt"',
+                '    )',
+                '    ',
+                '    # Label processing (calculate loss only on output part)',
+                '    labels = tokenized["input_ids"].clone()',
+                '    return {',
+                '        "input_ids": tokenized["input_ids"],',
+                '        "attention_mask": tokenized["attention_mask"],',
+                '        "labels": labels',
+                '    }',
+                '',
+                '# 6. Training arguments configuration',
+                'training_args = TrainingArguments(',
+                '    output_dir="./lora_finetune_results",',
+                '    overwrite_output_dir=True,',
+                '    per_device_train_batch_size=4,',
+                '    per_device_eval_batch_size=4,',
+                '    gradient_accumulation_steps=4,',
+                '    num_train_epochs=3,',
+                '    learning_rate=3e-4,',
+                '    weight_decay=0.01,',
+                '    fp16=True,',
+                '    logging_steps=10,',
+                '    save_steps=500,',
+                '    evaluation_strategy="no",  # Disable eval for small datasets',
+                '    report_to=None  # Disable wandb',
+                ')',
+                '',
+                '# 7. Data collator',
+                'data_collator = DataCollatorForSeq2Seq(',
+                '    tokenizer,',
+                '    pad_to_multiple_of=8,',
+                '    return_tensors="pt",',
+                '    padding=True',
+                ')',
+                '',
+                '# 8. Initialize Trainer',
+                'trainer = Trainer(',
+                '    model=model,',
+                '    args=training_args,',
+                '    train_dataset=dataset.map(preprocess_function, batched=True),',
+                '    data_collator=data_collator,',
+                ')',
+                '',
+                '# 9. Start training',
+                'print("Starting training...")',
+                'trainer.train()',
+                '',
+                '# 10. Save model',
+                'trainer.save_model()',
+                'print("Training completed, model saved")',
+                '```'
+              ]
+            },
+            {
+              title: '4. Fine-tuning strategies and best practices',
+              content: [
+                  React.createElement('strong', { key: 'layered-strategy' }, '4.1 Layered Fine-tuning Strategy:'),
+                'Choose a fine-tuning depth based on your needs:',
+                  'Shallow fine-tuning: only adjust the last few layers, suitable for domain adaptation, with the lowest computational cost',
+                  'Middle-layer fine-tuning: Adjust the middle layer to balance versatility and professionalism, with moderate effect and cost',
+                  'Deep fine-tuning: comprehensive adjustments, suitable for major task changes, with the best results but the highest cost',
+                  'Factors to consider:',
+                  'Available computing resources',
+                  'The difference between the target domain and the pre-training domain',
+                  'The amount of training data available',
+                  React.createElement('strong', { key: 'hyperparam-guide' }, '4.2 Hyperparameter Optimization Guide:'),
+                  'Impact of key hyperparameters and setting recommendations:',
+                  'Learning rate: Usually set between 1e-5 and 5e-4. The 7B model recommends 3e-4, the 13B model recommends 2e-4, and the 34B model recommends 1e-4. LoRA fine-tuning can use a larger learning rate than full parameter fine-tuning.',
+                  'Batch size: Select according to the memory capacity, usually 4-16, you can use gradient accumulation to simulate large batches',
+                  'Number of training rounds: 2-5 rounds are sufficient. Too many rounds will lead to overfitting. It is recommended to use the early stopping strategy.',
+                  'Recommended configuration:',
+                  'Small dataset (<1000 samples): learning rate 3e-4, training 3-5 epochs',
+                  'Medium dataset (1000-10000 samples): learning rate 1e-4, training 2-3 rounds',
+                  'Large dataset (>10,000 samples): learning rate 5e-5, training 1-2 rounds',
+                  <img key="ai-image" src="/blog/ai-tuning-strategies.png" alt="Fine-tuning strategies" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: '5. Quality assessment and iterative optimization',
+              content: [
+                  React.createElement('strong', { key: 'multi-eval' }, '5.1 Multi-dimensional evaluation system:'),
+                'It is crucial to establish a scientific evaluation framework:',
+                  React.createElement('strong', { key: 'auto-metrics' }, 'Automation metrics:'),
+                  'Perplexity: A measure of how well the model fits the test data',
+                  'BLEU/ROUGE: Automatic Evaluation for Text Generation Tasks',
+                  'Precision/Recall: for classification and question answering tasks',
+                  React.createElement('strong', { key: 'manual-evaluation' }, ' Manual evaluation:'),
+                  'Relevance: How relevant the output is to the input',
+                  'Fluency: the naturalness and smoothness of language expression',
+                  'Usefulness: The degree to which the output solves practical problems',
+                  'A/B testing: Compare the fine-tuned model with the baseline model to collect feedback from real users',
+                  React.createElement('strong', { key: 'continuous-opt' }, '5.2 Continuous Optimization Cycle:'),
+                'Establish a "train-evaluate-iterate" feedback loop:',
+                  '1. Collect real-world usage feedback: Collect the model\'s performance in actual use through user feedback, log analysis, etc.',
+                  '2. Identify model deficiencies: Analyze error cases to identify model weaknesses',
+                  '3. Supplementary training data: Collect and annotate more training data for weak links',
+                  '4. Re-fine-tune optimization: re-fine-tune using the augmented data',
+                'It is recommended to establish an error case library, regularly analyze and classify error types, and perform targeted optimization.'
+              ]
+            },
+            {
+              title: '6. Application Scenarios and Case Studies',
+              content: [
+                  React.createElement('strong', { key: 'typical-scenarios' }, '6.1 Typical Application Scenarios:'),
+                  'Education: Customized teaching assistants to meet the needs of students of different ages and learning styles',
+                  'Enterprise applications: Build industry-specific knowledge bases to improve the accuracy and reliability of professional Q&A',
+                  'Content creation: Stylized writing assistant to maintain brand consistency and improve content production efficiency',
+                  'Customer service: Personalized customer service robots improve user experience and reduce labor costs',
+                  React.createElement('strong', { key: 'case-analysis' }, '6.2 In-depth Analysis of Successful Cases:'),
+                'A well-known e-commerce company achieved significant improvements in customer service efficiency through minor adjustments:',
+                  'Background: Traditional customer service is slow to respond, costly, and unable to meet rapidly growing business needs.',
+                  React.createElement('strong', { key: 'imple-plan' },'Implementation plan:'),
+                  '1. Data preparation: Collect and clean 5,000 high-quality customer service conversations, covering common questions and standard answers',
+                  '2. Fine-tuning strategy: Using QLoRA technology and 4-bit quantization to significantly reduce video memory requirements while maintaining performance',
+                  '3. Model selection: fine-tuned based on ChatGLM3-6B, balancing performance and cost',
+                  React.createElement('strong', { key: 'effect-evaluation' },'Effect evaluation:'),
+                  'Customer service satisfaction increased from 85% to 94%',
+                  'Average response time reduced from 45 seconds to less than 5 seconds',
+                  'Labor costs were reduced by 60%, while processing capacity was increased by 3 times',
+                  'Key success factors:',
+                  'High-quality training data',
+                  'Appropriate model selection and fine-tuning strategies',
+                  'Continuous optimization and iteration',
+              ]
+            },
+            {
+              title: '7. Future Outlook and Technology Trends',
+              content: [
+                  React.createElement('strong', { key: 'tech-direction' }, '7.1 Technology Development Direction:'),
+                  'More efficient fine-tuning methods: Improved algorithms such as AdaLoRA and LoRA+ further improve parameter efficiency',
+                  'Automated fine-tuning: automatic hyperparameter optimization and architecture search to lower technical barriers',
+                  'Multimodal fine-tuning: Simultaneously process multimodal data such as text, images, and audio to expand application boundaries',
+                  React.createElement('strong', { key: 'democratization' }, '7.2 Democratization Trend:'),
+                  'With technological advancements, AI model fine-tuning is moving from being exclusive to experts to becoming accessible to the general public:',
+                  'Visualization tools: More low-code, visual fine-tuning platforms are emerging, such as Hugging Face\'s AutoTrain',
+                  'Cloud services: Major cloud vendors provide one-stop fine-tuning services to simplify deployment and operation and maintenance',
+                  'Open source community: Open source communities promote knowledge sharing and the dissemination of best practices',
+                  'Expected impact:',
+                  'Lowering the threshold for AI application development',
+                  'Accelerate the implementation of AI technology in various industries',
+                  'Promoting innovation and diversity',
+              ]
+            },
+            {
+              title: 'Conclusion: Everyone can become an AI tuner',
+              content: [
+                'Model fine-tuning is no longer the exclusive domain of large tech companies, nor does it require a PhD to master. Using the methods described in this article, anyone interested can begin experimenting with customizing their own AI models. The key is to maintain curiosity and a practical spirit, starting with simple prompt word engineering and gradually moving on to parameter fine-tuning, constantly learning and growing in the process.',
+                   'Start your first fine-tuning project now:',
+                  '1. Select a specific usage scenario',
+                  '2. Prepare 10-20 pieces of high-quality data',
+                  '3. Start with the prompt word project',
+                  '4. Gradually advance to parameter fine-tuning',
+                  '5. Establish an evaluation system and continuously optimize it',
+                'Remember, the best way to learn is by doing. Every successful AI application starts with a simple fine-tuning attempt.'
+              ]
+            }
+          ]
+        }
+
       default:
         return null
     }
@@ -1429,7 +1727,9 @@ export default function BlogDetail() {
                       ? "/blog/workflows2.webp"
                       : blogPost.title === "Humanity's Next Partner: The AI Agent"
                         ? "/blog/ai-agent.png"
-                        : "/blog1.webp"
+                        : blogPost.title === "AI Fine-tuning for Beginners"
+                          ? "/blog/ai-fine-tuning.png"
+                          : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -1458,6 +1758,8 @@ export default function BlogDetail() {
       case 11:
         return <BlogLayout1 blogPost={blogPost} />
       case 12:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 13:
         return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
