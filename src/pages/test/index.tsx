@@ -24,13 +24,11 @@ export default function TestIndex() {
     const [isExpanded3, setIsExpanded3] = useState(false);
     const [isExpanded4, setIsExpanded4] = useState(false);
     const [isExpanded5, setIsExpanded5] = useState(false);
-    const [activeService, setActiveService] = useState('compute');
     const [isMobile, setIsMobile] = useState(false);
     const [showCardContent, setShowCardContent] = useState<string | null>('card1');
     const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
     const [hoveredCard, setHoveredCard] = useState('card1');
     const [activeTab, setActiveTab] = useState(1); // 从上至下开始，初始为Step-by-Step Collaboration
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [autoPlayTimer, setAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
     const [isProductAutoPlaying, setIsProductAutoPlaying] = useState(true);
     const [productAutoPlayTimer, setProductAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
@@ -42,23 +40,23 @@ export default function TestIndex() {
         triggerOnce: false
     });
     const partnerLogos = [
-    { id: 1, width: 130, height: 100 },
-    { id: 2, width: 80, height: 80 },
-    { id: 3, width: 80, height: 70 },
-    { id: 4, width: 100, height: 80 },
-    { id: 5, width: 120, height: 80 },
-    { id: 6, width: 120, height: 80 },
-    { id: 7, width: 120, height: 80 },
-    { id: 8, width: 90, height: 70 },
-    { id: 9, width: 120, height: 80 },
-    // { id: 10, width: 85, height: 70 },
-    { id: 11, width: 90, height: 70 },
-    { id: 12, width: 100, height: 80 },
-    { id: 13, width: 90, height: 70 },
-    { id: 14, width: 80, height: 70 },
-    { id: 15, width: 80, height: 70 },
-    { id: 16, width: 80, height: 70 },
-  ];
+        { id: 1, width: 130, height: 100 },
+        { id: 2, width: 80, height: 80 },
+        { id: 3, width: 80, height: 70 },
+        { id: 4, width: 100, height: 80 },
+        { id: 5, width: 120, height: 80 },
+        { id: 6, width: 120, height: 80 },
+        { id: 7, width: 120, height: 80 },
+        { id: 8, width: 90, height: 70 },
+        { id: 9, width: 120, height: 80 },
+        // { id: 10, width: 85, height: 70 },
+        { id: 11, width: 90, height: 70 },
+        { id: 12, width: 100, height: 80 },
+        { id: 13, width: 90, height: 70 },
+        { id: 14, width: 80, height: 70 },
+        { id: 15, width: 80, height: 70 },
+        { id: 16, width: 80, height: 70 },
+    ];
     const [autoPlay, setAutoPlay] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -69,12 +67,12 @@ export default function TestIndex() {
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
-        {
-            id: 5,
-            background: '/test/05.webp',
-            titleColor: 'text-[#80B224]',
-            bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
-        },
+        // {
+        //     id: 5,
+        //     background: '/test/05.webp',
+        //     titleColor: 'text-[#80B224]',
+        //     bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
+        // },
         {
             id: 2,
             background: '/test/02.webp',
@@ -118,7 +116,7 @@ export default function TestIndex() {
     // 手动切换处理函数
     const handleManualSlideChange = (index: number) => {
         if (isTransitioning || index === currentSlide) return; // 防止重复点击和过渡期间点击
-        
+
         setIsTransitioning(true);
         setCurrentSlide(index);
         setAutoPlay(false); // 暂停自动播放
@@ -290,26 +288,12 @@ export default function TestIndex() {
                 {/* 轮播图Banner */}
                 <div className="w-full h-[70vh] relative mt-[84px] overflow-hidden will-change-transform">
                     {slides.map((slide, index) => {
-                        // 只渲染当前图片、前一张和后一张，提高性能
-                        const shouldRender = Math.abs(index - currentSlide) <= 1 || 
-                                            (currentSlide === 0 && index === slides.length - 1) ||
-                                            (currentSlide === slides.length - 1 && index === 0);
-                        
-                        if (!shouldRender) return null;
-                        
                         return (
                             <div
-                                 key={slide.id}
-                                 className={`absolute inset-0 will-change-transform backface-hidden`}
-                                 style={{
-                                     transform: index === currentSlide 
-                                         ? 'translate3d(0, 0, 0)' 
-                                         : index < currentSlide 
-                                             ? 'translate3d(-100%, 0, 0)' 
-                                             : 'translate3d(100%, 0, 0)',
-                                     transition: 'transform 1000ms ease-in-out',
-                                     backfaceVisibility: 'hidden'
-                                 }}
+                                key={slide.id}
+                                className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${index === currentSlide ? 'translate-x-0' :
+                                    index < currentSlide ? '-translate-x-full' : 'translate-x-full'
+                                    }`}
                             >
                                 {/* 黑色背景层 - 仅对第二张图片，填充可能的空白 */}
                                 {slide.id !== 1 && (
@@ -325,7 +309,7 @@ export default function TestIndex() {
                                             className="object-cover"
                                             style={{
                                                 width: 'auto'
-                                            }}  
+                                            }}
                                             priority={index === currentSlide}
                                             loading={index === currentSlide ? 'eager' : 'lazy'}
                                         />
@@ -344,6 +328,95 @@ export default function TestIndex() {
                                         loading={index === currentSlide ? 'eager' : 'lazy'}
                                     />
                                 )}
+
+                                {/* 第二张图片的标题和按钮 */}
+                                {slide.id === 2 && (
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
+                                        <div className="max-w-3xl sm:pl-16">
+                                            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
+                                                A Comprehensive
+                                            </h1>
+                                            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
+                                                AI Conversation Platform
+                                            </h2>
+                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
+                                                <h3 className="text-3xl font-bold text-white">
+                                                    Canopy Wave Chat
+                                                </h3>
+                                            </div>
+                                            <div className="flex gap-4">
+                                                <button className="border-2 border-gray-600 text-gray-700 hover:bg-gray-100 px-6 py-2 rounded-full font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                                                    Free to use
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* 第三张图片的标题和按钮 */}
+                                {slide.id === 3 && (
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
+                                        <div className="max-w-3xl sm:pl-16">
+                                            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#D5D7D1] to-[#8DB244] bg-clip-text text-transparent mb-4 leading-tight">
+                                                Accelerating AI Deployment
+                                            </h1>
+                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
+                                                <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                                                    API: The Key to Productivity
+                                                </h2>
+                                            </div>
+                                            <div className="space-y-3 mb-8">
+                                                <div className="flex items-center text-white text-lg">
+                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
+                                                    <span>Rapid deployment</span>
+                                                </div>
+                                                <div className="flex items-center text-white text-lg">
+                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
+                                                    <span>personalized model adjustment</span>
+                                                </div>
+                                                <div className="flex items-center text-white text-lg">
+                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
+                                                    <span>ensuring information security</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-4">
+                                                <button
+                                                    onClick={() => window.location.href = '/reserve-ai-service'}
+                                                    className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+                                                >
+                                                    Reserve Now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* 第四张图片的标题和按钮 */}
+                                {slide.id === 4 && (
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
+                                        <div className="max-w-3xl sm:pl-16">
+                                            <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-[#D5D7D1] to-[#8DB244] bg-clip-text text-transparent mb-4 leading-tight">
+                                                On-Demand
+                                            </h1>
+                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
+                                                <h2 className="text-3xl sm:text-5xl font-bold text-white">
+                                                    NVIDIA GB200 NVL72
+                                                </h2>
+                                            </div>
+                                            <div className="flex gap-4 mb-8">
+                                                <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                                                    Launch Now
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className="absolute bottom-16 right-16">
+                                            <p className="text-white text-lg text-right leading-relaxed">
+                                                Aiming to Next-Generation AI and<br />
+                                                Computing Technologies
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         );
                     })}
@@ -355,9 +428,8 @@ export default function TestIndex() {
                             handleManualSlideChange(prevIndex);
                         }}
                         disabled={isTransitioning}
-                        className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
-                        }`}
+                        className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full flex items-center justify-center transition-all duration-300 ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+                            }`}
                         aria-label="Previous slide"
                     >
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -372,9 +444,8 @@ export default function TestIndex() {
                             handleManualSlideChange(nextIndex);
                         }}
                         disabled={isTransitioning}
-                        className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
-                        }`}
+                        className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full flex items-center justify-center transition-all duration-300 ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+                            }`}
                         aria-label="Next slide"
                     >
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -390,13 +461,11 @@ export default function TestIndex() {
                                     key={index}
                                     onClick={() => handleManualSlideChange(index)}
                                     disabled={isTransitioning}
-                                    className={`w-3 h-3 rounded-full transition-all duration-300 transform will-change-transform ${
-                                        index === currentSlide
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 transform will-change-transform ${index === currentSlide
                                             ? 'bg-[#80B224] scale-125'
                                             : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-                                    } ${
-                                        isTransitioning ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'
-                                    }`}
+                                        } ${isTransitioning ? 'opacity-70' : 'cursor-pointer'
+                                        }`}
                                 />
                             ))}
                         </div>
@@ -426,7 +495,7 @@ export default function TestIndex() {
                                                 className="w-full h-auto rounded-lg"
                                             />
                                         </div>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
 
@@ -435,18 +504,15 @@ export default function TestIndex() {
                                 <div className="space-y-4">
                                     {/* Step-by-Step Collaboration (1) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${
-                                                activeTab === 1
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onMouseEnter={() => setActiveTab(1)}
                                     >
-                                        <h3 className={`text-lg font-semibold ${
-                                            activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
+                                        <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Step-by-Step Collaboration</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${
-                                            activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
                                                 Each model builds on the last to deliver sharper logic and greater precision.
@@ -455,18 +521,15 @@ export default function TestIndex() {
                                     </div>
                                     {/* Parallel Intelligence (2) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${
-                                                activeTab === 2
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onMouseEnter={() => setActiveTab(2)}
                                     >
-                                        <h3 className={`text-lg font-semibold ${
-                                            activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
+                                        <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Parallel Intelligence</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${
-                                            activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
                                                 Unlock simultaneous responses from different AI models-gain fresh perspectives, compare solutions, and choose the best answer.
@@ -476,18 +539,15 @@ export default function TestIndex() {
 
                                     {/* Chat Controls (3) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${
-                                                activeTab === 3
+                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 3
                                                 ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
                                                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onMouseEnter={() => setActiveTab(3)}
                                     >
-                                        <h3 className={`text-lg font-semibold ${
-                                            activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
+                                        <h3 className={`text-lg font-semibold ${activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
                                             }`}>Chat Controls</h3>
-                                        <div className={`overflow-hidden transition-all duration-500 ${
-                                            activeTab === 3 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeTab === 3 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
                                                 Create customized models through control buttons. Such as Agent Builder, Prompts, Memories, Attach Files, Bookmarks and so on.
@@ -627,8 +687,8 @@ export default function TestIndex() {
                                         <>
                                             <div className="flex items-center space-x-4 mb-6">
                                                 <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
-                                                <span 
-                                                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium cursor-pointer hover:bg-green-200 transition-colors" 
+                                                <span
+                                                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium cursor-pointer hover:bg-green-200 transition-colors"
                                                     onClick={() => window.location.href = '/pricing'}
                                                 >
                                                     {currentProduct.price}
