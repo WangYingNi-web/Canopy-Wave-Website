@@ -193,12 +193,12 @@ export default function Index() {
   return (
     <main>
       <Head>
-        <title>Canopy Wave - Instant GPU Cluster for Enterprise AI</title>
-        <meta name="description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
+        <title>Leading GPU Cloud Provider AI Infrastructure Company for Enterprise AI Solutions & Machine Learning | Canopy Wave</title>
+        <meta name="description" content="As a trusted GPU Cloud Provider and AI infrastructure company.we offer high-performance cost-effective solutions tailored to your machine learning, data science, and AI needs." />
 
         {/* 页面特定的Open Graph标签 */}
-        <meta property="og:title" content="Canopy Wave - Instant GPU Cluster for Enterprise AI" />
-        <meta property="og:description" content="Leading provider of GPU computing, cloud infrastructure, and AI solutions with sustainable data centers in Iceland." />
+        <meta property="og:title" content="Leading GPU Cloud Provider AI Infrastructure Company for Enterprise AI Solutions & Machine Learning | Canopy Wave" />
+        <meta property="og:description" content="As a trusted GPU Cloud Provider and AI infrastructure company.we offer high-performance cost-effective solutions tailored to your machine learning, data science, and AI needs." />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:image" content="https://canopywave.com/home_banner.svg" />
         <meta property="og:image:width" content="1200" />

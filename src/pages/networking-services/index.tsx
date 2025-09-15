@@ -16,7 +16,10 @@ export default function NetworkingServices() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave - Networking Services That Enhance Performance</title>
+                <title>AI Networking with InfiniBand & RoCEv2: Building Faster AI Infrastructures | Canopy Wave</title>
+                <meta name="description" content="Advanced networking for AI.Discover how InfiniBand and RoCEv2 AI networking provide low-latency, high-throughput solutions for AI workloads" />
+                <meta property="og:title" content="AI Networking with InfiniBand & RoCEv2: Building Faster AI Infrastructures | Canopy Wave" />
+                <meta property="og:description" content="Advanced networking for AI.Discover how InfiniBand and RoCEv2 AI networking provide low-latency, high-throughput solutions for AI workloads" />
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <div className="w-full h-[520px] relative mt-[84px] bg-[#EDF2E4]">

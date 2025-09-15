@@ -13,7 +13,10 @@ export default function SolutionsPage() {
     return (
         <main className="min-h-screen relative text-gray-600">
             <Head>
-                <title>Private Cloud and GPUs deployment</title>
+                <title>Boost Your AI Performance with a Tailored Private Cloud Deployment | Canopy Wave</title>
+                <meta name="description" content="Discover how private cloud and gpu deployment provides secure, scalable, and customizable infrastructure for businesses looking to enhance their operations." />
+                <meta property="og:title" content="Boost Your AI Performance with a Tailored Private Cloud Deployment | Canopy Wave" />
+                <meta property="og:description" content="Discover how private cloud and gpu deployment provides secure, scalable, and customizable infrastructure for businesses looking to enhance their operations." />
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <Header />

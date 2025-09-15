@@ -17,7 +17,9 @@ export default function StorageServices() {
     <main className="min-h-screen text-gray-600 relative">
       <Header />
       <Head>
-        <title>Canopy Wave - Storage for AI</title>
+        <title>AI Storage - Optimized Storage Solutions for AI Workloads | Canopy Wave</title>
+        <meta name="description" content="Optimize your AI workflows with Storage for AI. AI Storage solutions built for speed and efficiency.Ensure your AI projects have the storage they need with high-performance solutions for AI data management." />
+        <meta property="og:title" content="AI Storage - Optimized Storage Solutions for AI Workloads | Canopy Wave" />
         <link rel="preload" href="/storage/banner.svg" as="image" type="image/svg+xml" />
       </Head>
       {/* Hero Section */}

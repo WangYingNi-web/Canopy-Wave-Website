@@ -13,7 +13,10 @@ export default function NetworkingHardwarePage() {
     return (
         <main className="min-h-screen relative text-gray-600">
             <Head>
-                <title>Networking Hardware Solution</title>
+                <title>Future-Ready Networking Hardware Solutions for AI Infrastructure | Canopy Wave</title>
+                <meta name="description" content="Empower your AI infrastructure with networking hardware solutions that ensure seamless connectivity, faster training, scalability, and reliability." />
+                <meta property="og:title" content="Future-Ready Networking Hardware Solutions for AI Infrastructure | Canopy Wave" />
+                <meta property="og:description" content="Empower your AI infrastructure with networking hardware solutions that ensure seamless connectivity, faster training, scalability, and reliability." />
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <Header />

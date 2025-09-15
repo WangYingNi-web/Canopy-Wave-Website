@@ -13,7 +13,9 @@ export default function SolutionsPage() {
     return (
         <main className="min-h-screen relative text-gray-600">
             <Head>
-                <title>Canopy Wave - AI Model Training</title>
+                <title>Best GPUs for Model Training Accelerate Your AI Projects | Canopy Wave</title>
+                <meta name="description" content="Find the perfect GPUs for model training to accelerate your AI and machine learning models. Boost performance and reduce training time with top-tier GPUs." />
+                <meta property="og:title" content="Best GPUs for Model Training Accelerate Your AI Projects | Canopy Wave" />
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <Header />

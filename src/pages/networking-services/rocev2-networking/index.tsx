@@ -56,9 +56,10 @@ export default function RoCEv2NetworkingPage() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave | RoCEv2 Networking</title>
+                <title>RoCEv2: Revolutionizing RDMA Networking for AI and Data Centers | Canopy Wave</title>
                 {/* <link rel="preload" href="/gb200-nvl72/nvidia-gb200-nvl72.webp" as="image" type="image/svg+xml" /> */}
-                <meta name="description" content="Experience the power of NVIDIA GB200 NVL72 with Canopy Wave's on-demand GPU clusters. Advanced AI acceleration for next-generation computing." />
+                <meta property="og:title" content="RoCEv2: Revolutionizing RDMA Networking for AI and Data Centers | Canopy Wave" />
+                <meta name="description" content="Harness the power of RDMA RoCEv2 networking to accelerate data transfer. Achieve low-latency, high-throughput performance in your network with RoCEv2 for demanding workloads like AI and HPC." />
             </Head>
             {/* Hero Section */}
             <div className="w-full h-[550px] lg:h-[520px] mt-[84px] bg-gradient-to-r from-[#e7f8e2] to-white overflow-hidden">

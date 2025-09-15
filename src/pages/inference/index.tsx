@@ -13,7 +13,9 @@ export default function SolutionsPage() {
     return (
         <main className="min-h-screen relative text-gray-600">
             <Head>
-                <title>Canopy Wave - Secure AI Inference</title>
+                <title>Boost Your AI Performance with the Leading AI Inference Platform | Canopy Wave</title>
+                <meta name="description" content="Experience the power of our AI inference platform, designed to deliver faster, real-time predictions and optimize your AI models for better results" />
+                <meta property="og:title" content="Boost Your AI Performance with the Leading AI Inference Platform | Canopy Wave" />
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <Header />

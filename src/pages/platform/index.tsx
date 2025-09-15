@@ -15,7 +15,9 @@ export default function PlatformPage() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Empower AI with Our Platform for Peak Performance</title>
+                <title>Comprehensive DCIM and AI Cloud Platform for Future-Ready Data Centers | Canopy Wave</title>
+                <meta name="description" content="Leverage cutting-edge AI cloud platform and DCIM capabilities to elevate your data center’s reliability, scalability, and operational effectiveness." />
+                <meta property="og:title" content="Comprehensive DCIM and AI Cloud Platform for Future-Ready Data Centers | Canopy Wave" />
                 <link rel="preload" href="/platform/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             {/* Hero Section */}

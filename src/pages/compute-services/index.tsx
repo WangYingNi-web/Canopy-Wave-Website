@@ -44,7 +44,10 @@ export default function ComputeServicesPage() {
         <main className="min-h-screen text-gray-600">
             <Header />
             <Head>
-                <title>Canopy Wave - GPUs for AI Models and Innovation</title>
+                <title>GPU Cloud Cluster- Unleash Virtualized GPU Power for Maximum Output | Canopy Wave</title>
+                <meta name="description" content="Unlock the power of GPU Cloud with cutting-edge virtual GPU technology. Accelerate AI, machine learning, and data processing tasks with our GPU Cloud cluster, delivering unmatched computational power in the cloud." />
+                <meta property="og:title" content="GPU Cloud Cluster- Unleash Virtualized GPU Power for Maximum Output | Canopy Wave" />
+                <meta property="og:description" content="Unlock the power of GPU Cloud with cutting-edge virtual GPU technology. Accelerate AI, machine learning, and data processing tasks with our GPU Cloud cluster, delivering unmatched computational power in the cloud." />
                 <link rel="preload" href="/compute/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             {/* Hero Section */}

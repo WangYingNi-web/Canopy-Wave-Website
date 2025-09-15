@@ -16,7 +16,11 @@ export default function NetworkingServices() {
         <main className="min-h-screen text-gray-600 relative">
             <Header />
             <Head>
-                <title>Canopy Wave | InfiniBand Networking</title>
+                <title>InfiniBand Networking: NVIDIA Quantum InfiniBand for Data Centers AI & HPC | Canopy Wave</title>
+                <meta name="description" content="Enhance your infrastructure with InfiniBand networking by NVIDIA. Learn how NVIDIA Quantum InfiniBand delivers low-latency, high-throughput solutions for AI, data centers, and HPC." />
+                <meta property="og:title" content="InfiniBand Networking: NVIDIA Quantum InfiniBand for Data Centers AI & HPC | Canopy Wave" />
+                <meta property="og:description" content="Enhance your infrastructure with InfiniBand networking by NVIDIA. Learn how NVIDIA Quantum InfiniBand delivers low-latency, high-throughput solutions for AI, data centers, and HPC." />
+                {/* <meta property="og:image" content="https://canopywave-iwebsite.vercel.app/og-image.png" /> */}
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
             </Head>
             <div className="w-full h-[360px] sm:h-[520px] lg:h-[520px] relative mt-[84px] bg-[#e7f8e2]">

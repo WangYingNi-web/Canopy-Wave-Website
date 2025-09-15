@@ -14,9 +14,10 @@ export default function SolutionsPage() {
     return (
         <main className="min-h-screen relative text-gray-600">
             <Head>
-                <title>Canopy Wave - Solutions</title>
+                <title>Optimize Your Rendering Workflow with Cloud-Based and CPU-Based Rendering Solutions | Canopy Wave</title>
                 {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
-                <meta name="description" content="Canopy Wave Solutions" />
+                <meta property="og:title" content="Optimize Your Rendering Workflow with Cloud-Based and CPU-Based Rendering Solutions | Canopy Wave" />
+                <meta name="description" content="Discover cloud-based rendering solutions for smoother workflows.Supercharge your rendering projects with gpu-based rendering services." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

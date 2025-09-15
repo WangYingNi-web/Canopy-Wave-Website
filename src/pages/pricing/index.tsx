@@ -14,7 +14,10 @@ export default function PricingPage() {
     return (
         <main className="min-h-screen bg-[#F9F9F9] text-gray-600">
             <Head>
-                <title>Canopy Wave - GPU Cloud Pricing</title>
+                <title>GPU Cloud Pricing: Affordable NVIDIA GPU Plans for AI & HPC | Canopy Wave</title>
+                <meta name="description" content="Discover NVIDIA GPU cloud pricing tailored for AI, machine learning, and deep learning applications.Learn how cloud GPU cost structures can save you money without compromising performance." />
+                <meta property="og:title" content="GPU Cloud Pricing: Affordable NVIDIA GPU Plans for AI & HPC | Canopy Wave" />
+                <meta property="og:description" content="Discover NVIDIA GPU cloud pricing tailored for AI, machine learning, and deep learning applications.Learn how cloud GPU cost structures can save you money without compromising performance." />
                 <link rel="preload" href="/about/banner.svg" as="image" type="image/svg+xml" />
             </Head>
             <Header />
@@ -102,7 +105,7 @@ export default function PricingPage() {
                                         <td className="py-4 text-center">28 TB</td>
                                         <td className="py-4 text-center">1</td>
                                         <td className="py-4 text-center font-semibold">
-                                        $9.00
+                                            $9.00
                                         </td>
                                     </tr>
                                 </tbody>
