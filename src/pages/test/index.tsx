@@ -1215,7 +1215,7 @@ export default function TestIndex() {
                                 <p className="text-sm text-gray-600 mb-12">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
                                 <button
                                     onClick={() => window.location.href = '/events/ai-agent-summit-keynote'}
-                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                    className="absolute bottom-6 left-6 bg-[#5C970F] opacity-80 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
                                 >
                                     Learn More
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1233,7 +1233,7 @@ export default function TestIndex() {
                                 <p className="text-sm text-gray-600 mb-12">by James Liao, CTO of Canopy Wave, and Severi Tikkas, CTO of ConfidentialMind</p>
                                 <button
                                     onClick={() => window.location.href = '/blog/joint-blog-accelerate-enterprise-ai'}
-                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                    className="absolute bottom-6 left-6 bg-[#5C970F] opacity-80 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
                                 >
                                     Learn More
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1254,7 +1254,7 @@ export default function TestIndex() {
                                 <p className="text-sm text-gray-600 mb-12">Foundry BioSciences Case Study</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/case-study'}
-                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                    className="absolute bottom-6 left-6 bg-[#5C970F] opacity-80 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
                                 >
                                     Learn More
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1272,7 +1272,7 @@ export default function TestIndex() {
                                 <p className="text-sm text-gray-600 mb-12">Step-by-step guide for local deployment</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/tutorials/how-to-run-the-gpt-oss-locally-on-a-canopy-wave-vm'}
-                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                    className="absolute bottom-6 left-6 bg-[#5C970F] opacity-80 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
                                 >
                                     Learn More
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1290,7 +1290,7 @@ export default function TestIndex() {
                                 <p className="text-sm text-gray-600 mb-12">This portfolio outlines modular hardware components and recommended configurations</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/docs/products/canopy-wave-gpu'}
-                                    className="absolute bottom-6 left-6 bg-[#333333] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
+                                    className="absolute bottom-6 left-6 bg-[#5C970F] opacity-80 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6B9A1F] transition-colors cursor-pointer flex items-center gap-2"
                                 >
                                     Learn More
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

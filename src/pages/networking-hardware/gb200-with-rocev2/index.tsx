@@ -16,6 +16,31 @@ export default function GB200WithRoCEv2() {
     // 添加tab状态管理
     const [activeTab, setActiveTab] = React.useState('rocev2');
     const [activeTab2, setActiveTab2] = React.useState('platform');
+    
+    // 添加表单状态管理
+    const [formData, setFormData] = React.useState({
+        message: '',
+        name: '',
+        email: ''
+    });
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+    
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        // 这里可以添加表单提交逻辑
+        console.log('Form submitted:', formData);
+        setTimeout(() => {
+            setIsSubmitting(false);
+            alert('Message sent successfully!');
+            setFormData({ message: '', name: '', email: '' });
+        }, 1000);
+    };
 
     return (
         <main className="min-h-screen text-gray-600 relative">
@@ -27,7 +52,7 @@ export default function GB200WithRoCEv2() {
             {/* Hero Section */}
             <div className="w-full h-[520px] relative mt-[84px] bg-[#EDF2E4]">
                 <Image
-                    src="/solutions/networking-hardware/gb200-with-rocev2/banner.png"
+                    src="/solutions/networking-hardware/gb200-with-rocev2/banner.webp"
                     alt="banner"
                     fill
                     className="object-cover"
@@ -37,12 +62,12 @@ export default function GB200WithRoCEv2() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
                             <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
-                                GB200 Cluster with RoCEv2
+                                GB200: Unleash the true <br /> potential of your infrastructure
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-gray-600 text-l mt-8">
-                                High-performance Network Solution
+                            <p className="text-white text-l mt-8">
+                                Low Latency | High Throughput | Optimized for AI and HPC
                             </p>
                         </SlideUp>
 
@@ -97,7 +122,7 @@ export default function GB200WithRoCEv2() {
                                     Performance Bottlenecks
                                 </h3>
                                 <p className="text-l text-gray-600 leading-relaxed">
-                                    Network latency between GPUs is the key bottleneck. This leads to idle GPUs and low MFU (Model FLOPs Utilization).
+                                    Network latency between GPUs is the key bottleneck. This leads to idle GPUs and low Model FLOPs Utilization.
                                 </p>
                             </div>
                         </SlideUp>
@@ -130,7 +155,7 @@ export default function GB200WithRoCEv2() {
             <div className='bg-[#F9F9F9] py-12'>
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">GB200 Cluster with RoCEv2 High- <br /> performance Network Solution</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">Take your infrastructure further <br /> than ever before</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-10 text-l">
@@ -141,7 +166,7 @@ export default function GB200WithRoCEv2() {
                     <SlideUp>
                         <div className="mb-16 group">
                             <Image
-                                src="/solutions/networking-hardware/gb200-with-rocev2/gb200-table.png"
+                                src="/solutions/networking-hardware/gb200-with-rocev2/gb200-table.webp"
                                 alt="NVIDIA GB200 NVL72 Cluster"
                                 width={1300}
                                 height={400}
@@ -157,13 +182,11 @@ export default function GB200WithRoCEv2() {
             <div className='bg-[#F9F9F9]'>
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">On-Demand High-Performance GPU <br /> Clusters to Shorten R&D Cycles</h2>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">Aaccelerate trillion-parameter model training</h2>
                     </SlideUp>
                     <SlideUp>
                         <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-l">
-                            Introducing NVIDIA's next-gen GB200, built on a "1 Grace CPU + 2 Blackwell GPU" heterogeneous architecture.
-                            With 384GB of memory (4.8x more than the H100) and 3.3x the memory bandwidth of the H200, it's a massive leap forward.
-                            The GB200 achieves 5 PFLOPS in FP16 dense compute and 10 POPS in INT8, enabling real-time inference for models with trillions of parameters.
+                            Access cutting-edge GB200 GPUs on-demand to accelerate training computations and<br />help clients shorten their R&D cycles
                         </p>
                     </SlideUp>
                     <SlideUp>
@@ -176,7 +199,7 @@ export default function GB200WithRoCEv2() {
                     <SlideUp>
                         <div className="mb-16 group">
                             <Image
-                                src="/solutions/networking-hardware/gb200-with-rocev2/gb200.png"
+                                src="/solutions/networking-hardware/gb200-with-rocev2/gb200.webp"
                                 alt="NVIDIA GB200 NVL72 Cluster"
                                 width={1300}
                                 height={400}
@@ -195,7 +218,7 @@ export default function GB200WithRoCEv2() {
                     <SlideUp>
                         <div className="text-center mb-12">
                             <h2 className="text-3xl sm:text-4xl font-black mb-4">
-                                RoCEv2 + NVLink breaks through<br />performance bottlenecks
+                                Connecting every GPU with ultra-fast speed
                             </h2>
                         </div>
                     </SlideUp>
@@ -395,7 +418,7 @@ export default function GB200WithRoCEv2() {
                                         <h3 className="text-lg font-semibold text-gray-700">Planning & Design</h3>
                                     </div>
                                     <p className="text-sm text-gray-600 leading-relaxed">
-                                        Create comprehensive documentation based on the client's data center topology, including detailed cabling plans and an IP addressing scheme.
+                                        Create documentation based on the client's data center topology, including detailed cabling plans and an IP addressing scheme.
                                     </p>
                                 </div>
                             </div>
@@ -495,7 +518,7 @@ export default function GB200WithRoCEv2() {
                                 <div className="p-6">
                                     <h3 className="text-lg font-bold text-gray-800 mb-3">Tutorials</h3>
                                     <p className="text-gray-600 mb-4">
-                                        How to Deploy Large AI Models with One Click Using canopywave's GPU Resources
+                                        How to Leverage Canopy Wave’s Resources to Use AI
                                     </p>
 
                                 </div>
@@ -575,30 +598,89 @@ export default function GB200WithRoCEv2() {
 
             {/* Ready to Get Started Section */}
             <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
-                <BackgroundTransition
-                    defaultImage="/contact-section1.webp"
-                    activeImage="/contact-section2.webp"
-                    className="w-full h-full"
-                />
                 <div className="relative z-30 container mx-auto px-4">
-                    <div className="relative max-w-7xl mx-auto">
+                    <div className="relative max-w-4xl mx-auto">
                         <SlideUp>
-                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-6">Ready to get started?</h2>
+                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-4 text-center">Leave Us a Message</h2>
                         </SlideUp>
                         <SlideUp>
-                            <div className="text-gray-600 mb-8 mx-auto text-l flex flex-col">
-                                <span className="block sm:hidden">For more information or to request a customized solution, feel free to contact sales</span>
-                                <span className="hidden sm:block">For more information or to request a customized solution, feel free to contact sales</span>
-                            </div>
+                            <p className="text-gray-600 mb-8 text-center text-lg">
+                                Have questions about our GB200 with RoCEv2 solutions? We'd love to hear from you.
+                            </p>
                         </SlideUp>
                         <SlideUp>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                {/* <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                                    Launch GPU instances
-                                </Button> */}
-                                <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.location.href = '/contact'}>
-                                    Contact Sales
-                                </Button>
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                                        Message *
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows={4}
+                                        required
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8CC63F] focus:border-transparent resize-none"
+                                        placeholder="Tell us about your requirements..."
+                                    />
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                                            Your Name *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            required
+                                            value={formData.name}
+                                            onChange={handleInputChange}
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8CC63F] focus:border-transparent"
+                                            placeholder="Your full name"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                            Your Email *
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8CC63F] focus:border-transparent"
+                                            placeholder="your.email@company.com"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="text-center">
+                                    <Button 
+                                        type="submit" 
+                                        disabled={isSubmitting}
+                                        className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f] px-8 py-3 text-white font-medium rounded-lg transition-colors"
+                                    >
+                                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    </Button>
+                                </div>
+                            </form>
+                        </SlideUp>
+                        <SlideUp>
+                            <div className="mt-8 text-center text-sm text-gray-500">
+                                <p className="mb-2">Your message will be sent to our sales team for prompt assistance.</p>
+                                <p>
+                                    Direct contact: 
+                                    <a href="mailto:sales@canopywave.com" className="text-[#8CC63F] hover:underline ml-1">
+                                        sales@canopywave.com
+                                    </a>
+                                    {' | '}
+                                    <a href="mailto:Lumi.Xiao@canopywave.com" className="text-[#8CC63F] hover:underline">
+                                        Lumi.Xiao@canopywave.com
+                                    </a>
+                                </p>
                             </div>
                         </SlideUp>
                     </div>
