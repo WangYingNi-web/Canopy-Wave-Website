@@ -21,7 +21,7 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
             {blogPost.description}
           </div>
         </SlideUp>
-        <div className="w-full mb-12">
+        <div className="max-w-[700px] mb-12">
           <SlideUp>
             <img
               src={

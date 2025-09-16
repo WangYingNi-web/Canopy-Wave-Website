@@ -1725,7 +1725,7 @@ export default function BlogDetail() {
               content: [
                 'AI hallucinations occur when a model generates information that is incorrect or fabricated, yet presents it with confidence. In practical terms, this could mean an AI-powered chatbot providing an inaccurate explanation or a virtual assistant inventing details that don\'t exist. While sometimes harmless, in enterprise contexts these errors can impact trust, compliance, and decision-making.',
                 'In recent years, as large language models are deployed in customer support, financial analysis, and medical consultation, the risks of AI hallucinations have become more visible. For example, financial institutions have reported models citing nonexistent statistics in complex portfolio analyses, while medical diagnostic systems have occasionally suggested unverified treatments.',
-                <img key="transparent-evaluation" src="/blog/transparent-evaluation.webp" alt="Transparent Evaluation" className="w-full h-auto my-8 rounded-lg" />
+                <img key="transparent-evaluation" src="/blog/transparent-evaluation.webp" alt="Transparent Evaluation" className="w-full max-w-[700px] h-auto my-8 rounded-lg" />
               ]
             },
             {
@@ -1746,7 +1746,7 @@ export default function BlogDetail() {
                 'B. Transparent Evaluation Metrics',
                 'OpenAI recommends new benchmarks that reward accuracy and penalize overconfident guesses. Transparency in reporting hallucination rates helps organizations choose the right AI model for their needs.',
                 'OpenAI has already begun publishing hallucination-rate data in its Safety Evaluations Hub, giving companies a more quantitative basis for model selection.',
-                <img key="evaluation-metrics" src="/blog/evaluation-metrics.webp" alt="Evaluation Metrics" className="w-full h-auto my-8 rounded-lg" />
+                <img key="evaluation-metrics" src="/blog/evaluation-metrics.webp" alt="Evaluation Metrics" className="w-full max-w-[700px] h-auto my-8 rounded-lg" />
               ]
             },
             {
