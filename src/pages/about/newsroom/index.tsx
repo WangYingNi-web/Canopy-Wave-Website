@@ -55,13 +55,6 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        // {
-        //     id: 15,
-        //     title: "Revolutionizing Elderly Care with AI",
-        //     description: "AI and Elderly Care: Warm Guardianship Empowered by Technology",
-        //     date: "September 17, 2025",
-        //     image: "/blog/ai-elderly-care.webp"
-        // },
         {
             id: 14,
             title: "Decoding AI Hallucinations",

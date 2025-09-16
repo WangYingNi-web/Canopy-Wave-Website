@@ -10,6 +10,7 @@ import React from 'react';
 import SlideUp from '@/components/slide';
 import FadeIn from '@/components/FadeIn';
 import BackgroundTransition from '@/components/BackgroundTransition';
+import axios from "axios";
 
 export default function GB200WithRoCEv2() {
     useScrollToHash();
@@ -24,6 +25,8 @@ export default function GB200WithRoCEv2() {
         email: ''
     });
     const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
+    const [statusMessage, setStatusMessage] = React.useState('');
     
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -33,13 +36,54 @@ export default function GB200WithRoCEv2() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // 这里可以添加表单提交逻辑
-        console.log('Form submitted:', formData);
-        setTimeout(() => {
+        
+        try {
+            const emailBody = `
+                name: ${formData.name}
+                email: ${formData.email}
+                message: ${formData.message}
+            `;
+
+            const response = await axios.post(
+                'https://sequoia-paas.canopywave.io/api/v1/send_email',
+                {
+                    subject: 'GB200 with RoCEv2 Inquiry',
+                    // recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    recipients: ['wangyingni@canopywave.com'],
+                    body: emailBody
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer alsfkjalsdkfjldksjfalksdjfljk13123'
+                    }
+                }
+            );
+            
+            if (response.status === 200) {
+                setSubmitStatus('success');
+                setStatusMessage('Message sent successfully!');
+                setFormData({ message: '', name: '', email: '' });
+                // 3秒后清除状态消息
+                setTimeout(() => {
+                    setSubmitStatus('idle');
+                    setStatusMessage('');
+                }, 3000);
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            setSubmitStatus('error');
+            setStatusMessage('Failed to send message. Please try again.');
+            // 5秒后清除错误消息
+            setTimeout(() => {
+                setSubmitStatus('idle');
+                setStatusMessage('');
+            }, 5000);
+        } finally {
             setIsSubmitting(false);
-            alert('Message sent successfully!');
-            setFormData({ message: '', name: '', email: '' });
-        }, 1000);
+        }
     };
 
     return (
@@ -665,23 +709,30 @@ export default function GB200WithRoCEv2() {
                                     >
                                         {isSubmitting ? 'Sending...' : 'Send Message'}
                                     </Button>
+                                    
+                                    {/* 状态消息显示 */}
+                                    {submitStatus !== 'idle' && (
+                                        <div className={`mt-4 p-4 rounded-lg text-center transition-all duration-300 ${
+                                            submitStatus === 'success' 
+                                                ? 'bg-green-50 text-green-700 border border-green-200' 
+                                                : 'bg-red-50 text-red-700 border border-red-200'
+                                        }`}>
+                                            <div className="flex items-center justify-center gap-2">
+                                                {submitStatus === 'success' ? (
+                                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                    </svg>
+                                                ) : (
+                                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                                    </svg>
+                                                )}
+                                                <span className="font-medium">{statusMessage}</span>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </form>
-                        </SlideUp>
-                        <SlideUp>
-                            <div className="mt-8 text-center text-sm text-gray-500">
-                                <p className="mb-2">Your message will be sent to our sales team for prompt assistance.</p>
-                                <p>
-                                    Direct contact: 
-                                    <a href="mailto:sales@canopywave.com" className="text-[#8CC63F] hover:underline ml-1">
-                                        sales@canopywave.com
-                                    </a>
-                                    {' | '}
-                                    <a href="mailto:Lumi.Xiao@canopywave.com" className="text-[#8CC63F] hover:underline">
-                                        Lumi.Xiao@canopywave.com
-                                    </a>
-                                </p>
-                            </div>
                         </SlideUp>
                     </div>
                 </div>

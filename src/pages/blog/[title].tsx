@@ -1769,87 +1769,6 @@ export default function BlogDetail() {
           ]
         }
 
-      case 'revolutionizing-elderly-care-with-ai':
-        return {
-          id: 15,
-          title: 'Revolutionizing Elderly Care with AI',
-          description: 'AI and Elderly Care: Warm Guardianship Empowered by Technology',
-          sections: [
-            {
-              title: '',
-              content: [
-                'Against the backdrop of a continuously intensifying global aging trend, elderly care has become a focal point of societal attention. Artificial intelligence (AI), as a core technological driver, is reshaping the operational models and service experiences of elderly care through various innovations such as sensor fusion, machine learning, and natural language processing. This article will systematically elaborate on the core applications of AI in elderly care, the technical challenges it faces, and future development trends. We will also introduce globally representative AI care cases from a technological perspective, highlighting AI as the core engine driving the intelligent evolution of care systems.',
-              ],
-            },
-            {
-              title: 'I. Core Applications of AI Technology in Elderly Care',
-              content: [
-                'AI is no longer just an auxiliary tool but a core force driving care systems towards being more intelligent, proactive, and personalized. Its applications in elderly care are mainly reflected in the following aspects:',
-              ],
-            },
-            {
-              title: 'Intelligent Health Monitoring: From Passive Collection to Active Early Warning',
-              content: [
-                'AI-powered wearable devices, equipped with multimodal sensors, collect key physiological parameters such as heart rate, blood pressure, and blood oxygen levels using optical and bioimpedance technologies. These are analyzed in real-time by on-device (edge computing) AI models for deviations in health indicators. When data exceeds safety thresholds, the system automatically triggers a tiered alarm mechanism (prioritizing notifications to family members, then linking with community medical institutions), achieving a technological leap from "passive monitoring" to "active early warning."',
-                'Case: The fall detection AI model in the Apple Watch uses a three-axis gyroscope to collect motion trajectory data. Combined with an algorithm trained on tens of millions of fall scenarios, it can distinguish between the motion characteristics of "sitting down normally" and "falling accidentally," with a recognition accuracy of over 95%. Once a fall is detected, it automatically initiates an AI-driven process of "location confirmation → emergency contact notification → medical rescue call," enabling a rapid response without human supervision.',
-              ],
-            },
-            {
-              title: 'Smart Home and Behavioral Perception Systems',
-              content: [
-                'Using IoT visual sensors and behavioral sequence analysis algorithms, these systems achieve fine-grained perception of an older adult\'s daily activities. For example, computer vision-based cameras can identify abnormal behaviors (such as prolonged stillness or nighttime wandering). Combined with temporal neural network models, they enable early judgment of potential risks.',
-                'Case: Amazon\'s Alexa Care Hub integrates speech recognition and behavioral modeling AI. It can identify unusual sounds in the home and analyze activity patterns to provide proactive safety alerts.',
-              ],
-            },
-            {
-              title: 'Emotional Companionship and Cognitive Enhancement Systems',
-              content: [
-                'Companion robots equipped with affective computing and generative AI use natural language processing (NLP) to parse emotional keywords in conversations with the elderly. Combined with speech tone recognition technology to determine emotional states, generative AI then generates responses tailored to the elderly\'s context (such as recalling shared topics or recommending nostalgic content). For cognitive training, AI dynamically adjusts the difficulty of memory games based on the user\'s memory level and optimizes training plans through reinforcement learning algorithms, improving the efficiency of delaying cognitive decline by over 30% compared to traditional manual training.',
-                'Case: Japan\'s RoboHon robot integrates multimodal emotion recognition and generative dialogue AI, providing personalized interactions, medication reminders, and entertainment recommendations.',
-              ],
-            },
-            {
-              title: 'Intelligent Assisted Diagnosis and Telemedicine',
-              content: [
-                'Medical AI models for common elderly diseases use computer vision to analyze brain images (e.g., hippocampal atrophy features in Alzheimer\'s disease) and motion posture data (e.g., tremor frequency in Parkinson\'s disease). Combined with structured data from electronic medical records, they build multidimensional diagnostic models. The recognition accuracy for early-stage Alzheimer\'s disease reaches 92%, reducing the missed diagnosis rate by 40% compared to traditional manual diagnosis. Additionally, the AI technology originally from IBM Watson Health, after business integration, continues to support the assisted diagnosis of common elderly diseases through healthcare technology partners, helping to develop personalized treatment plans.',
-              ],
-            },
-            {
-              title: 'II. Technical Challenges Facing AI in Elderly Care',
-              content: [
-                'Despite numerous breakthroughs, AI technology still faces several technical challenges in its implementation:',
-                'Algorithm Generalization: Current AI care models are mostly trained on data from specific populations (e.g., healthy elderly, urban elderly), often fail to adapt to the behavioral characteristics of groups such as individuals with disabilities or rural elderly. For example, the recognition accuracy for dialect speech interaction is only 60%, and the misjudgment rate for abnormal behaviors of wheelchair users exceeds 35%.',
-                'Technical Bottlenecks in Emotional Understanding: While AI can recognize emotions through data, it cannot truly understand the deep-seated needs behind them (e.g., an elderly person saying "I\'m fine" may actually mean they don\'t want to trouble their children). Existing affective computing models can only achieve superficial "behavior-emotion" associations, lacking deep "context-intent" reasoning.',
-                'Barriers in Multimodal Data Fusion Technology: AI care requires integrating multi-source data from wearables, smart homes, cameras, etc., but data formats and collection frequencies vary greatly across devices. Existing fusion algorithms suffer from delays in data synchronization and correlation analysis (average delay of 15 seconds), affecting emergency response speed.',
-                'User Adoption and Interaction Design: A key barrier is that the interaction design of many AI devices does not match the cognitive habits of the elderly. This needs to be optimized through AI adaptive interaction technologies (e.g., dynamically adjusting interfaces and speech speed based on the elderly\'s operating habits).',
-              ],
-            },
-            {
-              title: 'III. Development Trends and Future Prospects of AI Care Technology',
-              content: [
-                'The future AI care system will evolve along the following technological paths, driving a fundamental transformation in care models:',
-                'Popularization of End-Cloud Collaborative AI Architecture: The architecture of "end-side AI processing private data + cloud-side AI conducting large-scale training and model optimization" will be adopted. This hybrid model not only ensures data privacy but also enhances the system\'s capabilities through monthly model iterations. For instance, the end-side processes real-time physiological data, while the cloud-side analyzes long-term health trends.',
-                'Full-Process Care Empowered by Large Models: Medical large models (such as the medical version of GPT-4 and the domestic "Yilian" large model) will be integrated into the entire care process, enabling closed-loop services from monitoring to first-aid guidance. For example, upon detecting a fall, the AI can provide on-site first-aid guidance based on the knowledge of these LLMs and generate records to be synchronized to hospitals.',
-                'Highly Personalized Service Customization: By continuously learning users\' habits (such as wake-up time and medication preferences), the AI will automatically optimize service content and delivery mechanisms, realizing truly "one person, one strategy" personalized care.',
-              ],
-            },
-            {
-              title: 'IV. Globally Representative AI Care Technology Cases',
-              content: [
-                'In the field of AI elderly care, several technological solutions have achieved large-scale application through innovative algorithms and system designs. For example, Intuition Robotics\' ElliQ companion robot, based on a Transformer architecture for dialogue generation AI and a multimodal emotion recognition model (integrating voice and facial micro-expression analysis), achieves dialogue interactions with a naturalness score of 4.8/5 (human evaluation) and an emotion recognition accuracy of 88%, a 25% improvement over traditional speech recognition technology.',
-                'CarePredict\'s Tempo wearable device uses an LSTM neural network to build a behavioral sequence analysis AI. The system can identify 12 types of abnormal behaviors (e.g., frequently getting up at night), and predicts fall risk up to 72 hours in advance with a prediction accuracy of 85%.',
-                'Additionally, Zanthion\'s AI care platform, through multi-source sensor data fusion and real-time health risk modeling, achieves an abnormal behavior detection response time of less than 3 seconds, providing families and nursing institutions with a highly real-time and reliable comprehensive care solution.',
-              ],
-            },
-            {
-              title: 'V. Conclusion',
-              content: [
-                'AI technology is fundamentally changing the underlying logic and service forms of elderly care, shifting from traditional "manual response" to "intelligent proactivity." Although technical bottlenecks remain in areas such as algorithm generalization, emotional understanding, and data fusion, with the continuous evolution of technologies like edge-cloud collaboration, large models, and federated learning, AI is expected to provide more precise, warm, and efficient care services while ensuring privacy and reducing costs.',
-                'In the future, AI will not only be a technological tool but also the foundational infrastructure for building an intelligent and humanized aging society.',
-              ],
-            },
-          ],
-        }
 
       default:
         return null
@@ -1969,7 +1888,7 @@ export default function BlogDetail() {
         <meta key="og-site_name" property="og:site_name" content="Canopy Wave" />
 
         {/* 特殊页面的额外元数据 - 使用条件渲染 */}
-        {title === 'Decoding AI Hallucinations' && (
+        {title === 'decoding-ai-hallucinations' && (
           <>
             <meta key="special-title" name="title" content="AI Hallucinations：Core Causes and Their Solutions" />
             <meta key="special-description" name="description" content="AI models sometimes make mistakes—often referred to as hallucinations. OpenAI's recent research sheds light on why this happens and, more importantly, how to fix it." />
@@ -1978,7 +1897,7 @@ export default function BlogDetail() {
             <meta key="special-og-description" property="og:description" content="AI models sometimes make mistakes—often referred to as hallucinations. OpenAI's recent research sheds light on why this happens and, more importantly, how to fix it." />
           </>
         )}
-
+        
         {title === 'revolutionizing-elderly-care-with-ai' && (
           <>
             <meta key="elderly-care-title" name="title" content="Revolutionizing Elderly Care with AI: Warm Guardianship Empowered by Technology" />
