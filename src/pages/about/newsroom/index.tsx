@@ -55,12 +55,26 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 15,
+        //     title: "Revolutionizing Elderly Care with AI",
+        //     description: "AI and Elderly Care: Warm Guardianship Empowered by Technology",
+        //     date: "September 17, 2025",
+        //     image: "/blog/ai-elderly-care.webp"
+        // },
+        {
+            id: 14,
+            title: "Decoding AI Hallucinations",
+            description: "OpenAI's Latest Research: Two Core Causes of AI Hallucinations and Their Solutions",
+            date: "September 16, 2025",
+            image: "/blog/ai-hallucinations.webp"
+        },
         {
             id: 13,
             title: "AI Fine-tuning for Beginners",
             description: "Getting Started: The Simplest Way to Fine-tune Your First AI Model",
-            date: "October 15, 2025",
-            image: "/blog/ai-fine-tuning.png"
+            date: "September 16, 2025",
+            image: "/blog/ai-fine-tuning.webp"
         },
         {
             id: 12,

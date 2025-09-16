@@ -13,13 +13,14 @@ export default function BlogDetail() {
   const router = useRouter()
   const { title } = router.query
 
-  const fullUrl = `https://canopy-wave-website.vercel.app/${router.asPath}`;
+  const fullUrl = `https://canopywave.com/${router.asPath}`;
 
 
   const getBlogPost = (title: string): BlogPost | null => {
     // Decode URL-encoded title to handle colons and other special characters
     const decodedTitle = decodeURIComponent(title);
     switch (decodedTitle) {
+
 
       case 'joint-blog-accelerate-enterprise-ai':
         return {
@@ -115,6 +116,29 @@ export default function BlogDetail() {
                 'The result? A turnkey enterprise AI solution, without the traditional friction.',
                 "If your team is looking to move fast, stay secure, and scale intelligently, this is the shortcut you've been waiting for.",
                 "We're excited to share more updates, success stories, and technical guides soon. Stay tuned.",
+              ],
+            },
+            {
+              title: 'III. Development Trends and Future Prospects of AI Care Technology',
+              content: [
+                'The future AI care system will evolve along the following technological paths, driving a fundamental transformation in care models:',
+                'Popularization of End-Cloud Collaborative AI Architecture: The architecture of "end-side AI processing private data + cloud-side AI conducting large-scale training and model optimization" will be adopted. This hybrid model not only ensures data privacy but also enhances the system\'s capabilities through monthly model iterations. For instance, the end-side processes real-time physiological data, while the cloud-side analyzes long-term health trends.',
+                'Full-Process Care Empowered by Large Models: Medical large models (such as the medical version of GPT-4 and the domestic "Yilian" large model) will be integrated into the entire care process, enabling closed-loop services from monitoring to first-aid guidance. For example, upon detecting a fall, the AI can provide on-site first-aid guidance based on the knowledge of these LLMs and generate records to be synchronized to hospitals.',
+                'Highly Personalized Service Customization: By continuously learning users\' habits (such as wake-up time and medication preferences), the AI will automatically optimize service content and delivery mechanisms, realizing truly "one person, one strategy" personalized care.',
+              ],
+            },
+            {
+              title: 'IV. Globally Representative AI Care Technology Cases',
+              content: [
+                'In the field of AI elderly care, several technological solutions have achieved large-scale application through innovative algorithms and system designs. For example, Intuition Robotics\' ElliQ companion robot, based on a Transformer architecture for dialogue generation AI and a multimodal emotion recognition model (integrating voice and facial micro-expression analysis), achieves dialogue interactions with a naturalness score of 4.8/5 (human evaluation) and an emotion recognition accuracy of 88%, a 25% improvement over traditional speech recognition technology.',
+                'CarePredict\'s Tempo wearable device uses an LSTM neural network to build a behavioral sequence analysis AI. The system can identify 12 types of abnormal behaviors (e.g., frequently getting up at night), and predicts fall risk up to 72 hours in advance with a prediction accuracy of 85%.',
+                'Additionally, Zanthion\'s AI care platform, through multi-source sensor data fusion and real-time health risk modeling, achieves an abnormal behavior detection response time of less than 3 seconds, providing families and nursing institutions with a highly real-time and reliable comprehensive care solution.',
+              ],
+            },
+            {
+              title: 'V. Conclusion',
+              content: [
+                'AI technology is fundamentally changing the underlying logic and service forms of elderly care, shifting from traditional "manual response" to "intelligent proactivity." Although technical bottlenecks remain in areas such as algorithm generalization, emotional understanding, and data fusion, with the continuous evolution of technologies like edge-cloud collaboration, large models, and federated learning, AI is expected to provide more precise, warm, and efficient care services while ensuring privacy and reducing costs. In the future, AI will not only be a technological tool but also the foundational infrastructure for building an intelligent and humanized aging society.',
               ],
             },
           ],
@@ -1346,7 +1370,7 @@ export default function BlogDetail() {
             },
           ]
         }
-      
+
       case 'humanitys-next-partner-the-ai-agent':
         return {
           id: 12,
@@ -1374,7 +1398,7 @@ export default function BlogDetail() {
                 'Despite the promising prospects of AI agents, their path to widespread adoption faces multiple challenges across technical, ethical, and societal dimensions. These challenges directly determine the boundaries and safety of human-machine symbiosis. Technologically, reasoning "hallucinations" and logical biases represent core bottlenecks. Current AI agents rely on large language models (LLMs) for decision-making, yet LLMs frequently err when handling complex causal relationships and precise calculations: Legal agents may confuse "breach of contract liability" with "exemption clauses" when interpreting contract terms, delivering misleading advice; medical agents generating diagnostic plans based on erroneous data could even jeopardize user health. These outputs—seemingly reasonable yet fundamentally flawed—constitute the greatest obstacle to building human-machine trust.',
                 'On the ethical front, the ambiguous assignment of responsibility and privacy risks have sparked widespread controversy. If an AI Agent\'s decisions result in losses, determining liability becomes problematic: Should losses from stocks recommended by an investment Agent be attributed to the developer\'s "failure to refine the risk assessment model," or to the user\'s "lack of independent judgment"? In the event of an accident involving an autonomous driving Agent, should the automaker, the algorithm provider, or the user be held accountable? Currently, no clear global regulations exist to govern these issues. Simultaneously, AI agents require access to vast amounts of sensitive data—personal agents store users\' health, financial, and scheduling information, while enterprise agents hold core business data. Any data breach or misuse could have severe consequences. Striking a balance between “data-driven operations” and “privacy protection” is a critical challenge for human-machine symbiosis.',
                 'At the societal level, job displacement and the skills gap are driving transformative pressures. The substitution effect of AI agents on repetitive, process-oriented roles is becoming increasingly evident: customer service agents can handle most standardized inquiries, replacing traditional customer support positions; administrative agents can automatically complete tasks like “expense review → meeting scheduling → document archiving,” reducing the workload for administrative staff; Data entry agents can replace manual form filling and information compilation. While technological progress creates new roles like “AI agent trainers” and “AI operations specialists,” the unemployment risk for low-skilled workers intensifies in the short term. How to help this group adapt to the new human-machine symbiosis environment through vocational training and educational reform has become a challenge society must collectively address.',
-              <img key="human-illustration" src="/blog/human-illustration.webp" alt="Human Illustration" className="w-full h-auto my-8 rounded-lg" />
+                <img key="human-illustration" src="/blog/human-illustration.webp" alt="Human Illustration" className="w-full h-auto my-8 rounded-lg" />
               ],
             },
             {
@@ -1388,7 +1412,7 @@ export default function BlogDetail() {
             }
           ]
         }
-      
+
       case 'ai-fine-tuning-for-beginners':
         return {
           id: 13,
@@ -1404,10 +1428,10 @@ export default function BlogDetail() {
             {
               title: '1. Rethinking Fine-tuning: The Evolution from "Universal" to "Specific"',
               content: [
-                  React.createElement('strong', { key: 'essence' }, '1.1 The Essence of Fine-tuning:'),
+                React.createElement('strong', { key: 'essence' }, '1.1 The Essence of Fine-tuning:'),
                 'Model fine-tuning is essentially a process of knowledge transfer. Pre-trained large models learn general knowledge representations through massive amounts of data, while fine-tuning adapts this general knowledge to specific domains or tasks. This is similar to a generalist becoming a domain expert through short-term specialized training, retaining general capabilities while gaining specialized depth.',
                 'From a technical perspective, fine-tuning involves continuing to train the model on a new, specific dataset. This process adjusts the model\'s parameters to better align its outputs with the target domain. Compared to training from scratch, fine-tuning requires only a small amount of data and computing resources to achieve significant improvements in performance.',
-                  React.createElement('strong', { key: 'evolution' }, '1.2 The Evolution of Fine-tuning Technology:'),
+                React.createElement('strong', { key: 'evolution' }, '1.2 The Evolution of Fine-tuning Technology:'),
                 'Fine-tuning technology has evolved from full-parameter fine-tuning to parameter-efficient fine-tuning (PEFT). Early full-parameter fine-tuning required updating all model parameters, which was computationally expensive and prone to overfitting.',
                 'Recent PEFT technologies, such as LoRA (Low-Rank Adaptation), Adapter Tuning, and Prefix Tuning, can achieve performance comparable to full fine-tuning by adjusting only a small fraction of the parameters. LoRA technology, in particular, reduces the computing resources required for fine-tuning by over 90%, enabling individual developers to customize models using consumer-grade GPUs.'
               ]
@@ -1415,42 +1439,42 @@ export default function BlogDetail() {
             {
               title: '',
               content: [
-                <img key="ai-fine-tuning-image" src="/blog/ai-Workbench.png" alt="AI WorkBench" className="w-full h-auto my-8 rounded-lg" />
+                <img key="ai-fine-tuning-image" src="/blog/ai-workbench.webp" alt="AI WorkBench" className="w-full h-auto my-8 rounded-lg" />
               ]
             },
             {
               title: '2. Prompt Engineering: The No-Cost "Soft Fine-Tuning"',
               content: [
-                  React.createElement('strong', { key: 'prompt-art' }, '2.1 The Art of Prompt Word Design:'),
-                  'Prompt engineering is called "soft fine-tuning" because it can significantly change model behavior without adjusting model parameters. A good prompt should include:',
-                  'Role definition: clearly define the role played by the model, such as "You are a senior nutritionist"',
-                  'Task: The specific task to be completed, such as "designing a daily diet for diabetics"',
-                  'Constraints: Output format and content restrictions, such as "presented in table format, including three meals and two snacks"',
-                  'Examples: Provide input and output examples to help the model understand the expected output format',
-                  React.createElement('strong', { key: 'prompt-advanced' }, '2.2 Advanced Prompting Techniques:'),
-                  'Chain-of-Thought: Guides the model through the "Let\'s think step by step" reasoning process, significantly improving the ability to solve complex problems',
-                  'Self-Consistency: requires the model to generate multiple answers and then select the optimal solution to improve the reliability of the output',
-                  'Knowledge Generation: Let the model generate relevant knowledge first, and then answer questions based on this knowledge to improve the accuracy of the answers',
-                  'Practical Example: You are an experienced cybersecurity expert. Please explain the principles and prevention measures of SQL injection attacks in plain language. First, analyze the attack mechanism, then list three main prevention methods, and finally provide a simple code example. Avoid overly technical terms.',
+                React.createElement('strong', { key: 'prompt-art' }, '2.1 The Art of Prompt Word Design:'),
+                'Prompt engineering is called "soft fine-tuning" because it can significantly change model behavior without adjusting model parameters. A good prompt should include:',
+                'Role definition: clearly define the role played by the model, such as "You are a senior nutritionist"',
+                'Task: The specific task to be completed, such as "designing a daily diet for diabetics"',
+                'Constraints: Output format and content restrictions, such as "presented in table format, including three meals and two snacks"',
+                'Examples: Provide input and output examples to help the model understand the expected output format',
+                React.createElement('strong', { key: 'prompt-advanced' }, '2.2 Advanced Prompting Techniques:'),
+                'Chain-of-Thought: Guides the model through the "Let\'s think step by step" reasoning process, significantly improving the ability to solve complex problems',
+                'Self-Consistency: requires the model to generate multiple answers and then select the optimal solution to improve the reliability of the output',
+                'Knowledge Generation: Let the model generate relevant knowledge first, and then answer questions based on this knowledge to improve the accuracy of the answers',
+                'Practical Example: You are an experienced cybersecurity expert. Please explain the principles and prevention measures of SQL injection attacks in plain language. First, analyze the attack mechanism, then list three main prevention methods, and finally provide a simple code example. Avoid overly technical terms.',
               ]
             },
             {
               title: '3. Advanced Practice: Detailed Explanation of LoRA Fine-tuning',
               content: [
-                  React.createElement('strong', { key: 'lora-principle' }, '3.1 In-depth understanding of LoRA technology principles:'),
+                React.createElement('strong', { key: 'lora-principle' }, '3.1 In-depth understanding of LoRA technology principles:'),
                 'LoRA stands for Low-Rank Adaptation. It assumes that the weight changes during the model update process have low-rank characteristics, so the weight update can be approximated by the product of two low-rank matrices.',
                 'The mathematical expression is:',
                 'h = W₀x + ΔWx = W₀x + BAx',
                 'Where B ∈ ℝ^{d×r} and A ∈ ℝ^{r×k} are low-rank matrices (r ≪ min(d,k)), and the number of parameters is much smaller than the original weight matrix W ∈ ℝ^{d×k}. In this way, LoRA only needs to train a small number of parameters while achieving good fine-tuning results.',
                 React.createElement('strong', { key: 'lora-process' }, '3.2 Fine-tuning Process Guide:'),
-                  'Key Steps:',
-                  '1. 4bit Quantization (Memory optimization)',
-                  '2. LoRA Configuration (Core fine-tuning technique)',
-                  '3. Data Preprocessing (Format conversion)',
-                  '4. Training Arguments (Training control)',
-                  '5. Trainer API (Training engine)',
-                  '6. Model Saving (Final output)',
-                  'Required Dependencies Installation:',
+                'Key Steps:',
+                '1. 4bit Quantization (Memory optimization)',
+                '2. LoRA Configuration (Core fine-tuning technique)',
+                '3. Data Preprocessing (Format conversion)',
+                '4. Training Arguments (Training control)',
+                '5. Trainer API (Training engine)',
+                '6. Model Saving (Final output)',
+                'Required Dependencies Installation:',
                 '```bash',
                 '# Install PyTorch with CUDA support (adjust version based on your GPU)',
                 'pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118',
@@ -1581,107 +1605,250 @@ export default function BlogDetail() {
             {
               title: '4. Fine-tuning strategies and best practices',
               content: [
-                  React.createElement('strong', { key: 'layered-strategy' }, '4.1 Layered Fine-tuning Strategy:'),
+                React.createElement('strong', { key: 'layered-strategy' }, '4.1 Layered Fine-tuning Strategy:'),
                 'Choose a fine-tuning depth based on your needs:',
-                  'Shallow fine-tuning: only adjust the last few layers, suitable for domain adaptation, with the lowest computational cost',
-                  'Middle-layer fine-tuning: Adjust the middle layer to balance versatility and professionalism, with moderate effect and cost',
-                  'Deep fine-tuning: comprehensive adjustments, suitable for major task changes, with the best results but the highest cost',
-                  'Factors to consider:',
-                  'Available computing resources',
-                  'The difference between the target domain and the pre-training domain',
-                  'The amount of training data available',
-                  React.createElement('strong', { key: 'hyperparam-guide' }, '4.2 Hyperparameter Optimization Guide:'),
-                  'Impact of key hyperparameters and setting recommendations:',
-                  'Learning rate: Usually set between 1e-5 and 5e-4. The 7B model recommends 3e-4, the 13B model recommends 2e-4, and the 34B model recommends 1e-4. LoRA fine-tuning can use a larger learning rate than full parameter fine-tuning.',
-                  'Batch size: Select according to the memory capacity, usually 4-16, you can use gradient accumulation to simulate large batches',
-                  'Number of training rounds: 2-5 rounds are sufficient. Too many rounds will lead to overfitting. It is recommended to use the early stopping strategy.',
-                  'Recommended configuration:',
-                  'Small dataset (<1000 samples): learning rate 3e-4, training 3-5 epochs',
-                  'Medium dataset (1000-10000 samples): learning rate 1e-4, training 2-3 rounds',
-                  'Large dataset (>10,000 samples): learning rate 5e-5, training 1-2 rounds',
-                  <img key="ai-image" src="/blog/ai-tuning-strategies.png" alt="Fine-tuning strategies" className="w-full h-auto my-8 rounded-lg" />
+                'Shallow fine-tuning: only adjust the last few layers, suitable for domain adaptation, with the lowest computational cost',
+                'Middle-layer fine-tuning: Adjust the middle layer to balance versatility and professionalism, with moderate effect and cost',
+                'Deep fine-tuning: comprehensive adjustments, suitable for major task changes, with the best results but the highest cost',
+                'Factors to consider:',
+                'Available computing resources',
+                'The difference between the target domain and the pre-training domain',
+                'The amount of training data available',
+                React.createElement('strong', { key: 'hyperparam-guide' }, '4.2 Hyperparameter Optimization Guide:'),
+                'Impact of key hyperparameters and setting recommendations:',
+                'Learning rate: Usually set between 1e-5 and 5e-4. The 7B model recommends 3e-4, the 13B model recommends 2e-4, and the 34B model recommends 1e-4. LoRA fine-tuning can use a larger learning rate than full parameter fine-tuning.',
+                'Batch size: Select according to the memory capacity, usually 4-16, you can use gradient accumulation to simulate large batches',
+                'Number of training rounds: 2-5 rounds are sufficient. Too many rounds will lead to overfitting. It is recommended to use the early stopping strategy.',
+                'Recommended configuration:',
+                'Small dataset (<1000 samples): learning rate 3e-4, training 3-5 epochs',
+                'Medium dataset (1000-10000 samples): learning rate 1e-4, training 2-3 rounds',
+                'Large dataset (>10,000 samples): learning rate 5e-5, training 1-2 rounds',
+                <img key="ai-image" src="/blog/ai-tuning-strategies.webp" alt="Fine-tuning strategies" className="w-full h-auto my-8 rounded-lg" />
               ]
             },
             {
               title: '5. Quality assessment and iterative optimization',
               content: [
-                  React.createElement('strong', { key: 'multi-eval' }, '5.1 Multi-dimensional evaluation system:'),
+                React.createElement('strong', { key: 'multi-eval' }, '5.1 Multi-dimensional evaluation system:'),
                 'It is crucial to establish a scientific evaluation framework:',
-                  React.createElement('strong', { key: 'auto-metrics' }, 'Automation metrics:'),
-                  'Perplexity: A measure of how well the model fits the test data',
-                  'BLEU/ROUGE: Automatic Evaluation for Text Generation Tasks',
-                  'Precision/Recall: for classification and question answering tasks',
-                  React.createElement('strong', { key: 'manual-evaluation' }, ' Manual evaluation:'),
-                  'Relevance: How relevant the output is to the input',
-                  'Fluency: the naturalness and smoothness of language expression',
-                  'Usefulness: The degree to which the output solves practical problems',
-                  'A/B testing: Compare the fine-tuned model with the baseline model to collect feedback from real users',
-                  React.createElement('strong', { key: 'continuous-opt' }, '5.2 Continuous Optimization Cycle:'),
+                React.createElement('strong', { key: 'auto-metrics' }, 'Automation metrics:'),
+                'Perplexity: A measure of how well the model fits the test data',
+                'BLEU/ROUGE: Automatic Evaluation for Text Generation Tasks',
+                'Precision/Recall: for classification and question answering tasks',
+                React.createElement('strong', { key: 'manual-evaluation' }, ' Manual evaluation:'),
+                'Relevance: How relevant the output is to the input',
+                'Fluency: the naturalness and smoothness of language expression',
+                'Usefulness: The degree to which the output solves practical problems',
+                'A/B testing: Compare the fine-tuned model with the baseline model to collect feedback from real users',
+                React.createElement('strong', { key: 'continuous-opt' }, '5.2 Continuous Optimization Cycle:'),
                 'Establish a "train-evaluate-iterate" feedback loop:',
-                  '1. Collect real-world usage feedback: Collect the model\'s performance in actual use through user feedback, log analysis, etc.',
-                  '2. Identify model deficiencies: Analyze error cases to identify model weaknesses',
-                  '3. Supplementary training data: Collect and annotate more training data for weak links',
-                  '4. Re-fine-tune optimization: re-fine-tune using the augmented data',
+                '1. Collect real-world usage feedback: Collect the model\'s performance in actual use through user feedback, log analysis, etc.',
+                '2. Identify model deficiencies: Analyze error cases to identify model weaknesses',
+                '3. Supplementary training data: Collect and annotate more training data for weak links',
+                '4. Re-fine-tune optimization: re-fine-tune using the augmented data',
                 'It is recommended to establish an error case library, regularly analyze and classify error types, and perform targeted optimization.'
               ]
             },
             {
               title: '6. Application Scenarios and Case Studies',
               content: [
-                  React.createElement('strong', { key: 'typical-scenarios' }, '6.1 Typical Application Scenarios:'),
-                  'Education: Customized teaching assistants to meet the needs of students of different ages and learning styles',
-                  'Enterprise applications: Build industry-specific knowledge bases to improve the accuracy and reliability of professional Q&A',
-                  'Content creation: Stylized writing assistant to maintain brand consistency and improve content production efficiency',
-                  'Customer service: Personalized customer service robots improve user experience and reduce labor costs',
-                  React.createElement('strong', { key: 'case-analysis' }, '6.2 In-depth Analysis of Successful Cases:'),
+                React.createElement('strong', { key: 'typical-scenarios' }, '6.1 Typical Application Scenarios:'),
+                'Education: Customized teaching assistants to meet the needs of students of different ages and learning styles',
+                'Enterprise applications: Build industry-specific knowledge bases to improve the accuracy and reliability of professional Q&A',
+                'Content creation: Stylized writing assistant to maintain brand consistency and improve content production efficiency',
+                'Customer service: Personalized customer service robots improve user experience and reduce labor costs',
+                React.createElement('strong', { key: 'case-analysis' }, '6.2 In-depth Analysis of Successful Cases:'),
                 'A well-known e-commerce company achieved significant improvements in customer service efficiency through minor adjustments:',
-                  'Background: Traditional customer service is slow to respond, costly, and unable to meet rapidly growing business needs.',
-                  React.createElement('strong', { key: 'imple-plan' },'Implementation plan:'),
-                  '1. Data preparation: Collect and clean 5,000 high-quality customer service conversations, covering common questions and standard answers',
-                  '2. Fine-tuning strategy: Using QLoRA technology and 4-bit quantization to significantly reduce video memory requirements while maintaining performance',
-                  '3. Model selection: fine-tuned based on ChatGLM3-6B, balancing performance and cost',
-                  React.createElement('strong', { key: 'effect-evaluation' },'Effect evaluation:'),
-                  'Customer service satisfaction increased from 85% to 94%',
-                  'Average response time reduced from 45 seconds to less than 5 seconds',
-                  'Labor costs were reduced by 60%, while processing capacity was increased by 3 times',
-                  'Key success factors:',
-                  'High-quality training data',
-                  'Appropriate model selection and fine-tuning strategies',
-                  'Continuous optimization and iteration',
+                'Background: Traditional customer service is slow to respond, costly, and unable to meet rapidly growing business needs.',
+                React.createElement('strong', { key: 'imple-plan' }, 'Implementation plan:'),
+                '1. Data preparation: Collect and clean 5,000 high-quality customer service conversations, covering common questions and standard answers',
+                '2. Fine-tuning strategy: Using QLoRA technology and 4-bit quantization to significantly reduce video memory requirements while maintaining performance',
+                '3. Model selection: fine-tuned based on ChatGLM3-6B, balancing performance and cost',
+                React.createElement('strong', { key: 'effect-evaluation' }, 'Effect evaluation:'),
+                'Customer service satisfaction increased from 85% to 94%',
+                'Average response time reduced from 45 seconds to less than 5 seconds',
+                'Labor costs were reduced by 60%, while processing capacity was increased by 3 times',
+                'Key success factors:',
+                'High-quality training data',
+                'Appropriate model selection and fine-tuning strategies',
+                'Continuous optimization and iteration',
               ]
             },
             {
               title: '7. Future Outlook and Technology Trends',
               content: [
-                  React.createElement('strong', { key: 'tech-direction' }, '7.1 Technology Development Direction:'),
-                  'More efficient fine-tuning methods: Improved algorithms such as AdaLoRA and LoRA+ further improve parameter efficiency',
-                  'Automated fine-tuning: automatic hyperparameter optimization and architecture search to lower technical barriers',
-                  'Multimodal fine-tuning: Simultaneously process multimodal data such as text, images, and audio to expand application boundaries',
-                  React.createElement('strong', { key: 'democratization' }, '7.2 Democratization Trend:'),
-                  'With technological advancements, AI model fine-tuning is moving from being exclusive to experts to becoming accessible to the general public:',
-                  'Visualization tools: More low-code, visual fine-tuning platforms are emerging, such as Hugging Face\'s AutoTrain',
-                  'Cloud services: Major cloud vendors provide one-stop fine-tuning services to simplify deployment and operation and maintenance',
-                  'Open source community: Open source communities promote knowledge sharing and the dissemination of best practices',
-                  'Expected impact:',
-                  'Lowering the threshold for AI application development',
-                  'Accelerate the implementation of AI technology in various industries',
-                  'Promoting innovation and diversity',
+                React.createElement('strong', { key: 'tech-direction' }, '7.1 Technology Development Direction:'),
+                'More efficient fine-tuning methods: Improved algorithms such as AdaLoRA and LoRA+ further improve parameter efficiency',
+                'Automated fine-tuning: automatic hyperparameter optimization and architecture search to lower technical barriers',
+                'Multimodal fine-tuning: Simultaneously process multimodal data such as text, images, and audio to expand application boundaries',
+                React.createElement('strong', { key: 'democratization' }, '7.2 Democratization Trend:'),
+                'With technological advancements, AI model fine-tuning is moving from being exclusive to experts to becoming accessible to the general public:',
+                'Visualization tools: More low-code, visual fine-tuning platforms are emerging, such as Hugging Face\'s AutoTrain',
+                'Cloud services: Major cloud vendors provide one-stop fine-tuning services to simplify deployment and operation and maintenance',
+                'Open source community: Open source communities promote knowledge sharing and the dissemination of best practices',
+                'Expected impact:',
+                'Lowering the threshold for AI application development',
+                'Accelerate the implementation of AI technology in various industries',
+                'Promoting innovation and diversity',
               ]
             },
             {
               title: 'Conclusion: Everyone can become an AI tuner',
               content: [
                 'Model fine-tuning is no longer the exclusive domain of large tech companies, nor does it require a PhD to master. Using the methods described in this article, anyone interested can begin experimenting with customizing their own AI models. The key is to maintain curiosity and a practical spirit, starting with simple prompt word engineering and gradually moving on to parameter fine-tuning, constantly learning and growing in the process.',
-                   'Start your first fine-tuning project now:',
-                  '1. Select a specific usage scenario',
-                  '2. Prepare 10-20 pieces of high-quality data',
-                  '3. Start with the prompt word project',
-                  '4. Gradually advance to parameter fine-tuning',
-                  '5. Establish an evaluation system and continuously optimize it',
+                'Start your first fine-tuning project now:',
+                '1. Select a specific usage scenario',
+                '2. Prepare 10-20 pieces of high-quality data',
+                '3. Start with the prompt word project',
+                '4. Gradually advance to parameter fine-tuning',
+                '5. Establish an evaluation system and continuously optimize it',
                 'Remember, the best way to learn is by doing. Every successful AI application starts with a simple fine-tuning attempt.'
               ]
             }
           ]
+        }
+
+      case 'decoding-ai-hallucinations':
+        return {
+          id: 14,
+          title: 'Decoding AI Hallucinations',
+          description: 'OpenAI\'s Latest Research: Two Core Causes of AI Hallucinations and Their Solutions',
+          sections: [
+            {
+              title: 'Introduction',
+              content: [
+                'Artificial Intelligence is transforming industries, from healthcare to finance to cloud services. But even the most advanced AI models sometimes make mistakes—often referred to as hallucinations. OpenAI\'s recent research sheds light on why this happens and, more importantly, how to fix it. For businesses relying on AI-powered solutions, understanding these insights is key to building more trustworthy systems.'
+              ]
+            },
+            {
+              title: 'What Are AI Hallucinations?',
+              content: [
+                'AI hallucinations occur when a model generates information that is incorrect or fabricated, yet presents it with confidence. In practical terms, this could mean an AI-powered chatbot providing an inaccurate explanation or a virtual assistant inventing details that don\'t exist. While sometimes harmless, in enterprise contexts these errors can impact trust, compliance, and decision-making.',
+                'In recent years, as large language models are deployed in customer support, financial analysis, and medical consultation, the risks of AI hallucinations have become more visible. For example, financial institutions have reported models citing nonexistent statistics in complex portfolio analyses, while medical diagnostic systems have occasionally suggested unverified treatments.',
+                <img key="transparent-evaluation" src="/blog/transparent-evaluation.webp" alt="Transparent Evaluation" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: 'OpenAI\'s Findings: Two Core Causes',
+              content: [
+                '1. Training Incentives Misaligned with Truth',
+                'Most AI systems are trained to predict the "next best word" rather than to guarantee factual correctness. This means models are rewarded for producing fluent, convincing answers—even if they are not accurate. Over time, this encourages overconfidence and reduces the likelihood of admitting uncertainty.\nFor instance, in a financial report, a model might produce professional-sounding predictions without real data support to support them, as its primary training objective is to achieve fluency, not to verify facts.',
+                '2. Evaluation Standards That Favor Guessing',
+                'In testing and benchmarking, models are often scored higher for giving an answer than for saying "I don\'t know." This creates a hidden incentive to guess. Just like a student filling in multiple-choice answers at random, AI systems can appear knowledgeable while making more mistakes.\nThis is especially visible in automated Q&A systems: if a model refuses to answer, it scores nothing; but if it answers incorrectly, it may still earn partial credit.',
+              ]
+            },
+            {
+              title: 'Proposed Solutions',
+              content: [
+                'A. Rewarding Honesty and Uncertainty',
+                'By redesigning training objectives, AI can be encouraged to say "I don\'t know" when uncertain, rather than inventing information. This makes systems more reliable, especially in business-critical contexts where accuracy is essential.',
+                '',
+                'B. Transparent Evaluation Metrics',
+                'OpenAI recommends new benchmarks that reward accuracy and penalize overconfident guesses. Transparency in reporting hallucination rates helps organizations choose the right AI model for their needs.',
+                'OpenAI has already begun publishing hallucination-rate data in its Safety Evaluations Hub, giving companies a more quantitative basis for model selection.',
+                <img key="evaluation-metrics" src="/blog/evaluation-metrics.webp" alt="Evaluation Metrics" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: 'Why This Matters for Cloud and AI Services',
+              content: [
+                'For companies offering or consuming cloud-based AI solutions, reliability is everything. By addressing the root cause of hallucinations, it is possible to:',
+                [React.createElement('strong', { key: 'Enhance Business Trust' }, 'Enhance Business Trust:'), ' More dependable AI fosters confidence among clients and stakeholders.'],
+                [React.createElement('strong', { key: 'Mitigate Risks' }, 'Mitigate Risks:'), ' Minimizing fabricated outputs lowers compliance and reputational risks.'],
+                [React.createElement('strong', { key: 'Improve Operational Efficiency' }, 'Improve Operational Efficiency:'), ' Teams can make decisions faster when AI tools provide trustworthy support.'],
+              ]
+            },
+            {
+              title: 'Conclusion',
+              content: [
+                'AI hallucinations are not an unsolvable problem. OpenAI\'s latest research shows that with better incentives and clearer evaluation, AI systems can become more reliable partners for businesses. \nFor organizations building on cloud infrastructure, this represents an important step toward a future where AI delivers not only intelligence, but also trust.',
+                'As more companies adopt these improvements, AI applications will become broader and safer. From intelligent customer service to automated research, low-hallucination AI will be the driving force of innovation.',
+                'At CanopyWave, we leverage cutting-edge research to deliver secure, scalable, and reliable cloud services. By staying aligned with the latest AI advancements, we ensure our clients have technology they can trust.'
+              ]
+            }
+          ]
+        }
+
+      case 'revolutionizing-elderly-care-with-ai':
+        return {
+          id: 15,
+          title: 'Revolutionizing Elderly Care with AI',
+          description: 'AI and Elderly Care: Warm Guardianship Empowered by Technology',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Against the backdrop of a continuously intensifying global aging trend, elderly care has become a focal point of societal attention. Artificial intelligence (AI), as a core technological driver, is reshaping the operational models and service experiences of elderly care through various innovations such as sensor fusion, machine learning, and natural language processing. This article will systematically elaborate on the core applications of AI in elderly care, the technical challenges it faces, and future development trends. We will also introduce globally representative AI care cases from a technological perspective, highlighting AI as the core engine driving the intelligent evolution of care systems.',
+              ],
+            },
+            {
+              title: 'I. Core Applications of AI Technology in Elderly Care',
+              content: [
+                'AI is no longer just an auxiliary tool but a core force driving care systems towards being more intelligent, proactive, and personalized. Its applications in elderly care are mainly reflected in the following aspects:',
+              ],
+            },
+            {
+              title: 'Intelligent Health Monitoring: From Passive Collection to Active Early Warning',
+              content: [
+                'AI-powered wearable devices, equipped with multimodal sensors, collect key physiological parameters such as heart rate, blood pressure, and blood oxygen levels using optical and bioimpedance technologies. These are analyzed in real-time by on-device (edge computing) AI models for deviations in health indicators. When data exceeds safety thresholds, the system automatically triggers a tiered alarm mechanism (prioritizing notifications to family members, then linking with community medical institutions), achieving a technological leap from "passive monitoring" to "active early warning."',
+                'Case: The fall detection AI model in the Apple Watch uses a three-axis gyroscope to collect motion trajectory data. Combined with an algorithm trained on tens of millions of fall scenarios, it can distinguish between the motion characteristics of "sitting down normally" and "falling accidentally," with a recognition accuracy of over 95%. Once a fall is detected, it automatically initiates an AI-driven process of "location confirmation → emergency contact notification → medical rescue call," enabling a rapid response without human supervision.',
+              ],
+            },
+            {
+              title: 'Smart Home and Behavioral Perception Systems',
+              content: [
+                'Using IoT visual sensors and behavioral sequence analysis algorithms, these systems achieve fine-grained perception of an older adult\'s daily activities. For example, computer vision-based cameras can identify abnormal behaviors (such as prolonged stillness or nighttime wandering). Combined with temporal neural network models, they enable early judgment of potential risks.',
+                'Case: Amazon\'s Alexa Care Hub integrates speech recognition and behavioral modeling AI. It can identify unusual sounds in the home and analyze activity patterns to provide proactive safety alerts.',
+              ],
+            },
+            {
+              title: 'Emotional Companionship and Cognitive Enhancement Systems',
+              content: [
+                'Companion robots equipped with affective computing and generative AI use natural language processing (NLP) to parse emotional keywords in conversations with the elderly. Combined with speech tone recognition technology to determine emotional states, generative AI then generates responses tailored to the elderly\'s context (such as recalling shared topics or recommending nostalgic content). For cognitive training, AI dynamically adjusts the difficulty of memory games based on the user\'s memory level and optimizes training plans through reinforcement learning algorithms, improving the efficiency of delaying cognitive decline by over 30% compared to traditional manual training.',
+                'Case: Japan\'s RoboHon robot integrates multimodal emotion recognition and generative dialogue AI, providing personalized interactions, medication reminders, and entertainment recommendations.',
+              ],
+            },
+            {
+              title: 'Intelligent Assisted Diagnosis and Telemedicine',
+              content: [
+                'Medical AI models for common elderly diseases use computer vision to analyze brain images (e.g., hippocampal atrophy features in Alzheimer\'s disease) and motion posture data (e.g., tremor frequency in Parkinson\'s disease). Combined with structured data from electronic medical records, they build multidimensional diagnostic models. The recognition accuracy for early-stage Alzheimer\'s disease reaches 92%, reducing the missed diagnosis rate by 40% compared to traditional manual diagnosis. Additionally, the AI technology originally from IBM Watson Health, after business integration, continues to support the assisted diagnosis of common elderly diseases through healthcare technology partners, helping to develop personalized treatment plans.',
+              ],
+            },
+            {
+              title: 'II. Technical Challenges Facing AI in Elderly Care',
+              content: [
+                'Despite numerous breakthroughs, AI technology still faces several technical challenges in its implementation:',
+                'Algorithm Generalization: Current AI care models are mostly trained on data from specific populations (e.g., healthy elderly, urban elderly), often fail to adapt to the behavioral characteristics of groups such as individuals with disabilities or rural elderly. For example, the recognition accuracy for dialect speech interaction is only 60%, and the misjudgment rate for abnormal behaviors of wheelchair users exceeds 35%.',
+                'Technical Bottlenecks in Emotional Understanding: While AI can recognize emotions through data, it cannot truly understand the deep-seated needs behind them (e.g., an elderly person saying "I\'m fine" may actually mean they don\'t want to trouble their children). Existing affective computing models can only achieve superficial "behavior-emotion" associations, lacking deep "context-intent" reasoning.',
+                'Barriers in Multimodal Data Fusion Technology: AI care requires integrating multi-source data from wearables, smart homes, cameras, etc., but data formats and collection frequencies vary greatly across devices. Existing fusion algorithms suffer from delays in data synchronization and correlation analysis (average delay of 15 seconds), affecting emergency response speed.',
+                'User Adoption and Interaction Design: A key barrier is that the interaction design of many AI devices does not match the cognitive habits of the elderly. This needs to be optimized through AI adaptive interaction technologies (e.g., dynamically adjusting interfaces and speech speed based on the elderly\'s operating habits).',
+              ],
+            },
+            {
+              title: 'III. Development Trends and Future Prospects of AI Care Technology',
+              content: [
+                'The future AI care system will evolve along the following technological paths, driving a fundamental transformation in care models:',
+                'Popularization of End-Cloud Collaborative AI Architecture: The architecture of "end-side AI processing private data + cloud-side AI conducting large-scale training and model optimization" will be adopted. This hybrid model not only ensures data privacy but also enhances the system\'s capabilities through monthly model iterations. For instance, the end-side processes real-time physiological data, while the cloud-side analyzes long-term health trends.',
+                'Full-Process Care Empowered by Large Models: Medical large models (such as the medical version of GPT-4 and the domestic "Yilian" large model) will be integrated into the entire care process, enabling closed-loop services from monitoring to first-aid guidance. For example, upon detecting a fall, the AI can provide on-site first-aid guidance based on the knowledge of these LLMs and generate records to be synchronized to hospitals.',
+                'Highly Personalized Service Customization: By continuously learning users\' habits (such as wake-up time and medication preferences), the AI will automatically optimize service content and delivery mechanisms, realizing truly "one person, one strategy" personalized care.',
+              ],
+            },
+            {
+              title: 'IV. Globally Representative AI Care Technology Cases',
+              content: [
+                'In the field of AI elderly care, several technological solutions have achieved large-scale application through innovative algorithms and system designs. For example, Intuition Robotics\' ElliQ companion robot, based on a Transformer architecture for dialogue generation AI and a multimodal emotion recognition model (integrating voice and facial micro-expression analysis), achieves dialogue interactions with a naturalness score of 4.8/5 (human evaluation) and an emotion recognition accuracy of 88%, a 25% improvement over traditional speech recognition technology.',
+                'CarePredict\'s Tempo wearable device uses an LSTM neural network to build a behavioral sequence analysis AI. The system can identify 12 types of abnormal behaviors (e.g., frequently getting up at night), and predicts fall risk up to 72 hours in advance with a prediction accuracy of 85%.',
+                'Additionally, Zanthion\'s AI care platform, through multi-source sensor data fusion and real-time health risk modeling, achieves an abnormal behavior detection response time of less than 3 seconds, providing families and nursing institutions with a highly real-time and reliable comprehensive care solution.',
+              ],
+            },
+            {
+              title: 'V. Conclusion',
+              content: [
+                'AI technology is fundamentally changing the underlying logic and service forms of elderly care, shifting from traditional "manual response" to "intelligent proactivity." Although technical bottlenecks remain in areas such as algorithm generalization, emotional understanding, and data fusion, with the continuous evolution of technologies like edge-cloud collaboration, large models, and federated learning, AI is expected to provide more precise, warm, and efficient care services while ensuring privacy and reducing costs.',
+                'In the future, AI will not only be a technological tool but also the foundational infrastructure for building an intelligent and humanized aging society.',
+              ],
+            },
+          ],
         }
 
       default:
@@ -1707,29 +1874,33 @@ export default function BlogDetail() {
 
   // 获取博客封面图片
   const getBlogImage = () => {
-    return blogPost.title === "Accelerated AI for Business"
-      ? "/blog/ai-business.png"
-      : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
-        ? "/blog/blog2.webp"
-        : blogPost.title === "AI Generates Personalized Content"
-          ? "/blog/ai-content-generation.webp"
-          : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
-            ? "/blog/dedicated-endpoints.webp"
-            : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
-              ? "/blog/gpu-computing.webp"
-              : blogPost.title === "AI-Powered E-commerce"
-                ? "/blog/ai-shopping.webp"
-                : blogPost.title === "AI's Role in Autonomous Driving"
-                  ? "/blog/ai-car.webp"
-                  : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
-                    ? "/blog/gpu-cluster-cost.webp"
-                    : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
-                      ? "/blog/workflows2.webp"
-                      : blogPost.title === "Humanity's Next Partner: The AI Agent"
-                        ? "/blog/ai-agent.png"
-                        : blogPost.title === "AI Fine-tuning for Beginners"
-                          ? "/blog/ai-fine-tuning.png"
-                          : "/blog1.webp"
+    return blogPost.title === "Decoding AI Hallucinations"
+      ? "/blog/ai-hallucinations.webp"
+      : blogPost.title === "Accelerated AI for Business"
+        ? "/blog/ai-business.webp"
+        : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
+          ? "/blog/blog2.webp"
+          : blogPost.title === "AI Generates Personalized Content"
+            ? "/blog/ai-content-generation.webp"
+            : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
+              ? "/blog/dedicated-endpoints.webp"
+              : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
+                ? "/blog/gpu-computing.webp"
+                : blogPost.title === "AI-Powered E-commerce"
+                  ? "/blog/ai-shopping.webp"
+                  : blogPost.title === "AI's Role in Autonomous Driving"
+                    ? "/blog/ai-car.webp"
+                    : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
+                      ? "/blog/gpu-cluster-cost.webp"
+                      : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
+                        ? "/blog/workflows2.webp"
+                        : blogPost.title === "Humanity's Next Partner: The AI Agent"
+                          ? "/blog/ai-agent.webp"
+                          : blogPost.title === "AI Fine-tuning for Beginners"
+                            ? "/blog/ai-fine-tuning.webp"
+                            : blogPost.title === "Revolutionizing Elderly Care with AI"
+                              ? "/blog/ai-elderly-care.webp"
+                              : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -1760,6 +1931,10 @@ export default function BlogDetail() {
       case 12:
         return <BlogLayout1 blogPost={blogPost} />
       case 13:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 14:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 15:
         return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
@@ -1794,25 +1969,23 @@ export default function BlogDetail() {
         <meta key="og-site_name" property="og:site_name" content="Canopy Wave" />
 
         {/* 特殊页面的额外元数据 - 使用条件渲染 */}
-        {title === 'accelerated-ai-for-business' && (
+        {title === 'Decoding AI Hallucinations' && (
           <>
-            <meta key="special-og-title" property="og:title" content="Accelerated AI for Business" />
-            <meta key="special-og-image" property="og:image" content="https://canopy-wave-website.vercel.app/blog/ai-business.png" />
-            <meta key="special-og-description" property="og:description" content="Unlocking the Future of AI: How Accelerated Machine Learning Empowers Enterprises" />
+            <meta key="special-title" name="title" content="AI Hallucinations：Core Causes and Their Solutions" />
+            <meta key="special-description" name="description" content="AI models sometimes make mistakes—often referred to as hallucinations. OpenAI's recent research sheds light on why this happens and, more importantly, how to fix it." />
+            <meta key="special-og-title" property="og:title" content="AI Hallucinations：Core Causes and Their Solutions" />
+            <meta key="special-og-image" property="og:image" content="https://canopywave.com/blog/ai-hallucinations.webp" />
+            <meta key="special-og-description" property="og:description" content="AI models sometimes make mistakes—often referred to as hallucinations. OpenAI's recent research sheds light on why this happens and, more importantly, how to fix it." />
           </>
         )}
-        {title === 'joint-blog-accelerate-enterprise-ai' && (
+
+        {title === 'revolutionizing-elderly-care-with-ai' && (
           <>
-            <meta key="special-og-title" property="og:title" content="Joint Blog - Accelerate Enterprise AI" />
-            <meta key="special-og-image" property="og:image" content="https://canopy-wave-website.vercel.app/blog1.webp" />
-            <meta key="special-og-description" property="og:description" content="Learn how enterprises can accelerate their AI journey with private, secure infrastructure solutions." />
-          </>
-        )}
-        {title === 'humanitys-next-partner-the-ai-agent' && (
-          <>
-            <meta key="special-og-title" property="og:title" content="Humanity's Next Partner: The AI Agent" />
-            <meta key="special-og-image" property="og:image" content="https://canopy-wave-website.vercel.app/blog/ai-agent.png" />
-            <meta key="special-og-description" property="og:description" content="A New Era of Human-Machine Symbiosis: The Characteristics, Challenges, and World-Transforming Potential of AI Agents" />
+            <meta key="elderly-care-title" name="title" content="Revolutionizing Elderly Care with AI: Warm Guardianship Empowered by Technology" />
+            <meta key="elderly-care-description" name="description" content="AI is reshaping elderly care through sensor fusion, machine learning, and natural language processing, creating intelligent, proactive, and personalized care systems." />
+            <meta key="elderly-care-og-title" property="og:title" content="Revolutionizing Elderly Care with AI: Warm Guardianship Empowered by Technology" />
+            <meta key="elderly-care-og-image" property="og:image" content="https://canopywave.com/blog/ai-elderly-care.webp" />
+            <meta key="elderly-care-og-description" property="og:description" content="AI is reshaping elderly care through sensor fusion, machine learning, and natural language processing, creating intelligent, proactive, and personalized care systems." />
           </>
         )}
 

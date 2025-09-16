@@ -48,7 +48,9 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   : blogPost.title === "Accelerated AI for Business"
                   ? "/blog/ai-business.webp"
                   :blogPost.title === "AI Fine-tuning for Beginners"
-                  ? "/blog/ai-fine-tuning.png"
+                  ? "/blog/ai-fine-tuning.webp"
+                  :blogPost.title === "Decoding AI Hallucinations"
+                  ? "/blog/ai-hallucinations.webp"
                   : "/blog1.webp"
                   
               }
@@ -96,12 +98,26 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   <div key={`element-${index}-${pIndex}`}>{paragraph}</div>
                 );
               } else {
-                // 普通文本
-                result.push(
-                  <p key={pIndex} className="text-gray-700 leading-relaxed">
-                    {paragraph}
-                  </p>
-                );
+                // 普通文本 - 处理换行符
+                if (typeof paragraph === 'string' && paragraph.includes('\n')) {
+                  const lines = paragraph.split('\n');
+                  result.push(
+                    <div key={pIndex} className="text-gray-700 leading-relaxed">
+                      {lines.map((line, lineIndex) => (
+                        <React.Fragment key={lineIndex}>
+                          {line}
+                          {lineIndex < lines.length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  );
+                } else {
+                  result.push(
+                    <p key={pIndex} className="text-gray-700 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  );
+                }
               }
             });
             return result;
