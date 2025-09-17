@@ -1929,7 +1929,7 @@ case 'gpus-in-edge-computing':
           '- Introducing visual energy consumption and carbon emission estimation metrics in product design and battery life evaluation.',
           '- Displaying energy consumption comparisons and energy-saving advantages and disadvantages of each lightweight GPU in different usage scenarios (e.g., standby vs. continuous inference vs. off-peak scheduling).',
           '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.',
-          <img key="ai-product-recommendations" src="/blog/ai-product-recommendations.webp" alt="AI Product Recommendations" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+          <img key="ai-product-recommendations" src="/blog/ai-Product-Recommendations.webp" alt="AI Product Recommendations" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
         ]
       },
       {
