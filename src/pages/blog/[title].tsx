@@ -1771,6 +1771,8 @@ export default function BlogDetail() {
           ]
         }
 
+      
+
 
 case 'ai-medical-imaging-analysis':
   return {
@@ -1864,6 +1866,196 @@ case 'ai-medical-imaging-analysis':
     ],
   }
 
+case 'gpus-in-edge-computing':
+  return {
+    id: 16,
+    title: 'Edge GPUs: The Power and Size Challenge',
+    description: 'The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges',
+    sections: [
+      {
+        title: '1. Background and Trend Overview',
+        content: [
+          'With the rapid development of edge computing scenarios (such as smart manufacturing, smart cities, retail, and AR/VR), the demand for real-time AI inference and image processing is increasing at edge nodes. This creates a pressing need for GPUs that are both lightweight and highly energy-efficient, as: edge devices are becoming increasingly compact, power-constrained, and often deployed in environments without dedicated cooling or power supplies.'
+        ]
+      },
+      {
+        title: '2. Lightweight Requirements: Design and Deployment Challenges',
+        content: [
+          React.createElement('strong', { key: 'modularity-integration' }, 'Modularity and Heterogeneous Integration:'),
+          'In the future, GPUs will likely exist as SoCs (System on a Chip), integrated with CPUs, NPUs, and storage controllers within the same chip package. This modular design allows manufacturers to customize GPU configurations for different industries (retail, manufacturing, and connected vehicles), such as optimized versions for video inference or sensor fusion. For example, Canopy Wave has emphasized modular GPU cluster design in its cloud–edge continuum solutions, enabling customers to select optimized configurations depending on workload intensity and industry-specific needs.',
+          React.createElement('strong', { key: 'power-constraints' }, 'Power Constraints in Edge Scenarios:'),
+          'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by data center GPUs. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',
+          React.createElement('strong', { key: 'heat-dissipation' }, 'Heat Dissipation and Durability:'),
+          'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.'
+        ]
+      },
+      {
+        title: '3. Energy Consumption Challenge: Sustainable and Stable Operation',
+        content: [
+          React.createElement('strong', { key: 'dynamic-energy' }, 'Dynamic Energy Management:'),
+          'Dynamic Voltage and Frequency Scaling (DVFS) technology adjusts GPU operating frequency and voltage in real time based on the task. For example, when a camera is unattended, the system automatically reduces frequency or goes into hibernation; when an event is triggered, computing power is instantly increased, saving 20–40% in long-term energy consumption. Canopy Wave has integrated similar dynamic energy optimization into its GPU cluster management platform, enabling customers to automatically balance workloads between low-power idle modes and high-performance bursts, thereby achieving higher performance-per-watt efficiency in both cloud and edge deployments.',
+          React.createElement('strong', { key: 'task-hierarchy' }, 'Task Hierarchy and Energy Scheduling:'),
+          'Through intelligent task scheduling, critical tasks are retained on the local GPU, while non-critical tasks are offloaded to the edge data center or the cloud. Such multi-layer scheduling can reduce the 24/7 high-load operation of a single-node GPU and extend its lifespan. Canopy Wave’s orchestration framework supports hierarchical task allocation across edge and cloud nodes, minimizing unnecessary GPU stress and optimizing energy scheduling based on real-time demand. This not only reduces energy consumption but also improves system stability in long-term deployments.',
+          React.createElement('strong', { key: 'green-power' }, 'Green Power and Computing Power Synergy:'),
+          'When power consumption is limited, edge nodes can integrate with the grid scheduling system to dynamically reduce power output. As demonstrated in the Emerald AI case study, the 25% power reduction in GPU clusters during peak hours can also be applied to edge GPUs, helping enterprises reduce energy costs and obtain green certifications. Similarly, Canopy Wave has explored adaptive workload throttling in its GPU clusters, which allows enterprises to align computing demand with renewable energy availability or peak–off-peak electricity pricing, reinforcing both sustainability goals and operational cost control.'
+        ]
+      },
+      {
+        title: '',
+        content: [
+          React.createElement('img', { 
+            key: 'edge-gpu-image', 
+            src: '/blog/edge-gpu.png', 
+            alt: 'Edge GPU Computing', 
+            className: 'w-full h-auto my-8 rounded-lg' 
+          })
+        ]
+      },
+      {
+        title: '4. Enterprise Practices and Performance Improvement Case Studies',
+        content: [
+          'It is well-established that GPUs are more power-efficient and performant than traditional CPUs in HPC and AI acceleration. For example, the NVIDIA A100 GPU achieves an average energy efficiency improvement of 5x, and weather forecasting applications achieve nearly 10x energy efficiency improvements. Enterprise practice also demonstrates that adopting a hybrid GPU-CPU architecture not only accelerates computing but also significantly reduces energy consumption. For example, Murex used the NVIDIA Grace Hopper Superchip to achieve a 4x reduction in energy consumption and a 7x reduction in completion time.',
+          'Also, dynamically scheduling AI tasks to respond to grid demand to adjust power consumption has demonstrated significant success in pilot projects. For example, Emerald AI\'s platform managed the power consumption of a 256-GPU cluster during peak grid hours, successfully reducing power consumption by 25% within three hours while maintaining quality of service.',
+          'In addition, Canopy Wave has showcased enterprise practices where its GPU cluster management platform enables fine-grained workload orchestration across edge and cloud environments. By dynamically allocating tasks based on real-time resource utilization and energy pricing, customers reported reductions of up to 30% in total energy costs while maintaining high computational throughput. These practices highlight how flexible GPU resource management not only enhances sustainability but also delivers measurable business performance improvements.'
+        ]
+      },
+      {
+        title: '5. Compute Exchange\'s Perspectives and Innovations on GPU Energy Consumption and Sustainability',
+        content: [
+          'Compute Exchange CEO Simeon Bochev stated in a blog post on the company\'s website: "Given the voracious energy consumption required for compute, we\'re also bringing sustainability into the equation. Buyers can see the environmental impact of their compute and choose carbon-efficient/carbon offset options."',
+          'Furthermore, the Compute Exchange auction platform estimates GPU energy consumption, data center power sources, and lease terms, providing buyers with clear carbon footprint information, allowing them to set maximum emission thresholds, and also includes built-in, cost-effective carbon offset options.',
+          'This provides important insights for the development of edge GPU products:',
+          '- Introducing visual energy consumption and carbon emission estimation metrics in product design and battery life evaluation.',
+          '- Displaying energy consumption comparisons and energy-saving advantages and disadvantages of each lightweight GPU in different usage scenarios (e.g., standby vs. continuous inference vs. off-peak scheduling).',
+          '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.'
+        ]
+      },
+      {
+        title: '6. Product Recommendations and Future Paths',
+        content: [
+          React.createElement('div', { key: 'recommendations-table-container', style: { margin: '20px 0', overflowX: 'auto' } },
+            React.createElement('table', {
+              key: 'recommendations-table',
+              style: {
+                width: '100%',
+                borderCollapse: 'collapse',
+                backgroundColor: '#f8f9fa',
+                border: '1px solid #dee2e6'
+              }
+            }, [
+              React.createElement('thead', { key: 'thead' },
+                React.createElement('tr', { key: 'header-row' }, [
+                  React.createElement('th', {
+                    key: 'header-direction',
+                    style: {
+                      padding: '12px 15px',
+                      textAlign: 'left',
+                      fontWeight: 'bold',
+                      border: '1px solid #dee2e6'
+                    }
+                  }, 'Direction'),
+                  React.createElement('th', {
+                    key: 'header-recommendations',
+                    style: {
+                      padding: '12px 15px',
+                      textAlign: 'left',
+                      fontWeight: 'bold',
+                      border: '1px solid #dee2e6'
+                    }
+                  }, 'Recommendations')
+                ])
+              ),
+              React.createElement('tbody', { key: 'tbody' }, [
+                React.createElement('tr', { key: 'row-hardware' }, [
+                  React.createElement('td', {
+                    key: 'hardware-direction',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Lightweight Hardware Design'),
+                  React.createElement('td', {
+                    key: 'hardware-recommendations',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Utilize low-power hardware, support DVFS, power capping, and improve heat dissipation, making it suitable for micro-devices without air cooling.')
+                ]),
+                React.createElement('tr', { key: 'row-software' }, [
+                  React.createElement('td', {
+                    key: 'software-direction',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Intelligent Energy Management Software'),
+                  React.createElement('td', {
+                    key: 'software-recommendations',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'The scheduling system identifies task priorities, supports idle adjustment, task suspension, and migration, and is compatible with Emerald AI-style grid response logic.')
+                ]),
+                React.createElement('tr', { key: 'row-energy-efficiency' }, [
+                  React.createElement('td', {
+                    key: 'energy-efficiency-direction',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Energy Efficiency Quantification and Transparency'),
+                  React.createElement('td', {
+                    key: 'energy-efficiency-recommendations',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Introduce Compute Exchange-level carbon emission forecasts and energy consumption models, allowing users to set thresholds and compensation options.')
+                ]),
+                React.createElement('tr', { key: 'row-ecosystem' }, [
+                  React.createElement('td', {
+                    key: 'ecosystem-direction',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Ecosystem Collaboration and Standards'),
+                  React.createElement('td', {
+                    key: 'ecosystem-recommendations',
+                    style: {
+                      padding: '12px 15px',
+                      border: '1px solid #dee2e6',
+                      fontWeight: '500'
+                    }
+                  }, 'Participate in open markets like Compute Exchange to allow edge GPU products to gain exposure and competitive pricing in a fair market.')
+                ])
+              ])
+            ])
+          )
+        ]
+      },
+      {
+        title: '7. Summary and Outlook',
+        content: [
+          'In the future of edge computing, GPU products must strike a balance between lightweight and high energy efficiency. This is not only an inevitable trend in technological evolution but also a dual requirement from both commercial and policy perspectives.',
+          'By integrating hardware optimization (low-power architecture design, heterogeneous integration, and intelligent cooling), software scheduling (dynamic frequency control and hierarchical task scheduling), energy consumption visualization (real-time monitoring and data transparency), and carbon offset mechanisms (green power integration and carbon footprint labeling), edge GPUs will gradually form a complete sustainable computing power ecosystem.',
+          'Drawing on the innovations of platforms like Compute Exchange, it is clear that in the future, GPUs will no longer be measured solely by "peak computing power" but will need to include performance/power ratio, carbon emissions traceability, and green power compatibility as equally important evaluation indicators. This shift will drive the GPU market from a "single performance-driven" approach to a multi-dimensional competitive landscape characterized by "performance + energy efficiency + sustainability."',
+          'For the industry, those who can pioneer edge GPU products that prioritize both sustainability and efficiency will have the opportunity to seize the initiative in rapidly expanding scenarios such as smart cities, the Internet of Vehicles, retail, and energy management. At the same time, as regulatory policies around the world tighten energy consumption controls for data centers and edge nodes, GPU products with green compliance attributes will be more likely to attract government projects, attract investment, and gain customer recognition.',
+          'Thus, future edge GPUs will not only be high-performance intelligent engines but also low-carbon, sustainable industrial infrastructure, playing a strategic role in the global trend of AI edge computing.'
+        ]
+      }
+    ]
+  }
+
       default:
         return null
     }
@@ -1951,6 +2143,8 @@ case 'ai-medical-imaging-analysis':
         return <BlogLayout1 blogPost={blogPost} />
       case 15:
         return <BlogLayout1 blogPost={blogPost} />
+      case 16:
+        return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
     }
@@ -2012,6 +2206,16 @@ case 'ai-medical-imaging-analysis':
             <meta key="elderly-care-og-image" property="og:image" content="https://canopywave.com/blog/ai-elderly-care.webp" />
             <meta key="elderly-care-og-description" property="og:description" content="AI is reshaping elderly care through sensor fusion, machine learning, and natural language processing, creating intelligent, proactive, and personalized care systems." />
           </>
+        )}
+
+        {
+          title === 'gpus-in-edge-computing' && (
+            <>
+              <meta key="edge-gpu-title" name="title" content="The Future of GPUs in Edge Computing " />
+              <meta key="edge-gpu-description" name="description" content="With the rapid development of edge computing scenarios (such as smart manufacturing, smart cities, retail, and AR/VR), the demand for real-time AI inference and image processing is increasing at edge nodes. " />
+              <meta key="edge-gpu-og-title" property="og:title" content="The Future of GPUs in Edge Computing " />
+              <meta key="edge-gpu-og-image" property="og:image" content="https://canopywave.com/blog/edge-gpu.webp" />
+            </>
         )}
 
       </Head>

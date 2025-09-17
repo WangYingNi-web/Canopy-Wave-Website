@@ -56,6 +56,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 16,
+            title: "Gpus In Edge Computing",
+            description: "The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges",
+            date: "September 17, 2025",
+            image: "/blog/.webp"
+        },
+        {
             id: 15,
             title: "AI Medical Imaging Analysis",
             description: "Beyond the Limits of the Human Eye: How AI Medical Imaging Analysis Becomes the 'Third Eye' for Doctors",
