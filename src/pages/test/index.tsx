@@ -703,13 +703,13 @@ export default function TestIndex() {
                 <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left">
-                            On-demand High-Performance GPUs<br />
-                            now available
+                            NVIDIA GB200 & B200, H100, H200<br />
+                            GPUs now available
                         </h2>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 items-center">
                             {/* 左侧产品介绍 */}
-                            <div className="lg:col-span-2 lg:-mt-16">
+                            <div className="lg:col-span-2 lg:-mt-16 min-w-[500px]">
                                 {(() => {
                                     const productInfo = [
                                         {
@@ -764,12 +764,6 @@ export default function TestIndex() {
                                         <>
                                             <div className="flex items-center space-x-4 mb-6">
                                                 <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
-                                                <span
-                                                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium cursor-pointer hover:bg-green-200 transition-colors"
-                                                    onClick={() => window.location.href = '/pricing'}
-                                                >
-                                                    {currentProduct.price}
-                                                </span>
                                             </div>
 
                                             <ul className="text-gray-600 leading-relaxed text-l mb-12">
@@ -778,9 +772,12 @@ export default function TestIndex() {
                                                 ))}
                                             </ul>
 
-                                            <Button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
-                                                Learn More
-                                            </Button>
+                                            <span
+                                                className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg"
+                                                onClick={() => window.location.href = '/pricing'}
+                                            >
+                                                {currentProduct.price}
+                                            </span>
                                         </>
                                     );
                                 })()}
@@ -788,7 +785,7 @@ export default function TestIndex() {
 
                             {/* 右侧图片展示和切换按钮 */}
                             <div
-                                className="lg:col-span-4 relative"
+                                className="lg:col-span-6 relative"
                                 onMouseEnter={() => setIsProductAutoPlaying(false)}
                                 onMouseLeave={() => setIsProductAutoPlaying(true)}
                             >
@@ -802,39 +799,58 @@ export default function TestIndex() {
                                     />
                                 </div>
 
+                                {/* Learn More 按钮 */}
+                                <div className="absolute right-0 top-0 transform -translate-y-1/2">
+                                    <Button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
+                                        Learn More
+                                    </Button>
+                                </div>
+
                                 {/* 图片切换按钮 */}
-                                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3">
-                                    {[1, 2, 3, 4].map((index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => {
-                                                setCurrentImageIndex(index - 1);
-                                                setIsProductAutoPlaying(false);
-                                                // 点击后3秒恢复自动播放
-                                                setTimeout(() => setIsProductAutoPlaying(true), 3000);
-                                            }}
-                                            onMouseEnter={() => {
-                                                setCurrentImageIndex(index - 1);
-                                                setIsProductAutoPlaying(false);
-                                            }}
-                                            onMouseLeave={() => setIsProductAutoPlaying(true)}
-                                            className={`w-20 h-20 rounded-2xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
-                                                ? 'border-[#76B900] shadow-lg border-2'
-                                                : 'border-gray-300 hover:border-gray-400'
-                                                }`}
-                                        >
-                                            <Image
-                                                src={`/test/button-${index}.png`}
-                                                alt={`View ${index}`}
-                                                width={48}
-                                                height={48}
-                                                className="w-full h-full object-contain rounded-lg"
-                                            />
-                                            {currentImageIndex !== index - 1 && (
-                                                <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded-lg"></div>
-                                            )}
-                                        </button>
-                                    ))}
+                                <div className="absolute right-[-90px] top-[165px] transform -translate-y-1/2 flex flex-col space-y-3 mt-16">
+                                    {[1, 2, 3, 4].map((index) => {
+                                        const productNames = ["NVIDIA GB200 NVL72", "NVIDIA HGX B200", "NVIDIA H200", "NVIDIA H100"];
+                                        return (
+                                            <div key={index} className="flex items-center space-x-3">
+                                                <button
+                                                    onClick={() => {
+                                                        setCurrentImageIndex(index - 1);
+                                                        setIsProductAutoPlaying(false);
+                                                        // 点击后3秒恢复自动播放
+                                                        setTimeout(() => setIsProductAutoPlaying(true), 3000);
+                                                    }}
+                                                    onMouseEnter={() => {
+                                                        setCurrentImageIndex(index - 1);
+                                                        setIsProductAutoPlaying(false);
+                                                    }}
+                                                    onMouseLeave={() => setIsProductAutoPlaying(true)}
+                                                    className={`w-20 h-20 rounded-3xl transition-all duration-200 relative overflow-hidden ${
+                                                        currentImageIndex === index - 1
+                                                            ? 'border-[#76B900] shadow-lg border-2'
+                                                            : 'border-gray-300 hover:border-gray-400'
+                                                        }`}
+                                                >
+                                                    <Image
+                                                        src={`/test/button-${index}.png`}
+                                                        alt={`View ${index}`}
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-full h-full object-contain rounded-lg"
+                                                    />
+                                                    {currentImageIndex !== index - 1 && (
+                                                        <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded-lg"></div>
+                                                    )}
+                                                </button>
+                                                <span className={`text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                                                    currentImageIndex === index - 1
+                                                        ? 'text-[#76B900] font-bold'
+                                                        : 'text-gray-600'
+                                                    }`}>
+                                                    {productNames[index - 1]}
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
