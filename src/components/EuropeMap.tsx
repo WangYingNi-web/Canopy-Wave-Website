@@ -1,271 +1,171 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-type MapType = 'NorthAmericaWithCanada' | 'Europe';
+type MapType = 'NorthAmerica' | 'Europe';
 
-interface GlowPoint {
-    x: number;
-    y: number;
-    r?: number;
-    label: string;
-}
-
-interface ResponsiveGlowPoint {
-    default: GlowPoint;
-    xss?: Partial<GlowPoint>;
-    xs?: Partial<GlowPoint>;
-    sm?: Partial<GlowPoint>;
-    md?: Partial<GlowPoint>;
-    lg?: Partial<GlowPoint>;
+// 位置点接口
+interface LocationPoint {
+    id: string;
+    name: string;
+    x: number; // 相对于图片的X坐标百分比 (0-100)
+    y: number; // 相对于图片的Y坐标百分比 (0-100)
+    description?: string;
 }
 
 interface MapConfig {
     src: string;
     alt: string;
-    glowPoints: ResponsiveGlowPoint[];
-    isComposite?: boolean;
-    canadaPosition?: {
-        top: string;
-        right: string;
-        width: string;
-        height: string;
-    };
+    locations: LocationPoint[]; // 每个地图的位置点
 }
 
+// 地图配置，包含位置点数据
 const mapConfigs: Record<MapType, MapConfig> = {
-    NorthAmericaWithCanada: {
-        src: '/map/NorthAmerica_Map.svg',
-        alt: 'North America with Canada Map',
-        isComposite: true,
-        canadaPosition: {
-            top: '-50px',
-            right: '12%',
-            width: '30%',
-            height: '35%'
-        },
-        glowPoints: [
-            {
-                default: { x: 7, y: 43, r: 8, label: '硅谷' }
-            },
-            {
-                default: { x: 80, y: 16, r: 8, label: '多伦多' },
-                xs: { x: 80, y: 8 }, // 小屏幕时的坐标
-                xss: { x: 80, y: 14 }, // 小屏幕时的坐标
-                sm: { x: 80, y: 13 }, // 小屏幕时的坐标
-                md: { x: 80, y: 16 }, // 中等屏幕时的坐标
-                lg: { x: 80, y: 16 }  // 大屏幕时的坐标
-            }
+    NorthAmerica: {
+        src: '/map/NorthAmerica_Map.png',
+        alt: 'North America Map',
+        locations: [
+            // 示例位置点 - 你需要根据实际图片调整这些坐标
+            { id: 'ny', name: 'Canada', x: 88.2, y: 26.8, description: 'Canada（Toronto）' },
+            { id: 'la', name: 'U.S', x: 5.6, y: 44, description: 'U.S.（Santa Clara）' },
         ]
     },
     Europe: {
-        src: '/map/EuropeMap.svg',
+        src: '/map/EuropeMap.png',
         alt: 'Europe Map',
-        glowPoints: [
-            { default: { x: 20, y: 23, r: 6, label: 'Europe' } },
-            { default: { x: 23, y: 24, r: 6, label: 'Europe' } }
+        locations: [
+            // 示例位置点 - 你需要根据实际图片调整这些坐标
+            { id: 'iceland1', name: 'Iceland', x: 36, y: 31, description: 'Iceland（Blonduos）' },
+            { id: 'iceland2', name: 'Iceland', x: 56, y: 27.8, description: 'Iceland（Akureyri）' },
         ]
-    },
-};
-
-// 获取当前屏幕尺寸
-const useScreenSize = () => {
-    const [screenSize, setScreenSize] = useState<'xss' | 'xs' | 'sm' | 'md' | 'lg'>('lg');
-
-    useEffect(() => {
-        const checkScreenSize = () => {
-            const width = window.innerWidth;
-            if (width < 640) {
-                setScreenSize('sm');
-            } else if (width >= 768 && width <= 860) {
-                setScreenSize('xs');
-            } else if (width >= 860 && width <= 1100) {
-                setScreenSize('xss');
-            }
-            else if (width < 1100) {
-                setScreenSize('md');
-            } else {
-                setScreenSize('lg');
-            }
-        };
-
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
-
-    return screenSize;
-};
-
-// 获取响应式光点坐标
-const getResponsiveGlowPoint = (point: ResponsiveGlowPoint, screenSize: 'xss' | 'xs' | 'sm' | 'md' | 'lg'): GlowPoint => {
-    const responsive = point[screenSize] || {};
-    return {
-        ...point.default,
-        ...responsive
-    };
+    }
 };
 
 export default function InteractiveMap() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { amount: 0.5 });
-    const [currentMap, setCurrentMap] = useState<MapType>('NorthAmericaWithCanada');
-    const screenSize = useScreenSize();
+    const [currentMapIndex, setCurrentMapIndex] = useState<number>(0);
+    const [hoveredLocation, setHoveredLocation] = useState<LocationPoint | null>(null);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    
+    const mapTypes: MapType[] = ['NorthAmerica', 'Europe'];
+    const currentMap = mapTypes[currentMapIndex];
     const currentConfig = mapConfigs[currentMap];
 
-    return (
-        <div ref={ref} className="w-full relative">
-            {/* 切换按钮 */}
-            <div className={`absolute top-0 right-4 z-20 flex gap-2 ${currentMap === 'Europe' ? '-mt-[70px]' : '-mt-[110px]'}`}>
-                {(Object.keys(mapConfigs) as MapType[]).map((mapType) => (
-                    <button
-                        key={mapType}
-                        onClick={() => setCurrentMap(mapType)}
-                        className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200 ${currentMap === mapType
-                                ? 'bg-[#80B224] text-white shadow-lg'
-                                : 'bg-white/90 text-gray-700 hover:bg-green-50 border border-gray-200'
-                            }`}
-                    >
-                        {mapType === 'NorthAmericaWithCanada' ? 'North America' : mapType}
-                    </button>
-                ))}
-            </div>
+    // 自动轮播
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentMapIndex((prevIndex) => (prevIndex + 1) % mapTypes.length);
+        }, 8000);
 
-            {/* 地图容器 */}
+        return () => clearInterval(interval);
+    }, [mapTypes.length]);
+
+    // 处理位置点悬浮
+    const handleLocationHover = (location: LocationPoint, event: React.MouseEvent) => {
+        setHoveredLocation(location);
+        setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    const handleLocationLeave = () => {
+        setHoveredLocation(null);
+    };
+
+    // 手动切换地图
+    const handleIndicatorClick = (index: number) => {
+        setCurrentMapIndex(index);
+    };
+
+    return (
+        <div className="w-full relative">
+            {/* 轮播图容器 */}
             <div
-                className={`relative w-full mx-auto ${currentMap === 'Europe' ? 'mt-10' : 'mt-20'
-                    }`}
+                className="relative w-full mx-auto -mt-10 overflow-hidden"
                 style={{
                     aspectRatio: '580/400',
                     maxWidth: '580px',
                     height: 'auto'
                 }}
             >
-                {/* 主地图 */}
-                <div className="relative w-full h-full">
-                    <Image
-                        src={currentConfig.src}
-                        alt={currentConfig.alt}
-                        fill
-                        className="object-contain"
-                        priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 580px"
-                    />
-
-                    {/* 加拿大小地图叠加层 */}
-                    {currentConfig.isComposite && currentConfig.canadaPosition && (
-                        <motion.div
-                            className="absolute"
-                            style={{
-                                top: currentConfig.canadaPosition.top,
-                                right: currentConfig.canadaPosition.right,
-                                width: currentConfig.canadaPosition.width,
-                                height: currentConfig.canadaPosition.height
-                            }}
-                            // initial={{ opacity: 0, scale: 0.8 }}
-                            // animate={{ opacity: 1, scale: 1 }}
-                            // transition={{ duration: 0.6, delay: 0.3 }}
-                        >
-                            <Image
-                                src="/map/CanadaMap.svg"
-                                alt="Canada Map Overlay"
-                                fill
-                                className="object-contain"
-                                sizes="200px"
-                            />
-                        </motion.div>
-                    )}
-                </div>
-
-                {/* 光点层 - 使用响应式坐标 */}
-                <div className="absolute inset-0 pointer-events-none z-10">
-                    {currentConfig.glowPoints.map((responsivePoint, index) => {
-                        const point = getResponsiveGlowPoint(responsivePoint, screenSize);
+                {/* 地图轮播 */}
+                <div 
+                    className="flex transition-transform duration-500 ease-in-out w-full h-full"
+                    style={{
+                        transform: `translateX(-${currentMapIndex * 100}%)`
+                    }}
+                >
+                    {mapTypes.map((mapType, index) => {
+                        const config = mapConfigs[mapType];
                         return (
-                            <div
-                                key={`${currentMap}-${index}`}
-                                className="absolute"
-                                style={{
-                                    left: `${point.x}%`,
-                                    top: `${point.y}%`,
-                                    width: '0px',
-                                    height: '0px'
-                                }}
-                            >
-                                {/* 外层光晕 */}
-                                <motion.div
-                                    className="absolute rounded-full bg-[#8CC63F]/30"
-                                    style={{
-                                        width: `${(point.r || 10) * 3}px`,
-                                        height: `${(point.r || 10) * 3}px`,
-                                        left: '50%',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)'
-                                    }}
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        opacity: isInView ? [0.3, 0.6, 0.3] : 0
-                                    }}
-                                    transition={{
-                                        duration: 3,
-                                        ease: "easeInOut",
-                                        repeat: Infinity,
-                                        repeatType: "reverse",
-                                        delay: index * 0.3
-                                    }}
+                            <div key={mapType} className="relative w-full h-full flex-shrink-0">
+                                <Image
+                                    src={config.src}
+                                    alt={config.alt}
+                                    fill
+                                    className="object-contain"
+                                    priority={index === 0}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 580px"
                                 />
-
-                                {/* 中层光晕 */}
-                                <motion.div
-                                    className="absolute rounded-full bg-[#8CC63F]/50"
-                                    style={{
-                                        width: `${(point.r || 10) * 2}px`,
-                                        height: `${(point.r || 10) * 2}px`,
-                                        left: '50%',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)'
-                                    }}
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        opacity: isInView ? [0.5, 0.8, 0.5] : 0
-                                    }}
-                                    transition={{
-                                        duration: 2.5,
-                                        ease: "easeInOut",
-                                        repeat: Infinity,
-                                        repeatType: "reverse",
-                                        delay: index * 0.3 + 0.1
-                                    }}
-                                />
-
-                                {/* 核心光点 */}
-                                <motion.div
-                                    className="absolute rounded-full bg-[#8CC63F]"
-                                    style={{
-                                        width: `${point.r || 10}px`,
-                                        height: `${point.r || 10}px`,
-                                        left: '50%',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        boxShadow: '0 0 15px 3px rgba(140, 198, 63, 0.8)'
-                                    }}
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        opacity: isInView ? [0.8, 1, 0.8] : 0
-                                    }}
-                                    transition={{
-                                        duration: 2,
-                                        ease: "easeInOut",
-                                        repeat: Infinity,
-                                        repeatType: "reverse",
-                                        delay: index * 0.3 + 0.2
-                                    }}
-                                />
+                                
+                                {/* 交互式位置点 */}
+                                {index === currentMapIndex && config.locations.map((location) => (
+                                    <div
+                                        key={location.id}
+                                        className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+                                        style={{
+                                            left: `${location.x}%`,
+                                            top: `${location.y}%`,
+                                        }}
+                                        onMouseEnter={(e) => handleLocationHover(location, e)}
+                                        onMouseLeave={handleLocationLeave}
+                                        onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
+                                    >
+                                        {/* 光点动画 */}
+                                        <div className="relative">
+                                            {/* 外层光晕 */}
+                                            <div className="absolute inset-0 w-6 h-6 bg-[#D1F0FA] rounded-full opacity-30 animate-ping"></div>
+                                            {/* 中层光晕 */}
+                                            <div className="absolute inset-0 w-4 h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-1 translate-y-1"></div>
+                                            {/* 核心光点 */}
+                                            <div className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200"></div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         );
                     })}
                 </div>
             </div>
+
+            {/* 指示器 */}
+            <div className="flex justify-center mt-6 gap-3">
+                {mapTypes.map((mapType, index) => (
+                    <button
+                        key={mapType}
+                        onClick={() => handleIndicatorClick(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                            index === currentMapIndex
+                                ? 'bg-[#80B224] scale-125'
+                                : 'bg-gray-300 hover:bg-gray-400'
+                        }`}
+                        aria-label={`Switch to ${mapType === 'NorthAmerica' ? 'North America' : mapType} map`}
+                    />
+                ))}
+            </div>
+            
+            {/* 悬浮提示框 */}
+            {hoveredLocation && (
+                <div 
+                    className="fixed z-50 bg-[#D1F0FA] opacity-90 border border-gray-200 rounded-lg shadow-lg p-3 pointer-events-none"
+                    style={{
+                        left: mousePosition.x + 10,
+                        top: mousePosition.y - 10,
+                        transform: 'translateY(-100%)'
+                    }}
+                >
+                    <div className="font-semibold text-[#215968]">{hoveredLocation.name}</div>
+                    {hoveredLocation.description && (
+                        <div className="text-sm text-gray-600 mt-1">{hoveredLocation.description}</div>
+                    )}
+                </div>
+            )}
         </div>
     );
 }

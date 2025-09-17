@@ -641,6 +641,106 @@ export default function GB200WithRoCEv2() {
             </div>
 
             {/* Ready to Get Started Section */}
+            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
+                <div className="relative z-30 container mx-auto px-4">
+                    <div className="relative max-w-7xl mx-auto">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-4 text-center">Leave Us a Message</h2>
+                        </SlideUp>
+                        <SlideUp>
+                            <p className="text-gray-600 mb-8 text-center text-lg">
+                                Have questions about our GB200 with RoCEv2 solutions? We'd love to hear from you.
+                            </p>
+                        </SlideUp>
+                        <SlideUp>
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                                            Your Name<span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            required
+                                            value={formData.name}
+                                            onChange={handleInputChange}
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent"
+                                            placeholder="Please enter"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                            Your Email<span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent"
+                                            placeholder="Please enter"
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                                        Message<span className="text-red-500">*</span>
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows={6}
+                                        required
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent resize-none"
+                                        placeholder="Please enter"
+                                    />
+                                </div>
+                                
+                                <div className="text-left">
+                                    <p className="text-sm text-gray-500 mb-4">
+                                        We respect your privacy. Your information will not be published.
+                                    </p>
+                                    <Button 
+                                        type="submit" 
+                                        disabled={isSubmitting}
+                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] px-8 py-3 text-white font-medium rounded-lg transition-colors"
+                                    >
+                                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    </Button>
+                                </div>
+                                
+                                {/* 状态消息显示 */}
+                                {submitStatus !== 'idle' && (
+                                    <div className={`mt-4 p-4 rounded-lg text-center transition-all duration-300 ${
+                                        submitStatus === 'success' 
+                                            ? 'bg-green-50 text-green-700 border border-green-200' 
+                                            : 'bg-red-50 text-red-700 border border-red-200'
+                                    }`}>
+                                        <div className="flex items-center justify-center gap-2">
+                                            {submitStatus === 'success' ? (
+                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                            ) : (
+                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                            <span className="font-medium">{statusMessage}</span>
+                                        </div>
+                                    </div>
+                                )}
+                            </form>
+                        </SlideUp>
+                    </div>
+                </div>
+            </div>
             
 
             <Footer />

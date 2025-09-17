@@ -364,20 +364,28 @@ export default function TestIndex() {
                                 {/* 第二张图片的标题和按钮 */}
                                 {slide.id === 2 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
-                                        <div className="max-w-3xl sm:pl-16">
-                                            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
-                                                A Comprehensive
-                                            </h1>
-                                            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
-                                                AI Conversation Platform
-                                            </h2>
+                                        <div className="max-w-3xl sm:pl-16 -pt-10">
                                             <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
-                                                <h3 className="text-3xl font-bold text-white">
+                                                <h3 className="text-4xl sm:text-5xl font-bold text-white">
                                                     Canopy Wave Chat
                                                 </h3>
                                             </div>
+                                            <div className="flex flex-wrap gap-6 mb-8">
+                                                <div className="flex items-center text-[#80B224] text-lg">
+                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
+                                                    <span>Integrates multiple models</span>
+                                                </div>
+                                                <div className="flex items-center text-[#80B224] text-lg">
+                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
+                                                    <span>More secure</span>
+                                                </div>
+                                                <div className="flex items-center text-[#80B224] text-lg">
+                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
+                                                    <span>Faster</span>
+                                                </div>
+                                            </div>
                                             <div className="flex gap-4">
-                                                <button className="border-2 border-gray-600 text-gray-700 hover:bg-gray-100 px-6 py-2 rounded-full font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                                                <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-gray-10 px-6 py-2 rounded-full font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                                     Free to use
                                                 </button>
                                             </div>
@@ -389,26 +397,24 @@ export default function TestIndex() {
                                 {slide.id === 3 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
                                         <div className="max-w-3xl sm:pl-16">
-                                            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#D5D7D1] to-[#8DB244] bg-clip-text text-transparent mb-4 leading-tight">
+                                            <h1 className="text-4xl h-14 sm:text-5xl font-bold bg-gradient-to-r from-[#D5D7D1] to-[#8DB244] bg-clip-text text-transparent mb-2 leading-tight">
                                                 Accelerating AI Deployment
                                             </h1>
-                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
-                                                <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                                                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                                                     API: The Key to Productivity
                                                 </h2>
-                                            </div>
-                                            <div className="space-y-3 mb-8">
-                                                <div className="flex items-center text-white text-lg">
+                                            <div className="flex flex-wrap gap-6 mb-8">
+                                                <div className="flex items-center text-[#C6E893] text-lg">
                                                     <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
                                                     <span>Rapid deployment</span>
                                                 </div>
-                                                <div className="flex items-center text-white text-lg">
+                                                <div className="flex items-center text-[#C6E893] text-lg">
                                                     <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>personalized model adjustment</span>
+                                                    <span>Model tuning</span>
                                                 </div>
-                                                <div className="flex items-center text-white text-lg">
+                                                <div className="flex items-center text-[#C6E893] text-lg">
                                                     <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>ensuring information security</span>
+                                                    <span>Data security</span>
                                                 </div>
                                             </div>
                                             <div className="flex gap-4">
@@ -418,6 +424,11 @@ export default function TestIndex() {
                                                 >
                                                     Reserve Now
                                                 </button>
+                                            </div>
+                                            <div className="absolute bottom-16 sm:right-[300px]">
+                                                <p className="text-white text-lg text-right leading-relaxed">
+                                                    Reserve access to keys and <br /> personalization schemes
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -432,7 +443,7 @@ export default function TestIndex() {
                                             </h1>
                                             <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
                                                 <h2 className="text-3xl sm:text-5xl font-bold text-white">
-                                                    NVIDIA GB200 NVL72
+                                                    NVIDIA HGX B200
                                                 </h2>
                                             </div>
                                             <div className="flex gap-4 mb-8">
@@ -441,7 +452,7 @@ export default function TestIndex() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="absolute bottom-16 right-16">
+                                        <div className="absolute bottom-16 sm:right-[300px]">
                                             <p className="text-white text-lg text-right leading-relaxed">
                                                 Aiming to Next-Generation AI and<br />
                                                 Computing Technologies
@@ -450,38 +461,6 @@ export default function TestIndex() {
                                     </div>
                                 )}
 
-                                {/* 第五张图片的标题和按钮 */}
-                                {slide.id === 5 && (
-                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
-                                        <div className="max-w-3xl sm:pl-16">
-                                            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
-                                                Enterprise-Grade
-                                            </h1>
-                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
-                                                <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                                                    GPU Infrastructure
-                                                </h2>
-                                            </div>
-                                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                                                Scalable, Secure, and Ready for AI Workloads
-                                            </p>
-                                            <div className="flex gap-4">
-                                                <button 
-                                                    onClick={() => window.location.href = '/pricing'} 
-                                                    className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-                                                >
-                                                    View Pricing
-                                                </button>
-                                                <button 
-                                                    onClick={() => window.location.href = '/contact'} 
-                                                    className="border-2 border-[#80B224] text-[#80B224] hover:bg-[#80B224] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                                                >
-                                                    Contact Sales
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
                             </div>
                         );
                     })}
@@ -527,8 +506,8 @@ export default function TestIndex() {
                                     onClick={() => handleManualSlideChange(index)}
                                     disabled={isTransitioning}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 transform will-change-transform ${index === currentSlide
-                                            ? 'bg-[#80B224] scale-125'
-                                            : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                                        ? 'bg-[#80B224] scale-125'
+                                        : 'bg-white bg-opacity-50 hover:bg-opacity-75'
                                         } ${isTransitioning ? 'opacity-70' : 'cursor-pointer'
                                         }`}
                                 />
@@ -570,8 +549,8 @@ export default function TestIndex() {
                                     {/* Step-by-Step Collaboration (1) */}
                                     <div
                                         className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
-                                                ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
-                                                : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onMouseEnter={() => {
                                             setActiveTab(1);
@@ -591,8 +570,8 @@ export default function TestIndex() {
                                     {/* Parallel Intelligence (2) */}
                                     <div
                                         className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
-                                                ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
-                                                : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onMouseEnter={() => {
                                             setActiveTab(2);
@@ -613,8 +592,8 @@ export default function TestIndex() {
                                     {/* Chat Controls (3) */}
                                     <div
                                         className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 3
-                                                ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
-                                                : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                            ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
                                             }`}
                                         onMouseEnter={() => {
                                             setActiveTab(3);
@@ -824,10 +803,9 @@ export default function TestIndex() {
                                                         setIsProductAutoPlaying(false);
                                                     }}
                                                     onMouseLeave={() => setIsProductAutoPlaying(true)}
-                                                    className={`w-[79px] h-[79px] rounded-3xl transition-all duration-200 relative overflow-hidden ${
-                                                        currentImageIndex === index - 1
-                                                            ? 'border-[#76B900] shadow-lg border-2'
-                                                            : 'border-gray-300 hover:border-gray-400'
+                                                    className={`w-[79px] h-[79px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
+                                                        ? 'border-[#76B900] shadow-lg border-2'
+                                                        : 'border-gray-300 hover:border-gray-400'
                                                         }`}
                                                 >
                                                     <Image
@@ -841,10 +819,9 @@ export default function TestIndex() {
                                                         <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded-lg"></div>
                                                     )}
                                                 </button>
-                                                <span className={`text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                                                    currentImageIndex === index - 1
-                                                        ? 'text-[#76B900] font-bold'
-                                                        : 'text-gray-600'
+                                                <span className={`text-sm font-medium transition-all duration-200 whitespace-nowrap ${currentImageIndex === index - 1
+                                                    ? 'text-[#76B900] font-bold'
+                                                    : 'text-gray-600'
                                                     }`}>
                                                     {productNames[index - 1]}
                                                 </span>
@@ -1162,64 +1139,29 @@ export default function TestIndex() {
                 </div>
 
                 {/* Global Network Section */}
-                <div className="bg-white py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="mb-12">
-                            <h2 className="text-4xl font-bold mb-6">
-                                Powered By Our Global Network
-                            </h2>
-                            <p className="text-gray-600 mb-8 leading-relaxed max-w-4xl">
-                                Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
-                            </p>
-                            <Button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/data-center/iceland'}>
-                                Explore Our Network
-                            </Button>
-                        </div>
-                        <div className="w-full max-w-7xl relative"
-                            onMouseEnter={handleMapMouseEnter}
-                            onMouseLeave={handleMapMouseLeave}>
-                            {/* 地图轮播容器 */}
-                            <div className="relative overflow-hidden rounded-lg">
-                                <div
-                                    className="flex transition-transform duration-500 ease-in-out"
-                                    style={{ transform: `translateX(-${currentMapIndex * 100}%)` }}
-                                >
-                                    {/* 第一张地图 - Iceland */}
-                                    <div className="w-full flex-shrink-0">
-                                        <Image
-                                            src="/test/iceland.webp"
-                                            alt="Iceland Network Map"
-                                            width={800}
-                                            height={600}
-                                            className="w-full h-auto"
-                                            priority
-                                        />
-                                    </div>
-                                    {/* 第二张地图 - North America */}
-                                    <div className="w-full flex-shrink-0">
-                                        <Image
-                                            src="/test/North-America.webp"
-                                            alt="North America Network Map"
-                                            width={800}
-                                            height={600}
-                                            className="w-full h-auto"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
+                <div className="bg-[#F9F9F9] py-12 sm:pt-16 pb-4">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-8">
+                        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
+                            <div className="w-full md:w-1/2">
+                                <SlideUp>
+                                    <h2 className="text-3xl sm:text-4xl font-black mb-8 sm:mb-10">Powered By Our Global Network</h2>
+                                </SlideUp>
+                                <SlideUp>
+                                    <p className="text-gray-600 mb-8 text-l leading-relaxed">
+                                        Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+                                    </p>
+                                </SlideUp>
 
-                            {/* 轮播指示器 */}
-                            <div className="flex justify-center mt-6 space-x-2">
-                                {[0, 1].map((index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => handleMapIndicatorClick(index)}
-                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${currentMapIndex === index
-                                            ? 'bg-[#8CC63F] scale-110'
-                                            : 'bg-gray-300 hover:bg-gray-400'
-                                            }`}
-                                    />
-                                ))}
+                                <SlideUp>
+                                    <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
+                                        Get started →
+                                    </IwsLink>
+                                </SlideUp>
+                            </div>
+                            <div className="w-full md:w-1/2">
+                                <SlideUp>
+                                    <EuropeMap />
+                                </SlideUp>
                             </div>
                         </div>
                     </div>
@@ -1331,7 +1273,7 @@ export default function TestIndex() {
                 </section>
 
                 {/* CTA Section */}
-                <div className="py-32 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="py-32 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="absolute inset-0"></div>
                     <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                         <h2 className="text-4xl font-bold text-white mb-10">
