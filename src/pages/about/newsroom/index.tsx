@@ -56,6 +56,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 15,
+            title: "AI Medical Imaging Analysis",
+            description: "Beyond the Limits of the Human Eye: How AI Medical Imaging Analysis Becomes the 'Third Eye' for Doctors",
+            date: "September 16, 2025",
+            image: "/blog/ai-doctor.webp"
+        },
+        {
             id: 14,
             title: "Decoding AI Hallucinations",
             description: "OpenAI's Latest Research: Two Core Causes of AI Hallucinations and Their Solutions",
