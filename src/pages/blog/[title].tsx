@@ -1805,7 +1805,7 @@ case 'ai-medical-imaging-analysis':
             'Instant Integration of Vast Experience:'
           ),
           'A top-tier AI diagnostic model is trained on datasets containing hundreds of thousands, or even millions, of expert-annotated imaging cases. This means that when assisting in diagnosis, it instantly integrates the vast diagnostic experience of top hospitals worldwide.',
-          <img key="ai-Scenarios" src="/blog/ai-scenarios.webp" alt="AI Scenarios" className="w-full h-auto my-8 rounded-lg" />,
+          <img key="ai-Scenarios" src="/blog/ai-scenarios.webp" alt="AI Scenarios" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
         ],
       },
       {
@@ -1848,7 +1848,7 @@ case 'ai-medical-imaging-analysis':
           React.createElement(
             'strong',
             { key: 'algorithm-interpretability' },
-            <img key="ai-interpretability" src="/blog/ai-Interpretability.webp" alt="AI Interpretability" className="w-full h-auto my-8 rounded-lg" />,
+            <img key="ai-interpretability" src="/blog/ai-Interpretability.webp" alt="AI Interpretability" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
             'Algorithm Interpretability and Regulation:'
           ),
           'Doctors need to understand the "basis" of AI\'s judgments, not just accept a black-box conclusion. As medical device software, AI diagnostic tools must undergo rigorous approval processes before clinical deployment.',
