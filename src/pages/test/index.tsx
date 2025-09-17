@@ -703,8 +703,8 @@ export default function TestIndex() {
                 <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left">
-                            NVIDIA GB200 & B200, H100, H200<br />
-                            GPUs now available
+                            NVIDIA GB200 & B200, H100, H200 GPUs<br />
+                            now available
                         </h2>
 
                         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 items-center">
