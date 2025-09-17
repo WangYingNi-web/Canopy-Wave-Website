@@ -309,9 +309,9 @@ export default function Header() {
                         <li><IwsLink href="/rendering" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Rendering</IwsLink></li>
                         <li><IwsLink href="/private-cloud" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Private Cloud and GPUs Deployment</IwsLink></li>
                         <li><IwsLink href="/networking-hardware" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Networking Hardware Solution</IwsLink></li>
-                        <ul className="pl-4 mt-2 space-y-2">
+                        {/* <ul className="pl-4 mt-2 space-y-2">
                           <li><IwsLink href="/networking-hardware/gb200-with-rocev2" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>GB200 with RoCEv2</IwsLink></li>
-                        </ul>
+                        </ul> */}
                       </ul>
                     </div>
                   </div>
