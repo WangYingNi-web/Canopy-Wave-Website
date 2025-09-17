@@ -709,7 +709,7 @@ export default function TestIndex() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 items-center">
                             {/* 左侧产品介绍 */}
-                            <div className="lg:col-span-2 lg:-mt-16 min-w-[500px]">
+                            <div className="lg:col-span-2 lg:-mt-2 min-w-[500px]">
                                 {(() => {
                                     const productInfo = [
                                         {
@@ -762,11 +762,11 @@ export default function TestIndex() {
 
                                     return (
                                         <>
-                                            <div className="flex items-center space-x-4 mb-6">
+                                            <div className="flex items-center space-x-4 mb-10">
                                                 <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
                                             </div>
 
-                                            <ul className="text-gray-600 leading-relaxed text-l mb-12">
+                                            <ul className="text-gray-600 leading-relaxed text-l mb-28">
                                                 {currentProduct.features.map((feature, index) => (
                                                     <li key={index}>{feature}</li>
                                                 ))}
@@ -807,7 +807,7 @@ export default function TestIndex() {
                                 </div>
 
                                 {/* 图片切换按钮 */}
-                                <div className="absolute right-[-90px] top-[165px] transform -translate-y-1/2 flex flex-col space-y-3 mt-16">
+                                <div className="absolute right-[-90px] top-[162px] transform -translate-y-1/2 flex flex-col space-y-3 mt-16">
                                     {[1, 2, 3, 4].map((index) => {
                                         const productNames = ["NVIDIA GB200 NVL72", "NVIDIA HGX B200", "NVIDIA H200", "NVIDIA H100"];
                                         return (
@@ -824,7 +824,7 @@ export default function TestIndex() {
                                                         setIsProductAutoPlaying(false);
                                                     }}
                                                     onMouseLeave={() => setIsProductAutoPlaying(true)}
-                                                    className={`w-20 h-20 rounded-3xl transition-all duration-200 relative overflow-hidden ${
+                                                    className={`w-[79px] h-[79px] rounded-3xl transition-all duration-200 relative overflow-hidden ${
                                                         currentImageIndex === index - 1
                                                             ? 'border-[#76B900] shadow-lg border-2'
                                                             : 'border-gray-300 hover:border-gray-400'
