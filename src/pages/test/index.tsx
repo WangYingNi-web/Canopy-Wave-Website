@@ -1139,7 +1139,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Global Network Section */}
-                <div className="bg-[#F9F9F9] py-12 sm:pt-16 pb-4">
+                <div className="bg-white py-12 sm:pt-16 pb-4">
                     <div className="max-w-7xl mx-auto px-4 sm:px-8">
                         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
                             <div className="w-full md:w-1/2">
