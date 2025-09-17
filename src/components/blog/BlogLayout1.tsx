@@ -53,7 +53,7 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-hallucinations.webp"
                   : blogPost.title === "AI: The Doctor's Third Eye in Medical Imaging"
                   ? "/blog/ai-doctor.webp"
-                  : blogPost.title === "Edge GPUs: The Power and Size Challenge"
+                  : blogPost.title === "Gpus In Edge Computing"
                   ? "/blog/ai-gpu-edge.webp"
                   : "/blog1.webp"
                   

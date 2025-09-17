@@ -1869,7 +1869,7 @@ case 'ai-medical-imaging-analysis':
 case 'gpus-in-edge-computing':
   return {
     id: 16,
-    title: 'Edge GPUs: The Power and Size Challenge',
+    title: 'Gpus In Edge Computing',
     description: 'The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges',
     sections: [
       {
@@ -1901,17 +1901,7 @@ case 'gpus-in-edge-computing':
           'When power consumption is limited, edge nodes can integrate with the grid scheduling system to dynamically reduce power output. As demonstrated in the Emerald AI case study, the 25% power reduction in GPU clusters during peak hours can also be applied to edge GPUs, helping enterprises reduce energy costs and obtain green certifications. Similarly, Canopy Wave has explored adaptive workload throttling in its GPU clusters, which allows enterprises to align computing demand with renewable energy availability or peak–off-peak electricity pricing, reinforcing both sustainability goals and operational cost control.'
         ]
       },
-      {
-        title: '',
-        content: [
-          React.createElement('img', { 
-            key: 'edge-gpu-image', 
-            src: '/blog/edge-gpu.png', 
-            alt: 'Edge GPU Computing', 
-            className: 'w-full h-auto my-8 rounded-lg' 
-          })
-        ]
-      },
+      
       {
         title: '4. Enterprise Practices and Performance Improvement Case Studies',
         content: [
