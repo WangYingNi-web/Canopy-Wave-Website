@@ -1886,7 +1886,8 @@ case 'gpus-in-edge-computing':
           React.createElement('strong', { key: 'power-constraints' }, 'Power Constraints in Edge Scenarios:'),
           'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by data center GPUs. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',
           React.createElement('strong', { key: 'heat-dissipation' }, 'Heat Dissipation and Durability:'),
-          'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.'
+          'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.',
+          <img key="ai-energy" src="/blog/ai-Energy-Consumption.webp" alt="AI Energy Efficiency" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />
         ]
       },
       {
@@ -1927,7 +1928,8 @@ case 'gpus-in-edge-computing':
           'This provides important insights for the development of edge GPU products:',
           '- Introducing visual energy consumption and carbon emission estimation metrics in product design and battery life evaluation.',
           '- Displaying energy consumption comparisons and energy-saving advantages and disadvantages of each lightweight GPU in different usage scenarios (e.g., standby vs. continuous inference vs. off-peak scheduling).',
-          '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.'
+          '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.',
+          <img key="ai-product-recommendations" src="/blog/ai-product-recommendations.webp" alt="AI Product Recommendations" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
         ]
       },
       {
@@ -2106,7 +2108,7 @@ case 'gpus-in-edge-computing':
                             : blogPost.title === "Revolutionizing Elderly Care with AI"
                               ? "/blog/ai-elderly-care.webp"
                               : blogPost.title === "AI: The Doctor's Third Eye in Medical Imaging"
-                                ? "/blog/ai-doctor.webp"
+                                ? "/blog/ai-gpu-edge.webp"
                                 : "/blog1.webp"
   }
 

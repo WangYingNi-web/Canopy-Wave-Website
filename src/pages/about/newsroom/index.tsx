@@ -60,7 +60,7 @@ export default function Newsroom() {
             title: "Gpus In Edge Computing",
             description: "The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges",
             date: "September 17, 2025",
-            image: "/blog/.webp"
+            image: "/blog/ai-gpu-edge.webp"
         },
         {
             id: 15,
