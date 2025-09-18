@@ -67,7 +67,7 @@ export default function InteractiveMap() {
     return (
         <div ref={ref} className="w-full relative">
             {/* 切换按钮 */}
-            <div className={`absolute -top-16 right-0 z-20 flex gap-2`}>
+            <div className={`absolute -top-10 right-0 z-20 flex gap-2`}>
                 {(Object.keys(mapConfigs) as MapType[]).map((mapType) => (
                     <button
                         key={mapType}
@@ -84,7 +84,7 @@ export default function InteractiveMap() {
 
             {/* 地图容器 */}
             <div
-                className="relative w-full mx-auto mt-6 ml-6"
+                className="relative w-full mx-auto mt-12 ml-6"
                 style={{
                     aspectRatio: '580/400',
                     maxWidth: '580px',

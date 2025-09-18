@@ -900,16 +900,23 @@ export default function TestIndex() {
                                                         AI Model Training
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
-                                                            Accelerate AI training with powerful computing power and low-latency networks. Applied in NLP, computer vision, recommendations, and autonomous driving.
-                                                        </p>
+                                                        <ul className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 space-y-1">
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Accelerate AI training with powerful computing power and low-latency networks.</span>
+                                                            </li>
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Applied in NLP, computer vision, recommendations, and autonomous driving.</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </>
                                             )}
                                             {/* Learn More按钮 - 绝对定位到左下角 */}
                                             {showCardContent === 'card1' && (
                                                 <div className="absolute bottom-6 left-6">
-                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/model-training'}>
+                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full-full" onClick={() => window.location.href = '/model-training'}>
                                                         Learn More&gt;
                                                     </p>
                                                 </div>
@@ -969,7 +976,7 @@ export default function TestIndex() {
                                             {/* Learn More按钮 - 绝对定位到左下角 */}
                                             {showCardContent === 'card2' && (
                                                 <div className="absolute bottom-6 left-6">
-                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/inference'}>
+                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/inference'}>
                                                         Learn More&gt;
                                                     </p>
                                                 </div>
@@ -1018,17 +1025,23 @@ export default function TestIndex() {
                                                         Rendering
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
-                                                            High-frame throughput and ultra-low latency with GPU and CPU-based rendering engines.
-                                                            Applied in gaming, simulation, virtual production, and design visualization.
-                                                        </p>
+                                                        <ul className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 space-y-1">
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>High-frame throughput and ultra-low latency with GPU and CPU-based rendering engines.</span>
+                                                            </li>
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Applied in gaming, simulation, virtual production, and design visualization.</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </>
                                             )}
                                             {/* Learn More按钮 - 绝对定位到左下角 */}
                                             {showCardContent === 'card3' && (
                                                 <div className="absolute bottom-6 left-6">
-                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/rendering'}>
+                                                    <p className="text-sm opacity-50 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/rendering'}>
                                                         Learn More&gt;
                                                     </p>
                                                 </div>
@@ -1076,17 +1089,23 @@ export default function TestIndex() {
                                                         Private Cloud and GPUs Deployment
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
-                                                            Extensive deployment experience with fast delivery and full-stack software support.
-                                                            Applied in AI training, inference, rendering, and high-performance computing.
-                                                        </p>
+                                                        <ul className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 space-y-1">
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Extensive deployment experience with fast delivery and full-stack software support.</span>
+                                                            </li>
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Applied in AI training, inference, rendering, and high-performance computing.</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </>
                                             )}
                                             {/* Learn More按钮 - 绝对定位到左下角 */}
                                             {showCardContent === 'card4' && (
                                                 <div className="absolute bottom-6 left-6">
-                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/private-cloud'}>
+                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/private-cloud'}>
                                                         Learn More&gt;
                                                     </p>
                                                 </div>
@@ -1134,18 +1153,23 @@ export default function TestIndex() {
                                                         Networking Hardware Solution
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
-                                                            Provide comprehensive network hardware solutions, including Switches, NICs, Transceivers, etc.
-                                                            <br />
-                                                            Serving enterprise, data center, and edge computing with reliable, scalable infrastructure.
-                                                        </p>
+                                                        <ul className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 space-y-1">
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Provide comprehensive network hardware solutions, including Switches, NICs, Transceivers, etc.</span>
+                                                            </li>
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Serving enterprise, data center, and edge computing with reliable, scalable infrastructure.</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </>
                                             )}
                                             {/* Learn More按钮 - 绝对定位到左下角 */}
                                             {showCardContent === 'card5' && (
                                                 <div className="absolute bottom-6 left-6">
-                                                    <p className="text-sm opacity-90 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded" onClick={() => window.location.href = '/networking-hardware'}>
+                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/networking-hardware'}>
                                                         Learn More&gt;
                                                     </p>
                                                 </div>
