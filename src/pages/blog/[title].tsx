@@ -1869,7 +1869,7 @@ case 'ai-medical-imaging-analysis':
 case 'gpus-in-edge-computing':
   return {
     id: 16,
-    title: 'Edge GPUs: The Power and Size Challenge',
+    title: 'Gpus In Edge Computing',
     description: 'The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges',
     sections: [
       {
@@ -1901,17 +1901,7 @@ case 'gpus-in-edge-computing':
           'When power consumption is limited, edge nodes can integrate with the grid scheduling system to dynamically reduce power output. As demonstrated in the Emerald AI case study, the 25% power reduction in GPU clusters during peak hours can also be applied to edge GPUs, helping enterprises reduce energy costs and obtain green certifications. Similarly, Canopy Wave has explored adaptive workload throttling in its GPU clusters, which allows enterprises to align computing demand with renewable energy availability or peak–off-peak electricity pricing, reinforcing both sustainability goals and operational cost control.'
         ]
       },
-      {
-        title: '',
-        content: [
-          React.createElement('img', { 
-            key: 'edge-gpu-image', 
-            src: '/blog/edge-gpu.png', 
-            alt: 'Edge GPU Computing', 
-            className: 'w-full h-auto my-8 rounded-lg' 
-          })
-        ]
-      },
+      
       {
         title: '4. Enterprise Practices and Performance Improvement Case Studies',
         content: [
@@ -2052,7 +2042,8 @@ case 'gpus-in-edge-computing':
           'By integrating hardware optimization (low-power architecture design, heterogeneous integration, and intelligent cooling), software scheduling (dynamic frequency control and hierarchical task scheduling), energy consumption visualization (real-time monitoring and data transparency), and carbon offset mechanisms (green power integration and carbon footprint labeling), edge GPUs will gradually form a complete sustainable computing power ecosystem.',
           'Drawing on the innovations of platforms like Compute Exchange, it is clear that in the future, GPUs will no longer be measured solely by "peak computing power" but will need to include performance/power ratio, carbon emissions traceability, and green power compatibility as equally important evaluation indicators. This shift will drive the GPU market from a "single performance-driven" approach to a multi-dimensional competitive landscape characterized by "performance + energy efficiency + sustainability."',
           'For the industry, those who can pioneer edge GPU products that prioritize both sustainability and efficiency will have the opportunity to seize the initiative in rapidly expanding scenarios such as smart cities, the Internet of Vehicles, retail, and energy management. At the same time, as regulatory policies around the world tighten energy consumption controls for data centers and edge nodes, GPU products with green compliance attributes will be more likely to attract government projects, attract investment, and gain customer recognition.',
-          'Thus, future edge GPUs will not only be high-performance intelligent engines but also low-carbon, sustainable industrial infrastructure, playing a strategic role in the global trend of AI edge computing.'
+          'Thus, future edge GPUs will not only be high-performance intelligent engines but also low-carbon, sustainable industrial infrastructure, playing a strategic role in the global trend of AI edge computing.(https://compute.exchange/manifesto)',
+          'Special thanks to Simeon Bochev, Co-Founder and CEO of Compute Exchange for the permission.'
         ]
       }
     ]
