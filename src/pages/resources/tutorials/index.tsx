@@ -39,6 +39,14 @@ const Tutorials: React.FC = () => {
 
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
+    // {
+    //   id: 'comparing-ai-agent-frameworks',
+    //   category: 'AI Models',
+    //   title: 'Comparing Open-Source AI Agent Frameworks',
+    //   image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.png',
+    //   date: 'September 18, 2025',
+    //   onClick: () => handleTutorialClick('Comparing Open-Source AI Agent Frameworks')
+    // },
     {
       id: 'prompt-engineering-guide',
       category: 'LLMs',
@@ -95,6 +103,7 @@ const Tutorials: React.FC = () => {
       date: 'July 31, 2025',
       onClick: () => handleTutorialClick('How to Run DeepSeek-R1 Locally on a Canopy Wave VM')
     },
+    
     {
       id: 'api',
       category: 'API',

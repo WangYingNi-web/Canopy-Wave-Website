@@ -346,13 +346,15 @@ export default function TestIndex() {
                                 {slide.id === 1 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
                                         <div className="max-w-3xl sm:pl-16">
-                                            <h1 className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-[#8AAF40] to-[#456A36] bg-clip-text text-transparent mb-4 leading-tight">
-                                                The Platform that
-                                            </h1>
-                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
-                                                <h2 className="text-4xl sm:text-5xl font-bold text-white">
-                                                    Enables AI
-                                                </h2>
+                                            <div className="mb-8">
+                                                <Image
+                                                    src="/test/banner_dabiaoti01.png"
+                                                    alt="The Platform that Enables AI"
+                                                    width={600}
+                                                    height={200}
+                                                    className="object-contain"
+                                                    priority
+                                                />
                                             </div>
                                             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                                                 Where Compute Meets Expertise
@@ -365,24 +367,15 @@ export default function TestIndex() {
                                 {slide.id === 2 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
                                         <div className="max-w-3xl sm:pl-16 -pt-10">
-                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
-                                                <h3 className="text-4xl sm:text-5xl font-bold text-white">
-                                                    Canopy Wave Chat
-                                                </h3>
-                                            </div>
-                                            <div className="flex flex-wrap gap-6 mb-8">
-                                                <div className="flex items-center text-[#80B224] text-lg">
-                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>Integrates multiple models</span>
-                                                </div>
-                                                <div className="flex items-center text-[#80B224] text-lg">
-                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>More secure</span>
-                                                </div>
-                                                <div className="flex items-center text-[#80B224] text-lg">
-                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>Faster</span>
-                                                </div>
+                                            <div className="mb-8">
+                                                <Image
+                                                    src="/test/banner_img_biaoti02.png"
+                                                    alt="Canopy Wave Chat"
+                                                    width={600}
+                                                    height={200}
+                                                    className="w-auto h-auto max-w-full"
+                                                    priority
+                                                />
                                             </div>
                                             <div className="flex gap-4">
                                                 <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-gray-10 px-6 py-2 rounded-full font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
@@ -397,25 +390,15 @@ export default function TestIndex() {
                                 {slide.id === 3 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
                                         <div className="max-w-3xl sm:pl-16">
-                                            <h1 className="text-4xl h-14 sm:text-5xl font-bold bg-gradient-to-r from-[#D5D7D1] to-[#8DB244] bg-clip-text text-transparent mb-2 leading-tight">
-                                                Accelerating AI Deployment
-                                            </h1>
-                                                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                                                    API: The Key to Productivity
-                                                </h2>
-                                            <div className="flex flex-wrap gap-6 mb-8">
-                                                <div className="flex items-center text-[#C6E893] text-lg">
-                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>Rapid deployment</span>
-                                                </div>
-                                                <div className="flex items-center text-[#C6E893] text-lg">
-                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>Model tuning</span>
-                                                </div>
-                                                <div className="flex items-center text-[#C6E893] text-lg">
-                                                    <div className="w-2 h-2 bg-[#80B224] rounded-full mr-4"></div>
-                                                    <span>Data security</span>
-                                                </div>
+                                            <div className="mb-8">
+                                                <Image
+                                                    src="/test/banner_img_biaoti03.png"
+                                                    alt="Accelerating AI Deployment API"
+                                                    width={600}
+                                                    height={200}
+                                                    className="w-auto h-auto max-w-full"
+                                                    priority
+                                                />
                                             </div>
                                             <div className="flex gap-4">
                                                 <button
@@ -438,13 +421,15 @@ export default function TestIndex() {
                                 {slide.id === 4 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
                                         <div className="max-w-3xl sm:pl-16">
-                                            <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-[#D5D7D1] to-[#8DB244] bg-clip-text text-transparent mb-4 leading-tight">
-                                                On-Demand
-                                            </h1>
-                                            <div className="bg-[#80B224] inline-block px-6 py-3 rounded-lg mb-8">
-                                                <h2 className="text-3xl sm:text-5xl font-bold text-white">
-                                                    NVIDIA HGX B200
-                                                </h2>
+                                            <div className="mb-8">
+                                                <Image
+                                                    src="/test/banner_img_biaoti04.png"
+                                                    alt="On-Demand NVIDIA HGX B200"
+                                                    width={600}
+                                                    height={200}
+                                                    className="w-auto h-auto max-w-full"
+                                                    priority
+                                                />
                                             </div>
                                             <div className="flex gap-4 mb-8">
                                                 <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
@@ -694,6 +679,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA GB200 NVL72",
                                             price: "$9/GPU/hr",
+                                            router:'',
                                             features: [
                                                 "• 18x compute trays in a rack",
                                                 "• 36x Grace CPUs, 72x Blackwell GPUs",
@@ -751,12 +737,12 @@ export default function TestIndex() {
                                                 ))}
                                             </ul>
 
-                                            <span
-                                                className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg"
+                                            <Button
+                                                className="bg-[#80B224] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg"
                                                 onClick={() => window.location.href = '/pricing'}
                                             >
-                                                {currentProduct.price}
-                                            </span>
+                                                Learn More
+                                            </Button>
                                         </>
                                     );
                                 })()}
@@ -780,8 +766,8 @@ export default function TestIndex() {
 
                                 {/* Learn More 按钮 */}
                                 <div className="absolute right-0 top-0 transform -translate-y-1/2">
-                                    <Button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
-                                        Learn More
+                                    <Button className="bg-[#80B224] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
+                                        Getting Price
                                     </Button>
                                 </div>
 
@@ -1148,13 +1134,13 @@ export default function TestIndex() {
                                 </SlideUp>
                                 <SlideUp>
                                     <p className="text-gray-600 mb-8 text-l leading-relaxed">
-                                        Our data centers are powered by Canopy Wave global, carrier-grade network-empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks
+                                        Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                                     </p>
                                 </SlideUp>
 
                                 <SlideUp>
                                     <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
-                                        Get started →
+                                        Explore Our Network
                                     </IwsLink>
                                 </SlideUp>
                             </div>

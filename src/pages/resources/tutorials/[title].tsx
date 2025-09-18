@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
-  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialPost } from '@/components/tutorials'
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -250,6 +250,23 @@ export default function TutorialDetail() {
           ],
         }
 
+      case 'comparing-open-source-ai-agent-frameworks':
+        return {
+          id: 8,
+          title: 'Comparing Open-Source AI Agent Frameworks',
+          description: 'A comprehensive comparison of popular open-source AI agent frameworks to help you choose the right one for your project',
+          metaDescription: 'Amid the rapid growth of AI agents, open-source frameworks have emerged as powerful tools for developers building intelligent applications.',
+          imageAlt: 'ai agent frameworks',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Amid the rapid growth of AI agents, open-source frameworks have emerged as powerful tools for developers building intelligent applications. LangGraph, AutoGPT, and AgentGPT each offer distinct features, providing diverse options for developers with varying needs—from technical architecture to practical implementation.',
+              ],
+            },
+          ],
+        }
+
       default:
         return null
     }
@@ -293,6 +310,8 @@ export default function TutorialDetail() {
         return <TutorialLayout6 />
       case 7:
         return <TutorialLayout7 />
+      case 8:
+        return <TutorialLayout8 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }
@@ -307,6 +326,8 @@ export default function TutorialDetail() {
         return "min-h-screen bg-[#F9F9F9]"
       case 3:
         return "min-h-screen bg-[#F9F9F9]"
+      case 8:
+        return "min-h-screen bg-[#F9F9F9]"
       default:
         return "min-h-screen bg-[#F9F9F9]"
     }
@@ -315,15 +336,16 @@ export default function TutorialDetail() {
   return (
     <main className={getBackgroundClass()}>
       <Head>
-        <title>Canopy Wave - {tutorialPost.title}</title>
-        <meta name="description" content={tutorialPost.description} />
+        <title>{`Canopy Wave - ${tutorialPost.title}`}</title>
+        <meta name="description" content={tutorialPost.metaDescription || tutorialPost.description} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://canopywave.com/resources/tutorials/${title}`} />
         <meta property="og:title" content={tutorialPost.title} />
-        <meta property="og:description" content={tutorialPost.description} />
+        <meta property="og:description" content={tutorialPost.metaDescription || tutorialPost.description} />
         <meta property="og:image" content="https://canopywave.com/tutorials/banner.png" />
+        <meta property="og:image:alt" content={tutorialPost.imageAlt || tutorialPost.title} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Canopy Wave" />
@@ -332,8 +354,9 @@ export default function TutorialDetail() {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://canopywave.com/resources/tutorials/${title}`} />
         <meta property="twitter:title" content={tutorialPost.title} />
-        <meta property="twitter:description" content={tutorialPost.description} />
+        <meta property="twitter:description" content={tutorialPost.metaDescription || tutorialPost.description} />
         <meta property="twitter:image" content="https://canopywave.com/tutorials/banner.png" />
+        <meta property="twitter:image:alt" content={tutorialPost.imageAlt || tutorialPost.title} />
 
         {/* LinkedIn */}
         <meta property="linkedin:owner" content="Canopy Wave" />
