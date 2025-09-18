@@ -28,7 +28,7 @@ export default function TestIndex() {
     const [showCardContent, setShowCardContent] = useState<string | null>('card1');
     const [enterTimer, setEnterTimer] = useState<NodeJS.Timeout | null>(null);
     const [hoveredCard, setHoveredCard] = useState('card1');
-    const [activeTab, setActiveTab] = useState(1); // 从上至下开始，初始为Step-by-Step Collaboration
+    const [activeTab, setActiveTab] = useState(1); // 从上至下开始，初始为Multi-model collaboration: Beyond single-model capabilities
     const [autoPlayTimer, setAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
     const [isHovering, setIsHovering] = useState(false);
     const [isProductAutoPlaying, setIsProductAutoPlaying] = useState(true);
@@ -357,9 +357,11 @@ export default function TestIndex() {
                                                         priority
                                                     />
                                                 </div>
-                                                <p className="text-sm sm:text-lg lg:text-xl text-gray-700 mb-4 sm:mb-6 lg:mb-8 leading-relaxed">
-                                                    Where Compute Meets Expertise
-                                                </p>
+                                                <img 
+                                                    src="/test/banner_xiaobiaoti01.png" 
+                                                    alt="Where Compute Meets Expertise" 
+                                                    className="mb-4 sm:mb-6 lg:mb-8 h-auto max-w-[300px] lg:max-w-[600px]"
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +383,7 @@ export default function TestIndex() {
                                                     />
                                                 </div>
                                                 <div className="flex gap-2 sm:gap-4">
-                                                    <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-gray-10 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                                                    <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                                         Free to use
                                                     </button>
                                                 </div>
@@ -413,11 +415,11 @@ export default function TestIndex() {
                                                         Reserve Now
                                                     </button>
                                                 </div>
-                                                <div className="absolute bottom-8 sm:bottom-32 lg:bottom-35 right-0 sm:right-[200px] lg:right-[250px]">
+                                                {/* <div className="absolute bottom-8 sm:bottom-32 lg:bottom-35 right-0 sm:right-[200px] lg:right-[250px]">
                                                     <p className="text-white text-sm sm:text-base lg:text-lg text-right leading-relaxed">
                                                         Reserve access to keys and <br /> personalization schemes
                                                     </p>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>
@@ -439,16 +441,16 @@ export default function TestIndex() {
                                                     />
                                                 </div>
                                                 <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6 lg:mb-8">
-                                                    <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300">
+                                                    <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="text-[#80B224] border-2 border-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300">
                                                         Launch Now
                                                     </button>
                                                 </div>
-                                                <div className="absolute sm:bottom-16 lg:bottom-28 right-4 sm:right-[200px] lg:right-[300px]">
+                                                {/* <div className="absolute sm:bottom-16 lg:bottom-28 right-4 sm:right-[200px] lg:right-[300px]">
                                                     <p className="text-white text-sm sm:text-base lg:text-lg text-right leading-relaxed">
                                                         Aiming to Next-Generation AI and<br />
                                                         Computing Technologies
                                                     </p>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>
@@ -544,11 +546,11 @@ export default function TestIndex() {
                             {/* 右侧标题区域 - 1/3宽度 */}
                             <div className="lg:w-1/3 relative">
                                 <div className="space-y-4">
-                                    {/* Step-by-Step Collaboration (1) */}
+                                    {/* Multi-model collaboration: Beyond single-model capabilities (1) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 1
-                                            ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
-                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                        className={`p-4 cursor-pointer transition-all duration-300 relative ${activeTab === 1
+                                            ? 'bg-[#F5F9F4] text-gray-700 shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                                             }`}
                                         onMouseEnter={() => {
                                             setActiveTab(1);
@@ -556,20 +558,24 @@ export default function TestIndex() {
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
+                                        <div 
+                                            className="absolute right-0 top-1/4 h-1/2 w-1.5 rounded-full transition-all duration-300"
+                                            style={{ backgroundColor: activeTab === 1 ? '#80B224' : '#D1F0FA' }}
+                                        ></div>
                                         <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Step-by-Step Collaboration</h3>
+                                            }`}>Multi-model collaboration: Beyond single-model capabilities</h3>
                                         <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
-                                                Each model builds on the last to deliver sharper logic and greater precision.
+                                                Multi-model sequential reasoning leverages "division of labor and collaboration," allowing each model to focus on its area of expertise and achieve a "1+1`{'>'}`2" effect
                                             </p>
                                         </div>
                                     </div>
-                                    {/* Parallel Intelligence (2) */}
+                                    {/* Compare answers across multiple models for a broader perspective (2) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 2
-                                            ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
-                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                        className={`p-4 cursor-pointer transition-all duration-300 relative ${activeTab === 2
+                                            ? 'bg-[#F5F9F4] text-gray-700 shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                                             }`}
                                         onMouseEnter={() => {
                                             setActiveTab(2);
@@ -577,21 +583,25 @@ export default function TestIndex() {
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
+                                        <div 
+                                            className="absolute right-0 top-1/4 h-1/2 w-1.5 rounded-full transition-all duration-300"
+                                            style={{ backgroundColor: activeTab === 2 ? '#80B224' : '#D1F0FA' }}
+                                        ></div>
                                         <h3 className={`text-lg font-semibold ${activeTab === 2 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Parallel Intelligence</h3>
+                                            }`}>Compare answers across multiple models for a broader perspective</h3>
                                         <div className={`overflow-hidden transition-all duration-500 ${activeTab === 2 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
-                                                Unlock simultaneous responses from different AI models-gain fresh perspectives, compare solutions, and choose the best answer.
+                                                Different models are built on distinct training data, algorithms, and architectures. Their simultaneous responses consolidate diverse perspectives, delivering more comprehensive and rich information.
                                             </p>
                                         </div>
                                     </div>
 
-                                    {/* Chat Controls (3) */}
+                                    {/* Flexible parameter adjustment for improved model efficiency (3) */}
                                     <div
-                                        className={`p-4 rounded-lg cursor-pointer transition-all duration-300 border-r-4 ${activeTab === 3
-                                            ? 'bg-[#F5F9F4] text-gray-700 border-r-[#80B224] shadow-lg'
-                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-r-gray-300'
+                                        className={`p-4 cursor-pointer transition-all duration-300 relative ${activeTab === 3
+                                            ? 'bg-[#F5F9F4] text-gray-700 shadow-lg'
+                                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                                             }`}
                                         onMouseEnter={() => {
                                             setActiveTab(3);
@@ -599,12 +609,16 @@ export default function TestIndex() {
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
+                                        <div 
+                                            className="absolute right-0 top-1/4 h-1/2 w-1.5 rounded-full transition-all duration-300"
+                                            style={{ backgroundColor: activeTab === 3 ? '#80B224' : '#D1F0FA' }}
+                                        ></div>
                                         <h3 className={`text-lg font-semibold ${activeTab === 3 ? 'text-[#80B224]' : 'text-gray-700'
-                                            }`}>Chat Controls</h3>
+                                            }`}>Flexible parameter adjustment for improved model efficiency</h3>
                                         <div className={`overflow-hidden transition-all duration-500 ${activeTab === 3 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
-                                                Create customized models through control buttons. Such as Agent Builder, Prompts, Memories, Attach Files, Bookmarks and so on.
+                                                Flexibly adjust parameters to match needs, optimizing model convergence speed and boosting efficiency.
                                             </p>
                                         </div>
                                     </div>
@@ -636,7 +650,7 @@ export default function TestIndex() {
                                 </div>
                                 <h3 className="text-lg font-bold mb-4">End-to-End Secure Operations</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    By leveraging on-premises deployment to eliminate cloud leakage risks, our unified platform delivers real-time, comprehensive oversight and control of your entire cluster's operations.
+                                    Our proprietary GPU management platform offers real-time monitoring, health alerts, and resource optimization. Backed by 24/7 support, we ensure peak cluster performance and stability.
                                 </p>
                             </div>
 
@@ -645,9 +659,9 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-2.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4">Customized Needs, Personalized Service</h3>
+                                <h3 className="text-lg font-bold mb-4">Customized Service</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Providing customized GPU clusters and AI model services to empower you to shape the future.
+                                    We provide dedicated AI infrastructure and offer full-lifecycle AI services—such as model fine-tuning and agent customization tailored to your needs—to drive enterprises toward faster, smarter, and more cost-effective growth.
                                 </p>
                             </div>
 
@@ -656,9 +670,9 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-3.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4">High Performance</h3>
+                                <h3 className="text-lg font-bold mb-4">Canopy Wave private cloud</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Unlimited Computing Power, Unleashed AI Performance - Powering Top-Tier AI with the Strongest Resources.
+                                    Best GPU cluster performance in the industry. With 99.99% up-time. Have all your GPUs under the same datacenter, your workload and privacy are protected.
                                 </p>
                             </div>
 

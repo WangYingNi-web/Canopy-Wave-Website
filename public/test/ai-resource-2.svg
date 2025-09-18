@@ -1,22 +1,22 @@
 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Frame 1000001787" clip-path="url(#clip0_2835_8791)">
+<g id="Frame 2147226519" clip-path="url(#clip0_298_1351)">
 <g id="Frame 2147226613">
 <g id="Group 2474">
-<line id="Line 45" x1="10.5743" y1="20.0546" x2="69.4257" y2="20.0546" stroke="#80B224" stroke-width="6.14865" stroke-linecap="round"/>
+<line id="Line 45" x1="10.5743" y1="20.0565" x2="69.4257" y2="20.0565" stroke="#80B224" stroke-width="6.14865" stroke-linecap="round"/>
 <path id="Rectangle 904" d="M58.9756 12.5068C63.3414 12.507 66.8809 16.0472 66.8809 20.4131C66.8806 24.7788 63.3413 28.3181 58.9756 28.3184C54.6097 28.3184 51.0695 24.7789 51.0693 20.4131C51.0693 16.0471 54.6096 12.5068 58.9756 12.5068Z" fill="#F5F9F4" stroke="#80B224" stroke-width="1.75676"/>
 </g>
 <g id="Group 2472">
-<line id="Line 46" x1="10.5743" y1="39.4647" x2="69.4257" y2="39.4647" stroke="#80B224" stroke-width="6.14865" stroke-linecap="round"/>
-<rect id="Rectangle 905" x="15.0463" y="31.9135" width="15.8108" height="15.8108" rx="7.90541" fill="#F5F9F4" stroke="#80B224" stroke-width="1.75676"/>
+<line id="Line 46" x1="10.5743" y1="39.4618" x2="69.4257" y2="39.4618" stroke="#80B224" stroke-width="6.14865" stroke-linecap="round"/>
+<rect id="Rectangle 905" x="15.0463" y="31.9126" width="15.8108" height="15.8108" rx="7.90541" fill="#F5F9F4" stroke="#80B224" stroke-width="1.75676"/>
 </g>
 <g id="Group 2473">
-<line id="Line 47" x1="10.5743" y1="58.871" x2="69.4257" y2="58.871" stroke="#80B224" stroke-width="6.14865" stroke-linecap="round"/>
-<path id="Rectangle 906" d="M41.4092 51.6826C45.775 51.6828 49.3145 55.223 49.3145 59.5889C49.3142 63.9546 45.7749 67.4939 41.4092 67.4941C37.0433 67.4941 33.5031 63.9547 33.5029 59.5889C33.5029 55.2228 37.0431 51.6826 41.4092 51.6826Z" fill="#F5F9F4" stroke="#80B224" stroke-width="1.75676"/>
+<line id="Line 47" x1="10.5743" y1="58.8681" x2="69.4257" y2="58.8681" stroke="#80B224" stroke-width="6.14865" stroke-linecap="round"/>
+<path id="Rectangle 906" d="M41.4092 51.6807C45.775 51.6809 49.3145 55.221 49.3145 59.5869C49.3142 63.9526 45.7749 67.492 41.4092 67.4922C37.0433 67.4922 33.5031 63.9528 33.5029 59.5869C33.5029 55.2209 37.0431 51.6807 41.4092 51.6807Z" fill="#F5F9F4" stroke="#80B224" stroke-width="1.75676"/>
 </g>
 </g>
 </g>
 <defs>
-<clipPath id="clip0_2835_8791">
+<clipPath id="clip0_298_1351">
 <rect width="80" height="80" fill="white"/>
 </clipPath>
 </defs>
