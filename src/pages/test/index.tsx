@@ -513,7 +513,7 @@ export default function TestIndex() {
                         <div className="flex flex-col lg:flex-row gap-12">
                             {/* 左侧动图区域 - 2/3宽度 */}
                             <div className="lg:w-2/3 max-h-[490px] overflow-hidden" >
-                                <div className="bg-white rounded-lg shadow-lg p-6">
+                                <div className="bg-white rounded-lg shadow-lg p-2">
                                     <div className="space-y-4">
                                         <div className="mb-4">
                                             <Image
@@ -597,7 +597,7 @@ export default function TestIndex() {
                                     </div>
                                 </div>
                                 {/* Free to use 按钮 - 使用绝对定位固定在右侧区域底部 */}
-                                <div className="absolute bottom-0 left-0 w-full">
+                                <div className="absolute bottom-2 left-0 w-full">
                                     <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                         Free to use
                                     </button>
@@ -679,7 +679,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA GB200 NVL72",
                                             price: "$9/GPU/hr",
-                                            router:'',
+                                            router:'/gb200-nvl72',
                                             features: [
                                                 "• 18x compute trays in a rack",
                                                 "• 36x Grace CPUs, 72x Blackwell GPUs",
@@ -690,6 +690,7 @@ export default function TestIndex() {
                                         },
                                         {
                                             name: "NVIDIA HGX B200",
+                                            router:'/hgx-b200',
                                             price: "$4.5/GPU/hr",
                                             features: [
                                                 "• 8x NVIDIA Blackwell SXM",
@@ -702,6 +703,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA H200",
                                             price: "$3/GPU/hr",
+                                            router:'/compute-services#hgx-h200',
                                             features: [
                                                 "• 141 GB of HBM3e memory",
                                                 "• 4.8 TB/s memory bandwidth",
@@ -713,6 +715,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA H100",
                                             price: "$2.25/GPU/hr",
+                                            router:'/compute-services#hgx-h100',
                                             features: [
                                                 "• GPU Memory 94 GB",
                                                 "• GPU Memory Bandwidth 3.9 TB/s",
@@ -739,7 +742,7 @@ export default function TestIndex() {
 
                                             <Button
                                                 className="bg-[#80B224] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg"
-                                                onClick={() => window.location.href = '/pricing'}
+                                                onClick={() => window.location.href = currentProduct.router}
                                             >
                                                 Learn More
                                             </Button>
