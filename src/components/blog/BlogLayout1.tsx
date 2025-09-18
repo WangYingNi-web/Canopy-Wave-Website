@@ -55,6 +55,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-doctor.webp"
                   : blogPost.title === "Gpus In Edge Computing"
                   ? "/blog/ai-gpu-edge.webp"
+                  : blogPost.title === "GPU Virtualization: Unlocking the Intelligent Future of Compute Sharing"
+                  ? "/blog/ai-GPU-Virtualization.webp"
                   : "/blog1.webp"
                   
               }

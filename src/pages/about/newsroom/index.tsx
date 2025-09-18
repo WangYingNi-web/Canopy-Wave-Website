@@ -56,6 +56,13 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 17,
+            title: "GPU Virtualization: Unlocking the Intelligent Future of Compute Sharing",
+            description: "Enabling Efficient and Accessible High-Performance Computing through GPU Virtualization",
+            date: "September 18, 2025",
+            image: "/blog/ai-GPU-Virtualization.webp"
+        },
+        {
             id: 16,
             title: "Gpus In Edge Computing",
             description: "The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges",
