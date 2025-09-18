@@ -1041,7 +1041,7 @@ export default function TestIndex() {
                                             {/* Learn More按钮 - 绝对定位到左下角 */}
                                             {showCardContent === 'card3' && (
                                                 <div className="absolute bottom-6 left-6">
-                                                    <p className="text-sm opacity-50 cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/rendering'}>
+                                                    <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/rendering'}>
                                                         Learn More&gt;
                                                     </p>
                                                 </div>
