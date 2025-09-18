@@ -379,7 +379,7 @@ export default function GB200WithRoCEv2() {
                                         : 'border-transparent text-gray-500 hover:text-gray-700'
                                         }`}
                                 >
-                                    Unified High-Bandwidth GPU Domain
+                                    24/7 Proactive Expert Support
                                 </button>
                             </div>
 
