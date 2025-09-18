@@ -510,12 +510,14 @@ export default function TestIndex() {
                         </div>
                     </div>
                 </div>
-
-                {/* Partners Section */}
+                 {/* Partners Section */}
+                <div className="pb-[24px]">
                 <PartnerCarousel logos={partnerLogos} />
+                </div>
+                
 
                 {/* Chat Section - 灰色背景聊天区域 */}
-                <div className="py-2 pb-16" ref={chatRef}>
+                <div className="pb-[64px]" ref={chatRef}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left mb-8">
                             Canopy Wave Chat
@@ -635,7 +637,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Features Section - 特性介绍 */}
-                <div className="py-16">
+                <div className="pb-[64px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left mb-12">
                             Instantly allocated GPU resource and<br />
@@ -691,7 +693,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* GPU Products Section - NVIDIA GB200 NVL72 */}
-                <div className="bg-white py-16">
+                <div className="bg-white pb-[64px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left">
                             NVIDIA GB200 & B200, H100, H200 GPUs<br />
@@ -855,7 +857,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Providing secure and efficient solutions for different use cases */}
-                <div className="py-12 sm:pt-10 pb-16">
+                <div className="pb-[64px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <SlideUp>
                             <div className="text-left mb-12">
@@ -1183,8 +1185,8 @@ export default function TestIndex() {
                 </div>
 
                 {/* Global Network Section */}
-                <div className="bg-white py-12 sm:pt-16 pb-4">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-8">
+                <div className="bg-white pb-[64px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-8 max-h-[400px]">
                         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
                             <div className="w-full md:w-1/2">
                                 <SlideUp>
@@ -1212,7 +1214,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Explore Canopy Wave Section */}
-                <section className="py-16 pb-24">
+                <section className="pb-[64px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-left mb-10">
                             <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Canopy Wave</h2>
