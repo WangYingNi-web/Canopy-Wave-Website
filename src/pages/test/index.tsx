@@ -344,43 +344,47 @@ export default function TestIndex() {
 
                                 {/* 第一张图片的标题和按钮 */}
                                 {slide.id === 1 && (
-                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
-                                        <div className="max-w-3xl sm:pl-16">
-                                            <div className="mb-8">
-                                                <Image
-                                                    src="/test/banner_dabiaoti01.png"
-                                                    alt="The Platform that Enables AI"
-                                                    width={600}
-                                                    height={200}
-                                                    className="object-contain"
-                                                    priority
-                                                />
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
+                                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                            <div className="max-w-3xl">
+                                                <div className="mb-4 sm:mb-6 lg:mb-8">
+                                                    <Image
+                                                        src="/test/banner_dabiaoti01.png"
+                                                        alt="The Platform that Enables AI"
+                                                        width={600}
+                                                        height={200}
+                                                        className="object-contain w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px]"
+                                                        priority
+                                                    />
+                                                </div>
+                                                <p className="text-sm sm:text-lg lg:text-xl text-gray-700 mb-4 sm:mb-6 lg:mb-8 leading-relaxed">
+                                                    Where Compute Meets Expertise
+                                                </p>
                                             </div>
-                                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                                                Where Compute Meets Expertise
-                                            </p>
                                         </div>
                                     </div>
                                 )}
 
                                 {/* 第二张图片的标题和按钮 */}
                                 {slide.id === 2 && (
-                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
-                                        <div className="max-w-3xl sm:pl-16 -pt-10">
-                                            <div className="mb-8">
-                                                <Image
-                                                    src="/test/banner_img_biaoti02.png"
-                                                    alt="Canopy Wave Chat"
-                                                    width={600}
-                                                    height={200}
-                                                    className="w-auto h-auto max-w-full"
-                                                    priority
-                                                />
-                                            </div>
-                                            <div className="flex gap-4">
-                                                <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-gray-10 px-6 py-2 rounded-full font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
-                                                    Free to use
-                                                </button>
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
+                                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                            <div className="max-w-3xl">
+                                                <div className="mb-4 sm:mb-6 lg:mb-8">
+                                                    <Image
+                                                        src="/test/banner_img_biaoti02.png"
+                                                        alt="Canopy Wave Chat"
+                                                        width={600}
+                                                        height={200}
+                                                        className="w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] object-contain"
+                                                        priority
+                                                    />
+                                                </div>
+                                                <div className="flex gap-2 sm:gap-4">
+                                                    <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-gray-10 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                                                        Free to use
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -388,30 +392,32 @@ export default function TestIndex() {
 
                                 {/* 第三张图片的标题和按钮 */}
                                 {slide.id === 3 && (
-                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
-                                        <div className="max-w-3xl sm:pl-16">
-                                            <div className="mb-8">
-                                                <Image
-                                                    src="/test/banner_img_biaoti03.png"
-                                                    alt="Accelerating AI Deployment API"
-                                                    width={600}
-                                                    height={200}
-                                                    className="w-auto h-auto max-w-full"
-                                                    priority
-                                                />
-                                            </div>
-                                            <div className="flex gap-4">
-                                                <button
-                                                    onClick={() => window.location.href = '/reserve-ai-service'}
-                                                    className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-                                                >
-                                                    Reserve Now
-                                                </button>
-                                            </div>
-                                            <div className="absolute bottom-16 sm:right-[300px]">
-                                                <p className="text-white text-lg text-right leading-relaxed">
-                                                    Reserve access to keys and <br /> personalization schemes
-                                                </p>
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
+                                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                            <div className="max-w-3xl">
+                                                <div className="mb-4 sm:mb-6 lg:mb-8">
+                                                    <Image
+                                                        src="/test/banner_img_biaoti03.png"
+                                                        alt="Accelerating AI Deployment API"
+                                                        width={600}
+                                                        height={200}
+                                                        className="w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] object-contain"
+                                                        priority
+                                                    />
+                                                </div>
+                                                <div className="flex gap-2 sm:gap-4">
+                                                    <button
+                                                        onClick={() => window.location.href = '/reserve-ai-service'}
+                                                        className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300"
+                                                    >
+                                                        Reserve Now
+                                                    </button>
+                                                </div>
+                                                <div className="absolute bottom-8 sm:bottom-32 lg:bottom-35 right-0 sm:right-[200px] lg:right-[250px]">
+                                                    <p className="text-white text-sm sm:text-base lg:text-lg text-right leading-relaxed">
+                                                        Reserve access to keys and <br /> personalization schemes
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -419,29 +425,31 @@ export default function TestIndex() {
 
                                 {/* 第四张图片的标题和按钮 */}
                                 {slide.id === 4 && (
-                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16">
-                                        <div className="max-w-3xl sm:pl-16">
-                                            <div className="mb-8">
-                                                <Image
-                                                    src="/test/banner_img_biaoti04.png"
-                                                    alt="On-Demand NVIDIA HGX B200"
-                                                    width={600}
-                                                    height={200}
-                                                    className="w-auto h-auto max-w-full"
-                                                    priority
-                                                />
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
+                                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                                            <div className="max-w-3xl">
+                                                <div className="mb-4 sm:mb-6 lg:mb-8">
+                                                    <Image
+                                                        src="/test/banner_img_biaoti04.png"
+                                                        alt="On-Demand NVIDIA HGX B200"
+                                                        width={600}
+                                                        height={200}
+                                                        className="w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] object-contain"
+                                                        priority
+                                                    />
+                                                </div>
+                                                <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6 lg:mb-8">
+                                                    <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300">
+                                                        Launch Now
+                                                    </button>
+                                                </div>
+                                                <div className="absolute sm:bottom-16 lg:bottom-28 right-4 sm:right-[200px] lg:right-[300px]">
+                                                    <p className="text-white text-sm sm:text-base lg:text-lg text-right leading-relaxed">
+                                                        Aiming to Next-Generation AI and<br />
+                                                        Computing Technologies
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div className="flex gap-4 mb-8">
-                                                <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="bg-[#80B224] hover:bg-[#6a9620] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                                                    Launch Now
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div className="absolute bottom-16 sm:right-[300px]">
-                                            <p className="text-white text-lg text-right leading-relaxed">
-                                                Aiming to Next-Generation AI and<br />
-                                                Computing Technologies
-                                            </p>
                                         </div>
                                     </div>
                                 )}
@@ -735,11 +743,13 @@ export default function TestIndex() {
 
                                     return (
                                         <>
-                                            <div className="flex items-center space-x-4 mb-10">
+                                            <div className="flex items-center space-x-4 mb-4">
                                                 <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
                                             </div>
-
-                                            <ul className="text-gray-600 leading-relaxed text-l mb-28">
+                                            <div className="flex items-center space-x-4 mb-4">
+                                                <h4 className="bg-[#DFEDF7] text-[#4C606D] px-3 py-1 rounded-full text-sm font-medium">{currentProduct.price}</h4>
+                                            </div>
+                                            <ul className="text-gray-600 leading-relaxed text-l mb-12">
                                                 {currentProduct.features.map((feature, index) => (
                                                     <li key={index}>{feature}</li>
                                                 ))}
@@ -762,25 +772,25 @@ export default function TestIndex() {
                                 onMouseEnter={() => setIsProductAutoPlaying(false)}
                                 onMouseLeave={() => setIsProductAutoPlaying(true)}
                             >
-                                <div className="p-6 flex items-center justify-center h-[450px]">
+                                <div className="p-6 sm:-ml-[110px] flex items-center justify-center h-[420px]">
                                     <Image
                                         src={`/test/products-${currentImageIndex + 1}.webp`}
                                         alt="NVIDIA GPUs"
-                                        width={610}
-                                        height={410}
+                                        width={560}
+                                        height={360}
                                         className="object-contain"
                                     />
                                 </div>
 
                                 {/* Learn More 按钮 */}
-                                <div className="absolute -right-20 top-0 transform -translate-y-1/2">
+                                <div className="absolute right-0 top-0 transform -translate-y-1/2">
                                     <Button className="bg-[#80B224] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
                                         Getting Price
                                     </Button>
                                 </div>
 
                                 {/* 图片切换按钮 */}
-                                <div className="absolute right-[-90px] top-[162px] transform -translate-y-1/2 flex flex-col space-y-3 mt-16">
+                                <div className="absolute right-0 top-[142px] transform -translate-y-1/2 flex flex-col space-y-3 mt-16">
                                     {[1, 2, 3, 4].map((index) => {
                                         const productNames = ["NVIDIA GB200 NVL72", "NVIDIA HGX B200", "NVIDIA H200", "NVIDIA H100"];
                                         return (
@@ -797,7 +807,7 @@ export default function TestIndex() {
                                                         setIsProductAutoPlaying(false);
                                                     }}
                                                     onMouseLeave={() => setIsProductAutoPlaying(true)}
-                                                    className={`w-[79px] h-[79px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
+                                                    className={`w-[69px] h-[69px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
                                                         ? 'border-[#76B900] shadow-lg border-2'
                                                         : 'border-gray-300 hover:border-gray-400'
                                                         }`}
@@ -805,15 +815,15 @@ export default function TestIndex() {
                                                     <Image
                                                         src={`/test/button-${index}.png`}
                                                         alt={`View ${index}`}
-                                                        width={48}
-                                                        height={48}
+                                                        width={30}
+                                                        height={30}
                                                         className="w-full h-full object-contain rounded-lg"
                                                     />
                                                     {currentImageIndex !== index - 1 && (
                                                         <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded-lg"></div>
                                                     )}
                                                 </button>
-                                                <span className={`text-sm font-medium transition-all duration-200 whitespace-nowrap ${currentImageIndex === index - 1
+                                                <span className={`text-xs font-medium transition-all duration-200 whitespace-nowrap ${currentImageIndex === index - 1
                                                     ? 'text-[#76B900] font-bold'
                                                     : 'text-gray-600'
                                                     }`}>
@@ -1147,7 +1157,7 @@ export default function TestIndex() {
                                 </SlideUp>
 
                                 <SlideUp>
-                                    <IwsLink href="/data-center/iceland" className="w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white rounded-md hover:bg-[#7ab32f] transition-colors text-l">
+                                    <IwsLink href="/data-center/iceland" className="rounded-full w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white hover:bg-[#7ab32f] transition-colors text-l">
                                         Explore Our Network
                                     </IwsLink>
                                 </SlideUp>
@@ -1274,10 +1284,10 @@ export default function TestIndex() {
                             Accelerate Your AI Journey today
                         </h2>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button className="bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                            <Button className="rounded-full bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                 Launch Now
                             </Button>
-                            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                            <Button className="rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                 Chat Now
                             </Button>
                         </div>

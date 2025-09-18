@@ -42,8 +42,8 @@ const Tutorials: React.FC = () => {
     // {
     //   id: 'comparing-ai-agent-frameworks',
     //   category: 'AI Models',
-    //   title: 'Comparing Open-Source AI Agent Frameworks',
-    //   image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.png',
+    //   title: 'LangGraph vs AutoGPT vs AgentGPT',
+    //   image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.webp',
     //   date: 'September 18, 2025',
     //   onClick: () => handleTutorialClick('Comparing Open-Source AI Agent Frameworks')
     // },

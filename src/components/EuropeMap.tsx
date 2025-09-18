@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useRef , useEffect } from 'react';
 import Image from 'next/image';
 
 type MapType = 'NorthAmerica' | 'Europe';
@@ -34,29 +34,19 @@ const mapConfigs: Record<MapType, MapConfig> = {
         alt: 'Europe Map',
         locations: [
             // 示例位置点 - 你需要根据实际图片调整这些坐标
-            { id: 'iceland1', name: 'Iceland', x: 36, y: 31, description: 'Iceland（Blonduos）' },
-            { id: 'iceland2', name: 'Iceland', x: 56, y: 27.8, description: 'Iceland（Akureyri）' },
+            { id: 'iceland1', name: 'Iceland', x: 8.9, y: 13.7, description: 'Iceland（Blonduos）' },
+            { id: 'iceland2', name: 'Iceland', x: 12.4, y: 12.6, description: 'Iceland（Akureyri）' },
         ]
     }
 };
 
 export default function InteractiveMap() {
-    const [currentMapIndex, setCurrentMapIndex] = useState<number>(0);
+    const [currentMap, setCurrentMap] = useState<MapType>('NorthAmerica');
     const [hoveredLocation, setHoveredLocation] = useState<LocationPoint | null>(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    
+    const ref = useRef<HTMLDivElement>(null);
     const mapTypes: MapType[] = ['NorthAmerica', 'Europe'];
-    const currentMap = mapTypes[currentMapIndex];
     const currentConfig = mapConfigs[currentMap];
-
-    // 自动轮播
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentMapIndex((prevIndex) => (prevIndex + 1) % mapTypes.length);
-        }, 8000);
-
-        return () => clearInterval(interval);
-    }, [mapTypes.length]);
 
     // 处理位置点悬浮
     const handleLocationHover = (location: LocationPoint, event: React.MouseEvent) => {
@@ -68,86 +58,76 @@ export default function InteractiveMap() {
         setHoveredLocation(null);
     };
 
-    // 手动切换地图
-    const handleIndicatorClick = (index: number) => {
-        setCurrentMapIndex(index);
+    // 切换地图
+    const handleMapSwitch = (mapType: MapType) => {
+        console.log('Switching to map:', mapType);
+        setCurrentMap(mapType);
     };
 
     return (
-        <div className="w-full relative">
-            {/* 轮播图容器 */}
+        <div ref={ref} className="w-full relative">
+            {/* 切换按钮 */}
+            <div className={`absolute -top-16 right-0 z-20 flex gap-2`}>
+                {(Object.keys(mapConfigs) as MapType[]).map((mapType) => (
+                    <button
+                        key={mapType}
+                        onClick={() => setCurrentMap(mapType)}
+                        className={`px-6 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${currentMap === mapType
+                                ? 'bg-[#80B224] text-white shadow-lg'
+                                : 'bg-white/90 text-gray-700 hover:bg-green-50 border border-gray-200'
+                            }`}
+                    >
+                        {mapType === 'NorthAmerica' ? 'North America' : mapType}
+                    </button>
+                ))}
+            </div>
+
+            {/* 地图容器 */}
             <div
-                className="relative w-full mx-auto -mt-10 overflow-hidden"
+                className="relative w-full mx-auto mt-6 ml-6"
                 style={{
                     aspectRatio: '580/400',
                     maxWidth: '580px',
                     height: 'auto'
                 }}
             >
-                {/* 地图轮播 */}
-                <div 
-                    className="flex transition-transform duration-500 ease-in-out w-full h-full"
-                    style={{
-                        transform: `translateX(-${currentMapIndex * 100}%)`
-                    }}
-                >
-                    {mapTypes.map((mapType, index) => {
-                        const config = mapConfigs[mapType];
-                        return (
-                            <div key={mapType} className="relative w-full h-full flex-shrink-0">
-                                <Image
-                                    src={config.src}
-                                    alt={config.alt}
-                                    fill
-                                    className="object-contain"
-                                    priority={index === 0}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 580px"
-                                />
-                                
-                                {/* 交互式位置点 */}
-                                {index === currentMapIndex && config.locations.map((location) => (
-                                    <div
-                                        key={location.id}
-                                        className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
-                                        style={{
-                                            left: `${location.x}%`,
-                                            top: `${location.y}%`,
-                                        }}
-                                        onMouseEnter={(e) => handleLocationHover(location, e)}
-                                        onMouseLeave={handleLocationLeave}
-                                        onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
-                                    >
-                                        {/* 光点动画 */}
-                                        <div className="relative">
-                                            {/* 外层光晕 */}
-                                            <div className="absolute inset-0 w-6 h-6 bg-[#D1F0FA] rounded-full opacity-30 animate-ping"></div>
-                                            {/* 中层光晕 */}
-                                            <div className="absolute inset-0 w-4 h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-1 translate-y-1"></div>
-                                            {/* 核心光点 */}
-                                            <div className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200"></div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-
-            {/* 指示器 */}
-            <div className="flex justify-center mt-6 gap-3">
-                {mapTypes.map((mapType, index) => (
-                    <button
-                        key={mapType}
-                        onClick={() => handleIndicatorClick(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                            index === currentMapIndex
-                                ? 'bg-[#80B224] scale-125'
-                                : 'bg-gray-300 hover:bg-gray-400'
-                        }`}
-                        aria-label={`Switch to ${mapType === 'NorthAmerica' ? 'North America' : mapType} map`}
+                {/* 主地图 */}
+                <div className="relative w-full h-full">
+                    <Image
+                        key={currentMap}
+                        src={currentConfig.src}
+                        alt={currentConfig.alt}
+                        fill
+                        className="object-contain"
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 580px"
                     />
-                ))}
+                    
+                    {/* 交互式位置点 */}
+                    {currentConfig.locations.map((location) => (
+                        <div
+                            key={location.id}
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+                            style={{
+                                left: `${location.x}%`,
+                                top: `${location.y}%`,
+                            }}
+                            onMouseEnter={(e) => handleLocationHover(location, e)}
+                            onMouseLeave={handleLocationLeave}
+                            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
+                        >
+                            {/* 光点动画 */}
+                            <div className="relative">
+                                {/* 外层光晕 */}
+                                <div className="absolute inset-0 w-6 h-6 bg-[#D1F0FA] rounded-full opacity-30 animate-ping"></div>
+                                {/* 中层光晕 */}
+                                <div className="absolute inset-0 w-4 h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-1 translate-y-1"></div>
+                                {/* 核心光点 */}
+                                <div className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200"></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
             
             {/* 悬浮提示框 */}
