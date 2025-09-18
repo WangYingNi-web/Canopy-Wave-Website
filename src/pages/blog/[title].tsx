@@ -1807,7 +1807,7 @@ case 'ai-medical-imaging-analysis':
             'Instant Integration of Vast Experience:'
           ),
           'A top-tier AI diagnostic model is trained on datasets containing hundreds of thousands, or even millions, of expert-annotated imaging cases. This means that when assisting in diagnosis, it instantly integrates the vast diagnostic experience of top hospitals worldwide.',
-          <img key="ai-Scenarios" src="/blog/ai-scenarios.webp" alt="AI Scenarios" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+          <img key="ai-Scenarios" src="/blog/ai-Scenarios.webp" alt="ai medical imaging analysis" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
         ],
       },
       {
@@ -1850,7 +1850,7 @@ case 'ai-medical-imaging-analysis':
           React.createElement(
             'strong',
             { key: 'algorithm-interpretability' },
-            <img key="ai-interpretability" src="/blog/ai-Interpretability.webp" alt="AI Interpretability" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+            <img key="ai-interpretability" src="/blog/ai-Interpretability.webp" alt="ai medical imaging analysis" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
             'Algorithm Interpretability and Regulation:'
           ),
           'Doctors need to understand the "basis" of AI\'s judgments, not just accept a black-box conclusion. As medical device software, AI diagnostic tools must undergo rigorous approval processes before clinical deployment.',
@@ -1887,7 +1887,7 @@ case 'gpus-in-edge-computing':
           'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by data center GPUs. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',
           React.createElement('strong', { key: 'heat-dissipation' }, 'Heat Dissipation and Durability:'),
           'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.',
-          <img key="ai-energy" src="/blog/ai-Energy-Consumption.webp" alt="AI Energy Efficiency" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />
+          <img key="ai-energy" src="/blog/ai-Energy-Consumption.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />
         ]
       },
       {
@@ -1919,7 +1919,7 @@ case 'gpus-in-edge-computing':
           '- Introducing visual energy consumption and carbon emission estimation metrics in product design and battery life evaluation.',
           '- Displaying energy consumption comparisons and energy-saving advantages and disadvantages of each lightweight GPU in different usage scenarios (e.g., standby vs. continuous inference vs. off-peak scheduling).',
           '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.',
-          <img key="ai-product-recommendations" src="/blog/ai-Product-Recommendations.webp" alt="AI Product Recommendations" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+          <img key="ai-product-recommendations" src="/blog/ai-Product-Recommendations.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
         ]
       },
       {
@@ -2072,6 +2072,7 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
       {
         title: 'Why Do We Need GPU Virtualization?',
         content: [
+          'GPU virtualization is gaining attention because it solves three major challenges in computing:',
           React.createElement('strong', { key: 'lowering-costs' }, 'Lowering Costs:'),
           'High-end GPUs are costly; for example, an NVIDIA A100 may be worth tens of thousands of dollars. Virtualization enables multiple users to share the same hardware, significantly reducing purchase and maintenance costs.',
           React.createElement('strong', { key: 'boosting-efficiency' }, 'Boosting Efficiency:'),
@@ -2098,6 +2099,7 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
       {
         title: 'Application Scenarios: Powering Every Industry',
         content: [
+          'GPU virtualization has broad applications across industries requiring high-performance computing. Typical scenarios include:',
           React.createElement('strong', { key: 'cloud-computing' }, 'Cloud Computing Services:'),
           'Platforms such as Alibaba Cloud, AWS, and Tencent Cloud use GPU virtualization to provide on-demand computing power. SMEs can rent GPU resources for AI development or big data analysis without buying costly hardware. For example, a startup cut AI training costs by 30% and halved delivery time with cloud-based virtual GPUs.',
           React.createElement('strong', { key: 'creative-industries' }, 'Creative Industries & Design:'),
