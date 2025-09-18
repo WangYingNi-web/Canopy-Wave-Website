@@ -804,11 +804,13 @@ export default function TestIndex() {
                                 </div>
 
                                 {/* 图片切换按钮 */}
-                                <div className="absolute right-0 top-[142px] transform -translate-y-1/2 flex flex-col space-y-3 mt-16">
+                                <div className="absolute lg:right-0 lg:top-[142px] lg:transform lg:-translate-y-1/2 lg:flex-col lg:space-y-3 lg:mt-16 
+                                               bottom-[-60px] left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:bottom-auto lg:left-auto 
+                                               flex lg:flex-col flex-row space-x-3 lg:space-x-0 lg:space-y-3">
                                     {[1, 2, 3, 4].map((index) => {
                                         const productNames = ["NVIDIA GB200 NVL72", "NVIDIA HGX B200", "NVIDIA H200", "NVIDIA H100"];
                                         return (
-                                            <div key={index} className="flex items-center space-x-3">
+                                            <div key={index} className="flex lg:flex-row flex-col items-center lg:space-x-3 space-x-0">
                                                 <button
                                                     onClick={() => {
                                                         setCurrentImageIndex(index - 1);
@@ -821,7 +823,7 @@ export default function TestIndex() {
                                                         setIsProductAutoPlaying(false);
                                                     }}
                                                     onMouseLeave={() => setIsProductAutoPlaying(true)}
-                                                    className={`w-[69px] h-[69px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
+                                                    className={`w-[69px] h-[69px] lg:w-[69px] lg:h-[69px] w-[50px] h-[50px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
                                                         ? 'border-[#76B900] shadow-lg border-2'
                                                         : 'border-gray-300 hover:border-gray-400'
                                                         }`}
@@ -837,7 +839,7 @@ export default function TestIndex() {
                                                         <div className="absolute inset-0 bg-gray-100 bg-opacity-50 rounded-lg"></div>
                                                     )}
                                                 </button>
-                                                <span className={`text-xs font-medium transition-all duration-200 whitespace-nowrap ${currentImageIndex === index - 1
+                                                <span className={`text-xs font-medium transition-all duration-200 whitespace-nowrap lg:block hidden ${currentImageIndex === index - 1
                                                     ? 'text-[#76B900] font-bold'
                                                     : 'text-gray-600'
                                                     }`}>
