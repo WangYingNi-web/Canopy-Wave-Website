@@ -111,7 +111,13 @@ export default function BlogDetail() {
               title: 'Why This Partnership Matters',
               content: [
                 'This collaboration brings together:',
-                "• Canopy Wave's private, high-performance GPU infrastructure",
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                "• Canopy Wave's private, high-performance ",
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'GPU infrastructure',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'GPU infrastructure'),]),
                 "• ConfidentialMind's expertise in AI systems deployment",
                 'The result? A turnkey enterprise AI solution, without the traditional friction.',
                 "If your team is looking to move fast, stay secure, and scale intelligently, this is the shortcut you've been waiting for.",
@@ -159,7 +165,15 @@ export default function BlogDetail() {
             {
               title: 'Why Choose Canopy Wave + GB200 NVL72?',
               content: [
-                'The NVIDIA GB200 NVL72 is built for the next era of AI, supporting trillion-parameter models and massive data workloads with:',
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                'The ',
+                  React.createElement('a', {
+                      href: 'https://www.canopywave.com/gb200-nvl72 ',
+                      key: 'NVIDIA GB200 NVL72',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'NVIDIA GB200 NVL72'),
+                ' is built for the next era of AI, supporting trillion-parameter models and massive data workloads with:',
+              ]),
                 '• 30x faster LLM inference and 4x faster LLM training compared to the previous generation (HGX H100)',
                 '• 25x higher energy efficiency thanks to advanced FP4 quantization and the latest Transformer engine',
                 '• Unmatched memory and bandwidth: 13.4TB HBM3e GPU memory, 17TB CPU memory, and 130TB/s NVLink bandwidth',
@@ -366,7 +380,14 @@ export default function BlogDetail() {
                 '\u00A0\u00A0 Stable, low-latency inference for real-time applications',
                 '',
                 '• Predictable Costs at Scale',
-                '\u00A0\u00A0 Fixed-rate billing with reserved GPU resources',
+                
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                  '\u00A0\u00A0 Fixed-rate billing with reserved ',
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'GPU resources',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'GPU resources'),]),
                 '\u00A0\u00A0 Unlimited token generation, highly cost-efficient for sustained workloads',
                 '',
                 '• Enterprise-Grade Security',
@@ -666,7 +687,15 @@ export default function BlogDetail() {
                 '(2) GPT-J (6 billion parameters) can run inference on a single 16GB NVIDIA A100; training requires 24GB or more of video memory (such as H100 32GB), or splitting it across multiple 16GB GPUs through Model Parallelism.',
                 '',
                 '(3) LLaMA 70B inference requires approximately 140GB of video memory at FP16 precision (requiring two A100 GPUs with 80GB each). If 4-bit quantization is used, a single A100 GPU with 80GB each can support it, significantly lowering the hardware barrier.',
-                'Real-world example: In open-source research, Meta uses a cluster of hundreds of GPUs to train LLaMA. A single team can rent cloud GPUs (such as AWS) to complete fine-tuning in a few days.',
+                
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                  'Real-world example: In open-source research, Meta uses a cluster of hundreds of GPUs to train LLaMA. A single team can rent ', 
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'cloud GPUs',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'cloud GPUs'),
+                ' (such as AWS) to complete fine-tuning in a few days.',]),
                 <img key="ai-image" src="/blog/ai-LLaMA.png" alt="AI LLaMA" className="w-full h-auto my-8 rounded-lg" />,
                 React.createElement('strong', { key: 'multimodal-title' }, '2.4 Multimodal model scenario'),
                 'Multimodal models integrate CV and NLP to process multiple types of data (such as images + text). They are the most complex and often require large-scale clusters.',
@@ -691,7 +720,14 @@ export default function BlogDetail() {
                 'Limited budgets—purchasing large-scale hardware all at once isn\'t feasible, requiring a flexible pay-as-you-go model;',
                 'The rapid pace of development—from prototype verification to MVP (minimum viable product), each iteration requires rapid scaling of computing resources;',
                 'Technical complexity—Developers prefer to focus on algorithm iteration and product development, responding promptly to market needs, rather than getting bogged down in the complexities of environment configuration and hardware tuning.',
-                'Canopy Wave\'s cloud-based GPU solution precisely addresses these pain points: high-performance instances, fast deployment, strong scalability, and user-friendly design.',
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                  'Canopy Wave\'s ',
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'cloud-based GPU',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'cloud-based GPU'),
+                ' solution precisely addresses these pain points: high-performance instances, fast deployment, strong scalability, and user-friendly design.',]),
                 React.createElement('strong', { key: 'gpu-comparison-title' }, '3.2 Quick Comparison of NVIDIA GPU Products'),
                 React.createElement('table', {
                   key: 'gpu-comparison-table',
@@ -785,7 +821,14 @@ export default function BlogDetail() {
             {
               title: '',
               content: [
-                'Canopy Wave provides high-performance GPU computing power, giving you access to low-latency, high-speed AI. AI is reshaping the e-commerce landscape on an unprecedented scale. From precisely targeting users to optimizing backend operations, its capabilities have become the core engine of industry growth. With high-performance computing, e-commerce enterprises can deploy more complex, real-time AI solutions, to boost operational efficiency and fundamentally upgrade the user experience. Here, we explore the core applications and value of AI technology in key areas of e-commerce.'
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                  'Canopy Wave provides high-performance ',
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'GPU computing',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'GPU computing'),
+                ' power, giving you access to low-latency, high-speed AI. AI is reshaping the e-commerce landscape on an unprecedented scale. From precisely targeting users to optimizing backend operations, its capabilities have become the core engine of industry growth. With high-performance computing, e-commerce enterprises can deploy more complex, real-time AI solutions, to boost operational efficiency and fundamentally upgrade the user experience. Here, we explore the core applications and value of AI technology in key areas of e-commerce.',]),
               ]
             },
             {
@@ -992,7 +1035,14 @@ export default function BlogDetail() {
             {
               title: '2. Cost Structure Overview',
               content: [
-                'The TCO for a GPU cluster extends beyond hardware acquisition. It typically includes:',
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                  'The TCO for a ',
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'GPU cluster',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'GPU cluster'),
+                ' extends beyond hardware acquisition. It typically includes:',]),
                 React.createElement('span', { key: 'cost-1' }, ['• ', React.createElement('strong', { key: 'cost-1-bold' }, 'Hardware costs')], ['(servers, GPUs, networking equipment)']),
                 React.createElement('span', { key: 'cost-2' }, ['• ', React.createElement('strong', { key: 'cost-2-bold' }, 'Infrastructure costs ')], ['(racks, power, cooling)']),
                 React.createElement('span', { key: 'cost-3' }, ['• ', React.createElement('strong', { key: 'cost-3-bold' }, 'Software and licensing costs ')], ['(OS, cluster management, monitoring)']),
@@ -1754,7 +1804,15 @@ export default function BlogDetail() {
             {
               title: 'Why This Matters for Cloud and AI Services',
               content: [
-                'For companies offering or consuming cloud-based AI solutions, reliability is everything. By addressing the root cause of hallucinations, it is possible to:',
+                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                  'For companies offering or consuming ', 
+                  React.createElement('a', {
+                      href: 'https://canopywave.com/compute-services',
+                      key: 'cloud-based AI',
+                      style: { display: 'inline', textDecoration: 'underline' }
+                }, 'cloud-based AI'),
+                ' solutions, reliability is everything. By',
+                'addressing the root cause of hallucinations, it is possible to:',]),
                 [React.createElement('strong', { key: 'Enhance Business Trust' }, 'Enhance Business Trust:'), ' More dependable AI fosters confidence among clients and stakeholders.'],
                 [React.createElement('strong', { key: 'Mitigate Risks' }, 'Mitigate Risks:'), ' Minimizing fabricated outputs lowers compliance and reputational risks.'],
                 [React.createElement('strong', { key: 'Improve Operational Efficiency' }, 'Improve Operational Efficiency:'), ' Teams can make decisions faster when AI tools provide trustworthy support.'],
@@ -1884,7 +1942,15 @@ case 'gpus-in-edge-computing':
           React.createElement('strong', { key: 'modularity-integration' }, 'Modularity and Heterogeneous Integration:'),
           'In the future, GPUs will likely exist as SoCs (System on a Chip), integrated with CPUs, NPUs, and storage controllers within the same chip package. This modular design allows manufacturers to customize GPU configurations for different industries (retail, manufacturing, and connected vehicles), such as optimized versions for video inference or sensor fusion. For example, Canopy Wave has emphasized modular GPU cluster design in its cloud–edge continuum solutions, enabling customers to select optimized configurations depending on workload intensity and industry-specific needs.',
           React.createElement('strong', { key: 'power-constraints' }, 'Power Constraints in Edge Scenarios:'),
-          'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by data center GPUs. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',
+              React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+              'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by ', 
+                  React.createElement('a', {
+                    href: 'https://canopywave.com/compute-services ',
+                    key: 'data center GPUs',
+                    style: { display: 'inline', textDecoration: 'underline' }
+              }, 'data center GPUs'),
+          '. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',]),
+          
           React.createElement('strong', { key: 'heat-dissipation' }, 'Heat Dissipation and Durability:'),
           'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.',
           <img key="ai-energy" src="/blog/ai-Energy-Consumption.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />
@@ -2103,7 +2169,15 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
           React.createElement('strong', { key: 'cloud-computing' }, 'Cloud Computing Services:'),
           'Platforms such as Alibaba Cloud, AWS, and Tencent Cloud use GPU virtualization to provide on-demand computing power. SMEs can rent GPU resources for AI development or big data analysis without buying costly hardware. For example, a startup cut AI training costs by 30% and halved delivery time with cloud-based virtual GPUs.',
           React.createElement('strong', { key: 'creative-industries' }, 'Creative Industries & Design:'),
-          'Film producers and 3D designers can use cloud-based virtual GPUs to run demanding rendering software remotely. Even with just a standard laptop, they can create high-quality content without investing in expensive hardware.',
+          React.createElement(React.Fragment, { key: 'creative-text', style: { marginBottom:'12px' } },[
+          'Film producers and 3D designers can use cloud-based ', 
+            React.createElement('a', {
+              href: 'https://canopywave.com/compute-services',
+              key: 'virtual GPUs',
+              style: { display: 'inline', textDecoration: 'underline'}
+          }, 'virtual GPUs'),
+          ' to run demanding rendering',
+          ' software remotely. Even with just a standard laptop, they can create high-quality content without investing in expensive hardware.',]),
           React.createElement('strong', { key: 'ai-machine-learning' }, 'AI & Machine Learning:'),
           'From NLP to computer vision, AI training requires massive compute power. Virtualization gives startups and research teams affordable access to top-tier GPUs, speeding up algorithm development. Generative AI, such as ChatGPT, relies heavily on efficient GPU resources.',
           React.createElement('strong', { key: 'healthcare-research' }, 'Healthcare & Research:'),
