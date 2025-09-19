@@ -51,7 +51,16 @@ export default function InteractiveMap() {
     // 处理位置点悬浮
     const handleLocationHover = (location: LocationPoint, event: React.MouseEvent) => {
         setHoveredLocation(location);
-        setMousePosition({ x: event.clientX, y: event.clientY });
+        
+        // 获取地图容器的位置和尺寸
+        const mapContainer = ref.current;
+        if (mapContainer) {
+            const rect = mapContainer.getBoundingClientRect();
+            // 计算光点在屏幕上的绝对位置
+            const pointX = rect.left + (location.x / 100) * rect.width;
+            const pointY = rect.top + (location.y / 100) * rect.height;
+            setMousePosition({ x: pointX, y: pointY });
+        }
     };
 
     const handleLocationLeave = () => {
@@ -84,6 +93,7 @@ export default function InteractiveMap() {
 
             {/* 地图容器 */}
             <div
+                ref={ref}
                 className="relative w-full mx-auto mt-12 ml-6"
                 style={{
                     aspectRatio: '580/400',
@@ -124,7 +134,6 @@ export default function InteractiveMap() {
                                     className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200 cursor-pointer"
                                     onMouseEnter={(e) => handleLocationHover(location, e)}
                                     onMouseLeave={handleLocationLeave}
-                                    onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
                                 ></div>
                             </div>
                         </div>
@@ -138,8 +147,14 @@ export default function InteractiveMap() {
                     className="fixed z-50 pointer-events-none"
                     style={{
                         left: mousePosition.x,
-                        top: mousePosition.y -70,
-                        transform: 'translateX(-50%)'
+                        top: mousePosition.y - 70,
+                        transform: `translateX(${
+                            hoveredLocation.id === 'canada' ? '-50%' :
+                            hoveredLocation.id === 'us' ? '-8%' :
+                            hoveredLocation.id === 'iceland1' ? '-25%' :
+                            hoveredLocation.id === 'iceland2' ? '-30%' :
+                            '-50%'
+                        })`
                     }}
                 >
                     <img 
