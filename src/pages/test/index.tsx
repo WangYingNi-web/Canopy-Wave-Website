@@ -192,9 +192,9 @@ export default function TestIndex() {
 
         // 每个动图的播放时长（毫秒）
         const chatDurations: { [key: number]: number } = {
-            1: 5000, // chat3.webp 播放6秒
-            2: 5000, // chat2.webp 播放5秒
-            3: 5000  // chat1.webp 播放7秒
+            1: 6000, // chat3.webp 播放6秒
+            2: 8000, // chat2.webp 播放5秒
+            3: 10000  // chat1.webp 播放7秒
         };
 
         const currentDuration = chatDurations[activeTab] || 6000;
