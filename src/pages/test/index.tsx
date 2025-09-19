@@ -76,31 +76,19 @@ export default function TestIndex() {
     const slides = [
         {
             id: 1,
-            background: '/test/01.webp',
+            background: '/test/01.mp4',
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
-        // {
-        //     id: 5,
-        //     background: '/test/05.webp',
-        //     titleColor: 'text-[#80B224]',
-        //     bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
-        // },
         {
             id: 2,
             background: '/test/02.webp',
-            //   title: 'Instant GPU Cluster',
-            //   subtitle: 'for Enterprise AI',
-            // highlight: 'Enterprise AI',
             titleColor: 'text-[#80B224]',
             bgColor: 'bg-gradient-to-r from-green-50 to-green-100'
         },
         {
             id: 3,
             background: '/test/03.webp',
-            //   title: 'On-Demand',
-            //   subtitle: 'NVIDIA GB200 NVL72',
-            //   highlight: 'Aiming to Next-Generation AI and Computing Technologies',
             titleColor: 'text-white',
             subtitleColor: 'text-[#80B224]',
             bgColor: 'bg-black'
@@ -108,9 +96,6 @@ export default function TestIndex() {
         {
             id: 4,
             background: '/test/04.webp',
-            //   title: 'On-Demand',
-            //   subtitle: 'NVIDIA HGX B200',
-            //   highlight: 'The Foundation of Your AI Workloads and Computing Technologies',
             titleColor: 'text-white',
             subtitleColor: 'text-[#80B224]',
             bgColor: 'bg-black'
@@ -328,18 +313,29 @@ export default function TestIndex() {
                                         />
                                     </div>
                                 ) : (
-                                    <Image
-                                        src={slide.background}
-                                        alt={`Banner ${slide.id}`}
-                                        fill
-                                        className="object-cover"
-                                        style={slide.id === 3 ? {
-                                            transform: 'scale(1.1) translateX(5%)',
-                                            transformOrigin: 'center center'
-                                        } : {}}
-                                        priority={index === currentSlide}
-                                        loading={index === currentSlide ? 'eager' : 'lazy'}
-                                    />
+                                    slide.id === 1 ? (
+                                        <video
+                                            src={slide.background}
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <Image
+                                            src={slide.background}
+                                            alt={`Banner ${slide.id}`}
+                                            fill
+                                            className="object-cover"
+                                            style={slide.id === 3 ? {
+                                                transform: 'scale(1.1) translateX(5%)',
+                                                transformOrigin: 'center center'
+                                            } : {}}
+                                            priority={index === currentSlide}
+                                            loading={index === currentSlide ? 'eager' : 'lazy'}
+                                        />
+                                    )
                                 )}
 
                                 {/* 第一张图片的标题和按钮 */}
@@ -357,9 +353,9 @@ export default function TestIndex() {
                                                         priority
                                                     />
                                                 </div>
-                                                <img 
-                                                    src="/test/banner_xiaobiaoti01.png" 
-                                                    alt="Where Compute Meets Expertise" 
+                                                <img
+                                                    src="/test/banner_xiaobiaoti01.png"
+                                                    alt="Where Compute Meets Expertise"
                                                     className="mb-4 sm:mb-6 lg:mb-8 h-auto max-w-[300px] lg:max-w-[600px]"
                                                 />
                                             </div>
@@ -510,11 +506,11 @@ export default function TestIndex() {
                         </div>
                     </div>
                 </div>
-                 {/* Partners Section */}
+                {/* Partners Section */}
                 <div className="pb-[24px]">
-                <PartnerCarousel logos={partnerLogos} />
+                    <PartnerCarousel logos={partnerLogos} />
                 </div>
-                
+
 
                 {/* Chat Section - 灰色背景聊天区域 */}
                 <div className="pb-[64px]" ref={chatRef}>
@@ -524,21 +520,18 @@ export default function TestIndex() {
                         </h2>
                         <div className="flex flex-col lg:flex-row gap-12">
                             {/* 左侧动图区域 - 2/3宽度 */}
-                            <div className="lg:w-2/3 max-h-[490px] overflow-hidden" >
+                            <div className="lg:w-2/3 max-h-[520px] overflow-hidden" >
                                 <div className="bg-white rounded-lg shadow-lg p-2">
                                     <div className="space-y-4">
                                         <div className="mb-4">
-                                            <Image
-                                                src={`/test/chat${activeTab}.webp`}
-                                                alt={`Chat ${activeTab} Demo`}
-                                                width={500}
-                                                height={300}
+                                            <video
+                                                src={`/test/chat${activeTab}.mp4`}
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
                                                 className="w-full h-auto rounded-lg"
-                                                loading="lazy"
-                                                placeholder="blur"
-                                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                                                quality={75}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                style={{ maxHeight: '580px', objectFit: 'cover' }}
                                             />
                                         </div>
                                     </div>
@@ -547,7 +540,7 @@ export default function TestIndex() {
 
                             {/* 右侧标题区域 - 1/3宽度 */}
                             <div className="lg:w-1/3 relative">
-                                <div className="space-y-4">
+                                <div className="space-y-4 pb-20 h-[430px]">
                                     {/* Multi-model collaboration: Beyond single-model capabilities (1) */}
                                     <div
                                         className={`p-4 cursor-pointer transition-all duration-300 relative ${activeTab === 1
@@ -560,7 +553,7 @@ export default function TestIndex() {
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
-                                        <div 
+                                        <div
                                             className="absolute right-0 top-1/4 h-1/2 w-1.5 rounded-full transition-all duration-300"
                                             style={{ backgroundColor: activeTab === 1 ? '#80B224' : '#D1F0FA' }}
                                         ></div>
@@ -569,7 +562,7 @@ export default function TestIndex() {
                                         <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                                             }`}>
                                             <p className="text-sm text-gray-600">
-                                                Multi-model sequential reasoning leverages "division of labor and collaboration," allowing each model to focus on its area of expertise and achieve a "1+1`{'>'}`2" effect
+                                                Multi-model sequential reasoning leverages "division of labor and collaboration," allowing each model to focus on its area of expertise and achieve a "1+1{'>'}2" effect
                                             </p>
                                         </div>
                                     </div>
@@ -585,7 +578,7 @@ export default function TestIndex() {
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
-                                        <div 
+                                        <div
                                             className="absolute right-0 top-1/4 h-1/2 w-1.5 rounded-full transition-all duration-300"
                                             style={{ backgroundColor: activeTab === 2 ? '#80B224' : '#D1F0FA' }}
                                         ></div>
@@ -611,7 +604,7 @@ export default function TestIndex() {
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
-                                        <div 
+                                        <div
                                             className="absolute right-0 top-1/4 h-1/2 w-1.5 rounded-full transition-all duration-300"
                                             style={{ backgroundColor: activeTab === 3 ? '#80B224' : '#D1F0FA' }}
                                         ></div>
@@ -625,12 +618,66 @@ export default function TestIndex() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Free to use 按钮 - 使用绝对定位固定在右侧区域底部 */}
-                                <div className="absolute bottom-2 left-0 w-full">
+                                {/* Free to use 按钮 - 绝对定位固定在右侧区域底部 */}
+                                <div className="">
                                     <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                         Free to use
                                     </button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Value of Custom Chat for Businesses Section */}
+                <h2 className="text-4xl font-bold text-center mb-8">
+                    Value of Custom Chat for Businesses
+                </h2>
+                <div className="lg:min-h-[500px] mb-16 relative" style={{ backgroundImage: 'url(/test/chat_value_bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-60">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {/* Fast Deployment */}
+                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
+                                <div className="w-16 h-16 mb-2 rounded-lg">
+                                    <Image src="/test/value-1.svg" alt="Secure" width={48} height={48} />
+                                </div>
+                                <h3 className="text-lg font-semibold mb-3">Fast Deployment</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Get your dedicated Chat up and running in no time, enabling rapid adoption without complex development.
+                                </p>
+                            </div>
+
+                            {/* Full Data Privacy */}
+                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
+                                <div className="w-16 h-16 mb-2 rounded-lg">
+                                    <Image src="/test/value-2.svg" alt="Secure" width={48} height={48} />
+                                </div>
+                                <h3 className="text-lg font-semibold mb-3">Full Data Privacy</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Integrates with your enterprise login system, ensuring that all data remains private, secure, and compliant.
+                                </p>
+                            </div>
+
+                            {/* Seamless Integration */}
+                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
+                                <div className="w-16 h-16 mb-2 rounded-lg">
+                                    <Image src="/test/value-3.svg" alt="Secure" width={48} height={48} />
+                                </div>
+                                <h3 className="text-lg font-semibold mb-3">Seamless Integration</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Easily integrates with your existing PaaS or IT systems for smooth connectivity and workflow alignment.
+                                </p>
+                            </div>
+
+                            {/* Knowledge-Enhanced RAG */}
+                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
+                                <div className="w-16 h-16 mb-2 rounded-lg">
+                                    <Image src="/test/value-4.svg" alt="Secure" width={48} height={48} />
+                                </div>
+                                <h3 className="text-lg font-semibold mb-3">Knowledge-Enhanced RAG</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Upload your own knowledge base with RAG technology for more accurate, enterprise-grade Q&A and automation.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -708,7 +755,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA GB200 NVL72",
                                             price: "$9/GPU/hr",
-                                            router:'/gb200-nvl72',
+                                            router: '/gb200-nvl72',
                                             features: [
                                                 "• 18x compute trays in a rack",
                                                 "• 36x Grace CPUs, 72x Blackwell GPUs",
@@ -719,7 +766,7 @@ export default function TestIndex() {
                                         },
                                         {
                                             name: "NVIDIA HGX B200",
-                                            router:'/hgx-b200',
+                                            router: '/hgx-b200',
                                             price: "$4.5/GPU/hr",
                                             features: [
                                                 "• 8x NVIDIA Blackwell SXM",
@@ -732,7 +779,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA H200",
                                             price: "$3/GPU/hr",
-                                            router:'/compute-services#hgx-h200',
+                                            router: '/compute-services#hgx-h200',
                                             features: [
                                                 "• 141 GB of HBM3e memory",
                                                 "• 4.8 TB/s memory bandwidth",
@@ -744,7 +791,7 @@ export default function TestIndex() {
                                         {
                                             name: "NVIDIA H100",
                                             price: "$2.25/GPU/hr",
-                                            router:'/compute-services#hgx-h100',
+                                            router: '/compute-services#hgx-h100',
                                             features: [
                                                 "• GPU Memory 94 GB",
                                                 "• GPU Memory Bandwidth 3.9 TB/s",

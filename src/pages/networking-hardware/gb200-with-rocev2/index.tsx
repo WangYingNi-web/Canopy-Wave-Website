@@ -39,9 +39,11 @@ export default function GB200WithRoCEv2() {
         
         try {
             const emailBody = `
+                subject: GB200 with RoCEv2 Inquiry
                 name: ${formData.name}
                 email: ${formData.email}
                 message: ${formData.message}
+                page_url: ${window.location.href}
             `;
 
             const response = await axios.post(
@@ -105,12 +107,15 @@ export default function GB200WithRoCEv2() {
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
                         <SlideUp>
-                            <h1 className="text-5xl sm:text-6xl font-black text-[#80B224] text-shadow-lg">
-                                GB200: Unleash the true <br /> potential of your infrastructure
+                            <h1 className="text-5xl sm:text-5xl font-black text-[#80B224] text-shadow-lg mb-1">
+                                GB200 cluster with RoCEv2
+                            </h1>
+                            <h1 className="text-5xl sm:text-5xl font-black text-white text-shadow-lg">
+                                High-Performance Network Solution
                             </h1>
                         </SlideUp>
                         <SlideUp>
-                            <p className="text-white text-l mt-8">
+                            <p className="text-white text-lg mt-8">
                                 Low Latency | High Throughput | Optimized for AI and HPC
                             </p>
                         </SlideUp>
@@ -370,7 +375,7 @@ export default function GB200WithRoCEv2() {
                                         : 'border-transparent text-gray-500 hover:text-gray-700'
                                         }`}
                                 >
-                                    Intelligent, End-to-End Monitoring
+                                    End-to-End Inteligent Monitoring
                                 </button>
                                 <button
                                     onClick={() => setActiveTab2('team')}
@@ -543,7 +548,7 @@ export default function GB200WithRoCEv2() {
                     <SlideUp>
                         <div className="text-center mb-16">
                             <h2 className="text-3xl sm:text-4xl font-black text-gray-700 mb-4">
-                                Resource
+                                Resources
                             </h2>
                         </div>
                     </SlideUp>
@@ -552,7 +557,7 @@ export default function GB200WithRoCEv2() {
                         {/* Tutorials Card */}
                         <SlideUp>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="h-54 bg-gradient-to-r from-blue-900 to-blue-700 relative">
+                                <div className="h-54 bg-gradient-to-r from-blue-900 to-blue-700 relative cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.location.href = '/resources/tutorials'}>
                                     <img
                                         src="/solutions/networking-hardware/gb200-with-rocev2/tutorials.png"
                                         alt="Tutorials"
@@ -569,7 +574,7 @@ export default function GB200WithRoCEv2() {
                                 <div className='p-4'>
                                     <Button
                                         variant="outline"
-                                        className="px-4 py-1 text-sm rounded-full"
+                                        className="bg-[#80B224] text-white px-4 py-1 text-sm rounded-full hover:bg-[#6BA000] hover:text-white transition-colors duration-300"
                                         onClick={() => window.location.href = '/resources/tutorials'}
                                     >
                                         Tutorials
@@ -581,7 +586,7 @@ export default function GB200WithRoCEv2() {
                         {/* Case Study Card */}
                         <SlideUp>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="h-54 bg-gradient-to-r from-cyan-900 to-blue-600 relative">
+                                <div className="h-54 bg-gradient-to-r from-cyan-900 to-blue-600 relative cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.location.href = '/resources/case-study'}>
                                     <img
                                         src="/solutions/networking-hardware/gb200-with-rocev2/case-study.png"
                                         alt="Case Study"
@@ -589,19 +594,19 @@ export default function GB200WithRoCEv2() {
                                     />
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-lg  font-bold text-gray-800 mb-3">Case Study</h3>
+                                    <h3 className="text-lg  font-bold text-gray-800 mb-3">Case Studies</h3>
                                     <p className="text-gray-600 mb-4">
-                                        Discover how canopywave builds powerful GPU + Network solutions in practice
+                                        Discover how Canopy Wave builds powerful GPU + Network solutions in practice
                                     </p>
 
                                 </div>
                                 <div className='p-4'>
                                     <Button
                                         variant="outline"
-                                        className="px-4 py-1 text-sm rounded-full"
+                                        className="bg-[#80B224] text-white px-4 py-1 text-sm rounded-full hover:bg-[#6BA000] hover:text-white transition-colors duration-300"
                                         onClick={() => window.location.href = '/resources/case-study'}
                                     >
-                                        Case Study
+                                        Case Studies
                                     </Button>
                                 </div>
 
@@ -611,7 +616,7 @@ export default function GB200WithRoCEv2() {
                         {/* Documents Card */}
                         <SlideUp>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="h-54 bg-gradient-to-r from-gray-400 to-gray-600 relative">
+                                <div className="h-54 bg-gradient-to-r from-gray-400 to-gray-600 relative cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}>
                                     <img
                                         src="/solutions/networking-hardware/gb200-with-rocev2/documents.png"
                                         alt="Documents"
@@ -628,7 +633,7 @@ export default function GB200WithRoCEv2() {
                                 <div className='pl-4 pb-4 pr-4'>
                                     <Button
                                         variant="outline"
-                                        className="px-4 py-1 text-sm rounded-full"
+                                        className="bg-[#80B224] text-white px-4 py-1 text-sm rounded-full hover:bg-[#6BA000] hover:text-white transition-colors duration-300"
                                         onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}
                                     >
                                         Documents

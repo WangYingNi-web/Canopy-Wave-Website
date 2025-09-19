@@ -1,0 +1,27 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2147226769" clip-path="url(#clip0_305_2377)">
+<g id="Frame 2147226772">
+<g id="Group 2492">
+<g id="Rectangle 945">
+<mask id="path-1-inside-1_305_2377" fill="white">
+<rect x="5" y="7" width="30" height="12.4286" rx="1.92859"/>
+</mask>
+<rect x="5" y="7" width="30" height="12.4286" rx="1.92859" stroke="#80B224" stroke-width="5" mask="url(#path-1-inside-1_305_2377)"/>
+</g>
+<g id="Rectangle 946">
+<mask id="path-2-inside-2_305_2377" fill="white">
+<rect x="5" y="21.4287" width="30" height="12.4286" rx="1.92859"/>
+</mask>
+<rect x="5" y="21.4287" width="30" height="12.4286" rx="1.92859" stroke="#80B224" stroke-width="5" mask="url(#path-2-inside-2_305_2377)"/>
+</g>
+<circle id="Ellipse 34" cx="11.6437" cy="13.214" r="2.57143" fill="#80B224"/>
+<circle id="Ellipse 35" cx="11.6437" cy="26.9289" r="2.57143" fill="#80B224"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_305_2377">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>
