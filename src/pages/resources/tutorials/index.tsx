@@ -39,14 +39,14 @@ const Tutorials: React.FC = () => {
 
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
-    {
-      id: 'comparing-ai-agent-frameworks',
-      category: 'AI Models',
-      title: 'LangGraph vs AutoGPT vs AgentGPT',
-      image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.webp',
-      date: 'September 19, 2025',
-      onClick: () => handleTutorialClick('Comparing Open-Source AI Agent Frameworks')
-    },
+    // {
+    //   id: 'comparing-ai-agent-frameworks',
+    //   category: 'AI Models',
+    //   title: 'LangGraph vs AutoGPT vs AgentGPT',
+    //   image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.webp',
+    //   date: 'September 19, 2025',
+    //   onClick: () => handleTutorialClick('Comparing Open-Source AI Agent Frameworks')
+    // },
     {
       id: 'prompt-engineering-guide',
       category: 'LLMs',
