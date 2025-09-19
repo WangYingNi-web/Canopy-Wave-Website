@@ -133,17 +133,28 @@ export default function InteractiveMap() {
             {/* 悬浮提示框 */}
             {hoveredLocation && (
                 <div 
-                    className="fixed z-50 bg-[#D1F0FA] opacity-90 border border-gray-200 rounded-lg shadow-lg p-3 pointer-events-none"
+                    className="fixed z-50 pointer-events-none"
                     style={{
-                        left: mousePosition.x + 10,
-                        top: mousePosition.y - 10,
-                        transform: 'translateY(-100%)'
+                        left: mousePosition.x,
+                        top: mousePosition.y -70,
+                        transform: 'translateX(-53%)'
                     }}
                 >
-                    <div className="font-semibold text-[#215968]">{hoveredLocation.name}</div>
-                    {hoveredLocation.description && (
-                        <div className="text-sm text-gray-600 mt-1">{hoveredLocation.description}</div>
-                    )}
+                    <img 
+                        src={`/test/${
+                            hoveredLocation.id === 'canada' ? '/powered_tab_canada.png' :
+                            hoveredLocation.id === 'us' ? 'powered_tab_us.png' :
+                            hoveredLocation.id === 'iceland1' ? 'powered_tab_ice left.png' :
+                            hoveredLocation.id === 'iceland2' ? 'powered_tab_ice right.png' :
+                            'powered_tab_canada.png'
+                        }`}
+                        alt={hoveredLocation.name}
+                        className="max-w-none"
+                        style={{
+                            height: 'auto',
+                            maxHeight: '50px'
+                        }}
+                    />
                 </div>
             )}
         </div>

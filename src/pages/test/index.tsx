@@ -518,9 +518,9 @@ export default function TestIndex() {
                         <h2 className="text-4xl font-bold text-left mb-8">
                             Canopy Wave Chat
                         </h2>
-                        <div className="flex flex-col lg:flex-row gap-12 min-h-[520px]">
+                        <div className="flex flex-col lg:flex-row gap-12 min-h-[480px]">
                             {/* 左侧动图区域 - 2/3宽度 */}
-                            <div className="lg:w-2/3 min-h-[520px] overflow-hidden">
+                            <div className="lg:w-2/3 min-h-[500px] overflow-hidden">
                                 <div className="bg-white rounded-lg shadow-lg p-2">
                                     <div className="space-y-4">
                                         <div className="mb-4">
@@ -627,61 +627,62 @@ export default function TestIndex() {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* Value of Custom Chat for Businesses Section */}
-                <h2 className="text-4xl font-bold text-center mb-8">
-                    Value of Custom Chat for Businesses
-                </h2>
-                <div className="lg:min-h-[500px] mb-16 relative" style={{ backgroundImage: 'url(/test/chat_value_bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-60">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {/* Fast Deployment */}
-                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
-                                <div className="w-16 h-16 mb-2 rounded-lg">
-                                    <Image src="/test/value-1.svg" alt="Secure" width={48} height={48} />
+                    {/* Value of Custom Chat for Businesses Section */}
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="min-h-[480px] relative px-8 pt-20" style={{ backgroundImage: 'url(/test/chat_value_bg.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+                            <h2 className="text-[28px] font-bold text-center mb-20">
+                                Value of Custom Chat for Businesses
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {/* Fast Deployment */}
+                                <div className="rounded-lg p-4 hover:shadow-lg transition-shadow">
+                                    <div className="w-16 h-16 mb-2 rounded-lg">
+                                        <Image src="/test/value-1.svg" alt="Secure" width={48} height={48} />
+                                    </div>
+                                    <h3 className="text-lg font-semibold mb-3">Fast Deployment</h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Get your dedicated Chat up and running in no time, enabling rapid adoption without complex development.
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-semibold mb-3">Fast Deployment</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Get your dedicated Chat up and running in no time, enabling rapid adoption without complex development.
-                                </p>
-                            </div>
 
-                            {/* Full Data Privacy */}
-                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
-                                <div className="w-16 h-16 mb-2 rounded-lg">
-                                    <Image src="/test/value-2.svg" alt="Secure" width={48} height={48} />
+                                {/* Full Data Privacy */}
+                                <div className="rounded-lg p-4 hover:shadow-lg transition-shadow">
+                                    <div className="w-16 h-16 mb-2 rounded-lg">
+                                        <Image src="/test/value-2.svg" alt="Secure" width={48} height={48} />
+                                    </div>
+                                    <h3 className="text-lg font-semibold mb-3">Full Data Privacy</h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Integrates with your enterprise login system, ensuring that all data remains private, secure, and compliant.
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-semibold mb-3">Full Data Privacy</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Integrates with your enterprise login system, ensuring that all data remains private, secure, and compliant.
-                                </p>
-                            </div>
 
-                            {/* Seamless Integration */}
-                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
-                                <div className="w-16 h-16 mb-2 rounded-lg">
-                                    <Image src="/test/value-3.svg" alt="Secure" width={48} height={48} />
+                                {/* Seamless Integration */}
+                                <div className="rounded-lg p-4 hover:shadow-lg transition-shadow">
+                                    <div className="w-16 h-16 mb-2 rounded-lg">
+                                        <Image src="/test/value-3.svg" alt="Secure" width={48} height={48} />
+                                    </div>
+                                    <h3 className="text-lg font-semibold mb-3">Seamless Integration</h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Easily integrates with your existing PaaS or IT systems for smooth connectivity and workflow alignment.
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-semibold mb-3">Seamless Integration</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Easily integrates with your existing PaaS or IT systems for smooth connectivity and workflow alignment.
-                                </p>
-                            </div>
 
-                            {/* Knowledge-Enhanced RAG */}
-                            <div className="rounded-lg p-6 hover:shadow-lg transition-shadow">
-                                <div className="w-16 h-16 mb-2 rounded-lg">
-                                    <Image src="/test/value-4.svg" alt="Secure" width={48} height={48} />
+                                {/* Knowledge-Enhanced RAG */}
+                                <div className="rounded-lg p-4 hover:shadow-lg transition-shadow">
+                                    <div className="w-16 h-16 mb-2 rounded-lg">
+                                        <Image src="/test/value-4.svg" alt="Secure" width={48} height={48} />
+                                    </div>
+                                    <h3 className="text-lg font-semibold mb-3">Knowledge-Enhanced RAG</h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Upload your own knowledge base with RAG technology for more accurate, enterprise-grade Q&A and automation.
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-semibold mb-3">Knowledge-Enhanced RAG</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Upload your own knowledge base with RAG technology for more accurate, enterprise-grade Q&A and automation.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
 
                 {/* Features Section - 特性介绍 */}
                 <div className="pb-[64px]">
@@ -1016,9 +1017,16 @@ export default function TestIndex() {
                                                         Inference
                                                     </h3>
                                                     <div className="flex items-center justify-between">
-                                                        <p className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2">
-                                                            Scalable and secure AI inference powered by high-performance virtual machines
-                                                        </p>
+                                                        <ul className="text-sm opacity-90 mb-2 flex-1 transition-all duration-500 ease-in-out animate-in fade-in slide-in-from-top-2 space-y-1">
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Scalable and secure AI inference powered by high-performance virtual machines.</span>
+                                                            </li>
+                                                            <li className="flex items-start">
+                                                                <span className="w-2 h-2 bg-[#ACE93B] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                                                <span>Applied in real-time search, recommendations, speech, and vision applications.</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </>
                                             )}
