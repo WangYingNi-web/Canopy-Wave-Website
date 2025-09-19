@@ -395,7 +395,15 @@ const TutorialLayout6: React.FC = () => {
                     React.createElement('ul', { key: 'h200-list' }, [
                         React.createElement('li', { key: 'h200-1', style: { marginBottom: '12px' } }, React.createElement('strong', {}, 'Large Language Model (LLM) Inference: '), 'Running open-source LLMs with longer context windows, critical for enterprise chatbots or document analysis.'),
                         React.createElement('li', { key: 'h200-2', style: { marginBottom: '12px' } }, React.createElement('strong', {}, 'Fine-Tuning: '), 'Refining pre-trained LLMs or multi-modal models (text + image) with large datasets, where memory bottlenecks often slow progress.'),
-                        React.createElement('li', { key: 'h200-3', style: { marginBottom: '12px' } }, React.createElement('strong', {}, 'Autonomous Vehicles: '), 'Processing high-throughput, real-time sensor data for object detection and path planning using multi-GPU clusters.'),
+                        React.createElement('li', { key: 'h200-3', style: { marginBottom: '12px' } }, React.createElement('strong', {}, 'Autonomous Vehicles: '), 'Processing high-throughput, real-time sensor data for object',
+                        React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                        'detection and path planning using multi-', 
+                            React.createElement('a', {
+                            href: 'https://canopywave.com/compute-services',
+                            key: 'GPU clusters',
+                            style: { display: 'inline', textDecoration: 'underline' }
+                            }, 'GPU clusters'),
+                        ]),), 
                         React.createElement('li', { key: 'h200-4', style: { marginBottom: '12px' } }, React.createElement('strong', {}, 'Healthcare & Life Sciences: '), 'Genomics analysis (e.g., DNA sequencing) and medical imaging (3D MRI/CT scans) that demand fast access to large datasets.')
                     ]),
                     React.createElement('h4', { key: 'b200-scenarios', style: { fontSize: '18px' } }, React.createElement('strong', {}, '3) B200: Next-Gen Power for Ultra-Large and Cutting-Edge Workloads')),

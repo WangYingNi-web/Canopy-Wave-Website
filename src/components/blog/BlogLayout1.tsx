@@ -99,9 +99,9 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   codeLines.push(paragraph);
                 }
               } else if (React.isValidElement(paragraph)) {
-                // React 元素直接渲染
+                // React 元素也加灰色样式
                 result.push(
-                  <div key={`element-${index}-${pIndex}`}>{paragraph}</div>
+                  <div key={`element-${index}-${pIndex}`} className="text-gray-700 leading-relaxed">{paragraph}</div>
                 );
               } else {
                 // 普通文本 - 处理换行符
