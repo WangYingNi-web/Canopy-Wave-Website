@@ -25,8 +25,8 @@ const mapConfigs: Record<MapType, MapConfig> = {
         alt: 'North America Map',
         locations: [
             // 示例位置点 - 你需要根据实际图片调整这些坐标
-            { id: 'ny', name: 'Canada', x: 88.2, y: 26.8, description: 'Canada（Toronto）' },
-            { id: 'la', name: 'U.S', x: 5.6, y: 44, description: 'U.S.（Santa Clara）' },
+            { id: 'canada', name: 'Canada', x: 88.2, y: 26.8, description: 'Canada（Toronto）' },
+            { id: 'us', name: 'U.S', x: 5.6, y: 44, description: 'U.S.（Santa Clara）' },
         ]
     },
     Europe: {
@@ -107,14 +107,11 @@ export default function InteractiveMap() {
                     {currentConfig.locations.map((location) => (
                         <div
                             key={location.id}
-                            className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
                             style={{
                                 left: `${location.x}%`,
                                 top: `${location.y}%`,
                             }}
-                            onMouseEnter={(e) => handleLocationHover(location, e)}
-                            onMouseLeave={handleLocationLeave}
-                            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
                         >
                             {/* 光点动画 */}
                             <div className="relative">
@@ -123,7 +120,12 @@ export default function InteractiveMap() {
                                 {/* 中层光晕 */}
                                 <div className="absolute inset-0 w-4 h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-1 translate-y-1"></div>
                                 {/* 核心光点 */}
-                                <div className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200"></div>
+                                <div 
+                                    className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200 cursor-pointer"
+                                    onMouseEnter={(e) => handleLocationHover(location, e)}
+                                    onMouseLeave={handleLocationLeave}
+                                    onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
+                                ></div>
                             </div>
                         </div>
                     ))}
@@ -137,11 +139,11 @@ export default function InteractiveMap() {
                     style={{
                         left: mousePosition.x,
                         top: mousePosition.y -70,
-                        transform: 'translateX(-53%)'
+                        transform: 'translateX(-50%)'
                     }}
                 >
                     <img 
-                        src={`/test/${
+                        src={`/map/${
                             hoveredLocation.id === 'canada' ? '/powered_tab_canada.png' :
                             hoveredLocation.id === 'us' ? 'powered_tab_us.png' :
                             hoveredLocation.id === 'iceland1' ? 'powered_tab_ice left.png' :
