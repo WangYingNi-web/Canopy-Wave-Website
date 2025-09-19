@@ -513,7 +513,7 @@ export default function TestIndex() {
 
 
                 {/* Chat Section - 灰色背景聊天区域 */}
-                <div className="pb-[64px]" ref={chatRef}>
+                <div className="pb-16" ref={chatRef}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left mb-8">
                             Canopy Wave Chat
@@ -682,10 +682,8 @@ export default function TestIndex() {
                     </div>
                 </div>
 
-
-
                 {/* Features Section - 特性介绍 */}
-                <div className="pb-[64px]">
+                <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left mb-12">
                             Instantly allocated GPU resource and<br />
@@ -741,7 +739,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* GPU Products Section - NVIDIA GB200 NVL72 */}
-                <div className="bg-white pb-[64px]">
+                <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl font-bold text-left">
                             NVIDIA GB200 & B200, H100, H200 GPUs<br />
@@ -848,9 +846,9 @@ export default function TestIndex() {
 
                                 {/* Learn More 按钮 */}
                                 <div className="absolute right-0 top-0 transform -translate-y-1/2">
-                                    <Button className="bg-[#80B224] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.location.href = '/pricing'}>
+                                    <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-6 py-1.5 rounded-full text-sm font-medium" onClick={() => window.location.href = '/pricing'}>
                                         Getting Price
-                                    </Button>
+                                    </button>
                                 </div>
 
                                 {/* 图片切换按钮 */}
@@ -905,7 +903,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Providing secure and efficient solutions for different use cases */}
-                <div className="pb-[64px]">
+                <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <SlideUp>
                             <div className="text-left mb-12">
@@ -1240,7 +1238,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Global Network Section */}
-                <div className="bg-white pb-[64px]">
+                <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-8 max-h-[400px]">
                         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
                             <div className="w-full md:w-1/2">
@@ -1269,7 +1267,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Explore Canopy Wave Section */}
-                <section className="pb-[64px]">
+                <section className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-left mb-10">
                             <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Canopy Wave</h2>
@@ -1374,7 +1372,7 @@ export default function TestIndex() {
                 </section>
 
                 {/* CTA Section */}
-                <div className="py-32 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="py-32 mt-16 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="absolute inset-0"></div>
                     <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                         <h2 className="text-4xl font-bold text-white mb-10">
