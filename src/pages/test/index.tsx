@@ -518,9 +518,9 @@ export default function TestIndex() {
                         <h2 className="text-4xl font-bold text-left mb-8">
                             Canopy Wave Chat
                         </h2>
-                        <div className="flex flex-col lg:flex-row gap-12">
+                        <div className="flex flex-col lg:flex-row gap-12 min-h-[520px]">
                             {/* 左侧动图区域 - 2/3宽度 */}
-                            <div className="lg:w-2/3 max-h-[520px] overflow-hidden" >
+                            <div className="lg:w-2/3 min-h-[520px] overflow-hidden">
                                 <div className="bg-white rounded-lg shadow-lg p-2">
                                     <div className="space-y-4">
                                         <div className="mb-4">
