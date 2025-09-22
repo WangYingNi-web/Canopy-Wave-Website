@@ -1385,7 +1385,7 @@ export default function TestIndex() {
                             {/* <Button className="rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                 Chat Now
                             </Button> */}
-                            <Button variant="outline" className="rounded-full font-bold text-[#333333] text-lg border-[#333333]" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>Chat Now</Button>
+                            <Button variant="outline" className="rounded-full font-bold text-[#333333] text-lg border-[#333333] bg-transparent" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>Chat Now</Button>
                         </div>
                     </div>
                 </div>
