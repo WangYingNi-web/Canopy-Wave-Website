@@ -100,7 +100,7 @@ export default function Footer() {
         return router.pathname === '/resources/docs/cw-cloud-account/quick-start' ? 'max-w-7xl' : 'max-w-7xl';
     };
     return (
-        <footer className="border-t bg-[#F9F9F9]">
+        <footer className={`border-t bg-[#F9F9F9] ${router.pathname === '/test' ? 'bg-cover bg-center bg-no-repeat' : ''}`} style={router.pathname === '/test' ? { backgroundImage: 'url(/test/footer_bg.png)' } : {}}>
             <div className={`${getContainerMaxWidth()} mx-auto px-6 sm:px-6 lg:px-8 py-8 sm:py-12`}>
                 <div className="flex flex-col lg:flex-row py-8">
                     <div className="w-full lg:w-3/4 lg:flex lg:justify-start">

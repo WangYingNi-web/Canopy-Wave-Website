@@ -631,7 +631,7 @@ export default function TestIndex() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="min-h-[480px] relative px-8 pt-20" style={{ backgroundImage: 'url(/test/chat_value_bg.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
                             <h2 className="text-[28px] font-bold text-center text-[#333333] mb-20">
-                                Value of Custom Chat for Businesses
+                                Tailored Al Chat for Enterprise
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {/* Fast Deployment */}
@@ -1239,14 +1239,14 @@ export default function TestIndex() {
 
                 {/* Global Network Section */}
                 <div className="bg-white py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-8 max-h-[400px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-8 min-h-[400px]">
                         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
                             <div className="w-full md:w-1/2">
                                 <SlideUp>
                                     <h2 className="text-3xl sm:text-4xl font-black mb-[80px] text-[#333333]">Powered By Our Global Network</h2>
                                 </SlideUp>
                                 <SlideUp>
-                                    <p className="text-gray-600 mb-8 text-l leading-relaxed">
+                                    <p className="text-gray-600 mb-10 text-l leading-relaxed">
                                         Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                                     </p>
                                 </SlideUp>
@@ -1375,16 +1375,17 @@ export default function TestIndex() {
                 <div className="py-32 mt-16 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="absolute inset-0"></div>
                     <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                        <h2 className="text-4xl font-bold text-white mb-10">
+                        <h2 className="text-4xl font-bold text-[#333333] mb-10">
                             Accelerate Your AI Journey today
                         </h2>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button className="rounded-full bg-[#76B900] text-white hover:bg-[#6ba000] px-8 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
+                            <Button className="font-bold text-lg rounded-full bg-[#76B900] text-white hover:bg-[#6ba000] px-6 py-3" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
                                 Launch Now
                             </Button>
-                            <Button className="rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                            {/* <Button className="rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                 Chat Now
-                            </Button>
+                            </Button> */}
+                            <Button variant="outline" className="rounded-full font-bold text-[#333333] text-lg border-[#333333]" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>Chat Now</Button>
                         </div>
                     </div>
                 </div>
