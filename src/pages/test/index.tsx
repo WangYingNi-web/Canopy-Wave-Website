@@ -1240,13 +1240,13 @@ export default function TestIndex() {
                 {/* Global Network Section */}
                 <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-8 min-h-[400px]">
+                        <SlideUp>
+                            <h2 className="text-3xl sm:text-4xl font-black mb-[80px] text-[#333333]">Powered By Our Global Network</h2>
+                        </SlideUp>
                         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
-                            <div className="w-full md:w-1/2">
+                            <div className="w-full md:w-1/3">
                                 <SlideUp>
-                                    <h2 className="text-3xl sm:text-4xl font-black mb-[80px] text-[#333333]">Powered By Our Global Network</h2>
-                                </SlideUp>
-                                <SlideUp>
-                                    <p className="text-gray-600 mb-10 text-l leading-relaxed">
+                                    <p className="text-gray-600 mb-20 text-l leading-relaxed w-[450px]">
                                         Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                                     </p>
                                 </SlideUp>
@@ -1257,7 +1257,7 @@ export default function TestIndex() {
                                     </IwsLink>
                                 </SlideUp>
                             </div>
-                            <div className="w-full md:w-1/2">
+                            <div className="w-full md:w-2/3">
                                 <SlideUp>
                                     <EuropeMap />
                                 </SlideUp>

@@ -25,8 +25,8 @@ const mapConfigs: Record<MapType, MapConfig> = {
         alt: 'North America Map',
         locations: [
             // 示例位置点 - 你需要根据实际图片调整这些坐标
-            { id: 'canada', name: 'Canada', x: 88.2, y: 26.8, description: 'Canada（Toronto）' },
-            { id: 'us', name: 'U.S', x: 5.6, y: 44, description: 'U.S.（Santa Clara）' },
+            { id: 'canada', name: 'Canada', x: 88.3, y: 27.1, description: 'Canada（Toronto）' },
+            { id: 'us', name: 'U.S', x: 5.7, y: 44.1, description: 'U.S.（Santa Clara）' },
         ]
     },
     Europe: {
@@ -34,8 +34,8 @@ const mapConfigs: Record<MapType, MapConfig> = {
         alt: 'Europe Map',
         locations: [
             // 示例位置点 - 你需要根据实际图片调整这些坐标
-            { id: 'iceland1', name: 'Iceland', x: 8.9, y: 13.7, description: 'Iceland（Blonduos）' },
-            { id: 'iceland2', name: 'Iceland', x: 12.4, y: 12.6, description: 'Iceland（Akureyri）' },
+            { id: 'iceland1', name: 'Iceland', x: 9.1, y: 13.8, description: 'Iceland（Blonduos）' },
+            { id: 'iceland2', name: 'Iceland', x: 12.5, y: 12.8, description: 'Iceland（Akureyri）' },
         ]
     }
 };
@@ -76,7 +76,7 @@ export default function InteractiveMap() {
     return (
         <div ref={ref} className="w-full relative">
             {/* 切换按钮 */}
-            <div className={`absolute -top-10 right-0 z-20 flex gap-2`}>
+            <div className={`absolute -top-20 right-0 z-20 flex gap-2`}>
                 {(Object.keys(mapConfigs) as MapType[]).map((mapType) => (
                     <button
                         key={mapType}
@@ -94,10 +94,10 @@ export default function InteractiveMap() {
             {/* 地图容器 */}
             <div
                 ref={ref}
-                className="relative w-full mx-auto mt-12 ml-6"
+                className="relative w-full mx-auto -mt-9"
                 style={{
                     aspectRatio: '580/400',
-                    maxWidth: '580px',
+                    maxWidth: '700px',
                     height: 'auto'
                 }}
             >
@@ -131,7 +131,7 @@ export default function InteractiveMap() {
                                 <div className="absolute inset-0 w-4 h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-1 translate-y-1"></div>
                                 {/* 核心光点 */}
                                 <div 
-                                    className="relative w-4 h-4 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200 cursor-pointer"
+                                    className="relative w-5 h-5 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200 cursor-pointer"
                                     onMouseEnter={(e) => handleLocationHover(location, e)}
                                     onMouseLeave={handleLocationLeave}
                                 ></div>
