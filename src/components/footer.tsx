@@ -102,12 +102,12 @@ export default function Footer() {
     return (
         <footer className="border-t bg-[#F9F9F9]">
             <div className={`${getContainerMaxWidth()} mx-auto px-6 sm:px-6 lg:px-8 py-8 sm:py-12`}>
-                <div className="flex flex-col lg:flex-row">
+                <div className="flex flex-col lg:flex-row py-8">
                     <div className="w-full lg:w-3/4 lg:flex lg:justify-start">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-start gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-8 lg:gap-x-16 lg:gap-y-0">
                             <div className="space-y-8 min-w-[120px]">
                                 <div>
-                                    <h3 className="font-semibold mb-4 text-sm">Products</h3>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Products</h3>
                                     <ul className="space-y-3 text-xs">
                                         <li><IwsLink href="/compute-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Compute Services</IwsLink></li>
                                         <li><IwsLink href="/storage-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Storage Services</IwsLink></li>
@@ -118,7 +118,7 @@ export default function Footer() {
                             </div>
                             <div className="space-y-8 max-w-[130px]">
                                 <div>
-                                    <h3 className="font-semibold mb-4 text-sm">Solutions</h3>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Solutions</h3>
                                     <ul className="space-y-3 text-xs">
                                         <li><IwsLink href="/model-training" className="text-gray-500 hover:text-[#36496E] hover:underline">AI Model Training</IwsLink></li>
                                         <li><IwsLink href="/inference" className="text-gray-500 hover:text-[#36496E] hover:underline">Inference</IwsLink></li>
@@ -130,7 +130,7 @@ export default function Footer() {
                             </div>
                             <div className="space-y-8 max-w-[140px]">
                                 <div>
-                                    <h3 className="font-semibold mb-4 text-sm">Pricing</h3>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Pricing</h3>
                                     <ul className="space-y-3 text-xs">
                                         <li><IwsLink href="/pricing#GB200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA GB200 NVL72</IwsLink></li>
                                         <li><IwsLink href="/pricing#B200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX B200</IwsLink></li>
@@ -144,14 +144,14 @@ export default function Footer() {
                             </div>
                             <div className="space-y-8 min-w-[130px]">
                                 <div>
-                                    <h3 className="font-semibold mb-4 text-sm">Data Center</h3>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Data Center</h3>
                                     <ul className="space-y-3 text-xs">
                                         <li><IwsLink href="/data-center/iceland" className="text-gray-500 hover:text-[#36496E] hover:underline">Our Data Center</IwsLink></li>
                                         <li><IwsLink href="/data-center/iceland#future-locations" className="text-gray-500 hover:text-[#36496E] hover:underline">Future locations</IwsLink></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold mb-2 text-sm">Resources</h3>
+                                    <h3 className="font-semibold mb-2 text-sm text-[#333333]">Resources</h3>
                                     <ul className="space-y-2 text-xs">
                                         {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li> */}
                                         <li><IwsLink href="/resources/tutorials" className="text-gray-500 hover:text-[#36496E] hover:underline">Tutorials</IwsLink></li>
@@ -162,7 +162,7 @@ export default function Footer() {
                             </div>
                             <div className="space-y-8 sm:min-w-[80px]">
                                 <div>
-                                    <h3 className="font-semibold mb-4 text-sm">About</h3>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">About</h3>
                                     <ul className="space-y-3 text-xs">
                                         <li><IwsLink href="/about" className="text-gray-500 hover:text-[#36496E] hover:underline">About Us</IwsLink></li>
                                         <li><IwsLink href="/about/careers" className="text-gray-500 hover:text-[#36496E] hover:underline">Careers</IwsLink></li>

@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
-  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialPost } from '@/components/tutorials'
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialLayout9,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -267,6 +267,24 @@ export default function TutorialDetail() {
           ],
         }
 
+      case 'redefine-your-workflow-with-canopy-wave-chat':
+        return {
+          id: 9,
+          title: 'Redefine Your Workflow with Canopy Wave Chat',
+          description: 'How AI Integration with Office Tools',
+          metaDescription: 'From automated report generation to intelligent data analysis, meeting summaries to predictive planning, AI is no longer a distant concept but a practical tool to supercharge efficiency.',
+          imageAlt: 'ai office tool',
+          sections: [
+            {
+              title: 'Transform Your Daily Work with AI',
+              content: [
+                'From automated report generation to intelligent data analysis, meeting summaries to predictive planning, AI is no longer a distant concept but a practical tool to supercharge efficiency.',
+                'Canopy Wave Chat represents the next evolution in workplace productivity, seamlessly integrating advanced AI capabilities directly into your existing office workflow.',
+              ],
+            },
+          ],
+        }
+
       default:
         return null
     }
@@ -312,6 +330,8 @@ export default function TutorialDetail() {
         return <TutorialLayout7 />
       case 8:
         return <TutorialLayout8 />
+      case 9:
+        return <TutorialLayout9 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }

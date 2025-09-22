@@ -23,6 +23,7 @@ interface Card {
   image: string;
   date: string;
   tag?: string;
+  alt?: string;
   onClick: () => void;
 }
 
@@ -40,19 +41,30 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     // {
-    //   id: 'comparing-ai-agent-frameworks',
+    //   id: 'ai-integration',
     //   category: 'AI Models',
-    //   title: 'LangGraph vs AutoGPT vs AgentGPT',
-    //   image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.webp',
-    //   date: 'September 19, 2025',
-    //   onClick: () => handleTutorialClick('Comparing Open-Source AI Agent Frameworks')
+    //   title: 'Redefine Your Workflow with Canopy Wave Chat',
+    //   image: '/tutorials/ai-integration/ai-integration.webp',
+    //   date: 'September 22, 2025',
+    //   alt: 'ai office tool',
+    //   onClick: () => handleTutorialClick('Redefine Your Workflow with Canopy Wave Chat')
     // },
+    {
+      id: 'comparing-ai-agent-frameworks',
+      category: 'AI Models',
+      title: 'LangGraph vs AutoGPT vs AgentGPT',
+      image: '/tutorials/ai-agent-frameworks/ai-agent-frameworks.webp',
+      date: 'September 19, 2025',
+      alt: 'ai agent frameworks',
+      onClick: () => handleTutorialClick('Comparing Open-Source AI Agent Frameworks')
+    },
     {
       id: 'prompt-engineering-guide',
       category: 'LLMs',
       title: 'Prompt Engineering Guide',
       image: '/tutorials/prompt-engineering-guide/group.png',
       date: 'September 3, 2025',
+      alt: 'prompt engineering guide',
       onClick: () => handleTutorialClick('Prompt Engineering Guide')
     },
     {
@@ -61,6 +73,7 @@ const Tutorials: React.FC = () => {
       title: 'NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload?',
       image: '/tutorials/workload/workload.png',
       date: 'August 27, 2025',
+      alt: 'nvidia gpu comparison',
       onClick: () => handleTutorialClick('NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload')
     },
     {
@@ -69,6 +82,7 @@ const Tutorials: React.FC = () => {
       title: 'How to Choose the Right Storage for Your AI Workflows?',
       image: '/tutorials/workflows/workflows.png',
       date: 'August 27, 2025',
+      alt: 'ai storage workflows',
       onClick: () => handleTutorialClick('How to Choose the Right Storage for Your AI Workflows')
     },
     {
@@ -77,6 +91,7 @@ const Tutorials: React.FC = () => {
       title: 'How to Run the GPT-OSS Locally on a Canopy Wave VM?',
       image: '/tutorials/gpt-oss/gpt-oss.png',
       date: 'August 13, 2025',
+      alt: 'gpt-oss local deployment',
       onClick: () => handleTutorialClick('How to Run the GPT-OSS Locally on a Canopy Wave VM')
     },
     {
@@ -85,6 +100,7 @@ const Tutorials: React.FC = () => {
       title: 'How to Run the KIMI-K2 Locally on a Canopy Wave VM?',
       image: '/tutorials/kimi-k2/kimi.png',
       date: 'August 11, 2025',
+      alt: 'kimi-k2 local setup',
       onClick: () => handleTutorialClick('How to Run the KIMI-K2 Locally on a Canopy Wave VM')
     },
     {
@@ -93,6 +109,7 @@ const Tutorials: React.FC = () => {
       title: 'How to Run the Llama Locally on a Canopy Wave VM?',
       image: '/tutorials/result-banner/Llama-Locally.png',
       date: 'August 1, 2025',
+      alt: 'llama local deployment',
       onClick: () => handleTutorialClick('How to Run the Llama Locally on a Canopy Wave VM')
     },
     {
@@ -101,6 +118,7 @@ const Tutorials: React.FC = () => {
       title: 'How to Run DeepSeek-R1 Locally on a Canopy Wave VM?',
       image: '/tutorials/result-banner/DeepSeek-R1.png',
       date: 'July 31, 2025',
+      alt: 'deepseek-r1 local setup',
       onClick: () => handleTutorialClick('How to Run DeepSeek-R1 Locally on a Canopy Wave VM')
     },
     
@@ -111,6 +129,7 @@ const Tutorials: React.FC = () => {
       image: '/tutorials/result-banner/API-Management.png',
       date: 'June 11, 2025',
       tag: 'API',
+      alt: 'api management guide',
       // onClick: () => handleTutorialClick('API Management Guide')
       onClick: () => router.push('/resources/tutorials/manage-cloud-via-api')
     },
@@ -341,7 +360,7 @@ const Tutorials: React.FC = () => {
                       <div className="relative w-full h-65 overflow-hidden">
                         <Image
                           src={card.image}
-                          alt="banner"
+                          alt={card.alt || card.title}
                           width={400}
                           height={192}
                           className="object-cover w-full h-full"
@@ -393,7 +412,7 @@ const Tutorials: React.FC = () => {
                     <div className="relative w-full aspect-[2/1] overflow-hidden bg-gray-100">
                       <Image
                         src={card.image}
-                        alt="banner"
+                        alt={card.alt || card.title}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

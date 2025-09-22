@@ -284,7 +284,7 @@ export default function TestIndex() {
 
             <div className="w-full bg-white">
                 {/* 轮播图Banner */}
-                <div className="w-full h-[70vh] relative mt-[84px] overflow-hidden will-change-transform">
+                <div className="w-full h-[71vh] relative mt-[84px] overflow-hidden will-change-transform">
                     {slides.map((slide, index) => {
                         return (
                             <div
@@ -298,7 +298,7 @@ export default function TestIndex() {
                                     <div className="absolute inset-0 bg-black z-0" />
                                 )}
                                 {slide.id === 4 ? (
-                                    <div className="absolute inset-0 flex items-center justify-center h-[72vh]">
+                                    <div className="absolute inset-0 flex items-center justify-center h-[74vh]">
                                         <Image
                                             src={slide.background}
                                             alt={`Banner ${slide.id}`}
@@ -515,7 +515,7 @@ export default function TestIndex() {
                 {/* Chat Section - 灰色背景聊天区域 */}
                 <div className="pb-16" ref={chatRef}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-4xl font-bold text-left mb-8">
+                        <h2 className="text-4xl font-bold text-left mb-[80px] text-[#333333]">
                             Canopy Wave Chat
                         </h2>
                         <div className="flex flex-col lg:flex-row gap-12 min-h-[480px]">
@@ -540,7 +540,7 @@ export default function TestIndex() {
 
                             {/* 右侧标题区域 - 1/3宽度 */}
                             <div className="lg:w-1/3 relative">
-                                <div className="space-y-4 pb-20 h-[430px]">
+                                <div className="space-y-4 h-[430px]">
                                     {/* Multi-model collaboration: Beyond single-model capabilities (1) */}
                                     <div
                                         className={`p-4 cursor-pointer transition-all duration-300 relative ${activeTab === 1
@@ -630,7 +630,7 @@ export default function TestIndex() {
                     {/* Value of Custom Chat for Businesses Section */}
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="min-h-[480px] relative px-8 pt-20" style={{ backgroundImage: 'url(/test/chat_value_bg.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-                            <h2 className="text-[28px] font-bold text-center mb-20">
+                            <h2 className="text-[28px] font-bold text-center text-[#333333] mb-20">
                                 Value of Custom Chat for Businesses
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -639,7 +639,7 @@ export default function TestIndex() {
                                     <div className="w-16 h-16 mb-2 rounded-lg">
                                         <Image src="/test/value-1.svg" alt="Secure" width={48} height={48} />
                                     </div>
-                                    <h3 className="text-lg font-semibold mb-3">Fast Deployment</h3>
+                                    <h3 className="text-lg font-semibold mb-3 text-[#333333]">Fast Deployment</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed">
                                         Get your dedicated Chat up and running in no time, enabling rapid adoption without complex development.
                                     </p>
@@ -650,7 +650,7 @@ export default function TestIndex() {
                                     <div className="w-16 h-16 mb-2 rounded-lg">
                                         <Image src="/test/value-2.svg" alt="Secure" width={48} height={48} />
                                     </div>
-                                    <h3 className="text-lg font-semibold mb-3">Full Data Privacy</h3>
+                                    <h3 className="text-lg font-semibold mb-3 text-[#333333]">Full Data Privacy</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed">
                                         Integrates with your enterprise login system, ensuring that all data remains private, secure, and compliant.
                                     </p>
@@ -661,7 +661,7 @@ export default function TestIndex() {
                                     <div className="w-16 h-16 mb-2 rounded-lg">
                                         <Image src="/test/value-3.svg" alt="Secure" width={48} height={48} />
                                     </div>
-                                    <h3 className="text-lg font-semibold mb-3">Seamless Integration</h3>
+                                    <h3 className="text-lg font-semibold mb-3 text-[#333333]">Seamless Integration</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed">
                                         Easily integrates with your existing PaaS or IT systems for smooth connectivity and workflow alignment.
                                     </p>
@@ -672,7 +672,7 @@ export default function TestIndex() {
                                     <div className="w-16 h-16 mb-2 rounded-lg">
                                         <Image src="/test/value-4.svg" alt="Secure" width={48} height={48} />
                                     </div>
-                                    <h3 className="text-lg font-semibold mb-3">Knowledge-Enhanced RAG</h3>
+                                    <h3 className="text-lg font-semibold mb-3 text-[#333333]">Knowledge-Enhanced RAG</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed">
                                         Upload your own knowledge base with RAG technology for more accurate, enterprise-grade Q&A and automation.
                                     </p>
@@ -685,7 +685,7 @@ export default function TestIndex() {
                 {/* Features Section - 特性介绍 */}
                 <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-4xl font-bold text-left mb-12">
+                        <h2 className="text-4xl font-bold text-left text-[#333333] mb-[80px]">
                             Instantly allocated GPU resource and<br />
                             ready-to-go AI resource
                         </h2>
@@ -696,7 +696,7 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-1.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4">End-to-End Secure Operations</h3>
+                                <h3 className="text-lg font-bold mb-4 text-[#333333]">End-to-End Secure Operations</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Our proprietary GPU management platform offers real-time monitoring, health alerts, and resource optimization. Backed by 24/7 support, we ensure peak cluster performance and stability.
                                 </p>
@@ -707,7 +707,7 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-2.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4">Customized Service</h3>
+                                <h3 className="text-lg font-bold mb-4 text-[#333333]">Customized Service</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     We provide dedicated AI infrastructure and offer full-lifecycle AI services—such as model fine-tuning and agent customization tailored to your needs—to drive enterprises toward faster, smarter, and more cost-effective growth.
                                 </p>
@@ -718,7 +718,7 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-3.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4">Canopy Wave private cloud</h3>
+                                <h3 className="text-lg font-bold mb-4 text-[#333333]">Canopy Wave private cloud</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Best GPU cluster performance in the industry. With 99.99% up-time. Have all your GPUs under the same datacenter, your workload and privacy are protected.
                                 </p>
@@ -729,7 +729,7 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-4.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4">Pay for What You Use</h3>
+                                <h3 className="text-lg font-bold mb-4 text-[#333333]">Pay for What You Use</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Only pay wholesale prices for the AI-related resources you actually consume. No hidden fees.
                                 </p>
@@ -741,7 +741,7 @@ export default function TestIndex() {
                 {/* GPU Products Section - NVIDIA GB200 NVL72 */}
                 <div className="bg-white py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-4xl font-bold text-left">
+                        <h2 className="text-4xl font-bold text-left text-[#333333] mb-[36px]">
                             NVIDIA GB200 & B200, H100, H200 GPUs<br />
                             now available
                         </h2>
@@ -806,7 +806,7 @@ export default function TestIndex() {
                                     return (
                                         <>
                                             <div className="flex items-center space-x-4 mb-4">
-                                                <h3 className="text-2xl font-bold">{currentProduct.name}</h3>
+                                                <h3 className="text-2xl font-bold text-[#333333]">{currentProduct.name}</h3>
                                             </div>
                                             <div className="flex items-center space-x-4 mb-4">
                                                 <h4 className="bg-[#DFEDF7] text-[#4C606D] px-3 py-1 rounded-full text-sm font-medium">{currentProduct.price}</h4>
@@ -845,7 +845,7 @@ export default function TestIndex() {
                                 </div>
 
                                 {/* Learn More 按钮 */}
-                                <div className="absolute right-0 top-0 transform -translate-y-1/2">
+                                <div className="absolute right-0 -top-[60px] transform -translate-y-1/2">
                                     <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-6 py-1.5 rounded-full text-sm font-medium" onClick={() => window.location.href = '/pricing'}>
                                         Getting Price
                                     </button>
@@ -906,7 +906,7 @@ export default function TestIndex() {
                 <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <SlideUp>
-                            <div className="text-left mb-12">
+                            <div className="text-left mb-[80px] text-[#333333]">
                                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Providing secure and efficient solutions for <br /> different use cases</h2>
                             </div>
                         </SlideUp>
@@ -1243,7 +1243,7 @@ export default function TestIndex() {
                         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
                             <div className="w-full md:w-1/2">
                                 <SlideUp>
-                                    <h2 className="text-3xl sm:text-4xl font-black mb-8 sm:mb-10">Powered By Our Global Network</h2>
+                                    <h2 className="text-3xl sm:text-4xl font-black mb-[80px] text-[#333333]">Powered By Our Global Network</h2>
                                 </SlideUp>
                                 <SlideUp>
                                     <p className="text-gray-600 mb-8 text-l leading-relaxed">
@@ -1270,7 +1270,7 @@ export default function TestIndex() {
                 <section className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-left mb-10">
-                            <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Canopy Wave</h2>
+                            <h2 className="text-4xl font-bold text-gray-900 mb-[80px] text-[#333333]">Explore Canopy Wave</h2>
                         </div>
 
                         {/* First Row - 2/3 and 1/3 layout */}
@@ -1280,7 +1280,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Events</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 text-[#333333]">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
                                 <p className="text-sm text-gray-600 mb-12">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
                                 <button
                                     onClick={() => window.location.href = '/events/ai-agent-summit-keynote'}
@@ -1298,7 +1298,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Blog</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Joint Blog - Accelerate Enterprise AI</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">Joint Blog - Accelerate Enterprise AI</h3>
                                 <p className="text-sm text-gray-600 mb-12">by James Liao, CTO of Canopy Wave, and Severi Tikkas, CTO of ConfidentialMind</p>
                                 <button
                                     onClick={() => window.location.href = '/blog/joint-blog-accelerate-enterprise-ai'}
@@ -1319,7 +1319,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Case Studies</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
                                 <p className="text-sm text-gray-600 mb-12">Foundry BioSciences Case Study</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/case-study'}
@@ -1337,7 +1337,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Tutorials</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
                                 <p className="text-sm text-gray-600 mb-12">Step-by-step guide for local deployment</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/tutorials/how-to-run-the-gpt-oss-locally-on-a-canopy-wave-vm'}
@@ -1355,7 +1355,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Docs</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
                                 <p className="text-sm text-gray-600 mb-12">This portfolio outlines modular hardware components and recommended configurations</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/docs/products/canopy-wave-gpu'}
