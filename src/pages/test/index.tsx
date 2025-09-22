@@ -364,7 +364,7 @@ export default function TestIndex() {
                                                     />
                                                 </div>
                                                 <div className="flex gap-2 sm:gap-4">
-                                                    <button className="border-2 border-[#80B224] text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
+                                                    <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
                                                         Free to use
                                                     </button>
                                                 </div>
@@ -382,9 +382,9 @@ export default function TestIndex() {
                                                     <Image
                                                         src="/test/banner_img_biaoti03.png"
                                                         alt="Accelerating AI Deployment API"
-                                                        width={600}
+                                                        width={800}
                                                         height={200}
-                                                        className="w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] object-contain"
+                                                        className="w-full h-auto max-w-[400px] sm:max-w-[600px] lg:max-w-[760px] object-contain"
                                                         priority
                                                     />
                                                 </div>
