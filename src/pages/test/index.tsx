@@ -1372,7 +1372,7 @@ export default function TestIndex() {
                 </section>
 
                 {/* CTA Section */}
-                <div className="py-32 mt-16 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <div className="py-36 mt-16 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
                     <div className="absolute inset-0"></div>
                     <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                         <h2 className="text-4xl font-bold text-[#333333] mb-10">
