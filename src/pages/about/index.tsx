@@ -468,7 +468,7 @@ export default function AboutPage() {
                     {hoveredCard !== 'card3' && (
                       <>
                         <h3 className="text-xl font-bold mb-3 leading-tight">
-                          Earn Respect with an Ownership Mindset
+                          Demonstrate Contribution with Measurable Results
                         </h3>
                       </>
                     )}
