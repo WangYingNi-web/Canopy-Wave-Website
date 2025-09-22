@@ -192,9 +192,9 @@ export default function TestIndex() {
 
         // 每个动图的播放时长（毫秒）
         const chatDurations: { [key: number]: number } = {
-            1: 6000, // chat3.webp 播放6秒
-            2: 8000, // chat2.webp 播放5秒
-            3: 10000  // chat1.webp 播放7秒
+            1: 10000, // chat1.mp4 播放8秒
+            2: 8000, // chat2.mp4 播放10秒
+            3: 6000  // chat3.mp4 播放12秒
         };
 
         const currentDuration = chatDurations[activeTab] || 6000;
@@ -548,8 +548,8 @@ export default function TestIndex() {
                                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                                             }`}
                                         onMouseEnter={() => {
-                                            setActiveTab(1);
                                             setIsHovering(true);
+                                            setActiveTab(1);
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
@@ -573,8 +573,8 @@ export default function TestIndex() {
                                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                                             }`}
                                         onMouseEnter={() => {
-                                            setActiveTab(2);
                                             setIsHovering(true);
+                                            setActiveTab(2);
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
@@ -599,8 +599,8 @@ export default function TestIndex() {
                                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                                             }`}
                                         onMouseEnter={() => {
-                                            setActiveTab(3);
                                             setIsHovering(true);
+                                            setActiveTab(3);
                                         }}
                                         onMouseLeave={() => setIsHovering(false)}
                                     >
@@ -906,8 +906,8 @@ export default function TestIndex() {
                 <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <SlideUp>
-                            <div className="text-left mb-[80px] text-[#333333]">
-                                <h2 className="text-4xl font-bold text-gray-900 mb-4">Providing secure and efficient solutions for <br /> different use cases</h2>
+                            <div className="text-left mb-[80px]">
+                                <h2 className="text-4xl font-bold text-[#333333] mb-4">Providing secure and efficient solutions for <br /> different use cases</h2>
                             </div>
                         </SlideUp>
 
@@ -1270,7 +1270,7 @@ export default function TestIndex() {
                 <section className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-left mb-10">
-                            <h2 className="text-4xl font-bold text-gray-900 mb-[80px] text-[#333333]">Explore Canopy Wave</h2>
+                            <h2 className="text-4xl font-bold mb-[80px] text-[#333333]">Explore Canopy Wave</h2>
                         </div>
 
                         {/* First Row - 2/3 and 1/3 layout */}
@@ -1280,7 +1280,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Events</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2 text-[#333333]">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
+                                <h3 className="text-xl font-bold mb-2 text-[#666666]">The Rise of Enterprise AI: Trends in Inferencing and GPU Resource Planning</h3>
                                 <p className="text-sm text-gray-600 mb-12">AI Agent Summit Keynote by James Liao @Canopy Wave</p>
                                 <button
                                     onClick={() => window.location.href = '/events/ai-agent-summit-keynote'}
@@ -1298,7 +1298,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Blog</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">Joint Blog - Accelerate Enterprise AI</h3>
+                                <h3 className="text-lg font-bold mb-2 text-[#666666]">Joint Blog - Accelerate Enterprise AI</h3>
                                 <p className="text-sm text-gray-600 mb-12">by James Liao, CTO of Canopy Wave, and Severi Tikkas, CTO of ConfidentialMind</p>
                                 <button
                                     onClick={() => window.location.href = '/blog/joint-blog-accelerate-enterprise-ai'}
@@ -1319,7 +1319,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Case Studies</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
+                                <h3 className="text-lg font-bold mb-2 text-[#666666]">Accelerating Protein Engineering with Canopy Wave's GPUaaS</h3>
                                 <p className="text-sm text-gray-600 mb-12">Foundry BioSciences Case Study</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/case-study'}
@@ -1337,7 +1337,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Tutorials</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
+                                <h3 className="text-lg font-bold mb-2 text-[#666666]">How to Run the GPT-OSS Locally on a Canopy Wave VM</h3>
                                 <p className="text-sm text-gray-600 mb-12">Step-by-step guide for local deployment</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/tutorials/how-to-run-the-gpt-oss-locally-on-a-canopy-wave-vm'}
@@ -1355,7 +1355,7 @@ export default function TestIndex() {
                                 <div className="mb-4">
                                     <span className="inline-block font-bold bg-[#C6E893] text-[#333333] text-xs px-2 py-1 rounded-full">Docs</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 text-[#333333]">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
+                                <h3 className="text-lg font-bold mb-2 text-[#666666]">Canopy Wave GPU Cluster Hardware Product Portfolio</h3>
                                 <p className="text-sm text-gray-600 mb-12">This portfolio outlines modular hardware components and recommended configurations</p>
                                 <button
                                     onClick={() => window.location.href = '/resources/docs/products/canopy-wave-gpu'}
