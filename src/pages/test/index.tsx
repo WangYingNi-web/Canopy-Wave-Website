@@ -370,7 +370,7 @@ export default function TestIndex() {
                                             <div className="max-w-3xl">
                                                 <div className="mb-4 sm:mb-6 lg:mb-8">
                                                     <Image
-                                                        src="/test/banner_img_biaoti02.png"
+                                                        src="/test/banner_dabiaoti02.png"
                                                         alt="Canopy Wave Chat"
                                                         width={600}
                                                         height={200}
