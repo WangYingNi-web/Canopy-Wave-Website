@@ -297,46 +297,31 @@ export default function TestIndex() {
                                 {slide.id !== 1 && (
                                     <div className="absolute inset-0 bg-black z-0" />
                                 )}
-                                {slide.id === 4 ? (
-                                    <div className="absolute inset-0 flex items-center justify-center h-[74vh]">
-                                        <Image
-                                            src={slide.background}
-                                            alt={`Banner ${slide.id}`}
-                                            width={860}
-                                            height={560}
-                                            className="object-cover"
-                                            style={{
-                                                width: 'auto'
-                                            }}
-                                            priority={index === currentSlide}
-                                            loading={index === currentSlide ? 'eager' : 'lazy'}
-                                        />
-                                    </div>
+
+                                {slide.id === 1 ? (
+                                    <video
+                                        src={slide.background}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                    />
                                 ) : (
-                                    slide.id === 1 ? (
-                                        <video
-                                            src={slide.background}
-                                            autoPlay
-                                            muted
-                                            loop
-                                            playsInline
-                                            className="absolute inset-0 w-full h-full object-cover"
-                                        />
-                                    ) : (
-                                        <Image
-                                            src={slide.background}
-                                            alt={`Banner ${slide.id}`}
-                                            fill
-                                            className="object-cover"
-                                            style={slide.id === 3 ? {
-                                                transform: 'scale(1.1) translateX(5%)',
-                                                transformOrigin: 'center center'
-                                            } : {}}
-                                            priority={index === currentSlide}
-                                            loading={index === currentSlide ? 'eager' : 'lazy'}
-                                        />
-                                    )
-                                )}
+                                    <Image
+                                        src={slide.background}
+                                        alt={`Banner ${slide.id}`}
+                                        fill
+                                        className="object-cover"
+                                        style={slide.id === 3 ? {
+                                            transform: 'scale(1.1) translateX(5%)',
+                                            transformOrigin: 'center center'
+                                        } : {}}
+                                        priority={index === currentSlide}
+                                        loading={index === currentSlide ? 'eager' : 'lazy'}
+                                    />
+                                )
+                                }
 
                                 {/* 第一张图片的标题和按钮 */}
                                 {slide.id === 1 && (
