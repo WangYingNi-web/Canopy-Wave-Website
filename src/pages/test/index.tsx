@@ -267,7 +267,7 @@ export default function TestIndex() {
     }, [enterTimer, autoPlayTimer, productAutoPlayTimer, mapAutoPlayTimer]);
 
     return (
-        <main>
+        <main className="overflow-x-hidden">
             <Head>
                 <title>Leading GPU Cloud Provider AI Infrastructure Company for Enterprise AI Solutions & Machine Learning | Canopy Wave</title>
                 <meta name="description" content="As a trusted GPU Cloud Provider and AI infrastructure company.we offer high-performance cost-effective solutions tailored to your machine learning, data science, and AI needs." />
@@ -282,7 +282,7 @@ export default function TestIndex() {
 
             <Header />
 
-            <div className="w-full bg-white">
+            <div className="w-full bg-white overflow-x-hidden">
                 {/* 轮播图Banner */}
                 <div className="w-full h-[71vh] relative mt-[84px] overflow-hidden will-change-transform">
                     {slides.map((slide, index) => {
@@ -334,7 +334,7 @@ export default function TestIndex() {
                                                         alt="The Platform that Enables AI"
                                                         width={600}
                                                         height={200}
-                                                        className="object-contain w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px]"
+                                                        className="object-contain w-full h-auto max-w-[400px] lg:max-w-[600px]"
                                                         priority
                                                     />
                                                 </div>
@@ -357,15 +357,15 @@ export default function TestIndex() {
                                                     <Image
                                                         src="/test/banner_dabiaoti02.png"
                                                         alt="Canopy Wave Chat"
-                                                        width={600}
+                                                        width={620}
                                                         height={200}
-                                                        className="w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] object-contain"
+                                                        className="w-full h-auto max-w-[350px] sm:max-w-[400px] lg:max-w-[620px] object-contain"
                                                         priority
                                                     />
                                                 </div>
                                                 <div className="flex gap-2 sm:gap-4">
                                                     <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
-                                                        Free to use
+                                                        Free To Use
                                                     </button>
                                                 </div>
                                             </div>
@@ -377,18 +377,18 @@ export default function TestIndex() {
                                 {slide.id === 3 && (
                                     <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
                                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                                            <div className="max-w-3xl">
+                                            <div className="max-w-4xl">
                                                 <div className="mb-4 sm:mb-6 lg:mb-8">
                                                     <Image
                                                         src="/test/banner_img_biaoti03.png"
                                                         alt="Accelerating AI Deployment API"
                                                         width={800}
                                                         height={200}
-                                                        className="w-full h-auto max-w-[400px] sm:max-w-[600px] lg:max-w-[760px] object-contain"
+                                                        className="w-full h-auto max-w-[350px] sm:max-w-[500px] lg:max-w-[800px] object-contain"
                                                         priority
                                                     />
                                                 </div>
-                                                <div className="flex gap-2 sm:gap-4">
+                                                <div className="flex gap-2 sm:gap-4 sm:pl-3">
                                                     <button
                                                         onClick={() => window.location.href = '/reserve-ai-service'}
                                                         className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300"
@@ -396,11 +396,7 @@ export default function TestIndex() {
                                                         Reserve Now
                                                     </button>
                                                 </div>
-                                                {/* <div className="absolute bottom-8 sm:bottom-32 lg:bottom-35 right-0 sm:right-[200px] lg:right-[250px]">
-                                                    <p className="text-white text-sm sm:text-base lg:text-lg text-right leading-relaxed">
-                                                        Reserve access to keys and <br /> personalization schemes
-                                                    </p>
-                                                </div> */}
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -417,21 +413,15 @@ export default function TestIndex() {
                                                         alt="On-Demand NVIDIA HGX B200"
                                                         width={600}
                                                         height={200}
-                                                        className="w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] object-contain"
+                                                        className="w-full h-auto max-w-[400px] lg:max-w-[600px] object-contain"
                                                         priority
                                                     />
                                                 </div>
-                                                <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6 lg:mb-8">
-                                                    <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="text-[#80B224] border-2 border-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300">
+                                                <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6 lg:mb-8 sm:pl-3">
+                                                    <button onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')} className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300">
                                                         Launch Now
                                                     </button>
                                                 </div>
-                                                {/* <div className="absolute sm:bottom-16 lg:bottom-28 right-4 sm:right-[200px] lg:right-[300px]">
-                                                    <p className="text-white text-sm sm:text-base lg:text-lg text-right leading-relaxed">
-                                                        Aiming to Next-Generation AI and<br />
-                                                        Computing Technologies
-                                                    </p>
-                                                </div> */}
                                             </div>
                                         </div>
                                     </div>
@@ -448,13 +438,17 @@ export default function TestIndex() {
                             handleManualSlideChange(prevIndex);
                         }}
                         disabled={isTransitioning}
-                        className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full flex items-center justify-center transition-all duration-300 ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+                        className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-30 transition-all duration-300 ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:opacity-80'
                             }`}
                         aria-label="Previous slide"
                     >
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
+                        <Image
+                            src="/test/left.png"
+                            alt="Previous"
+                            width={48}
+                            height={48}
+                            className="w-12 h-12 md:w-16 md:h-16"
+                        />
                     </button>
 
                     {/* 右侧切换按钮 */}
@@ -464,13 +458,17 @@ export default function TestIndex() {
                             handleManualSlideChange(nextIndex);
                         }}
                         disabled={isTransitioning}
-                        className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full flex items-center justify-center transition-all duration-300 ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+                        className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-30 transition-all duration-300 ${isTransitioning ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:opacity-80'
                             }`}
                         aria-label="Next slide"
                     >
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+                        <Image
+                            src="/test/right.png"
+                            alt="Next"
+                            width={48}
+                            height={48}
+                            className="w-12 h-12 md:w-16 md:h-16"
+                        />
                     </button>
 
                     {/* 轮播指示器 */}
@@ -505,7 +503,7 @@ export default function TestIndex() {
                         </h2>
                         <div className="flex flex-col lg:flex-row gap-12 min-h-[480px]">
                             {/* 左侧动图区域 - 2/3宽度 */}
-                            <div className="lg:w-2/3 min-h-[500px] overflow-hidden">
+                            <div className="lg:w-2/3 sm:min-h-[500px] overflow-hidden">
                                 <div className="bg-white rounded-lg shadow-lg p-2">
                                     <div className="space-y-4">
                                         <div className="mb-4">
@@ -603,10 +601,10 @@ export default function TestIndex() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Free to use 按钮 - 绝对定位固定在右侧区域底部 */}
+                                {/* Free To Use 按钮 - 绝对定位固定在右侧区域底部 */}
                                 <div className="">
                                     <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
-                                        Free to use
+                                        Free To Use
                                     </button>
                                 </div>
                             </div>
@@ -703,7 +701,7 @@ export default function TestIndex() {
                                 <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                                     <Image src="/test/ai-resource-3.svg" alt="Secure" width={48} height={48} />
                                 </div>
-                                <h3 className="text-lg font-bold mb-4 text-[#333333]">Canopy Wave private cloud</h3>
+                                <h3 className="text-lg font-bold mb-4 text-[#333333]">Canopy Wave Private Cloud</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Best GPU cluster performance in the industry. With 99.99% up-time. Have all your GPUs under the same datacenter, your workload and privacy are protected.
                                 </p>
@@ -1252,7 +1250,7 @@ export default function TestIndex() {
                 </div>
 
                 {/* Explore Canopy Wave Section */}
-                <section className="py-16">
+                <section className="sm:py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-left mb-10">
                             <h2 className="text-4xl font-bold mb-[80px] text-[#333333]">Explore Canopy Wave</h2>
@@ -1357,7 +1355,7 @@ export default function TestIndex() {
                 </section>
 
                 {/* CTA Section */}
-                <div className="py-36 mt-16 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'contain', backgroundRepeat: 'no-repeat' }}>
+                <div className="py-36 sm:mt-16 relative overflow-hidden" style={{ backgroundImage: 'url(/test/accelerate.png)', backgroundSize: 'cover', backgroundPosition: 'contain', backgroundRepeat: 'no-repeat' }}>
                     <div className="absolute inset-0"></div>
                     <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                         <h2 className="text-4xl font-bold text-[#333333] mb-10">

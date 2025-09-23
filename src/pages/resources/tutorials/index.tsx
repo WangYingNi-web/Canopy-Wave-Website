@@ -40,15 +40,15 @@ const Tutorials: React.FC = () => {
 
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
-    // {
-    //   id: 'ai-integration',
-    //   category: 'AI Models',
-    //   title: 'Redefine Your Workflow with Canopy Wave Chat',
-    //   image: '/tutorials/ai-integration/ai-integration.webp',
-    //   date: 'September 22, 2025',
-    //   alt: 'ai office tool',
-    //   onClick: () => handleTutorialClick('Redefine Your Workflow with Canopy Wave Chat')
-    // },
+    {
+      id: 'ai-integration',
+      category: 'AI Models',
+      title: 'Redefine Your Workflow with Canopy Wave Chat',
+      image: '/tutorials/ai-integration/ai-integration.webp',
+      date: 'September 23, 2025',
+      alt: 'ai office tool',
+      onClick: () => handleTutorialClick('Redefine Your Workflow with Canopy Wave Chat')
+    },
     {
       id: 'comparing-ai-agent-frameworks',
       category: 'AI Models',
