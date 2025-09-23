@@ -365,7 +365,7 @@ export default function TestIndex() {
                                                 </div>
                                                 <div className="flex gap-2 sm:gap-4">
                                                     <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full text-sm sm:text-base transition-all duration-300" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
-                                                        Free To Use
+                                                        Free to Use
                                                     </button>
                                                 </div>
                                             </div>
@@ -601,10 +601,10 @@ export default function TestIndex() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Free To Use 按钮 - 绝对定位固定在右侧区域底部 */}
+                                {/* Free to Use 按钮 - 绝对定位固定在右侧区域底部 */}
                                 <div className="">
                                     <button className="bg-[#76B900] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#6BA000] transition-colors duration-300 shadow-lg" onClick={() => window.open('https://chat.canopywave.io/c/new', '_blank')}>
-                                        Free To Use
+                                        Free to Use
                                     </button>
                                 </div>
                             </div>
