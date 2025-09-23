@@ -37,15 +37,14 @@ module.exports = {
 			screens: {
 				'max-1207': { 'max': '1207px' },
 				'custom': '975px',
-				'custom-500': '500px'
+				'custom-500': '500px',
+				'custom-1130': { 'min': '1333px' }
 			},
 			maxWidth: {
 				'7xl': '1320px',
 			},
-			extend: {
-				textShadow: {
-					'lg': '2px 2px 4px rgba(0, 0, 0, 0.25)',
-				},
+			textShadow: {
+				'lg': '2px 2px 4px rgba(0, 0, 0, 0.25)',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
