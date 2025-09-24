@@ -2387,7 +2387,7 @@ export default function BlogDetail() {
               title: '2. Analyzing Corporate Procurement Needs',
               content: [
                 'Understanding internal requirements is the first step to mitigating cost shocks. Companies should assess which workloads are time-critical, review available inventory, and coordinate across departments to prioritize purchases. Careful planning avoids redundant buys and ensures budget alignment while still meeting operational needs. Key considerations include:',
-                [React.createElement('strong', { key: 'planning' }, '• Capacity Planning:'), 'Identify which workloads—AI training, inference, or HPC—must expand before year-end and which can be delayed.'],
+                [React.createElement('strong', { key: 'planning' }, '• Capacity Planning:'), ' Identify which workloads—AI training, inference, or HPC—must expand before year-end and which can be delayed.'],
                 [React.createElement('strong', { key: 'budget' }, '• Performance vs. Budget:'), ' Assess whether older GPU generations or alternative configurations can meet short-term goals.'],
                 [React.createElement('strong', { key: 'audit' }, '• Inventory Audit:'), ' Take stock of existing spare drives, memory, and CPUs to avoid redundant purchases.'],
                 [React.createElement('strong', { key: 'alignment' }, '• Cross-Department Alignment:'), ' Finance, engineering, and operations should collaborate to prioritize critical purchases.'],
