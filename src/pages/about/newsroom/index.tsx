@@ -19,6 +19,7 @@ interface BlogPost {
     description: string;
     date: string;
     image: string;
+    alttitle?: string;
 }
 interface NewsroomPost {
     id: number;
@@ -27,6 +28,7 @@ interface NewsroomPost {
     date: string;
     image?: string;
     link?: string;
+    alttitle?: string;
 }
 interface TutorialPost {
     id: number;
@@ -34,6 +36,7 @@ interface TutorialPost {
     description: string;
     date: string;
     image: string;
+    alttitle?: string;
 }
 
 export default function Newsroom() {
@@ -55,6 +58,14 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        {
+            id: 18,
+            title: "How Can Pay-Per-Token Inference Services Reduce AI Costs",
+            description: "In an era where AI is reshaping all businesses, your team is facing these challenges:  Over-provisioning and Severe Resource；Waste",
+            date: "September 19, 2025",
+            image: "/blog/token-inference-service.webp",
+            alttitle: "Token Inference Service"
+        },
         {
             id: 17,
             title: "GPU Virtualization: Unlocking the Intelligent Future of Compute Sharing",
@@ -255,7 +266,7 @@ export default function Newsroom() {
                                 <div className="relative aspect-[16/9] w-full overflow-hidden">
                                     <Image
                                         src={post.image}
-                                        alt={post.title}
+                                        alt={post.alttitle || post.title}
                                         fill
                                         className="object-cover transition-all duration-300 group-hover:scale-105"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -307,7 +318,7 @@ export default function Newsroom() {
                             <div className="relative h-60 mb-4 overflow-hidden rounded-lg">
                                 <Image
                                     src={post.image || "/confidentialmind-logo.png"}
-                                    alt={post.title}
+                                    alt={post.alttitle || post.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />

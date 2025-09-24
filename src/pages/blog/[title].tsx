@@ -111,13 +111,13 @@ export default function BlogDetail() {
               title: 'Why This Partnership Matters',
               content: [
                 'This collaboration brings together:',
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
-                "• Canopy Wave's private, high-performance ",
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
+                  "• Canopy Wave's private, high-performance ",
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'GPU infrastructure',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'GPU infrastructure'),]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'GPU infrastructure',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'GPU infrastructure'),]),
                 "• ConfidentialMind's expertise in AI systems deployment",
                 'The result? A turnkey enterprise AI solution, without the traditional friction.',
                 "If your team is looking to move fast, stay secure, and scale intelligently, this is the shortcut you've been waiting for.",
@@ -165,15 +165,15 @@ export default function BlogDetail() {
             {
               title: 'Why Choose Canopy Wave + GB200 NVL72?',
               content: [
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
-                'The ',
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
+                  'The ',
                   React.createElement('a', {
-                      href: 'https://www.canopywave.com/gb200-nvl72 ',
-                      key: 'NVIDIA GB200 NVL72',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'NVIDIA GB200 NVL72'),
-                ' is built for the next era of AI, supporting trillion-parameter models and massive data workloads with:',
-              ]),
+                    href: 'https://www.canopywave.com/gb200-nvl72 ',
+                    key: 'NVIDIA GB200 NVL72',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'NVIDIA GB200 NVL72'),
+                  ' is built for the next era of AI, supporting trillion-parameter models and massive data workloads with:',
+                ]),
                 '• 30x faster LLM inference and 4x faster LLM training compared to the previous generation (HGX H100)',
                 '• 25x higher energy efficiency thanks to advanced FP4 quantization and the latest Transformer engine',
                 '• Unmatched memory and bandwidth: 13.4TB HBM3e GPU memory, 17TB CPU memory, and 130TB/s NVLink bandwidth',
@@ -380,14 +380,14 @@ export default function BlogDetail() {
                 '\u00A0\u00A0 Stable, low-latency inference for real-time applications',
                 '',
                 '• Predictable Costs at Scale',
-                
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
                   '\u00A0\u00A0 Fixed-rate billing with reserved ',
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'GPU resources',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'GPU resources'),]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'GPU resources',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'GPU resources'),]),
                 '\u00A0\u00A0 Unlimited token generation, highly cost-efficient for sustained workloads',
                 '',
                 '• Enterprise-Grade Security',
@@ -687,15 +687,15 @@ export default function BlogDetail() {
                 '(2) GPT-J (6 billion parameters) can run inference on a single 16GB NVIDIA A100; training requires 24GB or more of video memory (such as H100 32GB), or splitting it across multiple 16GB GPUs through Model Parallelism.',
                 '',
                 '(3) LLaMA 70B inference requires approximately 140GB of video memory at FP16 precision (requiring two A100 GPUs with 80GB each). If 4-bit quantization is used, a single A100 GPU with 80GB each can support it, significantly lowering the hardware barrier.',
-                
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
-                  'Real-world example: In open-source research, Meta uses a cluster of hundreds of GPUs to train LLaMA. A single team can rent ', 
+
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
+                  'Real-world example: In open-source research, Meta uses a cluster of hundreds of GPUs to train LLaMA. A single team can rent ',
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'cloud GPUs',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'cloud GPUs'),
-                ' (such as AWS) to complete fine-tuning in a few days.',]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'cloud GPUs',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'cloud GPUs'),
+                  ' (such as AWS) to complete fine-tuning in a few days.',]),
                 <img key="ai-image" src="/blog/ai-LLaMA.png" alt="AI LLaMA" className="w-full h-auto my-8 rounded-lg" />,
                 React.createElement('strong', { key: 'multimodal-title' }, '2.4 Multimodal model scenario'),
                 'Multimodal models integrate CV and NLP to process multiple types of data (such as images + text). They are the most complex and often require large-scale clusters.',
@@ -720,14 +720,14 @@ export default function BlogDetail() {
                 'Limited budgets—purchasing large-scale hardware all at once isn\'t feasible, requiring a flexible pay-as-you-go model;',
                 'The rapid pace of development—from prototype verification to MVP (minimum viable product), each iteration requires rapid scaling of computing resources;',
                 'Technical complexity—Developers prefer to focus on algorithm iteration and product development, responding promptly to market needs, rather than getting bogged down in the complexities of environment configuration and hardware tuning.',
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
                   'Canopy Wave\'s ',
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'cloud-based GPU',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'cloud-based GPU'),
-                ' solution precisely addresses these pain points: high-performance instances, fast deployment, strong scalability, and user-friendly design.',]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'cloud-based GPU',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'cloud-based GPU'),
+                  ' solution precisely addresses these pain points: high-performance instances, fast deployment, strong scalability, and user-friendly design.',]),
                 React.createElement('strong', { key: 'gpu-comparison-title' }, '3.2 Quick Comparison of NVIDIA GPU Products'),
                 React.createElement('table', {
                   key: 'gpu-comparison-table',
@@ -821,14 +821,14 @@ export default function BlogDetail() {
             {
               title: '',
               content: [
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
                   'Canopy Wave provides high-performance ',
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'GPU computing',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'GPU computing'),
-                ' power, giving you access to low-latency, high-speed AI. AI is reshaping the e-commerce landscape on an unprecedented scale. From precisely targeting users to optimizing backend operations, its capabilities have become the core engine of industry growth. With high-performance computing, e-commerce enterprises can deploy more complex, real-time AI solutions, to boost operational efficiency and fundamentally upgrade the user experience. Here, we explore the core applications and value of AI technology in key areas of e-commerce.',]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'GPU computing',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'GPU computing'),
+                  ' power, giving you access to low-latency, high-speed AI. AI is reshaping the e-commerce landscape on an unprecedented scale. From precisely targeting users to optimizing backend operations, its capabilities have become the core engine of industry growth. With high-performance computing, e-commerce enterprises can deploy more complex, real-time AI solutions, to boost operational efficiency and fundamentally upgrade the user experience. Here, we explore the core applications and value of AI technology in key areas of e-commerce.',]),
               ]
             },
             {
@@ -1035,14 +1035,14 @@ export default function BlogDetail() {
             {
               title: '2. Cost Structure Overview',
               content: [
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
                   'The TCO for a ',
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'GPU cluster',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'GPU cluster'),
-                ' extends beyond hardware acquisition. It typically includes:',]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'GPU cluster',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'GPU cluster'),
+                  ' extends beyond hardware acquisition. It typically includes:',]),
                 React.createElement('span', { key: 'cost-1' }, ['• ', React.createElement('strong', { key: 'cost-1-bold' }, 'Hardware costs')], ['(servers, GPUs, networking equipment)']),
                 React.createElement('span', { key: 'cost-2' }, ['• ', React.createElement('strong', { key: 'cost-2-bold' }, 'Infrastructure costs ')], ['(racks, power, cooling)']),
                 React.createElement('span', { key: 'cost-3' }, ['• ', React.createElement('strong', { key: 'cost-3-bold' }, 'Software and licensing costs ')], ['(OS, cluster management, monitoring)']),
@@ -1804,15 +1804,15 @@ export default function BlogDetail() {
             {
               title: 'Why This Matters for Cloud and AI Services',
               content: [
-                React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
-                  'For companies offering or consuming ', 
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
+                  'For companies offering or consuming ',
                   React.createElement('a', {
-                      href: 'https://canopywave.com/compute-services',
-                      key: 'cloud-based AI',
-                      style: { display: 'inline', textDecoration: 'underline' }
-                }, 'cloud-based AI'),
-                ' solutions, reliability is everything. By',
-                'addressing the root cause of hallucinations, it is possible to:',]),
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'cloud-based AI',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'cloud-based AI'),
+                  ' solutions, reliability is everything. By',
+                  'addressing the root cause of hallucinations, it is possible to:',]),
                 [React.createElement('strong', { key: 'Enhance Business Trust' }, 'Enhance Business Trust:'), ' More dependable AI fosters confidence among clients and stakeholders.'],
                 [React.createElement('strong', { key: 'Mitigate Risks' }, 'Mitigate Risks:'), ' Minimizing fabricated outputs lowers compliance and reputational risks.'],
                 [React.createElement('strong', { key: 'Improve Operational Efficiency' }, 'Improve Operational Efficiency:'), ' Teams can make decisions faster when AI tools provide trustworthy support.'],
@@ -1829,381 +1829,534 @@ export default function BlogDetail() {
           ]
         }
 
-      
+      case 'ai-medical-imaging-analysis':
+        return {
+          id: 15,
+          title: 'AI: The Doctor\'s Third Eye in Medical Imaging',
+          description: 'Beyond the Limits of the Human Eye: How AI Medical Imaging Analysis Becomes the "Third Eye" for Doctors',
+          sections: [
+            {
+              title: '',
+              content: [
+                'In the daily work of radiologists, spending hours staring at imaging screens to detect subtle signs of lesions is the norm. The human eye fatigues, attention fluctuates, and early indicators of certain pathologies are often hidden to the point of being nearly undetectable. This represents one of the most successful applications of artificial intelligence (AI) in the medical field. AI medical imaging analysis does not aim to replace doctors but serves as a powerful "third eye," breaking through the physiological limitations of human perception to enhance their ability to safeguard patient health.',
+              ],
+            },
+            {
+              title: 'The Vision of the "Third Eye": What Can AI See That Doctors Struggle to Detect?',
+              content: [
+                React.createElement(
+                  'strong',
+                  { key: 'unwavering-focus' },
+                  'Unwavering Focus Without Fatigue:'
+                ),
+                'It can maintain stable "attention" 24/7, scanning entire images with pixel-level precision, without missing subtle lesions in peripheral areas due to repetitive tasks.',
+                React.createElement(
+                  'strong',
+                  { key: 'superior-quantification' },
+                  'Superior Quantification and Pattern Recognition:'
+                ),
+                'While human doctors rely on experience for qualitative judgment, AI utilizes deep learning architectures (such as convolutional neural networks) to achieve precise quantitative extraction and analysis of imaging features, identifying complex, abstract patterns beyond human perception. For example, it can not only measure nodule size but also perform texture analysis, density distribution, and edge feature modeling to more accurately determine benignancy or malignancy. By traversing images pixel by pixel through multiple convolutional kernels, it can simultaneously process grayscale values, texture features, and spatial relationships of thousands of pixels, with the scanning process unaffected by time or fatigue, maintaining 100% stable accuracy.',
+                React.createElement(
+                  'strong',
+                  { key: 'instant-integration' },
+                  'Instant Integration of Vast Experience:'
+                ),
+                'A top-tier AI diagnostic model is trained on datasets containing hundreds of thousands, or even millions, of expert-annotated imaging cases. This means that when assisting in diagnosis, it instantly integrates the vast diagnostic experience of top hospitals worldwide.',
+                <img key="ai-Scenarios" src="/blog/ai-Scenarios.webp" alt="ai medical imaging analysis" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              ],
+            },
+            {
+              title: 'Core Application Scenarios: Where Is the "Third Eye" Shining?',
+              content: [
+                React.createElement(
+                  'strong',
+                  { key: 'pulmonary-nodule' },
+                  'Pulmonary Nodule and Lung Cancer Screening:'
+                ),
+                'With its pixel-level scanning and massive data learning capabilities, AI can rapidly locate minute nodules (even <3mm), automatically compare historical images, analyze their growth rate and morphological changes, and dramatically increase screening efficiency. Its accuracy in detecting nodules smaller than 3mm is a key technological advantage for early lung cancer detection, significantly reducing missed diagnoses caused by visual fatigue.',
+                React.createElement('strong', { key: 'brain-disease' }, 'Brain Disease Diagnosis:'),
+                "In brain MRI or CT scans, AI can accurately identify tiny hemorrhages, early-stage tumors, ischemic foci, and morphological changes such as hippocampal atrophy related to early Alzheimer's disease. In time-critical stroke emergencies, AI can quickly calculate quantitative hemorrhage volume, providing crucial data support for doctors to formulate surgical plans.",
+                React.createElement(
+                  'strong',
+                  { key: 'ophthalmic-disease' },
+                  'Ophthalmic Disease Screening:'
+                ),
+                'By analyzing fundus images, AI can efficiently screen for blinding eye diseases such as diabetic retinopathy, glaucoma, and macular degeneration. Its screening accuracy, validated by extensive data, has reached or even surpassed that of senior ophthalmologists, making large-scale, widespread screening feasible.',
+              ],
+            },
+            {
+              title: 'Human-Machine Collaboration: How to Achieve "1+1>2"?',
+              content: [
+                'The design philosophy of the most advanced medical AI is never "replacement" but "enhancement." The ideal workflow is:',
+                React.createElement('strong', { key: 'ai-preliminary' }, 'AI Preliminary Screening:'),
+                'The AI system rapidly processes images, completes initial screening, marks suspicious areas, and generates structured reports (e.g., Lung-RADS, BI-RADS classifications).',
+                React.createElement('strong', { key: 'doctor-review' }, 'Doctor Review:'),
+                'Doctors can then focus their valuable time and expertise on the challenging areas and critical cases flagged by AI, leveraging their clinical experience for the final diagnosis.',
+                React.createElement('strong', { key: 'mutual-verification' }, 'Mutual Verification:'),
+                "Doctors' diagnostic results, in turn, serve as feedback data to continuously optimize the AI model, creating a positive feedback loop.",
+                'This model liberates doctors from highly repetitive initial screening tasks, allowing them to concentrate on higher-value decision-making, communication, and complex case management, ultimately achieving dual improvements in diagnostic efficiency and accuracy.',
+              ],
+            },
+            {
+              title: 'Challenges and Future Prospects',
+              content: [
+                React.createElement('strong', { key: 'data-quality' }, 'Data Quality and Privacy:'),
+                'High-quality, well-annotated data is the foundation for training AI, but the privacy and security of medical data must be strictly upheld.',
+                React.createElement(
+                  'strong',
+                  { key: 'algorithm-interpretability' },
+                  <img key="ai-interpretability" src="/blog/ai-Interpretability.webp" alt="ai medical imaging analysis" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                  'Algorithm Interpretability and Regulation:'
+                ),
+                'Doctors need to understand the "basis" of AI\'s judgments, not just accept a black-box conclusion. As medical device software, AI diagnostic tools must undergo rigorous approval processes before clinical deployment.',
+                'In the future, AI will not only be an imaging analysis tool but also become the "decision-making core" of precision medicine—integrating imaging, pathology, genomics, electronic medical records, and other multidimensional information through multimodal data fusion algorithms, automatically generating personalized diagnostic recommendations, and providing doctors with end-to-end technical support from image recognition to treatment planning. This will drive the transformation of medical models from "experience-driven" to "data-driven and AI-enhanced," reshaping the decision-making processes and service boundaries of modern healthcare.',
+              ],
+            },
+            {
+              title: 'Conclusion',
+              content: [
+                'The "third eye" of AI medical imaging analysis is a paradigm of the integration of human wisdom and cutting-edge technology. It extends doctors\' perceptual abilities, amplifies the value of expert experience, and is redefining the boundaries of precision and efficiency in modern healthcare. Its ultimate mission is to become the most silent yet reliable partner behind doctors, working together for a healthier future characterized by earlier detection, more accurate diagnosis, and better treatment.',
+              ],
+            },
+          ],
+        }
 
-
-case 'ai-medical-imaging-analysis':
-  return {
-    id: 15,
-    title: 'AI: The Doctor\'s Third Eye in Medical Imaging',
-    description: 'Beyond the Limits of the Human Eye: How AI Medical Imaging Analysis Becomes the "Third Eye" for Doctors',
-    sections: [
-      {
-        title: '',
-        content: [
-          'In the daily work of radiologists, spending hours staring at imaging screens to detect subtle signs of lesions is the norm. The human eye fatigues, attention fluctuates, and early indicators of certain pathologies are often hidden to the point of being nearly undetectable. This represents one of the most successful applications of artificial intelligence (AI) in the medical field. AI medical imaging analysis does not aim to replace doctors but serves as a powerful "third eye," breaking through the physiological limitations of human perception to enhance their ability to safeguard patient health.',
-        ],
-      },
-      {
-        title: 'The Vision of the "Third Eye": What Can AI See That Doctors Struggle to Detect?',
-        content: [
-          React.createElement(
-            'strong',
-            { key: 'unwavering-focus' },
-            'Unwavering Focus Without Fatigue:'
-          ),
-          'It can maintain stable "attention" 24/7, scanning entire images with pixel-level precision, without missing subtle lesions in peripheral areas due to repetitive tasks.',
-          React.createElement(
-            'strong',
-            { key: 'superior-quantification' },
-            'Superior Quantification and Pattern Recognition:'
-          ),
-          'While human doctors rely on experience for qualitative judgment, AI utilizes deep learning architectures (such as convolutional neural networks) to achieve precise quantitative extraction and analysis of imaging features, identifying complex, abstract patterns beyond human perception. For example, it can not only measure nodule size but also perform texture analysis, density distribution, and edge feature modeling to more accurately determine benignancy or malignancy. By traversing images pixel by pixel through multiple convolutional kernels, it can simultaneously process grayscale values, texture features, and spatial relationships of thousands of pixels, with the scanning process unaffected by time or fatigue, maintaining 100% stable accuracy.',
-          React.createElement(
-            'strong',
-            { key: 'instant-integration' },
-            'Instant Integration of Vast Experience:'
-          ),
-          'A top-tier AI diagnostic model is trained on datasets containing hundreds of thousands, or even millions, of expert-annotated imaging cases. This means that when assisting in diagnosis, it instantly integrates the vast diagnostic experience of top hospitals worldwide.',
-          <img key="ai-Scenarios" src="/blog/ai-Scenarios.webp" alt="ai medical imaging analysis" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
-        ],
-      },
-      {
-        title: 'Core Application Scenarios: Where Is the "Third Eye" Shining?',
-        content: [
-          React.createElement(
-            'strong',
-            { key: 'pulmonary-nodule' },
-            'Pulmonary Nodule and Lung Cancer Screening:'
-          ),
-          'With its pixel-level scanning and massive data learning capabilities, AI can rapidly locate minute nodules (even <3mm), automatically compare historical images, analyze their growth rate and morphological changes, and dramatically increase screening efficiency. Its accuracy in detecting nodules smaller than 3mm is a key technological advantage for early lung cancer detection, significantly reducing missed diagnoses caused by visual fatigue.',
-          React.createElement('strong', { key: 'brain-disease' }, 'Brain Disease Diagnosis:'),
-          "In brain MRI or CT scans, AI can accurately identify tiny hemorrhages, early-stage tumors, ischemic foci, and morphological changes such as hippocampal atrophy related to early Alzheimer's disease. In time-critical stroke emergencies, AI can quickly calculate quantitative hemorrhage volume, providing crucial data support for doctors to formulate surgical plans.",
-          React.createElement(
-            'strong',
-            { key: 'ophthalmic-disease' },
-            'Ophthalmic Disease Screening:'
-          ),
-          'By analyzing fundus images, AI can efficiently screen for blinding eye diseases such as diabetic retinopathy, glaucoma, and macular degeneration. Its screening accuracy, validated by extensive data, has reached or even surpassed that of senior ophthalmologists, making large-scale, widespread screening feasible.',
-        ],
-      },
-      {
-        title: 'Human-Machine Collaboration: How to Achieve "1+1>2"?',
-        content: [
-          'The design philosophy of the most advanced medical AI is never "replacement" but "enhancement." The ideal workflow is:',
-          React.createElement('strong', { key: 'ai-preliminary' }, 'AI Preliminary Screening:'),
-          'The AI system rapidly processes images, completes initial screening, marks suspicious areas, and generates structured reports (e.g., Lung-RADS, BI-RADS classifications).',
-          React.createElement('strong', { key: 'doctor-review' }, 'Doctor Review:'),
-          'Doctors can then focus their valuable time and expertise on the challenging areas and critical cases flagged by AI, leveraging their clinical experience for the final diagnosis.',
-          React.createElement('strong', { key: 'mutual-verification' }, 'Mutual Verification:'),
-          "Doctors' diagnostic results, in turn, serve as feedback data to continuously optimize the AI model, creating a positive feedback loop.",
-          'This model liberates doctors from highly repetitive initial screening tasks, allowing them to concentrate on higher-value decision-making, communication, and complex case management, ultimately achieving dual improvements in diagnostic efficiency and accuracy.',
-        ],
-      },
-      {
-        title: 'Challenges and Future Prospects',
-        content: [
-          React.createElement('strong', { key: 'data-quality' }, 'Data Quality and Privacy:'),
-          'High-quality, well-annotated data is the foundation for training AI, but the privacy and security of medical data must be strictly upheld.',
-          React.createElement(
-            'strong',
-            { key: 'algorithm-interpretability' },
-            <img key="ai-interpretability" src="/blog/ai-Interpretability.webp" alt="ai medical imaging analysis" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
-            'Algorithm Interpretability and Regulation:'
-          ),
-          'Doctors need to understand the "basis" of AI\'s judgments, not just accept a black-box conclusion. As medical device software, AI diagnostic tools must undergo rigorous approval processes before clinical deployment.',
-          'In the future, AI will not only be an imaging analysis tool but also become the "decision-making core" of precision medicine—integrating imaging, pathology, genomics, electronic medical records, and other multidimensional information through multimodal data fusion algorithms, automatically generating personalized diagnostic recommendations, and providing doctors with end-to-end technical support from image recognition to treatment planning. This will drive the transformation of medical models from "experience-driven" to "data-driven and AI-enhanced," reshaping the decision-making processes and service boundaries of modern healthcare.',
-        ],
-      },
-      {
-        title: 'Conclusion',
-        content: [
-          'The "third eye" of AI medical imaging analysis is a paradigm of the integration of human wisdom and cutting-edge technology. It extends doctors\' perceptual abilities, amplifies the value of expert experience, and is redefining the boundaries of precision and efficiency in modern healthcare. Its ultimate mission is to become the most silent yet reliable partner behind doctors, working together for a healthier future characterized by earlier detection, more accurate diagnosis, and better treatment.',
-        ],
-      },
-    ],
-  }
-
-case 'gpus-in-edge-computing':
-  return {
-    id: 16,
-    title: 'Gpus In Edge Computing',
-    description: 'The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges',
-    sections: [
-      {
-        title: '1. Background and Trend Overview',
-        content: [
-          'With the rapid development of edge computing scenarios (such as smart manufacturing, smart cities, retail, and AR/VR), the demand for real-time AI inference and image processing is increasing at edge nodes. This creates a pressing need for GPUs that are both lightweight and highly energy-efficient, as: edge devices are becoming increasingly compact, power-constrained, and often deployed in environments without dedicated cooling or power supplies.'
-        ]
-      },
-      {
-        title: '2. Lightweight Requirements: Design and Deployment Challenges',
-        content: [
-          React.createElement('strong', { key: 'modularity-integration' }, 'Modularity and Heterogeneous Integration:'),
-          'In the future, GPUs will likely exist as SoCs (System on a Chip), integrated with CPUs, NPUs, and storage controllers within the same chip package. This modular design allows manufacturers to customize GPU configurations for different industries (retail, manufacturing, and connected vehicles), such as optimized versions for video inference or sensor fusion. For example, Canopy Wave has emphasized modular GPU cluster design in its cloud–edge continuum solutions, enabling customers to select optimized configurations depending on workload intensity and industry-specific needs.',
-          React.createElement('strong', { key: 'power-constraints' }, 'Power Constraints in Edge Scenarios:'),
-              React.createElement('span', { key: 'text-with-link' ,style:{whitespace:'nowrap'}}, [
-              'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by ', 
+      case 'gpus-in-edge-computing':
+        return {
+          id: 16,
+          title: 'Gpus In Edge Computing',
+          description: 'The Future of GPUs in Edge Computing: Lightweight and Energy Consumption Challenges',
+          sections: [
+            {
+              title: '1. Background and Trend Overview',
+              content: [
+                'With the rapid development of edge computing scenarios (such as smart manufacturing, smart cities, retail, and AR/VR), the demand for real-time AI inference and image processing is increasing at edge nodes. This creates a pressing need for GPUs that are both lightweight and highly energy-efficient, as: edge devices are becoming increasingly compact, power-constrained, and often deployed in environments without dedicated cooling or power supplies.'
+              ]
+            },
+            {
+              title: '2. Lightweight Requirements: Design and Deployment Challenges',
+              content: [
+                React.createElement('strong', { key: 'modularity-integration' }, 'Modularity and Heterogeneous Integration:'),
+                'In the future, GPUs will likely exist as SoCs (System on a Chip), integrated with CPUs, NPUs, and storage controllers within the same chip package. This modular design allows manufacturers to customize GPU configurations for different industries (retail, manufacturing, and connected vehicles), such as optimized versions for video inference or sensor fusion. For example, Canopy Wave has emphasized modular GPU cluster design in its cloud–edge continuum solutions, enabling customers to select optimized configurations depending on workload intensity and industry-specific needs.',
+                React.createElement('strong', { key: 'power-constraints' }, 'Power Constraints in Edge Scenarios:'),
+                React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
+                  'Typical devices like urban roadside cameras and unmanned retail shelves typically have a single-node power consumption budget of 10–50W, significantly lower than the 300W+ required by ',
                   React.createElement('a', {
                     href: 'https://canopywave.com/compute-services ',
                     key: 'data center GPUs',
                     style: { display: 'inline', textDecoration: 'underline' }
-              }, 'data center GPUs'),
-          '. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',]),
-          
-          React.createElement('strong', { key: 'heat-dissipation' }, 'Heat Dissipation and Durability:'),
-          'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.',
-          <img key="ai-energy" src="/blog/ai-Energy-Consumption.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />
-        ]
-      },
-      {
-        title: '3. Energy Consumption Challenge: Sustainable and Stable Operation',
-        content: [
-          React.createElement('strong', { key: 'dynamic-energy' }, 'Dynamic Energy Management:'),
-          'Dynamic Voltage and Frequency Scaling (DVFS) technology adjusts GPU operating frequency and voltage in real time based on the task. For example, when a camera is unattended, the system automatically reduces frequency or goes into hibernation; when an event is triggered, computing power is instantly increased, saving 20–40% in long-term energy consumption. Canopy Wave has integrated similar dynamic energy optimization into its GPU cluster management platform, enabling customers to automatically balance workloads between low-power idle modes and high-performance bursts, thereby achieving higher performance-per-watt efficiency in both cloud and edge deployments.',
-          React.createElement('strong', { key: 'task-hierarchy' }, 'Task Hierarchy and Energy Scheduling:'),
-          'Through intelligent task scheduling, critical tasks are retained on the local GPU, while non-critical tasks are offloaded to the edge data center or the cloud. Such multi-layer scheduling can reduce the 24/7 high-load operation of a single-node GPU and extend its lifespan. Canopy Wave’s orchestration framework supports hierarchical task allocation across edge and cloud nodes, minimizing unnecessary GPU stress and optimizing energy scheduling based on real-time demand. This not only reduces energy consumption but also improves system stability in long-term deployments.',
-          React.createElement('strong', { key: 'green-power' }, 'Green Power and Computing Power Synergy:'),
-          'When power consumption is limited, edge nodes can integrate with the grid scheduling system to dynamically reduce power output. As demonstrated in the Emerald AI case study, the 25% power reduction in GPU clusters during peak hours can also be applied to edge GPUs, helping enterprises reduce energy costs and obtain green certifications. Similarly, Canopy Wave has explored adaptive workload throttling in its GPU clusters, which allows enterprises to align computing demand with renewable energy availability or peak–off-peak electricity pricing, reinforcing both sustainability goals and operational cost control.'
-        ]
-      },
-      
-      {
-        title: '4. Enterprise Practices and Performance Improvement Case Studies',
-        content: [
-          'It is well-established that GPUs are more power-efficient and performant than traditional CPUs in HPC and AI acceleration. For example, the NVIDIA A100 GPU achieves an average energy efficiency improvement of 5x, and weather forecasting applications achieve nearly 10x energy efficiency improvements. Enterprise practice also demonstrates that adopting a hybrid GPU-CPU architecture not only accelerates computing but also significantly reduces energy consumption. For example, Murex used the NVIDIA Grace Hopper Superchip to achieve a 4x reduction in energy consumption and a 7x reduction in completion time.',
-          'Also, dynamically scheduling AI tasks to respond to grid demand to adjust power consumption has demonstrated significant success in pilot projects. For example, Emerald AI\'s platform managed the power consumption of a 256-GPU cluster during peak grid hours, successfully reducing power consumption by 25% within three hours while maintaining quality of service.',
-          'In addition, Canopy Wave has showcased enterprise practices where its GPU cluster management platform enables fine-grained workload orchestration across edge and cloud environments. By dynamically allocating tasks based on real-time resource utilization and energy pricing, customers reported reductions of up to 30% in total energy costs while maintaining high computational throughput. These practices highlight how flexible GPU resource management not only enhances sustainability but also delivers measurable business performance improvements.'
-        ]
-      },
-      {
-        title: '5. Compute Exchange\'s Perspectives and Innovations on GPU Energy Consumption and Sustainability',
-        content: [
-          'Compute Exchange CEO Simeon Bochev stated in a blog post on the company\'s website: "Given the voracious energy consumption required for compute, we\'re also bringing sustainability into the equation. Buyers can see the environmental impact of their compute and choose carbon-efficient/carbon offset options."',
-          'Furthermore, the Compute Exchange auction platform estimates GPU energy consumption, data center power sources, and lease terms, providing buyers with clear carbon footprint information, allowing them to set maximum emission thresholds, and also includes built-in, cost-effective carbon offset options.',
-          'This provides important insights for the development of edge GPU products:',
-          '- Introducing visual energy consumption and carbon emission estimation metrics in product design and battery life evaluation.',
-          '- Displaying energy consumption comparisons and energy-saving advantages and disadvantages of each lightweight GPU in different usage scenarios (e.g., standby vs. continuous inference vs. off-peak scheduling).',
-          '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.',
-          <img key="ai-product-recommendations" src="/blog/ai-Product-Recommendations.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
-        ]
-      },
-      {
-        title: '6. Product Recommendations and Future Paths',
-        content: [
-          React.createElement('div', { key: 'recommendations-table-container', style: { margin: '20px 0', overflowX: 'auto' } },
-            React.createElement('table', {
-              key: 'recommendations-table',
-              style: {
-                width: '100%',
-                borderCollapse: 'collapse',
-                backgroundColor: '#f8f9fa',
-                border: '1px solid #dee2e6'
-              }
-            }, [
-              React.createElement('thead', { key: 'thead' },
-                React.createElement('tr', { key: 'header-row' }, [
-                  React.createElement('th', {
-                    key: 'header-direction',
+                  }, 'data center GPUs'),
+                  '. This requires lightweight GPUs to significantly optimize performance per watt (Perf/Watt), rather than focusing solely on peak computing power. Canopy Wave’s approach highlights performance-per-watt efficiency, as its GPU scheduling and resource orchestration tools are designed to minimize idle consumption and maximize throughput under strict power envelopes at the edge.',]),
+
+                React.createElement('strong', { key: 'heat-dissipation' }, 'Heat Dissipation and Durability:'),
+                'Edge devices are often deployed in environments with high temperatures, dust, and a lack of airflow (e.g., factory floors and traffic light poles). The heat dissipation solution needs to combine passive cooling materials (like graphene thermal pads or phase-change materials) with efficient power management mechanisms to ensure stable operation in an environment of 70℃+. In alignment with this, Canopy Wave has explored integrating intelligent thermal monitoring into its GPU infrastructure, allowing real-time adjustments in workload distribution to extend device durability in harsh operating environments.',
+                <img key="ai-energy" src="/blog/ai-Energy-Consumption.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: '3. Energy Consumption Challenge: Sustainable and Stable Operation',
+              content: [
+                React.createElement('strong', { key: 'dynamic-energy' }, 'Dynamic Energy Management:'),
+                'Dynamic Voltage and Frequency Scaling (DVFS) technology adjusts GPU operating frequency and voltage in real time based on the task. For example, when a camera is unattended, the system automatically reduces frequency or goes into hibernation; when an event is triggered, computing power is instantly increased, saving 20–40% in long-term energy consumption. Canopy Wave has integrated similar dynamic energy optimization into its GPU cluster management platform, enabling customers to automatically balance workloads between low-power idle modes and high-performance bursts, thereby achieving higher performance-per-watt efficiency in both cloud and edge deployments.',
+                React.createElement('strong', { key: 'task-hierarchy' }, 'Task Hierarchy and Energy Scheduling:'),
+                'Through intelligent task scheduling, critical tasks are retained on the local GPU, while non-critical tasks are offloaded to the edge data center or the cloud. Such multi-layer scheduling can reduce the 24/7 high-load operation of a single-node GPU and extend its lifespan. Canopy Wave’s orchestration framework supports hierarchical task allocation across edge and cloud nodes, minimizing unnecessary GPU stress and optimizing energy scheduling based on real-time demand. This not only reduces energy consumption but also improves system stability in long-term deployments.',
+                React.createElement('strong', { key: 'green-power' }, 'Green Power and Computing Power Synergy:'),
+                'When power consumption is limited, edge nodes can integrate with the grid scheduling system to dynamically reduce power output. As demonstrated in the Emerald AI case study, the 25% power reduction in GPU clusters during peak hours can also be applied to edge GPUs, helping enterprises reduce energy costs and obtain green certifications. Similarly, Canopy Wave has explored adaptive workload throttling in its GPU clusters, which allows enterprises to align computing demand with renewable energy availability or peak–off-peak electricity pricing, reinforcing both sustainability goals and operational cost control.'
+              ]
+            },
+
+            {
+              title: '4. Enterprise Practices and Performance Improvement Case Studies',
+              content: [
+                'It is well-established that GPUs are more power-efficient and performant than traditional CPUs in HPC and AI acceleration. For example, the NVIDIA A100 GPU achieves an average energy efficiency improvement of 5x, and weather forecasting applications achieve nearly 10x energy efficiency improvements. Enterprise practice also demonstrates that adopting a hybrid GPU-CPU architecture not only accelerates computing but also significantly reduces energy consumption. For example, Murex used the NVIDIA Grace Hopper Superchip to achieve a 4x reduction in energy consumption and a 7x reduction in completion time.',
+                'Also, dynamically scheduling AI tasks to respond to grid demand to adjust power consumption has demonstrated significant success in pilot projects. For example, Emerald AI\'s platform managed the power consumption of a 256-GPU cluster during peak grid hours, successfully reducing power consumption by 25% within three hours while maintaining quality of service.',
+                'In addition, Canopy Wave has showcased enterprise practices where its GPU cluster management platform enables fine-grained workload orchestration across edge and cloud environments. By dynamically allocating tasks based on real-time resource utilization and energy pricing, customers reported reductions of up to 30% in total energy costs while maintaining high computational throughput. These practices highlight how flexible GPU resource management not only enhances sustainability but also delivers measurable business performance improvements.'
+              ]
+            },
+            {
+              title: '5. Compute Exchange\'s Perspectives and Innovations on GPU Energy Consumption and Sustainability',
+              content: [
+                'Compute Exchange CEO Simeon Bochev stated in a blog post on the company\'s website: "Given the voracious energy consumption required for compute, we\'re also bringing sustainability into the equation. Buyers can see the environmental impact of their compute and choose carbon-efficient/carbon offset options."',
+                'Furthermore, the Compute Exchange auction platform estimates GPU energy consumption, data center power sources, and lease terms, providing buyers with clear carbon footprint information, allowing them to set maximum emission thresholds, and also includes built-in, cost-effective carbon offset options.',
+                'This provides important insights for the development of edge GPU products:',
+                '- Introducing visual energy consumption and carbon emission estimation metrics in product design and battery life evaluation.',
+                '- Displaying energy consumption comparisons and energy-saving advantages and disadvantages of each lightweight GPU in different usage scenarios (e.g., standby vs. continuous inference vs. off-peak scheduling).',
+                '- Introducing carbon offsets and green labels will help customers choose more environmentally friendly edge computing deployment solutions.',
+                <img key="ai-product-recommendations" src="/blog/ai-Product-Recommendations.webp" alt="edge computing gpu" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              ]
+            },
+            {
+              title: '6. Product Recommendations and Future Paths',
+              content: [
+                React.createElement('div', { key: 'recommendations-table-container', style: { margin: '20px 0', overflowX: 'auto' } },
+                  React.createElement('table', {
+                    key: 'recommendations-table',
                     style: {
-                      padding: '12px 15px',
-                      textAlign: 'left',
-                      fontWeight: 'bold',
+                      width: '100%',
+                      borderCollapse: 'collapse',
+                      backgroundColor: '#f8f9fa',
                       border: '1px solid #dee2e6'
                     }
-                  }, 'Direction'),
-                  React.createElement('th', {
-                    key: 'header-recommendations',
+                  }, [
+                    React.createElement('thead', { key: 'thead' },
+                      React.createElement('tr', { key: 'header-row' }, [
+                        React.createElement('th', {
+                          key: 'header-direction',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'left',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Direction'),
+                        React.createElement('th', {
+                          key: 'header-recommendations',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'left',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Recommendations')
+                      ])
+                    ),
+                    React.createElement('tbody', { key: 'tbody' }, [
+                      React.createElement('tr', { key: 'row-hardware' }, [
+                        React.createElement('td', {
+                          key: 'hardware-direction',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Lightweight Hardware Design'),
+                        React.createElement('td', {
+                          key: 'hardware-recommendations',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Utilize low-power hardware, support DVFS, power capping, and improve heat dissipation, making it suitable for micro-devices without air cooling.')
+                      ]),
+                      React.createElement('tr', { key: 'row-software' }, [
+                        React.createElement('td', {
+                          key: 'software-direction',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Intelligent Energy Management Software'),
+                        React.createElement('td', {
+                          key: 'software-recommendations',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'The scheduling system identifies task priorities, supports idle adjustment, task suspension, and migration, and is compatible with Emerald AI-style grid response logic.')
+                      ]),
+                      React.createElement('tr', { key: 'row-energy-efficiency' }, [
+                        React.createElement('td', {
+                          key: 'energy-efficiency-direction',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Energy Efficiency Quantification and Transparency'),
+                        React.createElement('td', {
+                          key: 'energy-efficiency-recommendations',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Introduce Compute Exchange-level carbon emission forecasts and energy consumption models, allowing users to set thresholds and compensation options.')
+                      ]),
+                      React.createElement('tr', { key: 'row-ecosystem' }, [
+                        React.createElement('td', {
+                          key: 'ecosystem-direction',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Ecosystem Collaboration and Standards'),
+                        React.createElement('td', {
+                          key: 'ecosystem-recommendations',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'Participate in open markets like Compute Exchange to allow edge GPU products to gain exposure and competitive pricing in a fair market.')
+                      ])
+                    ])
+                  ])
+                )
+              ]
+            },
+            {
+              title: '7. Summary and Outlook',
+              content: [
+                'In the future of edge computing, GPU products must strike a balance between lightweight and high energy efficiency. This is not only an inevitable trend in technological evolution but also a dual requirement from both commercial and policy perspectives.',
+                'By integrating hardware optimization (low-power architecture design, heterogeneous integration, and intelligent cooling), software scheduling (dynamic frequency control and hierarchical task scheduling), energy consumption visualization (real-time monitoring and data transparency), and carbon offset mechanisms (green power integration and carbon footprint labeling), edge GPUs will gradually form a complete sustainable computing power ecosystem.',
+                'Drawing on the innovations of platforms like Compute Exchange, it is clear that in the future, GPUs will no longer be measured solely by "peak computing power" but will need to include performance/power ratio, carbon emissions traceability, and green power compatibility as equally important evaluation indicators. This shift will drive the GPU market from a "single performance-driven" approach to a multi-dimensional competitive landscape characterized by "performance + energy efficiency + sustainability."',
+                'For the industry, those who can pioneer edge GPU products that prioritize both sustainability and efficiency will have the opportunity to seize the initiative in rapidly expanding scenarios such as smart cities, the Internet of Vehicles, retail, and energy management. At the same time, as regulatory policies around the world tighten energy consumption controls for data centers and edge nodes, GPU products with green compliance attributes will be more likely to attract government projects, attract investment, and gain customer recognition.',
+                'Thus, future edge GPUs will not only be high-performance intelligent engines but also low-carbon, sustainable industrial infrastructure, playing a strategic role in the global trend of AI edge computing.(https://compute.exchange/manifesto)',
+                'Special thanks to Simeon Bochev, Co-Founder and CEO of Compute Exchange for the permission.'
+              ]
+            }
+          ]
+        }
+
+      case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
+        return {
+          id: 17,
+          title: 'GPU Virtualization: Unlocking the Intelligent Future of Compute Sharing',
+          description: 'Enabling Efficient and Accessible High-Performance Computing through GPU Virtualization',
+          sections: [
+            {
+              title: '',
+              content: [
+                'In the wave of artificial intelligence, cloud computing, and big data, the GPU (Graphics Processing Unit) has become the “super engine” of technological innovation. From creating smooth gaming experiences to accelerating AI model training and handling complex scientific calculations, the powerful computing capabilities of GPUs are everywhere. However, high-performance GPUs are extremely expensive, often costing tens of thousands of dollars, which discourages many enterprises and individuals. How can this immense computational power become more accessible and efficient? The answer lies in GPU virtualization—a breakthrough technology that enables compute sharing.'
+              ]
+            },
+            {
+              title: 'What is GPU Virtualization?',
+              content: [
+                'In simple terms, GPU virtualization is like “slicing” a powerful GPU into multiple portions, allowing several users or tasks to share it simultaneously without interference. Imagine a delicious cake: virtualization technology cuts it into precise slices, with each piece delivering a complete and satisfactory experience to its user.',
+                'Technically, GPU virtualization coordinates hardware and software to dynamically allocate GPU resources such as memory and compute cores to different tasks. This increases resource utilization while ensuring isolation between workloads. With this, expensive GPU hardware is no longer exclusive to a few—it becomes a shareable resource, opening the door to efficient computing for businesses, developers, and even individuals. Whether running AI algorithms, rendering high-definition video, or enjoying cloud gaming, GPU virtualization makes computing power more accessible.',
+                <img key="gpu-virt-overview" src="/blog/Why-Do-We-Need-GPU-Virtualization.webp" alt="Why Do We Need GPU Virtualization" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: 'Why Do We Need GPU Virtualization?',
+              content: [
+                'GPU virtualization is gaining attention because it solves three major challenges in computing:',
+                React.createElement('strong', { key: 'lowering-costs' }, 'Lowering Costs:'),
+                'High-end GPUs are costly; for example, an NVIDIA A100 may be worth tens of thousands of dollars. Virtualization enables multiple users to share the same hardware, significantly reducing purchase and maintenance costs.',
+                React.createElement('strong', { key: 'boosting-efficiency' }, 'Boosting Efficiency:'),
+                'While GPUs are powerful, they are often underutilized. For instance, a game may only use half of the GPU’s performance, leaving the other half idle. Virtualization reallocates idle resources to other tasks, ensuring that performance is maximized.',
+                React.createElement('strong', { key: 'flexible-adaptation' }, 'Flexible Adaptation:'),
+                'In the cloud era, computing needs vary greatly. Some users need only light resources for small tasks, while others require massive power for AI model training. Virtualization allows dynamic, on-demand allocation of resources—like ordering from a menu.',
+                'According to market research, the global GPU market is expected to exceed $500 billion by 2028, with virtualization technology as one of the key growth drivers. As AI and cloud computing spread, GPU virtualization is becoming the gateway to high-performance computing for enterprises and individuals.'
+              ]
+            },
+            {
+              title: 'How Does GPU Virtualization Work?',
+              content: [
+                'GPU virtualization relies on the tight integration of hardware and software. Here’s how it works, explained simply:',
+                React.createElement('strong', { key: 'hardware-support' }, 'Hardware Support:'),
+                'Modern GPUs, such as NVIDIA’s A100 and H100, come with built-in virtualization features like Multi-Instance GPU (MIG). This works like a skilled “cake cutter,” dividing a GPU into independent virtual GPUs, each with its own memory and compute cores, isolated from one another.',
+                React.createElement('strong', { key: 'software-management' }, 'Software Management:'),
+                'Virtualization platforms (such as VMware, Hyper-V, or Kubernetes) act as “resource managers,” allocating compute power, scheduling tasks, and ensuring each user or workload runs in a stable environment.',
+                React.createElement('strong', { key: 'task-isolation' }, 'Task Isolation:'),
+                'Advanced isolation mechanisms ensure each workload has its own “workspace,” preventing resource conflicts. For example, one user can render video while another trains an AI model—both running simultaneously without interference.',
+                'For instance, imagine a company with one high-performance GPU. Through virtualization, it can simultaneously support a designer rendering a 3D model, a data scientist training a machine learning algorithm, and a gamer playing a cloud-based game. All tasks run in parallel with nearly 100% utilization.',
+                <img key="ai-Powering-Every-Industry" src="/blog/ai-Powering-Every-Industry.webp" alt="ai Powering Every Industry" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: 'Application Scenarios: Powering Every Industry',
+              content: [
+                'GPU virtualization has broad applications across industries requiring high-performance computing. Typical scenarios include:',
+                React.createElement('strong', { key: 'cloud-computing' }, 'Cloud Computing Services:'),
+                'Platforms such as Alibaba Cloud, AWS, and Tencent Cloud use GPU virtualization to provide on-demand computing power. SMEs can rent GPU resources for AI development or big data analysis without buying costly hardware. For example, a startup cut AI training costs by 30% and halved delivery time with cloud-based virtual GPUs.',
+                React.createElement('strong', { key: 'creative-industries' }, 'Creative Industries & Design:'),
+                React.createElement(React.Fragment, { key: 'creative-text', style: { marginBottom: '12px' } }, [
+                  'Film producers and 3D designers can use cloud-based ',
+                  React.createElement('a', {
+                    href: 'https://canopywave.com/compute-services',
+                    key: 'virtual GPUs',
+                    style: { display: 'inline', textDecoration: 'underline' }
+                  }, 'virtual GPUs'),
+                  ' to run demanding rendering',
+                  ' software remotely. Even with just a standard laptop, they can create high-quality content without investing in expensive hardware.',]),
+                React.createElement('strong', { key: 'ai-machine-learning' }, 'AI & Machine Learning:'),
+                'From NLP to computer vision, AI training requires massive compute power. Virtualization gives startups and research teams affordable access to top-tier GPUs, speeding up algorithm development. Generative AI, such as ChatGPT, relies heavily on efficient GPU resources.',
+                React.createElement('strong', { key: 'healthcare-research' }, 'Healthcare & Research:'),
+                'Virtualized GPUs can accelerate CT or MRI image processing, helping doctors diagnose faster. In research, teams can share GPUs for climate modeling, genetic analysis, and other compute-heavy tasks, lowering experimental costs.',
+                React.createElement('strong', { key: 'gaming-entertainment' }, 'Gaming & Entertainment:'),
+                'Cloud gaming platforms use GPU virtualization to let players enjoy AAA titles without high-end devices. With computation in the cloud, users only need standard hardware for high-quality experiences.',
+                'These are just the beginning. As technology advances, GPU virtualization continues to expand—supporting autonomous driving data processing, real-time VR rendering, and even powering the metaverse.'
+              ]
+            },
+            {
+              title: 'The Future: Compute Power as Accessible as Utilities',
+              content: [
+                'GPU virtualization is not only a technological milestone but also a bridge to making computing more universal. With 5G, edge computing, and widespread AI applications, demand for computing power will grow exponentially. GPU virtualization will become smarter and more user-friendly—allocating compute could soon be as easy as ordering food delivery.',
+                'Imagine developers renting GPU power on demand to quickly iterate AI models; gamers enjoying high-quality graphics without costly hardware; and scientists sharing cloud resources to accelerate discoveries. GPU virtualization is making these visions a reality.'
+              ]
+            },
+            {
+              title: 'Embracing the New Era of Compute Sharing',
+              content: [
+                'GPU virtualization acts like an intelligent “resource manager,” making GPU compute more affordable and efficient. It lowers the barrier to entry for both businesses and individuals while fueling innovation in AI, cloud computing, creative design, and beyond. Whether you’re building the next AI hit app, rendering a movie blockbuster, or diving into immersive cloud gaming, GPU virtualization is paving the way.',
+                'Curious about how GPU virtualization could transform your work or life? Stay tuned to this fast-evolving field and explore the limitless possibilities of shared computing power!'
+              ]
+            }
+          ]
+        }
+
+      case 'how-can-pay-per-token-inference-services-reduce-ai-costs':
+        return {
+          id: 18,
+          title: 'How Can Pay-Per-Token Inference Services Reduce AI Costs',
+          description: 'Say Goodbye to Resource Waste: How Can Pay-Per-Token Inference Services Drastically Reduce AI Costs?',
+          sections: [
+            {
+              title: '',
+              content: [
+                'In an era where AI is reshaping all businesses, your team is facing these challenges:',
+                '• Over-provisioning and Severe Resource Waste: To handle business peaks, you are forced to pre-procure large amounts of expensive GPU computing power. However, during most off-peak periods, these valuable hardware resources sit idle, leading to high costs.',
+                '• Huge initial investment and high trial-and-error costs: Every new AI application idea requires going through complex budget approval, hardware procurement, and deployment processes. The pace of innovation is slowed down by heavy capital expenditure.',
+                '• Volatile traffic and significant architectural challenges: A product or feature suddenly going viral can instantly overwhelm self-built inference services, while emergency scaling is time-consuming and labor-intensive, negatively impacting user experience and business revenue.',
+                <img key="cost-comparison" src="/blog/cost-comparison.webp" alt="Cost Comparison" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: '1. Cost Comparison: Traditional Models vs. Pay-Per-Token Model',
+              content: [
+                'Assume your AI application needs to handle 100,000 API calls per day (peak up to 15 QPS, on average around 1.16 QPS), with each call consuming an average of 1000 Tokens.',
+                'Let\'s compare three approaches:',
+                React.createElement('strong', { key: 'gpus-servers' }, '1) Self-built GPU Servers'),
+                '• Assume purchasing a server equipped with an NVIDIA A100 (80GB), with a monthly cost of approximately $4,500 (estimated based on major cloud provider rental prices).',
+                '• You need to invest dedicated DevOps manpower for environment setup, model maintenance, and troubleshooting – these hidden costs are not yet calculated.',
+                '• Total Monthly Cost ≈ $5,000+ (Running a server that can handle 15 QPS with an average load of 1.16 QPS results in very low resource utilization.)',
+                React.createElement('strong', { key: 'inference-servers' }, '2) Monthly/Annual Subscription Inference Services)'),
+                '• Many providers offer monthly plans with fixed QPS quotas. To meet a peak of 15 QPS, you might need to purchase a medium-sized plan.',
+                '• Assuming the package monthly fee is $5500. (This usually includes hardware costs, operational services, and vendor profits) Even if the business volume decreases one day, you still need to pay the full amount.',
+                '• Total monthly cost = $5500 (paying for peak usage, low flexibility)',
+                React.createElement('strong', { key: 'pay-servers' }, '3) [Pay-Per-Token] Service'),
+                '• Taking deepseek-v3.1 as an example:',
+                '',
+                React.createElement('div', { key: 'pricing-table-container', style: { margin: '20px 0', overflowX: 'auto' } },
+                  React.createElement('table', {
+                    key: 'pricing-table',
                     style: {
-                      padding: '12px 15px',
-                      textAlign: 'left',
-                      fontWeight: 'bold',
+                      width: '100%',
+                      borderCollapse: 'collapse',
+                      backgroundColor: '#f8f9fa',
                       border: '1px solid #dee2e6'
                     }
-                  }, 'Recommendations')
-                ])
-              ),
-              React.createElement('tbody', { key: 'tbody' }, [
-                React.createElement('tr', { key: 'row-hardware' }, [
-                  React.createElement('td', {
-                    key: 'hardware-direction',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Lightweight Hardware Design'),
-                  React.createElement('td', {
-                    key: 'hardware-recommendations',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Utilize low-power hardware, support DVFS, power capping, and improve heat dissipation, making it suitable for micro-devices without air cooling.')
-                ]),
-                React.createElement('tr', { key: 'row-software' }, [
-                  React.createElement('td', {
-                    key: 'software-direction',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Intelligent Energy Management Software'),
-                  React.createElement('td', {
-                    key: 'software-recommendations',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'The scheduling system identifies task priorities, supports idle adjustment, task suspension, and migration, and is compatible with Emerald AI-style grid response logic.')
-                ]),
-                React.createElement('tr', { key: 'row-energy-efficiency' }, [
-                  React.createElement('td', {
-                    key: 'energy-efficiency-direction',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Energy Efficiency Quantification and Transparency'),
-                  React.createElement('td', {
-                    key: 'energy-efficiency-recommendations',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Introduce Compute Exchange-level carbon emission forecasts and energy consumption models, allowing users to set thresholds and compensation options.')
-                ]),
-                React.createElement('tr', { key: 'row-ecosystem' }, [
-                  React.createElement('td', {
-                    key: 'ecosystem-direction',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Ecosystem Collaboration and Standards'),
-                  React.createElement('td', {
-                    key: 'ecosystem-recommendations',
-                    style: {
-                      padding: '12px 15px',
-                      border: '1px solid #dee2e6',
-                      fontWeight: '500'
-                    }
-                  }, 'Participate in open markets like Compute Exchange to allow edge GPU products to gain exposure and competitive pricing in a fair market.')
-                ])
-              ])
-            ])
-          )
-        ]
-      },
-      {
-        title: '7. Summary and Outlook',
-        content: [
-          'In the future of edge computing, GPU products must strike a balance between lightweight and high energy efficiency. This is not only an inevitable trend in technological evolution but also a dual requirement from both commercial and policy perspectives.',
-          'By integrating hardware optimization (low-power architecture design, heterogeneous integration, and intelligent cooling), software scheduling (dynamic frequency control and hierarchical task scheduling), energy consumption visualization (real-time monitoring and data transparency), and carbon offset mechanisms (green power integration and carbon footprint labeling), edge GPUs will gradually form a complete sustainable computing power ecosystem.',
-          'Drawing on the innovations of platforms like Compute Exchange, it is clear that in the future, GPUs will no longer be measured solely by "peak computing power" but will need to include performance/power ratio, carbon emissions traceability, and green power compatibility as equally important evaluation indicators. This shift will drive the GPU market from a "single performance-driven" approach to a multi-dimensional competitive landscape characterized by "performance + energy efficiency + sustainability."',
-          'For the industry, those who can pioneer edge GPU products that prioritize both sustainability and efficiency will have the opportunity to seize the initiative in rapidly expanding scenarios such as smart cities, the Internet of Vehicles, retail, and energy management. At the same time, as regulatory policies around the world tighten energy consumption controls for data centers and edge nodes, GPU products with green compliance attributes will be more likely to attract government projects, attract investment, and gain customer recognition.',
-          'Thus, future edge GPUs will not only be high-performance intelligent engines but also low-carbon, sustainable industrial infrastructure, playing a strategic role in the global trend of AI edge computing.(https://compute.exchange/manifesto)',
-          'Special thanks to Simeon Bochev, Co-Founder and CEO of Compute Exchange for the permission.'
-        ]
-      }
-    ]
-  }
-    
-case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
-  return {
-    id: 17,
-    title: 'GPU Virtualization: Unlocking the Intelligent Future of Compute Sharing',
-    description: 'Enabling Efficient and Accessible High-Performance Computing through GPU Virtualization',
-    sections: [
-      {
-        title: '',
-        content: [
-          'In the wave of artificial intelligence, cloud computing, and big data, the GPU (Graphics Processing Unit) has become the “super engine” of technological innovation. From creating smooth gaming experiences to accelerating AI model training and handling complex scientific calculations, the powerful computing capabilities of GPUs are everywhere. However, high-performance GPUs are extremely expensive, often costing tens of thousands of dollars, which discourages many enterprises and individuals. How can this immense computational power become more accessible and efficient? The answer lies in GPU virtualization—a breakthrough technology that enables compute sharing.'
-        ]
-      },
-      {
-        title: 'What is GPU Virtualization?',
-        content: [
-          'In simple terms, GPU virtualization is like “slicing” a powerful GPU into multiple portions, allowing several users or tasks to share it simultaneously without interference. Imagine a delicious cake: virtualization technology cuts it into precise slices, with each piece delivering a complete and satisfactory experience to its user.',
-          'Technically, GPU virtualization coordinates hardware and software to dynamically allocate GPU resources such as memory and compute cores to different tasks. This increases resource utilization while ensuring isolation between workloads. With this, expensive GPU hardware is no longer exclusive to a few—it becomes a shareable resource, opening the door to efficient computing for businesses, developers, and even individuals. Whether running AI algorithms, rendering high-definition video, or enjoying cloud gaming, GPU virtualization makes computing power more accessible.',
-          <img key="gpu-virt-overview" src="/blog/Why-Do-We-Need-GPU-Virtualization.webp" alt="Why Do We Need GPU Virtualization" className="w-full h-auto my-8 rounded-lg" />
-        ]
-      },
-      {
-        title: 'Why Do We Need GPU Virtualization?',
-        content: [
-          'GPU virtualization is gaining attention because it solves three major challenges in computing:',
-          React.createElement('strong', { key: 'lowering-costs' }, 'Lowering Costs:'),
-          'High-end GPUs are costly; for example, an NVIDIA A100 may be worth tens of thousands of dollars. Virtualization enables multiple users to share the same hardware, significantly reducing purchase and maintenance costs.',
-          React.createElement('strong', { key: 'boosting-efficiency' }, 'Boosting Efficiency:'),
-          'While GPUs are powerful, they are often underutilized. For instance, a game may only use half of the GPU’s performance, leaving the other half idle. Virtualization reallocates idle resources to other tasks, ensuring that performance is maximized.',
-          React.createElement('strong', { key: 'flexible-adaptation' }, 'Flexible Adaptation:'),
-          'In the cloud era, computing needs vary greatly. Some users need only light resources for small tasks, while others require massive power for AI model training. Virtualization allows dynamic, on-demand allocation of resources—like ordering from a menu.',
-          'According to market research, the global GPU market is expected to exceed $500 billion by 2028, with virtualization technology as one of the key growth drivers. As AI and cloud computing spread, GPU virtualization is becoming the gateway to high-performance computing for enterprises and individuals.'
-        ]
-      },
-      {
-        title: 'How Does GPU Virtualization Work?',
-        content: [
-          'GPU virtualization relies on the tight integration of hardware and software. Here’s how it works, explained simply:',
-          React.createElement('strong', { key: 'hardware-support' }, 'Hardware Support:'),
-          'Modern GPUs, such as NVIDIA’s A100 and H100, come with built-in virtualization features like Multi-Instance GPU (MIG). This works like a skilled “cake cutter,” dividing a GPU into independent virtual GPUs, each with its own memory and compute cores, isolated from one another.',
-          React.createElement('strong', { key: 'software-management' }, 'Software Management:'),
-          'Virtualization platforms (such as VMware, Hyper-V, or Kubernetes) act as “resource managers,” allocating compute power, scheduling tasks, and ensuring each user or workload runs in a stable environment.',
-          React.createElement('strong', { key: 'task-isolation' }, 'Task Isolation:'),
-          'Advanced isolation mechanisms ensure each workload has its own “workspace,” preventing resource conflicts. For example, one user can render video while another trains an AI model—both running simultaneously without interference.',
-          'For instance, imagine a company with one high-performance GPU. Through virtualization, it can simultaneously support a designer rendering a 3D model, a data scientist training a machine learning algorithm, and a gamer playing a cloud-based game. All tasks run in parallel with nearly 100% utilization.',
-          <img key="ai-Powering-Every-Industry" src="/blog/ai-Powering-Every-Industry.webp" alt="ai Powering Every Industry" className="w-full h-auto my-8 rounded-lg" />
-        ]
-      },
-      {
-        title: 'Application Scenarios: Powering Every Industry',
-        content: [
-          'GPU virtualization has broad applications across industries requiring high-performance computing. Typical scenarios include:',
-          React.createElement('strong', { key: 'cloud-computing' }, 'Cloud Computing Services:'),
-          'Platforms such as Alibaba Cloud, AWS, and Tencent Cloud use GPU virtualization to provide on-demand computing power. SMEs can rent GPU resources for AI development or big data analysis without buying costly hardware. For example, a startup cut AI training costs by 30% and halved delivery time with cloud-based virtual GPUs.',
-          React.createElement('strong', { key: 'creative-industries' }, 'Creative Industries & Design:'),
-          React.createElement(React.Fragment, { key: 'creative-text', style: { marginBottom:'12px' } },[
-          'Film producers and 3D designers can use cloud-based ', 
-            React.createElement('a', {
-              href: 'https://canopywave.com/compute-services',
-              key: 'virtual GPUs',
-              style: { display: 'inline', textDecoration: 'underline'}
-          }, 'virtual GPUs'),
-          ' to run demanding rendering',
-          ' software remotely. Even with just a standard laptop, they can create high-quality content without investing in expensive hardware.',]),
-          React.createElement('strong', { key: 'ai-machine-learning' }, 'AI & Machine Learning:'),
-          'From NLP to computer vision, AI training requires massive compute power. Virtualization gives startups and research teams affordable access to top-tier GPUs, speeding up algorithm development. Generative AI, such as ChatGPT, relies heavily on efficient GPU resources.',
-          React.createElement('strong', { key: 'healthcare-research' }, 'Healthcare & Research:'),
-          'Virtualized GPUs can accelerate CT or MRI image processing, helping doctors diagnose faster. In research, teams can share GPUs for climate modeling, genetic analysis, and other compute-heavy tasks, lowering experimental costs.',
-          React.createElement('strong', { key: 'gaming-entertainment' }, 'Gaming & Entertainment:'),
-          'Cloud gaming platforms use GPU virtualization to let players enjoy AAA titles without high-end devices. With computation in the cloud, users only need standard hardware for high-quality experiences.',
-          'These are just the beginning. As technology advances, GPU virtualization continues to expand—supporting autonomous driving data processing, real-time VR rendering, and even powering the metaverse.'
-        ]
-      },
-      {
-        title: 'The Future: Compute Power as Accessible as Utilities',
-        content: [
-          'GPU virtualization is not only a technological milestone but also a bridge to making computing more universal. With 5G, edge computing, and widespread AI applications, demand for computing power will grow exponentially. GPU virtualization will become smarter and more user-friendly—allocating compute could soon be as easy as ordering food delivery.',
-          'Imagine developers renting GPU power on demand to quickly iterate AI models; gamers enjoying high-quality graphics without costly hardware; and scientists sharing cloud resources to accelerate discoveries. GPU virtualization is making these visions a reality.'
-        ]
-      },
-      {
-        title: 'Embracing the New Era of Compute Sharing',
-        content: [
-          'GPU virtualization acts like an intelligent “resource manager,” making GPU compute more affordable and efficient. It lowers the barrier to entry for both businesses and individuals while fueling innovation in AI, cloud computing, creative design, and beyond. Whether you’re building the next AI hit app, rendering a movie blockbuster, or diving into immersive cloud gaming, GPU virtualization is paving the way.',
-          'Curious about how GPU virtualization could transform your work or life? Stay tuned to this fast-evolving field and explore the limitless possibilities of shared computing power!'
-        ]
-      }
-    ]
-  }
-      
+                  }, [
+                    React.createElement('thead', { key: 'thead' },
+                      React.createElement('tr', { key: 'header-row' }, [
+                        React.createElement('th', {
+                          key: 'header-model',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'left',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Model Name'),
+                        React.createElement('th', {
+                          key: 'header-context',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Context'),
+                        React.createElement('th', {
+                          key: 'header-input',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Input'),
+                        React.createElement('th', {
+                          key: 'header-output',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            fontWeight: 'bold',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, 'Output')
+                      ])
+                    ),
+                    React.createElement('tbody', { key: 'tbody' },
+                      React.createElement('tr', { key: 'row-deepseek' }, [
+                        React.createElement('td', {
+                          key: 'deepseek-model',
+                          style: {
+                            padding: '12px 15px',
+                            border: '1px solid #dee2e6',
+                            fontWeight: '500'
+                          }
+                        }, 'deepseek/deepseek-v3.1'),
+                        React.createElement('td', {
+                          key: 'deepseek-context',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '163,840'),
+                        React.createElement('td', {
+                          key: 'deepseek-input',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '$0.27 /M Tokens'),
+                        React.createElement('td', {
+                          key: 'deepseek-output',
+                          style: {
+                            padding: '12px 15px',
+                            textAlign: 'center',
+                            border: '1px solid #dee2e6'
+                          }
+                        }, '$1 /M Tokens')
+                      ])
+                    )
+                  ])
+                ),
+                '',
+                'Assuming each input call uses 100 tokens, and each output call uses 1000 tokens.',
+                'Note: The costs in this example are based on application scenarios where the \'output is much greater than the input\' (such as content generation and dialogue interaction).',
+                '',
+                '• Daily Output Cost Calculation: 100,000 calls/day * 1000 Tokens/call / 1,000,000 * $1.0 = $100 / day',
+                '• Daily Input Cost Calculation: 100,000 calls/day * 100 Tokens/call / 1,000,000 * $0.27 = $2.7 / day',
+                '• Total Monthly Cost = $102.7 * 30 = $3081',
+                '',
+                'The conclusion is clear: in a pay-per-token scenario, compared to plans A and B, the pay-per-token model significantly reduces costs. Additionally, when your business volume exceeds the capacity of the compared monthly subscription plans, the cost savings from pay-per-token will be even more pronounced. This model ensures that your costs are always synchronized with business value (actual usage).',
+                '',
+                'Note: The pay-per-token model is particularly suitable for businesses with high traffic fluctuations, startups, or those wishing to greatly reduce trial and error costs. For applications with extremely stable and predictable traffic, it is advisable to conduct a detailed TCO (Total Cost of Ownership) comparison before making a choice.'
+              ]
+            },
+            {
+              title: '2. How Does Technology Enable Extreme Cost-Effectiveness?',
+              content: [
+                'Low cost does not come at the expense of performance. This is powered by a robust technical engine:',
+                '',
+                '• Extreme Model Optimization: Pay-per-token services employ cutting-edge technologies like model quantization and compilation optimization. These drastically improve inference speed with almost no loss in accuracy, reducing the hardware cost per inference and passing the savings on to customers.',
+                '• Automatic Scaling: No need to worry about the number of servers. The scheduling system automatically creates and releases resources in milliseconds based on real-time request traffic. It scales seamlessly during traffic spikes and scales down to zero during troughs – you only pay for what you use.',
+                <img key="liberating-productivity" src="/blog/liberating-productivity.webp" alt="Liberating Productivity" className="w-full h-auto my-8 rounded-lg" />
+              ]
+            },
+            {
+              title: '3. More Than Just Saving Money: It\'s About Liberating Productivity',
+              content: [
+                'Choosing pay-per-token means:',
+                '',
+                '• Zero Upfront Investment: Start your AI project immediately, without long procurement and deployment cycles.',
+                '• Costs Perfectly Aligned with Business Growth: Your cost curve will closely align with your business growth curve, making financial forecasting clearer than ever before.',
+                '• Focus on Innovation, Not Operations: Free your valuable engineering team from complex infrastructure maintenance, allowing them to focus on building better products and application logic, rather than managing GPU servers.'
+              ]
+            }
+          ]
+        }
+
 
       default:
         return null
@@ -2258,7 +2411,9 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
                                 ? "/blog/ai-gpu-edge.webp"
                                 : blogPost.title === "GPUs in Edge Computing"
                                   ? "/blog/ai-GPU-Virtualization.webp"
-                                  : "/blog1.webp"
+                                  : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
+                                    ? "/blog/token-inference-service.webp"
+                                    : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -2298,6 +2453,8 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
         return <BlogLayout1 blogPost={blogPost} />
       case 17:
         return <BlogLayout1 blogPost={blogPost} />
+      case 18:
+        return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
     }
@@ -2311,6 +2468,8 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
       case 2:
         return "min-h-screen bg-[#F9F9F9]"
       case 3:
+        return "min-h-screen bg-[#F9F9F9]"
+      case 18:
         return "min-h-screen bg-[#F9F9F9]"
       default:
         return "min-h-screen bg-[#F9F9F9]"
@@ -2350,7 +2509,7 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
             <meta key="medical-imaging-og-description" property="og:description" content="AI medical imaging analysis does not aim to replace doctors but serves as a powerful 'third eye' breaking through the physiological limitations of human perception to enhance their ability to safeguard patient health. " />
           </>
         )}
-        
+
         {title === 'revolutionizing-elderly-care-with-ai' && (
           <>
             <meta key="elderly-care-title" name="title" content="Revolutionizing Elderly Care with AI: Warm Guardianship Empowered by Technology" />
@@ -2361,7 +2520,7 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
           </>
         )}
 
-        {title === 'gpu-virtualization:-unlocking-the-intelligent-future-of-compute-sharing'&&(
+        {title === 'gpu-virtualization:-unlocking-the-intelligent-future-of-compute-sharing' && (
           <>
             <meta key="gpu-virt-title" name="title" content="GPU Virtualization: Unlocking the Intelligent Future of Compute Sharing" />
             <meta key="gpu-virt-description" name="description" content="This article explores GPU virtualization, what it is, how it works, and how it is reshaping our computing world." />
@@ -2379,6 +2538,16 @@ case 'gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing':
               <meta key="edge-gpu-og-title" property="og:title" content="The Future of GPUs in Edge Computing " />
               <meta key="edge-gpu-og-image" property="og:image" content="https://canopywave.com/blog/edge-gpu.webp" />
             </>
+          )}
+
+        {title === 'how-can-pay-per-token-inference-services-reduce-ai-costs' && (
+          <>
+            <meta key="token-inference-title" name="title" content="How Can Pay-Per-Token Inference Services Reduce AI Costs" />
+            <meta key="token-inference-description" name="description" content="In an era where AI is reshaping all businesses, your team is facing these challenges:  Over-provisioning and Severe Resource；Waste" />
+            <meta key="token-inference-og-title" property="og:title" content="How Can Pay-Per-Token Inference Services Reduce AI Costs" />
+            <meta key="token-inference-og-image" property="og:image" content="https://canopywave.com/blog/token-inference-service.webp" />
+            <meta key="token-inference-og-description" property="og:description" content="In an era where AI is reshaping all businesses, your team is facing these challenges:  Over-provisioning and Severe Resource；Waste" />
+          </>
         )}
 
       </Head>
