@@ -58,6 +58,14 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 19,
+        //     title: "Canopy Wave Proprietary Monitoring System",
+        //     description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
+        //     date: "September 20, 2025",
+        //     image: "/blog/gpu-monitoring-system.webp",
+        //     alttitle: "Canopy Wave Monitoring System"
+        // },
         {
             id: 18,
             title: "How Can Pay-Per-Token Inference Services Reduce AI Costs",
