@@ -58,13 +58,21 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 20,
+        //     title: "Canopy Wave Proprietary Monitoring System",
+        //     description: "Canopy Wave Proprietary Monitoring System, Secure Your GPU Cluster",
+        //     date: "September 21, 2025",
+        //     image: "/blog/gpu-cluster-cost.webp",
+        //     alttitle: "Canopy Wave Monitoring System"
+        // },
         {
             id: 19,
-            title: "Canopy Wave Proprietary Monitoring System",
-            description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
+            title: "How Businesses Can Prepare for Rising GPU Prices",
+            description: "As the fourth quarter approaches key components—GPUs, DDR5 memory, CPUs, and enterprise-grade storage—have seen significant price increases",
             date: "September 20, 2025",
             image: "/blog/gpu-monitoring-system.webp",
-            alttitle: "Canopy Wave Monitoring System"
+            alttitle: "GPU Component Price"
         },
         {
             id: 18,

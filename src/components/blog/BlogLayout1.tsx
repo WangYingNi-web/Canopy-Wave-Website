@@ -59,7 +59,7 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-GPU-Virtualization.webp"
                   : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
                   ? "/blog/token-inference-service.webp"
-                  : blogPost.title === "Canopy Wave Proprietary Monitoring System"
+                  : blogPost.title === "How Businesses Can Prepare for Rising GPU Prices"
                   ? "/blog/gpu-monitoring-system.webp"
                   : "/blog1.webp"
                   
