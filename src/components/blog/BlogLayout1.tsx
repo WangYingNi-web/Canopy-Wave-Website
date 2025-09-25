@@ -65,6 +65,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/gpu-monitoring-system.webp"
                   : blogPost.title === "Canopy Wave Proprietary Monitoring System"
                   ? "/blog/monitoring-system.webp"
+                  : blogPost.title === "Large Model API Token Fees"
+                  ? "/blog/api-token-fees.webp"
                   : "/blog1.webp"
                   
               }

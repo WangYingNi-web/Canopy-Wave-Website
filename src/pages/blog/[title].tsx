@@ -2551,7 +2551,7 @@ export default function BlogDetail() {
         return {
           id: 22,
           title: 'Large Model API Token Fees',
-          description: 'The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing',
+          description: 'Large Model API Token Fees: A Detailed Explanation of Principles and Mechanisms',
           sections: [
             {
               title: 'I. Tokens: The "Linguistic Building Blocks" of Large Models',
@@ -2575,7 +2575,8 @@ export default function BlogDetail() {
                 'Total Cost: $0.0050',
                 'If input and output were uniformly priced, billing inequities would arise: in "short question, long answer" scenarios, service providers would bear additional costs; conversely, in "long question, short answer" scenarios, users would pay unnecessary premiums for the input portion.',
                 '3. Encouraging Efficient Resource Utilization',
-                'By-the-token pricing incentivizes users to be efficient: streamline prompts, remove redundant information, and use parameters like max_tokens to cap output length. This prevents wasteful, overly long responses. In contrast, a flat per-call fee cannot distinguish between the computational demand of "What\'s the weather?" and "Write a ten-thousand-word report," leading to potential resource abuse or unfair pricing.'
+                'By-the-token pricing incentivizes users to be efficient: streamline prompts, remove redundant information, and use parameters like max_tokens to cap output length. This prevents wasteful, overly long responses. In contrast, a flat per-call fee cannot distinguish between the computational demand of "What\'s the weather?" and "Write a ten-thousand-word report," leading to potential resource abuse or unfair pricing.',
+                <img key="Word Segmentation Rules" src="/blog/word-segmentation-rules.webp" alt="Word Segmentation Rules" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
               ]
             },
             {
@@ -2588,7 +2589,46 @@ export default function BlogDetail() {
                 'Claude Series: Utilizes a variant of BPE with a large vocabulary, supporting longer context windows (up to 100,000 tokens). Its segmentation is coarser, treating common phrases as single tokens, resulting in relatively fewer total tokens when processing long texts.',
                 'This variation means that the same text segment may yield different token counts across different models. For example, "laptopcomputer"—a high-frequency compound term in technology—is typically merged into a single token across most models. However, "tabletphone" (a less common term) may be split into two tokens: \'tablet\' and "phone." Some earlier-trained models might even fragment it into smaller subword units.'
               ]
+            },
+            {
+              title: 'IV. Token Estimation: Practical Methods and Tools',
+              content: [
+                'For users, pre-estimating token counts is key to cost control. The following four methods cover needs ranging from quick estimates to precise calculations:',
+                '1. Empirical Formula for Quick Calculation',
+                'English: 1 Token ≈ 0.75 words; 100 words approximately equals 130 Tokens;',
+                'Chinese: General colloquial text (e.g., daily conversations, news reports) 1000 characters equates to 1200-1400 tokens; Technical/specialized texts (e.g., academic papers, technical documentation) 1000 characters equates to 1500-1800 tokens. This formula is for preliminary budgeting only. Precise estimation requires online tools (e.g., tiktokenizer) or code tools (e.g., tiktoken library).',
+                '2. Precise Calculation with Online Tools',
+                'Tiktokenizer: Supports mainstream models like GPT-4o and DeepSeek. Input text to display token segmentation results and identifiers. For example, entering "by and large" reveals its segmentation into 3 tokens across different models.',
+                'OpenAI Token Calculator: Optimized for OpenAI models, it simultaneously estimates costs. Entering "Write a 500-word essay" predicts required tokens and fees.',
+                '3. Batch Calculation with Code Tools',
+                'Automated estimation can be achieved using Python\'s tiktoken library. Sample code is as follows:',
+                'import tiktoken\n\n# Specify model',
+                '```bash',
+                'enc = tiktoken.encoding_for_model("gpt-4")',
+                '```',
+                '# Encode text and compute token count',
+                '```bash',
+                'tokens = enc.encode("Hello, world!")',
+                '```',
+                '# Outputs 4',
+                '```bash',
+                'print(len(tokens))',
+                '```',
+                'This method is suitable for developers integrating token counting functionality into projects to monitor consumption in real time.',
+                '4. API Parameter Control',
+                'Setting the max_tokens parameter when calling the API (e.g., "max_tokens": 200) enforces a limit on the number of output tokens, preventing unexpected overages. For tasks like mathematical computations or data queries, replacing lengthy text descriptions with function calls can further reduce token consumption. For example, when querying "weather in a city over the past 7 days," a long text description would require detailed specification of the query requirements (approximately 50 tokens). In contrast, calling the function `get_weather(city="Beijing", days=7)` requires only about 20 tokens.',
+                <img key="API Parameter Control" src="/blog/api-parameter-control.webp" alt="API Parameter Control" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              
+              ]
+            },
+            {
+              title: 'Conclusion',
+              content: [
+                'Tokens serve not only as the fundamental units for large models to process language but also as the "measurement standard" for computing resource consumption. The token-based billing model not only reflects the logical soundness of the technology but also provides users with opportunities for cost optimization.',
+                'Understanding the differences in tokenization rules and mastering token estimation methods are essential for achieving efficient resource utilization while enjoying the benefits of large models. As model technology evolves, token segmentation strategies and billing models may continue to advance, but the core principle of "paying for computational resource consumption" will remain applicable for the foreseeable future.'
+              ]
             }
+            
           ]
         }
 
@@ -2745,17 +2785,6 @@ export default function BlogDetail() {
             <meta key="special-og-description" property="og:description" content="AI models sometimes make mistakes—often referred to as hallucinations. OpenAI's recent research sheds light on why this happens and, more importantly, how to fix it." />
           </>
         )}
-
-        {title === 'large-model-api-token-fees' && (
-          <>
-            <meta key="token-fees-title" name="title" content="Large Model API Token Fees" />
-            <meta key="token-fees-description" name="description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
-            <meta key="token-fees-og-title" property="og:title" content="Large Model API Token Fees" />
-            <meta key="token-fees-og-image" property="og:image" content="https://canopywave.com/blog/api-token-fees.webp" />
-            <meta key="token-fees-og-description" property="og:description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
-          </>
-        )}
-
         {title === 'ai-medical-imaging-analysis' && (
           <>
             <meta key="medical-imaging-title" name="title" content="How AI Medical Imaging Analysis Becomes the 'Third Eye' for Doctors\" />
@@ -2832,6 +2861,15 @@ export default function BlogDetail() {
             <meta key="monitoring-og-title" property="og:title" content="Canopy Wave Proprietary Monitoring System" />
             <meta key="monitoring-og-image" property="og:image" content="https://canopywave.com/blog/monitoring-system.webp" />
             <meta key="monitoring-og-description" property="og:description" content="Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems." />
+          </>
+        )}
+        {title === 'large-model-api-token-fees' && (
+          <>
+            <meta key="token-fees-title" name="title" content="Large Model API Token Fees" />
+            <meta key="token-fees-description" name="description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
+            <meta key="token-fees-og-title" property="og:title" content="Large Model API Token Fees" />
+            <meta key="token-fees-og-image" property="og:image" content="https://canopywave.com/blog/api-token-fees.webp" />
+            <meta key="token-fees-og-description" property="og:description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
           </>
         )}
       </Head>

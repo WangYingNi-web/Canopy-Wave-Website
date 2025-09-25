@@ -30,12 +30,14 @@ interface NewsroomPost {
     link?: string;
     alttitle?: string;
 }
-interface TutorialPost {
+
+interface CaseStudyPost {
     id: number;
     title: string;
     description: string;
     date: string;
     image: string;
+    link?: string;
     alttitle?: string;
 }
 
@@ -59,22 +61,22 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        // {
-        //     id: 22,
-        //     title: "Large Model API Token Fees",
-        //     description: "The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing",
-        //     date: "September 24, 2025",
-        //     image: "/blog/api-token-fees.webp",
-        //     alttitle: "API Token Fees"
-        // },
-        // {
-        //     id: 21,
-        //     title: "Canopy Wave Proprietary Monitoring System",
-        //     description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
-        //     date: "September 23, 2025",
-        //     image: "/blog/monitoring-system.webp",
-        //     alttitle: "Canopy Wave Monitoring System"
-        // },
+        {
+            id: 22,
+            title: "Large Model API Token Fees",
+            description: "The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing",
+            date: "September 24, 2025",
+            image: "/blog/api-token-fees.webp",
+            alttitle: "API Token Fees"
+        },
+        {
+            id: 21,
+            title: "Canopy Wave Proprietary Monitoring System",
+            description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
+            date: "September 23, 2025",
+            image: "/blog/monitoring-system.webp",
+            alttitle: "Canopy Wave Monitoring System"
+        },
         {
             id: 20,
             title: "NVLink 5.0 is a Game-Changer for AI Agent Development",
@@ -237,9 +239,20 @@ export default function Newsroom() {
             date: "May 15, 2025",
             image: "/blog2.svg",
             link: "/events/ai-agent-summit-keynote" // 更新为events链接
-        },
+        }
     ];
 
+    const caseStudyPosts: CaseStudyPost[] = [
+        {
+            id: 1,
+            title: "Supporting Academic Research with Advanced AI and GPU Cloud Computing",
+            description: "Canopy Wave's partnership with the University of California San Diego research team is a story about how practical AI cloud GPU resources empower ambitious academic work, especially in unraveling complex government contracting challenges.",
+            date: "October 15, 2024",
+            image: "/case-studies/techcorp-case.webp",
+            alttitle: "Cloud gpu for academic research",
+            link:'/case-studies/supporting-academic-research-with-advanced-ai-and-gpu-cloud-computing'
+        },
+    ];
 
     return (
         <main className="min-h-screen relative text-gray-600 bg-[#F9F9F9]">
@@ -378,7 +391,49 @@ export default function Newsroom() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <hr className="border-t border-gray-200" />
             </div>
-            
+
+            {/* Case Studies Section */}
+            {/* <div id='case-studies' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="flex justify-between items-center mb-8">
+                    <SlideUp>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-600">Case Studies</h2>
+                    </SlideUp>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {caseStudyPosts.map((post) => (
+                        <div key={post.id} className="group cursor-pointer">
+                            <div className="relative h-60 mb-4 overflow-hidden rounded-lg">
+                                <Image
+                                    src={post.image || "/confidentialmind-logo.png"}
+                                    alt={post.alttitle || post.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <h3 className="text-sm font-semibold text-gray-600 mb-2 truncate">{post.title}</h3>
+                            <p className="text-sm text-gray-500 mb-4 line-clamp-3">{post.description}</p>
+                            <div className="flex items-center justify-between text-sm text-gray-500">
+                                <span>{post.date}</span>
+                                <IwsLink
+                                     href={post.link || '#'}
+                                    className="text-[#8CC63F] hover:text-[#7AB82F] transition-colors duration-200 flex items-center"
+                                >
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                </IwsLink>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div> */}
+
+            {/* Divider */}
+            {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <hr className="border-t border-gray-200" />
+            </div> */}
             
 
             {/* Ready to Get Started Section */}
