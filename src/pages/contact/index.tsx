@@ -69,8 +69,8 @@ export default function Contact() {
                 'https://sequoia-paas.canopywave.io/api/v1/send_email',
                 {
                     subject: 'New Contact Form Submission',
-                    // recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
-                    recipients: ['wangyingni@canopywave.com'],
+                    recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    // recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 },
                 {
