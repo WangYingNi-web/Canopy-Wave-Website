@@ -60,13 +60,21 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         // {
-        //     id: 21,
-        //     title: "Canopy Wave Proprietary Monitoring System",
-        //     description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
-        //     date: "September 22, 2025",
-        //     image: "/blog/gpu-cluster-cost.webp",
-        //     alttitle: "Canopy Wave Monitoring System"
+        //     id: 22,
+        //     title: "Large Model API Token Fees",
+        //     description: "The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing",
+        //     date: "September 24, 2025",
+        //     image: "/blog/api-token-fees.webp",
+        //     alttitle: "API Token Fees"
         // },
+        {
+            id: 21,
+            title: "Canopy Wave Proprietary Monitoring System",
+            description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
+            date: "September 23, 2025",
+            image: "/blog/monitoring-system.webp",
+            alttitle: "Canopy Wave Monitoring System"
+        },
         {
             id: 20,
             title: "NVLink 5.0 is a Game-Changer for AI Agent Development",

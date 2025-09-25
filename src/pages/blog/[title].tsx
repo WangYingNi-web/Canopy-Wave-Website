@@ -21,7 +21,7 @@ export default function BlogDetail() {
     const decodedTitle = decodeURIComponent(title);
     switch (decodedTitle) {
 
-
+      
 
       case 'joint-blog-accelerate-enterprise-ai':
         return {
@@ -2547,6 +2547,51 @@ export default function BlogDetail() {
           ]
         }
 
+      case 'large-model-api-token-fees':
+        return {
+          id: 22,
+          title: 'Large Model API Token Fees',
+          description: 'The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing',
+          sections: [
+            {
+              title: 'I. Tokens: The "Linguistic Building Blocks" of Large Models',
+              content: [
+                'When we input text into a large model API, the model does not directly "read" the words. Instead, it first uses a tokenizer to break the text down into the smallest processing units—tokens. These units are neither individual Chinese characters nor letters, nor do they entirely correspond to words in natural language. Instead, they form "semantic fragments" based on semantic relevance and frequency of occurrence.',
+                'Take OpenAI\'s GPT series as an example: the English sentence "ChatGPT is smart." is split into 6 tokens: Chat, G, PT, is, smart, .); the Chinese sentence "你好，世界！" is split into four tokens: "你好", "," "世界", "！". This segmentation logic stems from word frequency statistics during model training. For instance, \'苹果\' (apple) is grouped as a single token due to high co-occurrence frequency, while "鸭蛋" (duck egg) might be split into two tokens because of its lower frequency.',
+                'Technically speaking, tokens serve as the bridge connecting human language to machine computation. Tokenizers use algorithms like Byte-Pair Encoding (BPE) to map text into sequences of numerical codes. The model then computes relationships between these codes to achieve understanding and generation, with each token corresponding to a basic computational operation.'
+              ]
+            },
+            {
+              title: 'II. Token-Based Pricing: Precise Mapping of Computing Power Consumption',
+              content: [
+                'The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing for three key reasons:',
+                '1. Direct Quantification of Computing Power Consumption',
+                'The process of large models processing text essentially involves complex matrix operations on token sequences. Longer input texts (more tokens) demand greater GPU memory allocation, increased computational operations, and extended processing times. For example, processing a 1,000-token document can consume many times more computational resources than a 100-token document. Token-based pricing is, in effect, "pay-per-computation," accurately reflecting the resources used.',
+                '2. Balancing the Dual Costs of Input and Output',
+                'A single API call has two cost components: input Prompt Tokens and model-generated Completion Tokens. These are typically priced differently. For OpenAI\'s GPT-4 Turbo, input tokens cost $0.01 per 1,000, while output tokens cost $0.03 per 1,000. Output is usually more expensive because generation involves complex reasoning and creative organization, which is more computationally intensive than simply understanding an input.',
+                'For instance, if a user question consumes 50 tokens and the response consumes 150 tokens:',
+                'Input Cost: (50 / 1000) * $0.01 = $0.0005',
+                'Output Cost: (150 / 1000) * $0.03 = $0.0045',
+                'Total Cost: $0.0050',
+                'If input and output were uniformly priced, billing inequities would arise: in "short question, long answer" scenarios, service providers would bear additional costs; conversely, in "long question, short answer" scenarios, users would pay unnecessary premiums for the input portion.',
+                '3. Encouraging Efficient Resource Utilization',
+                'By-the-token pricing incentivizes users to be efficient: streamline prompts, remove redundant information, and use parameters like max_tokens to cap output length. This prevents wasteful, overly long responses. In contrast, a flat per-call fee cannot distinguish between the computational demand of "What\'s the weather?" and "Write a ten-thousand-word report," leading to potential resource abuse or unfair pricing.'
+              ]
+            },
+            {
+              title: 'III. Word Segmentation Rules: Different Models\' "Knife Techniques"',
+              content: [
+                'Just as restaurant prep cooks vary in their knife skills, different large models\' word segmenters employ distinct splitting logics, directly impacting token count results. These differences primarily stem from variations in training data, vocabulary design, and segmentation algorithms:',
+                'GPT Series (OpenAI): Primarily employs the BPE algorithm or its variants (GPT-4 uses tiktoken, which still follows the BPE approach at its core). Excels at handling subword segmentation in English contexts. For example, "playing" is split into \'play\' and "ing," preserving semantic integrity while improving compression efficiency.',
+                'DeepSeek: Features unique logic for handling high-frequency Chinese compound words. Both "HaHa" and " HaHaHa" are treated as single tokens, while "HaHaHaHaHa" splits into \'Haha\' + "HaHaHa" tokens, reflecting adaptation to everyday expression patterns.',
+                'Qwen (Tongyi Qianwen): Offers more flexible splitting for individual Chinese characters. Most common characters remain single tokens , whereas low-frequency characters in DeepSeek may split into two or more tokens.',
+                'Claude Series: Utilizes a variant of BPE with a large vocabulary, supporting longer context windows (up to 100,000 tokens). Its segmentation is coarser, treating common phrases as single tokens, resulting in relatively fewer total tokens when processing long texts.',
+                'This variation means that the same text segment may yield different token counts across different models. For example, "laptopcomputer"—a high-frequency compound term in technology—is typically merged into a single token across most models. However, "tabletphone" (a less common term) may be split into two tokens: \'tablet\' and "phone." Some earlier-trained models might even fragment it into smaller subword units.'
+              ]
+            }
+          ]
+        }
+
       default:
         return null
     }
@@ -2701,6 +2746,16 @@ export default function BlogDetail() {
           </>
         )}
 
+        {title === 'large-model-api-token-fees' && (
+          <>
+            <meta key="token-fees-title" name="title" content="Large Model API Token Fees" />
+            <meta key="token-fees-description" name="description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
+            <meta key="token-fees-og-title" property="og:title" content="Large Model API Token Fees" />
+            <meta key="token-fees-og-image" property="og:image" content="https://canopywave.com/blog/api-token-fees.webp" />
+            <meta key="token-fees-og-description" property="og:description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
+          </>
+        )}
+
         {title === 'ai-medical-imaging-analysis' && (
           <>
             <meta key="medical-imaging-title" name="title" content="How AI Medical Imaging Analysis Becomes the 'Third Eye' for Doctors\" />
@@ -2756,17 +2811,26 @@ export default function BlogDetail() {
             <meta key="monitoring-title" name="title" content="How Businesses Can Prepare for Rising GPU Prices" />
             <meta key="monitoring-description" name="description" content="As the fourth quarter approaches key components—GPUs, DDR5 memory, CPUs, and enterprise-grade storage—have seen significant price increases." />
             <meta key="monitoring-og-title" property="og:title" content="How Businesses Can Prepare for Rising GPU Prices" />
-            <meta key="monitoring-og-image" property="og:image" content="https://canopywave.com/blog/gpu-cluster-cost.webp" />
+            <meta key="monitoring-og-image" property="og:image" content="https://canopywave.com/blog/gpu-monitoring-system.webp" />
             <meta key="monitoring-og-description" property="og:description" content="As the fourth quarter approaches key components—GPUs, DDR5 memory, CPUs, and enterprise-grade storage—have seen significant price increases." />
           </>
         )}
         
+        {title === 'nvlink-5-0-is-a-game-changer-for-ai-agent-development' && (
+          <>
+            <meta key="monitoring-title" name="title" content="NVLink 5.0 is a Game-Changer for AI Agent Development" />
+            <meta key="monitoring-description" name="description" content="The launch of NVIDIA's Blackwell architecture, spearheaded by the revolutionary B200 GPU, and its groundbreaking NVLink 5.0 technology isn't merely an incremental upgrade; it is the critical enabler that will unlock the true potential of AI Agents" />
+            <meta key="monitoring-og-title" property="og:title" content="NVLink 5.0 is a Game-Changer for AI Agent Development" />
+            <meta key="monitoring-og-image" property="og:image" content="https://canopywave.com/blog/ai-nvLink.webp" />
+            <meta key="monitoring-og-description" property="og:description" content="The launch of NVIDIA's Blackwell architecture, spearheaded by the revolutionary B200 GPU, and its groundbreaking NVLink 5.0 technology isn't merely an incremental upgrade; it is the critical enabler that will unlock the true potential of AI Agents" />
+          </>
+        )}
         {title === 'canopy-wave-proprietary-monitoring-system' && (
           <>
             <meta key="monitoring-title" name="title" content="Canopy Wave Proprietary Monitoring System" />
             <meta key="monitoring-description" name="description" content="Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems." />
             <meta key="monitoring-og-title" property="og:title" content="Canopy Wave Proprietary Monitoring System" />
-            <meta key="monitoring-og-image" property="og:image" content="https://canopywave.com/blog/gpu-cluster-cost.webp" />
+            <meta key="monitoring-og-image" property="og:image" content="https://canopywave.com/blog/monitoring-system.webp" />
             <meta key="monitoring-og-description" property="og:description" content="Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems." />
           </>
         )}

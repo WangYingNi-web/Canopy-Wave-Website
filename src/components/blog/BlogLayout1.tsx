@@ -63,6 +63,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-nvLink.webp"
                   : blogPost.title === "How Businesses Can Prepare for Rising GPU Prices"
                   ? "/blog/gpu-monitoring-system.webp"
+                  : blogPost.title === "Canopy Wave Proprietary Monitoring System"
+                  ? "/blog/monitoring-system.webp"
                   : "/blog1.webp"
                   
               }
