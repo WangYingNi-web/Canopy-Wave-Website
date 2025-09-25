@@ -67,14 +67,14 @@ export default function Newsroom() {
         //     image: "/blog/api-token-fees.webp",
         //     alttitle: "API Token Fees"
         // },
-        {
-            id: 21,
-            title: "Canopy Wave Proprietary Monitoring System",
-            description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
-            date: "September 23, 2025",
-            image: "/blog/monitoring-system.webp",
-            alttitle: "Canopy Wave Monitoring System"
-        },
+        // {
+        //     id: 21,
+        //     title: "Canopy Wave Proprietary Monitoring System",
+        //     description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
+        //     date: "September 23, 2025",
+        //     image: "/blog/monitoring-system.webp",
+        //     alttitle: "Canopy Wave Monitoring System"
+        // },
         {
             id: 20,
             title: "NVLink 5.0 is a Game-Changer for AI Agent Development",
