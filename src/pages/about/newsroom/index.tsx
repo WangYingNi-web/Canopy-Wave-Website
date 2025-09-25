@@ -48,6 +48,7 @@ export default function Newsroom() {
         const blogTitle = title.toLowerCase()
             .replace(/[:'"]/g, '')  // 去除冒号、撇号、引号
             .replace(/[\s-]+/g, '-')  // 将空格和连字符转换为单个连字符
+            .replace(/[\s.-]+/g, '-')
             .replace(/^-+|-+$/g, ''); // 去除开头和结尾的连字符
         router.push(`/blog/${blogTitle}`);
     };
@@ -59,12 +60,20 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         // {
-        //     id: 20,
+        //     id: 21,
         //     title: "Canopy Wave Proprietary Monitoring System",
-        //     description: "Canopy Wave Proprietary Monitoring System, Secure Your GPU Cluster",
-        //     date: "September 21, 2025",
+        //     description: "Backed by Canopy Wave's 24/7 operations team, we guarantee the stability and performance of your critical systems.",
+        //     date: "September 22, 2025",
         //     image: "/blog/gpu-cluster-cost.webp",
         //     alttitle: "Canopy Wave Monitoring System"
+        // },
+        // {
+        //     id: 20,
+        //     title: "NVLink 5.0 is a Game-Changer for AI Agent Development",
+        //     description: "The launch of NVIDIA's Blackwell architecture, spearheaded by the revolutionary B200 GPU, and its groundbreaking NVLink 5.0 technology isn't merely an incremental upgrade; it is the critical enabler that will unlock the true potential of AI Agents",
+        //     date: "September 21, 2025",
+        //     image: "/blog/ai-nvLink.webp",
+        //     alttitle: "Blackwell's NVLink 5.0"
         // },
         {
             id: 19,

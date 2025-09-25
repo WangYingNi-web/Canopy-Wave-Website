@@ -182,6 +182,7 @@ Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
 Message: ${formData.message}
+Submitted from: ${window.location.href}
 `;
 
             formDataToSend.append('body', emailBody);

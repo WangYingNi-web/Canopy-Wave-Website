@@ -43,15 +43,15 @@ export default function GB200WithRoCEv2() {
                 name: ${formData.name}
                 email: ${formData.email}
                 message: ${formData.message}
-                page_url: ${window.location.href}
+                submitted from: ${window.location.href}
             `;
 
             const response = await axios.post(
                 'https://sequoia-paas.canopywave.io/api/v1/send_email',
                 {
                     subject: 'GB200 with RoCEv2 Inquiry',
-                    // recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
-                    recipients: ['wangyingni@canopywave.com'],
+                    recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    // recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 },
                 {

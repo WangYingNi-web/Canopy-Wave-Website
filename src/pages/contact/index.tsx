@@ -62,6 +62,7 @@ export default function Contact() {
                 email: ${formData.email}
                 interests: ${formData.interests.join(', ')}
                 Do you agree with marketing: ${formData.marketing ? 'yes' : 'no'}
+                submitted from: ${window.location.href}
             `;
 
             const response = await axios.post(
@@ -346,7 +347,7 @@ export default function Contact() {
                                         <label className="flex items-center mb-3">
                                             <input
                                                 type="checkbox"
-                                                name="NVIDIA GB200 NVL72"
+                                                name="nvdia-gb200-blackwell-superchip"
                                                 checked={formData.interests.includes('nvdia-gb200-blackwell-superchip')}
                                                 onChange={handleCheckboxChange}
                                                 className="mr-2" />

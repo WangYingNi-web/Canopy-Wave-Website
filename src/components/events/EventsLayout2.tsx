@@ -91,7 +91,7 @@ const EventsLayout2: React.FC<EventsLayout2Props> = ({ eventPost }) => {
     try {
       const emailBody = `
 New registration information for webinars:
-
+Submitted from: ${window.location.href}
 name: ${formData.firstName} ${formData.lastName}
 email: ${formData.email}
 Company: ${formData.companyName}

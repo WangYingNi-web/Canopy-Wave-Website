@@ -39,7 +39,7 @@ export default function Footer() {
         
         setIsSubmitting(true)
         try {
-            const emailBody = `New newsletter subscription from: ${email} at ${new Date().toLocaleString()}`;
+            const emailBody = `New newsletter subscription from: ${email} at ${new Date().toLocaleString()}\nSubmitted from: ${window.location.href}`;
             const response = await fetch('https://sequoia-paas.canopywave.io/api/v1/send_email', {
                 method: 'POST',
                 headers: {
@@ -48,13 +48,12 @@ export default function Footer() {
                 },
                 body: JSON.stringify({
                     subject: 'New Newsletter Subscription',
-                    // recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
-                    recipients: ['wangyingni@canopywave.com'],
+                    
+                    recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    // recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 })
             })
-            console.log('Email sent:', email);
-            console.log(emailBody,'12312');
             
             if (response.ok) {
                 setMessage('Successfully subscribed!')
