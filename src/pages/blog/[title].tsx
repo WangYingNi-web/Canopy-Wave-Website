@@ -2540,8 +2540,8 @@ export default function BlogDetail() {
             {
               title: 'Conclusion',
               content: [
-                'In an age of data-driven decisions, hidden risks are the greatest liability. The Canopy Wave intelligent monitoring platform, powered by the core trio of Prometheus, Grafana, and Alertmanager, streamlines your entire operational workflow—from metric collection and intelligent alerting to panoramic visualization.',
-                'Visit Canopy Wave today to learn more and start securing your GPU cluster.'
+                'In an age of data-driven decisions, hidden risks are the greatest liability. The Canopy Wave intelligent monitoring platform, powered by the core trio of Prometheus, Grafana, and Alertmanager, streamlines your entire operational workflow—from metric collection and intelligent alerting to panoramic visualization. ',
+                <>Visit <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455]" target="_blank" rel="noopener noreferrer">Canopy Wave</a> today to learn more and start securing your GPU cluster.</>
               ]
             }
           ]
@@ -2557,7 +2557,7 @@ export default function BlogDetail() {
               title: 'I. Tokens: The "Linguistic Building Blocks" of Large Models',
               content: [
                 'When we input text into a large model API, the model does not directly "read" the words. Instead, it first uses a tokenizer to break the text down into the smallest processing units—tokens. These units are neither individual Chinese characters nor letters, nor do they entirely correspond to words in natural language. Instead, they form "semantic fragments" based on semantic relevance and frequency of occurrence.',
-                'Take OpenAI\'s GPT series as an example: the English sentence "ChatGPT is smart." is split into 6 tokens: Chat, G, PT, is, smart, .); the Chinese sentence "你好，世界！" is split into four tokens: "你好", "," "世界", "！". This segmentation logic stems from word frequency statistics during model training. For instance, \'苹果\' (apple) is grouped as a single token due to high co-occurrence frequency, while "鸭蛋" (duck egg) might be split into two tokens because of its lower frequency.',
+                'Take OpenAI\'s GPT series as an example: the English sentence "ChatGPT is smart." is split into 6 tokens: Chat, G, PT, is, smart, .); the Chinese sentence "你好，世界！"(Hello World) is split into four tokens: "你好", "," "世界", "！". This segmentation logic stems from word frequency statistics during model training. For instance, \'苹果\' (apple) is grouped as a single token due to high co-occurrence frequency, while "鸭蛋" (duck egg) might be split into two tokens because of its lower frequency.',
                 'Technically speaking, tokens serve as the bridge connecting human language to machine computation. Tokenizers use algorithms like Byte-Pair Encoding (BPE) to map text into sequences of numerical codes. The model then computes relationships between these codes to achieve understanding and generation, with each token corresponding to a basic computational operation.'
               ]
             },
