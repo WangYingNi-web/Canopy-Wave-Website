@@ -67,14 +67,14 @@ export default function Newsroom() {
         //     image: "/blog/gpu-cluster-cost.webp",
         //     alttitle: "Canopy Wave Monitoring System"
         // },
-        // {
-        //     id: 20,
-        //     title: "NVLink 5.0 is a Game-Changer for AI Agent Development",
-        //     description: "The launch of NVIDIA's Blackwell architecture, spearheaded by the revolutionary B200 GPU, and its groundbreaking NVLink 5.0 technology isn't merely an incremental upgrade; it is the critical enabler that will unlock the true potential of AI Agents",
-        //     date: "September 21, 2025",
-        //     image: "/blog/ai-nvLink.webp",
-        //     alttitle: "Blackwell's NVLink 5.0"
-        // },
+        {
+            id: 20,
+            title: "NVLink 5.0 is a Game-Changer for AI Agent Development",
+            description: "The launch of NVIDIA's Blackwell architecture, spearheaded by the revolutionary B200 GPU, and its groundbreaking NVLink 5.0 technology isn't merely an incremental upgrade; it is the critical enabler that will unlock the true potential of AI Agents",
+            date: "September 22, 2025",
+            image: "/blog/ai-nvLink.webp",
+            alttitle: "Blackwell's NVLink 5.0"
+        },
         {
             id: 19,
             title: "How Businesses Can Prepare for Rising GPU Prices",

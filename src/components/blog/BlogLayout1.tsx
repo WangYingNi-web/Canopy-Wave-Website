@@ -59,6 +59,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-GPU-Virtualization.webp"
                   : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
                   ? "/blog/token-inference-service.webp"
+                  : blogPost.title === "NVLink 5.0 is a Game-Changer for AI Agent Development"
+                  ? "/blog/ai-nvLink.webp"
                   : blogPost.title === "How Businesses Can Prepare for Rising GPU Prices"
                   ? "/blog/gpu-monitoring-system.webp"
                   : "/blog1.webp"

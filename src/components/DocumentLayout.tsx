@@ -132,6 +132,7 @@ const DocumentLayout: React.FC<DocumentLayoutProps> = ({
                 subject: `Documentation Feedback: ${feedbackType}`,
                 body: `
                     Documentation Feedback
+                    submitted from: ${window.location.href}
                     Feedback Type: ${feedbackType}
                     Name: ${feedbackName}
                     Email: ${feedbackEmail}
