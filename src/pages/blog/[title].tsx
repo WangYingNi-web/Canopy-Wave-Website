@@ -2540,7 +2540,7 @@ export default function BlogDetail() {
             {
               title: 'Conclusion',
               content: [
-                'In an age of data-driven decisions, hidden risks are the greatest liability. The Canopy Wave intelligent monitoring platform, powered by the core trio of Prometheus, Grafana, and Alertmanager, streamlines your entire operational workflow—from metric collection and intelligent alerting to panoramic visualization. ',
+                'In the era of data-driven decision-making, invisible risks are the biggest cost. Canopy Wave intelligent monitoring platform, with Prometheus + Grafana + Alert Manager as the core, lays the operation and maintenance highway from indicator collection, intelligent alarm to panoramic visualization for you. ',
                 <>Visit <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455]" target="_blank" rel="noopener noreferrer">Canopy Wave</a> today to learn more and start securing your GPU cluster.</>
               ]
             }

@@ -106,6 +106,7 @@ export default function TutorialDetail() {
   }
 
   const tutorialPost = getTutorialPost(title as string)
+  
 
   if (!tutorialPost) {
     return (
