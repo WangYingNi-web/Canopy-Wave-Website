@@ -7,7 +7,6 @@ import { docsLeftNavItems } from '@/components/docs/docsNavigation';
 export default function AccessAndManageInstance() {
 
     const jumpToItems = [
-        { id: 'overview', label: 'Overview' },
         { id: 'how-to-access', label: 'How to access your instance' },
         { id: 'managing-instance', label: 'Managing your instance' },
     ];
