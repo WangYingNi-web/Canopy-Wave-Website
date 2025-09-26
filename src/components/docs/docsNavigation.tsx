@@ -46,7 +46,7 @@ export const docsLeftNavItems = [
         children: [
             { id: 'quick-start', label: 'Quick Start', href: '/resources/docs/cw-cloud-account/quick-start' },
             { id: 'deploy-an-instance', label: 'Deploy an instance', href: '/resources/docs/cw-cloud-account/deploy-an-instance' },
-            // { id: 'access-and-manage-your-instance', label: 'Access and Manage Your Instance', href: '/resources/docs/cw-cloud-account/access-and-manage-your-instance' },
+            { id: 'access-and-manage-your-instance', label: 'Access and Manage Your Instance', href: '/resources/docs/cw-cloud-account/access-and-manage-your-instance' },
         ]
     },
     {

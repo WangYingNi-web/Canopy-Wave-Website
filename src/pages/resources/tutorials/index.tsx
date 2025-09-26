@@ -67,6 +67,15 @@ const Tutorials: React.FC = () => {
       alt: 'prompt engineering guide',
       onClick: () => handleTutorialClick('Prompt Engineering Guide')
     },
+    // {
+    //   id: 'troubleshooting-gpu-drops',
+    //   category: 'GPU',
+    //   title: 'Troubleshooting GPU Drops',
+    //   image: '/tutorials/troubleshooting-gpu-drops/group.webp',
+    //   date: 'September 25, 2025',
+    //   alt: 'GPU troubleshooting guide',
+    //   onClick: () => handleTutorialClick('Troubleshooting GPU Drops')
+    // },
     {
       id: 'ai-workflows',
       category: 'GPU',

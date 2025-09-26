@@ -297,7 +297,7 @@ const scrollToSection = (id: string) => {
     }, [jumpToItems, activeSection]);
 
     const getLeftSidebarStyles = () => {
-        const baseClasses = 'lg:w-[18%] lg:max-h-[calc(100vh-250px)] lg:overflow-y-auto transition-all duration-300 flex-shrink-0';
+        const baseClasses = 'lg:w-[18%] lg:max-h-[calc(100vh-200px)] lg:overflow-y-auto transition-all duration-300 flex-shrink-0';
 
         switch (sidebarPosition) {
             case 'fixed':

@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
-  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialLayout9,TutorialPost } from '@/components/tutorials'
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialLayout9,TutorialLayout10,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -285,6 +285,23 @@ export default function TutorialDetail() {
           ],
         }
 
+      case 'troubleshooting-gpu-drops':
+        return {
+          id: 10,
+          title: 'Troubleshooting GPU Drops',
+          description: 'A comprehensive guide to understanding and resolving GPU dropout issues, covering hardware, software, and environmental causes.',
+          metaDescription: 'Learn how to diagnose and fix GPU drops with this detailed troubleshooting guide covering hardware failures, driver issues, and environmental factors.',
+          imageAlt: 'GPU troubleshooting guide',
+          sections: [
+            {
+              title: 'GPU Card Drop Causes and How to Troubleshoot',
+              content: [
+                'In our daily lives, we often encounter GPU dropouts when using computers. Therefore, this article primarily explains the causes and how to troubleshoot them.',
+              ],
+            },
+          ],
+        }
+
       default:
         return null
     }
@@ -332,6 +349,8 @@ export default function TutorialDetail() {
         return <TutorialLayout8 />
       case 9:
         return <TutorialLayout9 />
+      case 10:
+        return <TutorialLayout10 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }

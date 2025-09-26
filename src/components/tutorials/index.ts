@@ -9,6 +9,7 @@ export { default as TutorialLayout6 } from './TutorialLayout6'
 export { default as TutorialLayout7 } from './TutorialLayout7'
 export { default as TutorialLayout8 } from './TutorialLayout8'
 export { default as TutorialLayout9 } from './TutorialLayout9'
+export { default as TutorialLayout10 } from './TutorialLayout10'
 
 // 导出通用的接口类型
 export interface TutorialPost {
