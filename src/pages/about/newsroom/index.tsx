@@ -61,6 +61,22 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 24,
+        //     title: "How to Understand the Value of Computing Power",
+        //     description: "Computing power is rapidly emerging as a key strategic resource in the new era, and its value is comparable to oil and steel in the industrial age.",
+        //     date: "September 26, 2025",
+        //     image: "/blog/computing-power.webp",
+        //     alttitle: "computing power"
+        // },
+        // {
+        //     id: 23,
+        //     title: "RAG Equipping AI with Knowledge Plugins",
+        //     description: "How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG).",
+        //     date: "September 25, 2025",
+        //     image: "/blog/ai-rag.webp",
+        //     alttitle: "RAG Technology"
+        // },
         {
             id: 22,
             title: "Large Model API Token Fees",

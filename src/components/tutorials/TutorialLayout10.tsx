@@ -11,10 +11,10 @@ const TutorialLayout10: React.FC = () => {
     const breadcrumbItems = useTutorialBreadcrumb()
 
     const tutorialData = {
-        title: 'Troubleshooting GPU Drops',
+        title: 'GPU Card Drop Causes and How to Troubleshoot',
         sections: [
             {
-                title: 'GPU Card Drop Causes and How to Troubleshoot',
+                title: 'Introduction',
                 navLabel: 'Introduction',
                 content: [
                     'In our daily lives, we often encounter GPU dropouts when using computers. Therefore, this article primarily explains the causes and how to troubleshoot them.'

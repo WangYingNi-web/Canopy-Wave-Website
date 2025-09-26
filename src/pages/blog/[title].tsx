@@ -21,7 +21,7 @@ export default function BlogDetail() {
     const decodedTitle = decodeURIComponent(title);
     switch (decodedTitle) {
 
-      
+
 
       case 'joint-blog-accelerate-enterprise-ai':
         return {
@@ -2618,7 +2618,7 @@ export default function BlogDetail() {
                 '4. API Parameter Control',
                 'Setting the max_tokens parameter when calling the API (e.g., "max_tokens": 200) enforces a limit on the number of output tokens, preventing unexpected overages. For tasks like mathematical computations or data queries, replacing lengthy text descriptions with function calls can further reduce token consumption. For example, when querying "weather in a city over the past 7 days," a long text description would require detailed specification of the query requirements (approximately 50 tokens). In contrast, calling the function `get_weather(city="Beijing", days=7)` requires only about 20 tokens.',
                 <img key="API Parameter Control" src="/blog/api-parameter-control.webp" alt="API Parameter Control" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
-              
+
               ]
             },
             {
@@ -2628,8 +2628,162 @@ export default function BlogDetail() {
                 'Understanding the differences in tokenization rules and mastering token estimation methods are essential for achieving efficient resource utilization while enjoying the benefits of large models. As model technology evolves, token segmentation strategies and billing models may continue to advance, but the core principle of "paying for computational resource consumption" will remain applicable for the foreseeable future.'
               ]
             }
-            
+
           ]
+        }
+
+      case 'rag-equipping-ai-with-knowledge-plugins':
+        return {
+          id: 23,
+          title: 'RAG Equipping AI with Knowledge Plugins',
+          description: 'RAG Equipping AI with Knowledge Plugins',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Artificial intelligence (AI) language models like ChatGPT, Grok, and others have become deeply integrated into daily work and life, serving as practical intelligent assistants thanks to their powerful content generation capabilities. However, you may have experienced moments when AI seems "unreliable"—either producing nonsensical responses (known as model "hallucinations") or delivering answers based on outdated data, unable to keep up with the latest developments. The core issue lies in the knowledge limitations of traditional generative AI: training data has a clear "expiration date," and errors due to data biases are hard to avoid.',
+                ['How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called ', React.createElement('strong', {}, 'Retrieval-Augmented Generation (RAG)'),'. It acts like a tailor-made "external brain" for AI, enabling responses that are both deep and well-grounded, truly meeting real-world needs. Let\'s dive into the technical world of RAG and unpack its logic and value.']
+              ],
+            },
+            {
+              title: '1. What is RAG? The Synergy of Retrieval and Generation',
+              content: [
+                ['RAG is not a standalone technology but an innovative fusion of ', React.createElement('strong', {}, 'information retrieval'), ' and ', React.createElement('strong', {}, 'generative modeling'), '. In simple terms, it allows AI to "look up information" before "writing an answer." Its core process can be broken down into three steps, each designed to ensure precise and reliable outputs:'],
+                ['1.', React.createElement('strong', {}, ' Retrieval'), ': When you ask a question, RAG quickly searches a vast knowledge base (documents, databases, websites, etc.) to find the most relevant snippets. It\'s like giving AI a "temporary library."'],
+                ['2.', React.createElement('strong', {}, ' Augmentation'), ': RAG combines the retrieved information with your question to form a richer context.'],
+                ['3.', React.createElement('strong', {}, ' Generation'), ': Based on this context, AI generates accurate, detailed responses rather than improvising from "memory" alone.'],
+                ['4.', React.createElement('strong', {}, ' Analogy'), ': Traditional AI is like a scholar working in isolation, relying solely on memorized knowledge and occasionally making mistakes. RAG, however, is like a seasoned professor who verifies information before responding, ensuring outputs are solid and trustworthy.'],
+              ],
+            },
+            {
+              title: '2. How Does RAG Make AI "Smarter"?',
+              content: [
+                'RAG doesn\'t directly enhance a model\'s parameters or algorithms. Instead, it empowers AI with external knowledge, making it perform better in real-world applications. Here\'s how it makes AI "smarter":',
+                React.createElement('strong', { key: 'hallucinations-accuracy' }, '2.1 Reducing Hallucinations for Greater Accuracy'), ' Traditional models often generate incorrect answers due to a lack of real-time data or training biases. RAG retrieves key information from up-to-date regulatory documents, ensuring fact-based responses.',
+                React.createElement('strong', { key: 'dynamic-knowledge' }, '2.2 Keeping Up with Dynamic Knowledge'), ' AI\'s training data has a cutoff date, but RAG connects to real-time data sources (e.g., news, academic papers), enabling AI to answer timely questions with current information.',
+                React.createElement('strong', { key: 'specialized-domains' }, '2.3 "Expert Mode" for Specialized Domains'), ' In fields like healthcare, law, or finance, generic models often fall short. RAG’s strength lies in its ', React.createElement('strong', {}, 'customizable knowledge base'), '. It can connect to domain-specific databases—medical literature or clinical guidelines for healthcare, internal case law or national regulations for legal applications, or industry reports and financial statements for finance. With this specialized knowledge, AI transforms into a "domain assistant," delivering precise, industry-aligned recommendations.',
+                React.createElement('strong', { key: 'without-retraining' }, '2.4 Efficient Scaling Without Retraining'), ' RAG can connect to specialized databases—medical literature for healthcare, case law for legal applications, or financial reports for finance, transforming AI into a precise "domain assistant."',
+                'To learn new knowledge, traditional AI requires extensive computational resources and time for retraining. For example, if a company adds 10 new product manuals, teaching an AI model about them could take weeks and incur high costs.',
+                'RAG revolutionizes this process: updating knowledge only requires "swapping the library," not modifying the model itself. Companies can simply upload new manuals or policies to the RAG knowledge base, and the AI instantly "learns" the new content without any changes to the model. This efficient "knowledge-on-demand" approach drastically reduces the cost and time of keeping AI up to date, making it ideal for fast-evolving businesses or dynamic fields.',
+                <img key="AI Smarter" src="/blog/ai-smarter.webp" alt="AI Smarter" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                ],
+            },
+            {
+              title: '3. RAG\'s Applications: From Daily Life to Business',
+              content: [
+                ['RAG\'s core value lies in its ', React.createElement('strong', {}, 'versatility'), '. Whether in personal life, academic research, or enterprise operations, RAG excels wherever ', React.createElement('strong', {}, 'context-specific'), ', ', React.createElement('strong', {}, 'accurate answers'), ' are needed. Here are some key applications:'],
+                React.createElement('span', {}, React.createElement('strong', {}, 'Smart Customer Service'), ': E-commerce platforms use RAG to integrate product manuals and user feedback, enabling AI to answer complex queries like, "Does this phone support 5G?"'),
+                React.createElement('span', {}, React.createElement('strong', {}, 'Academic Research'), ': Researchers use RAG to retrieve the latest papers, allowing AI to summarize cutting-edge findings or answer domain-specific questions.'),
+                React.createElement('span', {}, React.createElement('strong', {}, 'Real-Time Q&A'), ': News platforms leverage RAG to tap into dynamic news feeds, enabling AI to answer questions like, "How did the stock market perform today?"'),
+                React.createElement('span', {}, React.createElement('strong', {}, 'Enterprise Knowledge Management'), ': Companies use RAG to consolidate internal documents, turning AI into an "intelligent assistant" for quickly retrieving policies or processes.'),
+              ],
+            },
+            {
+              title: '4. Canopy Wave\'s Chat Model with RAG: A Practical Upgrade',
+              content: [
+                <>As a professional AI technology provider, <a href="https://cloud.canopywave.io/" className="text-[#80B224] hover:text-[#98c455]" target="_blank" rel="noopener noreferrer">Canopy Wave</a> has introduced RAG functionality to our Chat model, marking a significant leap in intelligent interaction. This feature allows users to seamlessly integrate custom knowledge bases (e.g., company documents, industry reports, or personal notes) into the Chat model, delivering more accurate and personalized responses.</>,
+                'Many users reported that standard Chat models struggled with internal proprietary knowledge. RAG enables businesses to build a "private AI assistant," bridging information gaps. Users can now upload documents or connect databases, and the Chat model retrieves relevant content in real time to generate answers, eliminating knowledge blind spots.',
+                React.createElement('strong', {}, 'How to Use It?'),
+                ['1. ', React.createElement('strong', {}, 'Integrate a Knowledge Base'), ': In the Chat model\'s console, upload PDF, Word, or other file formats, or connect to a database via API.'],
+                ['2. ', React.createElement('strong', {}, 'Configure Retrieval Parameters'), ': Adjust the retrieval scope, similarity thresholds, etc., to ensure highly relevant outputs.'],
+                ['3. ', React.createElement('strong', {}, 'Test and Optimize'), ': Enter queries, review RAG-enhanced responses, and refine the knowledge base as needed.'],
+                'For example, in a customer service scenario, a retail company can upload its product catalog to the knowledge base. When a user asks, "What\'s the warranty period for this model?" the Chat model retrieves precise details from the catalog, avoiding vague responses. This boosts efficiency and reduces errors.',
+                'We invite users to explore this feature, which brings RAG\'s "external brain" magic directly into your workflow. If you\'re a Canopy Wave customer, log in to experience the power of RAG today!',
+                <img key="Chat Model" src="/blog/chat-model.webp" alt="Chat Model" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              
+              ],
+            },
+            {
+              title: '5. RAG\'s Limitations and Future',
+              content: [
+                React.createElement('strong', {}, '5.1 Current Limitations: Dependence on Knowledge Base Quality and Retrieval Precision'),
+                [React.createElement('strong', {}, 'Garbage In, Garbage Out'), ': RAG\'s core relies on the retrieved information. If the knowledge base contains errors, outdated content, or incomplete data, the AI\'s output may be misleading. For instance, if a company\'s product manual is inaccurate, RAG will generate answers based on faulty information.'],
+                [React.createElement('strong', {}, 'Noise Interference'), ': For complex, multi-step questions (e.g., "How do I apply for a government subsidy, and what documents are needed?"), RAG may retrieve loosely related information (e.g., processes for other subsidies), impacting answer accuracy.'],
+                [React.createElement('strong', {}, 'Efficiency with Large Knowledge Bases'), ': When dealing with billions of data entries, retrieval speed can slow down, causing response delays and affecting user experience.'],
+                React.createElement('strong', {}, '5.2 Future Directions: From "Precise" to "Smarter"'),
+                'These limitations are being addressed through ongoing advancements:',
+                [React.createElement('strong', {}, 'Improved Retrieval Algorithms'), ': Techniques like "multi-round reranking" refine initial results with semantic matching and relevance scoring to eliminate noise and boost precision.'],
+                [React.createElement('strong', {}, 'Enhanced Efficiency'), ': Vector databases and other high-speed storage solutions accelerate retrieval from massive knowledge bases, resolving latency issues.'],
+                [React.createElement('strong', {}, 'Expanded Capabilities'), ': By integrating multimodal technology, RAG could retrieve not only text but also images, videos, or tables. For example, AI could analyze product design diagrams and generate detailed explanations, covering a broader range of use cases.']
+              ],
+            },
+            {
+              title: '6. RAG: AI\'s "Intelligence Booster"',
+              content: [
+                ['Through its innovative fusion of ', React.createElement('strong', {}, 'retrieval and generation'), ', RAG equips AI with a powerful "external brain," elevating it from an isolated, memory-based model to a professional, evidence-based responder. It curbs hallucinations to ensure accurate outputs', ', adapts to dynamic knowledge to meet modern demands, and empowers specialized domains like healthcare, law, and finance through tailored knowledge bases.', 'These breakthroughs make AI truly ', React.createElement('strong', {}, 'smarter'), ' and ', React.createElement('strong', {}, 'more reliable'), ' in real-world applications.'],
+                'As knowledge bases continue to improve (e.g., supporting multimodal content) and core algorithms advance (e.g., optimizing retrieval efficiency), RAG will remain a key driver of AI\'s evolution. In the future, when you engage in seamless conversations with AI, marveling at its precise responses to professional questions or timely insights into recent events, it\'s likely RAG working behind the scenes, making that "erudite" performance both deep and well-grounded.'
+              ],
+            },
+          ],
+        }
+
+      case 'how-to-understand-the-value-of-computing-power':
+        return {
+          id: 24,
+          title: 'How to Understand the Value of Computing Power',
+          description: 'Dialogue with the Future: How to Understand the Value of Computing Power',
+          sections: [
+            {
+              title: '',
+              content: [
+                'Computing power, the core of the AI race',
+                'Computing power is rapidly emerging as a key strategic resource in the new era, and its value is comparable to oil and steel in the industrial age.',
+                'Similar to oil and steel, computing power is also scarce, controllable, and highly centralized, with extensive and far-reaching applications in economic development and national defense.',
+                'If oil and steel were the cornerstones of national strength in the past, today computing power is becoming the core resource supporting national competitiveness.',
+              ],
+            },
+            {
+              title: 'Computing Power: The Oil of the New Era',
+              content: [
+                'The analogy of "computing power as the new oil" is rooted in several key parallels',
+                React.createElement('strong', {}, '• Comparable strategic position:'),
+                'In the industrial age, oil drove transportation, manufacturing, and warfare; today, computing power supports artificial intelligence, the digital economy, and military security, and is at the core of competition among countries and companies.',
+                React.createElement('strong', {}, '• Scarcity:'),
+                'Top-notch chips, supercomputer clusters, and high-performance data centers are not readily available and are subject to supply chain constraints.',
+                React.createElement('strong', {}, '• Centralization:'),
+                'Global high-end computing resources are highly concentrated in a few countries, companies and regions, just as oil resources were concentrated in specific geographical areas in the past.',
+                React.createElement('strong', {}, '• Wide range of uses:'),
+                'Oil drives the industrial system, while computing power drives various fields from AI model training and scientific computing to financial security and medical research and development.',
+                'This view may be controversial. Some believe that computing power is just one of many input factors, and is equally important as talent, data, and algorithms.',
+                'Although this view makes sense, judging from the current distribution of computing power resources, it is more accurate to view computing power as a strategic resource.',
+                'Like oil, computing power is extremely valuable in driving economic and technological development. It is the most important investment in developing the critical emerging technology of artificial intelligence.',
+                'Arguably, computing power is the primary bottleneck in the field of artificial intelligence today.',
+                'It\'s also the largest expense for AI companies. OpenAI reportedly spends almost ten times as much on computing power as it does on employee salaries.',
+                'Major companies are investing unprecedented amounts of money to build larger supercomputing centers just to develop and deploy more powerful artificial intelligence.',
+                <img key="hardware costs chart" src="/blog/costs-chart.webp" alt="Hardware costs chart" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                <div key="hardware costs caption" className="text-center text-sm text-gray-600 -mt-8">Hardware costs have almost doubled every year since 2019.</div>,
+                'Since 2019, the hardware cost of leading AI supercomputers has increased at a rate of approximately 1.9 times per year, while the corresponding electricity demand has increased by 2.0 times per year.',
+                'Companies are investing aggressively because computing power offers significant competitive advantages. Whether it\'s model pre-training, experimental research, data generation, fine-tuning, or reinforcement learning, every process benefits from massive computing power. More importantly, computing power enables them to efficiently serve their rapidly growing user base. Especially in model training, there\'s a clear positive correlation between computing power investment and model performance.',
+                <img key="training-compute" src="/blog/training-compute.webp" alt="training compute" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                <div className="text-center text-sm text-gray-600">In inference benchmarks, there is a clear positive correlation between the performance of AI models and the scale of training compute.</div>,
+              ],
+            },
+        
+            {
+              title: 'The Race for Computing Supremacy',
+              content: [
+                'The distribution of computing power is highly concentrated. According to estimates, the United States has an absolute dominant position with about 75% of the world\'s AI supercomputing capacity (calculated by performance), China ranks second with about 15%, and the European Union as a whole has about 5%.',
+                'This gap stems from the huge capital required to build top-notch data centers and is directly related to the US export control policy towards other countries.',
+                <img key="AI Computing Power Distribution Map" src="/blog/ai-computing-power-distribution.webp" alt="AI Computing Power Distribution Map" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                <div className="text-center text-sm text-gray-600">AI Computing Power Distribution Map</div>,
+                'The AI chip supply chain exhibits a highly centralized "pyramid" structure. The market is dominated by a handful of giants: Nvidia, with an estimated 80%–90% of the AI chip market share, is the undisputed leader in this field. While Google develops its own chips, unlike Nvidia, it primarily provides services through leasing rather than sales.',
+                'Whether it\'s Nvidia\'s GPUs or Google\'s TPUs, the production of these high-performance AI chips relies heavily on Taiwan\'s TSMC. TSMC is not only the world\'s leading chip foundry, but also controls approximately 90% of the most advanced chip manufacturing capabilities. TSMC\'s advanced manufacturing capabilities are inseparable from the extreme ultraviolet lithography equipment exclusively provided by ASML of the Netherlands. This equipment is an indispensable core tool for producing the most advanced chips. The resulting supply chain, from design and foundry to key equipment, is tightly controlled by a handful of companies, and any problem in any link could impact the entire global supply of AI chips.',
+                <img key="AI chip supply chain diagram" src="/blog/ai-chip-supply-chain.webp" alt="AI chip supply chain diagram" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                <div className="text-center text-sm text-gray-600">AI chip supply chain diagram</div>,
+                'Core computing resources can be effectively controlled. The current high concentration of cutting-edge AI chip production means that a handful of countries and companies hold significant dominance in both technology and supply, exerting significant influence on global AI development. US export controls on semiconductor manufacturing equipment and AI chips have demonstrated the effectiveness of such controls. While these controls are not absolute given the complexities of globalization and market demand, they are still sufficient to profoundly impact the industry landscape and the direction of technological development. As AI technology continues to grow in importance across industries, control over critical computing resources is becoming a core factor influencing competitiveness and strategic planning.',
+              ],
+            },
+            {
+              title: 'The ultimate value of computing power',
+              content: [
+                'The scarcity of computing power may come as a surprise, given that the total amount of computing power is growing at an astonishing rate. However, market realities show that demand for cutting-edge AI chips far outstrips supply. Nvidia\'s rise to one of the world\'s most valuable tech companies is no accident; it\'s a direct result of its leadership in core computing resources.',
+                'Some might argue that improved algorithmic efficiency diminishes the importance of computing power. For example, DeepSeek-V3 achieves GPT-4 performance at one-tenth the cost. This phenomenon might seem to undermine the centrality of computing power, but in fact, it demonstrates its value. Improved algorithmic efficiency doesn\'t reduce the demand for computing power, but rather enables higher levels of innovation with the same computing power. In other words, as algorithmic capabilities improve, the choice is often not to use less computing power to complete existing tasks, but to use more computing power to explore more complex and advanced applications.',
+                'The past decade has clearly demonstrated this trend: despite continuous improvements in algorithmic efficiency and hardware performance, the computational requirements for state-of-the-art AI training have consistently reached new heights. Every leap in model size and every new technological breakthrough has brought with it an ever-increasing appetite for computing power. For leading AI institutions, the notion that "you can never have enough compute" is a widely held consensus.',
+                'In the future, computing power will not only remain crucial but will become even more crucial. It has become a key means of production for the development of artificial intelligence and a cornerstone for driving technological innovation and industrial upgrading. As one researcher put it, "Computing power is the core means of production in the future; having more will always be an advantage." This statement not only reveals the scarcity of computing power but also emphasizes its strategic value—controlling more computing power means greater initiative in the AI competition, stronger innovation capabilities, and broader development space.',
+                'In short, computing power is not only the fuel driving AI advancements, but also a strategic resource and a core manifestation of competitive advantage. As AI technology increasingly penetrates various fields, whoever controls critical computing resources is more likely to lead the future technological landscape. The scarcity and concentration of computing power determine its value and its central position in future technological competition.',
+              ],
+            },
+          ],
         }
 
       default:
@@ -2687,7 +2841,9 @@ export default function BlogDetail() {
                                   ? "/blog/ai-GPU-Virtualization.webp"
                                   : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
                                     ? "/blog/token-inference-service.webp"
-                                    : "/blog1.webp"
+                                    : blogPost.title === "RAG Equipping AI with Knowledge Plugins"
+                                      ? "/blog/ai-rag.webp"
+                                      : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -2735,6 +2891,10 @@ export default function BlogDetail() {
         return <BlogLayout1 blogPost={blogPost} />
       case 21:
         return <BlogLayout1 blogPost={blogPost} />
+      case 22:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 23:
+        return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
     }
@@ -2756,6 +2916,10 @@ export default function BlogDetail() {
       case 20:
         return "min-h-screen bg-[#F9F9F9]"
       case 21:
+        return "min-h-screen bg-[#F9F9F9]"
+      case 22:
+        return "min-h-screen bg-[#F9F9F9]"
+      case 23:
         return "min-h-screen bg-[#F9F9F9]"
       default:
         return "min-h-screen bg-[#F9F9F9]"
@@ -2834,7 +2998,7 @@ export default function BlogDetail() {
             <meta key="token-inference-og-description" property="og:description" content="In an era where AI is reshaping all businesses, your team is facing these challenges:  Over-provisioning and Severe Resource" />
           </>
         )}
-     
+
         {title === 'how-businesses-can-prepare-for-rising-gpu-prices' && (
           <>
             <meta key="monitoring-title" name="title" content="How Businesses Can Prepare for Rising GPU Prices" />
@@ -2844,7 +3008,7 @@ export default function BlogDetail() {
             <meta key="monitoring-og-description" property="og:description" content="As the fourth quarter approaches key components—GPUs, DDR5 memory, CPUs, and enterprise-grade storage—have seen significant price increases." />
           </>
         )}
-        
+
         {title === 'nvlink-5-0-is-a-game-changer-for-ai-agent-development' && (
           <>
             <meta key="monitoring-title" name="title" content="NVLink 5.0 is a Game-Changer for AI Agent Development" />
@@ -2870,6 +3034,15 @@ export default function BlogDetail() {
             <meta key="token-fees-og-title" property="og:title" content="Large Model API Token Fees" />
             <meta key="token-fees-og-image" property="og:image" content="https://canopywave.com/blog/api-token-fees.webp" />
             <meta key="token-fees-og-description" property="og:description" content="The choice of token-based pricing for large model APIs stems fundamentally from its strong correlation with computational costs. This model is more rational than traditional per-call pricing" />
+          </>
+        )}
+        {title === 'rag-equipping-ai-with-knowledge-plugins' && (
+          <>
+            <meta key="rag-title" name="title" content="RAG Equipping AI with Knowledge Plugins" />
+            <meta key="rag-description" name="description" content="How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG)." />
+            <meta key="rag-og-title" property="og:title" content="RAG Equipping AI with Knowledge Plugins" />
+            <meta key="rag-og-image" property="og:image" content="https://canopywave.com/blog/ai-rag.webp" />
+            <meta key="rag-og-description" property="og:description" content="How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG)." />
           </>
         )}
       </Head>
