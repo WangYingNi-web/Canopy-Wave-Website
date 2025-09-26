@@ -69,14 +69,14 @@ export default function Newsroom() {
         //     image: "/blog/computing-power.webp",
         //     alttitle: "computing power"
         // },
-        // {
-        //     id: 23,
-        //     title: "RAG Equipping AI with Knowledge Plugins",
-        //     description: "How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG).",
-        //     date: "September 25, 2025",
-        //     image: "/blog/ai-rag.webp",
-        //     alttitle: "RAG Technology"
-        // },
+        {
+            id: 23,
+            title: "RAG Equipping AI with Knowledge Plugins",
+            description: "How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG).",
+            date: "September 25, 2025",
+            image: "/blog/ai-rag.webp",
+            alttitle: "RAG Technology"
+        },
         {
             id: 22,
             title: "Large Model API Token Fees",
