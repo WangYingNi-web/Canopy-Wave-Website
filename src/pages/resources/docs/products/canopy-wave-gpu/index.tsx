@@ -164,7 +164,7 @@ export default function CanopyWaveGPUPage() {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-24 mb-6 max-w-3xl mx-auto">
                         <div className="flex-shrink-0 flex flex-col items-center">
                             <PreloadedImage
-                                src="/docs/products/hgx-h200.png"
+                                src="/docs/products/hgx-h200-2.png"
                                 alt="HGX H200 GPU Module"
                                 className="w-full max-w-[190px]"
                             />
@@ -186,7 +186,7 @@ export default function CanopyWaveGPUPage() {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-24 mb-6 max-w-3xl mx-auto">
                         <div className="flex-shrink-0 flex flex-col items-center">
                             <PreloadedImage
-                                src="/docs/products/hgx-h100.png"
+                                src="/docs/products/hgx-h100-2.png"
                                 alt="HGX H100 GPU Module"
                                 className="w-full max-w-[190px]"
                             />
@@ -488,12 +488,12 @@ export default function CanopyWaveGPUPage() {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-24 mb-6 max-w-3xl mx-auto">
                         <div className="flex-shrink-0 flex flex-col items-center">
                             <PreloadedImage
-                                src="/docs/products/canopy-wave-gpu/management-switch-2.png"
-                                alt="Management Switch 2"
+                                src="/docs/products/canopy-wave-gpu/Intra-Switch.webp"
+                                alt="Intra Switch"
                                 className="w-full max-w-[190px]"
                             />
                             <h4 className="text-sm font-medium" style={{color: '#80B224'}}>
-                                Management Switch
+                                Intra Switch
                             </h4>
                         </div>
                         <div className="flex-1">
