@@ -2724,9 +2724,8 @@ export default function BlogDetail() {
           description: 'Dialogue with the Future: How to Understand the Value of Computing Power',
           sections: [
             {
-              title: '',
+              title: 'Computing power, the core of the AI race',
               content: [
-                'Computing power, the core of the AI race',
                 'Computing power is rapidly emerging as a key strategic resource in the new era, and its value is comparable to oil and steel in the industrial age.',
                 'Similar to oil and steel, computing power is also scarce, controllable, and highly centralized, with extensive and far-reaching applications in economic development and national defense.',
                 'If oil and steel were the cornerstones of national strength in the past, today computing power is becoming the core resource supporting national competitiveness.',
