@@ -488,7 +488,7 @@ export default function CanopyWaveGPUPage() {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-24 mb-6 max-w-3xl mx-auto">
                         <div className="flex-shrink-0 flex flex-col items-center">
                             <PreloadedImage
-                                src="/docs/products/canopy-wave-gpu/Intra-Switch.webp"
+                                src="/docs/products/canopy-wave-gpu/Intra-Switch.png"
                                 alt="Intra Switch"
                                 className="w-full max-w-[190px]"
                             />
