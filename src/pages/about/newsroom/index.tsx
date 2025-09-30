@@ -61,6 +61,22 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 26,
+        //     title: "Enterprise GPU Cluster Procurement Strategy",
+        //     description: "GPUs, with their massive parallelism and floating-point throughput, have become the cornerstone of enterprise high-performance computing (HPC). Market analysts at TrendForce reported that global data-center GPU spending grew about 38% year-over-year in 2024.",
+        //     date: "September 28, 2025",
+        //     image: "/blog/enterprise-gpu-cluster.webp",
+        //     alttitle: "Enterprise GPU Cluster"
+        // },
+        {
+            id: 25,
+            title: "LoRA vs. RAG: Key Comparisons and Use Cases",
+            description: "This article provides a comparative analysis of LoRA fine-tuning and RAG, and explores the scenarios and audiences they are suitable for, helping readers choose the appropriate method based on their needs.",
+            date: "September 27, 2025",
+            image: "/blog/lora-vs-rag.webp",
+            alttitle: "LoRA vs. RAG"
+        },
         {
             id: 24,
             title: "How to Understand the Value of Computing Power",
