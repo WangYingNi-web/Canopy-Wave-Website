@@ -2795,7 +2795,7 @@ export default function BlogDetail() {
               title: '',
               content: [
                 'In the field of artificial intelligence, particularly in the application of large language models (LLMs), efficiently optimizing models to adapt to specific tasks has become a critical challenge. LoRA (Low-Rank Adaptation) and RAG (Retrieval-Augmented Generation) are two popular techniques that enhance model performance from different perspectives. This article provides a comparative analysis of LoRA fine-tuning and RAG, and explores the scenarios and audiences they are suitable for, helping readers choose the appropriate method based on their needs.',
-                <img key="LoRA vs. RAG" src="/blog/lora-vs-rag.webp" alt="LoRA vs. RAG" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+                <img key="Introduction" src="/blog/introduction.webp" alt="Introduction" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
               ],
             },
             {
@@ -2847,6 +2847,7 @@ export default function BlogDetail() {
                 React.createElement(React.Fragment, {}, React.createElement('strong', {}, 'Audiences:'), ' Data engineers or product managers who focus more on system integration rather than model training; large enterprise AI teams capable of maintaining knowledge bases; non-technical users who can quickly build prototypes using frameworks like LangChain. RAG is ideal for users who prioritize accuracy and real-time performance, such as content creators or customer support staff.'),
                 React.createElement('strong', {}, '4.3 Suggestions for Mixed Use'),
                 'For complex applications, such as intelligent assistants, you can first use LoRA to fine-tune the base model and then integrate RAG to enhance retrieval capabilities. This is suitable for experienced AI practitioners who can balance efficiency and accuracy.',
+              <img key="Conclusion" src="/blog/conclusion.webp" alt="Conclusion" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
               ],
             },
             {
@@ -2863,7 +2864,7 @@ export default function BlogDetail() {
         return {
           id: 26,
           title: 'Enterprise GPU Cluster Procurement Strategy',
-          description: 'GPUs, with their massive parallelism and floating-point throughput, have become the cornerstone of enterprise high-performance computing (HPC). Market analysts at TrendForce reported that global data-center GPU spending grew about 38% year-over-year in 2024.',
+          description: 'Enterprise GPU Cluster Procurement Strategy—Balancing Performance and Cost',
           sections: [
             {
               title: '1. Introduction',
@@ -2886,45 +2887,46 @@ export default function BlogDetail() {
               title: '3. Strategic Framework',
               content: [
                 React.createElement('strong', {}, 'Needs Assessment'),
-                'Profile workloads: training vs. inference, dataset sizes, peak vs. average utilization.',
-                'Prioritize metrics: TFLOPS, memory size, NVLink bandwidth, or I/O throughput.',
-                'Plan scalability: anticipate 12–24 month growth to size power and rack capacity.',
+                '• Profile workloads: training vs. inference, dataset sizes, peak vs. average utilization.',
+                '• Prioritize metrics: TFLOPS, memory size, NVLink bandwidth, or I/O throughput.',
+                '• Plan scalability: anticipate 12–24 month growth to size power and rack capacity.',
                 React.createElement('strong', {}, 'Hardware Selection'),
-                React.createElement('strong', {}, 'Tiered Architecture:'), ' Mix flagship GPUs (e.g.H200 or future Blackwell B200) with mainstream accelerators (e.g.L40S, L40, or mid-tier H100 NVL) so that "critical workloads use high end, routine jobs use mainstream / mid tier."',
-                React.createElement('strong', {}, 'Refurbished or Certified Used:'), ' Suitable for non-critical tasks, often 20–30% cheaper.',
-                React.createElement('strong', {}, 'Hybrid Cloud–On-Prem:'), ' Train in the cloud, deploy inference on-premises to reduce capital expenditure.',
+                [React.createElement('strong', {}, '• Tiered Architecture:'), ' Mix flagship GPUs (e.g.H200 or future Blackwell B200) with mainstream accelerators (e.g.L40S, L40, or mid-tier H100 NVL) so that "critical workloads use high end, routine jobs use mainstream / mid tier."'],
+                [React.createElement('strong', {}, '• Refurbished or Certified Used:'), ' Suitable for non-critical tasks, often 20–30% cheaper.'],
+                [React.createElement('strong', {}, '• Hybrid Cloud–On-Prem:'), ' Train in the cloud, deploy inference on-premises to reduce capital expenditure.'],
                 React.createElement('strong', {}, 'Procurement Tactics'),
-                React.createElement('strong', {}, 'Phased Purchasing:'), ' Build in two or three waves, spaced 6–9 months apart, to capture price drops.',
-                React.createElement('strong', {}, 'Multi-Vendor Contracts:'), ' Sign framework agreements with OEMs, distributors, and cloud providers to lock in pricing and diversify supply.',
-                React.createElement('strong', {}, 'Comprehensive After-Sales and Operational Support:'), ' Instead of relying on often unrealistic "long-term maintenance contracts," it is more practical to partner with a supplier that offers a global supply chain and mature after-sales processes. Canopy Wave, for example, operates across North America, Europe, and Asia, enabling rapid allocation of in-stock units when urgent demand arises. Combined with a complete RMA and service system, this ensures timely repair and replacement throughout the equipment lifecycle, significantly reducing operational risks and long-term costs.',
+                [React.createElement('strong', {}, '• Phased Purchasing:'), ' Build in two or three waves, spaced 6–9 months apart, to capture price drops.'],
+                [React.createElement('strong', {}, '• Multi-Vendor Contracts:'), ' Sign framework agreements with OEMs, distributors, and cloud providers to lock in pricing and diversify supply.'],
+                [React.createElement('strong', {}, '• Comprehensive After-Sales and Operational Support:'), ' Instead of relying on often unrealistic "long-term maintenance contracts," it is more practical to partner with a supplier that offers a global supply chain and mature after-sales processes. Canopy Wave, for example, operates across North America, Europe, and Asia, enabling rapid allocation of in-stock units when urgent demand arises. Combined with a complete RMA and service system, this ensures timely repair and replacement throughout the equipment lifecycle, significantly reducing operational risks and long-term costs.'],
                 React.createElement('strong', {}, 'Cost & Energy Optimization'),
-                'Choose GPUs with advanced process nodes (e.g., 4 nm) for higher performance per watt.',
-                'Implement Kubernetes or Slurm for GPU pooling and higher utilization.',
-                'Consider liquid cooling, which can cut cooling power by 20–30% and enables dense racks.',
+                '• Choose GPUs with advanced process nodes (e.g., 4 nm) for higher performance per watt.',
+                '• Implement Kubernetes or Slurm for GPU pooling and higher utilization.',
+                '• Consider liquid cooling, which can cut cooling power by 20–30% and enables dense racks.',
               ],
             },
             {
               title: '4. Example',
               content: [
                 'A European e-commerce company planned a 500-GPU deployment in 2024 with an initial budget of €15 million. Through careful planning, it reduced first-phase spending to €10.5 million by:',
-                'Deploying a 70% midrange / 30% high-end GPU mix.',
-                'Splitting procurement into two phases eight months apart, capturing a ~12% price decline.',
-                'Installing a liquid-cooling system, lowering five-year energy and cooling costs by 18%.',
-                'Overall, the five-year TCO dropped about 25% while delivering roughly 90% of the target compute capacity.',
+                '• Deploying a 70% midrange / 30% high-end GPU mix.',
+                '• Splitting procurement into two phases eight months apart, capturing a ~12% price decline.',
+                '• Installing a liquid-cooling system, lowering five-year energy and cooling costs by 18%.',
+                '• Overall, the five-year TCO dropped about 25% while delivering roughly 90% of the target compute capacity.',
               ],
             },
             {
               title: '5. Execution and Risk Control',
               content: [
-                React.createElement('strong', {}, 'Ongoing Demand Review:'), ' Quarterly assessments keep procurement aligned with changing workloads.',
-                React.createElement('strong', {}, 'Supply-Chain Risk Management:'), ' Monitor geopolitical factors and component shortages; maintain safety stock when feasible.',
-                React.createElement('strong', {}, 'Budget Transparency:'), ' Joint reviews by finance and engineering ensure balanced capital and operational spending.',
+                [React.createElement('strong', {}, '• Ongoing Demand Review:'), ' Quarterly assessments keep procurement aligned with changing workloads.'],
+                [React.createElement('strong', {}, '• Supply-Chain Risk Management:'), ' Monitor geopolitical factors and component shortages; maintain safety stock when feasible.'],
+                [React.createElement('strong', {}, '• Budget Transparency:'), ' Joint reviews by finance and engineering ensure balanced capital and operational spending.'],
+              
               ],
             },
             {
               title: '6. Conclusion',
               content: [
-                'GPU cluster procurement is an ongoing balancing act. Chasing either maximum performance or rock-bottom price alone undermines long-term competitiveness. By anchoring decisions in workload analysis, leveraging a tiered hardware mix, staging purchases, diversifying suppliers, and optimizing operations, enterprises can maximize performance while minimizing total cost of ownership, positioning themselves for the next three to five years of accelerating compute demand.',
+                ['GPU cluster procurement is an ongoing balancing act. Chasing either maximum performance or rock-bottom price alone undermines long-term competitiveness. By anchoring decisions in workload analysis, leveraging a tiered hardware mix, staging purchases, diversifying suppliers, and optimizing operations, enterprises can', React.createElement('strong', {}, ' maximize performance while minimizing total cost of ownership,'), 'positioning themselves for the next three to five years of accelerating compute demand.'],
               ],
             },
           ],
@@ -2956,40 +2958,40 @@ export default function BlogDetail() {
     return blogPost.title === "Enterprise GPU Cluster Procurement Strategy"
       ? "/blog/enterprise-gpu-cluster.webp"
       : blogPost.title === "Decoding AI Hallucinations"
-      ? "/blog/ai-hallucinations.webp"
-      : blogPost.title === "Accelerated AI for Business"
-        ? "/blog/ai-business.webp"
-        : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
-          ? "/blog/blog2.webp"
-          : blogPost.title === "AI Generates Personalized Content"
-            ? "/blog/ai-content-generation.webp"
-            : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
-              ? "/blog/dedicated-endpoints.webp"
-              : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
-                ? "/blog/gpu-computing.webp"
-                : blogPost.title === "AI-Powered E-commerce"
-                  ? "/blog/ai-shopping.webp"
-                  : blogPost.title === "AI's Role in Autonomous Driving"
-                    ? "/blog/ai-car.webp"
-                    : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
-                      ? "/blog/gpu-cluster-cost.webp"
-                      : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
-                        ? "/blog/workflows2.webp"
-                        : blogPost.title === "Humanity's Next Partner: The AI Agent"
-                          ? "/blog/ai-agent.webp"
-                          : blogPost.title === "AI Fine-tuning for Beginners"
-                            ? "/blog/ai-fine-tuning.webp"
-                            : blogPost.title === "Revolutionizing Elderly Care with AI"
-                              ? "/blog/ai-elderly-care.webp"
-                              : blogPost.title === "AI: The Doctor's Third Eye in Medical Imaging"
-                                ? "/blog/ai-gpu-edge.webp"
-                                : blogPost.title === "GPUs in Edge Computing"
-                                  ? "/blog/ai-GPU-Virtualization.webp"
-                                  : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
-                                    ? "/blog/token-inference-service.webp"
-                                    : blogPost.title === "RAG Equipping AI with Knowledge Plugins"
-                                      ? "/blog/ai-rag.webp"
-                                      : "/blog1.webp"
+        ? "/blog/ai-hallucinations.webp"
+        : blogPost.title === "Accelerated AI for Business"
+          ? "/blog/ai-business.webp"
+          : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
+            ? "/blog/blog2.webp"
+            : blogPost.title === "AI Generates Personalized Content"
+              ? "/blog/ai-content-generation.webp"
+              : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
+                ? "/blog/dedicated-endpoints.webp"
+                : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
+                  ? "/blog/gpu-computing.webp"
+                  : blogPost.title === "AI-Powered E-commerce"
+                    ? "/blog/ai-shopping.webp"
+                    : blogPost.title === "AI's Role in Autonomous Driving"
+                      ? "/blog/ai-car.webp"
+                      : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
+                        ? "/blog/gpu-cluster-cost.webp"
+                        : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
+                          ? "/blog/workflows2.webp"
+                          : blogPost.title === "Humanity's Next Partner: The AI Agent"
+                            ? "/blog/ai-agent.webp"
+                            : blogPost.title === "AI Fine-tuning for Beginners"
+                              ? "/blog/ai-fine-tuning.webp"
+                              : blogPost.title === "Revolutionizing Elderly Care with AI"
+                                ? "/blog/ai-elderly-care.webp"
+                                : blogPost.title === "AI: The Doctor's Third Eye in Medical Imaging"
+                                  ? "/blog/ai-gpu-edge.webp"
+                                  : blogPost.title === "GPUs in Edge Computing"
+                                    ? "/blog/ai-GPU-Virtualization.webp"
+                                    : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
+                                      ? "/blog/token-inference-service.webp"
+                                      : blogPost.title === "RAG Equipping AI with Knowledge Plugins"
+                                        ? "/blog/ai-rag.webp"
+                                        : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件

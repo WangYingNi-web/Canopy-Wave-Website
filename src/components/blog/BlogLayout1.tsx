@@ -71,6 +71,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-rag.webp"
                   : blogPost.title === "How to Understand the Value of Computing Power"
                   ? "/blog/computing-power.webp"
+                  : blogPost.title === "LoRA vs. RAG: Key Comparisons and Use Cases"
+                  ? "/blog/lora-vs-rag.webp"
                   : "/blog1.webp"
                   
               }
