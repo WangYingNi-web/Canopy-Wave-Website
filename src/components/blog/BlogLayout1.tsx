@@ -73,6 +73,10 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/computing-power.webp"
                   : blogPost.title === "LoRA vs. RAG: Key Comparisons and Use Cases"
                   ? "/blog/lora-vs-rag.webp"
+                  : blogPost.title === "Enterprise GPU Cluster Procurement Strategy"
+                  ? "/blog/enterprise-gpu-cluster.webp"
+                  : blogPost.title === "The Engineering Challenges of Building Large-Scale GPU Clusters"
+                  ? "/blog/building-gpu-cluster.webp"
                   : "/blog1.webp"
                   
               }
