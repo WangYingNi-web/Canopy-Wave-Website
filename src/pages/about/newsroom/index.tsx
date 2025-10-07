@@ -61,14 +61,22 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        // {
-        //     id: 27,
-        //     title: "The Engineering Challenges of Building Large-Scale GPU Clusters",
-        //     description: "As AI models grow exponentially in size and sophistication, the infrastructure required to support them must evolve at an equally rapid pace.",
-        //     date: "September 30, 2025",
-        //     image: "/blog/building-gpu-cluster.webp",
-        //     alttitle: "Large-Scale GPU Cluster"
-        // },
+        {
+            id: 28,
+            title: "Large Model API Call Optimization Guide",
+            description: "The optimization fundamentally involves precisely matching requirements and eliminating redundant information.",
+            date: "October 1, 2025",
+            image: "/blog/large-model.webp",
+            alttitle: "API Call Optimization"
+        },
+        {
+            id: 27,
+            title: "The Engineering Challenges of Building Large-Scale GPU Clusters",
+            description: "As AI models grow exponentially in size and sophistication, the infrastructure required to support them must evolve at an equally rapid pace.",
+            date: "September 30, 2025",
+            image: "/blog/building-gpu-cluster.webp",
+            alttitle: "Large-Scale GPU Cluster"
+        },
         {
             id: 26,
             title: "Enterprise GPU Cluster Procurement Strategy",

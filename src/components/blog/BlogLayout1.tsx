@@ -77,6 +77,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/enterprise-gpu-cluster.webp"
                   : blogPost.title === "The Engineering Challenges of Building Large-Scale GPU Clusters"
                   ? "/blog/building-gpu-cluster.webp"
+                  : blogPost.title === "Large Model API Call Optimization Guide"
+                  ? "/blog/large-model.webp"
                   : "/blog1.webp"
                   
               }

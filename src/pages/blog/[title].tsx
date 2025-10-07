@@ -3023,6 +3023,331 @@ export default function BlogDetail() {
           ],
         }
 
+      case 'large-model-api-call-optimization-guide':
+        return {
+          id: 28,
+          title: 'Large Model API Call Optimization Guide',
+          description: 'Large Model API Call Optimization Guide: How to Reduce Token Consumption Costs?',
+          sections: [
+            {
+              title: 'Core Logic: Where Lies the "Cost Black Hole" of Token Consumption?',
+              content: [
+                'Before optimization, we must first identify the two primary scenarios driving token consumption: redundant descriptions at the input stage and ineffective content at the output stage. For example, when a user asks, "I want to understand AI applications in healthcare—specifically those that assist doctors in diagnosis and data analysis. Could you elaborate?" the phrase "specifically the kind that assists doctors in diagnosis and data analysis" constitutes redundant repetition, consuming an extra 15-20 tokens. If the model defaults to generating a 500-word detailed explanation when the user only needs 200 words of core points, the excess 300 words (approximately 450 tokens) represent ineffective output.',
+                'Based on OpenAI GPT-4 Turbo pricing (input: $0.01/1K tokens, output: $0.03/1K tokens), reducing input and output token consumption by 500 tokens per call would yield monthly savings for 1,000 calls: (500 × 0.01 + 500 × 0.03) ÷ 1000 × 1000 = $20. This demonstrates that optimization fundamentally involves "precisely matching requirements and eliminating redundant information."',
+              ],
+            },
+            {
+              title: 'Practical Tips',
+              content: [
+                React.createElement('strong', {}, 'Input Optimization: Conveying Core Requirements with Minimal Tokens'),
+              ],
+            },
+            {
+              title: '1. Streamline Prompts: The "Instruction + Specification" Two-Step Approach',
+              content: [
+                React.createElement('strong', {}, 'Incorrect Example:'),
+                '"I\'m currently conducting market research on new energy vehicles and need global sales data for 2024, along with market shares of major brands like Tesla and BYD. Could you also briefly mention the reasons for their growth?"',
+                React.createElement('strong', {}, 'Optimized Example:'),
+                '"2024 global new energy vehicle sales figures, Tesla/BYD market share, and growth drivers (core data only)"',
+                React.createElement('strong', {}, 'Core Techniques:'),
+                '• Use "noun + verb" to clearly state requirements (e.g., "sales figures," "market share"), omitting introductory phrases (e.g., "I\'m currently researching," "such as these");',
+                '• Use parentheses to specify constraints (e.g., "limited to core data," "within 200 words") to prevent model overinterpretation.',
+              ],
+            },
+            {
+              title: '2. Structured Input: Reduce Comprehension Costs with Symbols',
+              content: [
+                'When requirements involve multidimensional information, replace natural language connectors with symbols like "numbering, semicolons," etc., to reduce the model\'s semantic parsing token consumption.',
+                React.createElement('strong', {}, 'Incorrect Example:'),
+                '"I need to write a short article about coffee, covering its origin, main varieties, brewing methods, and ensuring the language is easy to understand for beginners."',
+                React.createElement('strong', {}, 'Optimized Example:'),
+                '"Coffee essay requirements: 1. Origins; 2. Primary varieties; 3. Brewing methods; Style: Easy to understand (beginner-friendly)"',
+              ],
+            },
+            {
+              title: '3. Reusing Historical Conversations: Avoiding Repetitive Background Information',
+              content: [
+                'In multi-turn dialogues, avoid repeating foundational context each time by simplifying input through "Anaphora + Supplementation."',
+                React.createElement('strong', {}, 'Scenario:'),
+                'User\'s first query: "Analyze the reasons for the decline in China\'s smartphone shipments in 2024". For a follow-up query adding "the impact of offline store closures," there\'s no need to repeat "China\'s smartphone shipments in 2024."',
+                React.createElement('strong', {}, 'Optimized example:'),
+                '"Add: Include the impact of offline store closures on shipments", saving 50% tokens compared to a full restatement.',
+                <img key="Output Control" src="/blog/output-control.webp" alt="Output Control" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              ],
+            },
+            {
+              title: 'Output Control: Enabling Models to Generate "On Demand" Without Overproduction',
+              content: [
+                React.createElement('strong', {}, '1. Enforce Output Length Limits: Precisely Control Volume with max_tokens'),
+                'When calling the API, directly restrict the number of output tokens via the max_tokens parameter to prevent models from "over-expanding."',
+                React.createElement('strong', {}, 'Scenario:'),
+                'A user requires a 100-word (approx. 150 tokens) product description. Without parameter settings, the model might generate 300 words (approx. 450 tokens).',
+                React.createElement('strong', {}, 'Note:'),
+                'Reserve 10-20% extra tokens (e.g., set to 170 for 150 tokens needed) to prevent critical information from being truncated due to word count limits.',
+              ],
+            },
+            {
+              title: '2. Specify Output Format: Use "Framework" to Reduce Redundant Content',
+              content: [
+                'Clearly define the output format (e.g., list, table, bullet points) based on requirements to help the model focus on core information and minimize introductory text.',
+                React.createElement('strong', {}, 'Incorrect Example:'),
+                '"Summarize the core conclusions of this report" (Model may generate paragraph-style responses, consuming 20-30 extra tokens)',
+                React.createElement('strong', {}, 'Optimized Example:'),
+                '"Summarize the report\'s core conclusions (limit to 3 points, presented as a numbered list)" (Model directly outputs "1.XXX; 2.XXX; 3.XXX", saving 30% tokens)',
+              ],
+            },
+            {
+              title: '3. Phased Output: Break Complex Tasks into Smaller Steps',
+              content: [
+                'If a request involves multiple steps (e.g., "Write proposal + Revise details + Summarize"), avoid asking the model to generate the entire content at once. Instead, call it in phases, focusing on a single objective per stage.',
+                React.createElement('strong', {}, 'Scenario:'),
+                'Writing a "Campus Book Club Activity Proposal." If asked to "Write proposal including theme, process, and budget" all at once, the model might generate 800 words (approx. 1200 tokens);',
+                React.createElement('strong', {}, 'Phased Optimization:'),
+                '1) First Round: "Campus Book Club Theme Suggestions (3 options, 10 characters max per suggestion)" (approx. 25 tokens);',
+                '2) Second Round: "Design a 3-step activity process based on Theme X (20 characters max per step)" (approx. 40 tokens);',
+                '3) Final round: "Create a budget under 500 yuan following the process (list 2 core expenditures)" (approx. 35 tokens);',
+                'Total consumption: only 100 tokens, saving 90% compared to a single call.',
+                <img key="Technical Tools" src="/blog/technical-tools.webp" alt="Technical Tools" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              ],
+            },
+            {
+              title: 'Technical Tools: Visualizing Token Consumption with Tools',
+              content: [
+                React.createElement('strong', {}, '1. Before Invoking: Estimate Costs with Token Estimation Tools'),
+                'Before inputting prompts, use online tools or code libraries to pre-calculate token counts and avoid exceeding budgets.',
+                '• Online Tools: OpenAI Token Calculator, Tiktokenizer—enter text to instantly display token count and estimated costs;',
+                '• Code Tools: Python\'s tiktoken library for batch-calculating token consumption across multiple prompt segments.',
+              ],
+            },
+            {
+              title: '2. During Invocation: Replace Long Text Generation with "Function Calls"',
+              content: [
+                'For structured requests like data queries or formula calculations, replace natural language responses with the API\'s "function call" feature to significantly reduce output tokens.',
+                React.createElement('strong', {}, 'Example:'),
+                'Calculating "Total New Energy Vehicle Sales from January to March 2024" would consume 50-80 tokens if the model described the process verbally;',
+                'Function call optimization: Directly invoke the "data summation function," returning only the result (e.g., "12 million units") at 5-10 tokens.',
+              ],
+            },
+            {
+              title: '3. Post-invocation: Analyze logs to identify "high-consumption scenarios"',
+              content: [
+                'Periodically export API call logs to identify high-token-consumption scenarios (e.g., "long text summarization," "multiple redundant dialogue rounds"), then implement targeted optimizations.',
+                React.createElement('strong', {}, 'Log analysis dimensions:'),
+                '• Peak tokens per call (identify abnormal spikes);',
+                '• High-frequency request types (e.g., whether "market research"-type requests can be templatized);',
+                '• Proportion of ineffective outputs (e.g., whether "background introductions" dominate model responses).',
+              ],
+            },
+            {
+              title: 'Scenario Adaptation: "Differentiated Optimization Strategies" for Different Needs',
+              content: [
+                React.createElement('table', {
+                  style: {
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                    border: '1px solid #ddd'
+                  }
+                }, [
+                  React.createElement('thead', {}, 
+                    React.createElement('tr', {}, [
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Need Type'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Optimization Focus'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Example Illustration'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Token Savings Rate')
+                    ])
+                  ),
+                  React.createElement('tbody', {}, [
+                    React.createElement('tr', {}, [
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Data Query'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Define data dimensions + Function calling'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '"2024Q1 BYD sales volume" → "2024Q1 BYD pure electric vehicle sales volume (numeric value)"'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '60%')
+                    ]),
+                    React.createElement('tr', {}, [
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Content Creation'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Clarify framework + Phased generation'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '"Write a product copy" → "First draft 3 titles, then expand on 1 title"'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '50%')
+                    ]),
+                    React.createElement('tr', {}, [
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Question Answering'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Remove redundant context + Limit depth'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '"AI applications in healthcare" → "AI applications in medical imaging diagnosis (limit to 2 cases)"'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '40%')
+                    ]),
+                    React.createElement('tr', {}, [
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Multi-turn Dialogue'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'Reuse historical information + Precise supplements'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, 'For the second query, only add "Include cost analysis"'),
+                      React.createElement('td', {
+                        style: {
+                          border: '1px solid #ddd',
+                          padding: '12px',
+                          verticalAlign: 'center',
+                          textAlign: 'center'
+                        }
+                      }, '70%')
+                    ])
+                  ])
+                ])
+              ],
+            },
+            {
+              title: 'Pitfall Guide: These "Optimization Misconceptions" May Actually Increase Costs',
+              content: [
+                React.createElement('strong', {}, '1. Over-simplification leads to ambiguous requirements:'),
+                'If the prompt only states "New Energy Vehicle Analysis," the model will generate generic content, requiring a secondary call to supplement requirements and consuming extra tokens.',
+                React.createElement('strong', {}, '2. Ignoring Model-Specific Differences:'),
+                'Different models have distinct segmentation rules (e.g., Claude segments longer texts more coarsely). Applying GPT optimization logic to Claude may cause token count discrepancies.',
+                React.createElement('strong', {}, '3. Blindly Limiting max_tokens:'),
+                'Setting max_tokens far below requirements (e.g., needing 200 tokens but setting to 100) causes the model to truncate critical information, necessitating re-calls.',
+              ],
+            },
+            {
+              title: 'Conclusion: Optimization is not about "reducing content," but about "precision matching."',
+              content: [
+                'The core of reducing token consumption lies not in "making the model output less," but in "ensuring every token serves the requirement." Through the four-step optimization approach of "streamlining input, controlling output, leveraging tools, and adapting to scenarios," you can maintain model output quality while reducing costs by 30%-70%. For enterprise users, combining batch call discounts and dedicated API key permissions can further amplify optimization results. As large model technology evolves, smarter "dynamic token allocation" features may emerge in the future. However, at this stage, manual optimization remains the key to cost control.',
+              ],
+            },
+          ],
+        }
+
+
       default:
         return null
     }
@@ -3082,7 +3407,9 @@ export default function BlogDetail() {
                                       ? "/blog/token-inference-service.webp"
                                       : blogPost.title === "RAG Equipping AI with Knowledge Plugins"
                                         ? "/blog/ai-rag.webp"
-                                        : "/blog1.webp"
+                                        : blogPost.title === "Large Model API Call Optimization Guide"
+                                          ? "/blog/api-optimization.webp"
+                                          : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -3139,6 +3466,8 @@ export default function BlogDetail() {
       case 25:
         return <BlogLayout1 blogPost={blogPost} />
       case 26:
+        return <BlogLayout1 blogPost={blogPost} />
+      case 29:
         return <BlogLayout1 blogPost={blogPost} />
       default:
         return <BlogLayout1 blogPost={blogPost} />
@@ -3308,6 +3637,15 @@ export default function BlogDetail() {
             <meta key="rag-og-title" property="og:title" content="RAG Equipping AI with Knowledge Plugins" />
             <meta key="rag-og-image" property="og:image" content="https://canopywave.com/blog/ai-rag.webp" />
             <meta key="rag-og-description" property="og:description" content="How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG)." />
+          </>
+        )}
+        {title === 'large-model-api-call-optimization-guide' && (
+          <>
+            <meta key="api-optimization-title" name="title" content="Large Model API Call Optimization Guide" />
+            <meta key="api-optimization-description" name="description" content="The optimization fundamentally involves precisely matching requirements and eliminating redundant information." />
+            <meta key="api-optimization-og-title" property="og:title" content="Large Model API Call Optimization Guide" />
+            <meta key="api-optimization-og-image" property="og:image" content="https://canopywave.com/blog/api-optimization.webp" />
+            <meta key="api-optimization-og-description" property="og:description" content="The optimization fundamentally involves precisely matching requirements and eliminating redundant information." />
           </>
         )}
       </Head>
