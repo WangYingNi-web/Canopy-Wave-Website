@@ -163,26 +163,26 @@ const TutorialLayout10: React.FC = () => {
         if (content.includes('<ClickableImage')) {
             const srcMatch = content.match(/src="([^"]+)"/)
             const altMatch = content.match(/alt="([^"]+)"/)
-            
+
             if (srcMatch && altMatch) {
                 return (
                     <div className="mb-6">
-                        <ClickableImage 
-                            src={srcMatch[1]} 
-                            alt={altMatch[1]} 
+                        <ClickableImage
+                            src={srcMatch[1]}
+                            alt={altMatch[1]}
                             className="w-full max-w-2xl rounded-lg shadow-sm"
                         />
                     </div>
                 )
             }
         }
-        
+
         // 处理代码块
         if (content.includes('`') && !content.includes('**')) {
             const parts = content.split('`')
             return (
                 <p className="text-gray-600 mb-4">
-                    {parts.map((part, index) => 
+                    {parts.map((part, index) =>
                         index % 2 === 1 ? (
                             <code key={index} className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">
                                 {part}
@@ -194,13 +194,13 @@ const TutorialLayout10: React.FC = () => {
                 </p>
             )
         }
-        
+
         // 处理粗体文本
         if (content.includes('**')) {
             const parts = content.split('**')
             return (
                 <p className="text-gray-600 mb-4">
-                    {parts.map((part, index) => 
+                    {parts.map((part, index) =>
                         index % 2 === 1 ? (
                             <strong key={index} className="font-semibold text-gray-800">
                                 {part}
@@ -212,12 +212,12 @@ const TutorialLayout10: React.FC = () => {
                 </p>
             )
         }
-        
+
         // 处理空行
         if (content.trim() === '') {
             return <div className="mb-4" />
         }
-        
+
         // 普通文本
         return <p className="text-gray-600 mb-4">{content}</p>
     }
@@ -261,8 +261,24 @@ const TutorialLayout10: React.FC = () => {
                 showRecommendedTutorials={false}
             >
                 <div className="prose prose-lg max-w-none">
+                    <SlideUp>
+                        <div className="mb-6">
+                            <div className="aspect-video bg-gray-200 rounded-lg relative overflow-hidden">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VanNu-HQLRA?modestbranding=1&rel=0&controls=1"
+                                    title="What Causes a GPU to Disconnect? And how to use SSH for a simple GPU failure check."
+                                    className="w-full h-full"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                    </SlideUp>
                     {tutorialData.sections.map((section, sectionIndex) => (
                         <section key={sectionIndex} id={`section-${sectionIndex}`} className="mb-12">
+                            {/* Additional Video Section */}
+
                             {section.title && (
                                 <SlideUp>
                                     <h2 className="text-xl font-bold mb-4">{section.title}</h2>
