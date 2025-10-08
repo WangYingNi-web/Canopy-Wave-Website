@@ -3144,10 +3144,13 @@ export default function BlogDetail() {
                 React.createElement('table', {
                   style: {
                     width: '100%',
+                    maxWidth: '100%',
+                    tableLayout: 'fixed',
                     borderCollapse: 'collapse',
                     marginTop: '20px',
                     marginBottom: '20px',
-                    border: '1px solid #ddd'
+                    border: '1px solid #ddd',
+                    overflowWrap: 'break-word'
                   }
                 }, [
                   React.createElement('thead', {}, 
@@ -3173,7 +3176,9 @@ export default function BlogDetail() {
                           border: '1px solid #ddd',
                           padding: '12px',
                           verticalAlign: 'center',
-                          textAlign: 'center'
+                          textAlign: 'center',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word'
                         }
                       }, 'Example Illustration'),
                       React.createElement('td', {
@@ -3209,7 +3214,9 @@ export default function BlogDetail() {
                           border: '1px solid #ddd',
                           padding: '12px',
                           verticalAlign: 'center',
-                          textAlign: 'center'
+                          textAlign: 'center',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word'
                         }
                       }, '"2024Q1 BYD sales volume" → "2024Q1 BYD pure electric vehicle sales volume (numeric value)"'),
                       React.createElement('td', {
@@ -3243,7 +3250,9 @@ export default function BlogDetail() {
                           border: '1px solid #ddd',
                           padding: '12px',
                           verticalAlign: 'center',
-                          textAlign: 'center'
+                          textAlign: 'center',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word'
                         }
                       }, '"Write a product copy" → "First draft 3 titles, then expand on 1 title"'),
                       React.createElement('td', {
@@ -3277,7 +3286,9 @@ export default function BlogDetail() {
                           border: '1px solid #ddd',
                           padding: '12px',
                           verticalAlign: 'center',
-                          textAlign: 'center'
+                          textAlign: 'center',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word'
                         }
                       }, '"AI applications in healthcare" → "AI applications in medical imaging diagnosis (limit to 2 cases)"'),
                       React.createElement('td', {
@@ -3311,7 +3322,9 @@ export default function BlogDetail() {
                           border: '1px solid #ddd',
                           padding: '12px',
                           verticalAlign: 'center',
-                          textAlign: 'center'
+                          textAlign: 'center',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word'
                         }
                       }, 'For the second query, only add "Include cost analysis"'),
                       React.createElement('td', {
