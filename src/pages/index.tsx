@@ -192,7 +192,7 @@ export default function TestIndex() {
 
         // 每个动图的播放时长（毫秒）
         const chatDurations: { [key: number]: number } = {
-            1: 10050, // chat1.mp4 播放8秒
+            1: 10060, // chat1.mp4 播放8秒
             2: 8050, // chat2.mp4 播放10秒
             3: 6050  // chat3.mp4 播放12秒
         };
