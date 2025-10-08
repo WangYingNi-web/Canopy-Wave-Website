@@ -685,48 +685,60 @@ export default function TestIndex() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* End-to-End Secure Operations */}
-                <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
-                    <Image src="/test/ai-resource-1.svg" alt="Secure" width={48} height={48} />
+                <SlideUp>
+                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
+                      <Image src="/test/ai-resource-1.svg" alt="Secure" width={48} height={48} />
+                    </div>
+                    <h3 className="text-lg font-bold mb-4 text-[#333333]">End-to-End Secure Operations</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Our proprietary GPU management platform offers real-time monitoring, health alerts, and resource optimization. Backed by 24/7 support, we ensure peak cluster performance and stability.
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold mb-4 text-[#333333]">End-to-End Secure Operations</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Our proprietary GPU management platform offers real-time monitoring, health alerts, and resource optimization. Backed by 24/7 support, we ensure peak cluster performance and stability.
-                  </p>
-                </div>
+                </SlideUp>
+
 
                 {/* Customized Needs, Personalized Service */}
-                <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
-                    <Image src="/test/ai-resource-2.svg" alt="Secure" width={48} height={48} />
+                <SlideUp>
+                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
+                      <Image src="/test/ai-resource-2.svg" alt="Secure" width={48} height={48} />
+                    </div>
+                    <h3 className="text-lg font-bold mb-4 text-[#333333]">Customized Service</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      We provide dedicated AI infrastructure and offer full-lifecycle AI services—such as model fine-tuning and agent customization tailored to your needs—to drive enterprises toward faster, smarter, and more cost-effective growth.
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold mb-4 text-[#333333]">Customized Service</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We provide dedicated AI infrastructure and offer full-lifecycle AI services—such as model fine-tuning and agent customization tailored to your needs—to drive enterprises toward faster, smarter, and more cost-effective growth.
-                  </p>
-                </div>
+                </SlideUp>
+
 
                 {/* High Performance */}
-                <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
-                    <Image src="/test/ai-resource-3.svg" alt="Secure" width={48} height={48} />
+                <SlideUp>
+                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
+                      <Image src="/test/ai-resource-3.svg" alt="Secure" width={48} height={48} />
+                    </div>
+                    <h3 className="text-lg font-bold mb-4 text-[#333333]">Canopy Wave Private Cloud</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Best GPU cluster performance in the industry. With 99.99% up-time. Have all your GPUs under the same datacenter, your workload and privacy are protected.
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold mb-4 text-[#333333]">Canopy Wave Private Cloud</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Best GPU cluster performance in the industry. With 99.99% up-time. Have all your GPUs under the same datacenter, your workload and privacy are protected.
-                  </p>
-                </div>
+                </SlideUp>
+
 
                 {/* Pay for What You Use */}
-                <div className="bg-[#F6F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
-                    <Image src="/test/ai-resource-4.svg" alt="Secure" width={48} height={48} />
+                <SlideUp>
+                  <div className="bg-[#F6F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
+                      <Image src="/test/ai-resource-4.svg" alt="Secure" width={48} height={48} />
+                    </div>
+                    <h3 className="text-lg font-bold mb-4 text-[#333333]">Pay for What You Use</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Only pay wholesale prices for the AI-related resources you actually consume. No hidden fees.
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold mb-4 text-[#333333]">Pay for What You Use</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Only pay wholesale prices for the AI-related resources you actually consume. No hidden fees.
-                  </p>
-                </div>
+                </SlideUp>
+
               </div>
             </div>
           </SlideUp>
