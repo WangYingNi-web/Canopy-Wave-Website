@@ -918,11 +918,11 @@ export default function TestIndex() {
         {/* Providing secure and efficient solutions for different use cases */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <SlideUp>
-              <div className="text-left mb-[80px]">
+            <div className="text-left mb-[80px]">
+              <SlideUp>
                 <h2 className="text-4xl font-bold text-[#333333] mb-4">Providing secure and efficient solutions for <br /> different use cases</h2>
-              </div>
-            </SlideUp>
+              </SlideUp>
+            </div>
 
             <div className="flex gap-4 flex-col md:flex-row w-full">
               {/* Card 1 - Pursue Efficiency */}
