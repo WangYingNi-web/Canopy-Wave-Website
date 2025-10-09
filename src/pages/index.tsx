@@ -494,6 +494,7 @@ export default function TestIndex() {
           <PartnerCarousel logos={partnerLogos} />
         </div>
 
+        
 
         {/* Chat Section - 灰色背景聊天区域 */}
         <div className="pb-16" ref={chatRef}>
@@ -682,11 +683,10 @@ export default function TestIndex() {
                 </h2>
               </SlideUp>
 
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* End-to-End Secure Operations */}
                 <SlideUp>
-                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow min-h-[285px]">
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                       <Image src="/test/ai-resource-1.svg" alt="Secure" width={48} height={48} />
                     </div>
@@ -700,7 +700,7 @@ export default function TestIndex() {
 
                 {/* Customized Needs, Personalized Service */}
                 <SlideUp>
-                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow min-h-[285px]">
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                       <Image src="/test/ai-resource-2.svg" alt="Secure" width={48} height={48} />
                     </div>
@@ -714,7 +714,7 @@ export default function TestIndex() {
 
                 {/* High Performance */}
                 <SlideUp>
-                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-[#F5F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow min-h-[285px]">
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                       <Image src="/test/ai-resource-3.svg" alt="Secure" width={48} height={48} />
                     </div>
@@ -728,7 +728,7 @@ export default function TestIndex() {
 
                 {/* Pay for What You Use */}
                 <SlideUp>
-                  <div className="bg-[#F6F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-[#F6F9F4] rounded-lg p-8 text-center hover:shadow-lg transition-shadow min-h-[285px]">
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg flex items-center justify-center">
                       <Image src="/test/ai-resource-4.svg" alt="Secure" width={48} height={48} />
                     </div>
@@ -1249,6 +1249,7 @@ export default function TestIndex() {
             </div>
           </div>
         </div>
+
 
         {/* Global Network Section */}
         <div className="bg-white py-16">
