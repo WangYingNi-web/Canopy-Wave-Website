@@ -138,11 +138,11 @@ export default function GB200WithRoCEv2() {
                         </h2>
                     </SlideUp>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Prolonged R&D Cycles */}
                         <SlideUp>
-                            <div className="text-left p-6 bg-white min-h-[285px]">
-                                <div className="w-16 h-16 mb-8">
+                            <div className="text-left p-6 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="w-16 h-16 mb-6">
                                     <Image
                                         src="/solutions/networking-hardware/gb200-with-rocev2/prolonged-rd-cycles.svg"
                                         alt="Prolonged R&D Cycles"
@@ -151,7 +151,7 @@ export default function GB200WithRoCEv2() {
                                         style={{ width: '82px', height: '82px' }}
                                     />
                                 </div>
-                                <h3 className="text-lg font-bold text-[#333333] mb-4">
+                                <h3 className="text-lg font-bold text-[#333333] mb-2">
                                     Prolonged R&D Cycles
                                 </h3>
                                 <p className="text-l text-[#666666]">
@@ -162,8 +162,8 @@ export default function GB200WithRoCEv2() {
 
                         {/* Performance Bottlenecks */}
                         <SlideUp>
-                            <div className="text-left p-6 bg-white min-h-[285px]">
-                                <div className="w-16 h-16 mb-8">
+                            <div className="text-left p-6 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="w-16 h-16 mb-6">
                                     <Image
                                         src="/solutions/networking-hardware/gb200-with-rocev2/performance-bottlenecks.svg"
                                         alt="Performance Bottlenecks"
@@ -172,7 +172,7 @@ export default function GB200WithRoCEv2() {
                                         style={{ width: '82px', height: '82px' }}
                                     />
                                 </div>
-                                <h3 className="text-lg font-bold text-[#333333] mb-4">
+                                <h3 className="text-lg font-bold text-[#333333] mb-2">
                                     Performance Bottlenecks
                                 </h3>
                                 <p className="text-l text-[#666666]">
@@ -183,8 +183,8 @@ export default function GB200WithRoCEv2() {
 
                         {/* Operational Complexity */}
                         <SlideUp>
-                            <div className="text-left p-6 bg-white min-h-[285px]">
-                                <div className="w-16 h-16 mb-8">
+                            <div className="text-left p-6 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="w-16 h-16 mb-6">
                                     <Image
                                         src="/solutions/networking-hardware/gb200-with-rocev2/operational-complexity.svg"
                                         alt="Operational Complexity"
@@ -193,7 +193,7 @@ export default function GB200WithRoCEv2() {
                                         style={{ width: '82px', height: '82px' }}
                                     />
                                 </div>
-                                <h3 className="text-lg font-bold text-[#333333] mb-4">
+                                <h3 className="text-lg font-bold text-[#333333] mb-2">
                                     Operational Complexity
                                 </h3>
                                 <p className="text-l text-[#666666]">
@@ -247,19 +247,19 @@ export default function GB200WithRoCEv2() {
                         <SlideUp>
                             <div className="bg-[#f0f8e8] rounded-lg p-6 text-center">
                                 <h3 className="text-3xl font-bold mb-2">&lt;10μs</h3>
-                                <p className="text-gray-700">Latency</p>
+                                <p className="text-[#333333] font-bold">Latency</p>
                             </div>
                         </SlideUp>
                         <SlideUp>
                             <div className="bg-[#f0f8e8] rounded-lg p-6 text-center">
                                 <h3 className="text-3xl font-bold mb-2">99.999%</h3>
-                                <p className="text-gray-700">Reliability</p>
+                                <p className="text-[#333333] font-bold">Reliability</p>
                             </div>
                         </SlideUp>
                         <SlideUp>
                             <div className="bg-[#e3f1d4] rounded-lg p-6 text-center">
                                 <h3 className="text-3xl font-bold mb-2">400Gbps</h3>
-                                <p className="text-gray-700">Throughput</p>
+                                <p className="text-[#333333] font-bold">Throughput</p>
                             </div>
                         </SlideUp>
                     </div>
@@ -267,7 +267,7 @@ export default function GB200WithRoCEv2() {
             </div>
 
             {/* On-Demand High-Performance GPU Section */}
-            <div className='bg-[#F9F9F9]'>
+            {/* <div className='bg-[#F9F9F9]'>
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-12">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">Aaccelerate trillion-parameter model training</h2>
@@ -297,11 +297,10 @@ export default function GB200WithRoCEv2() {
                         </div>
                     </SlideUp>
                 </div>
-            </div>
-
+            </div> */}
 
             {/* RoCEv2 + NVLink Performance Section */}
-            <div className="bg-[#F9F9F9] py-12 sm:py-10 pb-12">
+            {/* <div className="bg-[#F9F9F9] py-12 sm:py-10 pb-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <div className="text-center mb-12">
@@ -313,7 +312,6 @@ export default function GB200WithRoCEv2() {
 
                     <SlideUp>
                         <div className="mb-8">
-                            {/* Tab Navigation */}
                             <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 mb-8">
                                 <button
                                     onClick={() => setActiveTab('rocev2')}
@@ -335,9 +333,7 @@ export default function GB200WithRoCEv2() {
                                 </button>
                             </div>
 
-                            {/* Tab Content */}
                             <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                {/* Left Content */}
                                 <div className="space-y-4">
                                     {activeTab === 'rocev2' && (
                                         <div className="space-y-2 pl-8">
@@ -374,7 +370,6 @@ export default function GB200WithRoCEv2() {
                                     )}
                                 </div>
 
-                                {/* Right Image */}
                                 <div className="flex justify-center">
                                     <div className="relative w-full max-w-6xl">
                                         <Image
@@ -390,10 +385,10 @@ export default function GB200WithRoCEv2() {
                         </div>
                     </SlideUp>
                 </div>
-            </div>
+            </div> */}
 
             {/* Intelligent platform + 24/7 expert team simplifies operation Section */}
-            <div className="bg-[#F9F9F9] py-12 sm:py-16">
+            {/* <div className="bg-[#F9F9F9] py-12 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <div className="text-center mb-12">
@@ -405,7 +400,6 @@ export default function GB200WithRoCEv2() {
 
                     <SlideUp>
                         <div className="mb-8">
-                            {/* Tab Navigation */}
                             <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 mb-8">
                                 <button
                                     onClick={() => setActiveTab2('platform')}
@@ -427,9 +421,7 @@ export default function GB200WithRoCEv2() {
                                 </button>
                             </div>
 
-                            {/* Tab Content */}
                             <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                {/* Left Content */}
                                 <div className="space-y-4">
                                     {activeTab2 === 'platform' && (
                                         <div className="space-y-2 pl-8">
@@ -467,7 +459,6 @@ export default function GB200WithRoCEv2() {
                                     )}
                                 </div>
 
-                                {/* Right Image */}
                                 <div className="flex justify-center">
                                     <div className="relative w-full max-w-6xl">
                                         <Image
@@ -483,7 +474,162 @@ export default function GB200WithRoCEv2() {
                         </div>
                     </SlideUp>
                 </div>
+            </div> */}
+
+
+            {/* Benefits Section */}
+            <div className="py-16 bg-[#F9F9F9]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-4xl font-bold text-center mb-10 text-[#333333]">Benefits</h2>
+
+                    {/* 上半部分 */}
+                    <div className="flex flex-col lg:flex-row gap-12 mb-20">
+                        {/* 左侧图片 */}
+                        <div className="lg:w-1/2">
+                            <SlideUp>
+                                <div className="rounded-lg overflow-hidden border border-gray-100 shadow-lg">
+                                    <Image
+                                        src="/solutions/networking-hardware/gb200-with-rocev2/benefits_img_gb200 gpu.png"
+                                        alt="GB200 GPU Clusters"
+                                        width={600}
+                                        height={400}
+                                        className="w-full h-auto"
+                                    />
+                                </div>
+                            </SlideUp>
+                        </div>
+
+                        {/* 右侧内容 */}
+                        <div className="lg:w-1/2 flex flex-col justify-center">
+                            <SlideUp delay={0.2}>
+                                <h3 className="text-2xl font-bold mb-6 text-[#333333]">GB200 GPU Clusters to Shorten R&D Cycles</h3>
+                                <div className="mb-6">
+                                    <div className="flex items-center mb-4">
+                                        <div className="w-4 h-4 rounded-full bg-[#80B224] mr-3"></div>
+                                        <h4 className="text-xl font-semibold">4× Faster Model Training</h4>
+                                    </div>
+                                    <div className="h-[2px] bg-[#E0E0E0] my-2"></div>
+                                    <p className="text-gray-600 mt-4">Reduced training time for a 1.8T model from 90 days to just 22, which is 4 times more efficient than the H100 cluster</p>
+                                </div>
+                                <button className="bg-[#80B224] text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-all w-fit">Learn More</button>
+                            </SlideUp>
+                        </div>
+                    </div>
+
+                    {/* 下半部分 */}
+                    <div className="flex flex-col-reverse lg:flex-row gap-12">
+                        {/* 左侧内容 */}
+                        <div className="lg:w-1/2 flex flex-col justify-center">
+                            <SlideUp delay={0.2}>
+                                <h3 className="text-2xl font-bold mb-4 text-[#333333]">RoCEv2 and NVLink Enables 95%+ GPU Utilization</h3>
+                                <div className="mb-4">
+                                    <div className="flex items-center mb-6">
+                                        <div className="w-4 h-4 rounded-full bg-[#80B224] mr-3"></div>
+                                        <h4 className="text-xl font-semibold">Ultra-Low Latency RoCEv2 Fabric</h4>
+                                    </div>
+                                    <div className="h-[2px] bg-[#E0E0E0] -mt-2 my-2"></div>
+                                    <p className="text-gray-600 mt-4">Utilizes RDMA for direct, kernel-bypass data transfer, minimizing latency and CPU load.</p>
+                                    <p className="text-gray-600">Ensures efficient, non-blocking communication between any two GPUs across the cluster.</p>
+                                </div>
+                                <div className="mb-4">
+                                    <div className="flex items-center mb-6">
+                                        <div className="w-4 h-4 rounded-full bg-[#80B224] mr-3"></div>
+                                        <h4 className="text-xl font-semibold">Unified High-Bandwidth GPU Domain</h4>
+                                    </div>
+                                    <div className="h-[2px] bg-[#E0E0E0] -mt-2 my-2"></div>
+                                    <p className="text-gray-600 mt-4">Each NVL72 rack operates as a single, massive GPU with 1.8 TB/s of all-to-all NVLink bandwidth.</p>
+                                    <p className="text-gray-600">Eliminates all communication bottlenecks within the rack.</p>
+                                </div>
+                            </SlideUp>
+                        </div>
+
+                        {/* 右侧图片 */}
+                        <div className="lg:w-1/2">
+                            <SlideUp>
+                                <div className="rounded-lg overflow-hidden border border-gray-100 shadow-lg">
+                                    <Image
+                                        src="/solutions/networking-hardware/gb200-with-rocev2/benefits_img_RoCEv2.png"
+                                        alt="RoCEv2 and NVLink"
+                                        width={600}
+                                        height={400}
+                                        className="w-full h-auto"
+                                    />
+                                </div>
+                            </SlideUp>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            {/* Support Section */}
+            <div className="bg-[#F9F9F9] py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <SlideUp>
+                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-10">Support</h2>
+                    </SlideUp>
+
+                    {/* Intelligent End-to-End Monitoring */}
+                    <div className="mb-8">
+                        <SlideUp>
+                            <div className="relative rounded-lg overflow-hidden">
+                                <div className="w-full relative">
+                                    <Image
+                                        src="/solutions/networking-hardware/gb200-with-rocev2/support_bg_intelligent.png"
+                                        alt="Intelligent End-to-End Monitoring"
+                                        width={1200}
+                                        height={600}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 flex items-center">
+                                        <div className="ml-auto max-w-md text-left mr-6">
+                                            <h3 className="text-2xl font-bold mb-4 text-black">Intelligent End-to-End Monitoring</h3>
+                                            <div className="mb-4">
+                                                <h4 className="font-bold mb-2 text-black">How</h4>
+                                                <p className="text-[#666666]">A unified platform integrates deep telemetry from all components (GPU, NVLink, Network).</p>
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold mb-2 text-black">Benefit</h4>
+                                                <p className="text-[#666666]">AI-driven analytics proactively detect anomalies and bottlenecks before they impact training jobs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </SlideUp>
+                    </div>
+
+                    {/* 24/7 Proactive Expert Support */}
+                    <div>
+                        <SlideUp>
+                            <div className="relative rounded-lg overflow-hidden">
+                                <div className="w-full relative">
+                                    <Image
+                                        src="/solutions/networking-hardware/gb200-with-rocev2/support_bg_247.png"
+                                        alt="24/7 Proactive Expert Support"
+                                        width={1200}
+                                        height={600}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 flex items-center">
+                                        <div className="max-w-md text-left ml-8">
+                                            <h3 className="text-2xl font-bold mb-4 text-black">24/7 Proactive Expert Support</h3>
+                                            <div className="mb-4">
+                                                <h4 className="font-bold mb-2 text-black">How</h4>
+                                                <p className="text-[#666666]">Engineers with deep experience with NVIDIA GPUs and software provide constant, around-the-clock system monitoring.</p>
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold mb-2 text-black">Benefit</h4>
+                                                <p className="text-[#666666]">Immediate remote intervention ensures maximum uptime and uninterrupted training.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </SlideUp>
+                    </div>
+                </div>
+            </div>
+
 
             {/* Deployment Process Section */}
             <div className="bg-[#F9F9F9] py-12 sm:py-12">
@@ -502,11 +648,11 @@ export default function GB200WithRoCEv2() {
                             <div className='flex flex-col lg:flex-row items-start justify-center lg:h-[220px] w-full lg:max-w-[260px]'>
                                 <div className="text-left">
                                     <div className="mb-2">
-                                        <div className="text-3xl font-black text-gray-300 mb-2">01</div>
-                                        <h3 className="text-lg font-semibold text-gray-700">Planning & Design</h3>
+                                        <div className="text-3xl font-black text-[#80B224] mb-2">01</div>
+                                        <h3 className="text-lg font-semibold text-[#333333]">Planning & Design</h3>
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        Create documentation based on the client's data center topology, including detailed cabling plans and an IP addressing scheme.
+                                    <p className="text-sm text-[#666666] leading-relaxed">
+                                        Develop comprehensive documentation based on the client's data center topology, including detailed cabling plans and an IP addressing scheme.
                                     </p>
                                 </div>
                             </div>
@@ -515,7 +661,7 @@ export default function GB200WithRoCEv2() {
                         {/* Arrow 01 - Hidden on small screens */}
                         <div className='hidden lg:flex flex-col lg:flex-row items-start justify-center h-[220px] max-h-[16px] p-6'>
                             <div className="w-6 h-6 pt-16">
-                                <img src="/solutions/networking-hardware/gb200-with-rocev2/arrow.svg" alt="arrow" className="w-6 h-6" />
+                                <img src="/solutions/networking-hardware/gb200-with-rocev2/deployment_ic.png" alt="arrow" className="w-6 h-6" />
                             </div>
                         </div>
 
@@ -524,10 +670,10 @@ export default function GB200WithRoCEv2() {
                             <div className='flex flex-col lg:flex-row items-start justify-center lg:h-[220px] w-full lg:max-w-[260px]'>
                                 <div className="text-left">
                                     <div className="mb-2">
-                                        <div className="text-3xl font-black text-gray-300 mb-2">02</div>
-                                        <h3 className="text-lg font-semibold text-gray-700">Deployment</h3>
+                                        <div className="text-3xl font-black text-[#80B224] mb-2">02</div>
+                                        <h3 className="text-lg font-semibold text-[#333333]">Deployment</h3>
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                    <p className="text-sm text-[#666666] leading-relaxed">
                                         Rack switches, connect all physical cabling, and install GB200 NICs.
                                     </p>
                                 </div>
@@ -537,7 +683,7 @@ export default function GB200WithRoCEv2() {
                         {/* Arrow 02 - Hidden on small screens */}
                         <div className='hidden lg:flex flex-col lg:flex-row items-start justify-center h-[220px] max-h-[16px] p-6'>
                             <div className="w-6 h-6 pt-16">
-                                <img src="/solutions/networking-hardware/gb200-with-rocev2/arrow.svg" alt="arrow" className="w-6 h-6" />
+                                <img src="/solutions/networking-hardware/gb200-with-rocev2/deployment_ic.png" alt="arrow" className="w-6 h-6" />
                             </div>
                         </div>
 
@@ -546,11 +692,11 @@ export default function GB200WithRoCEv2() {
                             <div className='flex flex-col lg:flex-row items-start justify-center lg:h-[220px] w-full lg:max-w-[260px]'>
                                 <div className="text-left">
                                     <div className="mb-2">
-                                        <div className="text-3xl font-black text-gray-300 mb-2">03</div>
-                                        <h3 className="text-lg font-semibold text-gray-700">Configuration & Validation</h3>
+                                        <div className="text-3xl font-black text-[#80B224] mb-2">03</div>
+                                        <h3 className="text-lg font-semibold text-[#333333]">Configuration & Validation</h3>
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        Set up software, configure network and conduct performance stress tests, followed by a final test report.
+                                    <p className="text-sm text-[#666666] leading-relaxed">
+                                        Configure RoCEv2 parameters and conduct performance stress tests, followed by a final test report.
                                     </p>
                                 </div>
                             </div>
@@ -559,7 +705,7 @@ export default function GB200WithRoCEv2() {
                         {/* Arrow 03 - Hidden on small screens */}
                         <div className='hidden lg:flex flex-col lg:flex-row items-start justify-center h-[220px] max-h-[16px] p-6'>
                             <div className="w-6 h-6 pt-16">
-                                <img src="/solutions/networking-hardware/gb200-with-rocev2/arrow.svg" alt="arrow" className="w-6 h-6" />
+                                <img src="/solutions/networking-hardware/gb200-with-rocev2/deployment_ic.png" alt="arrow" className="w-6 h-6" />
                             </div>
                         </div>
 
@@ -568,11 +714,11 @@ export default function GB200WithRoCEv2() {
                             <div className='flex flex-col lg:flex-row items-start justify-center lg:h-[220px] w-full lg:max-w-[260px]'>
                                 <div className="text-left">
                                     <div className="mb-2">
-                                        <div className="text-3xl font-black text-gray-300 mb-2">04</div>
-                                        <h3 className="text-lg font-semibold text-gray-700">Acceptance & Handover</h3>
+                                        <div className="text-3xl font-black text-[#80B224] mb-2">04</div>
+                                        <h3 className="text-lg font-semibold text-[#333333]">Acceptance & Handover</h3>
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        Provide complete acceptance criteria and deliver upon meeting the standards.
+                                    <p className="text-sm text-[#666666] leading-relaxed">
+                                        Provide precise acceptance criteria and deliver upon meeting the standards.
                                     </p>
                                 </div>
                             </div>
@@ -581,102 +727,73 @@ export default function GB200WithRoCEv2() {
                 </div>
             </div>
 
+            
+
             {/* Resource Section */}
             <div className="bg-[#F9F9F9] py-12 sm:pt-12 pb-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <div className="text-center mb-16">
                             <h2 className="text-3xl sm:text-4xl font-black text-gray-700 mb-4">
-                                Resources
+                                Resource
                             </h2>
                         </div>
                     </SlideUp>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Tutorials Card */}
                         <SlideUp>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="h-54 bg-gradient-to-r from-blue-900 to-blue-700 relative cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.location.href = '/resources/tutorials'}>
-                                    <img
-                                        src="/solutions/networking-hardware/gb200-with-rocev2/tutorials.png"
-                                        alt="Tutorials"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div className="p-6">
+                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                                <div className="p-6 flex flex-col h-full">
                                     <h3 className="text-lg font-bold text-gray-800 mb-3">Tutorials</h3>
-                                    <p className="text-gray-600 mb-4">
-                                        How to Leverage Canopy Wave’s Resources to Use AI
+                                    <p className="text-gray-600 mb-4 flex-grow">
+                                        NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload
                                     </p>
-
-                                </div>
-                                <div className='p-4'>
-                                    <Button
-                                        variant="outline"
-                                        className="bg-[#80B224] text-white px-4 py-1 text-sm rounded-full hover:bg-[#6BA000] hover:text-white transition-colors duration-300"
-                                        onClick={() => window.location.href = '/resources/tutorials'}
-                                    >
-                                        Tutorials
-                                    </Button>
+                                    <div className="mt-auto">
+                                        <button
+                                            className="text-[#80B224] font-medium hover:text-[#6BA000] transition-colors duration-300 flex items-center"
+                                            onClick={() => window.location.href = '/resources/tutorials'}
+                                        >
+                                            Read More&gt;
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </SlideUp>
 
-                        {/* Case Study Card */}
                         <SlideUp>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="h-54 bg-gradient-to-r from-cyan-900 to-blue-600 relative cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.location.href = '/resources/case-study'}>
-                                    <img
-                                        src="/solutions/networking-hardware/gb200-with-rocev2/case-study.png"
-                                        alt="Case Study"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-lg  font-bold text-gray-800 mb-3">Case Studies</h3>
-                                    <p className="text-gray-600 mb-4">
-                                        Discover how Canopy Wave builds powerful GPU + Network solutions in practice
+                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                                <div className="p-6 flex flex-col h-full">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-3">Case Studies</h3>
+                                    <p className="text-gray-600 mb-4 flex-grow">
+                                        Accelerating Protein Engineering with Canopy Wave's GPUaaS
                                     </p>
-
+                                    <div className="mt-auto">
+                                        <button
+                                            className="text-[#80B224] font-medium hover:text-[#6BA000] transition-colors duration-300 flex items-center"
+                                            onClick={() => window.location.href = '/resources/case-study'}
+                                        >
+                                            Read More&gt;
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className='p-4'>
-                                    <Button
-                                        variant="outline"
-                                        className="bg-[#80B224] text-white px-4 py-1 text-sm rounded-full hover:bg-[#6BA000] hover:text-white transition-colors duration-300"
-                                        onClick={() => window.location.href = '/resources/case-study'}
-                                    >
-                                        Case Studies
-                                    </Button>
-                                </div>
-
                             </div>
                         </SlideUp>
 
-                        {/* Documents Card */}
                         <SlideUp>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="h-54 bg-gradient-to-r from-gray-400 to-gray-600 relative cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}>
-                                    <img
-                                        src="/solutions/networking-hardware/gb200-with-rocev2/documents.png"
-                                        alt="Documents"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-3">Documents</h3>
-                                    <p className="text-gray-600 mb-2">
-                                        Explore our Technical Docs, Help Center, Knowledge Base, Product Manuals, and more useful information
+                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                                <div className="p-6 flex flex-col h-full">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-3">Docs</h3>
+                                    <p className="text-gray-600 mb-4 flex-grow">
+                                        Canopy Wave GPU Cluster Hardware Product Portfolio
                                     </p>
-
-                                </div>
-                                <div className='pl-4 pb-4 pr-4'>
-                                    <Button
-                                        variant="outline"
-                                        className="bg-[#80B224] text-white px-4 py-1 text-sm rounded-full hover:bg-[#6BA000] hover:text-white transition-colors duration-300"
-                                        onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}
-                                    >
-                                        Documents
-                                    </Button>
+                                    <div className="mt-auto">
+                                        <button
+                                            className="text-[#80B224] font-medium hover:text-[#6BA000] transition-colors duration-300 flex items-center"
+                                            onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}
+                                        >
+                                            Read More&gt;
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </SlideUp>
