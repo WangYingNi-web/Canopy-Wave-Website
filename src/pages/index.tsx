@@ -17,6 +17,7 @@ import { useRouter } from 'next/router'
 
 export default function TestIndex() {
   const router = useRouter()
+  const [imageLoaded, setImageLoaded] = useState(false);
   const currentUrl = `https://canopywave.com${router.asPath}`
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -51,6 +52,21 @@ export default function TestIndex() {
     window.addEventListener('resize', checkIsMobile);
 
     return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  // 预加载产品图片
+  useEffect(() => {
+    const preloadProductImages = () => {
+      // 预加载所有产品图片
+      for (let i = 1; i <= 4; i++) {
+        if (typeof window !== 'undefined') {
+          const img = document.createElement('img');
+          img.src = `/test/products-${i}.webp`;
+        }
+      }
+    };
+
+    preloadProductImages();
   }, []);
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
@@ -846,10 +862,12 @@ export default function TestIndex() {
                   <div className="p-6 sm:-ml-[110px] flex items-center justify-center h-[420px]">
                     <Image
                       src={`/test/products-${currentImageIndex + 1}.webp`}
+                      onLoad={() => setImageLoaded(true)}
                       alt="NVIDIA GPUs"
                       width={560}
                       height={360}
-                      className="object-contain"
+                      className={`transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'
+                        }`}
                     />
                   </div>
 
