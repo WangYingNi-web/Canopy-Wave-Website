@@ -521,7 +521,7 @@ export default function GB200WithRoCEv2() {
                                         <h4 className="text-xl font-semibold">4× Faster Model Training</h4>
                                     </div>
                                     <div className="h-[2px] bg-[#E0E0E0] my-2"></div>
-                                    <p className="text-gray-600 mt-4">Reduced training time for a 1.8T model from 90 days to just 22, which is 4 times more efficient than the H100 cluster</p>
+                                    <p className="text-gray-600 mt-4 text-[16px]">Reduced training time for a 1.8T model from 90 days to just 22, which is 4 times more efficient than the H100 cluster</p>
                                 </div>
                                 <button className="bg-[#80B224] text-white px-6 py-2 rounded-3xl hover:bg-opacity-90 transition-all w-fit" onClick={()=>{window.location.href = '/gb200-nvl72'}}>Learn More</button>
                             </SlideUp>

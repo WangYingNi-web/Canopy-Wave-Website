@@ -61,6 +61,14 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        // {
+        //     id: 29,
+        //     title: "How Can Enterprises Solve Data Fragmentation",
+        //     description: "with the increasing number of business systems, the diversification of data sources, and the increasing complexity of information flows, data fragmentation has become the biggest obstacle hindering the intelligent transformation of enterprises.",
+        //     date: "October 10, 2025",
+        //     image: "/blog/data-fragmentation.webp",
+        //     alttitle: "Data Fragmentation"
+        // },
         {
             id: 28,
             title: "Large Model API Call Optimization Guide",
