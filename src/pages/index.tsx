@@ -19,8 +19,6 @@ export default function TestIndex() {
   const router = useRouter()
   const currentUrl = `https://canopywave.com${router.asPath}`
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null);
-  const [isSliding, setIsSliding] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
   const [isExpanded3, setIsExpanded3] = useState(false);
@@ -38,7 +36,6 @@ export default function TestIndex() {
   const [currentMapIndex, setCurrentMapIndex] = useState(0);
   const [isMapAutoPlaying, setIsMapAutoPlaying] = useState(true);
   const [mapAutoPlayTimer, setMapAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
-  const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
   const { ref: chatRef, inView: chatInView } = useInView({
     threshold: 0.3,
     triggerOnce: false
@@ -55,39 +52,6 @@ export default function TestIndex() {
 
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
-
-  // 处理图片切换的滑动动画
-  const handleImageChange = (newIndex: number) => {
-    if (newIndex === currentImageIndex || isSliding) return;
-    
-    const direction = newIndex > currentImageIndex ? 'left' : 'right';
-    setSlideDirection(direction);
-    setIsSliding(true);
-    
-    // 延迟切换图片索引以实现滑动效果
-    setTimeout(() => {
-      setCurrentImageIndex(newIndex);
-      setTimeout(() => {
-        setIsSliding(false);
-        setSlideDirection(null);
-      }, 50);
-    }, 250);
-  };
-
-  // 防抖的悬停处理函数
-  const handleHoverChange = (newIndex: number) => {
-    if (hoverTimer) {
-      clearTimeout(hoverTimer);
-    }
-    
-    const timer = setTimeout(() => {
-      handleImageChange(newIndex);
-      setIsProductAutoPlaying(false);
-    }, 50); // 150ms防抖延迟
-    
-    setHoverTimer(timer);
-  };
-
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
     { id: 2, width: 80, height: 80 },
@@ -255,9 +219,11 @@ export default function TestIndex() {
     if (!isProductAutoPlaying) return;
 
     const timer = setTimeout(() => {
-      const nextIndex = (currentImageIndex + 1) % 4;
-      handleImageChange(nextIndex);
-    }, 8000); // 每8秒切换一次
+      setCurrentImageIndex((prev) => {
+        // 从上至下循环：0 -> 1 -> 2 -> 3 -> 0
+        return (prev + 1) % 4;
+      });
+    }, 5000); // 每5秒切换一次
 
     setProductAutoPlayTimer(timer);
     return () => {
@@ -576,7 +542,7 @@ export default function TestIndex() {
                       ></div>
                       <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
                         }`}>Multi-model collaboration: Beyond single-model capabilities</h3>
-                      <div className={`overflow-hidden transition-all duration-200 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                      <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                         }`}>
                         <p className="text-sm text-gray-600">
                           Multi-model sequential reasoning leverages "division of labor and collaboration," allowing each model to focus on its area of expertise and achieve a "1+1{'>'}2" effect
@@ -877,23 +843,14 @@ export default function TestIndex() {
                   onMouseEnter={() => setIsProductAutoPlaying(false)}
                   onMouseLeave={() => setIsProductAutoPlaying(true)}
                 >
-                  <div className="p-6 sm:-ml-[110px] flex items-center justify-center h-[420px] overflow-hidden relative">
-                    <div className={`transition-all duration-500 ease-in-out transform ${
-                      isSliding 
-                        ? slideDirection === 'left' 
-                          ? '-translate-y-4 opacity-0' 
-                          : 'translate-y-4 opacity-0'
-                        : 'translate-y-0 opacity-100'
-                    }`}>
-                      <Image
-                        src={`/test/products-${currentImageIndex + 1}.webp`}
-                        alt="NVIDIA GPUs"
-                        width={560}
-                        height={360}
-                        className="object-contain"
-                        key={currentImageIndex}
-                      />
-                    </div>
+                  <div className="p-6 sm:-ml-[110px] flex items-center justify-center h-[420px]">
+                    <Image
+                      src={`/test/products-${currentImageIndex + 1}.webp`}
+                      alt="NVIDIA GPUs"
+                      width={560}
+                      height={360}
+                      className="object-contain"
+                    />
                   </div>
 
                   {/* Learn More 按钮 */}
@@ -913,13 +870,14 @@ export default function TestIndex() {
                         <div key={index} className="flex lg:flex-row flex-col items-center lg:space-x-3 space-x-0">
                           <button
                             onClick={() => {
-                              handleImageChange(index - 1);
+                              setCurrentImageIndex(index - 1);
                               setIsProductAutoPlaying(false);
-                              // 点击后5秒恢复自动播放
-                              setTimeout(() => setIsProductAutoPlaying(true), 5000);
+                              // 点击后3秒恢复自动播放
+                              setTimeout(() => setIsProductAutoPlaying(true), 3000);
                             }}
                             onMouseEnter={() => {
-                              handleHoverChange(index - 1);
+                              setCurrentImageIndex(index - 1);
+                              setIsProductAutoPlaying(false);
                             }}
                             onMouseLeave={() => setIsProductAutoPlaying(true)}
                             className={`w-[69px] h-[69px] lg:w-[69px] lg:h-[69px] w-[50px] h-[50px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
