@@ -83,7 +83,7 @@ export default function TestIndex() {
     const timer = setTimeout(() => {
       handleImageChange(newIndex);
       setIsProductAutoPlaying(false);
-    }, 100); // 150ms防抖延迟
+    }, 150); // 150ms防抖延迟
     
     setHoverTimer(timer);
   };
@@ -576,7 +576,7 @@ export default function TestIndex() {
                       ></div>
                       <h3 className={`text-lg font-semibold ${activeTab === 1 ? 'text-[#80B224]' : 'text-gray-700'
                         }`}>Multi-model collaboration: Beyond single-model capabilities</h3>
-                      <div className={`overflow-hidden transition-all duration-500 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                      <div className={`overflow-hidden transition-all duration-200 ${activeTab === 1 ? 'max-h-20 opacity-100 mt-2' : 'max-h-0 opacity-0'
                         }`}>
                         <p className="text-sm text-gray-600">
                           Multi-model sequential reasoning leverages "division of labor and collaboration," allowing each model to focus on its area of expertise and achieve a "1+1{'>'}2" effect
