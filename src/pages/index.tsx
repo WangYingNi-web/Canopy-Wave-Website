@@ -915,7 +915,7 @@ export default function TestIndex() {
                         <div key={index} className="flex lg:flex-row flex-col items-center lg:space-x-3 space-x-0">
                           <button
                             onClick={() => {
-                              handleImageChange(index - 1);
+                              // handleImageChange(index - 1);
                               setIsProductAutoPlaying(false);
                               // 点击后3秒恢复自动播放
                               setTimeout(() => setIsProductAutoPlaying(true), 3000);
