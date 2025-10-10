@@ -72,7 +72,7 @@ export default function TestIndex() {
     // 动画完成后重置状态
     setTimeout(() => {
       setIsSliding(false);
-    }, 150);
+    }, 10);
   };
 
   // 预加载产品图片
