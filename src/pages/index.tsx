@@ -83,7 +83,7 @@ export default function TestIndex() {
     const timer = setTimeout(() => {
       handleImageChange(newIndex);
       setIsProductAutoPlaying(false);
-    }, 150); // 150ms防抖延迟
+    }, 50); // 150ms防抖延迟
     
     setHoverTimer(timer);
   };
