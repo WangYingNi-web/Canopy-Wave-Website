@@ -20,8 +20,6 @@ export default function TestIndex() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const currentUrl = `https://canopywave.com${router.asPath}`
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState('down'); // 'up' or 'down'
-  const [isSliding, setIsSliding] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
   const [isExpanded3, setIsExpanded3] = useState(false);
@@ -55,25 +53,6 @@ export default function TestIndex() {
 
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
-
-  // 带滑动动画的图片切换函数
-  const handleImageChange = (newIndex: number) => {
-    if (isSliding || newIndex === currentImageIndex) return;
-    
-    setIsSliding(true);
-    setSlideDirection(newIndex > currentImageIndex ? 'down' : 'up');
-    
-    // 延迟切换图片索引，让动画效果更自然
-    setTimeout(() => {
-      setCurrentImageIndex(newIndex);
-      setImageLoaded(false);
-    }, 50);
-    
-    // 动画完成后重置状态
-    setTimeout(() => {
-      setIsSliding(false);
-    }, 100);
-  };
 
   // 预加载产品图片
   useEffect(() => {
@@ -253,18 +232,20 @@ export default function TestIndex() {
 
   // 产品自动播放逻辑
   useEffect(() => {
-    if (!isProductAutoPlaying || isSliding) return;
+    if (!isProductAutoPlaying) return;
 
     const timer = setTimeout(() => {
-      const nextIndex = (currentImageIndex + 1) % 4;
-      handleImageChange(nextIndex);
+      setCurrentImageIndex((prev) => {
+        // 从上至下循环：0 -> 1 -> 2 -> 3 -> 0
+        return (prev + 1) % 4;
+      });
     }, 5000); // 每5秒切换一次
 
     setProductAutoPlayTimer(timer);
     return () => {
       clearTimeout(timer);
     };
-  }, [isProductAutoPlaying, currentImageIndex, isSliding]);
+  }, [isProductAutoPlaying, currentImageIndex]);
 
   // 地图自动播放逻辑
   useEffect(() => {
@@ -878,24 +859,16 @@ export default function TestIndex() {
                   onMouseEnter={() => setIsProductAutoPlaying(false)}
                   onMouseLeave={() => setIsProductAutoPlaying(true)}
                 >
-                  <div className="p-6 sm:-ml-[110px] flex items-center justify-center h-[420px] overflow-hidden">
-                    <div className={`transition-all duration-300 ease-in-out ${
-                      isSliding 
-                        ? slideDirection === 'down' 
-                          ? 'transform translate-y-4 opacity-0' 
-                          : 'transform -translate-y-4 opacity-0'
-                        : 'transform translate-y-0 opacity-100'
-                    }`}>
-                      <Image
-                        src={`/test/products-${currentImageIndex + 1}.webp`}
-                        onLoad={() => setImageLoaded(true)}
-                        alt="NVIDIA GPUs"
-                        width={560}
-                        height={360}
-                        className={`transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'
-                          }`}
-                      />
-                    </div>
+                  <div className="p-6 sm:-ml-[110px] flex items-center justify-center h-[420px]">
+                    <Image
+                      src={`/test/products-${currentImageIndex + 1}.webp`}
+                      onLoad={() => setImageLoaded(true)}
+                      alt="NVIDIA GPUs"
+                      width={560}
+                      height={360}
+                      className={`transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'
+                        }`}
+                    />
                   </div>
 
                   {/* Learn More 按钮 */}
@@ -915,13 +888,13 @@ export default function TestIndex() {
                         <div key={index} className="flex lg:flex-row flex-col items-center lg:space-x-3 space-x-0">
                           <button
                             onClick={() => {
-                              handleImageChange(index - 1);
+                              setCurrentImageIndex(index - 1);
                               setIsProductAutoPlaying(false);
                               // 点击后3秒恢复自动播放
                               setTimeout(() => setIsProductAutoPlaying(true), 3000);
                             }}
                             onMouseEnter={() => {
-                              handleImageChange(index - 1);
+                              setCurrentImageIndex(index - 1);
                               setIsProductAutoPlaying(false);
                             }}
                             onMouseLeave={() => setIsProductAutoPlaying(true)}
