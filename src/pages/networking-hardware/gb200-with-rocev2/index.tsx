@@ -22,15 +22,22 @@ export default function GB200WithRoCEv2() {
     const [formData, setFormData] = React.useState({
         message: '',
         name: '',
-        email: ''
+        email: '',
+        lastName: '',
+        company: '',
+        marketing: false
     });
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
     const [statusMessage, setStatusMessage] = React.useState('');
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        const { name, value, type } = e.target;
+        const checked = (e.target as HTMLInputElement).checked;
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? checked : value
+        }));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -40,9 +47,12 @@ export default function GB200WithRoCEv2() {
         try {
             const emailBody = `
                 subject: GB200 with RoCEv2 Inquiry
-                name: ${formData.name}
-                email: ${formData.email}
+                First Name: ${formData.name}
+                Last Name: ${formData.lastName}
+                Company Name: ${formData.company}
+                Email: ${formData.email}
                 message: ${formData.message}
+                marketing:${formData.marketing}
                 submitted from: ${window.location.href}
             `;
 
@@ -50,8 +60,8 @@ export default function GB200WithRoCEv2() {
                 'https://sequoia-paas.canopywave.io/api/v1/send_email',
                 {
                     subject: 'GB200 with RoCEv2 Inquiry',
-                    recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
-                    // recipients: ['wangyingni@canopywave.com'],
+                    // recipients: ['Lumi.Xiao@canopywave.com', 'yachal@canopywave.com', 'sales@canopywave.com'],
+                    recipients: ['wangyingni@canopywave.com'],
                     body: emailBody
                 },
                 {
@@ -65,7 +75,7 @@ export default function GB200WithRoCEv2() {
             if (response.status === 200) {
                 setSubmitStatus('success');
                 setStatusMessage('Message sent successfully!');
-                setFormData({ message: '', name: '', email: '' });
+                setFormData({ message: '', name: '', email: '', lastName: '', company: '', marketing: false });
                 // 3秒后清除状态消息
                 setTimeout(() => {
                     setSubmitStatus('idle');
@@ -141,8 +151,8 @@ export default function GB200WithRoCEv2() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Prolonged R&D Cycles */}
                         <SlideUp>
-                            <div className="text-left p-6 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                                <div className="w-16 h-16 mb-6">
+                            <div className="text-left p-8 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="w-16 h-16 mb-8">
                                     <Image
                                         src="/solutions/networking-hardware/gb200-with-rocev2/prolonged-rd-cycles.svg"
                                         alt="Prolonged R&D Cycles"
@@ -154,7 +164,7 @@ export default function GB200WithRoCEv2() {
                                 <h3 className="text-lg font-bold text-[#333333] mb-2">
                                     Prolonged R&D Cycles
                                 </h3>
-                                <p className="text-l text-[#666666]">
+                                <p className="text-sm text-[#666666]">
                                     Training trillion-parameter models takes months.This severely slows algorithm iteration and delays time-to-market.
                                 </p>
                             </div>
@@ -162,8 +172,8 @@ export default function GB200WithRoCEv2() {
 
                         {/* Performance Bottlenecks */}
                         <SlideUp>
-                            <div className="text-left p-6 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                                <div className="w-16 h-16 mb-6">
+                            <div className="text-left p-8 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="w-16 h-16 mb-8">
                                     <Image
                                         src="/solutions/networking-hardware/gb200-with-rocev2/performance-bottlenecks.svg"
                                         alt="Performance Bottlenecks"
@@ -175,7 +185,7 @@ export default function GB200WithRoCEv2() {
                                 <h3 className="text-lg font-bold text-[#333333] mb-2">
                                     Performance Bottlenecks
                                 </h3>
-                                <p className="text-l text-[#666666]">
+                                <p className="text-sm text-[#666666]">
                                     Network latency between GPUs is the key bottleneck.This leads to idle GPUs and low MFU (Model FLOPs Utilization).
                                 </p>
                             </div>
@@ -183,8 +193,8 @@ export default function GB200WithRoCEv2() {
 
                         {/* Operational Complexity */}
                         <SlideUp>
-                            <div className="text-left p-6 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                                <div className="w-16 h-16 mb-6">
+                            <div className="text-left p-8 min-h-[271px] relative" style={{ backgroundImage: 'url(/solutions/networking-hardware/gb200-with-rocev2/challenges_card_white.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                <div className="w-16 h-16 mb-8">
                                     <Image
                                         src="/solutions/networking-hardware/gb200-with-rocev2/operational-complexity.svg"
                                         alt="Operational Complexity"
@@ -196,7 +206,7 @@ export default function GB200WithRoCEv2() {
                                 <h3 className="text-lg font-bold text-[#333333] mb-2">
                                     Operational Complexity
                                 </h3>
-                                <p className="text-l text-[#666666]">
+                                <p className="text-sm text-[#666666]">
                                     Deploying and managing large AI clusters is time-consuming and labor-intensive.This slows business responsiveness and makes troubleshooting difficult.
                                 </p>
                             </div>
@@ -206,7 +216,7 @@ export default function GB200WithRoCEv2() {
             </div>
 
             {/* Solution */}
-            <div className='bg-[#F9F9F9] py-12'>
+            <div className='bg-[#F9F9F9] py-16'>
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <h2 className="text-3xl sm:text-4xl font-black text-center mb-10">Solution</h2>
@@ -480,7 +490,9 @@ export default function GB200WithRoCEv2() {
             {/* Benefits Section */}
             <div className="py-16 bg-[#F9F9F9]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-center mb-10 text-[#333333]">Benefits</h2>
+                    <SlideUp>
+                        <h2 className="text-4xl font-black text-center mb-10 text-[#333333]">Benefits</h2>
+                    </SlideUp>
 
                     {/* 上半部分 */}
                     <div className="flex flex-col lg:flex-row gap-12 mb-20">
@@ -511,7 +523,7 @@ export default function GB200WithRoCEv2() {
                                     <div className="h-[2px] bg-[#E0E0E0] my-2"></div>
                                     <p className="text-gray-600 mt-4">Reduced training time for a 1.8T model from 90 days to just 22, which is 4 times more efficient than the H100 cluster</p>
                                 </div>
-                                <button className="bg-[#80B224] text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-all w-fit">Learn More</button>
+                                <button className="bg-[#80B224] text-white px-6 py-2 rounded-3xl hover:bg-opacity-90 transition-all w-fit" onClick={()=>{window.location.href = '/gb200-nvl72'}}>Learn More</button>
                             </SlideUp>
                         </div>
                     </div>
@@ -632,7 +644,7 @@ export default function GB200WithRoCEv2() {
 
 
             {/* Deployment Process Section */}
-            <div className="bg-[#F9F9F9] py-12 sm:py-12">
+            <div className="bg-[#F9F9F9] py-12 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <div className="text-center mb-16">
@@ -727,14 +739,12 @@ export default function GB200WithRoCEv2() {
                 </div>
             </div>
 
-            
-
             {/* Resource Section */}
-            <div className="bg-[#F9F9F9] py-12 sm:pt-12 pb-24">
+            <div className="bg-[#F9F9F9] py-12 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl sm:text-4xl font-black text-gray-700 mb-4">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl sm:text-4xl font-black text-[#333333] mb-4">
                                 Resource
                             </h2>
                         </div>
@@ -742,17 +752,14 @@ export default function GB200WithRoCEv2() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <SlideUp>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                            <div className="bg-[#ECF2E9] rounded-3xl hover:shadow-lg transition-shadow overflow-hidden h-full">
                                 <div className="p-6 flex flex-col h-full">
                                     <h3 className="text-lg font-bold text-gray-800 mb-3">Tutorials</h3>
-                                    <p className="text-gray-600 mb-4 flex-grow">
+                                    <p className="text-[#666666] text-sm mb-8 flex-grow">
                                         NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload
                                     </p>
                                     <div className="mt-auto">
-                                        <button
-                                            className="text-[#80B224] font-medium hover:text-[#6BA000] transition-colors duration-300 flex items-center"
-                                            onClick={() => window.location.href = '/resources/tutorials'}
-                                        >
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-6 py-1.5 sm:py-3 rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/tutorials'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -761,17 +768,14 @@ export default function GB200WithRoCEv2() {
                         </SlideUp>
 
                         <SlideUp>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                            <div className="bg-[#ECF2E9] rounded-3xl hover:shadow-lg transition-shadow overflow-hidden h-full">
                                 <div className="p-6 flex flex-col h-full">
                                     <h3 className="text-lg font-bold text-gray-800 mb-3">Case Studies</h3>
-                                    <p className="text-gray-600 mb-4 flex-grow">
+                                    <p className="text-[#666666] text-sm mb-8 flex-grow">
                                         Accelerating Protein Engineering with Canopy Wave's GPUaaS
                                     </p>
                                     <div className="mt-auto">
-                                        <button
-                                            className="text-[#80B224] font-medium hover:text-[#6BA000] transition-colors duration-300 flex items-center"
-                                            onClick={() => window.location.href = '/resources/case-study'}
-                                        >
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-6 py-1.5 sm:py-3 rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/case-study'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -780,17 +784,14 @@ export default function GB200WithRoCEv2() {
                         </SlideUp>
 
                         <SlideUp>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                            <div className="bg-[#ECF2E9] rounded-3xl hover:shadow-lg transition-shadow overflow-hidden h-full">
                                 <div className="p-6 flex flex-col h-full">
                                     <h3 className="text-lg font-bold text-gray-800 mb-3">Docs</h3>
-                                    <p className="text-gray-600 mb-4 flex-grow">
+                                    <p className="text-[#666666] text-sm mb-8 flex-grow">
                                         Canopy Wave GPU Cluster Hardware Product Portfolio
                                     </p>
                                     <div className="mt-auto">
-                                        <button
-                                            className="text-[#80B224] font-medium hover:text-[#6BA000] transition-colors duration-300 flex items-center"
-                                            onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}
-                                        >
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-6 py-1.5 sm:py-3 rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -802,106 +803,163 @@ export default function GB200WithRoCEv2() {
             </div>
 
             {/* Ready to Get Started Section */}
-            <div className="relative bg-[#F9F9F9] border border-gray-200 py-16 sm:py-28 overflow-hidden">
-                <div className="relative z-30 container mx-auto px-4">
-                    <div className="relative max-w-7xl mx-auto">
-                        <SlideUp>
-                            <h2 className="text-3xl sm:text-4xl font-black text-gray-600 mb-4 text-center">Leave Us a Message</h2>
-                        </SlideUp>
-                        <SlideUp>
-                            <p className="text-gray-600 mb-8 text-center text-lg">
-                                Have questions about our GB200 with RoCEv2 solutions? We'd love to hear from you.
-                            </p>
-                        </SlideUp>
-                        <SlideUp>
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                                            Your Name<span className="text-red-500">*</span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            required
-                                            value={formData.name}
-                                            onChange={handleInputChange}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent"
-                                            placeholder="Please enter"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                                            Your Email<span className="text-red-500">*</span>
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            required
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent"
-                                            placeholder="Please enter"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                                        Message<span className="text-red-500">*</span>
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows={6}
-                                        required
-                                        value={formData.message}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-transparent resize-none"
-                                        placeholder="Please enter"
-                                    />
-                                </div>
-
-                                <div className="text-left">
-                                    <p className="text-sm text-gray-500 mb-4">
-                                        We respect your privacy. Your information will not be published.
-                                    </p>
-                                    <Button
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                        className="bg-[#8CC63F] hover:bg-[#7ab32f] px-8 py-3 text-white font-medium rounded-lg transition-colors"
-                                    >
-                                        {isSubmitting ? 'Sending...' : 'Send Message'}
-                                    </Button>
-                                </div>
-
-                                {/* 状态消息显示 */}
-                                {submitStatus !== 'idle' && (
-                                    <div className={`mt-4 p-4 rounded-lg text-center transition-all duration-300 ${submitStatus === 'success'
-                                        ? 'bg-green-50 text-green-700 border border-green-200'
-                                        : 'bg-red-50 text-red-700 border border-red-200'
-                                        }`}>
-                                        <div className="flex items-center justify-center gap-2">
-                                            {submitStatus === 'success' ? (
-                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                                </svg>
-                                            ) : (
-                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                                                </svg>
-                                            )}
-                                            <span className="font-medium">{statusMessage}</span>
+            <div className="bg-[#F9F9F9] py-12 sm:py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="relative w-full">
+                        <Image
+                            src="/solutions/networking-hardware/gb200-with-rocev2/ready_bg.png"
+                            alt="Ready to get started background"
+                            width={1200}
+                            height={980}
+                            className="w-full object-cover"
+                        />
+                        <div className="absolute inset-0 p-12">
+                            <SlideUp>
+                                <h2 className="text-3xl sm:text-4xl font-black text-[#333333] mb-6 text-center">Ready to get started?</h2>
+                            </SlideUp>
+                            <SlideUp>
+                                <p className="text-[#333333] mb-8 text-center text-l">
+                                    Have a question about solution that you are interested in? Fill in the form and we’ll respond to you promptly.
+                                </p>
+                            </SlideUp>
+                            <SlideUp>
+                                <form onSubmit={handleSubmit} className="space-y-6">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div>
+                                            <label htmlFor="name" className="block text-sm font-medium text-[#333333] mb-2">
+                                                First Name<span className="text-red-500">*</span>
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="name"
+                                                name="name"
+                                                required
+                                                value={formData.name}
+                                                onChange={handleInputChange}
+                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="lastName" className="block text-sm font-medium text-[#333333] mb-2">
+                                                Last Name<span className="text-red-500">*</span>
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="lastName"
+                                                name="lastName"
+                                                required
+                                                value={formData.lastName || ''}
+                                                onChange={handleInputChange}
+                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                placeholder=""
+                                            />
                                         </div>
                                     </div>
-                                )}
-                            </form>
-                        </SlideUp>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div>
+                                            <label htmlFor="company" className="block text-sm font-medium text-[#333333] mb-2">
+                                                Company Name<span className="text-red-500">*</span>
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="company"
+                                                name="company"
+                                                required
+                                                value={formData.company || ''}
+                                                onChange={handleInputChange}
+                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="email" className="block text-sm font-medium text-[#333333] mb-2">
+                                                Email<span className="text-red-500">*</span>
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                name="email"
+                                                required
+                                                value={formData.email}
+                                                onChange={handleInputChange}
+                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between items-center mb-2">
+                                            <label htmlFor="message" className="text-sm font-medium text-[#333333]">
+                                                What's Your Project Interest, or How We Can Best Help You?<span className="text-red-500">*</span>
+                                            </label>
+                                            <div className="text-xs text-gray-400">
+                                                0/5000
+                                            </div>
+                                        </div>
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            rows={5}
+                                            required
+                                            value={formData.message}
+                                            onChange={handleInputChange}
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:border-transparent resize-none bg-white placeholder:text-sm"
+                                            placeholder="Briefly outline your interest or project requirements, such as project application scenario, involved devices, scales, budget, and other information."
+                                        />
+                                    </div>
+
+                                    <div className="flex items-start space-x-3 mb-10">
+                                        <input
+                                            type="checkbox"
+                                            id="marketing"
+                                            name="marketing"
+                                            required
+                                            checked={formData.marketing}
+                                            onChange={handleInputChange}
+                                            className="mt-1 h-4 w-4 text-[#8CC63F] focus:ring-[#8CC63F] border-gray-300 rounded"
+                                        />
+                                        <label htmlFor="marketing" className="text-sm text-[#666666] leading-5">
+                                            I agree to receive marketing communications from Canopy Wave.<span className="text-red-500">*</span>
+                                        </label>
+                                    </div>
+
+                                    {/* 状态消息显示 - 在屏幕右上方显示 */}
+                                    {submitStatus !== 'idle' && (
+                                        <div className={`fixed top-[63px] right-4 max-w-md p-4 rounded-lg text-center transition-all duration-300 z-50 shadow-lg ${submitStatus === 'success'
+                                            ? 'bg-green-50 text-green-700 border border-green-200'
+                                            : 'bg-red-50 text-red-700 border border-red-200'
+                                            }`}>
+                                            <div className="flex items-center justify-center gap-2">
+                                                {submitStatus === 'success' ? (
+                                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                    </svg>
+                                                ) : (
+                                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                                    </svg>
+                                                )}
+                                                <span className="font-medium">{statusMessage}</span>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    <div className="text-center">
+                                        <Button
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                            className="bg-[#8CC63F] hover:bg-[#7ab32f] px-12 py-3 text-white font-medium rounded-3xl transition-colors"
+                                        >
+                                            {isSubmitting ? 'Submitting...' : 'Submit'}
+                                        </Button>
+                                    </div>
+                                </form>
+                            </SlideUp>
+                        </div>
                     </div>
                 </div>
             </div>
-
 
             <Footer />
         </main>
