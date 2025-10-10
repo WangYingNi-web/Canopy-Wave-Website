@@ -38,6 +38,7 @@ export default function TestIndex() {
   const [currentMapIndex, setCurrentMapIndex] = useState(0);
   const [isMapAutoPlaying, setIsMapAutoPlaying] = useState(true);
   const [mapAutoPlayTimer, setMapAutoPlayTimer] = useState<NodeJS.Timeout | null>(null);
+  const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
   const { ref: chatRef, inView: chatInView } = useInView({
     threshold: 0.3,
     triggerOnce: false
@@ -72,6 +73,21 @@ export default function TestIndex() {
       }, 50);
     }, 250);
   };
+
+  // 防抖的悬停处理函数
+  const handleHoverChange = (newIndex: number) => {
+    if (hoverTimer) {
+      clearTimeout(hoverTimer);
+    }
+    
+    const timer = setTimeout(() => {
+      handleImageChange(newIndex);
+      setIsProductAutoPlaying(false);
+    }, 100); // 150ms防抖延迟
+    
+    setHoverTimer(timer);
+  };
+
   const partnerLogos = [
     { id: 1, width: 130, height: 100 },
     { id: 2, width: 80, height: 80 },
@@ -903,8 +919,7 @@ export default function TestIndex() {
                               setTimeout(() => setIsProductAutoPlaying(true), 5000);
                             }}
                             onMouseEnter={() => {
-                              handleImageChange(index - 1);
-                              setIsProductAutoPlaying(false);
+                              handleHoverChange(index - 1);
                             }}
                             onMouseLeave={() => setIsProductAutoPlaying(true)}
                             className={`w-[69px] h-[69px] lg:w-[69px] lg:h-[69px] w-[50px] h-[50px] rounded-3xl transition-all duration-200 relative overflow-hidden ${currentImageIndex === index - 1
