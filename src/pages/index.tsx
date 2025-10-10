@@ -67,7 +67,7 @@ export default function TestIndex() {
     setTimeout(() => {
       setCurrentImageIndex(newIndex);
       setImageLoaded(false);
-    }, 150);
+    }, 80);
     
     // 动画完成后重置状态
     setTimeout(() => {
