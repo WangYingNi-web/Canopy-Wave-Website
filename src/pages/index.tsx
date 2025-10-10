@@ -67,12 +67,12 @@ export default function TestIndex() {
     setTimeout(() => {
       setCurrentImageIndex(newIndex);
       setImageLoaded(false);
-    }, 80);
+    }, 20);
     
     // 动画完成后重置状态
     setTimeout(() => {
       setIsSliding(false);
-    }, 300);
+    }, 150);
   };
 
   // 预加载产品图片
