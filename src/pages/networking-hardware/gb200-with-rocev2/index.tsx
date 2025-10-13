@@ -759,7 +759,7 @@ export default function GB200WithRoCEv2() {
                                         NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload
                                     </p>
                                     <div className="mt-auto">
-                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-6 py-1.5 sm:py-3 rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/tutorials'}>
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/tutorials'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -775,7 +775,7 @@ export default function GB200WithRoCEv2() {
                                         Accelerating Protein Engineering with Canopy Wave's GPUaaS
                                     </p>
                                     <div className="mt-auto">
-                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-6 py-1.5 sm:py-3 rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/case-study'}>
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/case-study'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -791,7 +791,7 @@ export default function GB200WithRoCEv2() {
                                         Canopy Wave GPU Cluster Hardware Product Portfolio
                                     </p>
                                     <div className="mt-auto">
-                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-3 sm:px-6 py-1.5 sm:py-3 rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}>
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}>
                                             Read More&gt;
                                         </button>
                                     </div>
