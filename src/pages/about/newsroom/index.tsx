@@ -62,6 +62,14 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         // {
+        //     id: 30,
+        //     title: "How is AI created",
+        //     description: "To grasp the logic behind AI development, one must recognize its essence as a complex engineering system encompassing requirements planning, technical implementation, and application deployment.",
+        //     date: "October 12, 2025",
+        //     image: "/blog/data-fragmentation.webp",
+        //     alttitle: "How is AI created"
+        // },
+        // {
         //     id: 29,
         //     title: "How Can Enterprises Solve Data Fragmentation",
         //     description: "with the increasing number of business systems, the diversification of data sources, and the increasing complexity of information flows, data fragmentation has become the biggest obstacle hindering the intelligent transformation of enterprises.",

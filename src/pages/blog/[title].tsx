@@ -23,6 +23,8 @@ export default function BlogDetail() {
 
 
 
+      
+
       case 'joint-blog-accelerate-enterprise-ai':
         return {
           id: 1,
@@ -3458,6 +3460,104 @@ export default function BlogDetail() {
           ],
         }
 
+        case 'how-is-ai-created':
+        return {
+          id: 30,
+          title: 'How is AI created',
+          description: 'How is AI created? What resources are required?',
+          sections: [
+            {
+              title: 'Understanding the Logic of AI Creation',
+              content: [
+                'To grasp the logic behind AI development, one must recognize its essence as a complex engineering system encompassing requirements planning, technical implementation, and application deployment.',
+                <img key="how-is-ai-created" src="/blog/blog2.webp" alt="How is AI created" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              ],
+            },
+            {
+              title: 'Goal Anchoring: The Starting Point of AI Development',
+              content: [
+                'The entire development process begins with goal anchoring: whether building medical imaging recognition AI to assist clinical diagnosis or developing intelligent route planning systems to optimize supply chains, precise goal setting acts as a navigational beacon, directly guiding subsequent critical steps like technology selection and model training.',
+              ],
+            },
+            {
+              title: 'Data Engineering: Building the Digital Textbook',
+              content: [
+                'Once objectives are established, the process enters the data engineering phase. As the core medium through which AI perceives the world, data quality directly determines the upper limit of intelligence.',
+                'This stage requires domain-knowledge-driven data filtering, cleansing of invalid samples, and standardized preprocessing to construct a structured "digital textbook repository" for model training. This ensures AI extracts effective knowledge from high-quality data sources.',
+              ],
+            },
+            {
+              title: 'Model Design and Training: Iterative Learning',
+              content: [
+                'Once the foundational data is prepared, the process moves into the model design and training phase. This step forms the core of AI creation, where developers must select appropriate algorithmic frameworks based on objectives—such as employing deep learning for image-related tasks or reinforcement learning for decision-making problems—and then translate these algorithms into operational models through coding.',
+                "However, a model isn't effective right away. They require repeated 'learning' from vast datasets: Developers divide processed data into training and testing sets, allowing the model to first learn patterns from the training set before validating its performance on the test set.",
+                'If recognition errors or decision biases occur, model parameters are adjusted and retrained. This process may be repeated dozens or even hundreds of times until the model\'s accuracy meets the expected standards.',
+              ],
+            },
+            {
+              title: 'Deployment and Iteration: From Lab to Production',
+              content: [
+                "After model training is complete, two critical steps remain: deployment and iteration. Deployment involves embedding the trained model into real-world applications—such as integrating a medical AI model into a hospital's imaging system or incorporating a logistics AI model into a company's dispatch platform.",
+                "This process requires resolving compatibility issues between the model and existing systems to ensure stable operation.",
+                'Iteration, meanwhile, extends the AI lifecycle. As data accumulates in real-world scenarios, developers must periodically optimize models with fresh data to prevent performance degradation due to "data drift."',
+                "For instance, e-commerce recommendation AI continuously adjusts its logic based on users' latest consumption habits, ensuring consistently precise service delivery.",
+              ],
+            },
+            {
+              title: 'The Tripod of AI: Hardware, Talent, and Data',
+              content: [
+                'In this creation process, hardware, talent, and data form the essential "tripod" supporting AI—none can be overlooked.',
+                'Hardware serves as the "physical foundation" for AI operations, with its performance directly impacting development efficiency and model effectiveness.',
+                'For AI projects involving massive data volumes and complex computations — such as visual recognition models for autonomous driving that process hundreds of thousands of frames of road conditions per second — ordinary personal computers are utterly inadequate.',
+                'This necessitates specialized computing hardware: Graphics Processing Units (GPUs) leverage parallel computing capabilities to become the core of model training. Professional GPUs like NVIDIA\'s H100 and B200 can simultaneously process massive data computations, reducing training times from months to weeks or even days.',
+                'For hyperscale AI projects, such as training large language models with hundreds of billions of parameters, multiple GPU servers must be interconnected via dedicated networks to form computing clusters. These are paired with high-speed storage devices (like SSDs) to minimize data read latency and ensure uninterrupted computation.',
+              ],
+            },
+            {
+              title: 'Talent: The Core Driving Force',
+              content: [
+                'Talent serves as the "core driving force" that harnesses these resources and propels AI implementation. Different stages require professionals with diverse expertise to collaborate effectively.',
+                'The data processing stage requires data engineers, who excel at cleaning data using tools like SQL and Python, building data pipelines, and ensuring data quality and usability.',
+                'The model design and training stage relies on algorithm engineers and machine learning engineers. The former focus on researching and improving algorithms, such as optimizing deep learning network structures, while the latter concentrate on translating algorithms into deployable models, addressing technical challenges like overfitting and vanishing gradients during training.',
+                'During deployment and iteration, operations engineers and product managers are indispensable. Operations engineers ensure stable model performance in real-world scenarios, while product managers bridge technical and business needs to guarantee AI products genuinely meet user requirements.',
+                'Additionally, as AI ethical concerns gain prominence, interdisciplinary professionals with legal and ethical expertise are increasingly in demand. They help mitigate risks like data privacy breaches and algorithmic bias during development, fostering more responsible AI advancement.',
+              ],
+            },
+            {
+              title: 'Data: The Learning Material for AI',
+              content: [
+                'Data, serving as the "learning material" for AI, holds even greater importance than hardware and talent. Without high-quality data, even the most advanced hardware and exceptional talent cannot build practical AI.',
+                'First, data must possess "relevance." For instance, when developing medical AI, collected data should be disease-related imaging and medical records, not unrelated everyday photos.',
+                'Second, data requires "scale," as AI learns patterns through vast samples. Take image recognition AI: training typically demands tens of thousands or even millions of images for models to accurately distinguish objects.',
+                'Most critically, data must be "high-quality." Errors in labeling (e.g., misclassifying "pneumonia images" as "normal images") or biases (e.g., collecting data only from specific demographics) will skew model training and ultimately compromise application effectiveness.',
+                'To obtain high-quality data, enterprises typically employ two approaches: First, self-collection—such as e-commerce platforms accumulating user consumption data or hospitals gathering patient diagnosis records. Second, legal procurement—acquiring anonymized industry data from professional data service providers.',
+                'Additionally, establishing dedicated data annotation teams is essential to precisely label raw data, providing clear guidance for AI\'s learning process.',
+              ],
+            },
+            {
+              title: 'Resource Collaboration in Practice: Intelligent Customer Service AI',
+              content: [
+                'These three types of resources do not exist in isolation; they require deep collaboration to maximize their value.',
+                'Take the development of an intelligent customer service AI by a tech company as an example: first, the data team must collect massive amounts of user consultation dialogue data, clean it, and annotate it; then, algorithm engineers use GPU clusters to build deep learning models and train them with the annotated data;',
+                "During training, the hardware team needs to monitor the operational status of computing resources in real time to ensure training isn't interrupted by hardware failures; Finally, the operations team deploys the trained model into the customer service system, while the product team collects new data based on user feedback to drive continuous model iteration.",
+                'In this process, the absence or insufficiency of any single resource will impact AI development efficiency and final outcomes—for instance, poor data quality can cause repeated model training failures; inadequate hardware performance can significantly extend development cycles; and incomplete talent allocation may stall the project at a specific stage.',
+              ],
+            },
+            {
+              title: 'Access to Resources Today: Hardware, Talent, and Data Ecosystems',
+              content: [
+                'Today, with the widespread adoption of AI technology, access to hardware, talent, and data continues to expand.',
+                'Regarding hardware, beyond purchasing dedicated equipment, enterprises can also lease GPU computing power through cloud service providers like Canopy Wave and AWS, reducing initial investment costs.',
+                'In terms of talent, university AI programs continuously supply fresh graduates, while online education platforms such as Coursera offer practitioners avenues for skill enhancement.',
+                'Regarding data, governments and industry associations are promoting public data openness while establishing regulations to govern data usage, thereby providing safer and more accessible data sources for AI development.',
+                'Regardless of how resource acquisition methods evolve, understanding the core logic behind AI creation processes and resource requirements remains fundamental to mastering AI technology and driving its practical implementation.',
+                'Only by clearly grasping "how AI is created" and "what resources are needed" can one navigate the AI wave effectively and develop truly valuable AI products.',
+              ],
+            },
+          ],
+        }
+      
+        
 
       default:
         return null
@@ -3520,7 +3620,9 @@ export default function BlogDetail() {
                                         ? "/blog/ai-rag.webp"
                                         : blogPost.title === "Large Model API Call Optimization Guide"
                                           ? "/blog/api-optimization.webp"
-                                          : "/blog1.webp"
+                                          : blogPost.title === "How is AI created"
+                                            ? "/blog/blog2.webp"
+                                            : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -3748,6 +3850,15 @@ export default function BlogDetail() {
             <meta key="rag-og-title" property="og:title" content="RAG Equipping AI with Knowledge Plugins" />
             <meta key="rag-og-image" property="og:image" content="https://canopywave.com/blog/ai-rag.webp" />
             <meta key="rag-og-description" property="og:description" content="How can we overcome the limitations of knowledge to make AI smarter and more reliable?The answer lies in a key technology called Retrieval-Augmented Generation (RAG)." />
+          </>
+        )}
+        {title === 'how-is-ai-created' && (
+          <>
+            <meta key="how-ai-created-title" name="title" content="How is AI created" />
+            <meta key="how-ai-created-description" name="description" content="To grasp the logic behind AI development, one must recognize its essence as a complex engineering system encompassing requirements planning, technical implementation, and application deployment." />
+            <meta key="how-ai-created-og-title" property="og:title" content="How is AI created" />
+            <meta key="how-ai-created-og-image" property="og:image" content="https://canopywave.com/blog/blog2.webp" />
+            <meta key="how-ai-created-og-description" property="og:description" content="To grasp the logic behind AI development, one must recognize its essence as a complex engineering system encompassing requirements planning, technical implementation, and application deployment." />
           </>
         )}
         {title === 'how-can-enterprises-solve-data-fragmentation' && (

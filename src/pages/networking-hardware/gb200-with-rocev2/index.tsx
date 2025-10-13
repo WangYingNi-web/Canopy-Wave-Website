@@ -3,6 +3,7 @@
 import Head from 'next/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { useState } from 'react';
 import Image from 'next/image';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,36 @@ export default function GB200WithRoCEv2() {
         company: '',
         marketing: false
     });
+    const validateEmail = (email: string) => {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return emailRegex.test(email);
+    };
+    const validateField = (name: string, value: string | string[]) => {
+        let error = '';
+
+        // 对于 interests 数组的特殊处理
+        // if (name === 'interests' && Array.isArray(value) && value.length === 0) {
+        //     error = 'Please complete this required field.';
+        // }
+        // 对于普通字符串字段的处理
+        if (typeof value === 'string') {
+            if (!value.trim()) {
+                error = 'Please complete this required field.';
+            } else if (name === 'email' && !validateEmail(value)) {
+                error = 'Email must be formatted correctly.';
+            }
+        }
+
+        return error;
+    };
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        const error = validateField(name, value);
+        setErrors(prev => ({
+            ...prev,
+            [name]: error
+        }));
+    };
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
     const [statusMessage, setStatusMessage] = React.useState('');
@@ -39,9 +70,36 @@ export default function GB200WithRoCEv2() {
             [name]: type === 'checkbox' ? checked : value
         }));
     };
+    const [errors, setErrors] = useState({
+        message: '',
+        name: '',
+        email: '',
+        lastName: '',
+        company: '',
+        marketing: ''
+    });
 
+
+        
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Validate required fields before submitting
+        const newErrors = {
+            message: validateField('message', formData.message),
+            name: validateField('name', formData.name),
+            email: validateField('email', formData.email),
+            lastName: validateField('lastName', formData.lastName),
+            company: validateField('company', formData.company),
+            marketing: formData.marketing ? '' : 'Please complete this required field.'
+        };
+
+        if (Object.values(newErrors).some(err => err)) {
+            setErrors(newErrors);
+            // 阻止提交
+            setIsSubmitting(false);
+            return;
+        }
         setIsSubmitting(true);
 
         try {
@@ -276,215 +334,7 @@ export default function GB200WithRoCEv2() {
                 </div>
             </div>
 
-            {/* On-Demand High-Performance GPU Section */}
-            {/* <div className='bg-[#F9F9F9]'>
-                <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-12">
-                    <SlideUp>
-                        <h2 className="text-3xl sm:text-4xl font-black text-center mb-6">Aaccelerate trillion-parameter model training</h2>
-                    </SlideUp>
-                    <SlideUp>
-                        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-6 text-l">
-                            Access cutting-edge GB200 GPUs on-demand to accelerate training computations and<br />help clients shorten their R&D cycles
-                        </p>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="flex justify-center pb-8">
-                            <button className="bg-[#8CC63F] hover:bg-[#7ab32f] text-white px-6 py-2 rounded-md text-l" onClick={() => window.location.href = '/gb200-nvl72'}>
-                                Learn more
-                            </button>
-                        </div>
-                    </SlideUp>
-                    <SlideUp>
-                        <div className="mb-16 group">
-                            <Image
-                                src="/solutions/networking-hardware/gb200-with-rocev2/gb200.webp"
-                                alt="NVIDIA GB200 NVL72 Cluster"
-                                width={1300}
-                                height={400}
-                                className="rounded-lg object-contain transition-transform duration-500 group-hover:scale-105"
-                                priority
-                            />
-                        </div>
-                    </SlideUp>
-                </div>
-            </div> */}
-
-            {/* RoCEv2 + NVLink Performance Section */}
-            {/* <div className="bg-[#F9F9F9] py-12 sm:py-10 pb-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-                                Connecting every GPU with ultra-fast speed
-                            </h2>
-                        </div>
-                    </SlideUp>
-
-                    <SlideUp>
-                        <div className="mb-8">
-                            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 mb-8">
-                                <button
-                                    onClick={() => setActiveTab('rocev2')}
-                                    className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab === 'rocev2'
-                                        ? 'border-[#8CC63F] text-[#8CC63F]'
-                                        : 'border-transparent text-gray-500 hover:text-gray-700'
-                                        }`}
-                                >
-                                    Ultra-Low Latency RoCEv2 Fabric
-                                </button>
-                                <button
-                                    onClick={() => setActiveTab('nvlink')}
-                                    className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab === 'nvlink'
-                                        ? 'border-[#8CC63F] text-[#8CC63F]'
-                                        : 'border-transparent text-gray-500 hover:text-gray-700'
-                                        }`}
-                                >
-                                    Unified High-Bandwidth GPU Domain
-                                </button>
-                            </div>
-
-                            <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                <div className="space-y-4">
-                                    {activeTab === 'rocev2' && (
-                                        <div className="space-y-2 pl-8">
-                                            <h3 className="font-semibold text-gray-700">
-                                                Ultra-Low Latency RoCEv2 Fabric
-                                            </h3>
-                                            <p className="text-gray-600 leading-relaxed">
-                                                Utilizes RDMA for direct, kernel-bypass data transfer, minimizing latency and CPU load.
-                                            </p>
-                                            <div>
-                                                <p className="font-semibold text-gray-700">Result:</p>
-                                                <p className="text-gray-600">
-                                                    Ensures efficient, non-blocking communication between any two GPUs across the cluster.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {activeTab === 'nvlink' && (
-                                        <div className="space-y-2 pl-8">
-                                            <h3 className="font-semibold text-gray-700">
-                                                Unified High-Bandwidth GPU Domain
-                                            </h3>
-                                            <p className="text-gray-600 leading-relaxed">
-                                                Each NVL72 rack operates as a single, massive GPU with 1.8 TB/s of all-to-all NVLink bandwidth.
-                                            </p>
-                                            <div>
-                                                <p className="font-semibold text-gray-700">Result:</p>
-                                                <p className="text-gray-600">
-                                                    Eliminates all communication bottlenecks within the rack.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <div className="flex justify-center">
-                                    <div className="relative w-full max-w-6xl">
-                                        <Image
-                                            src="/solutions/networking-hardware/gb200-with-rocev2/performance-architecture.png"
-                                            alt="RoCEv2 + NVLink Performance Architecture"
-                                            width={1600}
-                                            height={600}
-                                            className="object-cover w-full h-auto"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </SlideUp>
-                </div>
-            </div> */}
-
-            {/* Intelligent platform + 24/7 expert team simplifies operation Section */}
-            {/* <div className="bg-[#F9F9F9] py-12 sm:py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <SlideUp>
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-                                Intelligent platform + 24/7 expert team <br />simplifies operation
-                            </h2>
-                        </div>
-                    </SlideUp>
-
-                    <SlideUp>
-                        <div className="mb-8">
-                            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 mb-8">
-                                <button
-                                    onClick={() => setActiveTab2('platform')}
-                                    className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab2 === 'platform'
-                                        ? 'border-[#8CC63F] text-[#8CC63F]'
-                                        : 'border-transparent text-gray-500 hover:text-gray-700'
-                                        }`}
-                                >
-                                    End-to-End Inteligent Monitoring
-                                </button>
-                                <button
-                                    onClick={() => setActiveTab2('team')}
-                                    className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors duration-200 ${activeTab2 === 'team'
-                                        ? 'border-[#8CC63F] text-[#8CC63F]'
-                                        : 'border-transparent text-gray-500 hover:text-gray-700'
-                                        }`}
-                                >
-                                    24/7 Proactive Expert Support
-                                </button>
-                            </div>
-
-                            <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                <div className="space-y-4">
-                                    {activeTab2 === 'platform' && (
-                                        <div className="space-y-2 pl-8">
-                                            <h3 className="font-semibold text-gray-700">
-                                                How:
-                                            </h3>
-                                            <p className="text-gray-600 leading-relaxed">
-                                                A unified platform integrates deep telemetry from all components (GPU, NVLink, Network).
-                                            </p>
-                                            <div>
-                                                <p className="font-semibold text-gray-700">Benefit:</p>
-                                                <p className="text-gray-600">
-                                                    AI-driven analytics proactively detect anomalies and bottlenecks before they impact training jobs.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {activeTab2 === 'team' && (
-                                        <div className="space-y-2 pl-8">
-                                            <h3 className="font-semibold text-gray-700">
-                                                How:
-                                            </h3>
-                                            <p className="text-gray-600 leading-relaxed">
-                                                Engineers with deep experience with NVIDIA GPUs and software provide constant, around-the-clock
-                                                system monitoring.
-                                            </p>
-                                            <div>
-                                                <p className="font-semibold text-gray-700">Benefit:</p>
-                                                <p className="text-gray-600">
-                                                    Immediate remote intervention ensures maximum uptime and uninterrupted training.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <div className="flex justify-center">
-                                    <div className="relative w-full max-w-6xl">
-                                        <Image
-                                            src="/solutions/networking-hardware/gb200-with-rocev2/iaas.png"
-                                            alt="RoCEv2 + NVLink Performance Architecture"
-                                            width={1600}
-                                            height={600}
-                                            className="object-cover w-full h-auto"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </SlideUp>
-                </div>
-            </div> */}
+           
 
 
             {/* Benefits Section */}
@@ -745,7 +595,7 @@ export default function GB200WithRoCEv2() {
                     <SlideUp>
                         <div className="text-center mb-10">
                             <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-[40px]">
-                                Resource
+                                Resources
                             </h2>
                         </div>
                     </SlideUp>
@@ -759,7 +609,7 @@ export default function GB200WithRoCEv2() {
                                         NVIDIA H100 vs H200 vs B200: Which GPU for Your Workload
                                     </p>
                                     <div className="mt-auto">
-                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/tutorials'}>
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/tutorials/nvidia-h100-vs-h200-vs-b200:-which-gpu-for-your-workload'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -791,7 +641,7 @@ export default function GB200WithRoCEv2() {
                                         Canopy Wave GPU Cluster Hardware Product Portfolio
                                     </p>
                                     <div className="mt-auto">
-                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/docs/cw-cloud-account/quick-start'}>
+                                        <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/docs/products/canopy-wave-gpu'}>
                                             Read More&gt;
                                         </button>
                                     </div>
@@ -807,7 +657,7 @@ export default function GB200WithRoCEv2() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative w-full">
                         <Image
-                            src="/solutions/networking-hardware/gb200-with-rocev2/ready_bg.png"
+                            src="/solutions/networking-hardware/gb200-with-rocev2/ready_bg copy.png"
                             alt="Ready to get started background"
                             width={1200}
                             height={980}
@@ -833,12 +683,15 @@ export default function GB200WithRoCEv2() {
                                                 type="text"
                                                 id="name"
                                                 name="name"
-                                                required
                                                 value={formData.name}
                                                 onChange={handleInputChange}
-                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                onBlur={handleBlur}
+                                                className={`w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white ${errors.name ? 'border-red-500' : ''}`}
                                                 placeholder=""
                                             />
+                                            {errors.name && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.name}</span>
+                                        )}
                                         </div>
                                         <div>
                                             <label htmlFor="lastName" className="block text-sm font-medium text-[#333333] mb-2">
@@ -848,12 +701,15 @@ export default function GB200WithRoCEv2() {
                                                 type="text"
                                                 id="lastName"
                                                 name="lastName"
-                                                required
                                                 value={formData.lastName || ''}
                                                 onChange={handleInputChange}
-                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                onBlur={handleBlur}
+                                                className={`w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white ${errors.lastName ? 'border-red-500' : ''}`}
                                                 placeholder=""
                                             />
+                                            {errors.lastName && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.lastName}</span>
+                                        )}
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -865,12 +721,15 @@ export default function GB200WithRoCEv2() {
                                                 type="text"
                                                 id="company"
                                                 name="company"
-                                                required
                                                 value={formData.company || ''}
                                                 onChange={handleInputChange}
-                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                onBlur={handleBlur}
+                                                className={`w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white ${errors.company ? 'border-red-500' : ''}`}
                                                 placeholder=""
                                             />
+                                            {errors.company && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.company}</span>
+                                        )}
                                         </div>
                                         <div>
                                             <label htmlFor="email" className="block text-sm font-medium text-[#333333] mb-2">
@@ -880,12 +739,15 @@ export default function GB200WithRoCEv2() {
                                                 type="email"
                                                 id="email"
                                                 name="email"
-                                                required
                                                 value={formData.email}
                                                 onChange={handleInputChange}
-                                                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white"
+                                                onBlur={handleBlur}
+                                                className={`w-full px-4 py-2 border border-gray-300 rounded-xl focus:border-transparent bg-white ${errors.email ? 'border-red-500' : ''}`}
                                                 placeholder=""
                                             />
+                                            {errors.email && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.email}</span>
+                                        )}
                                         </div>
                                     </div>
                                     <div>
@@ -901,12 +763,15 @@ export default function GB200WithRoCEv2() {
                                             id="message"
                                             name="message"
                                             rows={5}
-                                            required
                                             value={formData.message}
                                             onChange={handleInputChange}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:border-transparent resize-none bg-white placeholder:text-sm"
+                                            onBlur={handleBlur}
+                                            className={`w-full px-4 py-3 border border-gray-300 rounded-xl focus:border-transparent resize-none bg-white placeholder:text-sm ${errors.message ? 'border-red-500' : ''}`}
                                             placeholder="Briefly outline your interest or project requirements, such as project application scenario, involved devices, scales, budget, and other information."
                                         />
+                                        {errors.message && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.message}</span>
+                                        )}
                                     </div>
 
                                     <div className="flex items-start space-x-3 mb-10">
@@ -914,14 +779,17 @@ export default function GB200WithRoCEv2() {
                                             type="checkbox"
                                             id="marketing"
                                             name="marketing"
-                                            required
                                             checked={formData.marketing}
                                             onChange={handleInputChange}
-                                            className="mt-1 h-4 w-4 text-[#8CC63F] focus:ring-[#8CC63F] border-gray-300 rounded"
+                                            onBlur={handleBlur}
+                                            className={`mt-1 h-4 w-4 text-[#8CC63F] focus:ring-[#8CC63F] border-gray-300 rounded ${errors.marketing ? 'border-red-500' : ''}`}
                                         />
                                         <label htmlFor="marketing" className="text-sm text-[#666666] leading-5">
                                             I agree to receive marketing communications from Canopy Wave.<span className="text-red-500">*</span>
                                         </label>
+                                        {errors.marketing && (
+                                            <span className="text-red-500 text-xs mt-1">{errors.marketing}</span>
+                                        )}
                                     </div>
 
                                     {/* 状态消息显示 - 在屏幕右上方显示 */}
