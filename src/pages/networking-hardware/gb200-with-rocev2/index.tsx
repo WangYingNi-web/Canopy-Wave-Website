@@ -80,7 +80,7 @@ export default function GB200WithRoCEv2() {
     });
 
 
-        
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -334,7 +334,7 @@ export default function GB200WithRoCEv2() {
                 </div>
             </div>
 
-           
+
 
 
             {/* Benefits Section */}
@@ -373,7 +373,7 @@ export default function GB200WithRoCEv2() {
                                     <div className="h-[2px] bg-[#E0E0E0] my-2"></div>
                                     <p className="text-gray-600 mt-4 text-[18px]">Reduced training time for a 1.8T model from 90 days to just 22, which is 4 times more efficient than the H100 cluster</p>
                                 </div>
-                                <button className="bg-[#80B224] text-white px-[18px] py-[8px] rounded-3xl hover:bg-opacity-90 transition-all w-fit" onClick={()=>{window.location.href = '/gb200-nvl72'}}>Learn More</button>
+                                <button className="bg-[#80B224] text-white px-[18px] py-[8px] rounded-3xl hover:bg-opacity-90 transition-all w-fit" onClick={() => { window.location.href = '/gb200-nvl72' }}>Learn More</button>
                             </SlideUp>
                         </div>
                     </div>
@@ -442,19 +442,30 @@ export default function GB200WithRoCEv2() {
                                         height={600}
                                         className="w-full h-full object-cover"
                                     />
-                                    <div className="absolute inset-0 flex items-center">
-                                        <div className="ml-auto max-w-md text-left mr-6">
+                                    <div className="absolute inset-0 items-center hidden md:flex">
+                                        <div className="ml-auto max-w-md text-left mr-6 text-[#333333] p-4 rounded-md">
                                             <h3 className="text-[20px] font-bold mb-4">Intelligent End-to-End Monitoring</h3>
                                             <div className="mb-4">
                                                 <h4 className="font-bold mb-2 text-[18px]">How</h4>
-                                                <p className="text-[#666666] text-[18px]">A unified platform integrates deep telemetry from all components (GPU, NVLink, Network).</p>
+                                                <p className="text-[18px] text-[#666666]">A unified platform integrates deep telemetry from all components (GPU, NVLink, Network).</p>
                                             </div>
                                             <div>
                                                 <h4 className="font-bold mb-2 text-[18px]">Benefit</h4>
-                                                <p className="text-[#666666] text-[18px]">AI-driven analytics proactively detect anomalies and bottlenecks before they impact training jobs.</p>
+                                                <p className="text-[18px] text-[#666666]">AI-driven analytics proactively detect anomalies and bottlenecks before they impact training jobs.</p>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="md:hidden mt-4 px-4">
+                                <h3 className="text-[20px] font-bold mb-4">Intelligent End-to-End Monitoring</h3>
+                                <div className="mb-4">
+                                    <h4 className="font-bold mb-2 text-[18px]">How</h4>
+                                    <p className="text-[#666666] text-[18px]">A unified platform integrates deep telemetry from all components (GPU, NVLink, Network).</p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold mb-2 text-[18px]">Benefit</h4>
+                                    <p className="text-[#666666] text-[18px]">AI-driven analytics proactively detect anomalies and bottlenecks before they impact training jobs.</p>
                                 </div>
                             </div>
                         </SlideUp>
@@ -472,19 +483,30 @@ export default function GB200WithRoCEv2() {
                                         height={600}
                                         className="w-full h-full object-cover"
                                     />
-                                    <div className="absolute inset-0 flex items-center">
-                                        <div className="max-w-md text-left ml-[24px]">
-                                            <h3 className="text-[20px] font-bold mb-4 text-black">24/7 Proactive Expert Support</h3>
+                                    <div className="absolute inset-0 items-center hidden md:flex">
+                                        <div className="max-w-md text-left ml-[24px] text-[#333333] rounded-md">
+                                            <h3 className="text-[20px] font-bold mb-4">24/7 Proactive Expert Support</h3>
                                             <div className="mb-4">
                                                 <h4 className="font-bold mb-2 text-[18px]">How</h4>
-                                                <p className="text-[#666666] text-[18px]">Engineers with deep experience with NVIDIA GPUs and software provide constant, around-the-clock system monitoring.</p>
+                                                <p className="text-[18px] text-[#666666]">Engineers with deep experience with NVIDIA GPUs and software provide constant, around-the-clock system monitoring.</p>
                                             </div>
                                             <div>
                                                 <h4 className="font-bold mb-2 text-[18px]">Benefit</h4>
-                                                <p className="text-[#666666] text-[18px]">Immediate remote intervention ensures maximum uptime and uninterrupted training.</p>
+                                                <p className="text-[18px] text-[#666666]">Immediate remote intervention ensures maximum uptime and uninterrupted training.</p>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="md:hidden mt-4 px-4">
+                                <h3 className="text-[20px] font-bold mb-4 text-black">24/7 Proactive Expert Support</h3>
+                                <div className="mb-4">
+                                    <h4 className="font-bold mb-2 text-[18px]">How</h4>
+                                    <p className="text-[#666666] text-[18px]">Engineers with deep experience with NVIDIA GPUs and software provide constant, around-the-clock system monitoring.</p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold mb-2 text-[18px]">Benefit</h4>
+                                    <p className="text-[#666666] text-[18px]">Immediate remote intervention ensures maximum uptime and uninterrupted training.</p>
                                 </div>
                             </div>
                         </SlideUp>
@@ -655,14 +677,13 @@ export default function GB200WithRoCEv2() {
             {/* Ready to Get Started Section */}
             <div className="bg-[#F9F9F9] py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative w-full">
-                        <Image
-                            src="/solutions/networking-hardware/gb200-with-rocev2/ready_bg copy.png"
-                            alt="Ready to get started background"
-                            width={1200}
-                            height={980}
-                            className="w-full object-cover"
-                        />
+                    <div className="relative w-full min-h-[980px] sm:min-h-[780px] bg-cover bg-center"
+                        style={{
+                            backgroundImage: 'url("/solutions/networking-hardware/gb200-with-rocev2/ready_bg copy.png")',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                        }}>
                         <div className="absolute inset-0 p-12">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-8 text-center">Ready to get started?</h2>
@@ -690,8 +711,8 @@ export default function GB200WithRoCEv2() {
                                                 placeholder=""
                                             />
                                             {errors.name && (
-                                            <span className="text-red-500 text-xs mt-1">{errors.name}</span>
-                                        )}
+                                                <span className="text-red-500 text-xs mt-1">{errors.name}</span>
+                                            )}
                                         </div>
                                         <div>
                                             <label htmlFor="lastName" className="block text-sm font-medium text-[#333333] mb-2">
@@ -708,8 +729,8 @@ export default function GB200WithRoCEv2() {
                                                 placeholder=""
                                             />
                                             {errors.lastName && (
-                                            <span className="text-red-500 text-xs mt-1">{errors.lastName}</span>
-                                        )}
+                                                <span className="text-red-500 text-xs mt-1">{errors.lastName}</span>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -728,8 +749,8 @@ export default function GB200WithRoCEv2() {
                                                 placeholder=""
                                             />
                                             {errors.company && (
-                                            <span className="text-red-500 text-xs mt-1">{errors.company}</span>
-                                        )}
+                                                <span className="text-red-500 text-xs mt-1">{errors.company}</span>
+                                            )}
                                         </div>
                                         <div>
                                             <label htmlFor="email" className="block text-sm font-medium text-[#333333] mb-2">
@@ -746,8 +767,8 @@ export default function GB200WithRoCEv2() {
                                                 placeholder=""
                                             />
                                             {errors.email && (
-                                            <span className="text-red-500 text-xs mt-1">{errors.email}</span>
-                                        )}
+                                                <span className="text-red-500 text-xs mt-1">{errors.email}</span>
+                                            )}
                                         </div>
                                     </div>
                                     <div>
