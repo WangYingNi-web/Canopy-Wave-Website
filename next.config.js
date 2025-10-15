@@ -57,6 +57,20 @@ const nextConfig = {
             permanent: true,
             statusCode: 301
         },
+        // 新增重定向：/about-us -> /about
+        {
+            source: '/about-us',
+            destination: '/about',
+            permanent: true,
+            statusCode: 301
+        },
+        // 新增重定向：/events/:title -> /
+        {
+            source: '/events/:title',
+            destination: '/',
+            permanent: true,
+            statusCode: 301
+        }
     ]
 }
 }

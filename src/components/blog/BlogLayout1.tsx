@@ -128,45 +128,23 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   <div key={`element-${index}-${pIndex}`} className="text-gray-700 leading-relaxed">{paragraph}</div>
                 );
               } else {
-                // 普通文本 - 特定小标题加粗 + 处理换行符
-                if (typeof paragraph === 'string') {
-                  const boldCandidates = [
-                    '1. Optimize Cooling Technology',
-                    '2. Site Selection and Policy Interventions',
-                    '3. Green AI Innovations',
-                  ];
-                  const matchedHeader = boldCandidates.find(h => paragraph.startsWith(h));
-                  if (matchedHeader) {
-                    const hasColon = paragraph.startsWith(matchedHeader + ':');
-                    const rest = paragraph.slice(matchedHeader.length + (hasColon ? 1 : 0)).trim();
-                    result.push(
-                      <p key={pIndex} className="text-gray-700 leading-relaxed">
-                        <strong>{matchedHeader}{hasColon ? ':' : ''}</strong>{rest ? ` ${rest}` : ''}
-                      </p>
-                    );
-                  } else if (paragraph.includes('\n')) {
-                    const lines = paragraph.split('\n');
-                    result.push(
-                      <div key={pIndex} className="text-gray-700 leading-relaxed">
-                        {lines.map((line, lineIndex) => (
-                          <React.Fragment key={lineIndex}>
-                            {line}
-                            {lineIndex < lines.length - 1 && <br />}
-                          </React.Fragment>
-                        ))}
-                      </div>
-                    );
-                  } else {
-                    result.push(
-                      <p key={pIndex} className="text-gray-700 leading-relaxed">
-                        {paragraph}
-                      </p>
-                    );
-                  }
+                // 普通文本 - 处理换行符
+                if (typeof paragraph === 'string' && paragraph.includes('\n')) {
+                  const lines = paragraph.split('\n');
+                  result.push(
+                    <div key={pIndex} className="text-gray-700 leading-relaxed">
+                      {lines.map((line, lineIndex) => (
+                        <React.Fragment key={lineIndex}>
+                          {line}
+                          {lineIndex < lines.length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  );
                 } else {
                   result.push(
                     <p key={pIndex} className="text-gray-700 leading-relaxed">
-                      {paragraph as any}
+                      {paragraph}
                     </p>
                   );
                 }
