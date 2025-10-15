@@ -61,22 +61,22 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        // {
-        //     id: 30,
-        //     title: "How Much Water Does AI Use",
-        //     description: "small town's weekly water usage. According to the latest reports, water usage in AI-related data centers is growing at an astonishing rate, even threatening drinking water supplies.",
-        //     date: "October 13, 2025",
-        //     image: "/blog/data-fragmentation.webp",
-        //     alttitle: "How Much Water Does AI Use"
-        // },
-        // {
-        //     id: 30,
-        //     title: "How is AI created",
-        //     description: "To grasp the logic behind AI development, one must recognize its essence as a complex engineering system encompassing requirements planning, technical implementation, and application deployment.",
-        //     date: "October 12, 2025",
-        //     image: "/blog/data-fragmentation.webp",
-        //     alttitle: "How is AI created"
-        // },
+        {
+            id: 30,
+            title: "How Much Water Does AI Use",
+            description: "small town's weekly water usage. According to the latest reports, water usage in AI-related data centers is growing at an astonishing rate, even threatening drinking water supplies.",
+            date: "October 13, 2025",
+            image: "/blog/ai-water.webp",
+            alttitle: "How Much Water Does AI Use"
+        },
+        {
+            id: 30,
+            title: "How is AI created",
+            description: "To grasp the logic behind AI development, one must recognize its essence as a complex engineering system encompassing requirements planning, technical implementation, and application deployment.",
+            date: "October 12, 2025",
+            image: "/blog/ai-created.webp",
+            alttitle: "How is AI created"
+        },
         {
             id: 29,
             title: "How Can Enterprises Solve Data Fragmentation",
