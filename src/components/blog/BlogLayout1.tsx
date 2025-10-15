@@ -12,7 +12,7 @@ interface BlogLayout1Props {
 const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
   return (
     <div className="max-w-[810px] mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-      <article className="prose max-w-none leading-relaxed sm:leading-loose lg:leading-[1.85]）">
+      <article className="prose max-w-none leading-relaxed sm:leading-loose lg:leading-[1.85]">
         <SlideUp>
           <h1 className="text-3xl sm:text-4xl font-bold text-[#333] mb-4">
             {blogPost.title}
