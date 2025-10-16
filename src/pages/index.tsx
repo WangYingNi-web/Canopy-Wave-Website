@@ -344,13 +344,13 @@ export default function TestIndex() {
                   <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                       <div className="max-w-3xl">
-                        <div className="mb-[40px] text-left">
+                        <div className="mb-[32px] text-left">
                           <h1 className="text-[64px] leading-[77px] font-bold tracking-[2px] text-[#80B224]">
                             The Platform that Enables Al
                           </h1>
                         </div>
-                        <div className="mb-[40px] text-left">
-                          <p className="text-[24px] leading-[29px] font-normal text-[#4C7D01]">
+                        <div className="text-left">
+                          <p className="text-[36px] leading-[44px] font-normal text-[#4C7D01]">
                             Where Compute Meets Expertise
                           </p>
                         </div>
