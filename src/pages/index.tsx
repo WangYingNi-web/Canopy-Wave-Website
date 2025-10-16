@@ -344,21 +344,16 @@ export default function TestIndex() {
                   <div className="absolute inset-0 z-10 flex flex-col justify-center items-start">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                       <div className="max-w-3xl">
-                        <div className="mb-4 sm:mb-6 lg:mb-8">
-                          <Image
-                            src="/test/banner_dabiaoti01.png"
-                            alt="The Platform that Enables AI"
-                            width={600}
-                            height={200}
-                            className="object-contain w-full h-auto max-w-[400px] lg:max-w-[600px]"
-                            priority
-                          />
+                        <div className="mb-[40px] text-left">
+                          <h1 className="text-[64px] leading-[77px] font-bold tracking-[2px] text-[#80B224]">
+                            The Platform that Enables Al
+                          </h1>
                         </div>
-                        <img
-                          src="/test/banner_xiaobiaoti01.png"
-                          alt="Where Compute Meets Expertise"
-                          className="mb-4 sm:mb-6 lg:mb-8 h-auto max-w-[300px] lg:max-w-[600px]"
-                        />
+                        <div className="mb-[40px] text-left">
+                          <p className="text-[24px] leading-[29px] font-normal text-[#4C7D01]">
+                            Where Compute Meets Expertise
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
