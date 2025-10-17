@@ -31,7 +31,7 @@ const TutorialLayout3: React.FC = () => {
                 content: [
                     '**One-sentence definition**: LLAMA.CPP is a zero-dependency, pure C/C++ open-source inference engine started by Georgi Gerganov that quantizes any GGUF-format large model (7B–405B) and runs it at high speed on CPUs, laptops, phones, or even inside a browser.',
                     '**Core objectives**:',
-                    '• **Democratize large models**: no high-end GPU required for local, private deployment.',
+                    '• **Democratize large models**: no <a href="/compute-services" className="text-[#80B224] hover:text-[#98c455] underline underline-offset-2">high-end GPU</a> required for local, private deployment.',
                     '• **Ultra-lightweight**: single-file executable, cross-platform (Windows / Linux / macOS / Android / iOS).',
                     '• **Peak performance**: 128K context length, speculative decoding, function calling, and multimodal support—all out of the box.'
                 ],

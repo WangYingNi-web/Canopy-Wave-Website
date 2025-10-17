@@ -229,7 +229,7 @@ export default function CaseStudyPage() {
                     <h2 className="text-xl font-bold mb-6">Solution: Canopy Wave's GPUaaS Platform</h2>
                     <div className="prose max-w-none">
                         <p className="text-gray-600 mb-6">
-                            Canopy Wave provided a tailored GPUaaS solution that addressed Foundry
+                            Canopy Wave provided a tailored <Link href="/compute-services" className="text-[#80B224] hover:text-[#98c455] underline underline-offset-2">GPUaaS</Link> solution that addressed Foundry
                             BioSciences' needs through its user-friendly interface, flexible machine size scaling
                             and high-performance infrastructure. Key features implemented include:
                         </p>

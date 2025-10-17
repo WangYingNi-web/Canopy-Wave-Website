@@ -247,7 +247,9 @@ const TutorialLayout5: React.FC = () => {
                         ]),
                         React.createElement('li', { key: 'object-storage-desc', style: { marginBottom: '10px' } }, [
                             React.createElement('strong', { key: 'object-bold' }, 'Object Storage'),
-                            ': Network transmission through the S3 protocol does not occupy GPU resources, and is suitable for efficient processing and transmission of large-scale data. It is commonly used to store raw datasets, model archiving, and upload training data from the public network or locally, and can also be used for model deployment, archiving, and migration after training is completed. In distributed training, object storage is often used in conjunction with other types of storage to balance performance and flexibility.'
+                            ': Network transmission through the S3 protocol does not occupy ',
+                            React.createElement('a', { key: 'object-storage-gpu-link', href: '/compute-services', className: 'text-[#80B224] hover:text-[#98c455] underline underline-offset-2', rel: 'noopener noreferrer' }, 'GPU resources'),
+                            ', and is suitable for efficient processing and transmission of large-scale data. It is commonly used to store raw datasets, model archiving, and upload training data from the public network or locally, and can also be used for model deployment, archiving, and migration after training is completed. In distributed training, object storage is often used in conjunction with other types of storage to balance performance and flexibility.'
                         ])
                     ]),
                     React.createElement('h3', { key: 'technical-comparison-title', style: { fontWeight: 'bold' } }, '2. Comparison of technical dimensions'),

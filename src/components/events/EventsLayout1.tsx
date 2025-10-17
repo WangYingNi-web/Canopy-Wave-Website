@@ -31,7 +31,9 @@ const EventsLayout1: React.FC<EventsLayout1Props> = ({ eventPost }) => {
             </p>
             <h3 className="text-xl font-bold mb-4">Leadership Quotes</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              "We often see that companies pushing the boundaries of AI are limited in maximizing their results due to hardware constraints. By combining our cutting-edge cloud GPU infrastructure powered by the H100 and H200 and our innovative approach to AI infrastructure management with ConfidentialMind's secure AI platform, we will deliver a highly reliable, scalable, and cost-efficient cloud-based AI solution for enterprises worldwide." Hai Vo-Dinh, Sr. Director of Product, Canopy Wave.
+              "We often see that companies pushing the boundaries of AI are limited in maximizing their results due to hardware constraints. By combining our cutting-edge
+              <a href="/compute-services" className="text-[#80B224] hover:text-[#98c455]" rel="noopener noreferrer"> cloud GPU </a>
+               infrastructure powered by the H100 and H200 and our innovative approach to AI infrastructure management with ConfidentialMind's secure AI platform, we will deliver a highly reliable, scalable, and cost-efficient cloud-based AI solution for enterprises worldwide." Hai Vo-Dinh, Sr. Director of Product, Canopy Wave.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
               "A major barrier to developing and deploying generative AI at enterprises is often the high cost of procuring the GPU compute, developing the secure infrastructure required to run generative AI systems internally or complexities in integrating AI platforms with existing infrastructure. Our partnership with Canopy Wave removes all those challenges, and because we provide the entire AI technology stack-hardware and software-we can offer the complete package at very attractive prices." Severi Tikkala, CTO & Co-founder, ConfidentialMind.

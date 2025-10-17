@@ -27,7 +27,7 @@ const TutorialLayout4: React.FC = () => {
                     'Passes biosafety and adversarial attack tests with 100% rejection rate (e.g., for virus synthesis requests) and includes safety fine-tuning guidelines.',
                     '',
                     '**4. Significant Cost Efficiency**',
-                    'Local deployment eliminates API fees; the 120B quantized version runs on consumer-grade GPUs (e.g., RTX 4090).',
+                    'Local deployment eliminates API fees; the 120B quantized version runs on <a href="/compute-services" className="text-[#80B224] hover:text-[#98c455] underline underline-offset-2" rel="noopener noreferrer">consumer-grade GPUs</a> (e.g., RTX 4090).',
                 ],
             },
             {
@@ -50,7 +50,7 @@ const TutorialLayout4: React.FC = () => {
                 content: [
                     '• **Developers**: Free local alternative to GPT-4-level models with full-stack agent development support.',
                     '• **Privacy-Sensitive Industries (Healthcare/Finance)**: Ensures data remains local and compliant with regulations.',
-                    '• **Budget-Constrained Teams**: Deploy a 120B model on a single GPU, slashing API costs that can run into millions.',
+                    '• **Budget-Constrained Teams**: Deploy a 120B model on a <a href="/compute-services" className="text-[#80B224] hover:text-[#98c455] underline underline-offset-2" rel="noopener noreferrer">single GPU</a>, slashing API costs that can run into millions.',
                     '• **Educators/Researchers**: Apache 2.0 license enables open development and experimental auditing.',
                 ],
             },
