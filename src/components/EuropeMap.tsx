@@ -126,12 +126,12 @@ export default function InteractiveMap() {
                             {/* 光点动画 */}
                             <div className="relative">
                                 {/* 外层光晕 */}
-                                <div className="absolute inset-0 w-6 h-6 bg-[#D1F0FA] rounded-full opacity-30 animate-ping"></div>
+                                <div className="absolute inset-0 w-4 h-4 sm:w-6 sm:h-6 bg-[#D1F0FA] rounded-full opacity-30 animate-ping"></div>
                                 {/* 中层光晕 */}
-                                <div className="absolute inset-0 w-4 h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-1 translate-y-1"></div>
+                                <div className="absolute inset-0 w-3 h-3 sm:w-4 sm:h-4 bg-[#D1F0FA] rounded-full opacity-50 animate-pulse transform translate-x-0.5 translate-y-0.5 sm:translate-x-1 sm:translate-y-1"></div>
                                 {/* 核心光点 */}
                                 <div 
-                                    className="relative w-5 h-5 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1.5 translate-y-1.5 group-hover:scale-125 transition-transform duration-200 cursor-pointer"
+                                    className="relative w-3 h-3 sm:w-5 sm:h-5 bg-[#D1F0FA] border-2 border-[#33CFFF] rounded-full shadow-lg transform translate-x-1 translate-y-1 sm:translate-x-1.5 sm:translate-y-1.5 group-hover:scale-125 transition-transform duration-200 cursor-pointer"
                                     onMouseEnter={(e) => handleLocationHover(location, e)}
                                     onMouseLeave={handleLocationLeave}
                                 ></div>

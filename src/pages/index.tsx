@@ -1266,18 +1266,22 @@ export default function TestIndex() {
         <div className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 min-h-[400px]">
             <SlideUp>
-              <h2 className="text-3xl sm:text-4xl font-black mb-[80px] text-[#333333] sm:w-[500px] lg:w-[600px]">Powered By Our Global Network</h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-10 sm:mb-[80px] text-[#333333] sm:w-[500px] lg:w-[600px]">Powered By Our Global Network</h2>
+            </SlideUp>
+            <SlideUp>
+              <IwsLink href="/data-center/iceland" className="sm:hidden rounded-full w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white hover:bg-[#7ab32f] transition-colors text-l">
+                Explore Our Network
+              </IwsLink>
             </SlideUp>
             <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
-              <div className="w-full custom-1130:w-1/3">
+              <div className="w-full custom-1130:w-1/3 mt-10 sm:mt-0">
                 <SlideUp>
                   <p className="text-gray-600 mb-20 text-l leading-relaxed max-w-[450px]">
                     Our data centers are powered by canopywave global, carrier-grade network — empowering you to reach millions of users around the globe faster than ever before, with the security and reliability only found in proprietary networks.
                   </p>
                 </SlideUp>
-
                 <SlideUp>
-                  <IwsLink href="/data-center/iceland" className="rounded-full w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white hover:bg-[#7ab32f] transition-colors text-l">
+                  <IwsLink href="/data-center/iceland" className="hidden sm:inline-flex rounded-full w-full sm:w-auto px-6 py-3 bg-[#8CC63F] text-white hover:bg-[#7ab32f] transition-colors text-l">
                     Explore Our Network
                   </IwsLink>
                 </SlideUp>
@@ -1421,7 +1425,6 @@ export default function TestIndex() {
               </div>
             </div>
           </SlideUp>
-
         </div>
       </div>
 
