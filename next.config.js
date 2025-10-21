@@ -70,6 +70,48 @@ const nextConfig = {
             destination: '/',
             permanent: true,
             statusCode: 301
+        },
+        // 新增重定向：/blog/lora-vs.-rag:-key-comparisons-and-use-cases -> /blog/lora-vs-rag-key-comparisons-and-use-cases
+        {
+            source: '/blog/lora-vs.-rag\\:-key-comparisons-and-use-cases',
+            destination: '/blog/lora-vs-rag-key-comparisons-and-use-cases',
+            permanent: true,
+            statusCode: 301
+        },
+        // 新增重定向：/blog/cost-breakdown:-32-unit-gb200-gpu-cluster -> /blog/cost-breakdown-32-unit-gb200-gpu-cluster
+        {
+            source: '/blog/cost-breakdown\\:-32-unit-gb200-gpu-cluster',
+            destination: '/blog/cost-breakdown-32-unit-gb200-gpu-cluster',
+            permanent: true,
+            statusCode: 301
+        },
+        // 新增重定向：/blog/nvlink-5.0-is-a-game-changer-for-ai-agent-development -> /blog/nvlink-5-0-is-a-game-changer-for-ai-agent-development
+        {
+            source: '/blog/nvlink-5.0-is-a-game-changer-for-ai-agent-development',
+            destination: '/blog/nvlink-5-0-is-a-game-changer-for-ai-agent-development',
+            permanent: true,
+            statusCode: 301
+        },
+        // 新增重定向：/blog/gpu-virtualization:-unlocking-the-intelligent-future-of-compute-sharing -> /blog/gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing
+        {
+            source: '/blog/gpu-virtualization\\:-unlocking-the-intelligent-future-of-compute-sharing',
+            destination: '/blog/gpu-virtualization-unlocking-the-intelligent-future-of-compute-sharing',
+            permanent: true,
+            statusCode: 301
+        },
+        // 新增重定向：/blog/humanity& -> /
+        {
+            source: '/blog/humanity&',
+            destination: '/',
+            permanent: true,
+            statusCode: 301
+        },
+        // 新增重定向：/blog/ai& -> /
+        {
+            source: '/blog/ai&',
+            destination: '/',
+            permanent: true,
+            statusCode: 301
         }
     ]
 }
