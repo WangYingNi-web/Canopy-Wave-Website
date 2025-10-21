@@ -124,6 +124,7 @@ export default function Footer() {
                                         <li><IwsLink href="/rendering" className="text-gray-500 hover:text-[#36496E] hover:underline">Rendering</IwsLink></li>
                                         <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-[#36496E] hover:underline">Private Cloud and GPUs Deployment</IwsLink></li>
                                         <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-[#36496E] hover:underline">Networking Hardware Solution</IwsLink></li>
+                                        <li><IwsLink href="/networking-hardware/gb200-with-rocev2" className="text-gray-500 hover:text-[#36496E] hover:underline">GB200 Cluster with RoCEv2 Network Solution</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>

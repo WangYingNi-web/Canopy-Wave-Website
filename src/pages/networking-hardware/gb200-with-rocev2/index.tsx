@@ -173,12 +173,12 @@ export default function GB200WithRoCEv2() {
                     priority
                 />
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-44">
                         <SlideUp>
                             <h1 className="text-4xl sm:text-[48px] font-black text-[#80B224] text-shadow-lg mb-4">
                                 GB200 Cluster with RoCEv2
                             </h1>
-                            <h1 className="text-5xl sm:text-[48px] font-black text-[#80B224] text-shadow-lg mb-6">
+                            <h1 className="text-4xl sm:text-[48px] font-black text-[#80B224] text-shadow-lg mb-6">
                                 High-Performance Network Solution
                             </h1>
                         </SlideUp>
@@ -677,14 +677,14 @@ export default function GB200WithRoCEv2() {
             {/* Ready to Get Started Section */}
             <div className="bg-[#F9F9F9] py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative w-full min-h-[980px] sm:min-h-[780px] bg-cover bg-center"
+                    <div className="relative w-full bg-cover bg-center sm:min-h-[770px]"
                         style={{
                             backgroundImage: 'url("/solutions/networking-hardware/gb200-with-rocev2/ready_bg copy.png")',
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
                         }}>
-                        <div className="absolute inset-0 p-12">
+                        <div className="inset-0 p-6 sm:absolute sm:p-12 pb-24">
                             <SlideUp>
                                 <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-8 text-center">Ready to get started?</h2>
                             </SlideUp>
@@ -694,8 +694,8 @@ export default function GB200WithRoCEv2() {
                                 </p>
                             </SlideUp>
                             <SlideUp>
-                                <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                         <div>
                                             <label htmlFor="name" className="block text-sm font-medium text-[#333333] mb-2">
                                                 First Name<span className="text-red-500">*</span>
@@ -772,7 +772,7 @@ export default function GB200WithRoCEv2() {
                                         </div>
                                     </div>
                                     <div>
-                                        <div className="flex justify-between items-center mb-2">
+                                        <div className="flex justify-between items-center mb-1 sm:mb-2">
                                             <label htmlFor="message" className="text-sm font-medium text-[#333333]">
                                                 What's Your Project Interest, or How We Can Best Help You?<span className="text-red-500">*</span>
                                             </label>
@@ -795,7 +795,7 @@ export default function GB200WithRoCEv2() {
                                         )}
                                     </div>
 
-                                    <div className="flex items-start space-x-3 mb-10">
+                                    <div className="flex items-start space-x-3 mb-6 sm:mb-10">
                                         <input
                                             type="checkbox"
                                             id="marketing"
