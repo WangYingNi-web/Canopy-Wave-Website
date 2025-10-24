@@ -607,7 +607,7 @@ export default function TestIndex() {
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
                           }}>
-                            <div className="text-[17px] text-[#666666] mb-3 ml-4 font-regular">{m.family}</div>
+                            <div className="text-[16px] text-[#666666] mb-3 ml-4 font-regular">{m.family}</div>
                             <div className="flex items-center mb-3 mx-auto">
                               <div className="w-16 h-16">
                                 <Image src={m.logo ?? '/ai-model/allmodels_ic_gpt.png'} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
@@ -634,7 +634,7 @@ export default function TestIndex() {
                               aria-disabled="true"
                               onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                             >
-                              <span className="text-[18px]">Try Now</span>
+                              <span className="text-[16px]">Try Now</span>
                               <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                             </div>
                           </div>
