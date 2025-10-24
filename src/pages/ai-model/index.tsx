@@ -94,6 +94,7 @@ export default function AiModelPage() {
     const [loadClicks, setLoadClicks] = useState<number>(0);
     const [currentNewsIndex, setCurrentNewsIndex] = useState(57); // 设置为扩展数组的中间位置
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const newsCards = [
         {
             id: 'llama',
@@ -136,6 +137,16 @@ export default function AiModelPage() {
         setCurrentNewsIndex(prev => prev - 1);
         setTimeout(() => setIsTransitioning(false), 300);
     };
+    // 自动轮播：与手动滑动一致的过渡效果；鼠标悬停时暂停
+    useEffect(() => {
+        if (isHovered) return; // 悬停暂停
+        const interval = setInterval(() => {
+            if (!isTransitioning) {
+                handleNextNews();
+            }
+        }, 4000);
+        return () => clearInterval(interval);
+    }, [isHovered, isTransitioning]);
     const getExtendedCards = () => {
         // 创建足够多的重复卡片以支持无限滑动
         const repeats = 30; // 增加重复次数
@@ -208,7 +219,7 @@ export default function AiModelPage() {
                         <h2 className="text-2xl sm:text-[48px] font-bold text-[#333333] mb-[40px] text-center">Featured Models</h2>
                     </SlideUp>
                     {/* Cards Carousel */}
-                    <div className="relative">
+                    <div className="relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                         <div className="overflow-hidden">
                             <div
                                 className="flex transition-transform duration-300 ease-in-out py-4"
