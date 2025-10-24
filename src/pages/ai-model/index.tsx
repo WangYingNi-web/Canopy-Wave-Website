@@ -262,7 +262,7 @@ export default function AiModelPage() {
                                                                 )}
                                                             </div>
                                                         </div>
-                                                        <div className={`font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] ${isCenter ? 'text-[20px]' : 'text-[16px]'}`}>{card.name}</div>
+                                                        <div className={`font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] ${isCenter ? 'text-[20px]' : 'text-[18px]'}`}>{card.name}</div>
                                                         <div className={`flex items-center gap-6 text-[#666666] mb-[12px] ml-4 ${isCenter ? 'text-[16px]' : 'text-[14px]'}`}>
                                                             <div className="flex items-center gap-2">
                                                                 <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
@@ -357,7 +357,7 @@ export default function AiModelPage() {
                                             <Image src={m.logo ?? "/ai-model/allmodels_ic_gpt.png"} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
                                         </div>
                                     </div>
-                                    <div className={`text-[16px] font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px]`}>{m.name}</div>
+                                    <div className={`text-[18px] font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px]`}>{m.name}</div>
                                     <div className={`flex items-center gap-6 text-[#666666] mb-[12px] ml-4`}>
                                         <div className="flex items-center gap-2">
                                             <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
