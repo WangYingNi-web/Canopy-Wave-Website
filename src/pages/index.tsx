@@ -507,13 +507,13 @@ export default function TestIndex() {
           
           
         {/* Model Library Section */}
-        <div className="pb-16">
+        {/* <div className="pb-16">
           <SlideUp>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-4xl font-bold text-left text-[#333333]">Model Library</h2>
               <p className="text-[14px] sm:text-[16px] text-[#666666] mt-4">We have built an open-source model library covering all types and fields. Users can call it directly via API without</p>
               <p className="text-[14px] sm:text-[16px] text-[#666666]">additional development or adaptation.</p>
-              {/* Tabs + Try Now */}
+              Tabs + Try Now
               <div className="flex items-center justify-between gap-4 mt-6 mb-6">
                 <div className="flex flex-wrap items-center gap-2 bg-white p-2 border rounded-3xl">
                   {[
@@ -540,7 +540,7 @@ export default function TestIndex() {
                   <div className="px-5 py-2 rounded-full bg-[#80B224] text-white text-[16px] font-medium cursor-pointer hover:opacity-90">Try Now</div>
                 </Link>
               </div>
-              {/* Grid */}
+              Grid
               <div className="rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   {[
@@ -593,7 +593,7 @@ export default function TestIndex() {
               </div>
             </div>
           </SlideUp>
-        </div>
+        </div> */}
           
           
         {/* Chat Section - 灰色背景聊天区域 */}
