@@ -79,12 +79,12 @@ export default function TestIndex() {
     { id: "qwen25-vl-72b", name: "QWEN2.5-VL-72B", family: "VISION", params: "72B", context: "128K context", logo: "/ai-model/allmodels_ic_qwen.png", tags: ["Vision"] },
     { id: "glm45v", name: "GLM4.5V", family: "VISION", params: "106B", context: "128K context", logo: "/ai-model/allmodels_ic_glm.png", tags: ["Vision"] },
     { id: "intern-vl-2-0", name: "INTERN VL 2.0", family: "VISION", params: "26B", context: "4K context", logo: "/ai-model/allmodels_ic_intern.png", tags: ["Vision"] },
-    { id: "wan-2-2-t2v", name: "WAN 2.2 T2V", family: "VIDEO", params: "27B", context: "N/A context", logo: "/ai-model/allmodels_ic_wan.png", tags: ["Video"] },
-    { id: "mochi-1", name: "MOCHI 1", family: "VIDEO", params: "10B", context: "N/A context", logo: "/ai-model/allmodels_ic_mochi.png", tags: ["Video"] },
-    { id: "hunyuanvideo-i2v", name: "HUNYUANVIDEO-I2V", family: "VIDEO", params: "13B", context: "N/A context", logo: "/ai-model/allmodels_ic_hunyuanvideo.png", tags: ["Video"] },
-    { id: "sd3-medium", name: "STABLE DIFFUSION 3 MEDIUM", family: "IMAGE", params: "2B", context: "N/A context", logo: "/ai-model/allmodels_ic_stable.png", tags: ["Image"] },
-    { id: "flux1-dev", name: "FLUX.1 DEV", family: "IMAGE", params: "12B", context: "N/A context", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
-    { id: "flux1-kontext-max", name: "FLUX.1 KONTEXT MAX", family: "IMAGE", params: "12B", context: "N/A context", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
+    { id: "wan-2-2-t2v", name: "WAN 2.2 T2V", family: "VIDEO", params: "27B", context: "", logo: "/ai-model/allmodels_ic_wan.png", tags: ["Video"] },
+    { id: "mochi-1", name: "MOCHI 1", family: "VIDEO", params: "10B", context: "", logo: "/ai-model/allmodels_ic_mochi.png", tags: ["Video"] },
+    { id: "hunyuanvideo-i2v", name: "HUNYUANVIDEO-I2V", family: "VIDEO", params: "13B", context: "", logo: "/ai-model/allmodels_ic_hunyuanvideo.png", tags: ["Video"] },
+    { id: "sd3-medium", name: "STABLE DIFFUSION 3 MEDIUM", family: "IMAGE", params: "2B", context: "", logo: "/ai-model/allmodels_ic_stable.png", tags: ["Image"] },
+    { id: "flux1-dev", name: "FLUX.1 DEV", family: "IMAGE", params: "12B", context: "", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
+    { id: "flux1-kontext-max", name: "FLUX.1 KONTEXT MAX", family: "IMAGE", params: "12B", context: "", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
   ];
 
   type ModelItem = {
@@ -565,9 +565,9 @@ export default function TestIndex() {
         <div className="pb-16">
           <SlideUp>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-2xl sm:text-[48px] font-bold text-left text-[#333333] mb-[40px]">Model Library</h2>
-              <p className="text-[14px] sm:text-[18px] text-[#666666]">We have built an open-source model library covering all types and fields. Users can call it directly via API without</p>
-              <p className="text-[14px] sm:text-[18px] text-[#666666] mb-[40px]">additional development or adaptation.</p>
+              <h2 className="text-2xl sm:text-4xl font-bold text-left text-[#333333] mb-[40px]">Model Library</h2>
+              <p className="text-[14px] sm:text-[16px] text-[#666666]">We have built an open-source model library covering all types and fields. Users can call it directly via API without</p>
+              <p className="text-[14px] sm:text-[16px] text-[#666666] mb-[40px]">additional development or adaptation.</p>
               {/* Tabs + Try Now */}
               <div className="flex items-center justify-between gap-4 mb-[40px]">
                 <div className="flex flex-wrap items-center gap-2 bg-white p-2 border rounded-3xl">
@@ -591,7 +591,7 @@ export default function TestIndex() {
                     ))}
                 </div>
                 <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="hidden md:block" aria-label="Open Canopy Wave Cloud">
-                  <div className="px-7 py-2 rounded-full bg-[#80B224] text-white text-[24px] font-bold cursor-pointer hover:opacity-90" style={{ fontFamily: 'Inter, sans-serif' }}>Try Now</div>
+                  <div className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300">Try Now</div>
                 </a>
               </div>
               {/* Grid */}
@@ -607,13 +607,13 @@ export default function TestIndex() {
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
                           }}>
-                            <div className="text-[20px] text-[#666666] mb-3 ml-4">{m.family}</div>
+                            <div className="text-[18px] text-[#666666] mb-3 ml-4">{m.family}</div>
                             <div className="flex items-center mb-3 mx-auto">
                               <div className="w-16 h-16">
                                 <Image src={m.logo ?? '/ai-model/allmodels_ic_gpt.png'} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
                               </div>
                             </div>
-                            <div className="font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] text-[20px]">{m.name}</div>
+                            <div className="font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] text-[18px]">{m.name}</div>
                             <div className="flex items-center gap-6 text-[#666666] mb-[12px] ml-4 text-[14px]">
                               {m.params && (
                                 <div className="flex items-center gap-2">
@@ -629,13 +629,13 @@ export default function TestIndex() {
                               )}
                             </div>
                             <div
-                              className="flex items-center gap-2 text-[#80b224] ml-4 cursor-default select-none"
+                              className="flex items-center gap-2 text-[#666666] ml-4 cursor-default select-none"
                               role="button"
                               aria-disabled="true"
                               onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                             >
-                              <span className="text-[20px]">Try Now</span>
-                              <svg className="w-5 h-5 text-[#80b224]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                              <span className="text-[18px]">Try Now</span>
+                              <svg className="w-5 h-5 text-[#666666]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                             </div>
                           </div>
                         </div>
@@ -647,7 +647,7 @@ export default function TestIndex() {
               </div>
               <div className="flex justify-center">
                 <Link href="/ai-model">
-                  <div className="px-7 py-2 rounded-full bg-[#80B224] text-white text-[24px] font-bold cursor-pointer hover:opacity-90">Explore All Models</div>
+                  <div className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-base font-semibold transition-colors duration-300">Explore All Models</div>
                 </Link>
               </div>
             </div>

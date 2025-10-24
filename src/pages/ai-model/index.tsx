@@ -66,12 +66,12 @@ const allModels: ModelItem[] = [
     { id: "qwen25-vl-72b", name: "QWEN2.5-VL-72B", family: "VISION", params: "72B", context: "128K context", logo: "/ai-model/allmodels_ic_qwen.png", tags: ["Vision"] },
     { id: "glm45v", name: "GLM4.5V", family: "VISION", params: "106B", context: "128K context", logo: "/ai-model/allmodels_ic_glm.png", tags: ["Vision"] },
     { id: "intern-vl-2-0", name: "INTERN VL 2.0", family: "VISION", params: "26B", context: "4K context", logo: "/ai-model/allmodels_ic_intern.png", tags: ["Vision"] },
-    { id: "wan-2-2-t2v", name: "WAN 2.2 T2V", family: "VIDEO", params: "27B", context: "N/A context", logo: "/ai-model/allmodels_ic_wan.png", tags: ["Video"] },
-    { id: "mochi-1", name: "MOCHI 1", family: "VIDEO", params: "10B", context: "N/A context", logo: "/ai-model/allmodels_ic_mochi.png", tags: ["Video"] },
-    { id: "hunyuanvideo-i2v", name: "HUNYUANVIDEO-I2V", family: "VIDEO", params: "13B", context: "N/A context", logo: "/ai-model/allmodels_ic_hunyuanvideo.png", tags: ["Video"] },
-    { id: "sd3-medium", name: "STABLE DIFFUSION 3 MEDIUM", family: "IMAGE", params: "2B", context: "N/A context", logo: "/ai-model/allmodels_ic_stable.png", tags: ["Image"] },
-    { id: "flux1-dev", name: "FLUX.1 DEV", family: "IMAGE", params: "12B", context: "N/A context", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
-    { id: "flux1-kontext-max", name: "FLUX.1 KONTEXT MAX", family: "IMAGE", params: "12B", context: "N/A context", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
+    { id: "wan-2-2-t2v", name: "WAN 2.2 T2V", family: "VIDEO", params: "27B", context: "", logo: "/ai-model/allmodels_ic_wan.png", tags: ["Video"] },
+    { id: "mochi-1", name: "MOCHI 1", family: "VIDEO", params: "10B", context: "", logo: "/ai-model/allmodels_ic_mochi.png", tags: ["Video"] },
+    { id: "hunyuanvideo-i2v", name: "HUNYUANVIDEO-I2V", family: "VIDEO", params: "13B", context: "", logo: "/ai-model/allmodels_ic_hunyuanvideo.png", tags: ["Video"] },
+    { id: "sd3-medium", name: "STABLE DIFFUSION 3 MEDIUM", family: "IMAGE", params: "2B", context: "", logo: "/ai-model/allmodels_ic_stable.png", tags: ["Image"] },
+    { id: "flux1-dev", name: "FLUX.1 DEV", family: "IMAGE", params: "12B", context: "", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
+    { id: "flux1-kontext-max", name: "FLUX.1 KONTEXT MAX", family: "IMAGE", params: "12B", context: "", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
 ];
 
 const categories = [
@@ -177,7 +177,7 @@ export default function AiModelPage() {
                     loop
                     playsInline
                 >
-                    <source src="/ai-model/library-banner.mp4" type="video/mp4" />
+                    <source src="/ai-model/banner.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-48">
