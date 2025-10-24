@@ -171,7 +171,7 @@ export default function AiModelPage() {
             {/* Hero Section */}
             <div className="w-full relative bg-[#EDF2E4]">
                 <video
-                    className="w-full h-[850px] object-cover"
+                    className="w-full h-[100vh] object-cover"
                     autoPlay
                     muted
                     loop
