@@ -252,9 +252,9 @@ export default function AiModelPage() {
                                                                 <span>{card.context}</span>
                                                             </div>
                                                         </div>
-                                                        <div className="flex items-center gap-2 text-[#666666] ml-4">
-                                                            <span className={isCenter ? 'text-[24px]' : 'text-[20px]'}>Try Now</span>
-                                                            <svg className={isCenter ? 'w-6 h-6 text-gray-500' : 'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                                                        <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer'); }} role="link" aria-label="Try Now">
+                                                          <span className={isCenter ? 'text-[24px]' : 'text-[20px]'}>Try Now</span>
+                                                          <svg className={isCenter ? 'w-6 h-6 text-gray-500' : 'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -346,8 +346,10 @@ export default function AiModelPage() {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2 text-[#666666] ml-4">
-                                        <span className={'text-[20px]'}>Try Now</span>
-                                        <svg className={'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                                        <a href="https://cloud.canopywave.io/" className="flex items-center gap-2 text-[#666666] ml-4" target="_blank" rel="noopener noreferrer">
+                                          <span className={'text-[20px]'}>Try Now</span>
+                                          <svg className={'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
                                     </div>
                                 </div>
                             ))}
