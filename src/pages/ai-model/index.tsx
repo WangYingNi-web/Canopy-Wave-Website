@@ -171,7 +171,7 @@ export default function AiModelPage() {
             {/* Hero Section */}
             <div className="w-full relative bg-[#EDF2E4]">
                 <video
-                    className="w-full h-auto object-cover"
+                    className="w-full h-[900px] object-cover"
                     autoPlay
                     muted
                     loop
@@ -205,7 +205,7 @@ export default function AiModelPage() {
             }}>
                 <div className="max-w-7xl mx-auto">
                     <SlideUp>
-                        <h2 className="text-2xl sm:text-[48px] font-black text-[#333333] mb-[40px] text-center">Featured Models</h2>
+                        <h2 className="text-2xl sm:text-[48px] font-bold text-[#333333] mb-[40px] text-center">Featured Models</h2>
                     </SlideUp>
                     {/* Cards Carousel */}
                     <div className="relative">
@@ -241,8 +241,8 @@ export default function AiModelPage() {
                                                                 )}
                                                             </div>
                                                         </div>
-                                                        <div className={`font-bold text-[#333333] line-clamp-1 ml-4 mb-4 ${isCenter ? 'text-[24px]' : 'text-[20px]'}`}>{card.name}</div>
-                                                        <div className={`flex items-center gap-6 text-[#666666] mb-4 ml-4 ${isCenter ? 'text-[16px]' : 'text-[14px]'}`}>
+                                                        <div className={`font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] ${isCenter ? 'text-[24px]' : 'text-[20px]'}`}>{card.name}</div>
+                                                        <div className={`flex items-center gap-6 text-[#666666] mb-[12px] ml-4 ${isCenter ? 'text-[16px]' : 'text-[14px]'}`}>
                                                             <div className="flex items-center gap-2">
                                                                 <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
                                                                 <span>{card.params}</span>
@@ -252,7 +252,8 @@ export default function AiModelPage() {
                                                                 <span>{card.context}</span>
                                                             </div>
                                                         </div>
-                                                        <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer'); }} role="link" aria-label="Try Now">
+                                                        {/* <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer'); }} role="link" aria-label="Try Now"> */}
+                                                        <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-default" onClick={(e) => { e.preventDefault(); e.stopPropagation(); }} role="button" aria-disabled="true">
                                                           <span className={isCenter ? 'text-[24px]' : 'text-[20px]'}>Try Now</span>
                                                           <svg className={isCenter ? 'w-6 h-6 text-gray-500' : 'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                                                         </div>
@@ -288,7 +289,7 @@ export default function AiModelPage() {
             <div className='bg-[#F9F9F9] py-12 sm:py-20'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-2xl sm:text-[48px] font-black text-[#333333] mb-[40px] text-center">All Models</h2>
+                        <h2 className="text-2xl sm:text-[48px] font-bold text-[#333333] mb-[40px] text-center">All Models</h2>
                     </SlideUp>
 
                     {/* Tabs + Search */}
@@ -328,14 +329,14 @@ export default function AiModelPage() {
                                         backgroundRepeat: 'no-repeat'
                                     }}
                                     className="min-h-[282px] p-4">
-                                    <div className="text-[20px] font-bold text-[#666666] mb-3 ml-4">{m.family}</div>
+                                    <div className="text-[20px] text-[#666666] mb-[12px] ml-4">{m.family}</div>
                                     <div className="flex justify-center items-center mb-3">
                                         <div className="w-16 h-16 flex items-center justify-center">
                                             <Image src={m.logo ?? "/ai-model/allmodels_ic_gpt.png"} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
                                         </div>
                                     </div>
-                                    <div className={`text-[20px] font-bold text-[#333333] line-clamp-1 ml-4 mb-4`}>{m.name}</div>
-                                    <div className={`flex items-center gap-6 text-[#666666] mb-4 ml-4`}>
+                                    <div className={`text-[20px] font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px]`}>{m.name}</div>
+                                    <div className={`flex items-center gap-6 text-[#666666] mb-[12px] ml-4`}>
                                         <div className="flex items-center gap-2">
                                             <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
                                             <span>{m.params}</span>
@@ -346,10 +347,11 @@ export default function AiModelPage() {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2 text-[#666666] ml-4">
-                                        <a href="https://cloud.canopywave.io/" className="flex items-center gap-2 text-[#666666] ml-4" target="_blank" rel="noopener noreferrer">
-                                          <span className={'text-[20px]'}>Try Now</span>
+                                        {/* <a href="https://cloud.canopywave.io/" className="flex items-center gap-2 text-[#666666] ml-4" target="_blank" rel="noopener noreferrer">
+                                          
+                                        </a> */}
+                                        <span className={'text-[20px]'}>Try Now</span>
                                           <svg className={'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
                                     </div>
                                 </div>
                             ))}
@@ -366,7 +368,7 @@ export default function AiModelPage() {
                                 disabled={visibleRows >= Math.ceil(filtered.length / 3)}
                                 className="bg-[#80B224] hover:bg-[#7ab32f] disabled:opacity-50 disabled:cursor-not-allowed px-6 py-6 text-2xl text-white rounded-full"
                             >
-                                Land More
+                                Load More
                             </Button>
                         </div>
                     </div>
@@ -378,7 +380,7 @@ export default function AiModelPage() {
             <div className='bg-[#F9F9F9] py-12 sm:py-20'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <SlideUp>
-                    <h2 className="text-2xl sm:text-[48px] font-black text-[#333333] mb-[40px] text-center">Which deployment fits your needs</h2>
+                    <h2 className="text-2xl sm:text-[48px] font-bold text-[#333333] mb-[40px] text-center">Which deployment fits your needs</h2>
                 </SlideUp>
 
                 {/* Header descriptions */}
