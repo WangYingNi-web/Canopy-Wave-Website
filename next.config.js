@@ -133,15 +133,6 @@ const nextConfig = {
             permanent: true,
             basePath: false
         },
-        {
-            source: '/:path*',
-            has: [
-                { type: 'host', value: 'www.canopy-wave-website.vercel.app' },
-            ],
-            destination: 'http://canopy-wave-website.vercel.app/:path*',
-            permanent: true,
-            basePath: false
-        }
     ]
 }
 }
