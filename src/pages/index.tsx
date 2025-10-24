@@ -504,7 +504,98 @@ export default function TestIndex() {
         <div className="pb-[24px]">
           <PartnerCarousel logos={partnerLogos} />
         </div>
-
+          
+          
+        {/* Model Library Section */}
+        <div className="pb-16">
+          <SlideUp>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-4xl font-bold text-left text-[#333333]">Model Library</h2>
+              <p className="text-[14px] sm:text-[16px] text-[#666666] mt-4">We have built an open-source model library covering all types and fields. Users can call it directly via API without</p>
+              <p className="text-[14px] sm:text-[16px] text-[#666666]">additional development or adaptation.</p>
+              {/* Tabs + Try Now */}
+              <div className="flex items-center justify-between gap-4 mt-6 mb-6">
+                <div className="flex flex-wrap items-center gap-2 bg-white p-2 border rounded-3xl">
+                  {[
+                    "All",
+                    "Transcribe",
+                    "Chat",
+                    "Image",
+                    "Vision",
+                    "Audio",
+                    "Moderation",
+                    "Code",
+                    "Embeddings",
+                    "Rerank",
+                  ].map((c) => (
+                    <button
+                      key={c}
+                      className={`text-[14px] px-4 py-2 rounded-full ${c === 'All' ? 'bg-[#E8F1DB] text-[#80B224] shadow' : 'text-[#333333]'}`}
+                    >
+                      {c}
+                    </button>
+                  ))}
+                </div>
+                <Link href="/ai-model" className="hidden md:block">
+                  <div className="px-5 py-2 rounded-full bg-[#80B224] text-white text-[16px] font-medium cursor-pointer hover:opacity-90">Try Now</div>
+                </Link>
+              </div>
+              {/* Grid */}
+              <div className="rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {[
+                    { id: "llama-8b", name: "LLAMA 3.1 8B INSTRUCT", family: "CHAT", params: "8B", context: "128K", logo: "/ai-model/allmodels_ic_llama.png", href: "/ai-model" },
+                    { id: "llama-33-70b", name: "LLAMA 3.3 70B INSTRUCT", family: "CHAT", params: "70B", context: "128K", logo: "/ai-model/allmodels_ic_llama.png", href: "/ai-model" },
+                    { id: "gemma-2-9b", name: "GEMMA 2 9B INSTRUCT", family: "CHAT", params: "9B", context: "8K", logo: "/ai-model/allmodels_ic_gemma.png", href: "/ai-model" },
+                    { id: "mistral-7b", name: "MISTRAL 7B INSTRUCT", family: "CHAT", params: "7B", context: "32K", logo: "/ai-model/allmodels_ic_mixtral.png", href: "/ai-model" },
+                    { id: "qwen-25-7b", name: "QWEN 2.5 7B INSTRUCT", family: "CHAT", params: "7B", context: "128K", logo: "/ai-model/allmodels_ic_qwen.png", href: "/ai-model" },
+                    { id: "gpt-oss-120b", name: "GPT-OSS 120B", family: "CHAT", params: "120B", context: "131072", logo: "/ai-model/allmodels_ic_gpt.png", href: "/ai-model" },
+                  ].map((m) => (
+                    <Link href={m.href} key={m.id}>
+                      <div className="rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <div className="p-6 flex flex-col min-h-[250px]" style={{
+                          backgroundImage: 'url(/ai-model/allmodels_img_bg.png)',
+                          backgroundSize: 'contain',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat'
+                        }}>
+                          <div className="text-[12px] font-bold text-[#666666] mb-3 ml-4">{m.family}</div>
+                          <div className="flex items-center mb-3 mx-auto">
+                            <div className="w-16 h-16">
+                              <Image src={m.logo} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
+                            </div>
+                          </div>
+                          <div className="font-bold text-[#333333] line-clamp-1 ml-4 mb-4 text-[18px]">{m.name}</div>
+                          <div className="flex items-center gap-6 text-[#666666] mb-4 ml-4 text-[14px]">
+                            <div className="flex items-center gap-2">
+                              <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
+                              <span>{m.params}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
+                              <span>{m.context}</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2 text-[#666666] ml-4">
+                            <span className="text-[18px]">Try Now</span>
+                            <svg className="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="flex justify-center mt-8">
+                  <Link href="/ai-model">
+                    <div className="px-6 py-3 rounded-full bg-[#80B224] text-white text-[16px] font-semibold cursor-pointer hover:opacity-90">Explore All Models</div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </SlideUp>
+        </div>
+          
+          
         {/* Chat Section - 灰色背景聊天区域 */}
         <div className="pb-16" ref={chatRef}>
           <SlideUp>

@@ -112,6 +112,16 @@ const nextConfig = {
             destination: '/',
             permanent: true,
             statusCode: 301
+        },
+        // 全站 www 子域重定向到非 www 主域
+        {
+            source: '/:path*',
+            has: [
+                { type: 'host', value: 'www.canopywave.com' },
+            ],
+            destination: 'https://canopywave.com/:path*',
+            permanent: true,
+            basePath: false
         }
     ]
 }
