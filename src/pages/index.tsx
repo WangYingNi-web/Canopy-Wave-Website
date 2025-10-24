@@ -79,7 +79,7 @@ export default function TestIndex() {
     { id: "qwen25-vl-72b", name: "QWEN2.5-VL-72B", family: "VISION", params: "72B", context: "128K context", logo: "/ai-model/allmodels_ic_qwen.png", tags: ["Vision"] },
     { id: "glm45v", name: "GLM4.5V", family: "VISION", params: "106B", context: "128K context", logo: "/ai-model/allmodels_ic_glm.png", tags: ["Vision"] },
     { id: "intern-vl-2-0", name: "INTERN VL 2.0", family: "VISION", params: "26B", context: "4K context", logo: "/ai-model/allmodels_ic_intern.png", tags: ["Vision"] },
-    { id: "wan-2-2-t2v", name: "WAN 2.2 T2V", family: "VIDEO", params: "27B", context: "", logo: "/ai-model/allmodels_ic_wan.png", tags: ["Video"] },
+    { id: "wan-2-2-t2v", name: "WAN 2.2 T2V", family: "VIDEO", params: "27B", context:"", logo: "/ai-model/allmodels_ic_wan.png", tags: ["Video"] },
     { id: "mochi-1", name: "MOCHI 1", family: "VIDEO", params: "10B", context: "", logo: "/ai-model/allmodels_ic_mochi.png", tags: ["Video"] },
     { id: "hunyuanvideo-i2v", name: "HUNYUANVIDEO-I2V", family: "VIDEO", params: "13B", context: "", logo: "/ai-model/allmodels_ic_hunyuanvideo.png", tags: ["Video"] },
     { id: "sd3-medium", name: "STABLE DIFFUSION 3 MEDIUM", family: "IMAGE", params: "2B", context: "", logo: "/ai-model/allmodels_ic_stable.png", tags: ["Image"] },

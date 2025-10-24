@@ -111,7 +111,7 @@ export default function AiModelPage() {
             family: "CHAT",
             name: "GEMMA 3 27B",
             params: "27B",
-            context: "32K",
+            context: "32K context",
             logoType: "google"
         },
         {
@@ -127,14 +127,24 @@ export default function AiModelPage() {
     const handleNextNews = () => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        setCurrentNewsIndex(prev => prev + 1);
+        const extendedLength = getExtendedCards().length;
+        const buffer = newsCards.length; // 防止靠近边界导致空白
+        setCurrentNewsIndex((prev) => {
+            const next = prev + 1;
+            return next >= extendedLength - buffer ? Math.floor(extendedLength / 2) : next;
+        });
         setTimeout(() => setIsTransitioning(false), 300);
     };
 
     const handlePrevNews = () => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        setCurrentNewsIndex(prev => prev - 1);
+        const extendedLength = getExtendedCards().length;
+        const buffer = newsCards.length; // 防止靠近边界导致空白
+        setCurrentNewsIndex((prev) => {
+            const next = prev - 1;
+            return next <= buffer ? Math.floor(extendedLength / 2) : next;
+        });
         setTimeout(() => setIsTransitioning(false), 300);
     };
     // 自动轮播：与手动滑动一致的过渡效果；鼠标悬停时暂停
@@ -240,7 +250,7 @@ export default function AiModelPage() {
                                                         backgroundPosition: 'center',
                                                         backgroundRepeat: 'no-repeat'
                                                     }}>
-                                                        <div className="text-[20px] font-bold text-[#666666] mb-3 ml-4">{card.family}</div>
+                                                        <div className="text-[16px] text-[#666666] mb-3 ml-4">{card.family}</div>
                                                         <div className="flex items-center mb-3 mx-auto">
                                                             <div className="w-16 h-16">
                                                                 {card.logoType === 'google' ? (
@@ -252,12 +262,13 @@ export default function AiModelPage() {
                                                                 )}
                                                             </div>
                                                         </div>
-                                                        <div className={`font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] ${isCenter ? 'text-[24px]' : 'text-[20px]'}`}>{card.name}</div>
+                                                        <div className={`font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px] ${isCenter ? 'text-[20px]' : 'text-[16px]'}`}>{card.name}</div>
                                                         <div className={`flex items-center gap-6 text-[#666666] mb-[12px] ml-4 ${isCenter ? 'text-[16px]' : 'text-[14px]'}`}>
                                                             <div className="flex items-center gap-2">
                                                                 <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
                                                                 <span>{card.params}</span>
                                                             </div>
+
                                                             <div className="flex items-center gap-2">
                                                                 <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
                                                                 <span>{card.context}</span>
@@ -265,8 +276,8 @@ export default function AiModelPage() {
                                                         </div>
                                                         {/* <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer'); }} role="link" aria-label="Try Now"> */}
                                                         <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-default" onClick={(e) => { e.preventDefault(); e.stopPropagation(); }} role="button" aria-disabled="true">
-                                                          <span className={isCenter ? 'text-[24px]' : 'text-[20px]'}>Try Now</span>
-                                                          <svg className={isCenter ? 'w-6 h-6 text-gray-500' : 'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                                                            <span className={isCenter ? 'text-[18px]' : 'text-[16px]'}>Try Now</span>
+                                                            <svg className={isCenter ? 'w-6 h-6 text-gray-500' : 'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -340,29 +351,31 @@ export default function AiModelPage() {
                                         backgroundRepeat: 'no-repeat'
                                     }}
                                     className="min-h-[282px] p-4">
-                                    <div className="text-[20px] text-[#666666] mb-[12px] ml-4">{m.family}</div>
+                                    <div className="text-[16px] text-[#666666] mb-[12px] ml-4">{m.family}</div>
                                     <div className="flex justify-center items-center mb-3">
                                         <div className="w-16 h-16 flex items-center justify-center">
                                             <Image src={m.logo ?? "/ai-model/allmodels_ic_gpt.png"} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
                                         </div>
                                     </div>
-                                    <div className={`text-[20px] font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px]`}>{m.name}</div>
+                                    <div className={`text-[16px] font-bold text-[#333333] line-clamp-1 ml-4 mb-[12px]`}>{m.name}</div>
                                     <div className={`flex items-center gap-6 text-[#666666] mb-[12px] ml-4`}>
                                         <div className="flex items-center gap-2">
                                             <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
                                             <span>{m.params}</span>
                                         </div>
-                                        <div className="flex items-center gap-2">
-                                            <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
-                                            <span>{m.context}</span>
-                                        </div>
+                                        {m.context && (
+                                            <div className="flex items-center gap-2">
+                                                <span className="inline-block w-2 h-2 bg-[#8CC63F] rounded-full" />
+                                                <span>{m.context}</span>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="flex items-center gap-2 text-[#666666] ml-4">
                                         {/* <a href="https://cloud.canopywave.io/" className="flex items-center gap-2 text-[#666666] ml-4" target="_blank" rel="noopener noreferrer">
                                           
                                         </a> */}
-                                        <span className={'text-[20px]'}>Try Now</span>
-                                          <svg className={'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                                        <span className={'text-[16px]'}>Try Now</span>
+                                        <svg className={'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                                     </div>
                                 </div>
                             ))}
@@ -390,106 +403,106 @@ export default function AiModelPage() {
             {/* Which deployment fits your needs */}
             <div className='bg-[#F9F9F9] py-12 sm:py-20'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <SlideUp>
-                    <h2 className="text-2xl sm:text-[48px] font-bold text-[#333333] mb-[40px] text-center">Which deployment fits your needs</h2>
-                </SlideUp>
+                    <SlideUp>
+                        <h2 className="text-2xl sm:text-[48px] font-bold text-[#333333] mb-[40px] text-center">Which deployment fits your needs</h2>
+                    </SlideUp>
 
-                {/* Header descriptions */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-gray-200">
-                    <div className="p-6 md:border-r border-gray-200">
-                        <h3 className="text-[32px] font-bold text-[#333333] mb-2">Serverless Endpoints</h3>
-                        <p className="text-[#999999] text-[18px] max-w-md">
-                            Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
-                        </p>
+                    {/* Header descriptions */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-gray-200">
+                        <div className="p-6 md:border-r border-gray-200">
+                            <h3 className="text-[32px] font-bold text-[#333333] mb-2">Serverless Endpoints</h3>
+                            <p className="text-[#999999] text-[18px] max-w-md">
+                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
+                            </p>
+                        </div>
+                        <div className="p-6">
+                            <h3 className="text-[32px] font-bold text-[#333333] mb-2">Dedicated Endpoints</h3>
+                            <p className="text-[#999999] text-[18px] max-w-md">
+                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
+                            </p>
+                        </div>
                     </div>
-                    <div className="p-6">
-                        <h3 className="text-[32px] font-bold text-[#333333] mb-2">Dedicated Endpoints</h3>
-                        <p className="text-[#999999] text-[18px] max-w-md">
-                            Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
-                        </p>
-                    </div>
-                </div>
 
-                {/* Feature rows */}
-                <div className="border-b border-gray-200">
-                    {/* Row 1 */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-[#F2F8EA]">
-                        <div className="px-6 py-8 md:border-r border-gray-200">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Simplest setup</span>
+                    {/* Feature rows */}
+                    <div className="border-b border-gray-200">
+                        {/* Row 1 */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-[#F2F8EA]">
+                            <div className="px-6 py-8 md:border-r border-gray-200">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Simplest setup</span>
+                                </div>
+                            </div>
+                            <div className="px-6 py-8">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>No hard rate limits</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="px-6 py-8">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>No hard rate limits</span>
+                        {/* Row 2 */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                            <div className="px-6 py-8 md:border-r border-gray-200">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Highest flexibility</span>
+                                </div>
+                            </div>
+                            <div className="px-6 py-8">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Predictable performance</span>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Row 3 */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-[#F2F8EA]">
+                            <div className="px-6 py-8 md:border-r border-gray-200">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Provide popular models on the market</span>
+                                </div>
+                            </div>
+                            <div className="px-6 py-8">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Custom large models can be deployed.</span>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Row 4 */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                            <div className="px-6 py-8 md:border-r border-gray-200">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Pay per token</span>
+                                </div>
+                            </div>
+                            <div className="px-6 py-8">
+                                <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
+                                    <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
+                                    <span>Pay for GPU runtime</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {/* Row 2 */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                        <div className="px-6 py-8 md:border-r border-gray-200">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Highest flexibility</span>
-                            </div>
-                        </div>
-                        <div className="px-6 py-8">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Predictable performance</span>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Row 3 */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-[#F2F8EA]">
-                        <div className="px-6 py-8 md:border-r border-gray-200">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Provide popular models on the market</span>
-                            </div>
-                        </div>
-                        <div className="px-6 py-8">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Custom large models can be deployed.</span>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Row 4 */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                        <div className="px-6 py-8 md:border-r border-gray-200">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Pay per token</span>
-                            </div>
-                        </div>
-                        <div className="px-6 py-8">
-                            <div className="flex items-center gap-3 text-[#333333] font-semibold text-[20px]">
-                                <span className="inline-block w-4 h-4 bg-[#8CC63F] rounded-full" />
-                                <span>Pay for GPU runtime</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                {/* CTAs */}
-                <div className="grid grid-cols-1 md:grid-cols-2 place-items-center mt-6">
-                    {/* Left action: Start Building */}
-                    <a href="https://cloud.canopywave.io/" className="inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                        <span className="text-[24px] text-[#80B224]">Start Building</span>
-                        <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
-                    </a>
-                    {/* Right action: Apply for */}
-                    <a href="/ai-model/dedicated-endpoint" className="inline-flex items-center gap-2 mt-4 md:mt-0">
-                        <span className="text-[24px] text-[#80B224]">Apply for</span>
-                        <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
-                    </a>
+                    {/* CTAs */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 place-items-center mt-6">
+                        {/* Left action: Start Building */}
+                        <a href="https://cloud.canopywave.io/" className="inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                            <span className="text-[24px] text-[#80B224]">Start Building</span>
+                            <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
+                        </a>
+                        {/* Right action: Apply for */}
+                        <a href="/ai-model/dedicated-endpoint" className="inline-flex items-center gap-2 mt-4 md:mt-0">
+                            <span className="text-[24px] text-[#80B224]">Apply for</span>
+                            <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
+                        </a>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
 
             <Footer />
         </main>
