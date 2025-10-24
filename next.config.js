@@ -122,6 +122,25 @@ const nextConfig = {
             destination: 'https://canopywave.com/:path*',
             permanent: true,
             basePath: false
+        },
+        // 本地开发测试用：将 www.localhost 重定向到 localhost:3000（不带端口）
+        {
+            source: '/:path*',
+            has: [
+                { type: 'host', value: 'www.localhost' },
+            ],
+            destination: 'http://localhost:3000/:path*',
+            permanent: true,
+            basePath: false
+        },
+        {
+            source: '/:path*',
+            has: [
+                { type: 'host', value: 'www.canopy-wave-website.vercel.app' },
+            ],
+            destination: 'http://canopy-wave-website.vercel.app/:path*',
+            permanent: true,
+            basePath: false
         }
     ]
 }
