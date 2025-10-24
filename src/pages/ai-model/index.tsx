@@ -171,13 +171,13 @@ export default function AiModelPage() {
             {/* Hero Section */}
             <div className="w-full relative bg-[#EDF2E4]">
                 <video
-                    className="w-full h-[900px] object-cover"
+                    className="w-full h-[850px] object-cover"
                     autoPlay
                     muted
                     loop
                     playsInline
                 >
-                    <source src="/ai-model/model library banner.mp4" type="video/mp4" />
+                    <source src="/ai-model/library-banner.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-48">
