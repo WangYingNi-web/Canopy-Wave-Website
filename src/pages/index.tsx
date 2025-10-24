@@ -607,7 +607,7 @@ export default function TestIndex() {
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
                           }}>
-                            <div className="text-[18px] text-[#666666] mb-3 ml-4 font-regular">{m.family}</div>
+                            <div className="text-[17px] text-[#666666] mb-3 ml-4 font-regular">{m.family}</div>
                             <div className="flex items-center mb-3 mx-auto">
                               <div className="w-16 h-16">
                                 <Image src={m.logo ?? '/ai-model/allmodels_ic_gpt.png'} alt={`${m.name} logo`} width={54} height={54} className="w-16 h-16 object-contain" />
