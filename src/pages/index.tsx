@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from './../components/header'
@@ -42,6 +42,51 @@ export default function TestIndex() {
     triggerOnce: false
   });
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  // 鼠标滚轮惯性滚动（模拟触控板顺滑效果）
+  const wheelInertiaRef = useRef<{ v: number; raf: number | null } | null>(null);
+  const scrollWindowWithInertia = (deltaY: number) => {
+    // 归一化初速度并限制上限。
+    const MAX_INITIAL_V = 24;
+    const SCALE = 0.5;
+    const v0 = Math.max(-MAX_INITIAL_V, Math.min(MAX_INITIAL_V, deltaY * SCALE));
+
+    let state = wheelInertiaRef.current;
+    if (!state) {
+      state = { v: 0, raf: null };
+    }
+    // 新的滚轮事件到来时，取消上一次的动画，避免速度叠加
+    if (state.raf) {
+      cancelAnimationFrame(state.raf);
+      state.raf = null;
+    }
+    state.v = v0;
+    wheelInertiaRef.current = state;
+
+    const decay = 0.88; // 更强的阻尼以缩短惯性距离
+    let steps = 0;
+    const MAX_STEPS = 20; // 限制最大动画步数，避免过度滚动
+
+    const step = () => {
+      const s = wheelInertiaRef.current;
+      if (!s) return;
+      window.scrollBy({ top: s.v, left: 0, behavior: 'auto' });
+      s.v *= decay;
+      steps += 1;
+      if (Math.abs(s.v) > 0.6 && steps < MAX_STEPS) {
+        s.raf = requestAnimationFrame(step);
+      } else {
+        s.raf = null;
+      }
+    };
+    state.raf = requestAnimationFrame(step);
+  };
+  useEffect(() => {
+    return () => {
+      const s = wheelInertiaRef.current;
+      if (s?.raf) cancelAnimationFrame(s.raf);
+      wheelInertiaRef.current = null;
+    };
+  }, []);
   const allModels: ModelItem[] = [
     // Featured (existing)
     { id: "llama-8b", name: "LLAMA 3.3 8B INSTRUCT", family: "CHAT", params: "8B", context: "128K context", featured: true, logo: "/ai-model/allmodels_ic_llama.png", tags: ["Chat"] },
@@ -595,8 +640,8 @@ export default function TestIndex() {
                 </a>
               </div>
               {/* Grid */}
-              <div className="mb-[40px] rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative">
-                <div className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom">
+              <div className="mb-[40px] rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative" onWheel={(e) => { let node = e.target as HTMLElement | null; let insideChild = false; while (node) { if (node.classList && node.classList.contains('scrollbar-custom')) { insideChild = true; break; } node = node.parentElement; } if (insideChild) { return; } e.preventDefault(); e.stopPropagation(); const normalizedDelta = e.deltaY * (e.deltaMode === 1 ? 16 : 1); scrollWindowWithInertia(normalizedDelta); }}>
+                <div className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom" onWheel={(e) => { const target = e.currentTarget; const { scrollTop, scrollHeight, clientHeight } = target; const atTop = scrollTop <= 0; const atBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight; const scrollingUp = e.deltaY < 0; const scrollingDown = e.deltaY > 0; const normalizedDelta = e.deltaY * (e.deltaMode === 1 ? 16 : 1); if ((atTop && scrollingUp) || (atBottom && scrollingDown)) { e.preventDefault(); e.stopPropagation(); scrollWindowWithInertia(normalizedDelta); } else { e.stopPropagation(); } }}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {(selectedCategory === 'All' ? allModels : allModels.filter(m => m.tags.includes(selectedCategory))).map((m) => (
                       // <Link href="/ai-model" key={m.id}>
