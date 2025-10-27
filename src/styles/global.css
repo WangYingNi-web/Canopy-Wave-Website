@@ -59,8 +59,9 @@
   .scrollbar-custom {
     /* 标准属性，适用于 Firefox */
     /* scrollbar-width: thin; */
-    scrollbar-color: #C6E893 #F5F5F5;
-
+    /* scrollbar-color: #C6E893 #F5F5F5; */
+    
+    
   }
 
   /* Webkit 浏览器专用样式 */
@@ -70,22 +71,26 @@
   }
 
   .scrollbar-custom::-webkit-scrollbar-track {
-    background: #F5F5F5;
+    background: #f9f9f9;
     border-radius: 10px;
     /* 灰色边框效果 */
-    border: 2px solid #b0b0b0 !important;
+    border: 1.5px solid #E0E0E0 !important;
+    width: 20px;
   }
 
   .scrollbar-custom::-webkit-scrollbar-thumb {
+    margin: 2px !important;
     background-color: #C6E893;
     border-radius: 10px;
     /* 内边距，确保显示轨道边框 */
-    border: 2px solid transparent;
+    border: 3px solid transparent !important;
     background-clip: content-box;
+    /* border: 2px solid #C6E893 !important; */
   }
 
   .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-    background-color: #B0D87A;
+    background-color: #C6E893;
+    /* border: 2px solid #C6E893 !important; */
   }
 
   .scrollbar-custom::-webkit-scrollbar-corner {
