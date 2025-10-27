@@ -599,7 +599,7 @@ export default function TestIndex() {
                 <div className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom">
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {(selectedCategory === 'All' ? allModels : allModels.filter(m => m.tags.includes(selectedCategory))).map((m) => (
-                      <Link href="/ai-model" key={m.id}>
+                      // <Link href="/ai-model" key={m.id}>
                         <div className="rounded-2xl">
                           <div className="p-6 flex flex-col min-h-[290px]" style={{
                             backgroundImage: 'url(/ai-model/allmodels_img_bg.png)',
@@ -639,7 +639,7 @@ export default function TestIndex() {
                             </div>
                           </div>
                         </div>
-                      </Link>
+                      // </Link>
                     ))}
                   </div>
                 </div>
