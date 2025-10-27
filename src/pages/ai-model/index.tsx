@@ -242,7 +242,7 @@ export default function AiModelPage() {
                                     const isCenter = index === currentNewsIndex + 1;
                                     return (
                                         <div key={`${card.id}-${Math.floor(index / newsCards.length)}-${index}`} className="w-1/3 flex-shrink-0 custom-500:px-4 md:px-4 sm:px-4 lg:px-4">
-                                            <Link href={card.href}>
+                                            {/* <Link href={card.href}> */}
                                                 <div className={`transition-all duration-300 cursor-pointer ${isCenter ? 'scale-[1.06] z-10' : 'scale-[0.95] z-0'}`}>
                                                     <div className="p-6 flex flex-col min-h-[310px]" style={{
                                                         backgroundImage: 'url(/ai-model/allmodels_img_bg.png)',
@@ -275,13 +275,13 @@ export default function AiModelPage() {
                                                             </div>
                                                         </div>
                                                         {/* <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer'); }} role="link" aria-label="Try Now"> */}
-                                                        <div className="flex items-center gap-2 text-[#666666] ml-4 cursor-default" onClick={(e) => { e.preventDefault(); e.stopPropagation(); }} role="button" aria-disabled="true">
+                                                        <div className="flex items-center gap-2 text-[#666666] ml-4">
                                                             <span className={isCenter ? 'text-[18px]' : 'text-[16px]'}>Try Now</span>
                                                             <svg className={isCenter ? 'w-6 h-6 text-gray-500' : 'w-5 h-5 text-gray-500'} viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </Link>
+                                            {/* </Link> */}
                                         </div>
                                     );
                                 })}
