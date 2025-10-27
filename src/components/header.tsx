@@ -305,7 +305,7 @@ export default function Header() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <ul className="space-y-2 text-sm">
                         <li><IwsLink href="/model-training" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>AI Model Training</IwsLink></li>
-                        <li><IwsLink href="/inference" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Inference</IwsLink></li>
+                        <li><IwsLink href="/inferences" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Inference</IwsLink></li>
                         <li><IwsLink href="/rendering" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Rendering</IwsLink></li>
                         <li><IwsLink href="/private-cloud" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Private Cloud and GPUs Deployment</IwsLink></li>
                         <li><IwsLink href="/networking-hardware" className="text-gray-600 hover:text-gray-900 text-sm" onClick={() => { setShowSolutions(false) }}>Networking Hardware Solution</IwsLink></li>
@@ -753,7 +753,7 @@ export default function Header() {
             {showMobileSolutions && (
               <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600"> 
                 <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>AI Model Training</IwsLink></li>
-                <li><IwsLink href="/inference" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Inference</IwsLink></li>
+                <li><IwsLink href="/inferences" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Inference</IwsLink></li>
                 <li><IwsLink href="/rendering" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Rendering</IwsLink></li>
                 <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Private Cloud and GPUs Deployment</IwsLink></li>
                 <li><IwsLink href="/networking-hardware" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>

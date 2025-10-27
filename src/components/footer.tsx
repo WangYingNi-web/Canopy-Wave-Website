@@ -120,7 +120,7 @@ export default function Footer() {
                                     <h3 className="font-semibold mb-4 text-sm text-[#333333]">Solutions</h3>
                                     <ul className="space-y-3 text-xs">
                                         <li><IwsLink href="/model-training" className="text-gray-500 hover:text-[#36496E] hover:underline">AI Model Training</IwsLink></li>
-                                        <li><IwsLink href="/inference" className="text-gray-500 hover:text-[#36496E] hover:underline">Inference</IwsLink></li>
+                                        <li><IwsLink href="/inferences" className="text-gray-500 hover:text-[#36496E] hover:underline">Inference</IwsLink></li>
                                         <li><IwsLink href="/rendering" className="text-gray-500 hover:text-[#36496E] hover:underline">Rendering</IwsLink></li>
                                         <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-[#36496E] hover:underline">Private Cloud and GPUs Deployment</IwsLink></li>
                                         <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-[#36496E] hover:underline">Networking Hardware Solution</IwsLink></li>

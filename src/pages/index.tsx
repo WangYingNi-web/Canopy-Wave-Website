@@ -42,6 +42,7 @@ export default function TestIndex() {
     triggerOnce: false
   });
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const childScrollRef = useRef<HTMLDivElement | null>(null);
   // 鼠标滚轮惯性滚动（模拟触控板顺滑效果）
   const wheelInertiaRef = useRef<{ v: number; raf: number | null } | null>(null);
   const scrollWindowWithInertia = (deltaY: number) => {
@@ -85,6 +86,30 @@ export default function TestIndex() {
       const s = wheelInertiaRef.current;
       if (s?.raf) cancelAnimationFrame(s.raf);
       wheelInertiaRef.current = null;
+    };
+  }, []);
+
+  // 子滚动容器 wheel 监听（passive:false，允许 preventDefault）
+  useEffect(() => {
+    const el = childScrollRef.current;
+    if (!el) return;
+    const handler = (e: WheelEvent) => {
+      const delta = e.deltaY * (e.deltaMode === 1 ? 16 : 1);
+      const { scrollTop, scrollHeight, clientHeight } = el;
+      const atTop = scrollTop <= 0;
+      const atBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
+      const willUpBeyondTop = atTop && delta < 0;
+      const willDownBeyondBottom = atBottom && delta > 0;
+      if (willUpBeyondTop || willDownBeyondBottom) {
+        e.preventDefault();
+        e.stopPropagation();
+        scrollWindowWithInertia(delta);
+      }
+      // 未到边界：保持原生滚动，不阻止默认，以提升顺滑度
+    };
+    el.addEventListener('wheel', handler, { passive: false });
+    return () => {
+      el.removeEventListener('wheel', handler as EventListener);
     };
   }, []);
   const allModels: ModelItem[] = [
@@ -640,8 +665,8 @@ export default function TestIndex() {
                 </a>
               </div>
               {/* Grid */}
-              <div className="mb-[40px] rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative" onWheel={(e) => { let node = e.target as HTMLElement | null; let insideChild = false; while (node) { if (node.classList && node.classList.contains('scrollbar-custom')) { insideChild = true; break; } node = node.parentElement; } if (insideChild) { return; } e.preventDefault(); e.stopPropagation(); const normalizedDelta = e.deltaY * (e.deltaMode === 1 ? 16 : 1); scrollWindowWithInertia(normalizedDelta); }}>
-                <div className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom" onWheel={(e) => { const target = e.currentTarget; const { scrollTop, scrollHeight, clientHeight } = target; const atTop = scrollTop <= 0; const atBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight; const scrollingUp = e.deltaY < 0; const scrollingDown = e.deltaY > 0; const normalizedDelta = e.deltaY * (e.deltaMode === 1 ? 16 : 1); if ((atTop && scrollingUp) || (atBottom && scrollingDown)) { e.preventDefault(); e.stopPropagation(); scrollWindowWithInertia(normalizedDelta); } else { e.stopPropagation(); } }}>
+              <div className="mb-[40px] rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative" onWheel={(e) => { let node: HTMLElement | null = e.target as HTMLElement; while (node) { if (node === childScrollRef.current) { return; } node = node.parentElement; } e.preventDefault(); e.stopPropagation(); const normalizedDelta = e.deltaY * (e.deltaMode === 1 ? 16 : 1); scrollWindowWithInertia(normalizedDelta); }}>
+                <div ref={childScrollRef} className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom">
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {(selectedCategory === 'All' ? allModels : allModels.filter(m => m.tags.includes(selectedCategory))).map((m) => (
                       // <Link href="/ai-model" key={m.id}>
@@ -1250,7 +1275,7 @@ export default function TestIndex() {
                       {/* Learn More按钮 - 绝对定位到左下角 */}
                       {showCardContent === 'card2' && (
                         <div className="absolute bottom-6 left-6">
-                          <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/inference'}>
+                          <p className="text-sm cursor-pointer hover:text-[#80B224] transition-colors duration-300 bg-black bg-opacity-50 px-3 py-2 rounded-full" onClick={() => window.location.href = '/inferences'}>
                             Learn More&gt;
                           </p>
                         </div>
