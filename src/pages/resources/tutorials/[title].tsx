@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
-  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialPost } from '@/components/tutorials'
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout11,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -250,6 +250,23 @@ export default function TutorialDetail() {
           ],
         }
 
+      case 'dedicated-vs-shared-llm-endpoints':
+        return {
+          id: 11,
+          title: 'Dedicated vs Shared LLM Endpoints',
+          description: 'In enterprise-level large language model (LLM) deployment, choosing between shared endpoints (also known as serverless endpoints) and dedicated endpoints is a critical decision factor. Each model offers distinct advantages, catering to different business scenarios and requirements. Shared endpoints emphasize flexibility and low barriers to entry, while dedicated endpoints focus on stability and control. Below is a neutral introduction to the advantages of both endpoint types across aspects such as performance, cost, security and compliance, customization, and reliability and control, helping enterprise users weigh their options based on their specific situations. ',
+          metaDescription: 'Choosing between shared endpoints (also known as serverless endpoints) and dedicated endpoints is a critical decision factor. Each model offers distinct advantages, catering to different business scenarios and requirements.',
+          imageAlt: 'Dedicated vs Shared LLM Endpoints',
+          sections: [
+            {
+              title: 'Choosing Between Dedicated and Shared LLM Endpoints',
+              content: [
+                'In the rapidly evolving landscape of AI and machine learning, selecting the right infrastructure is crucial for optimizing performance and cost-efficiency. This guide delves into the key differences between dedicated and shared LLM endpoints, providing insights to help you make an informed decision for your AI workloads.',
+              ],
+            },
+          ],
+        }
+        
       default:
         return null
     }
@@ -293,6 +310,8 @@ export default function TutorialDetail() {
         return <TutorialLayout6 />
       case 7:
         return <TutorialLayout7 />
+      case 11:
+        return <TutorialLayout11 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }
