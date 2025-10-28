@@ -630,7 +630,6 @@ export default function TestIndex() {
           <PartnerCarousel logos={partnerLogos} />
         </div>
 
-
         {/* Model Library Section */}
         <div className="pb-16">
           <SlideUp>
@@ -723,7 +722,6 @@ export default function TestIndex() {
             </div>
           </SlideUp>
         </div>
-
 
         {/* Chat Section - 灰色背景聊天区域 */}
         <div className="py-16" ref={chatRef}>
@@ -1480,7 +1478,6 @@ export default function TestIndex() {
             </div>
           </div>
         </div>
-
 
         {/* Global Network Section */}
         <div className="bg-white py-16">
