@@ -18,7 +18,7 @@ interface TutorialPost {
 
 interface Card {
   id: string;
-  category: string;
+  category: string | string[];
   title: string;
   image: string;
   date: string;
@@ -29,7 +29,7 @@ interface Card {
 
 const Tutorials: React.FC = () => {
   const router = useRouter();
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategories, setActiveCategories] = useState<string[]>(['All']);
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 6; // 修改为每页显示6个卡片
   // 处理教程点击事件
@@ -40,6 +40,15 @@ const Tutorials: React.FC = () => {
 
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
+    {
+      id: 'dedicated-vs-shared-llm-endpoints',
+      category: ['AI Models', 'LLMs'],
+      title: 'Dedicated vs Shared LLM Endpoints',
+      image: '/tutorials/dedicated-vs-shared-llm-endpoints/dedicated-vs-shared-llm-endpoints.webp',
+      date: 'October 28, 2025',
+      alt: 'Dedicated vs Shared LLM Endpoints',
+      onClick: () => handleTutorialClick('Dedicated vs Shared LLM Endpoints')
+    },
     {
       id: 'ai-integration',
       category: 'AI Models',
@@ -149,9 +158,9 @@ const Tutorials: React.FC = () => {
     if (category) {
       // 解码URL参数，处理空格等特殊字符
       const decodedCategory = decodeURIComponent(category as string);
-      setActiveCategory(decodedCategory);
+      setActiveCategories([decodedCategory]);
     } else {
-      setActiveCategory('All');
+      setActiveCategories(['All']);
     }
     // 切换分类时重置到第一页
     setCurrentPage(1);
@@ -171,10 +180,13 @@ const Tutorials: React.FC = () => {
     // 获取要显示的卡片 - Results区域按最新日期排序
     const getDisplayCards = () => {
       let cards;
-      if (activeCategory === 'All') {
+      if (activeCategories.includes('All')) {
         cards = allCards;
       } else {
-        cards = allCards.filter(card => card.category === activeCategory);
+        cards = allCards.filter(card => {
+          const cardCategories = Array.isArray(card.category) ? card.category : [card.category];
+          return activeCategories.some(activeCat => cardCategories.includes(activeCat));
+        });
       }
       
       // 按日期排序（最新的在前面）
@@ -189,7 +201,7 @@ const Tutorials: React.FC = () => {
   
     // 获取Featured Content区域要显示的卡片 - deepseek排在前面
     const getFeaturedCards = () => {
-      if (activeCategory === 'All') {
+      if (activeCategories.includes('All')) {
         // 直接筛选指定的两篇文章
         const featuredCards = allCards.filter(card => 
           card.id === 'GPT-OSS' || card.id === 'ai-workflows'
@@ -339,7 +351,7 @@ const Tutorials: React.FC = () => {
                     key={category}
                     onClick={() => handleCategoryClick(category)}
                     className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                      activeCategory === category
+                      activeCategories.includes(category)
                         ? 'bg-[#80B224] text-white shadow-lg'
                         : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-[#80B224]'
                     }`}
@@ -380,11 +392,26 @@ const Tutorials: React.FC = () => {
                       {/* 内容区域 */}
                       <div className="p-6">
                         {/* AI Models标签和日期 */}
-                        <div className="flex items-center justify-between text-sm mb-3">
-                          <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
-                            {card.tag || card.category}
-                          </span>
-                          <span className="text-gray-500">{card.date}</span>
+                        <div className="flex items-start justify-between text-sm mb-3">
+                          <div className="flex flex-wrap gap-1 flex-1">
+                            {Array.isArray(card.category) ? (
+                              // 如果是数组，展示多个标签
+                              card.category.map((cat, index) => (
+                                <span 
+                                  key={index}
+                                  className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold"
+                                >
+                                  {cat}
+                                </span>
+                              ))
+                            ) : (
+                              // 如果是字符串，展示单个标签
+                              <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
+                                {card.tag || card.category}
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-gray-500 flex-shrink-0 ml-2 whitespace-nowrap">{card.date}</span>
                         </div>
 
                         {/* 标题 */}
@@ -433,10 +460,25 @@ const Tutorials: React.FC = () => {
                     <div className="p-6">
                       {/* 标签和日期 */}
                       <div className="flex items-center justify-between text-xs mb-3">
-                        <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
-                          {card.tag || card.category}
-                        </span>
-                        <span className="text-gray-500">{card.date}</span>
+                        <div className="flex flex-wrap gap-1">
+                          {Array.isArray(card.category) ? (
+                            // 如果是数组，展示多个标签
+                            card.category.map((cat, index) => (
+                              <span 
+                                key={index}
+                                className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold"
+                              >
+                                {cat}
+                              </span>
+                            ))
+                          ) : (
+                            // 如果是字符串，展示单个标签
+                            <span className="px-2 py-1 bg-[#F5F9F4] text-[#80B224] rounded-full font-semibold">
+                              {card.tag || card.category}
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-gray-500 flex-shrink-0 ml-2">{card.date}</span>
                       </div>
 
                       {/* 标题 */}
