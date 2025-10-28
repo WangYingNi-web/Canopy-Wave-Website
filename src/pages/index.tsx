@@ -20,7 +20,6 @@ export default function TestIndex() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const currentUrl = `https://canopywave.com${router.asPath}`
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
   const [isExpanded3, setIsExpanded3] = useState(false);
   const [isExpanded4, setIsExpanded4] = useState(false);
@@ -112,6 +111,7 @@ export default function TestIndex() {
       el.removeEventListener('wheel', handler as EventListener);
     };
   }, []);
+
   const allModels: ModelItem[] = [
     // Featured (existing)
     { id: "llama-8b", name: "LLAMA 3.3 8B INSTRUCT", family: "CHAT", params: "8B", context: "128K context", featured: true, logo: "/ai-model/allmodels_ic_llama.png", tags: ["Chat"] },
@@ -303,28 +303,6 @@ export default function TestIndex() {
     // }
 
     // 不设置任何隐藏定时器，内容保持显示
-  };
-
-  // 地图轮播事件处理函数
-  const handleMapMouseEnter = () => {
-    setIsMapAutoPlaying(false);
-    if (mapAutoPlayTimer) {
-      clearTimeout(mapAutoPlayTimer);
-    }
-  };
-
-  const handleMapMouseLeave = () => {
-    setIsMapAutoPlaying(true);
-  };
-
-  const handleMapIndicatorClick = (index: number) => {
-    setCurrentMapIndex(index);
-    setIsMapAutoPlaying(false);
-    if (mapAutoPlayTimer) {
-      clearTimeout(mapAutoPlayTimer);
-    }
-    // 点击后3秒恢复自动播放
-    setTimeout(() => setIsMapAutoPlaying(true), 3000);
   };
 
   // Chat自动播放逻辑 - 根据动图时长动态切换
@@ -669,7 +647,7 @@ export default function TestIndex() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {(selectedCategory === 'All' ? allModels : allModels.filter(m => m.tags.includes(selectedCategory))).map((m) => (
                       // <Link href="/ai-model" key={m.id}>
-                        <div className="rounded-2xl">
+                        <div className="rounded-2xl" key={m.id}>
                           <div className="p-6 flex flex-col min-h-[290px]" style={{
                             backgroundImage: 'url(/ai-model/allmodels_img_bg.png)',
                             backgroundSize: 'contain',

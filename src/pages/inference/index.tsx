@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "@/components/header";
@@ -65,10 +65,76 @@ const allModels: ModelItem[] = [
     { id: "flux1-kontext-max", name: "FLUX.1 KONTEXT MAX", family: "IMAGE", params: "12B", context: "", logo: "/ai-model/allmodels_ic_flux.png", tags: ["Image"] },
 ];
 
-
+// Hooks moved inside InferencePage component to avoid invalid hook usage at module scope.
 export default function InferencePage() {
     const [activeCategory, setActiveCategory] = useState<string>("All");
-
+    const childScrollRef = useRef<HTMLDivElement | null>(null);
+    const wheelInertiaRef = useRef<{ v: number; raf: number | null } | null>(null);
+    const scrollWindowWithInertia = (deltaY: number) => {
+        const MAX_INITIAL_V = 24;
+        const SCALE = 0.5;
+        const v0 = Math.max(-MAX_INITIAL_V, Math.min(MAX_INITIAL_V, deltaY * SCALE));
+    
+        let state = wheelInertiaRef.current;
+        if (!state) {
+            state = { v: 0, raf: null };
+        }
+        if (state.raf) {
+            cancelAnimationFrame(state.raf);
+            state.raf = null;
+        }
+        state.v = v0;
+        wheelInertiaRef.current = state;
+    
+        const decay = 0.88;
+        let steps = 0;
+        const MAX_STEPS = 20;
+    
+        const step = () => {
+            const s = wheelInertiaRef.current;
+            if (!s) return;
+            window.scrollBy({ top: s.v, left: 0, behavior: 'auto' });
+            s.v *= decay;
+            steps += 1;
+            if (Math.abs(s.v) > 0.6 && steps < MAX_STEPS) {
+                s.raf = requestAnimationFrame(step);
+            } else {
+                s.raf = null;
+            }
+        };
+        state.raf = requestAnimationFrame(step);
+    };
+    
+    useEffect(() => {
+        return () => {
+            const s = wheelInertiaRef.current;
+            if (s?.raf) cancelAnimationFrame(s.raf);
+            wheelInertiaRef.current = null;
+        };
+    }, []);
+    
+    useEffect(() => {
+        const el = childScrollRef.current;
+        if (!el) return;
+        const handler = (e: WheelEvent) => {
+            const delta = e.deltaY * (e.deltaMode === 1 ? 16 : 1);
+            const { scrollTop, scrollHeight, clientHeight } = el;
+            const atTop = scrollTop <= 0;
+            const atBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
+            const willUpBeyondTop = atTop && delta < 0;
+            const willDownBeyondBottom = atBottom && delta > 0;
+            if (willUpBeyondTop || willDownBeyondBottom) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollWindowWithInertia(delta);
+            }
+        };
+        el.addEventListener('wheel', handler, { passive: false });
+        return () => {
+            el.removeEventListener('wheel', handler as EventListener);
+        };
+    }, []);
+    
     return (
         <main className="min-h-screen text-[#333333] relative">
             <Head>
@@ -92,12 +158,12 @@ export default function InferencePage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-[148px]">
                         <SlideUp>
                             <div className="flex items-center gap-4 mb-[16px]">
-                                    <Image
-                                        src="/inference/ic_serverlessinfrence.png"
-                                        alt="Performance"
-                                        width={36}
-                                        height={36}
-                                    />
+                                <Image
+                                    src="/inference/ic_serverlessinfrence.png"
+                                    alt="Performance"
+                                    width={36}
+                                    height={36}
+                                />
                                 <h3 className="text-[18px] text-[#333333]">Serverless Inference</h3>
                             </div>
                             <h2 className="text-left text-[40px] sm:text-[52px] font-bold text-[#333333] mb-[16px] leading-[72px]">
@@ -149,12 +215,12 @@ export default function InferencePage() {
                             </a>
                         </div>
                         {/* Grid */}
-                        <div className="mb-[60px] rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative">
-                            <div className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom">
+                        <div className="mb-[40px] rounded-2xl border border-[#E6E6E6] bg-[#F9F9F9] shadow-[0_6px_24px_rgba(0,0,0,0.12)] p-6 md:py-8 px-12 relative" onWheel={(e) => { let node: HTMLElement | null = e.target as HTMLElement; while (node) { if (node === childScrollRef.current) { return; } node = node.parentElement; } e.preventDefault(); e.stopPropagation(); const normalizedDelta = e.deltaY * (e.deltaMode === 1 ? 16 : 1); scrollWindowWithInertia(normalizedDelta); }}>
+                            <div ref={childScrollRef} className="h-[590px] overflow-y-auto pr-2 md:pr-6 scrollbar-custom">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                                     {(activeCategory === 'All' ? allModels : allModels.filter(m => m.tags.includes(activeCategory))).map((m) => (
                                         // <Link href="/ai-model" key={m.id}>
-                                        <div className="rounded-2xl">
+                                        <div className="rounded-2xl" key={m.id}>
                                             <div className="p-6 flex flex-col min-h-[290px]" style={{
                                                 backgroundImage: 'url(/ai-model/allmodels_img_bg.png)',
                                                 backgroundSize: 'contain',
