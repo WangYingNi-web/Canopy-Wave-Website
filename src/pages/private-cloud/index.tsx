@@ -190,7 +190,7 @@ export default function SolutionsPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-l group-hover:text-white">Start Building at Scale—Today</h3>
+                                        <h3 className="font-bold text-l group-hover:text-white">Start building at Scale—Today</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>

@@ -489,9 +489,9 @@ export default function AiModelPage() {
 
                     {/* CTAs */}
                     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center mt-6">
-                        {/* Left action: Start Building */}
+                        {/* Left action: Start building */}
                         <a href="https://cloud.canopywave.io/" className="inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                            <span className="text-[24px] text-[#80B224]">Start Building</span>
+                            <span className="text-[24px] text-[#80B224]">Start building</span>
                             <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
                         </a>
                         {/* Right action: Apply for */}

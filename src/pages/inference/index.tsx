@@ -135,10 +135,68 @@ export default function InferencePage() {
         };
     }, []);
     
+    // 三个指标视频引用与同步逻辑
+    const fastVideoRef = useRef<HTMLVideoElement | null>(null);
+    const costVideoRef = useRef<HTMLVideoElement | null>(null);
+    const privacyVideoRef = useRef<HTMLVideoElement | null>(null);
+
+    // 简化：页面加载后同时加载并循环播放三个视频，不做额外同步
+    useEffect(() => {
+        const fast = fastVideoRef.current;
+        const cost = costVideoRef.current;
+        const privacy = privacyVideoRef.current;
+        const videos = [fast, cost, privacy].filter(Boolean) as HTMLVideoElement[];
+        if (videos.length !== 3) return;
+
+        videos.forEach(v => {
+            v.muted = true;
+            v.loop = true;
+            v.preload = 'auto';
+            // @ts-ignore playsInline 在移动端广泛支持
+            v.playsInline = true;
+            try { v.load(); } catch {}
+        });
+
+        const startAll = () => {
+            videos.forEach(v => {
+                try {
+                    v.currentTime = 0;
+                    const p = v.play();
+                    if (p && typeof (p as any).catch === 'function') (p as Promise<void>).catch(() => {});
+                } catch {}
+            });
+        };
+
+        let readyCount = 0;
+        const onLoaded = () => {
+            readyCount++;
+            if (readyCount >= videos.length) {
+                startAll();
+            }
+        };
+
+        videos.forEach(v => {
+            if (v.readyState >= 2) {
+                readyCount++;
+            } else {
+                v.addEventListener('loadeddata', onLoaded);
+            }
+        });
+
+        if (readyCount >= videos.length) startAll();
+
+        return () => {
+            videos.forEach(v => v.removeEventListener('loadeddata', onLoaded));
+        };
+    }, []);
+
     return (
         <main className="min-h-screen text-[#333333] relative">
             <Head>
                 <title>Model Library | Canopy Wave</title>
+                <link rel="preload" as="video" href="/inference/infrence_ic_fastresponse.mp4" type="video/mp4" />
+                <link rel="preload" as="video" href="/inference/infrence_ic_costreduction.mp4" type="video/mp4" />
+                <link rel="preload" as="video" href="/inference/infrence_ic_dataprivacy.mp4" type="video/mp4" />
             </Head>
 
             <Header />
@@ -170,7 +228,7 @@ export default function InferencePage() {
                                 AI Inference Service <br />
                                 where AI meets reality
                             </h2>
-                            <p className="text-[18px] text-[#333333] leading-[24px] mb-[28px]">Our Inferencing as a Service (InfaaS) achieves AI Inference with Canopy Wave api</p>
+                            <p className="text-[18px] text-[#333333] leading-[24px] mb-[28px]">Our Inferencing as a Service (InfaaS) achieves AI Inference with Canopy Wave API</p>
                             <div className="flex justify-left">
                                 <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="hidden md:block" aria-label="Open Canopy Wave Cloud">
                                     <div className="text-[16px] bg-[#80B224] hover:bg-[#6a9620] text-white py-[8px] px-[28px] rounded-full transition-colors duration-300">Start building</div>
@@ -288,7 +346,7 @@ export default function InferencePage() {
                                 </div>
                                 <div className="md:col-span-3 flex justify-center">
                                     <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24">
-                                        <video className="w-full h-full" autoPlay muted loop playsInline>
+                                        <video className="w-full h-full" autoPlay muted loop playsInline preload="auto" ref={fastVideoRef}>
                                             <source src="/inference/infrence_ic_fastresponse.mp4" type="video/mp4" />
                                         </video>
                                     </div>
@@ -304,7 +362,7 @@ export default function InferencePage() {
                                 </div>
                                 <div className="md:col-span-3 flex justify-center">
                                     <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24">
-                                        <video className="w-full h-full" autoPlay muted loop playsInline>
+                                        <video className="w-full h-full" autoPlay muted loop playsInline preload="auto" ref={costVideoRef}>
                                             <source src="/inference/infrence_ic_costreduction.mp4" type="video/mp4" />
                                         </video>
                                     </div>
@@ -320,7 +378,7 @@ export default function InferencePage() {
                                 </div>
                                 <div className="md:col-span-3 flex justify-center">
                                     <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24">
-                                        <video className="w-full h-full" autoPlay muted loop playsInline>
+                                        <video className="w-full h-full" autoPlay muted loop playsInline preload="auto" ref={privacyVideoRef}>
                                             <source src="/inference/infrence_ic_dataprivacy.mp4" type="video/mp4" />
                                         </video>
                                     </div>
@@ -433,9 +491,9 @@ export default function InferencePage() {
 
                     {/* CTAs */}
                     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center mt-6">
-                        {/* Left action: Start Building */}
+                        {/* Left action: Start building */}
                         <a href="https://cloud.canopywave.io/" className="inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                            <span className="text-[24px] text-[#80B224]">Start Building</span>
+                            <span className="text-[24px] text-[#80B224]">Start building</span>
                             <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
                         </a>
                         {/* Right action: Apply for */}
@@ -459,9 +517,9 @@ export default function InferencePage() {
                             <p className="text-[#999999] text-[14px] sm:text-[16px] mb-10">
                                 Try InfaaS and see how inference becomes the simplest, most powerful part of your AI workflow.
                             </p>
-                            <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="inline-block">
+                            <a href="/contact" rel="noopener noreferrer" className="inline-block">
                                 <button className="text-white bg-[#80B224] hover:bg-[#6a9620] px-6 py-2.5 sm:px-[28px] sm:py-[8px] rounded-full text-[16px] transition-colors">
-                                    Sign up
+                                    Contact us
                                 </button>
                             </a>
                         </div>

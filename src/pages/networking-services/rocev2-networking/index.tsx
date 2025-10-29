@@ -605,7 +605,7 @@ export default function RoCEv2NetworkingPage() {
                                         />
                                     </div>
                                     <FadeIn>
-                                        <h3 className="font-bold text-[18px] group-hover:text-white">Start Building at Scale—Today</h3>
+                                        <h3 className="font-bold text-[18px] group-hover:text-white">Start building at Scale—Today</h3>
                                     </FadeIn>
                                 </div>
                                 <FadeIn>
