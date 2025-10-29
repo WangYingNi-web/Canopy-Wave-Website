@@ -25,6 +25,7 @@ export default function BlogDetail() {
 
 
 
+
       case 'joint-blog-accelerate-enterprise-ai':
         return {
           id: 1,
@@ -2403,7 +2404,7 @@ export default function BlogDetail() {
                 React.createElement('strong', { key: 'vendor-base' }, '• Diversify Vendor Base:'), ' Use both global distributors and regional partners to reduce risk.',
                 React.createElement('strong', { key: 'refurbished-hardware' }, '• Consider Pre-Owned or Refurbished Hardware:'), ' High-quality refurbished servers or drives can significantly lower costs without compromising reliability.',
                 React.createElement('strong', { key: 'optimized-config' }, '• Optimized Configuration:'), ' Faster interconnects such as NVLink 5.0 and PCIe 5.0 improve multi-GPU cluster efficiency by reducing data transfer latency, allowing existing GPUs to handle complex tasks more effectively and minimizing compute wastage. NVMe storage accelerates access to training data and model parameters, reducing GPU idle time and increasing utilization. While not reducing the number of GPUs needed, these upgrades boost resource utilization and throughput. This optimization indirectly eases the immediate pressure for new GPU purchases.',
-                React.createElement('strong', { key: 'hybrid-deployment' }, '• Hybrid Deployment:'), 
+                React.createElement('strong', { key: 'hybrid-deployment' }, '• Hybrid Deployment:'),
                 <>Combine on-prem clusters with <a href="/compute-services" className="text-[#80B224] hover:text-[#98c455]" rel="noopener noreferrer">GPU-as-a-Service</a> to handle peak workloads efficiently.</>,
                 React.createElement('strong', { key: 'critical-purchases' }, '• Stage Critical Purchases Now:'), ' For DDR5 memory, enterprise drives, and CPUs, early purchases can mitigate further Q4 inflation.',
                 React.createElement('strong', { key: 'canopy-expertise' }, '• Leverage Canopy Wave\'s Supply Chain Expertise:'), ' Canopy Wave helps enterprises locate scarce inventory, negotiate favorable deals, and even provide flexible procurement options to smooth hardware acquisition.',
@@ -3695,7 +3696,7 @@ export default function BlogDetail() {
             {
               title: 'I. Why is GPU Temperature Important?',
               content: [
-                React.createElement(React.Fragment, {}, 'GPUs generate significant heat when handling intensive tasks. Excessively high temperatures can cause ', React.createElement('strong', {}, 'thermal throttling'),', where the GPU automatically reduces clock speeds to prevent hardware damage. This directly leads to performance degradation, such as reduced frame rates or processing delays.'),
+                React.createElement(React.Fragment, {}, 'GPUs generate significant heat when handling intensive tasks. Excessively high temperatures can cause ', React.createElement('strong', {}, 'thermal throttling'), ', where the GPU automatically reduces clock speeds to prevent hardware damage. This directly leads to performance degradation, such as reduced frame rates or processing delays.'),
                 'Long-term operation at high temperatures can damage internal components, degrade thermal paste, and increase fan wear, ultimately shortening the GPU\'s service life. In extreme cases, overheating may even lead to permanent hardware failure.'
               ]
             },
@@ -3703,16 +3704,16 @@ export default function BlogDetail() {
               title: 'II. What is the Normal GPU Temperature Range?',
               content: [
                 `Understanding the normal operating temperature range of a GPU is the first step toward effective thermal management. `,
-                React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• Idle Temperatures: '), ' When the GPU is under light load or idle, normal temperatures should be between',React.createElement('strong', {}, ' 32°C and 53°C'), ',depending on ambient temperature and the machine\'s cooling system.'),
-                React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• Full Load Temperatures: '), 'When the GPU is running at full capacity for AI computation, gaming, or rendering tasks, normal temperatures should remain within the',React.createElement('strong', {}, ' 65°C to 85°C'), ' range.'),
-                React.createElement(React.Fragment, {}, 'Currently, the average operating temperature for most GPUs under maximum load (100% utilization) and without overclocking is approximately',React.createElement('strong', {}, ' 75-90°C'),'.'),
+                React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• Idle Temperatures: '), ' When the GPU is under light load or idle, normal temperatures should be between', React.createElement('strong', {}, ' 32°C and 53°C'), ',depending on ambient temperature and the machine\'s cooling system.'),
+                React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• Full Load Temperatures: '), 'When the GPU is running at full capacity for AI computation, gaming, or rendering tasks, normal temperatures should remain within the', React.createElement('strong', {}, ' 65°C to 85°C'), ' range.'),
+                React.createElement(React.Fragment, {}, 'Currently, the average operating temperature for most GPUs under maximum load (100% utilization) and without overclocking is approximately', React.createElement('strong', {}, ' 75-90°C'), '.'),
               ],
             },
             {
               title: 'III. What is the Dangerous Temperature Range?',
               content: [
-                React.createElement(React.Fragment, {}, 'Most modern GPUs have a thermal limit (thermal margin) designed around',React.createElement('strong', {}, ' 95-105°C'),'. Upon reaching this range, thermal throttling typically begins. For ', React.createElement('strong', {}, 'NVIDIA GPUs'), ', the upper limit is generally 95–100°C, while for ', React.createElement('strong', {}, 'AMD GPUs'),', it\'s typically 90–100°C. The maximum safe temperature can vary for specific brands and models.'),
-                React.createElement(React.Fragment, {}, 'When the GPU temperature ', React.createElement('strong', {}, 'consistently exceeds 85°C'), ', the efficiency of the cooling system should be checked.',React.createElement('strong', {}, ' Once it reaches 90°C'), ', immediate action is required, as these temperatures cause temporary throttling and reduce GPU performance.'),
+                React.createElement(React.Fragment, {}, 'Most modern GPUs have a thermal limit (thermal margin) designed around', React.createElement('strong', {}, ' 95-105°C'), '. Upon reaching this range, thermal throttling typically begins. For ', React.createElement('strong', {}, 'NVIDIA GPUs'), ', the upper limit is generally 95–100°C, while for ', React.createElement('strong', {}, 'AMD GPUs'), ', it\'s typically 90–100°C. The maximum safe temperature can vary for specific brands and models.'),
+                React.createElement(React.Fragment, {}, 'When the GPU temperature ', React.createElement('strong', {}, 'consistently exceeds 85°C'), ', the efficiency of the cooling system should be checked.', React.createElement('strong', {}, ' Once it reaches 90°C'), ', immediate action is required, as these temperatures cause temporary throttling and reduce GPU performance.'),
               ],
             },
             {
@@ -3731,7 +3732,7 @@ export default function BlogDetail() {
               title: 'V. Core Temperature vs. Hotspot Temperature',
               content: [
                 React.createElement(React.Fragment, {}, 'The GPU core contains dozens of temperature sensors spread across the silicon chip. The temperature reported by most software is the "Core" temperature, which is actually the average reading from these sensors. The ', React.createElement('strong', {}, 'Hotspot Temperature '), 'is the reading from the ', React.createElement('strong', {}, 'hottest single point '), 'among these sensors, requiring specialized tools to view.'),
-                React.createElement(React.Fragment, {}, 'The difference between the Core Temperature and the Hotspot Temperature is an important indicator for assessing the GPU\'s cooling status. If this differential begins to ',React.createElement('strong', {}, 'exceed 15°C'), ', it indicates that the thermal paste may have pumped out or dried up and needs replacement. '),
+                React.createElement(React.Fragment, {}, 'The difference between the Core Temperature and the Hotspot Temperature is an important indicator for assessing the GPU\'s cooling status. If this differential begins to ', React.createElement('strong', {}, 'exceed 15°C'), ', it indicates that the thermal paste may have pumped out or dried up and needs replacement. '),
                 'For example, if the Core Temperature is 75°C and the Hotspot Temperature is 87°C, everything is normal. However, if the Core Temperature is 75°C and the Hotspot Temperature reaches 100°C, this is a clear sign that the thermal paste on the core needs to be replaced. ',
                 <img key="model parameters" src="/blog/gpu-temperature-range.webp" alt="gpu temperature" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
               ],
@@ -3795,6 +3796,104 @@ export default function BlogDetail() {
           ],
         }
 
+      case 'the-future-of-ai-lies-in-memory':
+        return {
+          id: 33,
+          title: 'The Future of AI Lies in Memory',
+          description: 'From Reactive Machines to AI that Truly Learns',
+          sections: [
+            {
+              title: '',
+              content: [
+                'The future of AI depends not only on larger models but also on smarter memory.',
+                'While the expansion of model parameters has brought improvements in understanding, true intelligence stems from memory:',
+                <>Allowing AI to accumulate experience, generalize knowledge, and learn from past interactions,<br />just like humans.</>,
+                'Only AI with long-term memory can truly achieve "continuous learning" and "self-evolution."',
+              ],
+            },
+            {
+              title: 'Memory: The Missing Piece for True Intelligence',
+              content: [
+                "We've all had this experience: you ask your AI assistant about last week's work schedule, and it responds blankly: Sorry, what schedule? Even worse, it sometimes 'confidently fabricates,' generating content you never discussed. Even though today's large language models can process millions of tokens in a single conversation, they still suffer from severe 'functional amnesia.' Every new session is like a 'rebirth,' with past memories completely wiped clean.",
+                'This transient memory keeps AI forever in the stage of "reactive intelligence": It can understand the present but cannot learn from the past; it can answer questions but struggles to understand you. But imagine if AI could possess a true "long-term memory system." It could not only remember your preferences, habits, and tone but also accumulate experience over time, reflect on actions, and update knowledge—then these cold programs might evolve into adaptive agents that can learn, accompany, and evolve.',
+                'That would not be just a technical upgrade, but a revolution in how intelligence perceives and utilizes time.',
+                "The most promising applications of artificial intelligence have yet to arrive. True personalization and long-term utility depend entirely on the agent's ability to remember, learn, and adapt.",
+                'With the rapid development of foundational models, agent frameworks, and specialized infrastructure, production-ready memory systems are finally emerging. For founders and engineers, this is more important than ever. When everyone is asking: "Where is the moat?" Memory might be the answer.',
+                'It can create deeply personalized experiences and generate compound interest effects over time, thereby establishing user lock-in and increasing switching costs.',
+                'This image shows the concept diagram of Memex proposed by Vannevar Bush in 1945, a conceptual information storage and retrieval device.',
+                'It was designed as a desk, containing microfilm, projection screens, and mechanical controls inside, capable of storing, capturing, and rapidly retrieving materials. Users could connect different pieces of information by creating "associative trails," much like associations in human thought.',
+                "Just like today's AI exploration of 'memory,' Memex embodies humanity's early dream of expanding thinking and memory through technology.",
+                'Its method of connecting ideas mirrors how the human brain naturally forms associations. That vision was far ahead of its time, but now, all the pieces are gradually coming together, making the realization of that dream finally possible.',
+                <img key="Memex" src="/blog/memex.webp" alt="Memex" className="max-w-[380px] mx-auto w-full h-auto my-8 rounded-lg" />,
+                <div key="Memex" className="text-center text-sm text-gray-600 -mt-8">Memex Concept Diagram</div>,
+              ],
+            },
+
+            {
+              title: 'Anatomy of Memory',
+              content: [
+                'Traditional applications have long been able to store user data and state, but generative AI brings a brand new memory challenge: how to transform unstructured interactions into actionable context.',
+                'The goal today is no longer just storing data, but retrieving the right context at the right time.',
+                'Memory in agents adopts a layered working mode, combining fast, transient short-term memory with structured, persistent long-term memory.',
+                <><strong>Short-Term Memory</strong>, also known as working memory, is responsible for holding recent conversational context, similar to a computer's RAM.</>,
+                'It ensures dialogue coherence but is limited by the agent\'s context window. Once full, older exchanges are discarded, summarized, or migrated to long-term memory.',
+                <><strong>Long-Term Memory</strong>, on the other hand, spans different sessions, providing enduring continuity, enabling the agent to build long-lasting understanding and support compound intelligence.</>,
+                'It consists of modular memory blocks, specifically including:',
+                <><strong>• Semantic Memory:</strong> Stores facts, such as user preferences or key entities. This information can be predefined or dynamically extracted.</>,
+                <><strong>• Episodic Memory:</strong> Recalls past interactions to guide future actions (e.g., last time the user requested summaries to be more concise).</>,
+                <><strong>• Procedural Memory:</strong> Records steps of successful or failed processes for continuous improvement (e.g., the process for booking a flight is: first confirm date, destination, then number of passengers).</>,
+                'A powerful memory system goes far beyond mere storage; it also needs mechanisms to decide what to retain, how to retrieve it, and when to update or overwrite.',
+                'A key requirement for managing memory is building update mechanisms within the stored data.',
+                'This allows the agent to modify or replace old memories with new information, thereby surfacing truly valuable details that go beyond conventional text matching or relevance scores.',
+              ],
+            },
+            {
+              title: 'Challenges of Implementing Memory at Scale',
+              content: [
+                "Implementing a robust memory system is not as simple as storing chat history; it brings a series of challenges that intensify as the application scales. The core challenge lies in effective memory management. The primary bottleneck is the practical limitation and cost of large language models' context windows. For a model to utilize memory, it must load the data into its context.",
+                "Although window limits have expanded significantly, for instance, Gemini's 1 million tokens, they are ultimately finite. Computational costs grow quadratically, making extremely large contexts economically unfeasible for many applications.",
+                'Besides capacity, how to retrieve the correct information is another major challenge.',
+                'Simple semantic similarity, which is core to many Retrieval-Augmented Generation (RAG) systems, often fails to capture true contextual relevance, and the problem worsens as the memory bank grows. Accumulating interactions increase the risk of extracting stale or conflicting data. For example, vector search might pull up restaurant recommendations from months ago, rather than yesterday\'s record.',
+                'It often struggles when handling temporal details, state changes (e.g., distinguishing John was CEO from Sarah is CEO) or negations (I used to like Italian food, but now I prefer Thai food).',
+                'Without mechanisms to resolve contradictions and rank by time and relevance, the memories retrieved by an agent, while technically similar, might be functionally completely wrong, ultimately leading to inconsistent outputs.',
+                'Furthermore, memory in AI agents is increasingly becoming multimodal, extending from text to images, video, and audio.',
+                'This poses challenges for cross-modal representation and cross-modal retrieval. The system must uniformly encode different types of data for storage and enable efficient cross-modal searches, such as linking a voice query to a visual memory.',
+                'As modalities increase, so does the system\'s complexity. Conflicts from data mismatches, higher storage demands, and retrieval difficulties all require more advanced techniques, such as multimodal embeddings.',
+              ],
+            },
+            {
+              title: 'Current Specialized Memory Providers: Letta, Mem0, and Zep',
+              content: [
+                <img key="Vendor Comparison Chart" src="/blog/vendor-comparison-chart.webp" alt="Vendor Comparison Chart" className="max-w-[520px] mx-auto w-full h-auto my-8 rounded-lg" />,
+                <div key="Vendor Comparison Chart" className="text-center text-sm text-gray-600 -mt-8">Vendor Comparison Chart</div>,
+                'This chart compares three mainstream AI memory frameworks—Letta (formerly MemGPT), Mem0, and Zep. They represent three different design philosophies for memory systems: operating system-like, performance-oriented, and knowledge graph-based.',
+                <><strong>Letta</strong>,analogizes the concept of memory to the hierarchical structure of an operating system. It divides memory into Core Memory (always-present context), Working Memory (on-demand), and Archival Memory (long-term storage). The model performs memory operations like remember, forget, or retrieve via function calls. This design makes debugging easier and grants the model greater autonomy, but at the cost of increased invocation counts, leading to higher latency and cost. Letta is suitable for complex reasoning and system-level debugging tasks, acting like a memory operating system built specifically for LLMs.</>,
+                <><strong>Mem0</strong>,emphasizes developer experience and execution performance. It centers on simplicity, adopting a three-layer architecture: User Memory (persistent), Session Memory (conversation-related), and Agent Memory (system-wide shared). This structure allows developers to easily add memory functionality to any LLM with just a few lines of code. Performance-wise, it is much faster than OpenAI's native memory system, with lower latency and higher accuracy. Mem0 is very suitable for application scenarios requiring rapid deployment and iteration, such as lightweight chatbots or prototyping.</>,
+                <><strong>Zep</strong>,takes a more semantic route. It uses an engine called Graphiti to organize memory into dynamic knowledge graphs. The system does not just store content; it also tracks relationships between events and temporal information. Zep divides memory into Episodic Memory (recording occurrences of events) and Semantic Memory (recording "who, what, relationships, concepts"), and employs a dual-time model to track both "when the event occurred" and "when the system learned it." This mechanism allows it to answer questions with a temporal dimension, e.g., "What did the user prefer last month?"—making it ideal for long-cycle, contextually complex dialog systems.</>,
+                'Overall, Letta emphasizes structure and controllability, Mem0 pursues lightness and efficiency, while Zep focuses on long-term semantic memory and relationship modeling. Together, these three paint a picture of the current three evolutionary paths for AI memory systems: system-level memory management, fast and scalable architecture, and semantic temporal memory networks.',
+                <img key="ai-tree" src="/blog/ai-tree.webp" alt="ai-tree" className="max-w-[700px] w-full h-auto my-8 rounded-lg" />,
+              ],
+            },
+            {
+              title: 'Memory is the Starting Point Towards Sustainable Intelligence',
+              content: [
+                'A key point in memory engineering is to treat it as an iterative process. Even the best teams need to continuously optimize their approach over time.',
+                'Its foundation lies in establishing a business-first mindset: before choosing any framework or architecture, first plan the core business processes, clarifying what key information the application must remember to succeed—for example, user preferences, multi-step workflow history, or subtle conversational nuances.',
+                'Memory might just be the missing piece needed to unlock the full potential of generative AI.',
+                'We are moving towards a new era where, in the near future, we will have:',
+                <><strong>Personalized Education Platforms:</strong> Capable of adapting to individual learning styles, remembering which explanations were more effective, and building progressively upon past lessons.</>,
+                <><strong>Lab Assistants:</strong> In research laboratories, AI robots can track experiment history, recall failed procedures to avoid repetition, and accumulate domain knowledge through trial and error.</>,
+                <><strong>Personalized Healthcare and Nursing:</strong> Leveraging powerful memory, AI health assistants can track years of medical history, treatments, conversations, and even patients\' subtle preferences, enabling highly personalized, proactive care.</>,
+                'We have reached a tipping point: merely expanding the context is no longer sufficient.',
+                'Solving the memory problem means designing systems capable of reasoning across time.',
+                'The ultimate winners in the generative AI space will be those who do not view memory as mere storage, but see it as a dynamic architecture for building compound intelligence.',
+              ],
+            },
+          ],
+        }
+
+
+
 
       default:
         return null
@@ -3821,45 +3920,47 @@ export default function BlogDetail() {
   const getBlogImage = () => {
     return blogPost.title === "Enterprise GPU Cluster Procurement Strategy"
       ? "/blog/enterprise-gpu-cluster.webp"
-      : blogPost.title === "Decoding AI Hallucinations"
-        ? "/blog/ai-hallucinations.webp"
-        : blogPost.title === "Accelerated AI for Business"
-          ? "/blog/ai-business.webp"
-          : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
-            ? "/blog/blog2.webp"
-            : blogPost.title === "AI Generates Personalized Content"
-              ? "/blog/ai-content-generation.webp"
-              : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
-                ? "/blog/dedicated-endpoints.webp"
-                : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
-                  ? "/blog/gpu-computing.webp"
-                  : blogPost.title === "AI-Powered E-commerce"
-                    ? "/blog/ai-shopping.webp"
-                    : blogPost.title === "AI's Role in Autonomous Driving"
-                      ? "/blog/ai-car.webp"
-                      : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
-                        ? "/blog/gpu-cluster-cost.webp"
-                        : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
-                          ? "/blog/workflows2.webp"
-                          : blogPost.title === "Humanity's Next Partner: The AI Agent"
-                            ? "/blog/ai-agent.webp"
-                            : blogPost.title === "AI Fine-tuning for Beginners"
-                              ? "/blog/ai-fine-tuning.webp"
-                              : blogPost.title === "Revolutionizing Elderly Care with AI"
-                                ? "/blog/ai-elderly-care.webp"
-                                : blogPost.title === "AI: The Doctor's Third Eye in Medical Imaging"
-                                  ? "/blog/ai-gpu-edge.webp"
-                                  : blogPost.title === "GPUs in Edge Computing"
-                                    ? "/blog/ai-GPU-Virtualization.webp"
-                                    : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
-                                      ? "/blog/token-inference-service.webp"
-                                      : blogPost.title === "RAG Equipping AI with Knowledge Plugins"
-                                        ? "/blog/ai-rag.webp"
-                                        : blogPost.title === "Large Model API Call Optimization Guide"
-                                          ? "/blog/api-optimization.webp"
-                                          : blogPost.title === "How is AI created"
-                                            ? "/blog/blog2.webp"
-                                            : "/blog1.webp"
+      : blogPost.title === "The Future of AI Lies in Memory"
+        ? "/blog1.webp"
+        : blogPost.title === "Decoding AI Hallucinations"
+          ? "/blog/ai-hallucinations.webp"
+          : blogPost.title === "Accelerated AI for Business"
+            ? "/blog/ai-business.webp"
+            : blogPost.title === "Canopy Wave Launches Next-Gen GPU Cluster with NVIDIA GB200 NVL72"
+              ? "/blog/blog2.webp"
+              : blogPost.title === "AI Generates Personalized Content"
+                ? "/blog/ai-content-generation.webp"
+                : blogPost.title === "Why Enterprises Choose Dedicated LLM Endpoints?"
+                  ? "/blog/dedicated-endpoints.webp"
+                  : blogPost.title === "GPU: The Core Engine of a New Era in Computing"
+                    ? "/blog/gpu-computing.webp"
+                    : blogPost.title === "AI-Powered E-commerce"
+                      ? "/blog/ai-shopping.webp"
+                      : blogPost.title === "AI's Role in Autonomous Driving"
+                        ? "/blog/ai-car.webp"
+                        : blogPost.title === "Cost Breakdown: 32-Unit GB200 GPU Cluster"
+                          ? "/blog/gpu-cluster-cost.webp"
+                          : blogPost.title === "AI Transforms Pet Care" || blogPost.title === "How AI Transforms Pet Care"
+                            ? "/blog/workflows2.webp"
+                            : blogPost.title === "Humanity's Next Partner: The AI Agent"
+                              ? "/blog/ai-agent.webp"
+                              : blogPost.title === "AI Fine-tuning for Beginners"
+                                ? "/blog/ai-fine-tuning.webp"
+                                : blogPost.title === "Revolutionizing Elderly Care with AI"
+                                  ? "/blog/ai-elderly-care.webp"
+                                  : blogPost.title === "AI: The Doctor's Third Eye in Medical Imaging"
+                                    ? "/blog/ai-gpu-edge.webp"
+                                    : blogPost.title === "GPUs in Edge Computing"
+                                      ? "/blog/ai-GPU-Virtualization.webp"
+                                      : blogPost.title === "How Can Pay-Per-Token Inference Services Reduce AI Costs"
+                                        ? "/blog/token-inference-service.webp"
+                                        : blogPost.title === "RAG Equipping AI with Knowledge Plugins"
+                                          ? "/blog/ai-rag.webp"
+                                          : blogPost.title === "Large Model API Call Optimization Guide"
+                                            ? "/blog/api-optimization.webp"
+                                            : blogPost.title === "How is AI created"
+                                              ? "/blog/blog2.webp"
+                                              : "/blog1.webp"
   }
 
   // 根据博客ID选择不同的布局组件
@@ -3923,6 +4024,14 @@ export default function BlogDetail() {
             <meta key="special-og-title" property="og:title" content="AI Hallucinations：Core Causes and Their Solutions" />
             <meta key="special-og-image" property="og:image" content="https://canopywave.com/blog/ai-hallucinations.webp" />
             <meta key="special-og-description" property="og:description" content="AI models sometimes make mistakes—often referred to as hallucinations. OpenAI's recent research sheds light on why this happens and, more importantly, how to fix it." />
+          </>
+        )}
+        {title === 'the-future-of-ai-lies-in-memory' && (
+          <>
+            <meta key="memory-title" name="title" content="The Future of AI Lies in Memory" />
+            <meta key="memory-description" name="description" content="The future of AI depends not only on larger models but also on smarter memory. While the expansion of model parameters has brought improvements in understanding, true intelligence stems from memory" />
+            <meta key="memory-og-title" property="og:title" content="The Future of AI Lies in Memory" />
+            <meta key="memory-og-description" property="og:description" content="The future of AI depends not only on larger models but also on smarter memory. While the expansion of model parameters has brought improvements in understanding, true intelligence stems from memory" />
           </>
         )}
         {title === 'ai-medical-imaging-analysis' && (

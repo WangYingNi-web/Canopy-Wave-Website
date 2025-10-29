@@ -62,6 +62,14 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 33,
+            title: "The Future of AI Lies in Memory",
+            description: "The future of AI depends not only on larger models but also on smarter memory. While the expansion of model parameters has brought improvements in understanding, true intelligence stems from memory",
+            date: "October 29, 2025",
+            image: "/blog/ai-memory.webp",
+            alttitle: "AI Memory"
+        },
+        {
             id: 32,
             title: "GPU temperature range-From normal operation to  dangerous overheating",
             description: "As workloads increase, GPU temperature management becomes particularly important, as it relates not only to system stability but also directly affects hardware lifespan and performance.",

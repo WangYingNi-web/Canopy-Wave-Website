@@ -87,6 +87,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-water.webp"
                   : blogPost.title === "GPU temperature range-From normal operation to  dangerous overheating"
                   ? "/blog/ai-GPU-temperature.webp"
+                  : blogPost.title === "The Future of AI Lies in Memory"
+                  ? "/blog/ai-memory.webp"
                   : "/blog1.webp"
                   
               }
