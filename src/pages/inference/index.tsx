@@ -356,13 +356,13 @@ export default function InferencePage() {
                         <div className="p-6 md:border-r border-gray-200">
                             <h3 className="text-2xl sm:text-[32px] font-bold text-[#333333] mb-2">Serverless Endpoints</h3>
                             <p className="text-[#999999] sm:text-[18px] max-w-md">
-                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
+                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud.
                             </p>
                         </div>
                         <div className="p-6">
                             <h3 className="text-2xl sm:text-[32px] font-bold text-[#333333] mb-2">Dedicated Endpoints</h3>
                             <p className="text-[#999999] sm:text-[18px] max-w-md">
-                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
+                                Canopy Wave allows you to create on-demand deployments of GPU cluster that are reserved for your own use.
                             </p>
                         </div>
                     </div>
