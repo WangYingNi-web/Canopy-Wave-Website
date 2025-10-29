@@ -146,7 +146,7 @@ export default function InferencePage() {
             {/* Hero Section */}
             <div className="w-full relative bg-[#EDF2E4]">
                 <video
-                    className="w-full h-[calc(100vh-148px)] object-cover mt-20"
+                    className="w-full h-auto object-cover mt-20"
                     autoPlay
                     muted
                     loop
