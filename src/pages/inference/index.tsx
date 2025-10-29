@@ -282,7 +282,7 @@ export default function InferencePage() {
                         <p className="text-[14px] sm:text-[18px] text-[#666666] text-center mb-[40px]">Users can run pre-trained models through simple API calls without managing infrastructure, achieving efficient "pay-as-you-go" inference.</p>
                         <div className="divide-y divide-[#E6E6E6]">
                             {/* FAST RESPONSE */}
-                            <div className="py-10 grid grid-cols-1 md:grid-cols-12 items-start gap-6">
+                            <div className="py-[40px] grid grid-cols-1 md:grid-cols-12 items-start gap-6">
                                 <div className="md:col-span-3">
                                     <h3 className="text-[16px] sm:text-[24px] text-[#333333] uppercase tracking-wide">FAST RESPONSE</h3>
                                 </div>
@@ -298,7 +298,7 @@ export default function InferencePage() {
                                 </div>
                             </div>
                             {/* COST REDUCTION */}
-                            <div className="py-12 grid grid-cols-1 md:grid-cols-12 items-start gap-6">
+                            <div className="py-[40px] grid grid-cols-1 md:grid-cols-12 items-start gap-6">
                                 <div className="md:col-span-3">
                                     <h3 className="text-[16px] sm:text-[24px] text-[#333333] uppercase tracking-wide">COST REDUCTION</h3>
                                 </div>
@@ -314,7 +314,7 @@ export default function InferencePage() {
                                 </div>
                             </div>
                             {/* DATA PRIVACY */}
-                            <div className="py-10 grid grid-cols-1 md:grid-cols-12 items-start gap-6">
+                            <div className="py-[40px] grid grid-cols-1 md:grid-cols-12 items-start gap-6">
                                 <div className="md:col-span-3">
                                     <h3 className="text-[16px] sm:text-[24px] text-[#333333] uppercase tracking-wide">DATA PRIVACY</h3>
                                 </div>
