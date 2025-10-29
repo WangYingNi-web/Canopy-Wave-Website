@@ -62,7 +62,15 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
-            id: 30,
+            id: 32,
+            title: "GPU temperature range-From normal operation to  dangerous overheating",
+            description: "As workloads increase, GPU temperature management becomes particularly important, as it relates not only to system stability but also directly affects hardware lifespan and performance.",
+            date: "October 28, 2025",
+            image: "/blog/ai-GPU-temperature.webp",
+            alttitle: "GPU temperature range"
+        },
+        {
+            id: 31,
             title: "How Much Water Does AI Use",
             description: "small town's weekly water usage. According to the latest reports, water usage in AI-related data centers is growing at an astonishing rate, even threatening drinking water supplies.",
             date: "October 13, 2025",
