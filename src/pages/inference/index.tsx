@@ -146,13 +146,13 @@ export default function InferencePage() {
             {/* Hero Section */}
             <div className="w-full relative bg-[#EDF2E4]">
                 <video
-                    className="w-full h-[calc(100vh-148px)] object-cover mt-20"
+                    className="w-full h-[530px] object-cover mt-20"
                     autoPlay
                     muted
                     loop
                     playsInline
                 >
-                    <source src="/inference/inference.mp4" type="video/mp4" />
+                    <source src="/inference/inference-banner.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-[148px]">
@@ -173,7 +173,7 @@ export default function InferencePage() {
                             <p className="text-[18px] text-[#333333] leading-[24px] mb-[28px]">Our Inferencing as a Service (InfaaS) achieves AI Inference with Canopy Wave api</p>
                             <div className="flex justify-left">
                                 <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="hidden md:block" aria-label="Open Canopy Wave Cloud">
-                                    <div className="text-[24px] bg-[#80B224] hover:bg-[#6a9620] text-white py-[8px] px-[28px] rounded-full transition-colors duration-300">Start building</div>
+                                    <div className="text-[16px] bg-[#80B224] hover:bg-[#6a9620] text-white py-[8px] px-[28px] rounded-full transition-colors duration-300">Start building</div>
                                 </a>
                             </div>
                         </SlideUp>
@@ -182,7 +182,7 @@ export default function InferencePage() {
             </div>
 
             {/* Model Library Section */}
-            <div className="py-12 sm:py-20">
+            <div className="bg-[#F9F9F9] py-12 sm:py-20">
                 <SlideUp>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-4xl sm:text-[48px] leading-[1.2] font-bold text-center text-[#333333] mb-[40px]">Model Library</h2>
@@ -211,7 +211,7 @@ export default function InferencePage() {
                                     ))}
                             </div>
                             <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="hidden md:block" aria-label="Open Canopy Wave Cloud">
-                                <div className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-[24px] transition-colors duration-300">Try Now</div>
+                                <div className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-[16px] transition-colors duration-300">Try Now</div>
                             </a>
                         </div>
                         {/* Grid */}
@@ -266,7 +266,7 @@ export default function InferencePage() {
                         </div>
                         <div className="flex justify-center">
                             <Link href="/ai-model">
-                                <div className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-[24px] transition-colors duration-300">Explore All Models</div>
+                                <div className="bg-[#80B224] hover:bg-[#6a9620] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 lg:py-3 rounded-full text-sm sm:text-[16px] transition-colors duration-300">Explore All Models</div>
                             </Link>
                         </div>
                     </div>
@@ -460,7 +460,7 @@ export default function InferencePage() {
                                 Try InfaaS and see how inference becomes the simplest, most powerful part of your AI workflow.
                             </p>
                             <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="inline-block">
-                                <button className="text-white bg-[#80B224] hover:bg-[#6a9620] px-6 py-2.5 sm:px-[28px] sm:py-[8px] rounded-full text-[16px] sm:text-[18px] transition-colors">
+                                <button className="text-white bg-[#80B224] hover:bg-[#6a9620] px-6 py-2.5 sm:px-[28px] sm:py-[8px] rounded-full text-[16px] transition-colors">
                                     Sign up
                                 </button>
                             </a>
