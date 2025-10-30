@@ -3974,9 +3974,283 @@ export default function BlogDetail() {
           title: 'NVIDIA vs AMD: Performance and Architecture Insights',
           description: 'A Comparative Analysis of Two GPU Giants',
 
-          sections: [
-            {},
-          ],
+sections: [
+      {
+        title: '',
+        content: [
+          'In today’s world, where artificial intelligence (AI) and machine learning (ML) drive global innovation, GPUs are no longer merely graphics processors—they have become the core engines of AI computing. With the rapid growth of large models, generative AI, and data center compute demands, enterprises and developers face increasing challenges and choices when selecting GPUs. Among the many vendors, NVIDIA vs AMD products, performance, and ecosystem strategies are the most closely watched, directly affecting AI project training efficiency, inference speed, and deployment flexibility.',
+          'This article provides a systematic analysis of NVIDIA vs AMD across four dimensions: market landscape, performance comparison, software ecosystem, and real-world enterprise cases, giving readers a comprehensive reference perspective.'
+        ]
+      },
+      {
+        title: '1. NVIDIA vs AMD: Market and Product Overview',
+        content: [
+          'According to official and industry data, in 2025, NVIDIA still holds over 80% of the global AI GPU market, with its H100 and H200 series demonstrating outstanding performance in high-performance computing and generative AI scenarios. Meanwhile, AMD has been steadily advancing over the past two years. Its next-generation Instinct MI300X, based on the CDNA 3 architecture, features up to 192 GB of HBM3 memory and 5.3 TB/s bandwidth, showing significant improvements in both performance and energy efficiency.',
+          'Overall, the differences in NVIDIA vs AMD market positioning are evident: NVIDIA focuses on a tightly integrated hardware and software ecosystem (such as CUDA and TensorRT) to serve the high-end AI market, while AMD leverages an open architecture (ROCm) and cost-effective solutions, gradually gaining traction among research institutions and small-to-medium AI enterprises.',
+          'Summary: These market positioning differences not only reflect their respective product strategies but also lay the foundation for the subsequent comparisons of performance, software ecosystem, and real-world applications.'
+        ]
+      },
+      {
+        title: '2. Performance Comparison',
+        content: [
+          'Having understood the market landscape and product positioning of NVIDIA and AMD, the next focus is on their performance differences. By comparing the key hardware specifications, computational capabilities, and memory bandwidth of H100 and MI300X, we can gain a clearer understanding of each GPU’s strengths in training large models or handling high-intensity AI workloads.',
+          React.createElement('p', { key: 'source-note' }, 'H100 vs MI300X：'),
+          React.createElement('table', {
+            style: {
+              width: '100%',
+              maxWidth: '100%',
+              tableLayout: 'fixed',
+              borderCollapse: 'collapse',
+              marginTop: '20px',
+              marginBottom: '20px',
+              border: '1px solid #ddd',
+              overflowWrap: 'break-word'
+            }
+          }, [
+            React.createElement('thead', { key: 'thead' }, 
+              React.createElement('tr', {}, [
+                React.createElement('th', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '10px',
+                    verticalAlign: 'center',
+                    textAlign: 'center',
+                    backgroundColor: '#f2f2f2'
+                  }
+                }, 'Feature'),
+                React.createElement('th', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center',
+                    backgroundColor: '#f2f2f2'
+                  }
+                }, 'NVIDIA H100'),
+                React.createElement('th', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center',
+                    backgroundColor: '#f2f2f2'
+                  }
+                }, 'AMD MI300X')
+              ])
+            ),
+            React.createElement('tbody', { key: 'tbody' }, [
+              React.createElement('tr', {}, [
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Architecture'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Hopper'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'CDNA 3')
+              ]),
+              React.createElement('tr', {}, [
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Memory'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, '80 GB HBM3'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, '192 GB HBM3')
+              ]),
+              React.createElement('tr', {}, [
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Bandwidth'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, '3.35 TB/s'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, '5.3 TB/s')
+              ]),
+              React.createElement('tr', {}, [
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Precision'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'FP8 / FP16 / BF16 / TF32'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'FP8 / FP16 / BF16')
+              ]),
+              React.createElement('tr', {}, [
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Ecosystem'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'CUDA, cuDNN, TensorRT'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'ROCm, PyTorch, OpenAI Triton')
+              ]),
+              React.createElement('tr', {}, [
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Use Case'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Large-scale training'),
+                React.createElement('td', {
+                  style: {
+                    border: '1px solid #ddd',
+                    padding: '12px',
+                    verticalAlign: 'center',
+                    textAlign: 'center'
+                  }
+                }, 'Inference & mid-scale training')
+              ])
+            ])
+          ]),
+          React.createElement('p', { key: 'source-note-2025', className: 'text-sm text-gray-700' }, 'Source: Official whitepapers and industry benchmarks (as of October 2025).'),
+          'Key Observations:',
+          'NVIDIA H100, based on the Hopper architecture, is optimized for AI training and inference. It delivers stable performance and higher throughput for large-scale model training (e.g., GPT, Stable Diffusion, Claude).',
+          'AMD MI300X, with its larger memory capacity, is better suited for high-throughput inference tasks and HPC + AI hybrid computing environments, maintaining efficiency in multi-node clusters.'
+        ]
+      },
+      {
+        title: '3. Software Ecosystem: CUDA vs ROCm',
+        content: [
+          'In the NVIDIA vs AMD competition, the software stack is often the deciding factor.',
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• '), ' NVIDIA CUDA provides unmatched maturity, with full support for mainstream AI frameworks and deployment tools.'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• '),  ' AMD ROCm offers openness and flexibility but still trails in ecosystem completeness and third-party tool integration.'),
+          'For organizations already optimized for CUDA, NVIDIA remains the safer and faster path. For those seeking open standards and cost efficiency, AMD is a strong alternative.',
+          <img key="ai-NVIDIA-vs-AMD-img" src="/blog/ai-NVIDIA-vs-AMD-img.webp" alt="ai-NVIDIA-vs-AMD-img" className="max-w-[43.75rem] w-full h-auto my-8 rounded-lg" />,
+        ]
+      },
+      {
+        title: '4. Real-World Case Studies: Achieving Impact with the Right GPU',
+        content: [
+          ' Case 1: Large Generative AI Company',
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Configuration: 64-node H100 GPU cluster, 8 GPUs per node'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Result: Training speed improved by ~2.5× compared to the previous A100 generation, with support for distributed large-model training'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Business Impact: Faster iteration of model versions, accelerated product launch, and multi-language generative AI support'),
+          ' Case 2: High-Performance Computing Lab',
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Configuration: 32-node MI300 GPU cluster, 4 GPUs per node'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Result: Energy efficiency improved by ~20% for large-scale simulation and AI inference tasks, with excellent multi-task parallel performance'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Business Impact: Supports both scientific research projects and industrial simulations, while reducing overall data center energy consumption'),
+          ' Case 3: Small-to-Medium AI Startup',
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Configuration: 8-node MI400 GPU cluster, 2 GPUs per node'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Result: Maintained low latency during peak user requests while keeping power consumption within budget'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' Business Impact: Rapid deployment of AI inference services at lower cost, ensuring reliable inference response times')
+        ]
+      },
+      {
+        title: '5. Conclusion: No Absolute Winner — But the Right Partner Matters',
+        content: [
+          'By 2025, the NVIDIA vs AMD race is no longer just about performance numbers. It’s a battle of ecosystems, deployment flexibility, and total cost of ownership.',
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' If you need ultimate training performance and rely on a mature software ecosystem, NVIDIA H100/H200 remains the safest choice.'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), ' If you prioritize cost efficiency, open-source flexibility, or balanced inference workloads, the AMD MI300X offers a compelling alternative.'),
+          'However, whichever GPU path you choose, success ultimately depends on whether your infrastructure partner can turn raw compute power into real business impact. That’s where Canopy Wave comes in.',
+          React.createElement('span', { key: 'text-with-link', style: { whitespace: 'nowrap' } }, [
+              'As a next-generation AI Infrastructure-as-a-Service (GPU Cluster & AI Stack) provider, Canopy Wave delivers enterprise-grade GPU clusters — including NVIDIA H100 and H200 — with on-demand, hourly pricing that lowers the barrier to entry for AI innovation. Visit ',
+              React.createElement('a', {
+                href: 'https://canopywave.com',
+                key: 'canopywave.com',
+                style: { display: 'inline', textDecoration: 'underline' }
+              }, 'canopywave.com'),
+              ' to learn more.'
+          ]), 
+          'Canopy Wave helps startups and enterprises deploy faster, scale securely, and protect data privacy through dedicated GPU cloud environments and end-to-end lifecycle management. It effectively bridges the gap from GPU selection to AI deployment, transforming your choice between NVIDIA and AMD into real-world computing power.',
+          'Ultimately, choosing between NVIDIA and AMD is a critical decision, but the true competitive edge comes from pairing the right hardware with a trusted infrastructure partner like Canopy Wave, ensuring that every watt of GPU power translates into measurable productivity and growth.'
+        ]
+      }
+    ],
         }
 
       case 'ai-neural-networks':
