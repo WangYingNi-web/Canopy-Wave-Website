@@ -109,12 +109,12 @@ export default function SolutionsPage() {
 
     // Validate required fields before submitting
     const newErrors = {
-      message: validateField('message', formData.message),
+      message: '',
       name: validateField('name', formData.name),
       email: validateField('email', formData.email),
       lastName: validateField('lastName', formData.lastName),
       company: validateField('company', formData.company),
-      marketing: formData.marketing ? '' : 'Please complete this required field.'
+      marketing: ''
     };
 
     if (Object.values(newErrors).some(err => err)) {
@@ -677,7 +677,7 @@ export default function SolutionsPage() {
                   <div>
                     <div className="flex justify-between items-center mb-1 sm:mb-2">
                       <label htmlFor="message" className="text-sm font-medium text-[#333333]">
-                        &nbsp;What&apos;s  Your Project Interest, or How We Can Best Help You?<span className="text-red-500">*</span>
+                        &nbsp;What&apos;s  Your Project Interest, or How We Can Best Help You?
                       </label>
                       <div className="text-xs text-gray-400">
                         0/5000
@@ -689,7 +689,7 @@ export default function SolutionsPage() {
                       rows={5}
                       value={formData.message}
                       onChange={handleInputChange}
-                      onBlur={handleBlur}
+                      // onBlur={handleBlur}
                       className={`w-full px-4 py-3 border border-gray-300 rounded-xl focus:border-transparent resize-none bg-white placeholder:text-sm ${errors.message ? 'border-red-500' : ''}`}
                       placeholder="Briefly outline your interest or project requirements, such as project application scenario, involved devices, scales, budget, and other information."
                     />
@@ -705,11 +705,11 @@ export default function SolutionsPage() {
                       name="marketing"
                       checked={formData.marketing}
                       onChange={handleInputChange}
-                      onBlur={handleBlur}
+                      // onBlur={handleBlur}
                       className={`mt-1 h-4 w-4 text-[#8CC63F] focus:ring-[#8CC63F] border-gray-300 rounded ${errors.marketing ? 'border-red-500' : ''}`}
                     />
                     <label htmlFor="marketing" className="text-sm text-[#666666] leading-5">
-                      I agree to receive marketing communications from Canopy Wave.<span className="text-red-500">*</span>
+                      I agree to receive marketing communications from Canopy Wave.
                     </label>
                     {errors.marketing && (
                       <span className="text-red-500 text-xs mt-1">{errors.marketing}</span>
