@@ -69,14 +69,14 @@ export default function Newsroom() {
             image: "/blog/ai-neural-networks.webp",
             alttitle: "AI Neural Networks"
         },
-        {
-            id: 35,
-            title: "NVIDIA vs AMD: Performance and Architecture Insights",
-            description: "This article provides a systematic analysis of NVIDIA vs AMD across four dimensions: market landscape, performance comparison, software ecosystem, and real-world enterprise cases, giving readers a comprehensive reference perspective.",
-            date: "October 31, 2025",
-            image: "/blog/ai-NVIDIA-vs-AMD.webp",
-            alttitle: "NVIDIA vs AMD"
-        },
+        // {
+        //     id: 35,
+        //     title: "NVIDIA vs AMD: Performance and Architecture Insights",
+        //     description: "This article provides a systematic analysis of NVIDIA vs AMD across four dimensions: market landscape, performance comparison, software ecosystem, and real-world enterprise cases, giving readers a comprehensive reference perspective.",
+        //     date: "October 31, 2025",
+        //     image: "/blog/ai-NVIDIA-vs-AMD.webp",
+        //     alttitle: "NVIDIA vs AMD"
+        // },
         {
             id: 34,
             title: "Is AI Always Right?",
