@@ -106,12 +106,23 @@ export default function Footer() {
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-start gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-8 lg:gap-x-16 lg:gap-y-0">
                             <div className="space-y-8 min-w-[120px]">
                                 <div>
-                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Products</h3>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Model Platform</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/compute-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Compute Services</IwsLink></li>
-                                        <li><IwsLink href="/storage-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Storage Services</IwsLink></li>
-                                        <li><IwsLink href="/networking-services" className="text-gray-500 hover:text-[#36496E] hover:underline">Networking Services</IwsLink></li>
-                                        <li><IwsLink href="/platform" className="text-gray-500 hover:text-[#36496E] hover:underline">Platform</IwsLink></li>
+                                        <li><IwsLink href="/ai-model" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Model Library</IwsLink></li>
+                                        <li><IwsLink href="/inference" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Serverless Inference</IwsLink></li>
+                                        <li><IwsLink href="https://chat.canopywave.io/" className="text-[#6B7280] hover:text-[#36496E] hover:underline" target="_blank" rel="noopener noreferrer">Canopy Wave Chat</IwsLink></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="space-y-8 max-w-[140px]">
+                                <div>
+                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">GPU Cloud</h3>
+                                    <ul className="space-y-3 text-xs">
+                                        <li><IwsLink href="/compute-services" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Compute Services</IwsLink></li>
+                                        <li><IwsLink href="/storage-services" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Storage Services</IwsLink></li>
+                                        <li><IwsLink href="/networking-services" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Networking Services</IwsLink></li>
+                                        <li><IwsLink href="/platform" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Platform</IwsLink></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -119,44 +130,32 @@ export default function Footer() {
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm text-[#333333]">Solutions</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/model-training" className="text-gray-500 hover:text-[#36496E] hover:underline">AI Model Training</IwsLink></li>
-                                        <li><IwsLink href="/inferences" className="text-gray-500 hover:text-[#36496E] hover:underline">Inference</IwsLink></li>
-                                        <li><IwsLink href="/rendering" className="text-gray-500 hover:text-[#36496E] hover:underline">Rendering</IwsLink></li>
-                                        <li><IwsLink href="/private-cloud" className="text-gray-500 hover:text-[#36496E] hover:underline">Private Cloud and GPUs Deployment</IwsLink></li>
-                                        <li><IwsLink href="/networking-hardware" className="text-gray-500 hover:text-[#36496E] hover:underline">Networking Hardware Solution</IwsLink></li>
-                                        <li><IwsLink href="/networking-hardware/gb200-with-rocev2" className="text-gray-500 hover:text-[#36496E] hover:underline">GB200 Cluster with RoCEv2 Network Solution</IwsLink></li>
+                                        <li><IwsLink href="/model-training" className="text-[#6B7280] hover:text-[#36496E] hover:underline">AI Model Training</IwsLink></li>
+                                        {/* <li><IwsLink href="/inferences" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Inference</IwsLink></li>
+                                        <li><IwsLink href="/rendering" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Rendering</IwsLink></li> */}
+                                        <li><IwsLink href="/private-cloud" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Private Cloud and GPUs Deployment</IwsLink></li>
+                                        <li><IwsLink href="/networking-hardware" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Networking Hardware Solution</IwsLink></li>
+                                        <li><IwsLink href="/networking-hardware/gb200-with-rocev2" className="text-[#6B7280] hover:text-[#36496E] hover:underline">GB200 Cluster with RoCEv2 Network Solution</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="space-y-8 max-w-[140px]">
+                            
+                            <div className="space-y-8 min-w-[130px]">
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm text-[#333333]">Pricing</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/pricing#GB200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA GB200 NVL72</IwsLink></li>
-                                        <li><IwsLink href="/pricing#B200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX B200</IwsLink></li>
-                                        <li><IwsLink href="/pricing#H100" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX H100</IwsLink></li>
-                                        <li><IwsLink href="/pricing#H200" className="text-gray-500 hover:text-[#36496E] hover:underline">NVIDIA HGX H200</IwsLink></li>
-                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-[#36496E] hover:underline">Network Shared Storage</IwsLink></li>
-                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-[#36496E] hover:underline">Object Storage</IwsLink></li>
-                                        <li><IwsLink href="/pricing#other" className="text-gray-500 hover:text-[#36496E] hover:underline">Additional Public IP Address</IwsLink></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="space-y-8 min-w-[130px]">
-                                <div>
-                                    <h3 className="font-semibold mb-4 text-sm text-[#333333]">Data Center</h3>
-                                    <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/data-center/iceland" className="text-gray-500 hover:text-[#36496E] hover:underline">Our Data Center</IwsLink></li>
-                                        <li><IwsLink href="/data-center/iceland#future-locations" className="text-gray-500 hover:text-[#36496E] hover:underline">Future locations</IwsLink></li>
+                                        <li><IwsLink href="/pricing" className="text-[#6B7280] hover:text-[#36496E] hover:underline">GPUs Pricing</IwsLink></li>
+                                        <li><IwsLink href="/pricing#other" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Storage Pricing</IwsLink></li>
+                                        
                                     </ul>
                                 </div>
                                 <div>
                                     <h3 className="font-semibold mb-2 text-sm text-[#333333]">Resources</h3>
                                     <ul className="space-y-2 text-xs">
-                                        {/* <li><IwsLink href="/resources/cloud-api" className="text-gray-500 hover:text-gray-700">Manage Cloud Via API</IwsLink></li> */}
-                                        <li><IwsLink href="/resources/tutorials" className="text-gray-500 hover:text-[#36496E] hover:underline">Tutorials</IwsLink></li>
-                                        <li><IwsLink href="/resources/case-study" className="text-gray-500 hover:text-[#36496E] hover:underline">Case Studies</IwsLink></li>
-                                        <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-gray-500 hover:text-[#36496E] hover:underline">Docs</IwsLink></li>
+                                        {/* <li><IwsLink href="/resources/cloud-api" className="text-[#6B7280] hover:text-gray-700">Manage Cloud Via API</IwsLink></li> */}
+                                        <li><IwsLink href="/resources/tutorials" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Tutorials</IwsLink></li>
+                                        <li><IwsLink href="/resources/case-study" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Case Studies</IwsLink></li>
+                                        <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Docs</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -164,9 +163,10 @@ export default function Footer() {
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm text-[#333333]">About</h3>
                                     <ul className="space-y-3 text-xs">
-                                        <li><IwsLink href="/about" className="text-gray-500 hover:text-[#36496E] hover:underline">About Us</IwsLink></li>
-                                        <li><IwsLink href="/about/careers" className="text-gray-500 hover:text-[#36496E] hover:underline">Careers</IwsLink></li>
-                                        <li><IwsLink href="/about/newsroom" className="text-gray-500 hover:text-[#36496E] hover:underline">Newsroom</IwsLink></li>
+                                        <li><IwsLink href="/about" className="text-[#6B7280] hover:text-[#36496E] hover:underline">About Us</IwsLink></li>
+                                        <li><IwsLink href="/about/careers" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Careers</IwsLink></li>
+                                        <li><IwsLink href="/data-center/iceland" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Data Center</IwsLink></li>
+                                        <li><IwsLink href="/about/newsroom" className="text-[#6B7280] hover:text-[#36496E] hover:underline">Newsroom</IwsLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -221,49 +221,88 @@ export default function Footer() {
                         </div>
                         
                         <div className="flex items-center space-x-4 mt-6">
-                            {/* <button
-                                onClick={handleLinkedInShare}
-                                className="hover:opacity-80"
-                                aria-label="Share on LinkedIn"
-                            >
+                            {/* LinkedIn */}
+                            <div className="group flex flex-col items-center">
+                                <IwsLink href="https://www.linkedin.com/company/canopywave/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        src="/footer/linkedin.svg"
+                                        alt="LinkedIn"
+                                        width={32}
+                                        height={32}
+                                    />
+                                </IwsLink>
                                 <Image
-                                    src="/footer/linkedin.svg"
-                                    alt="LinkedIn"
-                                    width={36}
-                                    height={36}
+                                    src="/footer/footer_img_1linkedins.png"
+                                    alt="LinkedIn Preview"
+                                    width={100}
+                                    height={100}
+                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
                                 />
-                            </button> */}
-                            <IwsLink href="https://www.linkedin.com/company/canopywave/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                            </div>
+
+                            {/* X (Twitter) */}
+                            <div className="group flex flex-col items-center">
+                                <IwsLink href="https://x.com/canopywave_cw?s=21" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        src="/footer/twitter.svg"
+                                        alt="Twitter"
+                                        width={32}
+                                        height={32}
+                                    />
+                                </IwsLink>
                                 <Image
-                                    src="/footer/linkedin.svg"
-                                    alt="LinkedIn"
-                                    width={32}
-                                    height={32}
+                                    src="/footer/footer_img_2x.png"
+                                    alt="X Preview"
+                                    width={60}
+                                    height={60}
+                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
                                 />
-                            </IwsLink>
-                            <IwsLink href="https://x.com/canopywave_cw?s=21" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                            </div>
+
+                            {/* YouTube */}
+                            <div className="group flex flex-col items-center">
+                                <IwsLink href="https://www.youtube.com/@CanopyWave-CW" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        src="/footer/youtube.svg"
+                                        alt="Youtube"
+                                        width={32}
+                                        height={32}
+                                    />
+                                </IwsLink>
                                 <Image
-                                    src="/footer/twitter.svg"
-                                    alt="Twitter"
-                                    width={32}
-                                    height={32}
+                                    src="/footer/footer_img_3youtube.png"
+                                    alt="YouTube Preview"
+                                    width={100}
+                                    height={91000}
+                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
                                 />
-                            </IwsLink>
-                            <IwsLink href="https://www.youtube.com/@CanopyWave-CW" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                            </div>
+
+                            {/* Discord */}
+                            <div className="group flex flex-col items-center">
+                                <IwsLink href="/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
+                                    <Image
+                                        src="/footer/ic_Discord.png"
+                                        alt="Discord"
+                                        width={32}
+                                        height={32}
+                                    />
+                                </IwsLink>
                                 <Image
-                                    src="/footer/youtube.svg"
-                                    alt="Youtube"
-                                    width={32}
-                                    height={32}
+                                    src="/footer/footer_img_4discord.png"
+                                    alt="Discord Preview"
+                                    width={100}
+                                    height={100}
+                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
                                 />
-                            </IwsLink>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="border-t pt-8 mt-8 sm:pt-10 sm:mt-12">
                     <div className="flex flex-col sm:flex-row justify-between items-center">
-                        <p className="text-xs text-gray-500 mb-4 sm:mb-0">© 2025 All rights reserved</p>
+                        <p className="text-xs text-[#6B7280] mb-4 sm:mb-0">© 2025 All rights reserved</p>
                         <div className="flex items-center space-x-4 sm:space-x-6">
                             <IwsLink href="/terms" className="text-xs text-[#80B224] hover:text-[#6a9420]">Terms of Service</IwsLink>
                             <IwsLink href="/privacy" className="text-xs text-[#80B224] hover:text-[#6a9420]">Privacy Policy</IwsLink>
