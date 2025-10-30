@@ -198,7 +198,7 @@ export default function SolutionsPage() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
             <SlideUp>
               <div className="flex items-center gap-2 mb-3">
                 <img className="w-8 cursor-pointer hover:scale-110 transition-transform duration-200" src="/ai-model-training/banner_ic_aimodeltraining.png" alt="" />
@@ -222,34 +222,39 @@ export default function SolutionsPage() {
 
       {/* AI Model training*/}
       <div className='bg-[#F9F9F9]'>
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-12">
+        <SlideUp>
+          <h2 className="text-center text-5xl sm:text-5xl font-bold pt-20 text-[#333333]">
+            Benefits & Performance
+          </h2>
+        </SlideUp>
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="w-full mx-auto mt-[40px] px-4 bg-[#FFF] rounded-2xl" >
-            <div className="flex items-center justify-center p-5 pt-10 pb-8">
+            <div className="flex items-center justify-center p-5 pt-10 pb-10 text-[#333]">
               <div className="text-center flex flex-col items-center mt-10 mb-10">
                 <img src="/ai-model-training/ic_poweredby.png" className="w-12" alt="" />
-                <p className="font-bold text-2xl mt-7">POWERED BY</p>
-                <p className="font-bold text-2xl mb-7">PREMIUM GPU CLUSTERS</p>
+                <p className="font-bold text-2xl mt-6">POWERED BY</p>
+                <p className="font-bold text-2xl mb-6">PREMIUM GPU CLUSTERS</p>
                 <p className="text-lg">Canopy Wave features &nbsp;NVIDIA&apos;s latest generation GPU clusters, fully covering the GB200, B200, H200, and H100 .</p>
               </div>
               <div className="w-px h-[268px] bg-[#80B224] m-4"></div>
               <div className="text-center flex flex-col items-center">
                 <img src="/ai-model-training/ic_nearbaremetal.png" className="w-12" alt="" />
-                <p className="font-bold text-2xl mt-7">NEAR-BARE-METAL</p>
-                <p className="font-bold text-2xl mb-7">PERFORMANCE EXPERIENCE</p>
+                <p className="font-bold text-2xl mt-6">NEAR-BARE-METAL</p>
+                <p className="font-bold text-2xl mb-6">PERFORMANCE EXPERIENCE</p>
                 <p className="text-lg">A dedicated, optimized virtual machine architecture minimizes performance overhead to near zero.</p>
               </div>
               <div className="w-px h-[268px] bg-[#80B224] m-4"></div>
               <div className="text-center flex flex-col items-center">
                 <img src="/ai-model-training/ic_flexible.png" className="w-12" alt="" />
-                <p className="font-bold text-2xl mt-7">FLEXIBLE</p>
-                <p className="font-bold text-2xl mb-7">ON-DEMAND USAGE</p>
+                <p className="font-bold text-2xl mt-6">FLEXIBLE</p>
+                <p className="font-bold text-2xl mb-6">ON-DEMAND USAGE</p>
                 <p className="text-lg">Nodes are available instantly, no waiting required; billing is precise to the minute based on actual usage time.</p>
               </div>
             </div>
           </div>
 
         </div>
-        <div className="max-w-7xl mx-auto pb-24 pt-4">
+        <div className="max-w-7xl mx-auto pb-20 pt-10">
           <div className="flex items-center justify-center gap-60">
             <div className="text-center flex flex-col items-center space-y-3">
               <p className="text-5xl font-bold text-[#333]">99.99%</p>
@@ -268,11 +273,11 @@ export default function SolutionsPage() {
       </div>
 
       {/* State-of-the-Art AI Infrastructure */}
-      <div className="bg-[#F1EFED]">
+      <div className="bg-[#F1EFED] text-[#333333]">
         <SlideUp>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
             <SlideUp>
-              <h2 className="text-center text-5xl sm:text-5xl font-bold mb-14 text-[#333333]">
+              <h2 className="text-center text-5xl sm:text-5xl font-bold mb-10 text-[#333333]">
                 State-of-the-art AI Infrastructure
               </h2>
             </SlideUp>
@@ -342,7 +347,7 @@ export default function SolutionsPage() {
                   })}
                 </div>
               </div>
-              <div className='lg:col-span-5 space-y-5 text-2xl font-bold text-[#333]'>
+              <div className='lg:col-span-5 space-y-6 text-2xl font-bold text-[#333]'>
                 <p>Delivering unmatched computing power for <br /> AI training</p>
                 <p className='text-lg font-normal'>Canopy Wave provides high-performance GPU clusters powered by the latest NVIDIA GPUs, including GB200, B200, H200, and H100.</p>
               </div>
@@ -350,9 +355,9 @@ export default function SolutionsPage() {
           </div>
         </SlideUp>
         <SlideUp>
-          <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 pt-10">
             <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-              <div className='lg:col-span-1 space-y-5'>
+              <div className='lg:col-span-1 space-y-6'>
                 <p className='text-2xl font-bold text-[#333]'>High-Performance Networking for AI Workloads</p>
                 <p className='text-lg text-[#333]'>
                   <span className='text-[#80B224]'>Maximize your AI training performance with our AI-optimized RDMA networking (utilizing InfiniBand and RoCEv2 technologies). </span>
@@ -366,12 +371,12 @@ export default function SolutionsPage() {
           </div>
         </SlideUp>
         <SlideUp>
-          <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-10">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 pt-10">
             <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 items-center">
               <div className='lg:col-span-1'>
                 <img src="/ai-model-training/state_img_aiready.png" alt="" />
               </div>
-              <div className='lg:col-span-1 space-y-5'>
+              <div className='lg:col-span-1 space-y-6'>
                 <p className='text-2xl font-bold text-[#333]'>AI-Ready Storage Architecture</p>
                 <p className='text-lg text-[#333]'>
                   <span className='text-[#80B224]'>Our flexible storage infrastructure is designed to support diverse AI workloads. Choose between local storage, shared storage, or object storage based on your performance, scalability, and data access requirements. </span>
@@ -382,13 +387,13 @@ export default function SolutionsPage() {
           </div>
         </SlideUp>
         <SlideUp>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40">
             <SlideUp>
-              <h2 className="text-center text-5xl sm:text-5xl font-bold mb-6 text-[#333333]">
+              <h2 className="text-center text-5xl sm:text-5xl font-bold">
                 Virtual Machines <br /> with Near-Bare-Metal Performance
               </h2>
             </SlideUp>
-            <div className="flex justify-around mt-24">
+            <div className="flex justify-around mt-10">
               <div className="flex flex-col items-start space-y-6">
                 <img src="/ai-model-training/virtual_ic_rapid.png" className="w-16" alt="" />
                 <p className="font-bold text-2xl mt-7">Rapid Boot</p>
@@ -409,10 +414,10 @@ export default function SolutionsPage() {
         </SlideUp>
 
         <SlideUp>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-20 text-center">
             <SlideUp>
               <div className='space-y-5'>
-                <h2 className="text-center text-5xl sm:text-5xl font-bold mb-6 text-[#333333]">
+                <h2 className="text-center text-5xl sm:text-5xl font-bold mb-10">
                   On-demand Flexibility<br />and Per-minute Billing
                 </h2>
 
@@ -427,7 +432,7 @@ export default function SolutionsPage() {
       <div className="bg-[#F9F9F9] py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
-            <h2 className="text-3xl sm:text-[48px] font-black text-center mb-[40px]">Operation & Support</h2>
+            <h2 className="text-3xl sm:text-[48px] text-[#333] font-black text-center mb-[40px]">Operation & Support</h2>
           </SlideUp>
 
           {/* Intelligent End-to-End Monitoring */}
