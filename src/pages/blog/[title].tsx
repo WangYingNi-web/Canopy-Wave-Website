@@ -4012,12 +4012,12 @@ sections: [
                 React.createElement('th', {
                   style: {
                     border: '1px solid #ddd',
-                    padding: '12px',
+                    padding: '10px',
                     verticalAlign: 'center',
                     textAlign: 'center',
                     backgroundColor: '#f2f2f2'
                   }
-                }, 'Specification'),
+                }, 'Feature'),
                 React.createElement('th', {
                   style: {
                     border: '1px solid #ddd',
@@ -4081,7 +4081,7 @@ sections: [
                     verticalAlign: 'center',
                     textAlign: 'center'
                   }
-                }, 'Up to 80 GB HBM3'),
+                }, '80 GB HBM3'),
                 React.createElement('td', {
                   style: {
                     border: '1px solid #ddd',
@@ -4089,7 +4089,7 @@ sections: [
                     verticalAlign: 'center',
                     textAlign: 'center'
                   }
-                }, 'Up to 192 GB HBM3')
+                }, '192 GB HBM3')
               ]),
               React.createElement('tr', {}, [
                 React.createElement('td', {
@@ -4107,7 +4107,7 @@ sections: [
                     verticalAlign: 'center',
                     textAlign: 'center'
                   }
-                }, 'Up to 3.35 TB/s'),
+                }, '3.35 TB/s'),
                 React.createElement('td', {
                   style: {
                     border: '1px solid #ddd',
@@ -4207,9 +4207,10 @@ sections: [
         title: '3. Software Ecosystem: CUDA vs ROCm',
         content: [
           'In the NVIDIA vs AMD competition, the software stack is often the deciding factor.',
-          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'), 'NVIDIA CUDA provides unmatched maturity, with full support for mainstream AI frameworks and deployment tools.'),
-          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '•'),  'AMD ROCm offers openness and flexibility but still trails in ecosystem completeness and third-party tool integration.'),
-          'For organizations already optimized for CUDA, NVIDIA remains the safer and faster path. For those seeking open standards and cost efficiency, AMD is a strong alternative.'
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• '), ' NVIDIA CUDA provides unmatched maturity, with full support for mainstream AI frameworks and deployment tools.'),
+          React.createElement(React.Fragment, {}, React.createElement('strong', {}, '• '),  ' AMD ROCm offers openness and flexibility but still trails in ecosystem completeness and third-party tool integration.'),
+          'For organizations already optimized for CUDA, NVIDIA remains the safer and faster path. For those seeking open standards and cost efficiency, AMD is a strong alternative.',
+          <img key="ai-NVIDIA-vs-AMD-img" src="/blog/ai-NVIDIA-vs-AMD-img.webp" alt="ai-NVIDIA-vs-AMD-img" className="max-w-[43.75rem] w-full h-auto my-8 rounded-lg" />,
         ]
       },
       {
