@@ -93,6 +93,8 @@ const BlogLayout1: React.FC<BlogLayout1Props> = ({ blogPost }) => {
                   ? "/blog/ai-NVIDIA-vs-AMD.webp"
                   : blogPost.title === "AI Neural Networks"
                   ? "/blog/ai-neural-networks.webp"
+                  : blogPost.title === "The Future of AI Lies in Memory"
+                  ? "/blog/ai-memory.webp"
                   : "/blog1.webp"
                   
               }

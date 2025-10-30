@@ -412,13 +412,13 @@ export default function AiModelPage() {
                         <div className="p-6 md:border-r border-gray-200">
                             <h3 className="text-[32px] font-bold text-[#333333] mb-2">Serverless Endpoints</h3>
                             <p className="text-[#999999] text-[18px] max-w-md">
-                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
+                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud.
                             </p>
                         </div>
                         <div className="p-6">
                             <h3 className="text-[32px] font-bold text-[#333333] mb-2">Dedicated Endpoints</h3>
                             <p className="text-[#999999] text-[18px] max-w-md">
-                                Canopy Wave gives you instant access to the most popular OSS models — optimized for cost, speed, and quality on the fastest AI cloud
+                                Canopy Wave allows you to create on-demand deployments of GPU cluster that are reserved for your own use.
                             </p>
                         </div>
                     </div>
@@ -489,9 +489,9 @@ export default function AiModelPage() {
 
                     {/* CTAs */}
                     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center mt-6">
-                        {/* Left action: Start Building */}
+                        {/* Left action: Start building */}
                         <a href="https://cloud.canopywave.io/" className="inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                            <span className="text-[24px] text-[#80B224]">Start Building</span>
+                            <span className="text-[24px] text-[#80B224]">Start building</span>
                             <Image src="/ai-model/ic_enter.svg" alt="enter" width={30} height={30} />
                         </a>
                         {/* Right action: Apply for */}

@@ -62,6 +62,14 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 33,
+            title: "The Future of AI Lies in Memory",
+            description: "The future of AI depends not only on larger models but also on smarter memory. While the expansion of model parameters has brought improvements in understanding, true intelligence stems from memory",
+            date: "October 29, 2025",
+            image: "/blog/ai-memory.webp",
+            alttitle: "AI Memory"
+        },
+        {
             id: 36,
             title: "AI Neural Networks",
             description: "AI neural networks are transforming our lives at an unprecedented pace. Whether you're unlocking your phone with facial recognition, conversing with a smart voice assistant, or enjoying personalized recommendations on video platforms, AI neural network technology powers these experiences.",

@@ -290,7 +290,7 @@ export default function DedicatedEndpoint() {
                               value={formData.otherDescription}
                               onChange={handleInputChange}
                               onBlur={handleBlur}
-                              placeholder="Briefly outline your interest or project requirements, such as project baclication scenario, involved devices, scales, budget, and other information."
+                              placeholder="Please write the models you are interested in."
                               className="w-full px-4 py-2 border rounded-2xl text-sm focus:ring-[#8CC63F] focus:border-[#8CC63F]"
                             />
                           )}
