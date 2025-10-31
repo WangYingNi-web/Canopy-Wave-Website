@@ -289,14 +289,14 @@ export default function Footer() {
                             
                             {/* Discord */}
                             <div className="group relative flex flex-col items-center">
-                                {/* <IwsLink href="/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer"> */}
+                                <IwsLink href="https://discord.gg/TBDdwQ48BB" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src="/footer/ic_Discord.png"
                                         alt="Discord"
                                         width={32}
                                         height={32}
                                     />
-                                {/* </IwsLink> */}
+                                </IwsLink>
                                 <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
                                     <div className="relative w-full h-full">
                                         <Image
