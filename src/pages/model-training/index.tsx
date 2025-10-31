@@ -437,7 +437,7 @@ export default function SolutionsPage() {
       <div className="bg-[#F9F9F9] py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
-            <h2 className="text-3xl sm:text-[48px] text-[#333] font-black text-center mb-[40px]">Operation & Support</h2>
+            <h2 className="text-3xl sm:text-[48px] text-[#333] font-bold text-center mb-[40px]">Operation & Support</h2>
           </SlideUp>
 
           {/* Intelligent End-to-End Monitoring */}
@@ -529,7 +529,7 @@ export default function SolutionsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SlideUp>
             <div className="text-center mb-10">
-              <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-[40px]">
+              <h2 className="text-3xl sm:text-[48px] font-bold text-[#333333] mb-[40px]">
                 Resources
               </h2>
             </div>
@@ -599,7 +599,7 @@ export default function SolutionsPage() {
             }}>
             <div className="inset-0 p-6 sm:absolute sm:p-12 pb-24">
               <SlideUp>
-                <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-8 text-center">Ready to get started?</h2>
+                <h2 className="text-3xl sm:text-[48px] font-bold text-[#333333] mb-8 text-center">Ready to get started?</h2>
               </SlideUp>
               <SlideUp>
                 <p className="text-[#333333] mb-8 text-center text-l">
