@@ -86,12 +86,12 @@ export default function GB200WithRoCEv2() {
 
         // Validate required fields before submitting
         const newErrors = {
-            message: validateField('message', formData.message),
+            message: '',
             name: validateField('name', formData.name),
             email: validateField('email', formData.email),
             lastName: validateField('lastName', formData.lastName),
             company: validateField('company', formData.company),
-            marketing: formData.marketing ? '' : 'Please complete this required field.'
+            marketing: ''
         };
 
         if (Object.values(newErrors).some(err => err)) {
@@ -169,16 +169,16 @@ export default function GB200WithRoCEv2() {
                     src="/solutions/networking-hardware/gb200-with-rocev2/banner_GB200banner.png"
                     alt="banner"
                     fill
-                    className="object-cover"
+                    className="object-fill"
                     priority
                 />
                 <div className="absolute inset-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-44">
                         <SlideUp>
-                            <h1 className="text-4xl sm:text-[48px] font-black text-[#80B224] text-shadow-lg mb-4">
+                            <h1 className="text-4xl sm:text-[48px] font-bold text-[#80B224] text-shadow-lg mb-4">
                                 GB200 Cluster with RoCEv2
                             </h1>
-                            <h1 className="text-4xl sm:text-[48px] font-black text-[#80B224] text-shadow-lg mb-6">
+                            <h1 className="text-4xl sm:text-[48px] font-bold text-[#80B224] text-shadow-lg mb-6">
                                 High-Performance Network Solution
                             </h1>
                         </SlideUp>
@@ -201,7 +201,7 @@ export default function GB200WithRoCEv2() {
             }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-[48px] font-black text-center mb-[40px]">
+                        <h2 className="text-3xl sm:text-[48px] font-bold text-center mb-[40px]">
                             Challenges
                         </h2>
                     </SlideUp>
@@ -277,7 +277,7 @@ export default function GB200WithRoCEv2() {
             <div className='bg-[#F9F9F9] py-12 sm:py-20'>
                 <div id='storage-architecture' className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-[48px] font-black text-center mb-[40px]">Solution & Performance</h2>
+                        <h2 className="text-3xl sm:text-[48px] font-bold text-center mb-[40px]">Solution & Performance</h2>
                     </SlideUp>
                     <SlideUp>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 mb-[40px]">
@@ -341,7 +341,7 @@ export default function GB200WithRoCEv2() {
             <div className="py-12 sm:py-20 bg-[#F9F9F9]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-[48px] font-black text-center mb-[40px] text-[#333333]">Benefits</h2>
+                        <h2 className="text-3xl sm:text-[48px] font-bold text-center mb-[40px] text-[#333333]">Benefits</h2>
                     </SlideUp>
 
                     {/* 上半部分 */}
@@ -427,7 +427,7 @@ export default function GB200WithRoCEv2() {
             <div className="bg-[#F9F9F9] py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
-                        <h2 className="text-3xl sm:text-[48px] font-black text-center mb-[40px]">Operation & Support</h2>
+                        <h2 className="text-3xl sm:text-[48px] font-bold text-center mb-[40px]">Operation & Support</h2>
                     </SlideUp>
 
                     {/* Intelligent End-to-End Monitoring */}
@@ -520,7 +520,7 @@ export default function GB200WithRoCEv2() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl sm:text-[48px] font-black mb-[40px]">
+                            <h2 className="text-3xl sm:text-[48px] font-bold mb-[40px]">
                                 Deployment Process
                             </h2>
                         </div>
@@ -536,7 +536,7 @@ export default function GB200WithRoCEv2() {
                                         <h3 className="text-[20px] font-bold text-[#333333]">Planning & Design</h3>
                                     </div>
                                     <p className="text-[#666666]">
-                                        Develop comprehensive documentation based on the client's data center topology, including detailed cabling plans and an IP addressing scheme.
+                                        Develop comprehensive documentation based on the &nbsp;client&apos;s data center topology, including detailed cabling plans and an IP addressing scheme.
                                     </p>
                                 </div>
                             </div>
@@ -616,7 +616,7 @@ export default function GB200WithRoCEv2() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SlideUp>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-[40px]">
+                            <h2 className="text-3xl sm:text-[48px] font-bold text-[#333333] mb-[40px]">
                                 Resources
                             </h2>
                         </div>
@@ -644,7 +644,7 @@ export default function GB200WithRoCEv2() {
                                 <div className="p-6 flex flex-col h-full">
                                     <h3 className="text-[20px] font-bold text-[#333333] mb-3">Case Studies</h3>
                                     <p className="text-[#666666] text-[16px] mb-8 flex-grow">
-                                        Accelerating Protein Engineering with Canopy Wave's GPUaaS
+                                        Accelerating Protein Engineering with Canopy &nbsp;Wave&apos;s GPUaaS
                                     </p>
                                     <div className="mt-auto">
                                         <button className="border-2 border-[#80B224] font-bold text-[#80B224] hover:bg-[#80B224] hover:text-white hover:scale-105 hover:shadow-lg px-[18px] py-[8px] rounded-full text-sm transition-all duration-300" onClick={() => window.location.href = '/resources/case-study'}>
@@ -686,7 +686,7 @@ export default function GB200WithRoCEv2() {
                         }}>
                         <div className="inset-0 p-6 sm:absolute sm:p-12 pb-24">
                             <SlideUp>
-                                <h2 className="text-3xl sm:text-[48px] font-black text-[#333333] mb-8 text-center">Ready to get started?</h2>
+                                <h2 className="text-3xl sm:text-[48px] font-bold text-[#333333] mb-8 text-center">Ready to get started?</h2>
                             </SlideUp>
                             <SlideUp>
                                 <p className="text-[#333333] mb-8 text-center text-l">
@@ -774,7 +774,7 @@ export default function GB200WithRoCEv2() {
                                     <div>
                                         <div className="flex justify-between items-center mb-1 sm:mb-2">
                                             <label htmlFor="message" className="text-sm font-medium text-[#333333]">
-                                                What's Your Project Interest, or How We Can Best Help You?<span className="text-red-500">*</span>
+                                                &nbsp;What&apos;s Your Project Interest, or How We Can Best Help You?
                                             </label>
                                             <div className="text-xs text-gray-400">
                                                 0/5000
@@ -786,7 +786,7 @@ export default function GB200WithRoCEv2() {
                                             rows={5}
                                             value={formData.message}
                                             onChange={handleInputChange}
-                                            onBlur={handleBlur}
+                                            // onBlur={handleBlur}
                                             className={`w-full px-4 py-3 border border-gray-300 rounded-xl focus:border-transparent resize-none bg-white placeholder:text-sm ${errors.message ? 'border-red-500' : ''}`}
                                             placeholder="Briefly outline your interest or project requirements, such as project application scenario, involved devices, scales, budget, and other information."
                                         />
@@ -802,11 +802,11 @@ export default function GB200WithRoCEv2() {
                                             name="marketing"
                                             checked={formData.marketing}
                                             onChange={handleInputChange}
-                                            onBlur={handleBlur}
+                                            // onBlur={handleBlur}
                                             className={`mt-1 h-4 w-4 text-[#8CC63F] focus:ring-[#8CC63F] border-gray-300 rounded ${errors.marketing ? 'border-red-500' : ''}`}
                                         />
                                         <label htmlFor="marketing" className="text-sm text-[#666666] leading-5">
-                                            I agree to receive marketing communications from Canopy Wave.<span className="text-red-500">*</span>
+                                            I agree to receive marketing communications from Canopy Wave.
                                         </label>
                                         {errors.marketing && (
                                             <span className="text-red-500 text-xs mt-1">{errors.marketing}</span>
