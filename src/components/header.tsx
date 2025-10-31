@@ -55,7 +55,7 @@ export default function Header() {
     setShowMobileSubMenu(null);
   };
   const getContainerMaxWidth = () => {
-    return router.pathname.startsWith('/resources/docs') ? 'max-w-8xl' : 'max-w-7xl';
+    return router.pathname.startsWith('/resources/docs/cw-cloud-account') ? 'max-w-8xl' : 'max-w-7xl';
   };
 
   useEffect(() => {
@@ -129,7 +129,7 @@ export default function Header() {
             <div className="flex items-center space-x-2 md:space-x-4 lg:space-x-6">
               <div className="relative text-sm" ref={modelPlatformRef}>
                 <button
-                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-[#8CC63F] flex items-center"
+                  className={`text-sm max-1207:text-xs font-medium flex items-center ${showModelPlatform ? 'text-[#8CC63F]' : 'text-gray-600 hover:text-[#8CC63F]'}`}
                   onClick={() => setShowModelPlatform(!showModelPlatform)}
                 >
                   Model Platform
@@ -155,7 +155,7 @@ export default function Header() {
                         {/* 左侧：Inferencing as a Service */}
                         <div className='border-r border-[#ffffff] max-w-[500px]'>
                           <div className="flex items-center gap-2 mb-[16px]">
-                            <Image src="/header/model_ic_inferencing.png" alt="Inferencing" width={50} height={50} />
+                            <Image src="/header/model_ic_inferencing.png" alt="Inferencing" width={32} height={32} />
                             <h3 className="font-bold text-[16px]">Inferencing as a Service</h3>
                           </div>
                           <ul className="space-y-2 text-[14px]">
@@ -224,7 +224,7 @@ export default function Header() {
 
               <div className="relative text-sm" ref={menuRef}>
                 <button
-                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-[#8CC63F] flex items-center"
+                  className={`text-sm max-1207:text-xs font-medium flex items-center ${showProducts ? 'text-[#8CC63F]' : 'text-gray-600 hover:text-[#8CC63F]'}`}
                   onClick={() => setShowProducts(!showProducts)}
                 >
                   GPU Cloud
@@ -249,8 +249,8 @@ export default function Header() {
                       <div className="grid grid-cols-4 gap-8">
                         <div>
                           <div className="flex items-center gap-3 mb-[16px]">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-md">
-                              <Image src="/header/gpucloud_ic_gpus.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+                              <Image src="/header/gpucloud_ic_gpus.png" alt="GPUs" width={32} height={32} />
                             </div>
                             <IwsLink href="/compute-services" className="text-[#333333] text-[16px] hover:text-[#8CC63F] font-bold" onClick={() => setShowProducts(false)}>
                               GPUs
@@ -266,8 +266,8 @@ export default function Header() {
                         </div>
                         <div className="border-l border-[#ffffff] pl-8">
                           <div className="flex items-center gap-3 mb-4">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-md">
-                              <Image src="/header/gpucloud_ic_storage.png" alt="Storage Services" width={58} height={58} />
+                            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+                              <Image src="/header/gpucloud_ic_storage.png" alt="Storage Services" width={32} height={32} />
                             </div>
                             <IwsLink href="/storage-services" className="text-[#333333] text-[16px] flex items-center text-gray-900 hover:text-[#8CC63F] font-bold" onClick={() => setShowProducts(false)}>
                               Storage Services
@@ -281,8 +281,8 @@ export default function Header() {
                         </div>
                         <div className="border-l border-[#ffffff] pl-8">
                           <div className="flex items-center gap-3 mb-4">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-md">
-                              <Image src="/header/gpucloud_ic_networking.png" alt="Networking Services" width={58} height={58} />
+                            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+                              <Image src="/header/gpucloud_ic_networking.png" alt="Networking Services" width={32} height={32} />
                             </div>
                             <IwsLink href="/networking-services" className="text-[#333333] text-[16px] flex items-center hover:text-[#8CC63F] font-bold" onClick={() => setShowProducts(false)}>
                               Networking Services
@@ -295,8 +295,8 @@ export default function Header() {
                         </div>
                         <div className="border-l border-[#ffffff] pl-8">
                           <div className="flex items-center gap-3 mb-4">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-md">
-                              <Image src="/header/gpucloud_ic_platform.png" alt="Platform" width={58} height={58} />
+                            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+                              <Image src="/header/gpucloud_ic_platform.png" alt="Platform" width={32} height={32} />
                             </div>
                             <IwsLink href="/platform" className="text-[#333333] text-[16px] flex items-center hover:text-[#8CC63F] font-bold" onClick={() => setShowProducts(false)}>
                               Platform
@@ -315,7 +315,7 @@ export default function Header() {
 
               <div className="relative" ref={solutionsRef}>
                 <button
-                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-[#8CC63F] flex items-center"
+                  className={`text-sm max-1207:text-xs font-medium flex items-center ${showSolutions ? 'text-[#8CC63F]' : 'text-gray-600 hover:text-[#8CC63F]'}`}
                   onClick={() => setShowSolutions(!showSolutions)}
                 >
                   Solutions
@@ -341,8 +341,8 @@ export default function Header() {
                         {/* Use Cases */}
                         <div className="space-y-3">
                           <div className="flex items-center gap-3 mb-[16px]">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/solutions_ic_usecases.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/solutions_ic_usecases.png" alt="GPUs" width={32} height={32} />
                             </div>
                             <div className="text-[#333333] font-bold">Use Cases</div>
                           </div>
@@ -358,8 +358,8 @@ export default function Header() {
                         {/* Private Cloud and GPUs Deployment */}
                         <div className="space-y-3 border-l border-[#ffffff] pl-8">
                           <div className="flex items-center gap-3 mb-[16px]">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/solutions_ic_private.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/solutions_ic_private.png" alt="GPUs" width={32} height={32} />
                             </div>
                             <IwsLink href="/private-cloud" className="text-[#333333] font-bold hover:text-[#8CC63F] transition-colors cursor-pointer">Private Cloud and GPUs Deployment</IwsLink>
                           </div>
@@ -375,8 +375,8 @@ export default function Header() {
                         {/* Networking Hardware Solution */}
                         <div className="space-y-3 border-l border-[#ffffff] pl-8">
                           <div className="flex items-center gap-3 mb-[16px]">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/solutions_ic_networking.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/solutions_ic_networking.png" alt="GPUs" width={32} height={32} />
                             </div>
                             <IwsLink href="/networking-hardware" className="text-[#333333] font-bold hover:text-[#8CC63F] transition-colors cursor-pointer">Networking Hardware Solution</IwsLink>
                           </div>
@@ -492,7 +492,7 @@ export default function Header() {
 
               <div className="relative" ref={resourcesRef}>
                 <button
-                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-[#8CC63F] flex items-center"
+                  className={`text-sm max-1207:text-xs font-medium flex items-center ${showResources ? 'text-[#8CC63F]' : 'text-gray-600 hover:text-[#8CC63F]'}`}
                   onClick={() => setShowResources(!showResources)}
                 >
                   Resources
@@ -516,33 +516,33 @@ export default function Header() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-3 gap-8">
                         {/* Tutorials */}
-                        <div className="space-y-3">
+                        <div className="space-y-3 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/resources_ic_tutorials.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/resources_ic_tutorials.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/resources/tutorials" className="text-[#333333] font-bold hover:text-[#8CC63F] transition-colors cursor-pointer">Tutorials</IwsLink>
+                            <IwsLink href="/resources/tutorials" className="text-[#333333] font-bold transition-colors cursor-pointer group-hover:text-[#8CC63F]">Tutorials</IwsLink>
                           </div>
                           <ul className="space-y-2 text-sm">
                             <li>
-                              <IwsLink href="/resources/tutorials" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowResources(false) }}>
-                                Analyze Product Selection and Applications
+                              <IwsLink href="/resources/tutorials" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
+                                Technical docs related to APls and GPUs
                               </IwsLink>
                             </li>
                           </ul>
                         </div>
 
                         {/* Case Studies */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8">
+                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/resources_ic_casestudies.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/resources_ic_casestudies.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/resources/case-study" className="text-[#333333] font-bold hover:text-[#8CC63F] transition-colors cursor-pointer">Case Studies</IwsLink>
+                            <IwsLink href="/resources/case-study" className="text-[#333333] font-bold transition-colors cursor-pointer group-hover:text-[#8CC63F]">Case Studies</IwsLink>
                           </div>
                           <ul className="space-y-2 text-sm">
                             <li>
-                              <IwsLink href="/resources/case-study" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowResources(false) }}>
+                              <IwsLink href="/resources/case-study" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
                                 Real Customers, Real Growth with Canopy Wave
                               </IwsLink>
                             </li>
@@ -550,16 +550,16 @@ export default function Header() {
                         </div>
 
                         {/* Docs */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8">
+                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/resources_ic_docs.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/resources_ic_docs.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-[#333333] font-bold hover:text-[#8CC63F] transition-colors cursor-pointer">Docs</IwsLink>
+                            <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-[#333333] font-bold transition-colors cursor-pointer group-hover:text-[#8CC63F]">Docs</IwsLink>
                           </div>
                           <ul className="space-y-2 text-sm">
                             <li>
-                              <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowResources(false) }}>
+                              <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
                                 Analyze Product Selection and Applications
                               </IwsLink>
                             </li>
@@ -573,7 +573,7 @@ export default function Header() {
 
               <div className="relative" ref={aboutRef}>
                 <button
-                  className="text-gray-600 text-sm max-1207:text-xs font-medium hover:text-[#8CC63F] flex items-center"
+                  className={`text-sm max-1207:text-xs font-medium flex items-center ${showAbout ? 'text-[#8CC63F]' : 'text-gray-600 hover:text-[#8CC63F]'}`}
                   onClick={() => setShowAbout(!showAbout)}
                 >
                   About
@@ -597,61 +597,61 @@ export default function Header() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         {/* About Us */}
-                        <div className="space-y-3">
+                        <div className="space-y-3 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/about_ic_aboutus.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/about_ic_aboutus.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/about" className="text-[#333333] font-bold hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>About Us</IwsLink>
+                            <IwsLink href="/about" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>About Us</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/about" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowAbout(false) }}>
-                              An overview of Canopy Wave Group
+                            <IwsLink href="/about" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
+                              Join our mission
                             </IwsLink>
                           </div>
                         </div>
 
                         {/* Careers */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8">
+                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/about_ic_careers.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/about_ic_careers.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/about/careers" className="text-[#333333] font-bold hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Careers</IwsLink>
+                            <IwsLink href="/about/careers" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Careers</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/about/careers" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowAbout(false) }}>
+                            <IwsLink href="/about/careers" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
                               Blog&Events&Case Studies
                             </IwsLink>
                           </div>
                         </div>
 
                         {/* Data Center */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8">
+                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/about_ic_data.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/about_ic_data.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/data-center/iceland" className="text-[#333333] font-bold hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Data Center</IwsLink>
+                            <IwsLink href="/data-center/iceland" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Data Center</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/data-center/iceland" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowAbout(false) }}>
+                            <IwsLink href="/data-center/iceland" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
                               Introduction to data center
                             </IwsLink>
                           </div>
                         </div>
 
                         {/* Newsroom */}
-                        <div className="space-y-3 border-l border-gray-200 pl-8">
+                        <div className="space-y-3 border-l border-gray-200 pl-8 group">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-md flex items-center justify-center">
-                              <Image src="/header/about_ic_newsroom.png" alt="GPUs" width={58} height={58} />
+                            <div className="w-10 h-10 rounded-md flex items-center justify-center">
+                              <Image src="/header/about_ic_newsroom.png" alt="GPUs" width={32} height={32} />
                             </div>
-                            <IwsLink href="/about/newsroom" className="text-[#333333] font-bold hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Newsroom</IwsLink>
+                            <IwsLink href="/about/newsroom" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Newsroom</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/about/newsroom" className="text-[#999999] hover:text-[#8CC63F] text-[16px]" onClick={() => { setShowAbout(false) }}>
-                              Join our mission
+                            <IwsLink href="/about/newsroom" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
+                              Blog&Events&Case Studies
                             </IwsLink>
                           </div>
                         </div>
