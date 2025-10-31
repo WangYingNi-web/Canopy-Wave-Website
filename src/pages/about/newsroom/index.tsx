@@ -62,6 +62,30 @@ export default function Newsroom() {
 
     const blogPosts: BlogPost[] = [
         {
+            id: 36,
+            title: "AI Neural Networks",
+            description: "AI neural networks are transforming our lives at an unprecedented pace. Whether you're unlocking your phone with facial recognition, conversing with a smart voice assistant, or enjoying personalized recommendations on video platforms, AI neural network technology powers these experiences.",
+            date: "October 31, 2025",
+            image: "/blog/ai-neural-networks.webp",
+            alttitle: "AI Neural Networks"
+        },
+        {
+            id: 35,
+            title: "NVIDIA vs AMD: Performance and Architecture Insights",
+            description: "This article provides a systematic analysis of NVIDIA vs AMD across four dimensions: market landscape, performance comparison, software ecosystem, and real-world enterprise cases, giving readers a comprehensive reference perspective.",
+            date: "October 31, 2025",
+            image: "/blog/ai-NVIDIA-vs-AMD.webp",
+            alttitle: "NVIDIA vs AMD"
+        },
+        {
+            id: 34,
+            title: "Is AI Always Right?",
+            description: "Many organizations approach AI with the implicit assumption that it is infallible. This raises a critical question we must address: Is AI always right?",
+            date: "October 30, 2025",
+            image: "/blog/ai-always-right.webp",
+            alttitle: "Is AI Always Right?"
+        },
+        {
             id: 33,
             title: "The Future of AI Lies in Memory",
             description: "The future of AI depends not only on larger models but also on smarter memory. While the expansion of model parameters has brought improvements in understanding, true intelligence stems from memory",
