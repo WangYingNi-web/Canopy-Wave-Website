@@ -201,15 +201,17 @@ export default function Header() {
                             </div>
 
                             {/* 小卡片1 */}
-                            <div className="bg-white rounded-3xl p-4 shadow-sm flex items-center justify-center flex-col h-[150px]">
-                              <div className="w-16 h-16 flex items-center justify-center rounded-md">
+                            <div className="bg-white rounded-3xl p-4 shadow-sm flex items-center justify-center flex-col h-[150px] relative">
+                              <div className="absolute top-[8px] left-4 text-[14px] text-gray-500">CHAT</div>
+                              <div className="mt-4 w-16 h-16 flex items-center justify-center rounded-md">
                                 <Image src="/ai-model/allmodels_ic_gpt.png" alt="GPT-OSS 120B" width={68} height={68} />
                               </div>
                               <div className="mt-2 text-[16px] text-gray-700">GPT-OSS 120B</div>
                             </div>
                             {/* 小卡片2 */}
-                            <div className="bg-white rounded-3xl p-4 shadow-sm flex items-center justify-center flex-col h-[150px]">
-                              <div className="w-16 h-16 flex items-center justify-center rounded-md">
+                            <div className="bg-white rounded-3xl p-4 shadow-sm flex items-center justify-center flex-col h-[150px] relative">
+                              <div className="absolute top-[8px] left-4 text-[14px] text-gray-500">CODE</div>
+                              <div className="mt-4 w-16 h-16 flex items-center justify-center rounded-md">
                                 <Image src="/ai-model/allmodels_ic_glm.png" alt="GLM 4.6" width={68} height={68} />
                               </div>
                               <div className="mt-2 text-[16px] text-gray-700">GLM 4.6</div>
@@ -525,8 +527,8 @@ export default function Header() {
                           </div>
                           <ul className="space-y-2 text-sm">
                             <li>
-                              <IwsLink href="/resources/tutorials" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
-                                Technical docs related to APls and GPUs
+                              <IwsLink href="/resources/tutorials" className="text-[#999999] text-[12px] group-hover:text-[#8CC63F] ml-[28px]" onClick={() => { setShowResources(false) }}>
+                                Your practical guide to choosing & building better
                               </IwsLink>
                             </li>
                           </ul>
@@ -542,8 +544,8 @@ export default function Header() {
                           </div>
                           <ul className="space-y-2 text-sm">
                             <li>
-                              <IwsLink href="/resources/case-study" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
-                                Real Customers, Real Growth with Canopy Wave
+                              <IwsLink href="/resources/case-study" className="ml-[28px] text-[#999999] text-[12px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
+                                Real Customers, real growth with Canopy Wave
                               </IwsLink>
                             </li>
                           </ul>
@@ -559,8 +561,8 @@ export default function Header() {
                           </div>
                           <ul className="space-y-2 text-sm">
                             <li>
-                              <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
-                                Analyze Product Selection and Applications
+                              <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="ml-[28px] text-[#999999] text-[12px] group-hover:text-[#8CC63F]" onClick={() => { setShowResources(false) }}>
+                                Technical docs related to APIs and GPUs
                               </IwsLink>
                             </li>
                           </ul>
@@ -605,8 +607,8 @@ export default function Header() {
                             <IwsLink href="/about" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>About Us</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/about" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
-                              Join our mission
+                            <IwsLink href="/about" className="ml-[28px] text-[#999999] text-[12px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
+                              An overview of Canopy Wave Group
                             </IwsLink>
                           </div>
                         </div>
@@ -620,8 +622,8 @@ export default function Header() {
                             <IwsLink href="/about/careers" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Careers</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/about/careers" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
-                              Blog&Events&Case Studies
+                            <IwsLink href="/about/careers" className="ml-[28px] text-[#999999] text-[12px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
+                              Join our mission
                             </IwsLink>
                           </div>
                         </div>
@@ -635,7 +637,7 @@ export default function Header() {
                             <IwsLink href="/data-center/iceland" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Data Center</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/data-center/iceland" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
+                            <IwsLink href="/data-center/iceland" className="ml-[28px] text-[#999999] text-[12px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
                               Introduction to data center
                             </IwsLink>
                           </div>
@@ -650,7 +652,7 @@ export default function Header() {
                             <IwsLink href="/about/newsroom" className="text-[#333333] font-bold group-hover:text-[#8CC63F]" onClick={() => setShowAbout(false)}>Newsroom</IwsLink>
                           </div>
                           <div>
-                            <IwsLink href="/about/newsroom" className="text-[#999999] text-[16px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
+                            <IwsLink href="/about/newsroom" className="ml-[28px] text-[#999999] text-[12px] group-hover:text-[#8CC63F]" onClick={() => { setShowAbout(false) }}>
                               Blog&Events&Case Studies
                             </IwsLink>
                           </div>
