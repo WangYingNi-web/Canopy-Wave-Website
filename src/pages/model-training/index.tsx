@@ -188,21 +188,21 @@ export default function SolutionsPage() {
         {/* <link rel="preload" href="/solutions-banner.svg" as="image" type="image/svg+xml" /> */}
       </Head>
       <Header />
-      <div className="w-full h-[520px] relative mt-[84px]">
+      <div className="w-full relative">
         <video
           src={"/ai-model-training/model_training_banner.mp4"}
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-[577px] object-fill mt-20"
         />
         <div className="absolute inset-0 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-[128px]">
             <SlideUp>
-              <div className="flex items-center gap-2 mb-3">
-                <img className="w-8 cursor-pointer hover:scale-110 transition-transform duration-200" src="/ai-model-training/banner_ic_aimodeltraining.png" alt="" />
-                <span className="text-lg">AI model training</span>
+              <div className="flex items-center gap-4 mb-[16px]">
+                <Image src="/ai-model-training/banner_ic_aimodeltraining.png" alt="aimodeltraining" width={36} height={36} />
+                <h3 className="text-[18px] text-[#333333]">AI Model Training</h3>
               </div>
             </SlideUp>
             <SlideUp>
@@ -216,6 +216,11 @@ export default function SolutionsPage() {
                 Your Training Speed
               </h1>
             </SlideUp>
+            <div className="flex justify-left  mt-7">
+                <a href="https://cloud.canopywave.io/" target="_blank" rel="noopener noreferrer" className="hidden md:block" aria-label="Open Canopy Wave Cloud">
+                    <div className="text-[16px] bg-[#80B224] hover:bg-[#6a9620] text-white py-[8px] px-[28px] rounded-full transition-colors duration-300">Start building</div>
+                </a>
+            </div>
           </div>
         </div>
       </div>

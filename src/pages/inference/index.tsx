@@ -204,16 +204,16 @@ export default function InferencePage() {
             {/* Hero Section */}
             <div className="w-full relative bg-[#EDF2E4]">
                 <video
-                    className="w-full h-[530px] object-cover mt-20"
+                    className="w-full h-[577px] object-fill mt-20"
                     autoPlay
                     muted
                     loop
                     playsInline
                 >
-                    <source src="/inference/inference-banner.mp4" type="video/mp4" />
+                    <source src="/ai-model-training/model_training_banner.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 z-10">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-[148px]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-[128px]">
                         <SlideUp>
                             <div className="flex items-center gap-4 mb-[16px]">
                                 <Image
