@@ -114,7 +114,7 @@ export default function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="space-y-8 max-w-[140px]">
+                            <div className="space-y-8 max-w-[130px]">
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm text-[#333333]">GPU Cloud</h3>
                                     <ul className="space-y-3 text-xs">
@@ -140,7 +140,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             
-                            <div className="space-y-8 min-w-[130px]">
+                            <div className="space-y-8 min-w-[120px]">
                                 <div>
                                     <h3 className="font-semibold mb-4 text-sm text-[#333333]">Pricing</h3>
                                     <ul className="space-y-3 text-xs">
@@ -222,7 +222,7 @@ export default function Footer() {
                         
                         <div className="flex items-center space-x-4 mt-6">
                             {/* LinkedIn */}
-                            <div className="group flex flex-col items-center">
+                            <div className="group relative flex flex-col items-center">
                                 <IwsLink href="https://www.linkedin.com/company/canopywave/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src="/footer/linkedin.svg"
@@ -231,17 +231,20 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <Image
-                                    src="/footer/footer_img_1linkedins.png"
-                                    alt="LinkedIn Preview"
-                                    width={100}
-                                    height={100}
-                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
-                                />
+                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
+                                    <div className="relative w-full h-full">
+                                        <Image
+                                            src="/footer/footer_img_1linkedins.png"
+                                            alt="LinkedIn Preview"
+                                            fill
+                                            className="object-contain transition-opacity duration-200"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-
+                            
                             {/* X (Twitter) */}
-                            <div className="group flex flex-col items-center">
+                            <div className="group relative flex flex-col items-center">
                                 <IwsLink href="https://x.com/canopywave_cw?s=21" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src="/footer/twitter.svg"
@@ -250,17 +253,20 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <Image
-                                    src="/footer/footer_img_2x.png"
-                                    alt="X Preview"
-                                    width={60}
-                                    height={60}
-                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
-                                />
+                                <div className="hidden group-hover:block absolute left-1/2 top-8 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[52px] h-[52px]">
+                                    <div className="relative w-full h-full">
+                                        <Image
+                                            src="/footer/footer_img_2x.png"
+                                            alt="X Preview"
+                                            fill
+                                            className="object-contain transition-opacity duration-200"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-
+                            
                             {/* YouTube */}
-                            <div className="group flex flex-col items-center">
+                            <div className="group relative flex flex-col items-center">
                                 <IwsLink href="https://www.youtube.com/@CanopyWave-CW" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src="/footer/youtube.svg"
@@ -269,17 +275,20 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <Image
-                                    src="/footer/footer_img_3youtube.png"
-                                    alt="YouTube Preview"
-                                    width={100}
-                                    height={91000}
-                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
-                                />
+                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
+                                    <div className="relative w-full h-full">
+                                        <Image
+                                            src="/footer/footer_img_3youtube.png"
+                                            alt="YouTube Preview"
+                                            fill
+                                            className="object-contain transition-opacity duration-200"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-
+                            
                             {/* Discord */}
-                            <div className="group flex flex-col items-center">
+                            <div className="group relative flex flex-col items-center">
                                 <IwsLink href="/" className="hover:opacity-80" target="_blank" rel="noopener noreferrer">
                                     <Image
                                         src="/footer/ic_Discord.png"
@@ -288,13 +297,16 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <Image
-                                    src="/footer/footer_img_4discord.png"
-                                    alt="Discord Preview"
-                                    width={100}
-                                    height={100}
-                                    className="mt-2 hidden group-hover:block transition-opacity duration-200"
-                                />
+                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
+                                    <div className="relative w-full h-full">
+                                        <Image
+                                            src="/footer/footer_img_4discord.png"
+                                            alt="Discord Preview"
+                                            fill
+                                            className="object-contain transition-opacity duration-200"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
