@@ -79,7 +79,7 @@ export default function Newsroom() {
         },
         {
             id: 34,
-            title: "Is AI Always Right?",
+            title: "Is AI Always Right",
             description: "Many organizations approach AI with the implicit assumption that it is infallible. This raises a critical question we must address: Is AI always right?",
             date: "October 30, 2025",
             image: "/blog/ai-always-right.webp",

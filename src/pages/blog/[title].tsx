@@ -4460,7 +4460,7 @@ sections: [
   const getBlogImage = () => {
     return blogPost.title === "Enterprise GPU Cluster Procurement Strategy"
       ? "/blog/enterprise-gpu-cluster.webp"
-      : blogPost.title === "Is AI Always Right?"
+      : blogPost.title === "Is AI Always Right"
         ? "/blog/ai-always-right.webp"
         : blogPost.title === "NVIDIA vs AMD: Performance and Architecture Insights"
           ? "/blog/ai-NVIDIA-vs-AMD.webp"
