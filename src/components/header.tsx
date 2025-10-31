@@ -156,7 +156,7 @@ export default function Header() {
                         <div className='border-r border-[#ffffff] max-w-[500px]'>
                           <div className="flex items-center gap-2 mb-[16px]">
                             <Image src="/header/model_ic_inferencing.png" alt="Inferencing" width={32} height={32} />
-                            <h3 className="font-bold text-[16px]">Inferencing as a Service</h3>
+                            <h3 className="font-bold text-[16px] text-[#333333]">Inferencing as a Service</h3>
                           </div>
                           <ul className="space-y-2 text-[14px]">
                             <li><IwsLink href="/ai-model" className="text-gray-600 hover:text-[#8CC63F] text-sm" onClick={() => setShowModelPlatform(false)}>Model Library</IwsLink></li>
