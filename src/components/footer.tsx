@@ -231,13 +231,14 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
-                                    <div className="relative w-full h-full">
+                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none">
+                                    <div className="w-[100px] h-[100px] relative aspect-square">
                                         <Image
                                             src="/footer/footer_img_1linkedins.png"
                                             alt="LinkedIn Preview"
                                             fill
                                             className="object-contain transition-opacity duration-200"
+                                            priority
                                         />
                                     </div>
                                 </div>
@@ -253,13 +254,14 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <div className="hidden group-hover:block absolute left-1/2 top-8 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[52px] h-[52px]">
-                                    <div className="relative w-full h-full">
+                                <div className="hidden group-hover:block absolute left-1/2 top-8 -translate-x-1/2 mt-2 z-10 pointer-events-none">
+                                    <div className="w-[52px] h-[52px] relative aspect-square">
                                         <Image
                                             src="/footer/footer_img_2x.png"
                                             alt="X Preview"
                                             fill
                                             className="object-contain transition-opacity duration-200"
+                                            priority
                                         />
                                     </div>
                                 </div>
@@ -275,13 +277,14 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
-                                    <div className="relative w-full h-full">
+                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none">
+                                    <div className="w-[100px] h-[100px] relative aspect-square">
                                         <Image
                                             src="/footer/footer_img_3youtube.png"
                                             alt="YouTube Preview"
                                             fill
                                             className="object-contain transition-opacity duration-200"
+                                            priority
                                         />
                                     </div>
                                 </div>
@@ -297,13 +300,14 @@ export default function Footer() {
                                         height={32}
                                     />
                                 </IwsLink>
-                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none w-[100px] h-[100px]">
-                                    <div className="relative w-full h-full">
+                                <div className="hidden group-hover:block absolute left-1/2 top-2 -translate-x-1/2 mt-2 z-10 pointer-events-none">
+                                    <div className="w-[100px] h-[100px] relative aspect-square">
                                         <Image
                                             src="/footer/footer_img_4discord.png"
                                             alt="Discord Preview"
                                             fill
                                             className="object-contain transition-opacity duration-200"
+                                            priority
                                         />
                                     </div>
                                 </div>
