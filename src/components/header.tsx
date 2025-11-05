@@ -35,6 +35,7 @@ export default function Header() {
   const [showDataCenterSubMenu, setShowDataCenterSubMenu] = useState(false);
   const [showAboutSubMenu, setshowAboutSubMenu] = useState(false);
 
+  const [showMobileModelPlatform, setShowMobileModelPlatform] = useState(false);
 
 
   const menuRef = useRef<HTMLDivElement>(null);
@@ -46,6 +47,7 @@ export default function Header() {
   const modelPlatformRef = useRef<HTMLDivElement>(null);
   const closeMobileMenu = () => {
     setIsOpen(false);
+    setShowMobileModelPlatform(false);
     setShowMobileProducts(false);
     setShowMobileSolutions(false);
     setShowMobilePricing(false);
@@ -712,442 +714,394 @@ export default function Header() {
       </div>
 
       {/* 移动端折叠菜单 */}
-      <div
-        className={`md:hidden no-scrollbar ${isOpen ? '' : 'hidden'}`}
-        id="mobile-menu"
-        style={{
-          maxHeight: 'calc(100vh - 80px)',
-          overflowY: 'auto',
-          WebkitOverflowScrolling: 'touch'
+<div
+  className={`md:hidden no-scrollbar ${isOpen ? '' : 'hidden'}`}
+  id="mobile-menu"
+  style={{
+    maxHeight: 'calc(100vh - 80px)',
+    overflowY: 'auto',
+    WebkitOverflowScrolling: 'touch'
+  }}
+>
+  <div className="px-2 pt-2 pb-3 sm:px-3">
+    {/* Model Platform - 已经修改完成 */}
+    <div className="relative">
+      <button
+        className={`flex items-center block w-full text-left text-gray-800 font-medium ${activeMenu === 'model-platform' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+        onClick={() => {
+          setShowMobileModelPlatform(!showMobileModelPlatform);
+          setActiveMenu('model-platform');
         }}
       >
-        <div className="px-2 pt-2 pb-3 sm:px-3">
-          <div className="relative">
-            <button
-              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'products' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => {
-                setShowMobileProducts(!showMobileProducts);
-                setActiveMenu('products');
-              }}
-            >
-              Products
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileProducts ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {showMobileProducts && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li>
-                  <IwsLink
-                    href="/compute-services"
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
-                    onClick={closeMobileMenu}
-                  >
-                    <span>Compute Services</span>
-                    <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </IwsLink>
-                  <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/gb200-nvl72" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}><span>NVIDIA GB200 NVL72 <span className='flash'>NEW</span></span></IwsLink></li>
-                    <li><IwsLink href="/hgx-b200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}><span>NVIDIA HGX B200 <span className='flash'>NEW</span></span></IwsLink></li>
-                    <li><IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
-                    <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
-                    <li><IwsLink href="/compute-services#cpu-node" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>CPU Nodes</IwsLink></li>
-                    <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Bare Metal GPU Cluster</IwsLink></li>
-                  </ul>
-                </li>
-                <li>
-                  <IwsLink
-                    href="/storage-services"
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
-                    onClick={closeMobileMenu}
-                  >
-                    <span>Storage Services</span>
-                    <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </IwsLink>
-                  <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/storage-services#local-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Local Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#shared-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Shared Storage</IwsLink></li>
-                    <li><IwsLink href="/storage-services#object-storage" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
-                  </ul>
-                </li>
-                <li>
-                  <IwsLink
-                    href="/networking-services"
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
-                    onClick={closeMobileMenu}
-                  >
-                    <span>Networking Services</span>
-                    <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </IwsLink>
-                  <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/networking-services#infiniband-networking" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>InfiniBand Networking</IwsLink></li>
-                    <li><IwsLink href="/networking-services#private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>RoCEv2 Networking</IwsLink></li>
-                  </ul>
-                </li>
-                <li>
-                  <IwsLink
-                    href="/platform"
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded justify-between"
-                    onClick={closeMobileMenu}
-                  >
-                    <span>Platform</span>
-                    <svg
-                      className={`w-4 h-4 ml-1 transform transition-transform duration-200`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </IwsLink>
-                  <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/platform#dcim-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Canopy Wave DCIM Platform</IwsLink></li>
-                    <li><IwsLink href="/platform#cloud-platform" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Canopy Wave Cloud Platform</IwsLink></li>
-                  </ul>
-                </li>
-
-              </ul>
-            )}
+        Model Platform
+        <svg
+          className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileModelPlatform ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      {showMobileModelPlatform && (
+        <>
+          <div className="flex items-center mt-2 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/model_ic_inferencing.png" alt="Inferencing" width={32} height={32} />
+            </div>
+            <span className="font-medium text-gray-600 text-[16px]">Inferencing as a Service</span>
           </div>
-
-          <div className="relative">
-            <button
-              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'solutions' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => {
-                setShowMobileSolutions(!showMobileSolutions);
-                setActiveMenu('solutions');
-              }}
-            >
-              Solutions
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSolutions ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {showMobileSolutions && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>AI Model Training</IwsLink></li>
-                <li><IwsLink href="/inferences" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Inference</IwsLink></li>
-                <li><IwsLink href="/rendering" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Rendering</IwsLink></li>
-                <li><IwsLink href="/private-cloud" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Private Cloud and GPUs Deployment</IwsLink></li>
-                <li><IwsLink href="/networking-hardware" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Networking Hardware Solution</IwsLink></li>
-                <li><IwsLink href="/networking-hardware/gb200-with-rocev2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>GB200 Cluster with RoCEv2 Network Solution</IwsLink></li>
-              </ul>
-            )}
+          <ul className="pl-4 space-y-2 text-sm text-gray-500 font-normal">
+            <li><IwsLink href="/ai-model" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Model Library</IwsLink></li>
+            <li><IwsLink href="/inference" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Serverless Inference</IwsLink></li>
+            <li><IwsLink href="https://chat.canopywave.io/" className="block px-2 py-1 hover:bg-gray-100 rounded" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>Canopy Wave Chat</IwsLink></li>
+          </ul>
+          {/* <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div> */}
+          {/* <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+            </div>
+            <span className="font-medium text-gray-600 text-[16px]">Featured Models</span>
           </div>
-          <div className="relative">
-            <button
-              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'pricing' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => {
-                setShowMobilePricing(!showMobilePricing);
-                setActiveMenu('pricing');
-              }}
-            >
-              Pricing
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobilePricing ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {showMobilePricing && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li>
-                  <div>
-                    <button
-                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                      onClick={() => window.location.href = '/pricing'}
-                    >
-                      <span>GPU Cloud Pricing</span>
-                      <svg
-                        className={`w-4 h-4 transform transition-transform duration-200`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
+          <ul className="pl-4 space-y-2 text-sm text-gray-500 font-normal">
+            <li><IwsLink href="/ai-model" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Explore All Models</IwsLink></li>
+            <li><IwsLink href="/ai-model" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Deepseek V3.2 EXP</IwsLink></li>
+            <li><IwsLink href="/ai-model" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>GPT-OSS 120B</IwsLink></li>
+            <li><IwsLink href="/ai-model" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>GLM 4.6</IwsLink></li>
+          </ul> */}
+          <div className='w-full m-auto border-t mt-3 mb-5 border-black border-[#E0E0E0]'></div>
+        </>
+      )}
+    </div>
 
-                    <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                      <li><IwsLink href="/pricing#GB200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA GB200 NVL72</IwsLink></li>
-                      <li><IwsLink href="/pricing#B200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX B200</IwsLink></li>
-                      <li><IwsLink href="/pricing#H100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
-                      <li><IwsLink href="/pricing#H200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
-                    </ul>
-
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <button
-                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                      onClick={() => window.location.href = "/pricing#other"}
-                    >
-                      <span>Storage Pricing</span>
-                      <svg
-                        className={`w-4 h-4 transform transition-transform duration-200`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-
-                    <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                      <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Network Shared Storage</IwsLink></li>
-                      <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Object Storage</IwsLink></li>
-                      <li><IwsLink href="/pricing#other" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Additional Public IP Address</IwsLink></li>
-                    </ul>
-
-                  </div>
-                </li>
-              </ul>
-            )}
+    {/* GPU Cloud - 已经修改完成 */}
+    <div className="relative">
+      <button
+        className={`flex items-center block w-full text-left text-gray-800 font-medium ${activeMenu === 'gpu-cloud' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+        onClick={() => {
+          setShowMobileProducts(!showMobileProducts);
+          setActiveMenu('gpu-cloud');
+        }}
+      >
+        GPU Cloud
+        <svg
+          className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileProducts ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      {showMobileProducts && (
+        <>
+          <div className="flex items-center mt-2 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/gpucloud_ic_gpus.png" alt="GPUs" width={32} height={32} />
+            </div>
+            <IwsLink href="/compute-services" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              GPUs
+            </IwsLink>
           </div>
-          <div className="relative">
-            <button
-              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'datacenter' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => {
-                setShowMobileDataCenter(!showMobileDataCenter);
-                setActiveMenu('datacenter');
-              }}
-            >
+          <ul className="pl-4 space-y-2 text-sm text-gray-500 font-normal">
+            <li><IwsLink href="/gb200-nvl72" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA GB200 NVL72</IwsLink></li>
+            <li><IwsLink href="/hgx-b200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX B200</IwsLink></li>
+            <li><IwsLink href="/compute-services#hgx-h200" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H200</IwsLink></li>
+            <li><IwsLink href="/compute-services#hgx-h100" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>NVIDIA HGX H100</IwsLink></li>
+            <li><IwsLink href="/compute-services#bare-metal" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Bare Metal GPU Cluster</IwsLink></li>
+          </ul>
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/gpucloud_ic_storage.png" alt="Storage Services" width={32} height={32} />
+            </div>
+            <IwsLink href="/storage-services" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Storage Services
+            </IwsLink>
+          </div>
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/gpucloud_ic_networking.png" alt="Networking Services" width={32} height={32} />
+            </div>
+            <IwsLink href="/networking-services" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Networking Services
+            </IwsLink>
+          </div>
+          <ul className="pl-4 space-y-2 text-sm text-gray-500 font-normal">
+            <li><IwsLink href="/networking-services/infiniband-networking" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>InfiniBand Networking</IwsLink></li>
+            <li><IwsLink href="/networking-services/rocev2-networking" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>RoCEv2 Networking</IwsLink></li>
+          </ul>
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/gpucloud_ic_platform.png" alt="Platform" width={32} height={32} />
+            </div>
+            <IwsLink href="/platform" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Platform
+            </IwsLink>
+          </div>
+          <div className='w-full m-auto border-t mt-3 mb-5 border-black border-[#E0E0E0]'></div>
+        </>
+      )}
+    </div>
+
+    {/* Solutions - 按照新样式修改 */}
+    <div className="relative">
+      <button
+        className={`flex items-center block w-full text-left text-gray-800 font-medium ${activeMenu === 'solutions' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+        onClick={() => {
+          setShowMobileSolutions(!showMobileSolutions);
+          setActiveMenu('solutions');
+        }}
+      >
+        Solutions
+        <svg
+          className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileSolutions ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      {showMobileSolutions && (
+        <>
+          <div className="flex items-center mt-2 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/solutions_ic_usecases.png" alt="Use Cases" width={32} height={32} />
+            </div>
+            <span className="font-medium text-gray-600 text-[16px]">Use Cases</span>
+          </div>
+          <ul className="pl-4 space-y-2 text-sm text-gray-500 font-normal">
+            <li><IwsLink href="/model-training" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>AI Model Training</IwsLink></li>
+          </ul>
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/solutions_ic_private.png" alt="Private Cloud" width={32} height={32} />
+            </div>
+            <IwsLink href="/private-cloud" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Private Cloud and GPUs Deployment
+            </IwsLink>
+          </div>
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/solutions_ic_networking.png" alt="Networking Hardware" width={32} height={32} />
+            </div>
+            <IwsLink href="/networking-hardware" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Networking Hardware Solution
+            </IwsLink>
+          </div>
+          <ul className="pl-4 space-y-2 text-sm text-gray-500 font-normal">
+            <li><IwsLink href="/networking-hardware/gb200-with-rocev2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>GB200 Cluster with RoCEv2 Network Solution</IwsLink></li>
+          </ul>
+          <div className='w-full m-auto border-t mt-3 mb-5 border-black border-[#E0E0E0]'></div>
+        </>
+      )}
+    </div>
+
+    {/* Pricing - 改为直接链接，与web端一致 */}
+    <div className="relative">
+      <IwsLink
+        href="/pricing"
+        className="flex items-center block w-full text-left text-gray-800 font-medium px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
+        onClick={closeMobileMenu}
+      >
+        Pricing
+      </IwsLink>
+    </div>
+
+    {/* Resources - 按照新样式修改 */}
+    <div className="relative">
+      <button
+        className={`flex items-center block w-full text-left text-gray-800 font-medium ${activeMenu === 'resources' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+        onClick={() => {
+          setShowMobileResources(!showMobileResources);
+          setActiveMenu('resources');
+        }}
+      >
+        Resources
+        <svg
+          className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileResources ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      {showMobileResources && (
+        <>
+          <div className="flex items-center mt-2 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/resources_ic_tutorials.png" alt="Tutorials" width={32} height={32} />
+            </div>
+            <IwsLink href="/resources/tutorials" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Tutorials
+            </IwsLink>
+          </div>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/resources/tutorials" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              Your practical guide to choosing & building better
+            </IwsLink>
+          </div> */}
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/resources_ic_casestudies.png" alt="Case Studies" width={32} height={32} />
+            </div>
+            <IwsLink href="/resources/case-study" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Case Studies
+            </IwsLink>
+          </div>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/resources/case-study" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              Real Customers, real growth with Canopy Wave
+            </IwsLink>
+          </div> */}
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/resources_ic_docs.png" alt="Docs" width={32} height={32} />
+            </div>
+            <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Docs
+            </IwsLink>
+          </div>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              Technical docs related to APIs and GPUs
+            </IwsLink>
+          </div> */}
+          <div className='w-full m-auto border-t mt-3 mb-5 border-black border-[#E0E0E0]'></div>
+        </>
+      )}
+    </div>
+
+    {/* About - 按照新样式修改 */}
+    <div className="relative">
+      <button
+        className={`flex items-center block w-full text-left text-gray-800 font-medium ${activeMenu === 'about' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
+        onClick={() => {
+          setShowMobileAbout(!showMobileAbout);
+          setActiveMenu('about');
+        }}
+      >
+        About
+        <svg
+          className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileAbout ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      {showMobileAbout && (
+        <>
+          <div className="flex items-center mt-2 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/about_ic_aboutus.png" alt="About Us" width={32} height={32} />
+            </div>
+            <IwsLink href="/about" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              About Us
+            </IwsLink>
+          </div>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/about" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              An overview of Canopy Wave Group
+            </IwsLink>
+          </div> */}
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/about_ic_careers.png" alt="Careers" width={32} height={32} />
+            </div>
+            <IwsLink href="/about/careers" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Careers
+            </IwsLink>
+          </div>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/about/careers" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              Join our mission
+            </IwsLink>
+          </div> */}
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/about_ic_data.png" alt="Data Center" width={32} height={32} />
+            </div>
+            <IwsLink href="/data-center/iceland" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
               Data Center
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileDataCenter ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {showMobileDataCenter && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li>
-                  <div>
-                    <button
-                      className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                      onClick={() => window.location.href = '/data-center/iceland'}
-                    >
-                      <span>Our Data Center</span>
-                      <svg
-                        className={`w-4 h-4 transform transition-transform duration-200`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-
-                    <ul className={`pl-4 mt-2 space-y-2`}>
-                      <li><IwsLink href="/data-center/iceland#iceland1" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 1</IwsLink></li>
-                      <li><IwsLink href="/data-center/iceland#iceland2" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => { setShowDataCenter(false) }}>Iceland 2</IwsLink></li>
-                    </ul>
-                    <ul className="pl-2 mt-1 py-1 hover:bg-gray-100">
-                      <li>
-                        <IwsLink href="/data-center/iceland#future-locations" className="text-gray-600 hover:text-[#8CC63F] text-sm" onClick={() => { setShowDataCenter(false) }}>Future locations</IwsLink>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            )}
+            </IwsLink>
           </div>
-          <div className="relative">
-            <button
-              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'resources' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => {
-                setShowMobileResources(!showMobileResources);
-                setActiveMenu('resources');
-              }}
-            >
-              Resources
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileResources ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {showMobileResources && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600">
-                <li><IwsLink href="/resources/tutorials" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Tutorials</IwsLink></li>
-                <li><IwsLink href="/resources/case-study" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Case Studies</IwsLink></li>
-                <li><IwsLink href="/resources/docs/cw-cloud-account/quick-start" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Docs</IwsLink></li>
-              </ul>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              className={`flex items-center block w-full text-left text-gray-600 ${activeMenu === 'about' ? 'bg-gray-200' : ''} px-3 py-2 rounded-md text-base font-medium`}
-              onClick={() => {
-                setShowMobileAbout(!showMobileAbout);
-                setActiveMenu('about');
-              }}
-            >
-              About
-              <svg
-                className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${showMobileAbout ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {showMobileAbout && (
-              <ul className="pl-4 mt-2 space-y-2 text-sm text-gray-600 ">
-                <li><IwsLink href="/about" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>About Us</IwsLink></li>
-                <li><IwsLink href="/about/careers" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Careers</IwsLink></li>
-                <div>
-                  <button
-                    className="flex items-center w-full text-left px-2 py-1 hover:bg-gray-100 rounded flex justify-between items-center"
-                    onClick={() => window.location.href = '/about/newsroom'}
-                  >
-                    <span>Newsroom</span>
-                    <svg
-                      className={`w-4 h-4 transform transition-transform duration-200`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                  <ul className={`pl-4 mt-2 space-y-2`}>
-                    <li><IwsLink href="/about/newsroom#blog" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Blog</IwsLink></li>
-                    <li><IwsLink href="/about/newsroom#events" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>Events</IwsLink></li>
-                  </ul>
-                </div>
-              </ul>
-            )}
-          </div>
-          <div className="mt-4 space-y-2">
-            {/* 新增 Canopy Wave Cloud 按钮 */}
-            <div className="relative">
-              <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer')}>
-                Go to Canopy Wave Cloud
-              </Button>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/data-center/iceland" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              Introduction to data center
+            </IwsLink>
+          </div> */}
+          <div className='w-80 m-auto border-t mt-3 border-black border-[#E0E0E0]'></div>
+          <div className="flex items-center mt-3 mr-1">
+            <div className="w-10 h-10 flex items-center justify-center rounded-md">
+              <Image src="/header/about_ic_newsroom.png" alt="Newsroom" width={32} height={32} />
             </div>
-            {/* 新增 Contact US 按钮 */}
-            <div className="relative mt-2">
-              <Button variant="outline" className="text-gray-600 hover:text-[#8CC63F] w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
-
-                Contact US
-              </Button>
-            </div>
+            <IwsLink href="/about/newsroom" className="font-medium text-gray-600 text-[16px] hover:text-[#8CC63F]" onClick={closeMobileMenu}>
+              Newsroom
+            </IwsLink>
           </div>
-        </div>
+          {/* <div className="pl-4 text-sm text-gray-500 font-normal">
+            <IwsLink href="/about/newsroom" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={closeMobileMenu}>
+              Blog&Events&Case Studies
+            </IwsLink>
+          </div> */}
+          <div className='w-full m-auto border-t mt-3 mb-5 border-black border-[#E0E0E0]'></div>
+        </>
+      )}
+    </div>
+
+    {/* 按钮部分 */}
+    <div className="mt-4 space-y-2">
+      <div className="relative">
+        <Button className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#7ab32f]" onClick={() => { window.open('https://cloud.canopywave.io/', '_blank', 'noopener,noreferrer'); closeMobileMenu(); }}>
+          Go to Canopy Wave Cloud
+        </Button>
       </div>
+      <div className="relative mt-2">
+        <IwsLink href="/contact" className="block">
+          <Button variant="outline" className="text-gray-600 hover:text-[#8CC63F] w-full sm:w-auto" onClick={closeMobileMenu}>
+            Contact US
+          </Button>
+        </IwsLink>
+      </div>
+    </div>
+  </div>
+</div>
     </nav>
   )
 }
