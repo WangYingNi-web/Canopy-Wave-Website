@@ -41,6 +41,24 @@ const Tutorials: React.FC = () => {
   // 定义卡片数据（扩展更多数据）
   const allCards: Card[] = [
     {
+      id: 'bare-metal-gpus-and-virtual-gpus',
+      category: 'GPU',
+      title: 'How to Choose Between Bare Metal GPUs and Virtual GPUs',
+      image: '/tutorials/bare-metal-gpus-and-virtual-gpus/index.webp',
+      date: 'November 5, 2025',
+      alt: 'Bare Metal GPUs and Virtual GPUs',
+      onClick: () => handleTutorialClick('How to Choose Between Bare Metal GPUs and Virtual GPUs')
+    },
+    {
+      id: 'private-ai-cloud',
+      category: 'GPU',
+      title: 'How to Choose On-demand Private AI Cloud',
+      image: '/tutorials/private-ai-cloud/index.webp',
+      date: 'November 5, 2025',
+      alt: 'On-demand Private AI Cloud',
+      onClick: () => handleTutorialClick('How to Choose On-demand Private AI Cloud')
+    },
+    {
       id: 'dedicated-vs-shared-llm-endpoints',
       category: ['AI Models', 'LLMs'],
       title: 'Dedicated vs Shared LLM Endpoints',

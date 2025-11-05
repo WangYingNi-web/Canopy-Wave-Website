@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TutorialLayout1, TutorialLayout2, TutorialLayout3, 
-  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialLayout9,TutorialLayout10,TutorialLayout11,TutorialPost } from '@/components/tutorials'
+  TutorialLayout4, TutorialLayout5, TutorialLayout6,TutorialLayout7,TutorialLayout8,TutorialLayout9,TutorialLayout10,TutorialLayout11,TutorialLayout12,TutorialLayout13,TutorialPost } from '@/components/tutorials'
 import Image from 'next/image';
 export default function TutorialDetail() {
   const router = useRouter()
@@ -311,9 +311,39 @@ export default function TutorialDetail() {
           imageAlt: 'Dedicated vs Shared LLM Endpoints',
           sections: [
             {
-              title: 'Choosing Between Dedicated and Shared LLM Endpoints',
+              title: 'Dedicated vs Shared LLM Endpoints',
               content: [
                 'In the rapidly evolving landscape of AI and machine learning, selecting the right infrastructure is crucial for optimizing performance and cost-efficiency. This guide delves into the key differences between dedicated and shared LLM endpoints, providing insights to help you make an informed decision for your AI workloads.',
+              ],
+            },
+          ],
+        }
+
+      case 'how-to-choose-on-demand-private-ai-cloud':
+        return {
+          id: 12,
+          title: 'How to choose On-demand Private AI Cloud',
+          description: 'The future of AI won\'t be built on traditional cloud services or inefficient private environments—it will rely on dedicated platforms that deeply understand the core needs of enterprise-grade AI. ',
+          sections: [
+            {
+              title: '',
+              content: [
+                '',
+              ],
+            },
+          ],
+        }
+
+      case 'how-to-choose-between-bare-metal-gpus-and-virtual-gpus':
+        return {
+          id: 13,
+          title: 'How to Choose Between Bare Metal GPUs and Virtual GPUs',
+          description: 'Bare metal GPUs and virtual GPUs, as two mainstream architectures, can both leverage this top-tier hardware, but the choice depends on performance requirements, resource utilization, and operational flexibility.',
+          sections: [
+            {
+              title: '',
+              content: [
+                '',
               ],
             },
           ],
@@ -370,6 +400,10 @@ export default function TutorialDetail() {
         return <TutorialLayout10 />
       case 11:
         return <TutorialLayout11 />
+      case 12:
+        return <TutorialLayout12 />
+      case 13:
+        return <TutorialLayout13 />
       default:
         return <TutorialLayout1 tutorialPost={tutorialPost} />
     }
