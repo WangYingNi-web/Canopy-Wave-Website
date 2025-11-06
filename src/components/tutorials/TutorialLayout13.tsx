@@ -216,7 +216,7 @@ const rightSidebar = (
                                 href="/resources/tutorials/how-to-choose-on-demand-private-ai-cloud"
                                 className="font-bold text-gray-900 text-xs mb-2 line-clamp-2 hover:text-[#80B224] transition-colors duration-200 block"
                             >
-                                How to choose On-demand Private AI Cloud
+                                How to Choose On-demand Private AI Cloud
                             </a>
                         </a>
                     </div>

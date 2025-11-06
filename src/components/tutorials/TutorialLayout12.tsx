@@ -10,7 +10,7 @@ const TutorialLayout12: React.FC = () => {
     const breadcrumbItems = useTutorialBreadcrumb()
 
     const tutorialData = {
-        title: 'How to choose On-demand Private AI Cloud',
+        title: 'How to Choose On-demand Private AI Cloud',
         sections: [
             // {
             //     title: 'Introduction',
@@ -186,7 +186,7 @@ const rightSidebar = (
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48">
                             <SlideUp>
                                 <h1 className="text-4xl sm:text-5xl sm:leading-[1.2] font-black text-[#80b224]">
-                                    How to choose On-demand  <br />  Private AI Cloud
+                                    How to Choose On-demand  <br />  Private AI Cloud
                                 </h1>
                             </SlideUp>
                         </div>
