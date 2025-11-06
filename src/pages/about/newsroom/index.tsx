@@ -62,46 +62,46 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
-        {
-            id: 45,
-            title: "What is Deep Learning",
-            description: "This article will explain what deep learning is, how it works, its history, specific applications, and potential challenges. 图片alt标签填What is Deep Learning",
-            date: "November 5, 2025",
-            image: "/blog/what-deep-learning.webp",
-            alttitle: "What is Deep Learning"
-        },
-        {
-            id: 44,
-            title: "Sora 2 and the Rising Demand for Compute in AI Video Generation ",
-            description: "Sora 2 is not just a milestone in generative AI—it is a case study in the escalating demand for GPU compute, high-bandwidth memory, and distributed infrastructure.",
-            date: "November 5, 2025",
-            image: "/blog/sora-2.webp",
-            alttitle: "Sora 2"
-        },
-        {
-            id: 43,
-            title: "What is AI Language",
-            description: "For businesses, researchers, and everyday users alike, AI Language represents not just a technical concept but a transformative force that is reshaping communication, knowledge sharing, and digital interaction.",
-            date: "November 5, 2025",
-            image: "/blog/ai-language.webp",
-            alttitle: "AI Language"
-        },
-        {
-            id: 42,
-            title: "When GPU Fans not Spinning",
-            description: "\"The GPU fan is not spinning!\" — This discovery is enough to make anyone reliant on computing power uneasy. But do not panic; not all instances of stationary fans indicate hardware damage.",
-            date: "November 5, 2025",
-            image: "/blog/gpu-fans.webp",
-            alttitle: "GPU Fans not Spinning"
-        },
-        {
-            id: 41,
-            title: "Types of AI Models and Their Applications",
-            description: "Understanding the different types of AI models not only helps us grasp technological trends but also provides direction for learning, work, and innovation.",
-            date: "November 5, 2025",
-            image: "/blog/types-of-ai-models.webp",
-            alttitle: "Types of AI Models"
-        },
+        // {
+        //     id: 45,
+        //     title: "What is Deep Learning",
+        //     description: "This article will explain what deep learning is, how it works, its history, specific applications, and potential challenges. 图片alt标签填What is Deep Learning",
+        //     date: "November 5, 2025",
+        //     image: "/blog/what-deep-learning.webp",
+        //     alttitle: "What is Deep Learning"
+        // },
+        // {
+        //     id: 44,
+        //     title: "Sora 2 and the Rising Demand for Compute in AI Video Generation ",
+        //     description: "Sora 2 is not just a milestone in generative AI—it is a case study in the escalating demand for GPU compute, high-bandwidth memory, and distributed infrastructure.",
+        //     date: "November 5, 2025",
+        //     image: "/blog/sora-2.webp",
+        //     alttitle: "Sora 2"
+        // },
+        // {
+        //     id: 43,
+        //     title: "What is AI Language",
+        //     description: "For businesses, researchers, and everyday users alike, AI Language represents not just a technical concept but a transformative force that is reshaping communication, knowledge sharing, and digital interaction.",
+        //     date: "November 5, 2025",
+        //     image: "/blog/ai-language.webp",
+        //     alttitle: "AI Language"
+        // },
+        // {
+        //     id: 42,
+        //     title: "When GPU Fans not Spinning",
+        //     description: "\"The GPU fan is not spinning!\" — This discovery is enough to make anyone reliant on computing power uneasy. But do not panic; not all instances of stationary fans indicate hardware damage.",
+        //     date: "November 5, 2025",
+        //     image: "/blog/gpu-fans.webp",
+        //     alttitle: "GPU Fans not Spinning"
+        // },
+        // {
+        //     id: 41,
+        //     title: "Types of AI Models and Their Applications",
+        //     description: "Understanding the different types of AI models not only helps us grasp technological trends but also provides direction for learning, work, and innovation.",
+        //     date: "November 5, 2025",
+        //     image: "/blog/types-of-ai-models.webp",
+        //     alttitle: "Types of AI Models"
+        // },
         {
             id: 40,
             title: "Deep Learning vs Machine Learning",
