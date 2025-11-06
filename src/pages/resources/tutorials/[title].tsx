@@ -319,6 +319,39 @@ export default function TutorialDetail() {
           ],
         }
 
+<<<<<<< Updated upstream
+=======
+      case 'how-to-choose-on-demand-private-ai-cloud':
+        return {
+          id: 12,
+          title: 'How to Choose On-demand Private AI Cloud',
+          description: 'The future of AI won\'t be built on traditional cloud services or inefficient private environments—it will rely on dedicated platforms that deeply understand the core needs of enterprise-grade AI. ',
+          sections: [
+            {
+              title: '',
+              content: [
+                '',
+              ],
+            },
+          ],
+        }
+
+      case 'how-to-choose-between-bare-metal-gpus-and-virtual-gpus':
+        return {
+          id: 13,
+          title: 'How to Choose Between Bare Metal GPUs and Virtual GPUs',
+          description: 'Bare metal GPUs and virtual GPUs, as two mainstream architectures, can both leverage this top-tier hardware, but the choice depends on performance requirements, resource utilization, and operational flexibility.',
+          sections: [
+            {
+              title: '',
+              content: [
+                '',
+              ],
+            },
+          ],
+        }
+
+>>>>>>> Stashed changes
       default:
         return null
     }

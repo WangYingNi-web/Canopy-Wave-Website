@@ -52,6 +52,7 @@ export default function Newsroom() {
             .replace(/[\s-]+/g, '-')  // 将空格和连字符转换为单个连字符
             .replace(/[\s.-]+/g, '-')
             .replace(/^-+|-+$/g, ''); // 去除开头和结尾的连字符
+            console.log('blogTitle', blogTitle)
         router.push(`/blog/${blogTitle}`);
     };
     const handleWatchClick = (post: NewsroomPost) => {
@@ -61,6 +62,78 @@ export default function Newsroom() {
     };
 
     const blogPosts: BlogPost[] = [
+        {
+            id: 45,
+            title: "What is Deep Learning",
+            description: "This article will explain what deep learning is, how it works, its history, specific applications, and potential challenges. 图片alt标签填What is Deep Learning",
+            date: "November 5, 2025",
+            image: "/blog/what-deep-learning.webp",
+            alttitle: "What is Deep Learning"
+        },
+        {
+            id: 44,
+            title: "Sora 2 and the Rising Demand for Compute in AI Video Generation ",
+            description: "Sora 2 is not just a milestone in generative AI—it is a case study in the escalating demand for GPU compute, high-bandwidth memory, and distributed infrastructure.",
+            date: "November 5, 2025",
+            image: "/blog/sora-2.webp",
+            alttitle: "Sora 2"
+        },
+        {
+            id: 43,
+            title: "What is AI Language",
+            description: "For businesses, researchers, and everyday users alike, AI Language represents not just a technical concept but a transformative force that is reshaping communication, knowledge sharing, and digital interaction.",
+            date: "November 5, 2025",
+            image: "/blog/ai-language.webp",
+            alttitle: "AI Language"
+        },
+        {
+            id: 42,
+            title: "When GPU Fans not Spinning",
+            description: "\"The GPU fan is not spinning!\" — This discovery is enough to make anyone reliant on computing power uneasy. But do not panic; not all instances of stationary fans indicate hardware damage.",
+            date: "November 5, 2025",
+            image: "/blog/gpu-fans.webp",
+            alttitle: "GPU Fans not Spinning"
+        },
+        {
+            id: 41,
+            title: "Types of AI Models and Their Applications",
+            description: "Understanding the different types of AI models not only helps us grasp technological trends but also provides direction for learning, work, and innovation.",
+            date: "November 5, 2025",
+            image: "/blog/types-of-ai-models.webp",
+            alttitle: "Types of AI Models"
+        },
+        {
+            id: 40,
+            title: "Deep Learning vs Machine Learning",
+            description: "With Machine Learning and Deep Learning driving countless innovations, from intelligent recommendations to autonomous driving. But what exactly is the relationship between these two?",
+            date: "November 5, 2025",
+            image: "/blog/deep-learning.webp",
+            alttitle: "Deep Learning vs Machine Learning"
+        },
+        {
+            id: 39,
+            title: "NVIDIA GPU: The Ideal Starting Point for AI Developers",
+            description: "NVIDIA GPUs are no longer just hardware products—they’ve become the backbone of global AI infrastructure. From deep learning to multimodal inference, from content generation to AI agent deployment, NVIDIA’s architectural innovation and software ecosystem are redefining the technological landscape. ",
+            date: "November 5, 2025",
+            image: "/blog/NVIDIA-GPU.webp",
+            alttitle: "NVIDIA GPU"
+        },
+        {
+            id: 38,
+            title: "How AI Strategies Reshape Business Ecosystems",
+            description: "AI strategies are no longer optional technical tools—they represent a core strategic blueprint that defines a company’s growth, risk management, talent development, and market positioning..",
+            date: "November 5, 2025",
+            image: "/blog/ai-Strategies.webp",
+            alttitle: "AI strategies"
+        },
+        {
+            id: 37,
+            title: "What is Natural Language Processing Techniques",
+            description: "What exactly are Natural Language Processing Techniques, and why are they so important? Simply put, Natural Language Processing (NLP) refers to the methods and technologies that enable machines to understand and use human language.",
+            date: "November 5, 2025",
+            image: "/blog/natural-language.webp",
+            alttitle: "natural language processing techniques"
+        },
         {
             id: 36,
             title: "AI Neural Networks",
