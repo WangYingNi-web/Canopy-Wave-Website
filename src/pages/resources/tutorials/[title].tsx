@@ -319,8 +319,6 @@ export default function TutorialDetail() {
           ],
         }
 
-<<<<<<< Updated upstream
-=======
       case 'how-to-choose-on-demand-private-ai-cloud':
         return {
           id: 12,
@@ -351,7 +349,6 @@ export default function TutorialDetail() {
           ],
         }
 
->>>>>>> Stashed changes
       default:
         return null
     }
