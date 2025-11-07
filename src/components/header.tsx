@@ -151,11 +151,11 @@ export default function Header() {
                 </button>
 
                 {showModelPlatform && (
-                  <div className="bg-[#EFEFEF] fixed left-0 right-0 py-[40px] top-[83px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-[40px] top-[83px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-2 gap-8">
                         {/* 左侧：Inferencing as a Service */}
-                        <div className='border-r border-[#ffffff] max-w-[500px]'>
+                        <div className='border-r border-gray-200 max-w-[500px]'>
                           <div className="flex items-center gap-2 mb-[16px]">
                             <Image src="/header/model_ic_inferencing.png" alt="Inferencing" width={32} height={32} />
                             <h3 className="font-bold text-[16px] text-[#333333]">Inferencing as a Service</h3>
@@ -248,7 +248,7 @@ export default function Header() {
                 </button>
 
                 {showProducts && (
-                  <div className="bg-[#EEEEEE] fixed left-0 right-0 py-[40px] top-[83px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-[40px] top-[83px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         <div>
@@ -268,7 +268,7 @@ export default function Header() {
                             <li><IwsLink href="/compute-services#bare-metal" className="text-gray-600 hover:text-[#8CC63F] text-sm" onClick={() => setShowProducts(false)}>Bare metal GPU cluster</IwsLink></li>
                           </ul>
                         </div>
-                        <div className="border-l border-[#ffffff] pl-8">
+                        <div className="border-l border-gray-200 pl-8">
                           <div className="flex items-center gap-3 mb-4">
                             <div className="w-10 h-10 flex items-center justify-center rounded-md">
                               <Image src="/header/gpucloud_ic_storage.png" alt="Storage Services" width={32} height={32} />
@@ -283,7 +283,7 @@ export default function Header() {
                             <li><IwsLink href="/storage-services#object-storage" className="text-gray-600 hover:text-[#8CC63F] text-sm" onClick={() => setShowProducts(false)}>Object Storage</IwsLink></li>
                           </ul> */}
                         </div>
-                        <div className="border-l border-[#ffffff] pl-8">
+                        <div className="border-l border-gray-200 pl-8">
                           <div className="flex items-center gap-3 mb-4">
                             <div className="w-10 h-10 flex items-center justify-center rounded-md">
                               <Image src="/header/gpucloud_ic_networking.png" alt="Networking Services" width={32} height={32} />
@@ -297,7 +297,7 @@ export default function Header() {
                             <li><IwsLink href="/networking-services/rocev2-networking" className="text-gray-600 hover:text-[#8CC63F] text-sm" onClick={() => setShowProducts(false)}>Networking</IwsLink></li>
                           </ul>
                         </div>
-                        <div className="border-l border-[#ffffff] pl-8">
+                        <div className="border-l border-gray-200 pl-8">
                           <div className="flex items-center gap-3 mb-4">
                             <div className="w-10 h-10 flex items-center justify-center rounded-md">
                               <Image src="/header/gpucloud_ic_platform.png" alt="Platform" width={32} height={32} />
@@ -339,7 +339,7 @@ export default function Header() {
                 </button>
 
                 {showSolutions && (
-                  <div className="bg-[#EEEEEE] fixed left-0 right-0 py-[40px] px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-[40px] px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-3 gap-8">
                         {/* Use Cases */}
@@ -360,7 +360,7 @@ export default function Header() {
                         </div>
 
                         {/* Private Cloud and GPUs Deployment */}
-                        <div className="space-y-3 border-l border-[#ffffff] pl-8">
+                        <div className="space-y-3 border-l border-gray-200 pl-8">
                           <div className="flex items-center gap-3 mb-[16px]">
                             <div className="w-10 h-10 rounded-md flex items-center justify-center">
                               <Image src="/header/solutions_ic_private.png" alt="GPUs" width={32} height={32} />
@@ -377,7 +377,7 @@ export default function Header() {
                         </div>
 
                         {/* Networking Hardware Solution */}
-                        <div className="space-y-3 border-l border-[#ffffff] pl-8">
+                        <div className="space-y-3 border-l border-gray-200 pl-8">
                           <div className="flex items-center gap-3 mb-[16px]">
                             <div className="w-10 h-10 rounded-md flex items-center justify-center">
                               <Image src="/header/solutions_ic_networking.png" alt="GPUs" width={32} height={32} />
@@ -516,7 +516,7 @@ export default function Header() {
                 </button>
 
                 {showResources && (
-                  <div className="bg-[#EEEEEE] fixed left-0 right-0 py-[40px] px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-[40px] px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-3 gap-8">
                         {/* Tutorials */}
@@ -537,7 +537,7 @@ export default function Header() {
                         </div>
 
                         {/* Case Studies */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
+                        <div className="space-y-3 border-l border-gray-200 pl-8 group">
                           <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-md flex items-center justify-center">
                               <Image src="/header/resources_ic_casestudies.png" alt="GPUs" width={32} height={32} />
@@ -597,7 +597,7 @@ export default function Header() {
                 </button>
 
                 {showAbout && (
-                  <div className="bg-[#EEEEEE] fixed left-0 right-0 py-[40px] px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
+                  <div className="bg-[#F9F9F9] fixed left-0 right-0 py-[40px] px-8 pl-8 mt-[31px] shadow-lg border-t border-gray-100 z-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-4 gap-8">
                         {/* About Us */}
@@ -616,7 +616,7 @@ export default function Header() {
                         </div>
 
                         {/* Careers */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
+                        <div className="space-y-3 border-l border-gray-200 pl-8 group">
                           <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-md flex items-center justify-center">
                               <Image src="/header/about_ic_careers.png" alt="GPUs" width={32} height={32} />
@@ -631,7 +631,7 @@ export default function Header() {
                         </div>
 
                         {/* Data Center */}
-                        <div className="space-y-3 border-l border-[#FFFFFF] pl-8 group">
+                        <div className="space-y-3 border-l border-gray-200 pl-8 group">
                           <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-md flex items-center justify-center">
                               <Image src="/header/about_ic_data.png" alt="GPUs" width={32} height={32} />
